@@ -1,0 +1,59 @@
+@{
+	var noun =  model.noun || "";
+	var scopes = model.scopes || [];
+	var path = model.require('path');
+    var brackets = "{ }";
+    var helpers = model.require('../views/js/helpers.js');
+    model.path = ".";
+    var mainPath = model.path;
+
+   	 var fnNameClean = function(name){
+	   		if (model.db.hasOwnProperty(name))
+	   		  	return "[`" + helpers.fnEventName(name) + "`]" + "(" + path.relative(mainPath, name.replace(/\./g, "/") + ".md") + ")"
+	   		  else
+	   		     return "`" + helpers.fnEventName(name) + "`";
+	   		};
+			   
+   var fnDescriptionClean = function(text) {
+    	return	helpers.fnDescriptionClean(text, function(x){
+	   		var name = x.substr(7, x.length-8);
+	   		return fnNameClean(name);
+	   	})
+	};
+   
+   	scopes.forEach(function(scope){
+ 	 	@:## @helpers.toTitleCase(helpers.fnEventName(scope))  @noun s
+		@:
+		Object.getOwnPropertyNames(model.db).forEach(function(mainItemKey) {
+			var mainItem = model.db[mainItemKey];
+			if (mainItem && ( mainItem.namespace.indexOf(scope) === 0) && (!mainItem.deprecated) && (mainItem.type === "class"))
+			{   
+			model.path = ".";
+			model.item = mainItem;
+
+				@:## <a id='@helpers.fnAnchor(helpers.fnEventName(mainItem.qualifiedname)) '></a>__@helpers.toTitleCase(mainItem.type.replace('class',noun)) __ @helpers.fnEventName(mainItem.qualifiedname)
+				@:
+				@:@{fnDescriptionClean(mainItem.description)}
+				@:
+				if (noun === "Event")
+				{
+					@:``` javascript
+					@:this.on('@helpers.fnEventName(mainItem.qualifiedname) ', function (e) @brackets );
+					@:```
+					@:
+				}
+
+				@:Method | Type   
+				@:--- | :---: 
+				@:@model.renderPartial('/build/views/partials/itemSummaryTable.jsmd',model)
+				@:
+				@:For further details, see API Reference @fnNameClean(mainItem.qualifiedname)
+				@:
+				@:---
+				@:
+			
+			}
+		});
+	});
+}
+

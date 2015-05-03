@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API wolfcanary.io.wolfscript.event.player</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html'>player</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\AnvilUse.html'>AnvilUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ArmorBroken.html'>ArmorBroken</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ArmorStandModify.html'>ArmorStandModify</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Ban.html'>Ban</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BedEnter.html'>BedEnter</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BedExit.html'>BedExit</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockDestroy.html'>BlockDestroy</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockLeftClick.html'>BlockLeftClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockPlace.html'>BlockPlace</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockRightClick.html'>BlockRightClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BookEdit.html'>BookEdit</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Chat.html'>Chat</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Connection.html'>Connection</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Craft.html'>Craft</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Disconnection.html'>Disconnection</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Eat.html'>Eat</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Enchant.html'>Enchant</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\EntityRightClick.html'>EntityRightClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Experience.html'>Experience</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodExhaustion.html'>FoodExhaustion</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodLevel.html'>FoodLevel</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodSaturation.html'>FoodSaturation</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\GameModeChange.html'>GameModeChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\HealthChange.html'>HealthChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\HeldItemChange.html'>HeldItemChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Inventory.html'>Inventory</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemDrop.html'>ItemDrop</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemFrameRotate.html'>ItemFrameRotate</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemFrameSetItem.html'>ItemFrameSetItem</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemPickup.html'>ItemPickup</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemUse.html'>ItemUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Kick.html'>Kick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\LevelUp.html'>LevelUp</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerArmSwing.html'>PlayerArmSwing</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerDeath.html'>PlayerDeath</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerIdle.html'>PlayerIdle</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerList.html'>PlayerList</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerMove.html'>PlayerMove</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerRespawned.html'>PlayerRespawned</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerRespawning.html'>PlayerRespawning</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PortalUse.html'>PortalUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PreConnection.html'>PreConnection</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ReturnFromIdle.html'>ReturnFromIdle</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SignChange.html'>SignChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SignShow.html'>SignShow</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SlotClick.html'>SlotClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\StatGained.html'>StatGained</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\TeleportCause.html'>TeleportCause</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ToolBroken.html'>ToolBroken</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\VillagerTrade.html'>VillagerTrade</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\system\0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="event-player-__classes-and-interfaces-__">EVENT.PLAYER <strong>Classes and Interfaces </strong></h2>
+<blockquote>
+<p>io.wolfscript.event.player</p>
+</blockquote>
+<hr>
+<p>Classes and interfaces for namespace io.wolfscript.event.player</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Description   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Classes</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="AnvilUse.html"><code>AnvilUse</code></a></strong></td>
+<td style="text-align:left"><em>AnvilUse Hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ArmorBroken.html"><code>ArmorBroken</code></a></strong></td>
+<td style="text-align:left"><em>Called when a piece of Armor has been destroyed</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ArmorStandModify.html"><code>ArmorStandModify</code></a></strong></td>
+<td style="text-align:left"><em>Called when a @{link Player} places/replaces armor in an <code>ArmorStand</code></em> </td>
+</tr>
+<tr>
+<td><strong><a href="Ban.html"><code>Ban</code></a></strong></td>
+<td style="text-align:left"><em>Ban hook. Contains information about an issued Ban</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BedEnter.html"><code>BedEnter</code></a></strong></td>
+<td style="text-align:left"><em>Bed enter hook, called when a player enters a bed</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BedExit.html"><code>BedExit</code></a></strong></td>
+<td style="text-align:left"><em>Bed exit hook, called when a player leaves a bed</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BlockDestroy.html"><code>BlockDestroy</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player destroy a block</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BlockLeftClick.html"><code>BlockLeftClick</code></a></strong></td>
+<td style="text-align:left"><em>Left click hook. Contains information about a Player left clicking.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BlockPlace.html"><code>BlockPlace</code></a></strong></td>
+<td style="text-align:left"><em>Is called when a player right-clicks a block, eg. uses it.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BlockRightClick.html"><code>BlockRightClick</code></a></strong></td>
+<td style="text-align:left"><em>Is called when a player right-clicks a block, eg. uses it.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BookEdit.html"><code>BookEdit</code></a></strong></td>
+<td style="text-align:left"><em>Called when a <code>Player</code> edits a Book <a href="..\..\api\inventory\Item.html"><code>Item</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="Chat.html"><code>Chat</code></a></strong></td>
+<td style="text-align:left"><em>Chat hook. Contains player, prefix, message and receivers information</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Connection.html"><code>Connection</code></a></strong></td>
+<td style="text-align:left"><em>Connection hook. Contains information about a player connecting.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Craft.html"><code>Craft</code></a></strong></td>
+<td style="text-align:left"><em>Craft Hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Disconnection.html"><code>Disconnection</code></a></strong></td>
+<td style="text-align:left"><em>Disconnection hook. Contains information about a <code>Player</code> disconnecting.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Eat.html"><code>Eat</code></a></strong></td>
+<td style="text-align:left"><em>Eat</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Enchant.html"><code>Enchant</code></a></strong></td>
+<td style="text-align:left"><em>Enchant hook. Contains information about a player enchanting an item.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EntityRightClick.html"><code>EntityRightClick</code></a></strong></td>
+<td style="text-align:left"><em>Is called when a player right-clicks an entity, for instance a villager for trading or a vehicle for entering</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Experience.html"><code>Experience</code></a></strong></td>
+<td style="text-align:left"><em>Experience hook. Contains information about player experience changes.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="FoodExhaustion.html"><code>FoodExhaustion</code></a></strong></td>
+<td style="text-align:left"><em>Food exhaustion change hook. Contains information about a player&#39;s food exhaustion changes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="FoodLevel.html"><code>FoodLevel</code></a></strong></td>
+<td style="text-align:left"><em>Food level hook. Contains information about a player&#39;s food level changes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="FoodSaturation.html"><code>FoodSaturation</code></a></strong></td>
+<td style="text-align:left"><em>Food saturation change hook. Contains information about a player&#39;s food saturation changes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="GameModeChange.html"><code>GameModeChange</code></a></strong></td>
+<td style="text-align:left"><em>Called when a <code>Player</code> changes GameModes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="HealthChange.html"><code>HealthChange</code></a></strong></td>
+<td style="text-align:left"><em>Health Change hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="HeldItemChange.html"><code>HeldItemChange</code></a></strong></td>
+<td style="text-align:left"><em>Held item change hook. Contains information about a player&#39;s held slot changes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Inventory.html"><code>Inventory</code></a></strong></td>
+<td style="text-align:left"><em>Inventory hook. Contains information about a player either opening or closing an inventory</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemDrop.html"><code>ItemDrop</code></a></strong></td>
+<td style="text-align:left"><em>Item Hook. Contains EntityItem and Player</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemFrameRotate.html"><code>ItemFrameRotate</code></a></strong></td>
+<td style="text-align:left"><em>Called when a <code>Player</code> rotates an <a href="..\..\api\inventory\Item.html"><code>Item</code></a> in an <a href="..\..\api\entity\hanging\ItemFrame.html"><code>ItemFrame</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemFrameSetItem.html"><code>ItemFrameSetItem</code></a></strong></td>
+<td style="text-align:left"><em>Called when an <code>Player</code> sets and <a href="..\..\api\inventory\Item.html"><code>Item</code></a> in a <a href="..\..\api\entity\hanging\ItemFrame.html"><code>ItemFrame</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemPickup.html"><code>ItemPickup</code></a></strong></td>
+<td style="text-align:left"><em>Item Hook. Contains EntityItem and Player</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemUse.html"><code>ItemUse</code></a></strong></td>
+<td style="text-align:left"><em>Item use hook. Called when a <code>Player</code> uses an <a href="..\..\api\inventory\Item.html"><code>Item</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="Kick.html"><code>Kick</code></a></strong></td>
+<td style="text-align:left"><em>Kick hook. Contains the player who was kicked and the MessageReceiver who kicked them</em> </td>
+</tr>
+<tr>
+<td><strong><a href="LevelUp.html"><code>LevelUp</code></a></strong></td>
+<td style="text-align:left"><em>LevelUp hook. Called when a <code>Player</code> levels up</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerArmSwing.html"><code>PlayerArmSwing</code></a></strong></td>
+<td style="text-align:left"><em>Player Left Click Hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerDeath.html"><code>PlayerDeath</code></a></strong></td>
+<td style="text-align:left"><em>Player Death hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerIdle.html"><code>PlayerIdle</code></a></strong></td>
+<td style="text-align:left"><em>Player Idle Hook<p/></em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerList.html"><code>PlayerList</code></a></strong></td>
+<td style="text-align:left"><em>PlayerList</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerMove.html"><code>PlayerMove</code></a></strong></td>
+<td style="text-align:left"><em>Player move hook. Contains information about a player&#39;s movement</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerRespawned.html"><code>PlayerRespawned</code></a></strong></td>
+<td style="text-align:left"><em>Player respawned hook. Contains the reference to the freshly spawned player entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerRespawning.html"><code>PlayerRespawning</code></a></strong></td>
+<td style="text-align:left"><em>Player pre-respawn hook.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PortalUse.html"><code>PortalUse</code></a></strong></td>
+<td style="text-align:left"><em>PortalUse Hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PreConnection.html"><code>PreConnection</code></a></strong></td>
+<td style="text-align:left"><em>Login checks hook. Comes with ip, name and a kickReason that is to be returned,</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ReturnFromIdle.html"><code>ReturnFromIdle</code></a></strong></td>
+<td style="text-align:left"><em>Called when the Player is no longer idle</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SignChange.html"><code>SignChange</code></a></strong></td>
+<td style="text-align:left"><em>Sign Change hook. Contains information about a sign either being changed by a player</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SignShow.html"><code>SignShow</code></a></strong></td>
+<td style="text-align:left"><em>Sign Change hook. Contains information about a sign shown to a player</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SlotClick.html"><code>SlotClick</code></a></strong></td>
+<td style="text-align:left"><em>Slot click hook</em> </td>
+</tr>
+<tr>
+<td><strong><a href="StatGained.html"><code>StatGained</code></a></strong></td>
+<td style="text-align:left"><em>StatGained</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ToolBroken.html"><code>ToolBroken</code></a></strong></td>
+<td style="text-align:left"><em>Called when a tool/sword runs out of uses and is destroyed</em> </td>
+</tr>
+<tr>
+<td><strong><a href="VillagerTrade.html"><code>VillagerTrade</code></a></strong></td>
+<td style="text-align:left"><em>VillagerTrade Hook</em> </td>
+</tr>
+<tr>
+<td><strong>Enums</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="TeleportCause.html"><code>TeleportCause</code></a></strong></td>
+<td style="text-align:left"><em>Teleport hook. Contains player who is teleporting and their destination</em> </td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

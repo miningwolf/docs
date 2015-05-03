@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API HookExecutor</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html'>hook</a></li>
+<li class='current'><a href='#'>HookExecutor</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\CancelableHook.html'>CancelableHook</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\Dispatcher.html'>Dispatcher</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\Hook.html'>Hook</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\HookConsistencyException.html'>HookConsistencyException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\HookExecutionException.html'>HookExecutionException</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\HookExecutor.html'>HookExecutor</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\HookExecutorInterface.html'>HookExecutorInterface</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="hookexecutor-__class__">HookExecutor <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.hook.HookExecutor
+Implements <a href="HookExecutorInterface.html"><code>HookExecutorInterface</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Stores registered listeners and performs hook dispatches.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>callHook</strong>(hook) <br> <em>Register a <a href="..\plugin\PluginListener.html"><code>PluginListener</code></a> for a system hook</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>compare</strong>(o1, o2) <br> <em>compare method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-hookexecutor-hookexecutor-md-">Public Methods for <a href="HookExecutor.html"><code>HookExecutor</code></a></h3>
+<h5 id="-a-id-callhook-a-public-function-__callhook__-hook-"><a id='callhook'></a>public  function <strong>callHook</strong>(hook)</h5>
+<p>_Register a <a href="..\plugin\PluginListener.html"><code>PluginListener</code></a> for a system hook /
+    @Override
+    public void registerListener(PluginListener listener, Plugin plugin) {
+        Method[] methods = ToolBox.safeArrayMerge(listener.getClass().getMethods(), listener.getClass().getDeclaredMethods(), new Method[1]);
+        for (final Method method : methods) {
+            // Check if the method is a hook handling method
+            final HookHandler handler = method.getAnnotation(HookHandler.class);</p>
+<pre><code>        <span class="hljs-keyword">if</span> (handler == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">continue</span>; // <span class="hljs-keyword">Next</span>, <span class="hljs-keyword">not</span> one of our things
+        }
+        // Check the parameters <span class="hljs-keyword">for</span> number <span class="hljs-literal">and</span> type <span class="hljs-literal">and</span> decide <span class="hljs-keyword">if</span> it<span class="hljs-comment">'s one</span>
+        // that is really a handler <span class="hljs-function"><span class="hljs-keyword">method</span></span>
+        <span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;?&gt;[] <span class="hljs-title">parameters</span> = <span class="hljs-title">method</span>.<span class="hljs-title">getParameterTypes</span>();</span>
+
+        <span class="hljs-keyword">if</span> (parameters.length &gt; <span class="hljs-number">1</span> || parameters.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> HookConsistencyException(<span class="hljs-string">"Amount of parameters for "</span> + <span class="hljs-function"><span class="hljs-keyword">method</span>.<span class="hljs-title">getName</span>(</span>) + <span class="hljs-string">" is invalid. Expected 1, was "</span> + parameters.length);
+        }
+        <span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;?&gt; <span class="hljs-title">hookCls</span> = <span class="hljs-title">parameters</span>[0];</span>
+
+        <span class="hljs-keyword">if</span> (!Hook.class.isAssignableFrom(hookCls)) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> HookConsistencyException(<span class="hljs-string">"Hook is not assignable from "</span> + hookCls.getName());
+        }
+
+        Dispatcher dispatcher = <span class="hljs-keyword">new</span> Dispatcher() {
+
+            @Override
+            <span class="hljs-keyword">public</span> void execute(PluginListener listener, Hook hook) {
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-function"><span class="hljs-keyword">method</span>.<span class="hljs-title">invoke</span>(</span>listener, hook);
+                }
+                <span class="hljs-keyword">catch</span> (Throwable thrown) {
+                    <span class="hljs-keyword">if</span> (thrown.getCause() != <span class="hljs-literal">null</span>) {
+                        // Skip past wrapper exceptions <span class="hljs-literal">and</span> cut straight <span class="hljs-keyword">to</span> the point
+                        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> HookExecutionException(thrown.getCause().getMessage(), thrown.getCause());
+                    }
+                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> HookExecutionException(thrown.getMessage(), thrown);
+                }
+            }
+        };
+        dispatcher.ignoreCanceled = handler.ignoreCanceled();
+
+        registerHook(listener, plugin, hookCls, dispatcher, handler.priority());
+    }
+}
+
+/** A more flexible hook <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">used</span> <span class="hljs-title">internally</span>. <span class="hljs-title">Adds</span> <span class="hljs-title">flexibility</span> <span class="hljs-title">required</span> <span class="hljs-title">for</span> <span class="hljs-title">Scala</span> <span class="hljs-title">hook</span> <span class="hljs-title">registration</span>. /</span>
+<span class="hljs-keyword">public</span> void registerHook(PluginListener listener, Plugin plugin, <span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;?&gt; <span class="hljs-title">hookCls</span>, <span class="hljs-title">Dispatcher</span> <span class="hljs-title">dispatcher</span>, <span class="hljs-title">Priority</span> <span class="hljs-title">priority</span>) {</span>
+    // Caller is assumed <span class="hljs-keyword">to</span> check <span class="hljs-class"><span class="hljs-keyword">class</span> (<span class="hljs-title">this</span> <span class="hljs-title">is</span> <span class="hljs-title">an</span> <span class="hljs-title">internal</span> <span class="hljs-title">API</span>)</span>
+    listeners.put((<span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;? <span class="hljs-keyword">extends</span> <span class="hljs-title">Hook</span>&gt;)<span class="hljs-title">hookCls</span>, <span class="hljs-title">new</span> <span class="hljs-title">RegisteredPluginListener</span>(<span class="hljs-title">listener</span>, <span class="hljs-title">plugin</span>, <span class="hljs-title">dispatcher</span>, <span class="hljs-title">priority</span>));</span>
+    Collections.sort(listeners.get((<span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;? <span class="hljs-keyword">extends</span> <span class="hljs-title">Hook</span>&gt;)<span class="hljs-title">hookCls</span>), <span class="hljs-title">listener_comp</span>);</span>
+}
+
+/** Unregisters all listeners <span class="hljs-keyword">for</span> specified plugin_
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hook</td>
+<td><a href="Hook.html"><code>Hook</code></a></td>
+<td>hook argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-compare-a-public-function-__compare__-o1-o2-"><a id='compare'></a>public  function <strong>compare</strong>(o1, o2)</h5>
+<p><em>compare method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o1</td>
+<td><a href="..\plugin\RegisteredPluginListener.html"><code>RegisteredPluginListener</code></a></td>
+<td>o1 argument</td>
+</tr>
+<tr>
+<td>o2</td>
+<td><a href="..\plugin\RegisteredPluginListener.html"><code>RegisteredPluginListener</code></a></td>
+<td>o2 argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

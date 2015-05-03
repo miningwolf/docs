@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API YamlConfigurationOptions</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html'>configuration</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\0.html'>file</a></li>
+<li class='current'><a href='#'>YamlConfigurationOptions</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\0.html' class=''>configuration.file</a></li> 
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\FileConfiguration.html'>FileConfiguration</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\FileConfigurationOptions.html'>FileConfigurationOptions</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\YamlConfiguration.html'>YamlConfiguration</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\YamlConfigurationOptions.html'>YamlConfigurationOptions</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\YamlConstructor.html'>YamlConstructor</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\file\YamlRepresenter.html'>YamlRepresenter</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\serialization\0.html' class=''>configuration.serialization</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="yamlconfigurationoptions-__class__">YamlConfigurationOptions <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.configuration.file.YamlConfigurationOptions
+Extends <a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Various settings for controlling the input and output of a <a href="YamlConfiguration.html"><code>YamlConfiguration</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>configuration</strong>() <br> <em>configuration method</em></td>
+<td style="text-align:left"><a href="YamlConfiguration.html"><code>YamlConfiguration</code></a></td>
+</tr>
+<tr>
+<td> function <strong>copyDefaults</strong>(value) <br> <em>copyDefaults method</em></td>
+<td style="text-align:left"><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>copyHeader</strong>(value) <br> <em>copyHeader method</em></td>
+<td style="text-align:left"><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>header</strong>(value) <br> <em>header method</em></td>
+<td style="text-align:left"><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>indent</strong>(value) <br> <em>Gets how much spaces should be used to indent each line.</em></td>
+<td style="text-align:left"><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>pathSeparator</strong>(value) <br> <em>pathSeparator method</em></td>
+<td style="text-align:left"><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>configuration</strong>() <br> <em>configuration method</em></td>
+<td style="text-align:left"><a href="FileConfiguration.html"><code>FileConfiguration</code></a></td>
+</tr>
+<tr>
+<td> function <strong>copyDefaults</strong>(value) <br> <em>copyDefaults method</em></td>
+<td style="text-align:left"><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>copyHeader</strong>(value) <br> <em>Gets the header that will be applied to the top of the saved output.</em></td>
+<td style="text-align:left"><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td> function <strong>pathSeparator</strong>(value) <br> <em>pathSeparator method</em></td>
+<td style="text-align:left"><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-yamlconfigurationoptions-yamlconfigurationoptions-md-">Public Methods for <a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></h3>
+<h5 id="-a-id-configuration-a-public-function-__configuration__-"><a id='configuration'></a>public  function <strong>configuration</strong>()</h5>
+<p><em>configuration method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfiguration.html"><code>YamlConfiguration</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-copydefaults-a-public-function-__copydefaults__-value-"><a id='copydefaults'></a>public  function <strong>copyDefaults</strong>(value)</h5>
+<p><em>copyDefaults method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-copyheader-a-public-function-__copyheader__-value-"><a id='copyheader'></a>public  function <strong>copyHeader</strong>(value)</h5>
+<p><em>copyHeader method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-header-a-public-function-__header__-value-"><a id='header'></a>public  function <strong>header</strong>(value)</h5>
+<p><em>header method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>String</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-indent-a-public-function-__indent__-value-"><a id='indent'></a>public  function <strong>indent</strong>(value)</h5>
+<p><em>Gets how much spaces should be used to indent each line. <p> The minimum value this may be is 2, and the maximum is 9.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>int</code></td>
+<td>New indent</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+<td>How much to indent by /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> indent() {
+    return indent;
+}
+
+/** Sets how much spaces should be used <span class="hljs-keyword">to</span> indent <span class="hljs-keyword">each</span> line. &lt;p&gt; The minimum value this may be <span class="hljs-keyword">is</span> <span class="hljs-number">2</span>, <span class="hljs-keyword">and</span> the maximum <span class="hljs-keyword">is</span> <span class="hljs-number">9.</span>
+</code></pre><h5 id="-a-id-pathseparator-a-public-function-__pathseparator__-value-"><a id='pathseparator'></a>public  function <strong>pathSeparator</strong>(value)</h5>
+<p><em>pathSeparator method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>char</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="YamlConfigurationOptions.html"><code>YamlConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-fileconfigurationoptions-fileconfigurationoptions-md-">Public Methods for <a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></h3>
+<h5 id="-a-id-configuration-a-public-function-__configuration__-"><a id='configuration'></a>public  function <strong>configuration</strong>()</h5>
+<p><em>configuration method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="FileConfiguration.html"><code>FileConfiguration</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-copydefaults-a-public-function-__copydefaults__-value-"><a id='copydefaults'></a>public  function <strong>copyDefaults</strong>(value)</h5>
+<p><em>copyDefaults method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-copyheader-a-public-function-__copyheader__-value-"><a id='copyheader'></a>public  function <strong>copyHeader</strong>(value)</h5>
+<p><em>Gets the header that will be applied to the top of the saved output. <p> This header will be commented out and applied directly at the top of the generated output of the <a href="FileConfiguration.html"><code>FileConfiguration</code></a>. It is not required to include a newline at the end of the header as it will automatically be applied, but you may include one if you wish for extra spacing. <p> Null is a valid value which will indicate that no header is to be applied. The default value is null.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>New header</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+<td>Header /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public String header() {
+<span class="hljs-command">    return</span> header;
+}
+
+/** Sets <span class="hljs-keyword">the</span> header <span class="hljs-keyword">that</span> will be applied <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> saved output. &lt;p&gt; This header will be commented out <span class="hljs-keyword">and</span> applied directly <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> generated output <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> [`FileConfiguration`](FileConfiguration.md). It <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required <span class="hljs-keyword">to</span> include a newline <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">end</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> header <span class="hljs-keyword">as</span> <span class="hljs-keyword">it</span> will automatically be applied, <span class="hljs-keyword">but</span> you may include one <span class="hljs-keyword">if</span> you wish <span class="hljs-keyword">for</span> extra spacing. &lt;p&gt; Null <span class="hljs-keyword">is</span> a valid value which will indicate <span class="hljs-keyword">that</span> no header <span class="hljs-keyword">is</span> <span class="hljs-keyword">to</span> be applied.
+</code></pre><h5 id="-a-id-pathseparator-a-public-function-__pathseparator__-value-"><a id='pathseparator'></a>public  function <strong>pathSeparator</strong>(value)</h5>
+<p><em>pathSeparator method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>char</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">---</h2>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

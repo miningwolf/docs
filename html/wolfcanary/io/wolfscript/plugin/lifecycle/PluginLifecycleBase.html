@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PluginLifecycleBase</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html'>plugin</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\0.html'>lifecycle</a></li>
+<li class='current'><a href='#'>PluginLifecycleBase</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\dependencies\0.html' class=''>plugin.dependencies</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\0.html' class=''>plugin.lifecycle</a></li> 
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\InvalidPluginLifecycleException.html'>InvalidPluginLifecycleException</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\JavaPluginLifecycle.html'>JavaPluginLifecycle</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\PluginLifecycleBase.html'>PluginLifecycleBase</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\PluginLifecycleFactory.html'>PluginLifecycleFactory</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="pluginlifecyclebase-__class__">PluginLifecycleBase <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.plugin.lifecycle.PluginLifecycleBase
+Implements <a href="..\PluginLifecycle.html"><code>PluginLifecycle</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Base class for plugin lifecycles</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>PluginLifecycleBase</strong>(desc) <br> <em>PluginLifecycleBase constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>unload</strong>() <br> <em>{@inheritDoc}</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-pluginlifecyclebase-pluginlifecyclebase-md-">Public Constructors for <a href="PluginLifecycleBase.html"><code>PluginLifecycleBase</code></a></h3>
+<h5 id="-a-id-pluginlifecyclebase-a-new-__pluginlifecyclebase__-desc-"><a id='pluginlifecyclebase'></a>new <strong>PluginLifecycleBase</strong>(desc)</h5>
+<p><em>PluginLifecycleBase constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>desc</td>
+<td><a href="..\PluginDescriptor.html"><code>PluginDescriptor</code></a></td>
+<td>desc argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-pluginlifecyclebase-pluginlifecyclebase-md-">Public Methods for <a href="PluginLifecycleBase.html"><code>PluginLifecycleBase</code></a></h3>
+<h5 id="-a-id-unload-a-public-function-__unload__-"><a id='unload'></a>public  function <strong>unload</strong>()</h5>
+<p>_{@inheritDoc} /
+    public boolean enable() {
+        if (desc.getCurrentState() == PluginState.ENABLED) {
+            return true;
+        }
+        if (desc.getCurrentState() == PluginState.DISABLED) {
+            boolean en = desc.getPlugin().enable();
+            if (en) {
+                desc.setCurrentState(PluginState.ENABLED);
+            }
+            return en;
+        }
+        return false;
+    }</p>
+<pre><code>/** {@inheritDoc} /
+public boolean disable() {
+    <span class="hljs-keyword">if</span> (desc.getCurrentState() == <span class="hljs-type">PluginState</span>.<span class="hljs-type">DISABLED</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+    <span class="hljs-keyword">if</span> (desc.getCurrentState() == <span class="hljs-type">PluginState</span>.<span class="hljs-type">ENABLED</span>) {
+        desc.getPlugin().disable();
+        desc.setCurrentState(<span class="hljs-type">PluginState</span>.<span class="hljs-type">DISABLED</span>);
+        <span class="hljs-type">Plugin</span> p = desc.getPlugin();
+        <span class="hljs-type">Wolf</span>.hooks().unregisterPluginListeners(p);
+        <span class="hljs-type">Wolf</span>.commands().unregisterCommands(p);
+        <span class="hljs-type">Wolf</span>.motd().unregisterMOTDListener(p);
+        <span class="hljs-type">PlayerInformation</span>.removeInfoAdditions(p);
+        <span class="hljs-type">ServerTaskManager</span>.removeTasks(p);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+/** <span class="hljs-type">Implement</span> this <span class="hljs-keyword">method</span> <span class="hljs-keyword">in</span> order to <span class="hljs-keyword">do</span> actual loading. <span class="hljs-type">Be</span> sure to <span class="hljs-type">set</span> the plugin <span class="hljs-keyword">object</span> <span class="hljs-keyword">in</span> `<span class="hljs-type">PluginLifecycleBase</span><span class="hljs-comment">#desc` /</span>
+protected abstract <span class="hljs-type">void</span> _load() throws <span class="hljs-type">PluginLoadFailedException</span>;
+
+/** {@inheritDoc} /
+public <span class="hljs-type">Plugin</span> load() throws <span class="hljs-type">PluginLoadFailedException</span> {
+    unload();
+    _load();
+    desc.setCurrentState(<span class="hljs-type">PluginState</span>.<span class="hljs-type">DISABLED</span>);
+    <span class="hljs-keyword">return</span> desc.getPlugin();
+}
+
+/** <span class="hljs-type">Implement</span> this <span class="hljs-keyword">method</span> <span class="hljs-keyword">in</span> order to <span class="hljs-keyword">do</span> specific unloading code /
+protected abstract <span class="hljs-type">void</span> _unload();
+
+/** {@inheritDoc}_
+</code></pre><table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

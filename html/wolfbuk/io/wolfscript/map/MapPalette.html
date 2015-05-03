@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API MapPalette</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html'>map</a></li>
+<li class='current'><a href='#'>MapPalette</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\CharacterSprite.html'>CharacterSprite</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\MapCanvas.html'>MapCanvas</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\MapCursorCollection.html'>MapCursorCollection</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\MapPalette.html'>MapPalette</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\MapRenderer.html'>MapRenderer</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\MinecraftFont.html'>MinecraftFont</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\Scale.html'>Scale</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\map\Type.html'>Type</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="mappalette-__class__">MapPalette <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.map.MapPalette</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Represents the palette that map items use. <p> These fields are hee base color ranges. Each entry corresponds to four colors of varying shades with values entry to entry + 3.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static final var <strong>TRANSPARENT</strong> <br> <em>TRANSPARENT field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>LIGHT</strong> <br> <em>LIGHT field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>LIGHT</strong> <br> <em>LIGHT field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>GRAY</strong> <br> <em>GRAY field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>RED</strong> <br> <em>RED field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>PALE</strong> <br> <em>PALE field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>GRAY</strong> <br> <em>GRAY field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>DARK</strong> <br> <em>DARK field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>WHITE</strong> <br> <em>WHITE field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>LIGHT</strong> <br> <em>LIGHT field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>BROWN</strong> <br> <em>BROWN field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>DARK</strong> <br> <em>DARK field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>BLUE</strong> <br> <em>BLUE field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static final var <strong>DARK</strong> <br> <em>DARK field</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-mappalette-mappalette-md-">Public Methods for <a href="MapPalette.html"><code>MapPalette</code></a></h3>
+<h5 id="-a-id-getcolor-a-public-static-function-__getcolor__-index-"><a id='getcolor'></a>public static function <strong>getColor</strong>(index)</h5>
+<p>_Deprecated: Magic value /
+    @Deprecated
+    public static final byte TRANSPARENT = 0;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte LIGHT_GREEN = 4;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte LIGHT_BROWN = 8;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte GRAY_1 = 12;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte RED = 16;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte PALE_BLUE = 20;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte GRAY_2 = 24;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte DARK_GREEN = 28;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte WHITE = 32;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte LIGHT_GRAY = 36;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte BROWN = 40;
+    /<strong> Magic value /
+    @Deprecated
+    public static final byte DARK_GRAY = 44;
+    /</strong> Magic value /
+    @Deprecated
+    public static final byte BLUE = 48;
+    /** Magic value /
+    @Deprecated
+    public static final byte DARK_BROWN = 52;</p>
+<pre><code>/** <span class="hljs-type">Resize</span> an image to <span class="hljs-number">128</span>x128. <span class="hljs-type">Magic</span> value /
+@<span class="hljs-type">Deprecated</span>
+public <span class="hljs-keyword">static</span> byte[] imageToBytes(<span class="hljs-type">Image</span> image) {
+    <span class="hljs-type">BufferedImage</span> temp = new <span class="hljs-type">BufferedImage</span>(image.getWidth(null), image.getHeight(null), <span class="hljs-type">BufferedImage</span>.<span class="hljs-type">TYPE_INT_ARGB</span>);
+    <span class="hljs-type">Graphics2D</span> graphics = temp.createGraphics();
+    graphics.drawImage(image, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, null);
+    graphics.dispose();
+
+    <span class="hljs-type">int</span>[] pixels = new <span class="hljs-type">int</span>[temp.getWidth() temp.getHeight()];
+    temp.getRGB(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, temp.getWidth(), temp.getHeight(), pixels, <span class="hljs-number">0</span>, temp.getWidth());
+
+    byte[] <span class="hljs-literal">result</span> = new byte[temp.getWidth() temp.getHeight()];
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; pixels.length; i++) {
+        <span class="hljs-literal">result</span>[i] = matchColor(new <span class="hljs-type">Color</span>(pixels[i], <span class="hljs-literal">true</span>));
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">result</span>;
+}
+
+/** <span class="hljs-type">Get</span> the index <span class="hljs-keyword">of</span> the closest matching color <span class="hljs-keyword">in</span> the palette to the given color. <span class="hljs-type">Magic</span> value /
+@<span class="hljs-type">Deprecated</span>
+public <span class="hljs-keyword">static</span> byte matchColor(<span class="hljs-type">int</span> r, <span class="hljs-type">int</span> g, <span class="hljs-type">int</span> b) {
+    <span class="hljs-keyword">return</span> matchColor(new <span class="hljs-type">Color</span>(r, g, b));
+}
+
+/** <span class="hljs-type">Get</span> the index <span class="hljs-keyword">of</span> the closest matching color <span class="hljs-keyword">in</span> the palette to the given color. <span class="hljs-type">Magic</span> value /
+@<span class="hljs-type">Deprecated</span>
+public <span class="hljs-keyword">static</span> byte matchColor(<span class="hljs-type">Color</span> color) {
+    <span class="hljs-keyword">if</span> (color.getAlpha() &lt; <span class="hljs-number">128</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-type">int</span> index = <span class="hljs-number">0</span>;
+    double best = -<span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">4</span>; i &lt; colors.length; i++) {
+        double distance = getDistance(color, colors[i]);
+        <span class="hljs-keyword">if</span> (distance &lt; best || best == -<span class="hljs-number">1</span>) {
+            best = distance;
+            index = i;
+        }
+    }
+
+    // <span class="hljs-type">Minecraft</span> has <span class="hljs-number">143</span> colors, some <span class="hljs-keyword">of</span> which have negative byte representations
+    <span class="hljs-keyword">return</span> (byte) (index &lt; <span class="hljs-number">128</span> ? index : -<span class="hljs-number">129</span> + (index - <span class="hljs-number">127</span>));
+}
+
+/** <span class="hljs-type">Get</span> the value <span class="hljs-keyword">of</span> the given color <span class="hljs-keyword">in</span> the palette. <span class="hljs-type">Magic</span> value_
+</code></pre><p><em>getColor method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td><code>byte</code></td>
+<td>The index in the palette.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Color</code></td>
+<td>The resized image. /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public <span class="hljs-keyword">static</span> <span class="hljs-type">BufferedImage</span> resizeImage(<span class="hljs-type">Image</span> image) {
+    <span class="hljs-type">BufferedImage</span> <span class="hljs-literal">result</span> = new <span class="hljs-type">BufferedImage</span>(<span class="hljs-number">128</span>, <span class="hljs-number">128</span>, <span class="hljs-type">BufferedImage</span>.<span class="hljs-type">TYPE_INT_ARGB</span>);
+    <span class="hljs-type">Graphics2D</span> graphics = <span class="hljs-literal">result</span>.createGraphics();
+    graphics.drawImage(image, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">128</span>, <span class="hljs-number">128</span>, null);
+    graphics.dispose();
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">result</span>;
+}
+
+/** <span class="hljs-type">Convert</span> an <span class="hljs-type">Image</span> to a byte[] <span class="hljs-keyword">using</span> the palette.
+</code></pre><hr>
+<h3 id="public-fields-for-mappalette-mappalette-md-">Public Fields for <a href="MapPalette.html"><code>MapPalette</code></a></h3>
+<h5 id="-a-id-transparent-a-public-static-final-var-__transparent__"><a id='transparent'></a>public static final var <strong>TRANSPARENT</strong></h5>
+<p><em>TRANSPARENT field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-light-a-public-static-final-var-__light__"><a id='light'></a>public static final var <strong>LIGHT</strong></h5>
+<p><em>LIGHT field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-light-a-public-static-final-var-__light__"><a id='light'></a>public static final var <strong>LIGHT</strong></h5>
+<p><em>LIGHT field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-gray-a-public-static-final-var-__gray__"><a id='gray'></a>public static final var <strong>GRAY</strong></h5>
+<p><em>GRAY field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-red-a-public-static-final-var-__red__"><a id='red'></a>public static final var <strong>RED</strong></h5>
+<p><em>RED field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-pale-a-public-static-final-var-__pale__"><a id='pale'></a>public static final var <strong>PALE</strong></h5>
+<p><em>PALE field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-gray-a-public-static-final-var-__gray__"><a id='gray'></a>public static final var <strong>GRAY</strong></h5>
+<p><em>GRAY field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-dark-a-public-static-final-var-__dark__"><a id='dark'></a>public static final var <strong>DARK</strong></h5>
+<p><em>DARK field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-white-a-public-static-final-var-__white__"><a id='white'></a>public static final var <strong>WHITE</strong></h5>
+<p><em>WHITE field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-light-a-public-static-final-var-__light__"><a id='light'></a>public static final var <strong>LIGHT</strong></h5>
+<p><em>LIGHT field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-brown-a-public-static-final-var-__brown__"><a id='brown'></a>public static final var <strong>BROWN</strong></h5>
+<p><em>BROWN field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-dark-a-public-static-final-var-__dark__"><a id='dark'></a>public static final var <strong>DARK</strong></h5>
+<p><em>DARK field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-blue-a-public-static-final-var-__blue__"><a id='blue'></a>public static final var <strong>BLUE</strong></h5>
+<p><em>BLUE field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<h5 id="-a-id-dark-a-public-static-final-var-__dark__"><a id='dark'></a>public static final var <strong>DARK</strong></h5>
+<p><em>DARK field</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

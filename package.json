@@ -1,0 +1,52 @@
+{
+  "name": "Docs",
+  "version": "1.0.0",
+  "description": "WolfScript Documentation by Mining Wolf",
+  "main": "index.js",
+  "author": "MiningWolf",
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/miningwolf/docs.git"
+  },
+  "devDependencies": {
+    "cheerio": "^0.19.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.4",
+    "highlight.js": "^8.5.0",
+    "lime-razor": "^0.2.11",
+    "lodash": "^3.6.0",
+    "marked": "^0.3.3",
+    "through": "^2.3.7",
+     "gulp-git": "^1.2.1",
+    "promise": "^7.0.1"
+  },
+  "keywords": [
+    "wolfscript",
+    "miningwolf",
+    "bukkit",
+    "spigot",
+    "canarymod",
+    "limerun",
+    "minecraft",
+    "gulp",
+    "java",
+    "node"
+  ],
+  "licenses": [
+    {
+      "type": "GPLv3",
+      "url": "http://www.gnu.org/licenses/gpl-3.0.txt"
+    }
+  ],
+  "homepage": "http://miningwolf.com",
+  "maintainers": [
+    {
+      "name": "miningwolf",
+      "email": "admin@miningwolf.com"
+    }
+  ],
+  "dependencies": {
+  }
+}

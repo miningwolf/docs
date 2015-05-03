@@ -1,0 +1,8 @@
+@{
+   model.scopes = ["io.wolfscript.event."];
+
+   model.noun = "Event";
+   model.renderPartial = this.html.renderPartial;
+
+}@(model.renderPartial('/build/views/partials/sectionSummary.jsmd',model)) 
+@(model.renderPartial('/build/views/partials/sectionDetail.jsmd',model))

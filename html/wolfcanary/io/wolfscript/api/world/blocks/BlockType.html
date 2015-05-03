@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API BlockType</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html'>api</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\0.html'>world</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\0.html'>blocks</a></li>
+<li class='current'><a href='#'>BlockType</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\ai\0.html' class=''>api.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\attributes\0.html' class=''>api.attributes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\chat\0.html' class=''>api.chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\0.html' class=''>api.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\effect\0.html' class=''>api.entity.effect</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\hanging\0.html' class=''>api.entity.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\0.html' class=''>api.entity.living</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\animal\0.html' class=''>api.entity.living.animal</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\0.html' class=''>api.entity.living.humanoid</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\0.html' class=''>api.entity.living.humanoid.npc</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\ai\0.html' class=''>api.entity.living.humanoid.npc.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\0.html' class=''>api.entity.living.monster</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\throwable\0.html' class=''>api.entity.throwable</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\vehicle\0.html' class=''>api.entity.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\factory\0.html' class=''>api.factory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\gui\0.html' class=''>api.gui</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\0.html' class=''>api.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\helper\0.html' class=''>api.inventory.helper</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\recipes\0.html' class=''>api.inventory.recipes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\slot\0.html' class=''>api.inventory.slot</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\nbt\0.html' class=''>api.nbt</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\packet\0.html' class=''>api.packet</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\potion\0.html' class=''>api.potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\scoreboard\0.html' class=''>api.scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\statistics\0.html' class=''>api.statistics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\0.html' class=''>api.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\0.html' class=''>api.world.blocks</a></li> 
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Banner.html'>Banner</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Block.html'>Block</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\BlockBase.html'>BlockBase</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\BlockFace.html'>BlockFace</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\BlockMaterial.html'>BlockMaterial</a></li>
+<li class='active'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\BlockType.html'>BlockType</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\BrewingStand.html'>BrewingStand</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Comparator.html'>Comparator</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\CustomBlockTypeException.html'>CustomBlockTypeException</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\DaylightDetector.html'>DaylightDetector</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Dispenser.html'>Dispenser</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\DoubleChest.html'>DoubleChest</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Dropper.html'>Dropper</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\EnderChest.html'>EnderChest</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Furnace.html'>Furnace</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Jukebox.html'>Jukebox</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\MapColor.html'>MapColor</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\MapColorList.html'>MapColorList</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\MobSpawner.html'>MobSpawner</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\NoteBlock.html'>NoteBlock</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Sign.html'>Sign</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\Skull.html'>Skull</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\TileEntity.html'>TileEntity</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\VanillaBlock.html'>VanillaBlock</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\0.html' class=''>api.world.blocks.properties</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\helpers\0.html' class=''>api.world.blocks.properties.helpers</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\0.html' class=''>api.world.effects</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\position\0.html' class=''>api.world.position</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="blocktype-__class__">BlockType <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.api.world.blocks.BlockType</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Static class of BlockTypes</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>equals</strong>(o) <br> <em>equals method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>static final var <strong>Air</strong> <br> <em>Air field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Stone</strong> <br> <em>Stone field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Granite</strong> <br> <em>Granite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>PolishedGranite</strong> <br> <em>PolishedGranite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Diorite</strong> <br> <em>Diorite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>PolishedDiorite</strong> <br> <em>PolishedDiorite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Andesite</strong> <br> <em>Andesite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>PolishedAndesite</strong> <br> <em>PolishedAndesite field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Grass</strong> <br> <em>Grass field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Dirt</strong> <br> <em>Dirt field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>CoarseDirt</strong> <br> <em>CoarseDirt field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Podzol</strong> <br> <em>Podzol field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>Cobble</strong> <br> <em>Cobble field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>OakPlanks</strong> <br> <em>OakPlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>SprucePlanks</strong> <br> <em>SprucePlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>BirchPlanks</strong> <br> <em>BirchPlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>JunglePlanks</strong> <br> <em>JunglePlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>AcaciaPlanks</strong> <br> <em>AcaciaPlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>DarkOakPlanks</strong> <br> <em>DarkOakPlanks field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>RedSandstoneStairs</strong> <br> <em>RedSandstoneStairs field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>DoubleRedSandstoneSlab</strong> <br> <em>DoubleRedSandstoneSlab field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>RedSandstoneSlab</strong> <br> <em>RedSandstoneSlab field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>SpruceFenceGate</strong> <br> <em>SpruceFenceGate field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>BirchFenceGate</strong> <br> <em>BirchFenceGate field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>JungleFenceGate</strong> <br> <em>JungleFenceGate field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>DarkOakFenceGate</strong> <br> <em>DarkOakFenceGate field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>AcaciaFenceGate</strong> <br> <em>AcaciaFenceGate field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>SpruceFence</strong> <br> <em>SpruceFence field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>BirchFence</strong> <br> <em>BirchFence field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>JungleFence</strong> <br> <em>JungleFence field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>DarkOakFence</strong> <br> <em>DarkOakFence field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>AcaciaFence</strong> <br> <em>AcaciaFence field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>SpruceDoor</strong> <br> <em>SpruceDoor field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>BirchDoor</strong> <br> <em>BirchDoor field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>JungleDoor</strong> <br> <em>JungleDoor field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>AcaciaDoor</strong> <br> <em>AcaciaDoor field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>DarkOakDoor</strong> <br> <em>DarkOakDoor field</em></td>
+<td style="text-align:left"><a href="BlockType.html"><code>BlockType</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-blocktype-blocktype-md-">Public Methods for <a href="BlockType.html"><code>BlockType</code></a></h3>
+<h5 id="-a-id-equals-a-public-function-__equals__-o-"><a id='equals'></a>public  function <strong>equals</strong>(o)</h5>
+<p><em>equals method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o</td>
+<td><code>Object</code></td>
+<td>o argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
+<p><em>hashCode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>data /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">short</span> <span class="hljs-title">getData</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">return</span> data.<span class="hljs-title">shortValue</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-javadoc">/** Get the ID of this BlockType</span>
+</code></pre><hr>
+<h3 id="public-fields-for-blocktype-blocktype-md-">Public Fields for <a href="BlockType.html"><code>BlockType</code></a></h3>
+<h5 id="-a-id-air-a-public-static-final-var-__air__"><a id='air'></a>public static final var <strong>Air</strong></h5>
+<p><em>Air field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-stone-a-public-static-final-var-__stone__"><a id='stone'></a>public static final var <strong>Stone</strong></h5>
+<p><em>Stone field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-granite-a-public-static-final-var-__granite__"><a id='granite'></a>public static final var <strong>Granite</strong></h5>
+<p><em>Granite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-polishedgranite-a-public-static-final-var-__polishedgranite__"><a id='polishedgranite'></a>public static final var <strong>PolishedGranite</strong></h5>
+<p><em>PolishedGranite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-diorite-a-public-static-final-var-__diorite__"><a id='diorite'></a>public static final var <strong>Diorite</strong></h5>
+<p><em>Diorite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-polisheddiorite-a-public-static-final-var-__polisheddiorite__"><a id='polisheddiorite'></a>public static final var <strong>PolishedDiorite</strong></h5>
+<p><em>PolishedDiorite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-andesite-a-public-static-final-var-__andesite__"><a id='andesite'></a>public static final var <strong>Andesite</strong></h5>
+<p><em>Andesite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-polishedandesite-a-public-static-final-var-__polishedandesite__"><a id='polishedandesite'></a>public static final var <strong>PolishedAndesite</strong></h5>
+<p><em>PolishedAndesite field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-grass-a-public-static-final-var-__grass__"><a id='grass'></a>public static final var <strong>Grass</strong></h5>
+<p><em>Grass field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-dirt-a-public-static-final-var-__dirt__"><a id='dirt'></a>public static final var <strong>Dirt</strong></h5>
+<p><em>Dirt field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-coarsedirt-a-public-static-final-var-__coarsedirt__"><a id='coarsedirt'></a>public static final var <strong>CoarseDirt</strong></h5>
+<p><em>CoarseDirt field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-podzol-a-public-static-final-var-__podzol__"><a id='podzol'></a>public static final var <strong>Podzol</strong></h5>
+<p><em>Podzol field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-cobble-a-public-static-final-var-__cobble__"><a id='cobble'></a>public static final var <strong>Cobble</strong></h5>
+<p><em>Cobble field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-oakplanks-a-public-static-final-var-__oakplanks__"><a id='oakplanks'></a>public static final var <strong>OakPlanks</strong></h5>
+<p><em>OakPlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-spruceplanks-a-public-static-final-var-__spruceplanks__"><a id='spruceplanks'></a>public static final var <strong>SprucePlanks</strong></h5>
+<p><em>SprucePlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-birchplanks-a-public-static-final-var-__birchplanks__"><a id='birchplanks'></a>public static final var <strong>BirchPlanks</strong></h5>
+<p><em>BirchPlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-jungleplanks-a-public-static-final-var-__jungleplanks__"><a id='jungleplanks'></a>public static final var <strong>JunglePlanks</strong></h5>
+<p><em>JunglePlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-acaciaplanks-a-public-static-final-var-__acaciaplanks__"><a id='acaciaplanks'></a>public static final var <strong>AcaciaPlanks</strong></h5>
+<p><em>AcaciaPlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-darkoakplanks-a-public-static-final-var-__darkoakplanks__"><a id='darkoakplanks'></a>public static final var <strong>DarkOakPlanks</strong></h5>
+<p><em>DarkOakPlanks field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-redsandstoneblank-a-public-static-final-var-__redsandstoneblank__"><a id='redsandstoneblank'></a>public static final var <strong>RedSandstoneBlank</strong></h5>
+<p><em>Deprecated: Being replaced by {@link OakPlanks} /
+    @Deprecated
+    public static final BlockType OakWood = OakPlanks;
+    /<strong> Being replaced by {@link SprucePlanks} /
+    @Deprecated
+    public static final BlockType SpruceWood = SprucePlanks;
+    /</strong> Being replaced by {@link BirchPlanks} /
+    @Deprecated
+    public static final BlockType BirchWood = BirchPlanks;
+    /<strong> Being replaced by {@link JunglePlanks} /
+    @Deprecated
+    public static final BlockType JungleWood = JunglePlanks;
+    /</strong> Being replaced by {@link AcaciaPlanks} /
+    @Deprecated
+    public static final BlockType AcaciaWood = AcaciaPlanks;
+    /<strong> Being replaced by {@link DarkOakPlanks} /
+    @Deprecated
+    public static final BlockType DarkOakWood = DarkOakPlanks;
+    public static final BlockType OakSapling = new BlockType(6, 0, &quot;minecraft:sapling&quot;);
+    public static final BlockType SpruceSapling = new BlockType(6, 1, &quot;minecraft:sapling&quot;);
+    public static final BlockType BirchSapling = new BlockType(6, 2, &quot;minecraft:sapling&quot;);
+    public static final BlockType JungleSapling = new BlockType(6, 3, &quot;minecraft:sapling&quot;);
+    public static final BlockType AcaciaSapling = new BlockType(6, 4, &quot;minecraft:sapling&quot;);
+    public static final BlockType DarkOakSapling = new BlockType(6, 5, &quot;minecraft:sapling&quot;);
+    public static final BlockType Bedrock = new BlockType(7, 0, &quot;minecraft:bedrock&quot;);
+    public static final BlockType WaterFlowing = new BlockType(8, 0, &quot;minecraft:flowing_water&quot;);
+    public static final BlockType Water = new BlockType(9, 0, &quot;minecraft:water&quot;);
+    public static final BlockType LavaFlowing = new BlockType(10, 0, &quot;minecraft:flowing_lava&quot;);
+    public static final BlockType Lava = new BlockType(11, 0, &quot;minecraft:lava&quot;);
+    public static final BlockType Sand = new BlockType(12, 0, &quot;minecraft:sand&quot;);
+    public static final BlockType RedSand = new BlockType(12, 1, &quot;minecraft:sand&quot;);
+    public static final BlockType Gravel = new BlockType(13, 0, &quot;minecraft:gravel&quot;);
+    public static final BlockType GoldOre = new BlockType(14, 0, &quot;minecraft:gold_ore&quot;);
+    public static final BlockType IronOre = new BlockType(15, 0, &quot;minecraft:iron_ore&quot;);
+    public static final BlockType CoalOre = new BlockType(16, 0, &quot;minecraft:coal_ore&quot;);
+    public static final BlockType OakLog = new BlockType(17, 0, &quot;minecraft:log&quot;);
+    public static final BlockType SpruceLog = new BlockType(17, 1, &quot;minecraft:log&quot;);
+    /</strong> Being replaced by {@link SpruceLog} /
+    @Deprecated
+    public static final BlockType PineLog = SpruceLog;
+    public static final BlockType BirchLog = new BlockType(17, 2, &quot;minecraft:log&quot;);
+    public static final BlockType JungleLog = new BlockType(17, 3, &quot;minecraft:log&quot;);
+    public static final BlockType OakLeaves = new BlockType(18, 0, &quot;minecraft:leaves&quot;);
+    public static final BlockType SpruceLeaves = new BlockType(18, 1, &quot;minecraft:leaves&quot;);
+    /<strong> Being replaced by {@link SpruceLeaves} /
+    @Deprecated
+    public static final BlockType PineLeaves = SpruceLeaves;
+    public static final BlockType BirchLeaves = new BlockType(18, 2, &quot;minecraft:leaves&quot;);
+    public static final BlockType JungleLeaves = new BlockType(18, 3, &quot;minecraft:leaves&quot;);
+    public static final BlockType Sponge = new BlockType(19, 0, &quot;minecraft:sponge&quot;);
+    public static final BlockType Glass = new BlockType(20, 0, &quot;minecraft:glass&quot;);
+    public static final BlockType LapisOre = new BlockType(21, 0, &quot;minecraft:lapis_ore&quot;);
+    /</strong> Being replaced by {@link LapisOre} /
+    @Deprecated
+    public static final BlockType LapislazuliOre = LapisOre;
+    public static final BlockType LapisBlock = new BlockType(22, 0, &quot;minecraft:lapis_block&quot;);
+    public static final BlockType Dispenser = new BlockType(23, 0, &quot;minecraft:dispenser&quot;);
+    public static final BlockType Sandstone = new BlockType(24, 0, &quot;minecraft:sandstone&quot;);
+    public static final BlockType SandstoneChiseled = new BlockType(24, 1, &quot;minecraft:sandstone&quot;);
+    /<strong> Being replaced by {@link SandstoneChiseled} /
+    @Deprecated
+    public static final BlockType SandstoneOrnate = SandstoneChiseled;
+    public static final BlockType SandstoneSmooth = new BlockType(24, 2, &quot;minecraft:sandstone&quot;);
+    /</strong> Being replaced by {@link SandstoneSmooth} /
+    @Deprecated
+    public static final BlockType SandstoneBlank = SandstoneSmooth;
+    public static final BlockType NoteBlock = new BlockType(25, 0, &quot;minecraft:noteblock&quot;);
+    public static final BlockType Bed = new BlockType(26, 0, &quot;minecraft:bed&quot;);
+    /<strong> Being replaced by {@link Bed} /
+    @Deprecated
+    public static final BlockType BedBlock = Bed;
+    public static final BlockType PoweredRail = new BlockType(27, 0, &quot;minecraft:golden_rail&quot;);
+    public static final BlockType DetectorRail = new BlockType(28, 0, &quot;minecraft:detector_rail&quot;);
+    public static final BlockType StickyPiston = new BlockType(29, 0, &quot;minecraft:sticky_piston&quot;);
+    public static final BlockType Web = new BlockType(30, 0, &quot;minecraft:web&quot;);
+    /</strong> Being replaced by {@link Web} /
+    @Deprecated
+    public static final BlockType SpiderWeb = Web;
+    public static final BlockType Shrub = new BlockType(31, 0, &quot;minecraft:tallgrass&quot;);
+    public static final BlockType TallGrass = new BlockType(31, 1, &quot;minecraft:tallgrass&quot;);
+    public static final BlockType Fern = new BlockType(31, 2, &quot;minecraft:tallgrass&quot;);
+    public static final BlockType DeadBush = new BlockType(32, 0, &quot;minecraft:deadbush&quot;);
+    public static final BlockType Piston = new BlockType(33, 0, &quot;minecraft:piston&quot;);
+    public static final BlockType PistonHead = new BlockType(34, 0, &quot;minecraft:piston_head&quot;);
+    public static final BlockType WhiteWool = new BlockType(35, 0, &quot;minecraft:wool&quot;);
+    public static final BlockType OrangeWool = new BlockType(35, 1, &quot;minecraft:wool&quot;);
+    public static final BlockType MagentaWool = new BlockType(35, 2, &quot;minecraft:wool&quot;);
+    public static final BlockType LightBlueWool = new BlockType(35, 3, &quot;minecraft:wool&quot;);
+    public static final BlockType YellowWool = new BlockType(35, 4, &quot;minecraft:wool&quot;);
+    public static final BlockType LimeWool = new BlockType(35, 5, &quot;minecraft:wool&quot;);
+    public static final BlockType PinkWool = new BlockType(35, 6, &quot;minecraft:wool&quot;);
+    public static final BlockType GrayWool = new BlockType(35, 7, &quot;minecraft:wool&quot;);
+    public static final BlockType LightGrayWool = new BlockType(35, 8, &quot;minecraft:wool&quot;);
+    public static final BlockType CyanWool = new BlockType(35, 9, &quot;minecraft:wool&quot;);
+    public static final BlockType PurpleWool = new BlockType(35, 10, &quot;minecraft:wool&quot;);
+    public static final BlockType BlueWool = new BlockType(35, 11, &quot;minecraft:wool&quot;);
+    public static final BlockType BrownWool = new BlockType(35, 12, &quot;minecraft:wool&quot;);
+    public static final BlockType GreenWool = new BlockType(35, 13, &quot;minecraft:wool&quot;);
+    public static final BlockType RedWool = new BlockType(35, 14, &quot;minecraft:wool&quot;);
+    public static final BlockType BlackWool = new BlockType(35, 15, &quot;minecraft:wool&quot;);
+    /<strong> Being replaced by {@link WhiteWool} /
+    @Deprecated
+    public static final BlockType WoolWhite = WhiteWool;
+    /</strong> Being replaced by {@link OrangeWool} /
+    @Deprecated
+    public static final BlockType WoolOrange = OrangeWool;
+    /<strong> Being replaced by {@link MagentaWool} /
+    @Deprecated
+    public static final BlockType WoolMagenta = MagentaWool;
+    /</strong> Being replaced by {@link LightBlueWool} /
+    @Deprecated
+    public static final BlockType WoolLightBlue = LightBlueWool;
+    /<strong> Being replaced by {@link YellowWool} /
+    @Deprecated
+    public static final BlockType WoolYellow = YellowWool;
+    /</strong> Being replaced by {@link LimeWool} /
+    @Deprecated
+    public static final BlockType WoolLightGreen = LimeWool;
+    /<strong> Being replaced by {@link LimeWool} /
+    @Deprecated
+    public static final BlockType WoolPink = PinkWool;
+    /</strong> Being replaced by {@link GrayWool} /
+    @Deprecated
+    public static final BlockType WoolGray = GrayWool;
+    /<strong> Being replaced by {@link LightGrayWool} /
+    @Deprecated
+    public static final BlockType WoolLightGray = LightGrayWool;
+    /</strong> Being replaced by {@link CyanWool} /
+    @Deprecated
+    public static final BlockType WoolCyan = CyanWool;
+    /<strong> Being replaced by {@link PurpleWool} /
+    @Deprecated
+    public static final BlockType WoolPurple = PurpleWool;
+    /</strong> Being replaced by {@link BlueWool} /
+    @Deprecated
+    public static final BlockType WoolBlue = BlueWool;
+    /<strong> Being replaced by {@link BrownWool} /
+    @Deprecated
+    public static final BlockType WoolBrown = BrownWool;
+    /</strong> Being replaced by {@link GreenWool} /
+    @Deprecated
+    public static final BlockType WoolDarkGreen = GreenWool;
+    /<strong> Being replaced by {@link RedWool} /
+    @Deprecated
+    public static final BlockType WoolRed = RedWool;
+    /</strong> Being replaced by {@link BlackWool} /
+    @Deprecated
+    public static final BlockType WoolBlack = BlackWool;
+    public static final BlockType PistonExtended = new BlockType(36, 0, &quot;minecraft:piston_extension&quot;);
+    public static final BlockType Dandelion = new BlockType(37, 0, &quot;minecraft:yellow_flower&quot;);
+    public static final BlockType Poppy = new BlockType(38, 0, &quot;minecraft:red_flower&quot;);
+    public static final BlockType BlueOrchid = new BlockType(38, 1, &quot;minecraft:red_flower&quot;);
+    public static final BlockType Allium = new BlockType(38, 2, &quot;minecraft:red_flower&quot;);
+    public static final BlockType AzureBluet = new BlockType(38, 3, &quot;minecraft:red_flower&quot;);
+    public static final BlockType RedTulip = new BlockType(38, 4, &quot;minecraft:red_flower&quot;);
+    public static final BlockType OrangeTulip = new BlockType(38, 5, &quot;minecraft:red_flower&quot;);
+    public static final BlockType WhiteTulip = new BlockType(38, 6, &quot;minecraft:red_flower&quot;);
+    public static final BlockType PinkTulip = new BlockType(38, 7, &quot;minecraft:red_flower&quot;);
+    public static final BlockType OxeyeDaisy = new BlockType(38, 8, &quot;minecraft:red_flower&quot;);
+    public static final BlockType BrownMushroom = new BlockType(39, 0, &quot;minecraft:brown_mushroom&quot;);
+    public static final BlockType RedMushroom = new BlockType(40, 0, &quot;minecraft:red_mushroom&quot;);
+    public static final BlockType GoldBlock = new BlockType(41, 0, &quot;minecraft:gold_block&quot;);
+    public static final BlockType IronBlock = new BlockType(42, 0, &quot;minecraft:iron_block&quot;);
+    /<strong> No longer seamless, see {@link io.wolfscript.api.world.blocks.properties.helpers.DoubleStoneSlabProperties} /
+    public static final BlockType DoubleStoneSlab = new BlockType(43, 0, &quot;minecraft:double_stone_slab&quot;);
+    /</strong> No longer seamless, see {@link io.wolfscript.api.world.blocks.properties.helpers.DoubleStoneSlabProperties} /
+    public static final BlockType DoubleSandStoneSlab = new BlockType(43, 1, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleWoodSlab = new BlockType(43, 2, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleCobbleSlab = new BlockType(43, 3, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleBrickSlab = new BlockType(43, 4, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleStoneBricksSlab = new BlockType(43, 5, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleNetherBrickSlab = new BlockType(43, 6, &quot;minecraft:double_stone_slab&quot;);
+    public static final BlockType DoubleQuartzSlab = new BlockType(43, 7, &quot;minecraft:double_stone_slab&quot;);
+    /<strong> Being replaced by {@link DoubleStoneSlab} /
+    @Deprecated
+    public static final BlockType DoubleOrnateStoneSlab = DoubleStoneSlab;
+    /</strong> Being replaced by {@link DoubleSandStoneSlab} /
+    @Deprecated
+    public static final BlockType DoubleSandStoneTrimSlab = DoubleSandStoneSlab;
+    /<strong> Being replaced by {@link DoubleBricksSlab} /
+    @Deprecated
+    public static final BlockType DoubleBrickBlockSlab = DoubleBrickSlab;
+    public static final BlockType StoneSlab = new BlockType(44, 0, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType SandStoneSlab = new BlockType(44, 1, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType WoodSlab = new BlockType(44, 2, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType CobbleSlab = new BlockType(44, 3, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType BrickSlab = new BlockType(44, 4, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType StoneBricksSlab = new BlockType(44, 5, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType NetherBricksSlab = new BlockType(44, 6, &quot;minecraft:stone_slab&quot;);
+    public static final BlockType QuartzSlab = new BlockType(44, 7, &quot;minecraft:stone_slab&quot;);
+    /</strong> Being replaced by {@link StoneSlab} /
+    @Deprecated
+    public static final BlockType OrnateStoneSlab = StoneSlab;
+    /<strong> Being replaced by {@link SandStoneSlab} /
+    @Deprecated
+    public static final BlockType SandStoneTrimSlab = SandStoneSlab;
+    /</strong> Being replaced by {@link BrickSlab} /
+    @Deprecated
+    public static final BlockType BrickBlockSlab = BrickSlab;
+    public static final BlockType Bricks = new BlockType(45, 0, &quot;minecraft:brick_block&quot;);
+    public static final BlockType BrickBlock = Bricks;
+    public static final BlockType TNT = new BlockType(46, 0, &quot;minecraft:tnt&quot;);
+    /<strong> Being replaced by {@link TNT} /
+    @Deprecated
+    public static final BlockType Tnt = TNT;
+    public static final BlockType Bookshelf = new BlockType(47, 0, &quot;minecraft:bookshelf&quot;);
+    public static final BlockType MossyCobble = new BlockType(48, 0, &quot;minecraft:mossy_cobblestone&quot;);
+    public static final BlockType Obsidian = new BlockType(49, 0, &quot;minecraft:obsidian&quot;);
+    public static final BlockType Torch = new BlockType(50, 0, &quot;minecraft:torch&quot;);
+    public static final BlockType FireBlock = new BlockType(51, 0, &quot;minecraft:fire&quot;);
+    public static final BlockType MobSpawner = new BlockType(52, 0, &quot;minecraft:mob_spawner&quot;);
+    public static final BlockType OakStairs = new BlockType(53, 0, &quot;minecraft:oak_stairs&quot;);
+    /</strong> Being replaced by {@link OakStairs} /
+    @Deprecated
+    public static final BlockType WoodenStair = OakStairs;
+    public static final BlockType Chest = new BlockType(54, 0, &quot;minecraft:chest&quot;);
+    public static final BlockType RedstoneWire = new BlockType(55, 0, &quot;minecraft:redstone_wire&quot;);
+    public static final BlockType DiamondOre = new BlockType(56, 0, &quot;minecraft:diamond_ore&quot;);
+    public static final BlockType DiamondBlock = new BlockType(57, 0, &quot;minecraft:diamond_block&quot;);
+    public static final BlockType Workbench = new BlockType(58, 0, &quot;minecraft:crafting_table&quot;);
+    public static final BlockType Wheat = new BlockType(59, 0, &quot;minecraft:wheat&quot;);
+    /<strong> Being replaced by {@link Wheat} /
+    @Deprecated
+    public static final BlockType Crops = Wheat;
+    public static final BlockType Farmland = new BlockType(60, 0, &quot;minecraft:farmland&quot;);
+    /</strong> Being replaced by {@link Farmland} /
+    @Deprecated
+    public static final BlockType Soil = Farmland;
+    public static final BlockType Furnace = new BlockType(61, 0, &quot;minecraft:furnace&quot;);
+    public static final BlockType BurningFurnace = new BlockType(62, 0, &quot;minecraft:lit_furnace&quot;);
+    public static final BlockType StandingSign = new BlockType(63, 0, &quot;minecraft:standing_sign&quot;);
+    /<strong> Being replaced by {@link StandingSign} /
+    @Deprecated
+    public static final BlockType SignPost = StandingSign;
+    public static final BlockType WoodenDoor = new BlockType(64, 0, &quot;minecraft:wooden_door&quot;);
+    public static final BlockType OakDoor = WoodenDoor; // Dual Mapping for simplicity
+    public static final BlockType Ladder = new BlockType(65, 0, &quot;minecraft:ladder&quot;);
+    public static final BlockType Rail = new BlockType(66, 0, &quot;minecraft:rail&quot;);
+    public static final BlockType StoneStairs = new BlockType(67, 0, &quot;minecraft:stone_stairs&quot;);
+    /</strong> Being replaced by {@link StoneStairs} /
+    @Deprecated
+    public static final BlockType CobbleStair = StoneStairs;
+    public static final BlockType WallSign = new BlockType(68, 0, &quot;minecraft:wall_sign&quot;);
+    public static final BlockType Lever = new BlockType(69, 0, &quot;minecraft:lever&quot;);
+    public static final BlockType StonePressurePlate = new BlockType(70, 0, &quot;minecraft:stone_pressure_plate&quot;);
+    /<strong> Being replaced by {@link StonePressurePlate} /
+    @Deprecated
+    public static final BlockType StonePlate = StonePressurePlate;
+    public static final BlockType IronDoor = new BlockType(71, 0, &quot;minecraft:iron_door&quot;);
+    public static final BlockType WoodenPressurePlate = new BlockType(72, 0, &quot;minecraft:wooden_pressure_plate&quot;);
+    /</strong> Being replaced by {@link WoodenPressurePlate} /
+    @Deprecated
+    public static final BlockType WoodPlate = WoodenPressurePlate;
+    public static final BlockType RedstoneOre = new BlockType(73, 0, &quot;minecraft:redstone_ore&quot;);
+    public static final BlockType GlowingRedstoneOre = new BlockType(74, 0, &quot;minecraft:lit_redstone_ore&quot;);
+    public static final BlockType RedstoneTorchOff = new BlockType(75, 0, &quot;minecraft:unlit_redstone_torch&quot;);
+    public static final BlockType RedstoneTorchOn = new BlockType(76, 0, &quot;minecraft:redstone_torch&quot;);
+    public static final BlockType StoneButton = new BlockType(77, 0, &quot;minecraft:stone_button&quot;);
+    public static final BlockType Snow = new BlockType(78, 0, &quot;minecraft:snow_layer&quot;);
+    public static final BlockType Ice = new BlockType(79, 0, &quot;minecraft:ice&quot;);
+    public static final BlockType SnowBlock = new BlockType(80, 0, &quot;minecraft:snow&quot;);
+    public static final BlockType Cactus = new BlockType(81, 0, &quot;minecraft:cactus&quot;);
+    public static final BlockType Clay = new BlockType(82, 0, &quot;minecraft:clay&quot;);
+    public static final BlockType Reed = new BlockType(83, 0, &quot;minecraft:reeds&quot;);
+    public static final BlockType Jukebox = new BlockType(84, 0, &quot;minecraft:jukebox&quot;);
+    public static final BlockType Fence = new BlockType(85, 0, &quot;minecraft:fence&quot;);
+    public static final BlockType Pumpkin = new BlockType(86, 0, &quot;minecraft:pumpkin&quot;);
+    public static final BlockType Netherrack = new BlockType(87, 0, &quot;minecraft:netherrack&quot;);
+    public static final BlockType SoulSand = new BlockType(88, 0, &quot;minecraft:soul_sand&quot;);
+    public static final BlockType GlowStone = new BlockType(89, 0, &quot;minecraft:glowstone&quot;);
+    public static final BlockType Portal = new BlockType(90, 0, &quot;minecraft:portal&quot;);
+    public static final BlockType JackOLantern = new BlockType(91, 0, &quot;minecraft:lit_pumpkin&quot;);
+    public static final BlockType Cake = new BlockType(92, 0, &quot;minecraft:cake&quot;);
+    public static final BlockType RedstoneRepeaterOff = new BlockType(93, 0, &quot;minecraft:unpowered_repeater&quot;);
+    public static final BlockType RedstoneRepeaterOn = new BlockType(94, 0, &quot;minecraft:powered_repeater&quot;);
+    public static final BlockType WhiteGlass = new BlockType(95, 0, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType OrangeGlass = new BlockType(95, 1, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType MagentaGlass = new BlockType(95, 2, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType LightBlueGlass = new BlockType(95, 3, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType YellowGlass = new BlockType(95, 4, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType LimeGlass = new BlockType(95, 5, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType PinkGlass = new BlockType(95, 6, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType GrayGlass = new BlockType(95, 7, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType LightGrayGlass = new BlockType(95, 8, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType CyanGlass = new BlockType(95, 9, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType PurpleGlass = new BlockType(95, 10, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType BlueGlass = new BlockType(95, 11, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType BrownGlass = new BlockType(95, 12, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType GreenGlass = new BlockType(95, 13, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType RedGlass = new BlockType(95, 14, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType BlackGlass = new BlockType(95, 15, &quot;minecraft:stained_glass&quot;);
+    public static final BlockType Trapdoor = new BlockType(96, 0, &quot;minecraft:trapdoor&quot;);
+    public static final BlockType StoneSilverFishBlock = new BlockType(97, 0, &quot;minecraft:monster_egg&quot;);
+    public static final BlockType CobbleSilverFishBlock = new BlockType(97, 1, &quot;minecraft:monster_egg&quot;);
+    public static final BlockType StoneBrickSilverFishBlock = new BlockType(97, 2, &quot;minecraft:monster_egg&quot;);
+    public static final BlockType MossyBrickSilverFishBlock = new BlockType(97, 3, &quot;minecraft:monster_egg&quot;);
+    public static final BlockType CrackedSilverFishBlock = new BlockType(97, 4, &quot;minecraft:monster_egg&quot;);
+    public static final BlockType ChiseledSilverFishBlock = new BlockType(97, 5, &quot;minecraft:monster_egg&quot;);
+    /<strong> Being replaced by {@link ChiseledSilverFishBlock} /
+    @Deprecated
+    public static final BlockType OrnateSilverFishBlock = ChiseledSilverFishBlock;
+    public static final BlockType StoneBrick = new BlockType(98, 0, &quot;minecraft:stonebrick&quot;);
+    public static final BlockType MossyStoneBrick = new BlockType(98, 1, &quot;minecraft:stonebrick&quot;);
+    public static final BlockType CrackedStoneBrick = new BlockType(98, 2, &quot;minecraft:stonebrick&quot;);
+    public static final BlockType ChiseledStoneBrick = new BlockType(98, 3, &quot;minecraft:stonebrick&quot;);
+    /</strong> Being replaced by {@link ChiseledStoneBrick} /
+    @Deprecated
+    public static final BlockType OrnateStoneBrick = ChiseledStoneBrick;
+    public static final BlockType HugeBrownMushroom = new BlockType(99, 0, &quot;minecraft:brown_mushroom_block&quot;);
+    public static final BlockType HugeRedMushroom = new BlockType(100, 0, &quot;minecraft:red_mushroom_block&quot;);
+    public static final BlockType IronBars = new BlockType(101, 0, &quot;minecraft:iron_bars&quot;);
+    public static final BlockType GlassPane = new BlockType(102, 0, &quot;minecraft:glass_pane&quot;);
+    public static final BlockType Melon = new BlockType(103, 0, &quot;minecraft:melon_block&quot;);
+    public static final BlockType PumpkinStem = new BlockType(104, 0, &quot;minecraft:pumpkin_stem&quot;);
+    public static final BlockType MelonStem = new BlockType(105, 0, &quot;minecraft:melon_stem&quot;);
+    public static final BlockType Vines = new BlockType(106, 0, &quot;minecraft:vine&quot;);
+    public static final BlockType FenceGate = new BlockType(107, 0, &quot;minecraft:fence_gate&quot;);
+    public static final BlockType BrickStairs = new BlockType(108, 0, &quot;minecraft:brick_stairs&quot;);
+    /<strong> Being replaced by {@link BrickStairs} /
+    @Deprecated
+    public static final BlockType BrickStair = BrickStairs;
+    public static final BlockType StoneBrickStairs = new BlockType(109, 0, &quot;minecraft:stone_brick_stairs&quot;);
+    /</strong> Being replaced by {@link StoneBrickStairs} /
+    @Deprecated
+    public static final BlockType StoneBrickStair = StoneBrickStairs;
+    public static final BlockType Mycelium = new BlockType(110, 0, &quot;minecraft:mycelium&quot;);
+    public static final BlockType Lilypad = new BlockType(111, 0, &quot;minecraft:waterlily&quot;);
+    public static final BlockType NetherBrick = new BlockType(112, 0, &quot;minecraft:nether_brick&quot;);
+    public static final BlockType NetherBrickFence = new BlockType(113, 0, &quot;minecraft:nether_brick_fence&quot;);
+    public static final BlockType NetherBrickStairs = new BlockType(114, 0, &quot;minecraft:nether_brick_stairs&quot;);
+    /<strong> Being replaced by {@link NetherBrickStairs} /
+    @Deprecated
+    public static final BlockType NetherBrickStair = NetherBrickStairs;
+    public static final BlockType NetherWart = new BlockType(115, 0, &quot;minecraft:nether_wart&quot;);
+    public static final BlockType EnchantmentTable = new BlockType(116, 0, &quot;minecraft:enchanting_table&quot;);
+    public static final BlockType BrewingStand = new BlockType(117, 0, &quot;minecraft:brewing_stand&quot;);
+    public static final BlockType Cauldron = new BlockType(118, 0, &quot;minecraft:cauldron&quot;);
+    public static final BlockType EndPortal = new BlockType(119, 0, &quot;minecraft:end_portal&quot;);
+    public static final BlockType EndPortalFrame = new BlockType(120, 0, &quot;minecraft:end_portal_frame&quot;);
+    public static final BlockType EndStone = new BlockType(121, 0, &quot;minecraft:end_stone&quot;);
+    public static final BlockType EnderDragonEgg = new BlockType(122, 0, &quot;minecraft:dragon_egg&quot;);
+    public static final BlockType RedstoneLampOff = new BlockType(123, 0, &quot;minecraft:redstone_lamp&quot;);
+    public static final BlockType RedstoneLampOn = new BlockType(124, 0, &quot;minecraft:lit_redstone_lamp&quot;);
+    public static final BlockType DoubleOakWoodSlab = new BlockType(125, 0, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType DoubleSpruceWoodSlab = new BlockType(125, 1, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType DoubleBirchWoodSlab = new BlockType(125, 2, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType DoubleJungleWoodSlab = new BlockType(125, 3, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType DoubleAcaciaWoodSlab = new BlockType(125, 4, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType DoubleDarkOakWoodSlab = new BlockType(125, 5, &quot;minecraft:double_wooden_slab&quot;);
+    public static final BlockType OakWoodSlab = new BlockType(126, 0, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType SpruceWoodSlab = new BlockType(126, 1, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType BirchWoodSlab = new BlockType(126, 2, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType JungleWoodSlab = new BlockType(126, 3, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType AcaciaWoodSlab = new BlockType(126, 4, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType DarkOakWoodSlab = new BlockType(126, 5, &quot;minecraft:wooden_slab&quot;);
+    public static final BlockType CocoaPlant = new BlockType(127, 0, &quot;minecraft:cocoa&quot;);
+    public static final BlockType SandstoneStairs = new BlockType(128, 0, &quot;minecraft:sandstone_stairs&quot;);
+    /</strong> Being replaced by {@link SandstoneStairs} /
+    @Deprecated
+    public static final BlockType SandstoneStair = SandstoneStairs;
+    public static final BlockType EmeraldOre = new BlockType(129, 0, &quot;minecraft:emerald_ore&quot;);
+    public static final BlockType EnderChest = new BlockType(130, 0, &quot;minecraft:ender_chest&quot;);
+    public static final BlockType TripwireHook = new BlockType(131, 0, &quot;minecraft:tripwire_hook&quot;);
+    public static final BlockType Tripwire = new BlockType(132, 0, &quot;minecraft:tripwire&quot;);
+    public static final BlockType EmeraldBlock = new BlockType(133, 0, &quot;minecraft:emerald_block&quot;);
+    public static final BlockType SpruceStairs = new BlockType(134, 0, &quot;minecraft:spruce_stairs&quot;);
+    public static final BlockType BirchStairs = new BlockType(135, 0, &quot;minecraft:birch_stairs&quot;);
+    public static final BlockType JungleStairs = new BlockType(136, 0, &quot;minecraft:jungle_stairs&quot;);
+    /<strong> Being replaced by {@link SpruceStairs} /
+    @Deprecated
+    public static final BlockType PineWoodStair = SpruceStairs;
+    /</strong> Being replaced by {@link BirchStairs} /
+    @Deprecated
+    public static final BlockType BirchWoodStair = BirchStairs;
+    /<strong> Being replaced by {@link JungleStairs} /
+    @Deprecated
+    public static final BlockType JungleWoodStair = JungleStairs;
+    public static final BlockType CommandBlock = new BlockType(137, 0, &quot;minecraft:command_block&quot;);
+    public static final BlockType Beacon = new BlockType(138, 0, &quot;minecraft:beacon&quot;);
+    public static final BlockType CobblestoneWall = new BlockType(139, 0, &quot;minecraft:cobblestone_wall&quot;);
+    public static final BlockType MossyCobbleWall = new BlockType(139, 1, &quot;minecraft:cobblestone_wall&quot;);
+    public static final BlockType Flowerpot = new BlockType(140, 0, &quot;minecraft:flower_pot&quot;);
+    public static final BlockType Carrots = new BlockType(141, 0, &quot;minecraft:carrots&quot;);
+    public static final BlockType Potatoes = new BlockType(142, 0, &quot;minecraft:potatoes&quot;);
+    public static final BlockType WoodenButton = new BlockType(143, 0, &quot;minecraft:wooden_button&quot;);
+    public static final BlockType Skull = new BlockType(144, 0, &quot;minecraft:skull&quot;);
+    /</strong> Variation are stored with the TileEntity, use {@link io.wolfscript.api.world.blocks.Skull} instead /
+    @Deprecated
+    public static final BlockType SkeletonHead = Skull;
+    /<strong> Variation are stored with the TileEntity, use {@link io.wolfscript.api.world.blocks.Skull} instead /
+    @Deprecated
+    public static final BlockType WitherSkeletonHead = Skull;
+    /</strong> Variation are stored with the TileEntity, use {@link io.wolfscript.api.world.blocks.Skull} instead /
+    @Deprecated
+    public static final BlockType ZombieHead = Skull;
+    /<strong> Variation are stored with the TileEntity, use {@link io.wolfscript.api.world.blocks.Skull} instead /
+    @Deprecated
+    public static final BlockType HumanHead = Skull;
+    /</strong> Variation are stored with the TileEntity, use {@link io.wolfscript.api.world.blocks.Skull} instead /
+    @Deprecated
+    public static final BlockType CreeperHead = Skull;
+    public static final BlockType Anvil = new BlockType(145, 0, &quot;minecraft:anvil&quot;);
+    public static final BlockType TrappedChest = new BlockType(146, 0, &quot;minecraft:trapped_chest&quot;);
+    public static final BlockType LightWeightedPressurePlate = new BlockType(147, 0, &quot;minecraft:light_weighted_pressure_plate&quot;);
+    public static final BlockType HeavyWeightedPressurePlate = new BlockType(148, 0, &quot;minecraft:heavy_weighted_pressure_plate&quot;);
+    public static final BlockType RedstoneComparator = new BlockType(149, 0, &quot;minecraft:unpowered_comparator&quot;);
+    public static final BlockType RedstoneComparatorPowered = new BlockType(150, 0, &quot;minecraft:powered_comparator&quot;);
+    public static final BlockType DaylightSensor = new BlockType(151, 0, &quot;minecraft:daylight_detector&quot;);
+    public static final BlockType RedstoneBlock = new BlockType(152, 0, &quot;minecraft:redstone_block&quot;);
+    public static final BlockType QuartzOre = new BlockType(153, 0, &quot;minecraft:quartz_ore&quot;);
+    /<strong> Being replaced by {@link QuartzOre} /
+    @Deprecated
+    public static final BlockType NetherQuartzOre = QuartzOre;
+    public static final BlockType Hopper = new BlockType(154, 0, &quot;minecraft:hopper&quot;);
+    public static final BlockType QuartzBlock = new BlockType(155, 0, &quot;minecraft:quartz_block&quot;);
+    public static final BlockType ChiseledQuartzBlock = new BlockType(155, 1, &quot;minecraft:quartz_block&quot;);
+    /</strong> Being replaced by {@link ChiseledQuartzBlock} /
+    @Deprecated
+    public static final BlockType OrnateQuartzBlock = ChiseledQuartzBlock;
+    public static final BlockType QuartzPillarVertical = new BlockType(155, 2, &quot;minecraft:quartz_block&quot;);
+    public static final BlockType QuartzPillarHorizontal = new BlockType(155, 3, &quot;minecraft:quartz_block&quot;);
+    public static final BlockType QuartzPillarCap = new BlockType(155, 4, &quot;minecraft:quartz_block&quot;);
+    public static final BlockType QuartzStairs = new BlockType(156, 0, &quot;minecraft:quartz_stairs&quot;);
+    public static final BlockType ActivatorRail = new BlockType(157, 0, &quot;minecraft:activator_rail&quot;);
+    public static final BlockType Dropper = new BlockType(158, 0, &quot;minecraft:dropper&quot;);
+    public static final BlockType WhiteStainedClay = new BlockType(159, 0, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType OrangeStainedClay = new BlockType(159, 1, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType MagentaStainedClay = new BlockType(159, 2, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType LightBlueStainedClay = new BlockType(159, 3, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType YellowStainedClay = new BlockType(159, 4, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType LimeStainedClay = new BlockType(159, 5, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType PinkStainedClay = new BlockType(159, 6, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType GrayStainedClay = new BlockType(159, 7, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType LightGrayStainedClay = new BlockType(159, 8, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType CyanStainedClay = new BlockType(159, 9, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType PurpleStainedClay = new BlockType(159, 10, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType BlueStainedClay = new BlockType(159, 11, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType BrownStainedClay = new BlockType(159, 12, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType GreenStainedClay = new BlockType(159, 13, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType RedStainedClay = new BlockType(159, 14, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType BlackStainedClay = new BlockType(159, 15, &quot;minecraft:stained_hardened_clay&quot;);
+    public static final BlockType WhiteGlassPane = new BlockType(160, 0, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType OrangeGlassPane = new BlockType(160, 1, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType MagentaGlassPane = new BlockType(160, 2, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType LightBlueGlassPane = new BlockType(160, 3, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType YellowGlassPane = new BlockType(160, 4, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType LimeGlassPane = new BlockType(160, 5, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType PinkGlassPane = new BlockType(160, 6, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType GrayGlassPane = new BlockType(160, 7, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType LightGrayGlassPane = new BlockType(160, 8, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType CyanGlassPane = new BlockType(160, 9, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType PurpleGlassPane = new BlockType(160, 10, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType BlueGlassPane = new BlockType(160, 11, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType BrownGlassPane = new BlockType(160, 12, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType GreenGlassPane = new BlockType(160, 13, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType RedGlassPane = new BlockType(160, 14, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType BlackGlassPane = new BlockType(160, 15, &quot;minecraft:stained_glass_pane&quot;);
+    public static final BlockType AcaciaLeaves = new BlockType(161, 0, &quot;minecraft:leaves2&quot;);
+    public static final BlockType DarkOakLeaves = new BlockType(161, 1, &quot;minecraft:leaves2&quot;);
+    public static final BlockType AcaciaLog = new BlockType(162, 0, &quot;minecraft:log2&quot;);
+    public static final BlockType DarkOakLog = new BlockType(162, 1, &quot;minecraft:log2&quot;);
+    public static final BlockType AcaciaStairs = new BlockType(163, 0, &quot;minecraft:acacia_stairs&quot;);
+    public static final BlockType DarkOakStairs = new BlockType(164, 0, &quot;minecraft:dark_oak_stairs&quot;);
+    public static final BlockType SlimeBlock = new BlockType(165, 0, &quot;minecraft:slime&quot;);
+    public static final BlockType Barrier = new BlockType(166, 0, &quot;minecraft:barrier&quot;);
+    public static final BlockType IronTrapDoor = new BlockType(167, 0, &quot;minecraft:iron_trapdoor&quot;);
+    public static final BlockType Prismarine = new BlockType(168, 0, &quot;minecraft:prismarine&quot;);
+    public static final BlockType PrismarineBricks = new BlockType(168, 1, &quot;minecraft:prismarine&quot;);
+    public static final BlockType DarkPrismarine = new BlockType(168, 2, &quot;minecraft:prismarine&quot;);
+    public static final BlockType SeaLantern = new BlockType(169, 0, &quot;minecraft:sea_lantern&quot;);
+    public static final BlockType HayBale = new BlockType(170, 0, &quot;minecraft:hay_block&quot;);
+    public static final BlockType WhiteCarpet = new BlockType(171, 0, &quot;minecraft:carpet&quot;);
+    public static final BlockType OrangeCarpet = new BlockType(171, 1, &quot;minecraft:carpet&quot;);
+    public static final BlockType MagentaCarpet = new BlockType(171, 2, &quot;minecraft:carpet&quot;);
+    public static final BlockType LightBlueCarpet = new BlockType(171, 3, &quot;minecraft:carpet&quot;);
+    public static final BlockType YellowCarpet = new BlockType(171, 4, &quot;minecraft:carpet&quot;);
+    public static final BlockType LimeCarpet = new BlockType(171, 5, &quot;minecraft:carpet&quot;);
+    public static final BlockType PinkCarpet = new BlockType(171, 6, &quot;minecraft:carpet&quot;);
+    public static final BlockType GrayCarpet = new BlockType(171, 7, &quot;minecraft:carpet&quot;);
+    public static final BlockType LightGrayCarpet = new BlockType(171, 8, &quot;minecraft:carpet&quot;);
+    public static final BlockType CyanCarpet = new BlockType(171, 9, &quot;minecraft:carpet&quot;);
+    public static final BlockType PurpleCarpet = new BlockType(171, 10, &quot;minecraft:carpet&quot;);
+    public static final BlockType BlueCarpet = new BlockType(171, 11, &quot;minecraft:carpet&quot;);
+    public static final BlockType BrownCarpet = new BlockType(171, 12, &quot;minecraft:carpet&quot;);
+    public static final BlockType GreenCarpet = new BlockType(171, 13, &quot;minecraft:carpet&quot;);
+    public static final BlockType RedCarpet = new BlockType(171, 14, &quot;minecraft:carpet&quot;);
+    public static final BlockType BlackCarpet = new BlockType(171, 15, &quot;minecraft:carpet&quot;);
+    public static final BlockType HardenedClay = new BlockType(172, 0, &quot;minecraft:hardened_clay&quot;);
+    public static final BlockType CoalBlock = new BlockType(173, 0, &quot;minecraft:coal_block&quot;);
+    public static final BlockType PackedIce = new BlockType(174, 0, &quot;minecraft:packed_ice&quot;);
+    public static final BlockType Sunflower = new BlockType(175, 0, &quot;minecraft:double_plant&quot;);
+    public static final BlockType Lilac = new BlockType(175, 1, &quot;minecraft:double_plant&quot;);
+    public static final BlockType DoubleGrass = new BlockType(175, 2, &quot;minecraft:double_plant&quot;);
+    public static final BlockType LargeFern = new BlockType(175, 3, &quot;minecraft:double_plant&quot;);
+    public static final BlockType RoseBush = new BlockType(175, 4, &quot;minecraft:double_plant&quot;);
+    public static final BlockType Peony = new BlockType(175, 5, &quot;minecraft:double_plant&quot;);
+    public static final BlockType StandingBanner = new BlockType(176, 0, &quot;minecraft:standing_banner&quot;);
+    public static final BlockType WallBanner = new BlockType(177, 0, &quot;minecraft:wall_banner&quot;);
+    public static final BlockType DaylightSensorInverted = new BlockType(178, 0, &quot;minecraft:daylight_detector_inverted&quot;);
+    public static final BlockType RedSandstone = new BlockType(179, 0, &quot;minecraft:red_sandstone&quot;);
+    public static final BlockType RedSandstoneChiseled = new BlockType(179, 1, &quot;minecraft:red_sandstone&quot;);
+    public static final BlockType RedSandstoneSmooth = new BlockType(179, 2, &quot;minecraft:red_sandstone&quot;);
+    /<strong> Being replaced by {@link RedSandstoneChiseled} /
+    @Deprecated
+    public static final BlockType RedSandstoneOrnate = RedSandstoneChiseled;
+    /</strong> Being replaced by {@link RedSandstoneChiseled}</em></p>
+<p><em>RedSandstoneBlank field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-redsandstonestairs-a-public-static-final-var-__redsandstonestairs__"><a id='redsandstonestairs'></a>public static final var <strong>RedSandstoneStairs</strong></h5>
+<p><em>RedSandstoneStairs field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-doubleredsandstoneslab-a-public-static-final-var-__doubleredsandstoneslab__"><a id='doubleredsandstoneslab'></a>public static final var <strong>DoubleRedSandstoneSlab</strong></h5>
+<p><em>DoubleRedSandstoneSlab field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-redsandstoneslab-a-public-static-final-var-__redsandstoneslab__"><a id='redsandstoneslab'></a>public static final var <strong>RedSandstoneSlab</strong></h5>
+<p><em>RedSandstoneSlab field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-sprucefencegate-a-public-static-final-var-__sprucefencegate__"><a id='sprucefencegate'></a>public static final var <strong>SpruceFenceGate</strong></h5>
+<p><em>SpruceFenceGate field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-birchfencegate-a-public-static-final-var-__birchfencegate__"><a id='birchfencegate'></a>public static final var <strong>BirchFenceGate</strong></h5>
+<p><em>BirchFenceGate field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-junglefencegate-a-public-static-final-var-__junglefencegate__"><a id='junglefencegate'></a>public static final var <strong>JungleFenceGate</strong></h5>
+<p><em>JungleFenceGate field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-darkoakfencegate-a-public-static-final-var-__darkoakfencegate__"><a id='darkoakfencegate'></a>public static final var <strong>DarkOakFenceGate</strong></h5>
+<p><em>DarkOakFenceGate field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-acaciafencegate-a-public-static-final-var-__acaciafencegate__"><a id='acaciafencegate'></a>public static final var <strong>AcaciaFenceGate</strong></h5>
+<p><em>AcaciaFenceGate field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-sprucefence-a-public-static-final-var-__sprucefence__"><a id='sprucefence'></a>public static final var <strong>SpruceFence</strong></h5>
+<p><em>SpruceFence field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-birchfence-a-public-static-final-var-__birchfence__"><a id='birchfence'></a>public static final var <strong>BirchFence</strong></h5>
+<p><em>BirchFence field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-junglefence-a-public-static-final-var-__junglefence__"><a id='junglefence'></a>public static final var <strong>JungleFence</strong></h5>
+<p><em>JungleFence field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-darkoakfence-a-public-static-final-var-__darkoakfence__"><a id='darkoakfence'></a>public static final var <strong>DarkOakFence</strong></h5>
+<p><em>DarkOakFence field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-acaciafence-a-public-static-final-var-__acaciafence__"><a id='acaciafence'></a>public static final var <strong>AcaciaFence</strong></h5>
+<p><em>AcaciaFence field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-sprucedoor-a-public-static-final-var-__sprucedoor__"><a id='sprucedoor'></a>public static final var <strong>SpruceDoor</strong></h5>
+<p><em>SpruceDoor field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-birchdoor-a-public-static-final-var-__birchdoor__"><a id='birchdoor'></a>public static final var <strong>BirchDoor</strong></h5>
+<p><em>BirchDoor field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-jungledoor-a-public-static-final-var-__jungledoor__"><a id='jungledoor'></a>public static final var <strong>JungleDoor</strong></h5>
+<p><em>JungleDoor field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-acaciadoor-a-public-static-final-var-__acaciadoor__"><a id='acaciadoor'></a>public static final var <strong>AcaciaDoor</strong></h5>
+<p><em>AcaciaDoor field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<h5 id="-a-id-darkoakdoor-a-public-static-final-var-__darkoakdoor__"><a id='darkoakdoor'></a>public static final var <strong>DarkOakDoor</strong></h5>
+<p><em>DarkOakDoor field</em></p>
+<blockquote>
+<p>Returns
+ <a href="BlockType.html"><code>BlockType</code></a></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

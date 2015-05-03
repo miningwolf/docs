@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API WolfMessageOfTheDayListener</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html'>motd</a></li>
+<li class='current'><a href='#'>WolfMessageOfTheDayListener</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\MOTDOwner.html'>MOTDOwner</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\MessageOfTheDay.html'>MessageOfTheDay</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\MessageOfTheDayListener.html'>MessageOfTheDayListener</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\WolfMessageOfTheDayListener.html'>WolfMessageOfTheDayListener</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="wolfmessageofthedaylistener-__class__">WolfMessageOfTheDayListener <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.motd.WolfMessageOfTheDayListener
+Implements <a href="MessageOfTheDayListener.html"><code>MessageOfTheDayListener</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Wolf Message Of The Day default variables listener</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>final function <strong>worldTimeTotal</strong>(msgrec) <br> <em>worldTimeTotal method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>lastIP</strong>(msgrec) <br> <em>lastIP method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>group</strong>(msgrec) <br> <em>group method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>uptime</strong>(msgrec) <br> <em>uptime method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>playerMax</strong>(msgrec) <br> <em>playerMax method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>lastLogin</strong>(msgrec) <br> <em>lastLogin method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>playerFirstJoin</strong>(msgrec) <br> <em>playerFirstJoin method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>playerList</strong>(msgrec) <br> <em>playerList method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>playerCount</strong>(msgrec) <br> <em>playerCount method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>playerTimePlayed</strong>(msgrec) <br> <em>playerTimePlayed method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>receiverName</strong>(msgrec) <br> <em>receiverName method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>tps</strong>(msgrec) <br> <em>tps method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>world</strong>(msgrec) <br> <em>world method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>worldTimeRaw</strong>(msgrec) <br> <em>worldTimeRaw method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>final function <strong>worldWeather</strong>(msgrec) <br> <em>worldWeather method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-wolfmessageofthedaylistener-wolfmessageofthedaylistener-md-">Public Methods for <a href="WolfMessageOfTheDayListener.html"><code>WolfMessageOfTheDayListener</code></a></h3>
+<h5 id="-a-id-worldtimetotal-a-public-final-function-__worldtimetotal__-msgrec-"><a id='worldtimetotal'></a>public final function <strong>worldTimeTotal</strong>(msgrec)</h5>
+<p><em>worldTimeTotal method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-lastip-a-public-final-function-__lastip__-msgrec-"><a id='lastip'></a>public final function <strong>lastIP</strong>(msgrec)</h5>
+<p><em>lastIP method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-group-a-public-final-function-__group__-msgrec-"><a id='group'></a>public final function <strong>group</strong>(msgrec)</h5>
+<p><em>group method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-uptime-a-public-final-function-__uptime__-msgrec-"><a id='uptime'></a>public final function <strong>uptime</strong>(msgrec)</h5>
+<p><em>uptime method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playermax-a-public-final-function-__playermax__-msgrec-"><a id='playermax'></a>public final function <strong>playerMax</strong>(msgrec)</h5>
+<p><em>playerMax method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-lastlogin-a-public-final-function-__lastlogin__-msgrec-"><a id='lastlogin'></a>public final function <strong>lastLogin</strong>(msgrec)</h5>
+<p><em>lastLogin method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerfirstjoin-a-public-final-function-__playerfirstjoin__-msgrec-"><a id='playerfirstjoin'></a>public final function <strong>playerFirstJoin</strong>(msgrec)</h5>
+<p><em>playerFirstJoin method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerlist-a-public-final-function-__playerlist__-msgrec-"><a id='playerlist'></a>public final function <strong>playerList</strong>(msgrec)</h5>
+<p><em>playerList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playercount-a-public-final-function-__playercount__-msgrec-"><a id='playercount'></a>public final function <strong>playerCount</strong>(msgrec)</h5>
+<p><em>playerCount method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playertimeplayed-a-public-final-function-__playertimeplayed__-msgrec-"><a id='playertimeplayed'></a>public final function <strong>playerTimePlayed</strong>(msgrec)</h5>
+<p><em>playerTimePlayed method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-receivername-a-public-final-function-__receivername__-msgrec-"><a id='receivername'></a>public final function <strong>receiverName</strong>(msgrec)</h5>
+<p><em>receiverName method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tps-a-public-final-function-__tps__-msgrec-"><a id='tps'></a>public final function <strong>tps</strong>(msgrec)</h5>
+<p><em>tps method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-world-a-public-final-function-__world__-msgrec-"><a id='world'></a>public final function <strong>world</strong>(msgrec)</h5>
+<p><em>world method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldtimeraw-a-public-final-function-__worldtimeraw__-msgrec-"><a id='worldtimeraw'></a>public final function <strong>worldTimeRaw</strong>(msgrec)</h5>
+<p><em>worldTimeRaw method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldweather-a-public-final-function-__worldweather__-msgrec-"><a id='worldweather'></a>public final function <strong>worldWeather</strong>(msgrec)</h5>
+<p><em>worldWeather method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msgrec</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>msgrec argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

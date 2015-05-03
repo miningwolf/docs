@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API DatabaseConfiguration</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html'>config</a></li>
+<li class='current'><a href='#'>DatabaseConfiguration</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\Configuration.html'>Configuration</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\ConfigurationContainer.html'>ConfigurationContainer</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\DatabaseConfiguration.html'>DatabaseConfiguration</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\ServerConfiguration.html'>ServerConfiguration</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\WorldConfiguration.html'>WorldConfiguration</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="databaseconfiguration-__class__">DatabaseConfiguration <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.config.DatabaseConfiguration
+Implements <a href="ConfigurationContainer.html"><code>ConfigurationContainer</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Database Configuration settings</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>DatabaseConfiguration</strong>(path) <br> <em>DatabaseConfiguration constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>BansTableName</strong> <br> <em>BansTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>GroupsTableName</strong> <br> <em>GroupsTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>KitsTableName</strong> <br> <em>KitsTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>MaxConnectionIdleTime</strong> <br> <em>Get: Reloads the configuration file</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>OpertatorsTableName</strong> <br> <em>OpertatorsTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>PermissionsTableName</strong> <br> <em>PermissionsTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>PlayersTableName</strong> <br> <em>PlayersTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>ReservelistTableName</strong> <br> <em>ReservelistTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>WarpsTableName</strong> <br> <em>WarpsTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>WhitelistTableName</strong> <br> <em>WhitelistTableName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-databaseconfiguration-databaseconfiguration-md-">Public Constructors for <a href="DatabaseConfiguration.html"><code>DatabaseConfiguration</code></a></h3>
+<h5 id="-a-id-databaseconfiguration-a-new-__databaseconfiguration__-path-"><a id='databaseconfiguration'></a>new <strong>DatabaseConfiguration</strong>(path)</h5>
+<p><em>DatabaseConfiguration constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-databaseconfiguration-databaseconfiguration-md-">Public Properties for <a href="DatabaseConfiguration.html"><code>DatabaseConfiguration</code></a></h3>
+<h5 id="-a-id-banstablename-a-public-readonly-property-__banstablename__"><a id='banstablename'></a>public  readonly property <strong>BansTableName</strong></h5>
+<p><em>BansTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupstablename-a-public-readonly-property-__groupstablename__"><a id='groupstablename'></a>public  readonly property <strong>GroupsTableName</strong></h5>
+<p><em>GroupsTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitstablename-a-public-readonly-property-__kitstablename__"><a id='kitstablename'></a>public  readonly property <strong>KitsTableName</strong></h5>
+<p><em>KitsTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-maxconnectionidletime-a-public-readonly-property-__maxconnectionidletime__"><a id='maxconnectionidletime'></a>public  readonly property <strong>MaxConnectionIdleTime</strong></h5>
+<p>_Get: Reloads the configuration file /
+    @Override
+    public void reload() {
+        cfg.reload();
+        verifyConfig();
+    }</p>
+<pre><code>/** <span class="hljs-class">Get</span> the configuration file /
+@<span class="hljs-class">Override</span>
+public <span class="hljs-class">PropertiesFile</span> getFile() {
+    return cfg;
+}
+
+/** <span class="hljs-class">Creates</span> the default configuration /
+private void verifyConfig() {
+    cfg.clearHeader();
+    cfg.addHeaderLines(
+            <span class="hljs-comment">"For more settings explanations see following websites ..."</span>,
+            <span class="hljs-comment">"http://javatech.org/2007/11/c3p0-connectionpool-configuration-rules-of-thumb/"</span>,
+            <span class="hljs-comment">"https://community.jboss.org/wiki/HowToConfigureTheC3P0ConnectionPool?_sscc=t"</span>
+                      );
+
+    cfg.getString(<span class="hljs-comment">"name"</span>, <span class="hljs-comment">"wolfscript"</span>);
+    cfg.getString(<span class="hljs-comment">"host"</span>, <span class="hljs-comment">"localhost"</span>);
+    cfg.getString(<span class="hljs-comment">"username"</span>, <span class="hljs-comment">"admin"</span>);
+    cfg.getString(<span class="hljs-comment">"password"</span>, <span class="hljs-comment">"admin"</span>);
+    cfg.getInt(<span class="hljs-comment">"port"</span>, <span class="hljs-number">3306</span>);
+    cfg.getInt(<span class="hljs-comment">"maxConnections"</span>, <span class="hljs-number">5</span>);
+
+    // c3p0 settings
+
+    cfg.getInt(<span class="hljs-comment">"acquire-increment"</span>, <span class="hljs-number">5</span>);
+    cfg.setComments(<span class="hljs-comment">"acquire-increment"</span>, <span class="hljs-comment">"Determines how many connections at a time c3p0 will try to acquire when the pool is exhausted."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"max-connection-idle-time"</span>, <span class="hljs-number">900</span>); //<span class="hljs-number">15</span> minutes
+    cfg.setComments(<span class="hljs-comment">"max-connection-idle-time"</span>, <span class="hljs-comment">"Determines how long idle connections can stay in the connection pool before they are removed."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"max-excess-connections-idle-time"</span>, <span class="hljs-number">1800</span>); // <span class="hljs-number">30</span> minutes
+    cfg.setComments(<span class="hljs-comment">"max-excess-connections-idle-time"</span>, <span class="hljs-comment">"Time until the connection pool will be culled down to min-connection-pool-size. Set 0 to not enforce pool shrinking."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"max-connection-pool-size"</span>, <span class="hljs-number">10</span>);
+    cfg.setComments(<span class="hljs-comment">"max-connection-pool-size"</span>, <span class="hljs-comment">"The maximum allowed number of pooled connections. More for larger servers"</span>);
+
+    cfg.getInt(<span class="hljs-comment">"min-connection-pool-size"</span>, <span class="hljs-number">3</span>);
+    cfg.setComments(<span class="hljs-comment">"min-connection-pool-size"</span>, <span class="hljs-comment">"The minimum amount of connections allowed. More means more memory usage but takes away some impact from creating new connections."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"num-helper-threads"</span>, <span class="hljs-number">4</span>);
+    cfg.setComments(<span class="hljs-comment">"num-helper-threads"</span>, <span class="hljs-comment">"Amount of threads that will perform slow JDBC operations (closing idle connections, returning connections to pool etc)"</span>);
+
+    cfg.getInt(<span class="hljs-comment">"return-connection-timeout"</span>, <span class="hljs-number">900</span>); //<span class="hljs-number">15</span> minutes
+    cfg.setComments(<span class="hljs-comment">"return-connection-timeout"</span>, <span class="hljs-comment">"Defines a time a connection can remain checked out. After that it will be forced back into the connection pool."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"connection-test-frequency"</span>, <span class="hljs-number">0</span>); // <span class="hljs-number">60</span> minutes
+    cfg.setComments(<span class="hljs-comment">"idle-connection-test-frequency"</span>, <span class="hljs-comment">"Every this amount of seconds idle connections will be checked for validity. Set 0 to turn off"</span>);
+
+    cfg.getInt(<span class="hljs-comment">"max-cached-statements"</span>, <span class="hljs-number">50</span>);
+    cfg.setComments(<span class="hljs-comment">"max-cached-statements"</span>, <span class="hljs-comment">"Number of max cached statements on all connections. (Roughly 5 expected pooled connections)"</span>);
+
+    cfg.getInt(<span class="hljs-comment">"max-statements-per-connection"</span>, <span class="hljs-number">5</span>);
+    cfg.setComments(<span class="hljs-comment">"max-statements-per-connection"</span>, <span class="hljs-comment">"Number of max cached statements on a single connection."</span>);
+
+    cfg.getInt(<span class="hljs-comment">"statement-cache-close-threads"</span>, <span class="hljs-number">1</span>);
+    cfg.setComments(<span class="hljs-comment">"statement-cache-close-threads"</span>, <span class="hljs-comment">"Number of threads to use when closing statements is deferred (happens when parent connection is still in use)"</span>);
+
+    // <span class="hljs-class">Table</span> <span class="hljs-class">Naming</span> <span class="hljs-class">Schemes</span>...
+    cfg.getString(<span class="hljs-comment">"bans-table-name"</span>, <span class="hljs-comment">"ban"</span>);
+    cfg.setComments(<span class="hljs-comment">"bans-table-name"</span>, <span class="hljs-comment">"The name to use for the Bans table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"groups-table-name"</span>, <span class="hljs-comment">"group"</span>);
+    cfg.setComments(<span class="hljs-comment">"groups-table-name"</span>, <span class="hljs-comment">"The name to use for the Groups table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"kits-table-name"</span>, <span class="hljs-comment">"kit"</span>);
+    cfg.setComments(<span class="hljs-comment">"kits-table-name"</span>, <span class="hljs-comment">"The name to use for the Kits table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"operators-table-name"</span>, <span class="hljs-comment">"operators"</span>);
+    cfg.setComments(<span class="hljs-comment">"operators-table-name"</span>, <span class="hljs-comment">"The name to use for the Operators table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"permissions-table-name"</span>, <span class="hljs-comment">"permission"</span>);
+    cfg.setComments(<span class="hljs-comment">"permissions-table-name"</span>, <span class="hljs-comment">"The name to use for the Permissions table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"players-table-name"</span>, <span class="hljs-comment">"player"</span>);
+    cfg.setComments(<span class="hljs-comment">"players-table-name"</span>, <span class="hljs-comment">"The name to use for the Permissions table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"reservelist-table-name"</span>, <span class="hljs-comment">"reservelist"</span>);
+    cfg.setComments(<span class="hljs-comment">"reservelist-table-name"</span>, <span class="hljs-comment">"The name to use for the ReserveList table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"warps-table-name"</span>, <span class="hljs-comment">"warp"</span>);
+    cfg.setComments(<span class="hljs-comment">"warps-table-name"</span>, <span class="hljs-comment">"The name to use for the Warps table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+
+    cfg.getString(<span class="hljs-comment">"whitelist-table-name"</span>, <span class="hljs-comment">"whitelist"</span>);
+    cfg.setComments(<span class="hljs-comment">"whitelist-table-name"</span>, <span class="hljs-comment">"The name to use for the WhiteList table. NOTE: Changing this here will require you to manually change the name of the table in the database (if present)"</span>);
+    //
+
+    cfg.save();
+}
+
+/** <span class="hljs-class">Get</span> the <span class="hljs-class">URL</span> to the database. <span class="hljs-class">This</span> is a combination of host, port and database_
+</code></pre><table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>database url /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-keyword">String</span> getDatabaseUrl(<span class="hljs-keyword">String</span> driver) {
+    <span class="hljs-built_in">int</span> port = getDatabasePort();
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"jdbc:"</span> + driver + <span class="hljs-string">"://"</span> + getDatabaseHost() + ((port == <span class="hljs-number">0</span>) ? <span class="hljs-string">""</span> : (<span class="hljs-string">":"</span> + port)) + <span class="hljs-string">"/"</span> + getDatabaseName();
+}
+
+<span class="hljs-comment">/** Get the database host, defaulting to localhost</span>
+</code></pre><h5 id="-a-id-opertatorstablename-a-public-readonly-property-__opertatorstablename__"><a id='opertatorstablename'></a>public  readonly property <strong>OpertatorsTableName</strong></h5>
+<p><em>OpertatorsTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-permissionstablename-a-public-readonly-property-__permissionstablename__"><a id='permissionstablename'></a>public  readonly property <strong>PermissionsTableName</strong></h5>
+<p><em>PermissionsTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerstablename-a-public-readonly-property-__playerstablename__"><a id='playerstablename'></a>public  readonly property <strong>PlayersTableName</strong></h5>
+<p><em>PlayersTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelisttablename-a-public-readonly-property-__reservelisttablename__"><a id='reservelisttablename'></a>public  readonly property <strong>ReservelistTableName</strong></h5>
+<p><em>ReservelistTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-warpstablename-a-public-readonly-property-__warpstablename__"><a id='warpstablename'></a>public  readonly property <strong>WarpsTableName</strong></h5>
+<p><em>WarpsTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelisttablename-a-public-readonly-property-__whitelisttablename__"><a id='whitelisttablename'></a>public  readonly property <strong>WhitelistTableName</strong></h5>
+<p><em>WhitelistTableName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,139 @@
+@{
+    var helpers = model.require('../views/js/helpers.js');
+ 	var path = model.require('path');
+	
+	var mainItem = model.item;
+	var mainPath = model.path;
+
+	 var fnNameClean = function(name){
+	   		if (model.db.hasOwnProperty(name))
+	   		  	return "[`" + helpers.fnNameOnly(name) + "`]" + "(" + path.relative(mainPath, name.replace(/\./g, "/") + ".md") + ")"
+	   		  else
+	   		     return "`" + helpers.fnNameOnly(name) + "`";
+	   		};
+  
+    var fnDescriptionClean = function(text) {
+    	return	helpers.fnDescriptionClean(text, function(x){
+	   		var name = x.substr(7, x.length-8);
+	   		return fnNameClean(name);
+	   		});
+    };
+	
+	if (mainItem.type == "namespace")
+	{
+	
+		if (mainItem.classes.length>0)
+		{
+			@:__Classes__|
+				mainItem.classes.forEach(function(itemKey){
+				var item = model.db[itemKey];
+				if (!item.deprecated)
+				{
+						@:__@fnNameClean(item.qualifiedname) __ | _@fnDescriptionClean(item.title) _ 
+			}
+			});
+		}
+		
+		if (mainItem.interfaces.length>0)
+		{
+			@:__Interfaces__|
+			mainItem.interfaces.forEach(function(itemKey){
+				var item = model.db[itemKey];
+				if (!item.deprecated)
+				{
+					@:__@fnNameClean(item.qualifiedname) __ | _@fnDescriptionClean(item.title) _ 
+				}
+			});
+		}
+		
+		if (mainItem.enums.length>0)
+		{
+			@:__Enums__|
+			mainItem.enums.forEach(function(itemKey){
+				var item = model.db[itemKey];
+				if (!item.deprecated)
+				{
+					@:__@fnNameClean(item.qualifiedname) __ | _@fnDescriptionClean(item.title) _ 
+				}
+			});
+		}
+			
+		if (mainItem.namespaces.length>0)
+		{
+			@:__Child Namespaces__|
+				mainItem.namespaces.forEach(function(itemKey){
+				var item = model.db[itemKey];
+				if (!item.deprecated)
+				{
+					@:__@fnNameClean(item.qualifiedname) __ | _@fnDescriptionClean(item.title) _ 
+				}
+			});
+		}
+	
+	} else	if ((mainItem.constructors.length >0) || (mainItem.methods.length >0) || (mainItem.fields) || (mainItem.properties)  || (mainItem.enum))
+	{
+	
+		
+		if (mainItem.enum)
+		{
+			mainItem.enum.forEach(function(item){
+				if (!item.deprecated)
+				{
+					@:@item.code : @item.value <br> _@fnDescriptionClean(item.title) _ | @mainItem.name
+				}
+				});
+		}
+	
+		mainItem.constructors.forEach(function(item){
+		if (!item.deprecated)
+		{
+			@:new __@item.name __(@helpers.getArgs(item) ) <br> _@fnDescriptionClean(item.title) _ | _constructor_
+		}
+		});
+
+		mainItem.properties.forEach(function(item){
+			if (!item.deprecated)
+		{
+			@:@item.describe  @item.modifier  property __@item.name __ <br> _@fnDescriptionClean(item.title) _ | @fnNameClean(item.return)
+		}
+		});
+
+		mainItem.methods.forEach(function(item){
+			if (!item.deprecated)
+		{
+			@:@item.describe  function __@item.name __(@helpers.getArgs(item) ) <br> _@fnDescriptionClean(item.title) _ | @fnNameClean(item.return)
+		}
+		});
+
+		if (mainItem.fields)
+		{
+			mainItem.fields.forEach(function(item){
+				if (!item.deprecated)
+			{
+				@:@item.describe  var __@item.name __ <br> _@fnDescriptionClean(item.title) _ | @fnNameClean(item.type)
+			}
+			});
+		}
+	} else 
+	{
+			 @:No public methods or fields |
+	}
+
+	if (mainItem.extends && mainItem.extends.length >0)
+	{
+	  mainItem.extends.forEach(function(extend) {
+		  if (model.db.hasOwnProperty(extend))
+		  {
+			   var base = model.db[extend];
+			   var newmodel = {require: model.require, 
+								   db: model.db, 
+								   item: base, 
+								   path: model.path,
+								   renderPartial: model.renderPartial};
+			  @: |
+			  @:__Inherited items from @fnNameClean(base.qualifiedname) __ |
+			  @:@model.renderPartial('/build/views/partials/itemSummaryTable.jsmd',newmodel)
+		  }
+		});
+	}
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ReturnFromIdle</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html'>player</a></li>
+<li class='current'><a href='#'>ReturnFromIdle</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\AnvilUse.html'>AnvilUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ArmorBroken.html'>ArmorBroken</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ArmorStandModify.html'>ArmorStandModify</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Ban.html'>Ban</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BedEnter.html'>BedEnter</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BedExit.html'>BedExit</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockDestroy.html'>BlockDestroy</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockLeftClick.html'>BlockLeftClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockPlace.html'>BlockPlace</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BlockRightClick.html'>BlockRightClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\BookEdit.html'>BookEdit</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Chat.html'>Chat</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Connection.html'>Connection</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Craft.html'>Craft</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Disconnection.html'>Disconnection</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Eat.html'>Eat</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Enchant.html'>Enchant</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\EntityRightClick.html'>EntityRightClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Experience.html'>Experience</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodExhaustion.html'>FoodExhaustion</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodLevel.html'>FoodLevel</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\FoodSaturation.html'>FoodSaturation</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\GameModeChange.html'>GameModeChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\HealthChange.html'>HealthChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\HeldItemChange.html'>HeldItemChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Inventory.html'>Inventory</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemDrop.html'>ItemDrop</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemFrameRotate.html'>ItemFrameRotate</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemFrameSetItem.html'>ItemFrameSetItem</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemPickup.html'>ItemPickup</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ItemUse.html'>ItemUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\Kick.html'>Kick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\LevelUp.html'>LevelUp</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerArmSwing.html'>PlayerArmSwing</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerDeath.html'>PlayerDeath</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerIdle.html'>PlayerIdle</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerList.html'>PlayerList</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerMove.html'>PlayerMove</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerRespawned.html'>PlayerRespawned</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PlayerRespawning.html'>PlayerRespawning</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PortalUse.html'>PortalUse</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\PreConnection.html'>PreConnection</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ReturnFromIdle.html'>ReturnFromIdle</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SignChange.html'>SignChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SignShow.html'>SignShow</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\SlotClick.html'>SlotClick</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\StatGained.html'>StatGained</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\TeleportCause.html'>TeleportCause</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\ToolBroken.html'>ToolBroken</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\VillagerTrade.html'>VillagerTrade</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\system\0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="returnfromidle-__class__">ReturnFromIdle <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.player.ReturnFromIdle
+Extends <a href="..\..\hook\Hook.html"><code>Hook</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Called when the Player is no longer idle</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>ReturnFromIdle</strong>(player, idle) <br> <em>ReturnFromIdle constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>Get the <code>Player</code> that was Idle</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="..\..\hook\Hook.html"><code>Hook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Get the name of this hook.</em></td>
+<td style="text-align:left"><a href="..\..\hook\Hook.html"><code>Hook</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-returnfromidle-returnfromidle-md-">Public Constructors for <a href="ReturnFromIdle.html"><code>ReturnFromIdle</code></a></h3>
+<h5 id="-a-id-returnfromidle-a-new-__returnfromidle__-player-idle-"><a id='returnfromidle'></a>new <strong>ReturnFromIdle</strong>(player, idle)</h5>
+<p><em>ReturnFromIdle constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>player</td>
+<td><code>Player</code></td>
+<td>player argument</td>
+</tr>
+<tr>
+<td>idle</td>
+<td><code>long</code></td>
+<td>idle argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-returnfromidle-returnfromidle-md-">Public Methods for <a href="ReturnFromIdle.html"><code>ReturnFromIdle</code></a></h3>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>Get the <code>Player</code> that was Idle</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>the idle player /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">public</span> Player <span class="hljs-title">getPlayer</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.player;
+}
+
+<span class="hljs-comment">/** Gets the amount of time the `Player` was idle</span>
+</code></pre><hr>
+<h3 id="public-methods-for-hook-hook-hook-md-">Public Methods for <a href="..\..\hook\Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Get the name of this hook.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\..\hook\Hook.html"><code>Hook</code></a></td>
+<td>simple class name /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public final <span class="hljs-type">String</span> getHookName<span class="hljs-literal">()</span> {
+    return getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>;
+}
+
+@<span class="hljs-type">Override</span>
+public <span class="hljs-built_in">int</span> hashCode<span class="hljs-literal">()</span> {
+    <span class="hljs-built_in">int</span> hash = getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>.length<span class="hljs-literal">()</span>;
+
+    return hash getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>.hashCode<span class="hljs-literal">()</span> + <span class="hljs-number">2</span>;
+}
+
+/** <span class="hljs-type">Calls</span> a <span class="hljs-type">Hook</span> <span class="hljs-keyword">if</span> not already executed
+</code></pre><hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

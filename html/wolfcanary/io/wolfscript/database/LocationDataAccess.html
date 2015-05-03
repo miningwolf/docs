@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API LocationDataAccess</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html'>database</a></li>
+<li class='current'><a href='#'>LocationDataAccess</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\DataAccess.html'>DataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\DatabaseLoader.html'>DatabaseLoader</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\JdbcConnectionManager.html'>JdbcConnectionManager</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\LocationDataAccess.html'>LocationDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\PositionDataAccess.html'>PositionDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\SQLType.html'>SQLType</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\database\Type.html'>Type</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\exceptions\0.html' class=''>database.exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\mysql\0.html' class=''>database.mysql</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\sqlite\0.html' class=''>database.sqlite</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\xml\0.html' class=''>database.xml</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="locationdataaccess-__class__">LocationDataAccess <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.database.LocationDataAccess
+Extends <a href="PositionDataAccess.html"><code>PositionDataAccess</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Location assistant DataAccess object</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>LocationDataAccess</strong>(tableName) <br> <em>LocationDataAccess constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>LocationDataAccess</strong>(tableName, tableSuffix) <br> <em>LocationDataAccess constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> var <strong>world</strong> <br> <em>world field</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> var <strong>dimension</strong> <br> <em>dimension field</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="PositionDataAccess.html"><code>PositionDataAccess</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>PositionDataAccess</strong>(tableName) <br> <em>PositionDataAccess constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>PositionDataAccess</strong>(tableName, tableSuffix) <br> <em>PositionDataAccess constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> var <strong>posX</strong> <br> <em>posX field</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td> var <strong>posY</strong> <br> <em>posY field</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td> var <strong>posZ</strong> <br> <em>posZ field</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="DataAccess.html"><code>DataAccess</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>abstract readonly property <strong>Instance</strong> <br> <em>Get: Construct a new DataAccess object that represents a table</em></td>
+<td style="text-align:left"><a href="DataAccess.html"><code>DataAccess</code></a></td>
+</tr>
+<tr>
+<td> var <strong>id</strong> <br> <em>id field</em></td>
+<td style="text-align:left"><code>Integer</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-locationdataaccess-locationdataaccess-md-">Public Constructors for <a href="LocationDataAccess.html"><code>LocationDataAccess</code></a></h3>
+<h5 id="-a-id-locationdataaccess-a-new-__locationdataaccess__-tablename-"><a id='locationdataaccess'></a>new <strong>LocationDataAccess</strong>(tableName)</h5>
+<p><em>LocationDataAccess constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tableName</td>
+<td><code>String</code></td>
+<td>tableName argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-locationdataaccess-a-new-__locationdataaccess__-tablename-tablesuffix-"><a id='locationdataaccess'></a>new <strong>LocationDataAccess</strong>(tableName, tableSuffix)</h5>
+<p><em>LocationDataAccess constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tableName</td>
+<td><code>String</code></td>
+<td>tableName argument</td>
+</tr>
+<tr>
+<td>tableSuffix</td>
+<td><code>String</code></td>
+<td>tableSuffix argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-locationdataaccess-locationdataaccess-md-">Public Fields for <a href="LocationDataAccess.html"><code>LocationDataAccess</code></a></h3>
+<h5 id="-a-id-world-a-public-var-__world__"><a id='world'></a>public  var <strong>world</strong></h5>
+<p><em>world field</em></p>
+<blockquote>
+<p>Returns
+ <code>String</code></p>
+</blockquote>
+<h5 id="-a-id-dimension-a-public-var-__dimension__"><a id='dimension'></a>public  var <strong>dimension</strong></h5>
+<p><em>dimension field</em></p>
+<blockquote>
+<p>Returns
+ <code>String</code></p>
+</blockquote>
+<hr>
+<h3 id="public-constructors-for-positiondataaccess-positiondataaccess-md-">Public Constructors for <a href="PositionDataAccess.html"><code>PositionDataAccess</code></a></h3>
+<h5 id="-a-id-positiondataaccess-a-new-__positiondataaccess__-tablename-"><a id='positiondataaccess'></a>new <strong>PositionDataAccess</strong>(tableName)</h5>
+<p><em>PositionDataAccess constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tableName</td>
+<td><code>String</code></td>
+<td>tableName argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-positiondataaccess-a-new-__positiondataaccess__-tablename-tablesuffix-"><a id='positiondataaccess'></a>new <strong>PositionDataAccess</strong>(tableName, tableSuffix)</h5>
+<p><em>PositionDataAccess constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tableName</td>
+<td><code>String</code></td>
+<td>tableName argument</td>
+</tr>
+<tr>
+<td>tableSuffix</td>
+<td><code>String</code></td>
+<td>tableSuffix argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-positiondataaccess-positiondataaccess-md-">Public Fields for <a href="PositionDataAccess.html"><code>PositionDataAccess</code></a></h3>
+<h5 id="-a-id-posx-a-public-var-__posx__"><a id='posx'></a>public  var <strong>posX</strong></h5>
+<p><em>posX field</em></p>
+<blockquote>
+<p>Returns
+ <code>double</code></p>
+</blockquote>
+<h5 id="-a-id-posy-a-public-var-__posy__"><a id='posy'></a>public  var <strong>posY</strong></h5>
+<p><em>posY field</em></p>
+<blockquote>
+<p>Returns
+ <code>double</code></p>
+</blockquote>
+<h5 id="-a-id-posz-a-public-var-__posz__"><a id='posz'></a>public  var <strong>posZ</strong></h5>
+<p><em>posZ field</em></p>
+<blockquote>
+<p>Returns
+ <code>double</code></p>
+</blockquote>
+<hr>
+<h3 id="public-properties-for-dataaccess-dataaccess-md-">Public Properties for <a href="DataAccess.html"><code>DataAccess</code></a></h3>
+<h5 id="-a-id-instance-a-public-abstract-readonly-property-__instance__"><a id='instance'></a>public abstract readonly property <strong>Instance</strong></h5>
+<p><em>Get: Construct a new DataAccess object that represents a table in the database with the given name. This AccessObject is empty after it has been created. You need to get data from Database and load it. WolfScript will do this for you. For this simply call Wolf.db().load(yourDataAccess, String[]lookupFields, Object[]whereData); This will fill your AccessObject.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="DataAccess.html"><code>DataAccess</code></a></td>
+<td>HashMap that maps the Column meta data to the data present in database.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-dataaccess-dataaccess-md-">Public Fields for <a href="DataAccess.html"><code>DataAccess</code></a></h3>
+<h5 id="-a-id-id-a-public-var-__id__"><a id='id'></a>public  var <strong>id</strong></h5>
+<p><em>id field</em></p>
+<blockquote>
+<p>Returns
+ <code>Integer</code></p>
+</blockquote>
+<hr>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

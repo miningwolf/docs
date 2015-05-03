@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API Messenger</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html'>plugin</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\0.html'>messaging</a></li>
+<li class='current'><a href='#'>Messenger</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\java\0.html' class=''>plugin.java</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\0.html' class=''>plugin.messaging</a></li> 
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\ChannelNameTooLongException.html'>ChannelNameTooLongException</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\ChannelNotRegisteredException.html'>ChannelNotRegisteredException</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\MessageTooLargeException.html'>MessageTooLargeException</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\Messenger.html'>Messenger</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\PluginChannelDirection.html'>PluginChannelDirection</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\PluginMessageListener.html'>PluginMessageListener</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\PluginMessageListenerRegistration.html'>PluginMessageListenerRegistration</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\PluginMessageRecipient.html'>PluginMessageRecipient</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\ReservedChannelException.html'>ReservedChannelException</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\StandardMessenger.html'>StandardMessenger</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="messenger-__interface__">Messenger <strong>interface</strong></h2>
+<blockquote>
+<p>io.wolfscript.plugin.messaging.Messenger</p>
+</blockquote>
+<hr>
+<h3 id="interface-overview">Interface Overview</h3>
+<p>A class responsible for managing the registrations of plugin channels and their listeners.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>dispatchIncomingMessage</strong>(source, channel) <br> <em>Represents the largest size that an individual Plugin Message may be.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td>static final var <strong>MAX</strong> <br> <em>Represents the largest size that an individual Plugin Message may be.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-messenger-messenger-md-">Public Methods for <a href="Messenger.html"><code>Messenger</code></a></h3>
+<h5 id="-a-id-dispatchincomingmessage-a-public-function-__dispatchincomingmessage__-source-channel-"><a id='dispatchincomingmessage'></a>public  function <strong>dispatchIncomingMessage</strong>(source, channel)</h5>
+<p>_Represents the largest size that an individual Plugin Message may be. /
+    public static final int MAX_MESSAGE_SIZE = 32766;</p>
+<pre><code>/** Represents the largest <span class="hljs-built_in">size</span> that a Plugin Channel may be. /
+<span class="hljs-keyword">public</span> static <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> MAX_CHANNEL_SIZE = <span class="hljs-number">20</span>;
+
+/** Checks <span class="hljs-keyword">if</span> the specified channel is a reserved <span class="hljs-keyword">name</span>._
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td><code>Player</code></td>
+<td>Source of the message.</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><code>String</code></td>
+<td>Channel name to check.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td>True if the channel is reserved, otherwise false.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-messenger-messenger-md-">Public Fields for <a href="Messenger.html"><code>Messenger</code></a></h3>
+<h5 id="-a-id-max-a-public-static-final-var-__max__"><a id='max'></a>public static final var <strong>MAX</strong></h5>
+<p>_Represents the largest size that an individual Plugin Message may be. /
+    public static final int MAX_MESSAGE_SIZE = 32766;</p>
+<pre><code><span class="hljs-comment">/** Represents the largest size that a Plugin Channel may be._</span>
+</code></pre><blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

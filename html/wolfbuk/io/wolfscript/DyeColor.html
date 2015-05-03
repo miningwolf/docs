@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API DyeColor</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+<li class='current'><a href='#'>DyeColor</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Achievement.html'>Achievement</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Art.html'>Art</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\BanEntry.html'>BanEntry</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Builder.html'>Builder</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\ChatColor.html'>ChatColor</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Chunk.html'>Chunk</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\ChunkSnapshot.html'>ChunkSnapshot</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\CoalType.html'>CoalType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Color.html'>Color</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\CropState.html'>CropState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Difficulty.html'>Difficulty</a></li>
+<li class='active'><a href='..\..\..\wolfbuk\io\wolfscript\DyeColor.html'>DyeColor</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\EntityEffect.html'>EntityEffect</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Environment.html'>Environment</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\GameMode.html'>GameMode</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\GrassSpecies.html'>GrassSpecies</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Instrument.html'>Instrument</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Material.html'>Material</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\NetherWartsState.html'>NetherWartsState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\PortalType.html'>PortalType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Rotation.html'>Rotation</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\SandstoneType.html'>SandstoneType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Server.html'>Server</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\SkullType.html'>SkullType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Sound.html'>Sound</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Tone.html'>Tone</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TravelAgent.html'>TravelAgent</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TreeSpecies.html'>TreeSpecies</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TreeType.html'>TreeType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Type.html'>Type</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\UnsafeValues.html'>UnsafeValues</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WarningState.html'>WarningState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WeatherType.html'>WeatherType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WolfScript.html'>WolfScript</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldBorder.html'>WorldBorder</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldCreator.html'>WorldCreator</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldType.html'>WorldType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="dyecolor-__enum__">DyeColor <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.DyeColor</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>All supported color values for dyes and cloth</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0: <br> <em>0x0 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xF: <br> <em>0xF DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.WHITE: <br> <em>Color.WHITE DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xF0F0F0)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x1: <br> <em>0x1 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xE: <br> <em>0xE DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xD87F33<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xEB8844)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x2: <br> <em>0x2 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xD: <br> <em>0xD DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xB24CD8<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xC354CD)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x3: <br> <em>0x3 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xC: <br> <em>0xC DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x6699D8<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x6689D3)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x4: <br> <em>0x4 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xB: <br> <em>0xB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xE5E533<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xDECF2A)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x5: <br> <em>0x5 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xA: <br> <em>0xA DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x7FCC19<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x41CD34)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x6: <br> <em>0x6 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x9: <br> <em>0x9 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xF27FA5<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xD88198)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x7: <br> <em>0x7 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x8: <br> <em>0x8 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x4C4C4C<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x434343)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x8: <br> <em>0x8 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x7: <br> <em>0x7 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x999999<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xABABAB)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x9: <br> <em>0x9 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x6: <br> <em>0x6 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x4C7F99<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x287697)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xA: <br> <em>0xA DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x5: <br> <em>0x5 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x7F3FB2<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x7B2FBE)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xB: <br> <em>0xB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x4: <br> <em>0x4 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x334CB2<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x253192)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xC: <br> <em>0xC DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x3: <br> <em>0x3 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x664C33<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x51301A)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xD: <br> <em>0xD DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x2: <br> <em>0x2 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x667F33<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x3B511A)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xE: <br> <em>0xE DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x1: <br> <em>0x1 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x993333<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0xB3312C)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0xF: <br> <em>0xF DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>0x0: <br> <em>0x0 DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x191919<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>Color.fromRGB: 0x1E1B1B)<br> <em>Color.fromRGB DyeColor</em></td>
+<td style="text-align:left">DyeColor</td>
+</tr>
+<tr>
+<td>static function <strong>getByFireworkColor</strong>(Color) <br> <em>Represents white dye.</em></td>
+<td style="text-align:left"><a href="DyeColor.html"><code>DyeColor</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-dyecolor-dyecolor-md-">Public Methods for <a href="DyeColor.html"><code>DyeColor</code></a></h3>
+<h5 id="-a-id-getbyfireworkcolor-a-public-static-function-__getbyfireworkcolor__-color-"><a id='getbyfireworkcolor'></a>public static function <strong>getByFireworkColor</strong>(Color)</h5>
+<p>_Represents white dye. /
+    WHITE(0x0, 0xF, Color.WHITE, Color.fromRGB(0xF0F0F0)),
+    /<strong> Represents orange dye. /
+    ORANGE(0x1, 0xE, Color.fromRGB(0xD87F33), Color.fromRGB(0xEB8844)),
+    /</strong> Represents magenta dye. /
+    MAGENTA(0x2, 0xD, Color.fromRGB(0xB24CD8), Color.fromRGB(0xC354CD)),
+    /<strong> Represents light blue dye. /
+    LIGHT_BLUE(0x3, 0xC, Color.fromRGB(0x6699D8), Color.fromRGB(0x6689D3)),
+    /</strong> Represents yellow dye. /
+    YELLOW(0x4, 0xB, Color.fromRGB(0xE5E533), Color.fromRGB(0xDECF2A)),
+    /<strong> Represents lime dye. /
+    LIME(0x5, 0xA, Color.fromRGB(0x7FCC19), Color.fromRGB(0x41CD34)),
+    /</strong> Represents pink dye. /
+    PINK(0x6, 0x9, Color.fromRGB(0xF27FA5), Color.fromRGB(0xD88198)),
+    /<strong> Represents gray dye. /
+    GRAY(0x7, 0x8, Color.fromRGB(0x4C4C4C), Color.fromRGB(0x434343)),
+    /</strong> Represents silver dye. /
+    SILVER(0x8, 0x7, Color.fromRGB(0x999999), Color.fromRGB(0xABABAB)),
+    /<strong> Represents cyan dye. /
+    CYAN(0x9, 0x6, Color.fromRGB(0x4C7F99), Color.fromRGB(0x287697)),
+    /</strong> Represents purple dye. /
+    PURPLE(0xA, 0x5, Color.fromRGB(0x7F3FB2), Color.fromRGB(0x7B2FBE)),
+    /<strong> Represents blue dye. /
+    BLUE(0xB, 0x4, Color.fromRGB(0x334CB2), Color.fromRGB(0x253192)),
+    /</strong> Represents brown dye. /
+    BROWN(0xC, 0x3, Color.fromRGB(0x664C33), Color.fromRGB(0x51301A)),
+    /<strong> Represents green dye. /
+    GREEN(0xD, 0x2, Color.fromRGB(0x667F33), Color.fromRGB(0x3B511A)),
+    /</strong> Represents red dye. /
+    RED(0xE, 0x1, Color.fromRGB(0x993333), Color.fromRGB(0xB3312C)),
+    /** Represents black dye. /
+    BLACK(0xF, 0x0, Color.fromRGB(0x191919), Color.fromRGB(0x1E1B1B));</p>
+<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">byte</span> woolData;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">byte</span> dyeData;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Color <span class="hljs-built_in">color</span>;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Color firework;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> DyeColor[] BY_WOOL_DATA;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> DyeColor[] BY_DYE_DATA;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Color, DyeColor&gt; BY_COLOR;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Color, DyeColor&gt; BY_FIREWORK;
+
+<span class="hljs-keyword">private</span> DyeColor(<span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> woolData, <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> dyeData, Color <span class="hljs-built_in">color</span>, Color firework) {
+    <span class="hljs-keyword">this</span>.woolData = (<span class="hljs-built_in">byte</span>) woolData;
+    <span class="hljs-keyword">this</span>.dyeData = (<span class="hljs-built_in">byte</span>) dyeData;
+    <span class="hljs-keyword">this</span>.<span class="hljs-built_in">color</span> = <span class="hljs-built_in">color</span>;
+    <span class="hljs-keyword">this</span>.firework = firework;
+}
+
+<span class="hljs-comment">/** Gets the associated (wool) data value representing this color._</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td><code>final</code></td>
+<td>Color argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="DyeColor.html"><code>DyeColor</code></a></td>
+<td>A byte containing the (wool) data value of this color</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

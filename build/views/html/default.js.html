@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         @{
+           if (model.item.meta.name != "0")
+              {    
+                 @:<title>WolfScript API @model.item.meta.name </title>
+              } else
+              {
+                @:<title>WolfScript API @model.item.meta.namespace </title>
+              }
+        }
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="@model.resource('css/docs.css')" rel="stylesheet" />
+  <link href="@model.resource('css/github.css')" rel="stylesheet" />
+  <link href="@model.resource('fonts/foundation-icons.css')" rel="stylesheet" />
+   <script src="@model.resource('js/vendor/modernizr.js')"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         @{
+                     var homeItem = undefined;
+                    Object.getOwnPropertyNames(model.panels).forEach(function(panelKey)
+                    {
+                      var panel=model.panels[panelKey];
+                      var category0 = panel.categories[Object.keys(panel.categories)[0]]; 
+                      var item0 = category0.items[Object.keys(category0.items)[0]]; 
+                      if (panel.panelLabel === 'Home')
+                          homeItem = item0;
+                       @:<li class='divider'></li>
+                       @:<li><a href='@model.link(item0.meta.qualifiedname) ' class=''>@panel.panelLabel </a></li>
+                         }); 
+
+                
+            }
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="@model.link("home.GettingStarted") " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+@{
+  if (model.currentPanel.panelLabel !== "Home")
+  {
+    @:<li><a href='@model.link(homeItem.meta.qualifiedname) '>Home </a></li>
+  }
+       var slug = model.item.meta.namespace.replace("io.wolfscript", "__ROOT__");
+     var catParent = undefined;
+    slug.split('.').forEach(function(slugbit) {
+      if (slugbit === "__ROOT__")
+        slugbit = "io.wolfscript";
+  
+      if (catParent)
+        catParent += "." + slugbit
+      else
+        catParent = slugbit;
+        
+        var categorySplit;
+  
+      if (catParent === model.currentPanel.panelSlug)
+        categorySplit = model.currentPanel.categories[Object.keys(model.currentPanel.categories)[0]]
+       else if (model.currentPanel.categories.hasOwnProperty(catParent))
+        categorySplit = model.currentPanel.categories[catParent]
+      else 
+         categorySplit = model.currentCategory;
+  
+       var item0 = categorySplit.items[Object.keys(categorySplit.items)[0]]; 
+   
+       @: <li><a href='@model.link(item0.meta.qualifiedname) '>@slugbit </a></li>
+
+    });
+    if (model.item.meta.name != "0")
+    {    
+       @:<li class='current'><a href='#'>@model.item.meta.name </a></li>
+    }
+  }
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  @{
+                    var lastParent = undefined;
+                    Object.getOwnPropertyNames(model.currentPanel.categories).sort().forEach(function(categoryKey) {
+                       var category = model.currentPanel.categories[categoryKey];
+
+                       var parent = category.categorySlug.replace(/(\w+\.\w+\.\w+\.\w+)\.(?:\w+\.)*\w+/, function(x, p1) {
+                       return p1;});
+                   
+                        var currentParent = model.currentCategory.categorySlug.replace(/(\w+\.\w+\.\w+\.\w+)\.(?:\w+\.)*\w+/, function(x, p1) {
+                       return p1;});
+
+                        var item0 = category.items[Object.keys(category.items)[0]]; 
+                         if (parent === currentParent || parent === category.categoryLabel || parent !== lastParent ) {   
+                           lastParent = parent;               
+                           @:<li class='heading'><a href='@model.link(item0.meta.qualifiedname) ' class=''>@category.categoryLabel </a></li> 
+                           if (category === model.currentCategory)
+                           {
+                          Object.getOwnPropertyNames(category.items).sort().forEach(function(itemKey) {
+                          var item=category.items[itemKey];
+                          if (item.meta.name !== ' ' && item.meta.name !== '0')
+                          {
+                            if (item === model.item) {
+                             @:<li class='active'><a href='@model.link(item.meta.qualifiedname) '>@item.meta.name </a></li>
+                             } else {
+                                @:<li><a href='@model.link(item.meta.qualifiedname) '>@item.meta.name </a></li>
+                             }
+                           }
+                        });}
+                                                 @:<li class='divider'></li>
+                                                 }
+                     });
+                   
+                    }
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            @{
+              @:@model.item.html
+            }
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="@model.resource('/js/vendor/jquery.js')"></script>
+    <script src="@model.resource('/js/vendor/fastclick.js')"></script>
+    <script src="@model.resource('/js/foundation.min.js')"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

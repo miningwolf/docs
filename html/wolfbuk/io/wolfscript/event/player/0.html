@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API wolfbuk.io.wolfscript.event.player</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\0.html'>player</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\block\0.html' class=''>event.block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\enchantment\0.html' class=''>event.enchantment</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\hanging\0.html' class=''>event.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\0.html' class=''>event.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\painting\0.html' class=''>event.painting</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\AsyncPlayerChatEvent.html'>AsyncPlayerChatEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAchievementAwardedEvent.html'>PlayerAchievementAwardedEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAnimationEvent.html'>PlayerAnimationEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAnimationType.html'>PlayerAnimationType</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerArmorStandManipulateEvent.html'>PlayerArmorStandManipulateEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBedEnterEvent.html'>PlayerBedEnterEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBedLeaveEvent.html'>PlayerBedLeaveEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketEmptyEvent.html'>PlayerBucketEmptyEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketEvent.html'>PlayerBucketEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketFillEvent.html'>PlayerBucketFillEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChangedWorldEvent.html'>PlayerChangedWorldEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChannelEvent.html'>PlayerChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChatEvent.html'>PlayerChatEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChatTabCompleteEvent.html'>PlayerChatTabCompleteEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerCommandPreprocessEvent.html'>PlayerCommandPreprocessEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerDropItemEvent.html'>PlayerDropItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEditBookEvent.html'>PlayerEditBookEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEggThrowEvent.html'>PlayerEggThrowEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEvent.html'>PlayerEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerExpChangeEvent.html'>PlayerExpChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerGameModeChangeEvent.html'>PlayerGameModeChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractAtEntityEvent.html'>PlayerInteractAtEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractEntityEvent.html'>PlayerInteractEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractEvent.html'>PlayerInteractEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInventoryEvent.html'>PlayerInventoryEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemBreakEvent.html'>PlayerItemBreakEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemConsumeEvent.html'>PlayerItemConsumeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemHeldEvent.html'>PlayerItemHeldEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerJoinEvent.html'>PlayerJoinEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerKickEvent.html'>PlayerKickEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerLevelChangeEvent.html'>PlayerLevelChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerMoveEvent.html'>PlayerMoveEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerPickupItemEvent.html'>PlayerPickupItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerPortalEvent.html'>PlayerPortalEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleSprintEvent.html'>PlayerToggleSprintEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerUnleashEntityEvent.html'>PlayerUnleashEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerUnregisterChannelEvent.html'>PlayerUnregisterChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerVelocityEvent.html'>PlayerVelocityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\Result.html'>Result</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\State.html'>State</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\server\0.html' class=''>event.server</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\vehicle\0.html' class=''>event.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\weather\0.html' class=''>event.weather</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="event-player-__classes-and-interfaces-__">EVENT.PLAYER <strong>Classes and Interfaces </strong></h2>
+<blockquote>
+<p>io.wolfscript.event.player</p>
+</blockquote>
+<hr>
+<p>{@link io.wolfscript.event.Event Events} relating to {@link io.wolfscript.entity.Player players}.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Description   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Classes</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="AsyncPlayerChatEvent.html"><code>AsyncPlayerChatEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event will sometimes fire synchronously, depending on how it was</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerAchievementAwardedEvent.html"><code>PlayerAchievementAwardedEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player earns an achievement.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerAnimationEvent.html"><code>PlayerAnimationEvent</code></a></strong></td>
+<td style="text-align:left"><em>Represents a player animation event</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerArmorStandManipulateEvent.html"><code>PlayerArmorStandManipulateEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player interacts with an armor stand and will either swap, retrieve or place an item.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerBedEnterEvent.html"><code>PlayerBedEnterEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event is fired when the player is almost about to enter the bed.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerBedLeaveEvent.html"><code>PlayerBedLeaveEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event is fired when the player is leaving a bed.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerBucketEmptyEvent.html"><code>PlayerBucketEmptyEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player empties a bucket</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerBucketEvent.html"><code>PlayerBucketEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player interacts with a Bucket</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerBucketFillEvent.html"><code>PlayerBucketFillEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player fills a bucket</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerChangedWorldEvent.html"><code>PlayerChangedWorldEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player switches to another world.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerChannelEvent.html"><code>PlayerChannelEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event is called after a player registers or unregisters a new plugin</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerChatTabCompleteEvent.html"><code>PlayerChatTabCompleteEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player attempts to tab-complete a chat message.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerCommandPreprocessEvent.html"><code>PlayerCommandPreprocessEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event is called whenever a player runs a command (by placing a slash</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerDropItemEvent.html"><code>PlayerDropItemEvent</code></a></strong></td>
+<td style="text-align:left"><em>Thrown when a player drops an item from their inventory</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerEditBookEvent.html"><code>PlayerEditBookEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player edits or signs a book and quill item. If the event is</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerEggThrowEvent.html"><code>PlayerEggThrowEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player throws an egg and it might hatch</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerEvent.html"><code>PlayerEvent</code></a></strong></td>
+<td style="text-align:left"><em>Represents a player related event</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerExpChangeEvent.html"><code>PlayerExpChangeEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a players experience changes naturally</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerGameModeChangeEvent.html"><code>PlayerGameModeChangeEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when the GameMode of the player is changed.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerInteractAtEntityEvent.html"><code>PlayerInteractAtEntityEvent</code></a></strong></td>
+<td style="text-align:left"><em>Represents an event that is called when a player right clicks an entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerInteractEntityEvent.html"><code>PlayerInteractEntityEvent</code></a></strong></td>
+<td style="text-align:left"><em>Represents an event that is called when a player right clicks an entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerInteractEvent.html"><code>PlayerInteractEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player interacts with an object or air.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerItemBreakEvent.html"><code>PlayerItemBreakEvent</code></a></strong></td>
+<td style="text-align:left"><em>Fired when a player&#39;s item breaks (such as a shovel or flint and steel).</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerItemConsumeEvent.html"><code>PlayerItemConsumeEvent</code></a></strong></td>
+<td style="text-align:left"><em>This event will fire when a player is finishing consuming an item (food,</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerItemHeldEvent.html"><code>PlayerItemHeldEvent</code></a></strong></td>
+<td style="text-align:left"><em>Fired when a player changes their currently held item</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerJoinEvent.html"><code>PlayerJoinEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player joins a server</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerKickEvent.html"><code>PlayerKickEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player gets kicked from the server</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerLevelChangeEvent.html"><code>PlayerLevelChangeEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a players level changes</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerMoveEvent.html"><code>PlayerMoveEvent</code></a></strong></td>
+<td style="text-align:left"><em>Holds information for player movement events</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerPickupItemEvent.html"><code>PlayerPickupItemEvent</code></a></strong></td>
+<td style="text-align:left"><em>Thrown when a player picks an item up from the ground</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerPortalEvent.html"><code>PlayerPortalEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player is about to teleport because it is in contact with a</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerQuitEvent.html"><code>PlayerQuitEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player leaves a server</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerRegisterChannelEvent.html"><code>PlayerRegisterChannelEvent</code></a></strong></td>
+<td style="text-align:left"><em>This is called immediately after a player registers for a plugin channel.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerRespawnEvent.html"><code>PlayerRespawnEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player respawns.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerShearEntityEvent.html"><code>PlayerShearEntityEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player shears an entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerStatisticIncrementEvent.html"><code>PlayerStatisticIncrementEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player statistic is incremented.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerTeleportEvent.html"><code>PlayerTeleportEvent</code></a></strong></td>
+<td style="text-align:left"><em>Holds information for player teleport events</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerToggleFlightEvent.html"><code>PlayerToggleFlightEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player toggles their flying state</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerToggleSneakEvent.html"><code>PlayerToggleSneakEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player toggles their sneaking state</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerToggleSprintEvent.html"><code>PlayerToggleSprintEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when a player toggles their sprinting state</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerUnleashEntityEvent.html"><code>PlayerUnleashEntityEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called prior to an entity being unleashed due to a player&#39;s action.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerUnregisterChannelEvent.html"><code>PlayerUnregisterChannelEvent</code></a></strong></td>
+<td style="text-align:left"><em>This is called immediately after a player unregisters for a plugin channel.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlayerVelocityEvent.html"><code>PlayerVelocityEvent</code></a></strong></td>
+<td style="text-align:left"><em>Called when the velocity of a player changes.</em> </td>
+</tr>
+<tr>
+<td><strong>Enums</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="PlayerAnimationType.html"><code>PlayerAnimationType</code></a></strong></td>
+<td style="text-align:left"><em>Different types of player animations</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Result.html"><code>Result</code></a></strong></td>
+<td style="text-align:left"><em>Stores details for players attempting to log in</em> </td>
+</tr>
+<tr>
+<td><strong><a href="State.html"><code>State</code></a></strong></td>
+<td style="text-align:left"><em>Thrown when a player is fishing</em> </td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

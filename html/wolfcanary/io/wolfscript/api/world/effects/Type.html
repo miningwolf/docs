@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API Type</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html'>api</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\0.html'>world</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\0.html'>effects</a></li>
+<li class='current'><a href='#'>Type</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\ai\0.html' class=''>api.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\attributes\0.html' class=''>api.attributes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\chat\0.html' class=''>api.chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\0.html' class=''>api.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\effect\0.html' class=''>api.entity.effect</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\hanging\0.html' class=''>api.entity.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\0.html' class=''>api.entity.living</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\animal\0.html' class=''>api.entity.living.animal</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\0.html' class=''>api.entity.living.humanoid</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\0.html' class=''>api.entity.living.humanoid.npc</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\ai\0.html' class=''>api.entity.living.humanoid.npc.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\0.html' class=''>api.entity.living.monster</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\throwable\0.html' class=''>api.entity.throwable</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\vehicle\0.html' class=''>api.entity.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\factory\0.html' class=''>api.factory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\gui\0.html' class=''>api.gui</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\0.html' class=''>api.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\helper\0.html' class=''>api.inventory.helper</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\recipes\0.html' class=''>api.inventory.recipes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\slot\0.html' class=''>api.inventory.slot</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\nbt\0.html' class=''>api.nbt</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\packet\0.html' class=''>api.packet</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\potion\0.html' class=''>api.potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\scoreboard\0.html' class=''>api.scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\statistics\0.html' class=''>api.statistics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\0.html' class=''>api.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\0.html' class=''>api.world.blocks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\0.html' class=''>api.world.blocks.properties</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\helpers\0.html' class=''>api.world.blocks.properties.helpers</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\0.html' class=''>api.world.effects</a></li> 
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\Particle.html'>Particle</a></li>
+<li class='active'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\Type.html'>Type</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\position\0.html' class=''>api.world.position</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="type-__enum__">Type <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.api.world.effects.Type</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>Sound Effects!</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMBIENCE<em>CAVE: &quot;ambient.cave.cave&quot;<br> _AMBIENCE_CAVE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>AMBIENCE<em>RAIN: &quot;ambient.weather.rain&quot;<br> _AMBIENCE_RAIN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>AMBIENCE<em>THUNDER: &quot;ambient.weather.thunder&quot;<br> _AMBIENCE_THUNDER Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ANVIL<em>BREAK: &quot;random.anvil_break&quot;<br> _ANVIL_BREAK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ANVIL<em>LAND: &quot;random.anvil_land&quot;<br> _ANVIL_LAND Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ANVIL<em>USE: &quot;random.anvil_use&quot;<br> _ANVIL_USE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BOW: &quot;random.bow&quot;<br> <em>BOW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BOW<em>HIT: &quot;random.bowhit&quot;<br> _BOW_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BREATH: &quot;random.breath&quot;<br> <em>BREATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BURP: &quot;random.burp&quot;<br> <em>BURP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHEST<em>CLOSED: &quot;random.chestclosed&quot;<br> _CHEST_CLOSED Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHEST<em>OPEN: &quot;random.chestopen&quot;<br> _CHEST_OPEN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CLICK: &quot;random.click&quot;<br> <em>CLICK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DOOR<em>CLOSE: &quot;random.door_close&quot;<br> _DOOR_CLOSE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DOOR<em>OPEN: &quot;random.door_open&quot;<br> _DOOR_OPEN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DRINK: &quot;random.drink&quot;<br> <em>DRINK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>EAT: &quot;random.eat&quot;<br> <em>EAT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>EXPLODE: &quot;random.explode&quot;<br> <em>EXPLODE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FALL<em>BIG: &quot;damage.fallbig&quot;<br> _FALL_BIG Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FALL<em>SMALL: &quot;damage.fallsmall&quot;<br> _FALL_SMALL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FIRE: &quot;fire.fire&quot;<br> <em>FIRE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FIRE<em>IGNITE: &quot;fire.ignite&quot;<br> _FIRE_IGNITE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FIZZ: &quot;random.fizz&quot;<br> <em>FIZZ Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>FUSE: &quot;random.fuse&quot;<br> <em>FUSE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GLASS: &quot;random.glass&quot;<br> <em>GLASS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>HURT: &quot;random.classic<em>hurt&quot;<br> _HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>HURT<em>FLESH: &quot;damage.hit&quot;<br> _HURT_FLESH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ITEM<em>BREAK: &quot;random.break&quot;<br> _ITEM_BREAK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ITEM<em>PICKUP: &quot;random.pop&quot;<br> _ITEM_PICKUP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>LAVA: &quot;liquid.lava&quot;<br> <em>LAVA Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>LAVA<em>POP: &quot;liquid.lavapop&quot;<br> _LAVA_POP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>LEVEL<em>UP: &quot;random.levelup&quot;<br> _LEVEL_UP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>LIQUID<em>SPLASH: &quot;liquid.splash&quot;<br> _LIQUID_SPLASH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>MINECART<em>BASE: &quot;minecart.base&quot;<br> _MINECART_BASE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>MINECART<em>INSIDE: &quot;minecart.inside&quot;<br> _MINECART_INSIDE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>BASS: &quot;note.bass&quot;<br> _NOTE_BASS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>PIANO: &quot;note.harp&quot;<br> _NOTE_PIANO Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>BASS_DRUM: &quot;note.bd&quot;<br> _NOTE_BASS_DRUM Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>HAT: &quot;note.hat&quot;<br> _NOTE_HAT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>BASS_ATTACK: &quot;note.bassattack&quot;<br> _NOTE_BASS_ATTACK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>SNARE: &quot;note.snare&quot;<br> _NOTE_SNARE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>NOTE<em>PLING: &quot;note.pling&quot;<br> _NOTE_PLING Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ORB: &quot;random.orb&quot;<br> <em>ORB Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PISTON<em>OUT: &quot;tile.piston.out&quot;<br> _PISTON_OUT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PISTON<em>IN: &quot;tile.piston.in&quot;<br> _PISTON_IN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PORTAL: &quot;portal.portal&quot;<br> <em>PORTAL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PORTAL<em>TRAVEL: &quot;portal.travel&quot;<br> _PORTAL_TRAVEL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PORTAL<em>TRIGGER: &quot;portal.trigger&quot;<br> _PORTAL_TRIGGER Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SPLASH: &quot;random.splash&quot;<br> <em>SPLASH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>GRASS: &quot;step.grass&quot;<br> _STEP_GRASS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>GRAVEL: &quot;step.gravel&quot;<br> _STEP_GRAVEL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>LADDER: &quot;step.ladder&quot;<br> _STEP_LADDER Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>SAND: &quot;step.sand&quot;<br> _STEP_SAND Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>SNOW: &quot;step.snow&quot;<br> _STEP_SNOW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>STONE: &quot;step.stone&quot;<br> _STEP_STONE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>WOOD: &quot;step.wood&quot;<br> _STEP_WOOD Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>STEP<em>WOOL: &quot;step.cloth&quot;<br> _STEP_WOOL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SWIM: &quot;liquid.swim&quot;<br> <em>SWIM Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WATER: &quot;liquid.water&quot;<br> <em>WATER Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BAT<em>DEATH: &quot;mob.bat.death&quot;<br> _BAT_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BAT<em>HURT: &quot;mob.bat.hurt&quot;<br> _BAT_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BAT<em>IDLE: &quot;mob.bat.idle&quot;<br> _BAT_IDLE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BAT<em>LOOP: &quot;mob.bat.loop&quot;<br> _BAT_LOOP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BAT<em>TAKEOFF: &quot;mob.bat.takeoff&quot;<br> _BAT_TAKEOFF Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BLAZE<em>BREATH: &quot;mob.blaze.breath&quot;<br> _BLAZE_BREATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BLAZE<em>DEATH: &quot;mob.blaze.death&quot;<br> _BLAZE_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>BLAZE<em>HIT: &quot;mob.blaze.hit&quot;<br> _BLAZE_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CAT<em>HISS: &quot;mob.cat.hiss&quot;<br> _CAT_HISS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CAT<em>HIT: &quot;mob.cat.hitt&quot;<br> _CAT_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CAT<em>MEOW: &quot;mob.cat.meow&quot;<br> _CAT_MEOW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CAT<em>PURR: &quot;mob.cat.purr&quot;<br> _CAT_PURR Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CAT<em>PURREOW: &quot;mob.cat.purreow&quot;<br> _CAT_PURREOW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHICKEN<em>HURT: &quot;mob.chicken.hurt&quot;<br> _CHICKEN_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHICKEN<em>PLOP: &quot;mob.chicken.plop&quot;<br> _CHICKEN_PLOP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHICKEN<em>SAY: &quot;mob.chicken.say&quot;<br> _CHICKEN_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CHICKEN<em>STEP: &quot;mob.chicken.step&quot;<br> _CHICKEN_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>COW<em>SAY: &quot;mob.cow.say&quot;<br> _COW_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>COW<em>HURT: &quot;mob.cow.hurt&quot;<br> _COW_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>COW<em>STEP: &quot;mob.cow.step&quot;<br> _COW_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CREEPER<em>DEATH: &quot;mob.creeper.death&quot;<br> _CREEPER_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>CREEPER<em>SAY: &quot;mob.creeper.say&quot;<br> _CREEPER_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERDRAGON<em>END: &quot;mob.enderdragon.end&quot;<br> _ENDERDRAGON_END Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERDRAGON<em>GROWL: &quot;mob.enderdragon.growl&quot;<br> _ENDERDRAGON_GROWL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERDRAGON<em>HIT: &quot;mob.enderdragon.hit&quot;<br> _ENDERDRAGON_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERDRAGON<em>WINGS: &quot;mob.enderdragon.wings&quot;<br> _ENDERDRAGON_WINGS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>DEATH: &quot;mob.endermen.death&quot;<br> _ENDERMAN_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>HIT: &quot;mob.endermen.hit&quot;<br> _ENDERMAN_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>IDLE: &quot;mob.endermen.idle&quot;<br> _ENDERMAN_IDLE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>PORTAL: &quot;mob.endermen.portal&quot;<br> _ENDERMAN_PORTAL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>SCREAM: &quot;mob.endermen.scream&quot;<br> _ENDERMAN_SCREAM Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ENDERMAN<em>STARE: &quot;mob.endermen.stare&quot;<br> _ENDERMAN_STARE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GHAST<em>SCREAM: &quot;mob.ghast.scream&quot;<br> _GHAST_SCREAM Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GHAST<em>CHARGE: &quot;mob.ghast.charge&quot;<br> _GHAST_CHARGE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GHAST<em>DEATH: &quot;mob.ghast.death&quot;<br> _GHAST_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GHAST<em>FIREBALL: &quot;mob.ghast.fireball&quot;<br> _GHAST_FIREBALL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>GHAST<em>MOAN: &quot;mob.ghast.moan&quot;<br> _GHAST_MOAN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>IRONGOLEM<em>DEATH: &quot;mob.irongolem.death&quot;<br> _IRONGOLEM_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>IRONGOLEM<em>HIT: &quot;mob.irongolem.hit&quot;<br> _IRONGOLEM_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>IRONGOLEM<em>THROW: &quot;mob.irongolem.throw&quot;<br> _IRONGOLEM_THROW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>IRONGOLEM<em>WALK: &quot;mob.irongolem.walk&quot;<br> _IRONGOLEM_WALK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>MAGMACUBE<em>BIG: &quot;mob.magmacube.big&quot;<br> _MAGMACUBE_BIG Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>MAGMACUBE<em>JUMP: &quot;mob.magmacube.jump&quot;<br> _MAGMACUBE_JUMP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>MAGMACUBE<em>SMALL: &quot;mob.magmacube.small&quot;<br> _MAGMACUBE_SMALL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PIG<em>DEATH: &quot;mob.pig.death&quot;<br> _PIG_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PIG<em>SAY: &quot;mob.pig.say&quot;<br> _PIG_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>PIG<em>STEP: &quot;mob.pig.step&quot;<br> _PIG_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SHEEP<em>SAY: &quot;mob.sheep.say&quot;<br> _SHEEP_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SHEEP<em>SHEAR: &quot;mob.sheep.shear&quot;<br> _SHEEP_SHEAR Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SHEEP<em>STEP: &quot;mob.sheep.step&quot;<br> _SHEEP_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SILVERFISH<em>HIT: &quot;mob.silverfish.hit&quot;<br> _SILVERFISH_HIT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SILVERFISH<em>KIL: &quot;mob.silverfish.kill&quot;<br> _SILVERFISH_KIL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SILVERFISH<em>SAY: &quot;mob.silverfish.say&quot;<br> _SILVERFISH_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SILVERFISH<em>STEP: &quot;mob.silverfish.step&quot;<br> _SILVERFISH_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SKELETON<em>DEATH: &quot;mob.skeleton.death&quot;<br> _SKELETON_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SKELETON<em>HURT: &quot;mob.skeleton.hurt&quot;<br> _SKELETON_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SKELETON<em>SAY: &quot;mob.skeleton.say&quot;<br> _SKELETON_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SKELETON<em>STEP: &quot;mob.skeleton.step&quot;<br> _SKELETON_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SLIME<em>ATTACK: &quot;mob.slime.attack&quot;<br> _SLIME_ATTACK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SLIME<em>BIG: &quot;mob.slime.big&quot;<br> _SLIME_BIG Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SLIME<em>SMALL: &quot;mob.slime.small&quot;<br> _SLIME_SMALL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SPIDER<em>DEATH: &quot;mob.spider.death&quot;<br> _SPIDER_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SPIDER<em>SAY: &quot;mob.spider.say&quot;<br> _SPIDER_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>SPIDER<em>STEP: &quot;mob.spider.step&quot;<br> _SPIDER_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WITHER<em>DEATH: &quot;mob.wither.death&quot;<br> _WITHER_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WITHER<em>HURT: &quot;mob.wither.hurt&quot;<br> _WITHER_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WITHER<em>IDLE: &quot;mob.wither.idle&quot;<br> _WITHER_IDLE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WITHER<em>SHOOT: &quot;mob.wither.shoot&quot;<br> _WITHER_SHOOT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WITHER<em>SPAWN: &quot;mob.wither.spawn&quot;<br> _WITHER_SPAWN Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>BARK: &quot;mob.wolf.bark&quot;<br> _WOLF_BARK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>DEATH: &quot;mob.wolf.death&quot;<br> _WOLF_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>GROWL: &quot;mob.wolf.growl&quot;<br> _WOLF_GROWL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>HOWL: &quot;mob.wolf.howl&quot;<br> _WOLF_HOWL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>HURT: &quot;mob.wolf.hurt&quot;<br> _WOLF_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>PANT: &quot;mob.wolf.panting&quot;<br> _WOLF_PANT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>SHAKE: &quot;mob.wolf.shake&quot;<br> _WOLF_SHAKE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>STEP: &quot;mob.wolf.step&quot;<br> _WOLF_STEP Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>WOLF<em>WHINE: &quot;mob.wolf.whine&quot;<br> _WOLF_WHINE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>METAL: &quot;mob.zombie.metal&quot;<br> _ZOMBIE_METAL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>WOOD: &quot;mob.zombie.wood&quot;<br> _ZOMBIE_WOOD Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>WOODBREAK: &quot;mob.zombie.woodbreak&quot;<br> _ZOMBIE_WOODBREAK Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>SAY: &quot;mob.zombie.say&quot;<br> _ZOMBIE_SAY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>DEATH: &quot;mob.zombie.death&quot;<br> _ZOMBIE_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>HURT: &quot;mob.zombie.hurt&quot;<br> _ZOMBIE_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>INFECT: &quot;mob.zombie.infect&quot;<br> _ZOMBIE_INFECT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>UNFECT: &quot;mob.zombie.unfect&quot;<br> _ZOMBIE_UNFECT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>REMEDY: &quot;mob.zombie.remedy&quot;<br> _ZOMBIE_REMEDY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>PIG_IDLE: &quot;mob.zombiepig.zpig&quot;<br> _ZOMBIE_PIG_IDLE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>PIG_ANGRY: &quot;mob.zombiepig.zpigangry&quot;<br> _ZOMBIE_PIG_ANGRY Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>PIG_DEATH: &quot;mob.zombiepig.zpigdeath&quot;<br> _ZOMBIE_PIG_DEATH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>ZOMBIE<em>PIG_HURT: &quot;mob.zombiepig.zpighurt&quot;<br> _ZOMBIE_PIG_HURT Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>CLOTH: &quot;dig.cloth&quot;<br> _DIG_CLOTH Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>GRASS: &quot;dig.grass&quot;<br> _DIG_GRASS Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>GRAVEL: &quot;dig.gravel&quot;<br> _DIG_GRAVEL Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>SAND: &quot;dig.sand&quot;<br> _DIG_SAND Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>SNOW: &quot;dig.snow&quot;<br> _DIG_SNOW Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>STONE: &quot;dig.stone&quot;<br> _DIG_STONE Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td>DIG<em>WOOD: &quot;dig.wood&quot;<br> _DIG_WOOD Type</em></td>
+<td style="text-align:left">Type</td>
+</tr>
+<tr>
+<td> readonly property <strong>McName</strong> <br> <em>McName property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-type-type-md-">Public Properties for <a href="Type.html"><code>Type</code></a></h3>
+<h5 id="-a-id-mcname-a-public-readonly-property-__mcname__"><a id='mcname'></a>public  readonly property <strong>McName</strong></h5>
+<p><em>McName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

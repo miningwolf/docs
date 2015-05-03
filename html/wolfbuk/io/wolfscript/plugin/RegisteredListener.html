@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API RegisteredListener</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html'>plugin</a></li>
+<li class='current'><a href='#'>RegisteredListener</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\AuthorNagException.html'>AuthorNagException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\EventExecutor.html'>EventExecutor</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\Flags.html'>Flags</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\InvalidPluginException.html'>InvalidPluginException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\Plugin.html'>Plugin</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginBase.html'>PluginBase</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginDescriptionFile.html'>PluginDescriptionFile</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLoadOrder.html'>PluginLoadOrder</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLoader.html'>PluginLoader</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLogger.html'>PluginLogger</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginManager.html'>PluginManager</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\RegisteredListener.html'>RegisteredListener</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\RegisteredServiceProvider.html'>RegisteredServiceProvider</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\ServicePriority.html'>ServicePriority</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\ServicesManager.html'>ServicesManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\SimplePluginManager.html'>SimplePluginManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\SimpleServicesManager.html'>SimpleServicesManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\TimedRegisteredListener.html'>TimedRegisteredListener</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\UnknownDependencyException.html'>UnknownDependencyException</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\java\0.html' class=''>plugin.java</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\0.html' class=''>plugin.messaging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="registeredlistener-__class__">RegisteredListener <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.plugin.RegisteredListener</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Stores relevant information for plugin listeners</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>RegisteredListener</strong>(Listener, EventExecutor, EventPriority, Plugin, boolean) <br> <em>RegisteredListener constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>isIgnoringCancelled</strong>() <br> <em>Gets the listener for this registration</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-registeredlistener-registeredlistener-md-">Public Constructors for <a href="RegisteredListener.html"><code>RegisteredListener</code></a></h3>
+<h5 id="-a-id-registeredlistener-a-new-__registeredlistener__-listener-eventexecutor-eventpriority-plugin-boolean-"><a id='registeredlistener'></a>new <strong>RegisteredListener</strong>(Listener, EventExecutor, EventPriority, Plugin, boolean)</h5>
+<p><em>RegisteredListener constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Listener</td>
+<td><code>final</code></td>
+<td>Listener argument</td>
+</tr>
+<tr>
+<td>EventExecutor</td>
+<td><code>final</code></td>
+<td>EventExecutor argument</td>
+</tr>
+<tr>
+<td>EventPriority</td>
+<td><code>final</code></td>
+<td>EventPriority argument</td>
+</tr>
+<tr>
+<td>Plugin</td>
+<td><code>final</code></td>
+<td>Plugin argument</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td><code>final</code></td>
+<td>boolean argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-registeredlistener-registeredlistener-md-">Public Methods for <a href="RegisteredListener.html"><code>RegisteredListener</code></a></h3>
+<h5 id="-a-id-isignoringcancelled-a-public-function-__isignoringcancelled__-"><a id='isignoringcancelled'></a>public  function <strong>isIgnoringCancelled</strong>()</h5>
+<p><em>Gets the listener for this registration</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>Registered Listener /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">public</span> Listener <span class="hljs-title">getListener</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> listener;
+}
+
+<span class="hljs-comment">/** Gets the plugin for this registration</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

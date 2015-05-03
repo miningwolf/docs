@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ConversationFactory</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html'>conversations</a></li>
+<li class='current'><a href='#'>ConversationFactory</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\Conversable.html'>Conversable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\Conversation.html'>Conversation</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationAbandonedEvent.html'>ConversationAbandonedEvent</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationAbandonedListener.html'>ConversationAbandonedListener</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationCanceller.html'>ConversationCanceller</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationContext.html'>ConversationContext</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationFactory.html'>ConversationFactory</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ConversationPrefix.html'>ConversationPrefix</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ExactMatchConversationCanceller.html'>ExactMatchConversationCanceller</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\FixedSetPrompt.html'>FixedSetPrompt</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\InactivityConversationCanceller.html'>InactivityConversationCanceller</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\PluginNameConversationPrefix.html'>PluginNameConversationPrefix</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\Prompt.html'>Prompt</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\RegexPrompt.html'>RegexPrompt</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\ValidatingPrompt.html'>ValidatingPrompt</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="conversationfactory-__class__">ConversationFactory <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.conversations.ConversationFactory</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>A ConversationFactory is responsible for creating a <a href="Conversation.html"><code>Conversation</code></a> from a predefined template. A ConversationFactory is typically created when a plugin is instantiated and builds a Conversation each time a user initiates a conversation with the plugin. Each Conversation maintains its own state and calls back as needed into the plugin. <p> The ConversationFactory implements a fluid API, allowing parameters to be set as an extension to the constructor.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>buildConversation</strong>(forWhom) <br> <em>Constructs a ConversationFactory.</em></td>
+<td style="text-align:left"><a href="Conversation.html"><code>Conversation</code></a></td>
+</tr>
+<tr>
+<td> function <strong>getPromptText</strong>(context) <br> <em>getPromptText method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-conversationfactory-conversationfactory-md-">Public Methods for <a href="ConversationFactory.html"><code>ConversationFactory</code></a></h3>
+<h5 id="-a-id-buildconversation-a-public-function-__buildconversation__-forwhom-"><a id='buildconversation'></a>public  function <strong>buildConversation</strong>(forWhom)</h5>
+<p><em>Constructs a ConversationFactory.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forWhom</td>
+<td><a href="Conversable.html"><code>Conversable</code></a></td>
+<td>The entity for whom the new conversation is mediating.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Conversation.html"><code>Conversation</code></a></td>
+<td>This object. /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public ConversationFactory withModality(boolean modal)
+{
+    isModal = modal;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+
+<span class="hljs-dartdoc"><span class="markdown">/** Sets the local echo status for all [<span class="hljs-link_label">`Conversation`</span>](<span class="hljs-link_url">Conversation.md</span>)s created by this factory. If local echo is enabled, any text submitted to a conversation gets echoed back into the submitter's chat window.</span></span>
+</code></pre><h5 id="-a-id-getprompttext-a-public-function-__getprompttext__-context-"><a id='getprompttext'></a>public  function <strong>getPromptText</strong>(context)</h5>
+<p><em>getPromptText method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td><a href="ConversationContext.html"><code>ConversationContext</code></a></td>
+<td>context argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

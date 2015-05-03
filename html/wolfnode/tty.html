@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API tty</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>tty</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li><a href='..\wolfnode\assert.html'>assert</a></li>
+<li><a href='..\wolfnode\child_process.html'>child_process</a></li>
+<li><a href='..\wolfnode\cluster.html'>cluster</a></li>
+<li><a href='..\wolfnode\debugger.html'>debugger</a></li>
+<li><a href='..\wolfnode\domain.html'>domain</a></li>
+<li><a href='..\wolfnode\os.html'>os</a></li>
+<li><a href='..\wolfnode\punycode.html'>punycode</a></li>
+<li><a href='..\wolfnode\readline.html'>readline</a></li>
+<li><a href='..\wolfnode\repl.html'>repl</a></li>
+<li><a href='..\wolfnode\smalloc.html'>smalloc</a></li>
+<li><a href='..\wolfnode\string_decoder.html'>string_decoder</a></li>
+<li class='active'><a href='..\wolfnode\tty.html'>tty</a></li>
+<li><a href='..\wolfnode\vm.html'>vm</a></li>
+<li><a href='..\wolfnode\zlib.html'>zlib</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="tty">TTY</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Unstable</span>
+</code></pre><p>The <code>tty</code> module houses the <code>tty.ReadStream</code> and <code>tty.WriteStream</code> classes. In
+most cases, you will not need to use this module directly.</p>
+<p>When node detects that it is being run inside a TTY context, then <code>process.stdin</code>
+will be a <code>tty.ReadStream</code> instance and <code>process.stdout</code> will be
+a <code>tty.WriteStream</code> instance. The preferred way to check if node is being run in
+a TTY context is to check <code>process.stdout.isTTY</code>:</p>
+<pre><code>$ node -p <span class="hljs-operator">-e</span> <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span>
+<span class="hljs-literal">true</span>
+$ node -p <span class="hljs-operator">-e</span> <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span> | cat
+<span class="hljs-literal">false</span>
+</code></pre><h2 id="tty-isatty-fd-">tty.isatty(fd)</h2>
+<p>Returns <code>true</code> or <code>false</code> depending on if the <code>fd</code> is associated with a
+terminal.</p>
+<h2 id="tty-setrawmode-mode-">tty.setRawMode(mode)</h2>
+<p>Deprecated. Use <code>tty.ReadStream#setRawMode()</code>
+(i.e. <code>process.stdin.setRawMode()</code>) instead.</p>
+<h2 id="class-readstream">Class: ReadStream</h2>
+<p>A <code>net.Socket</code> subclass that represents the readable portion of a tty. In normal
+circumstances, <code>process.stdin</code> will be the only <code>tty.ReadStream</code> instance in any
+node program (only when <code>isatty(0)</code> is true).</p>
+<h3 id="rs-israw">rs.isRaw</h3>
+<p>A <code>Boolean</code> that is initialized to <code>false</code>. It represents the current &quot;raw&quot; state
+of the <code>tty.ReadStream</code> instance.</p>
+<h3 id="rs-setrawmode-mode-">rs.setRawMode(mode)</h3>
+<p><code>mode</code> should be <code>true</code> or <code>false</code>. This sets the properties of the
+<code>tty.ReadStream</code> to act either as a raw device or default. <code>isRaw</code> will be set
+to the resulting mode.</p>
+<h2 id="class-writestream">Class: WriteStream</h2>
+<p>A <code>net.Socket</code> subclass that represents the writable portion of a tty. In normal
+circumstances, <code>process.stdout</code> will be the only <code>tty.WriteStream</code> instance
+ever created (and only when <code>isatty(1)</code> is true).</p>
+<h3 id="ws-columns">ws.columns</h3>
+<p>A <code>Number</code> that gives the number of columns the TTY currently has. This property
+gets updated on &quot;resize&quot; events.</p>
+<h3 id="ws-rows">ws.rows</h3>
+<p>A <code>Number</code> that gives the number of rows the TTY currently has. This property
+gets updated on &quot;resize&quot; events.</p>
+<h3 id="event-resize-">Event: &#39;resize&#39;</h3>
+<p><code>function () {}</code></p>
+<p>Emitted by <code>refreshSize()</code> when either of the <code>columns</code> or <code>rows</code> properties
+has changed.</p>
+<pre><code>process.stdout.on(<span class="hljs-string">'resize'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'screen size has changed!'</span>);
+  <span class="hljs-built_in">console</span>.log(process.stdout.columns + <span class="hljs-string">'x'</span> + process.stdout.rows);
+});
+</code></pre>
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

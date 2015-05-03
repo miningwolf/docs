@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API LightningStrike</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\0.html'>world</a></li>
+<li class='current'><a href='#'>LightningStrike</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\system\0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\ActivationCause.html'>ActivationCause</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\BlockDropXp.html'>BlockDropXp</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\BlockGrow.html'>BlockGrow</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\BlockPhysics.html'>BlockPhysics</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\BlockUpdate.html'>BlockUpdate</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\ChunkCreated.html'>ChunkCreated</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\ChunkCreation.html'>ChunkCreation</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\ChunkLoaded.html'>ChunkLoaded</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\ChunkUnload.html'>ChunkUnload</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\Decorate.html'>Decorate</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\Dispense.html'>Dispense</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\Explosion.html'>Explosion</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\FireworkExplode.html'>FireworkExplode</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\Flow.html'>Flow</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\HopperTransfer.html'>HopperTransfer</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\IgnitionCause.html'>IgnitionCause</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\LeafDecay.html'>LeafDecay</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\LightningStrike.html'>LightningStrike</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\LiquidDestroy.html'>LiquidDestroy</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\NoteBlockPlay.html'>NoteBlockPlay</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\PistonExtend.html'>PistonExtend</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\PistonRetract.html'>PistonRetract</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\PortalCreate.html'>PortalCreate</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\PortalDestroy.html'>PortalDestroy</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\RedstoneChange.html'>RedstoneChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\Smelt.html'>Smelt</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\SmeltBegin.html'>SmeltBegin</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\TimeChange.html'>TimeChange</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\TreeGrow.html'>TreeGrow</a></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\event\world\WeatherChange.html'>WeatherChange</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="lightningstrike-__class__">LightningStrike <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.world.LightningStrike
+Extends <a href="..\..\hook\Hook.html"><code>Hook</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>LightningStrike <p/> Called when a <a href="..\..\api\entity\effect\LightningBolt.html"><code>LightningBolt</code></a> strikes</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>final function <strong>toString</strong>() <br> <em>Creates a new LightningStrike</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> var <strong>lightbolt</strong> <br> <em>lightbolt field</em></td>
+<td style="text-align:left"><a href="..\..\api\entity\effect\LightningBolt.html"><code>LightningBolt</code></a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="..\..\hook\Hook.html"><code>Hook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Get the name of this hook.</em></td>
+<td style="text-align:left"><a href="..\..\hook\Hook.html"><code>Hook</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-lightningstrike-lightningstrike-md-">Public Methods for <a href="LightningStrike.html"><code>LightningStrike</code></a></h3>
+<h5 id="-a-id-tostring-a-public-final-function-__tostring__-"><a id='tostring'></a>public final function <strong>toString</strong>()</h5>
+<p><em>Creates a new LightningStrike</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>the striking <a href="..\..\api\entity\effect\LightningBolt.html"><code>LightningBolt</code></a> /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-function">LightningBolt <span class="hljs-title">getLightningBolt</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> lightbolt;
+}
+
+<span class="hljs-javadoc">/** {@inheritDoc}</span>
+</code></pre><hr>
+<h3 id="public-fields-for-lightningstrike-lightningstrike-md-">Public Fields for <a href="LightningStrike.html"><code>LightningStrike</code></a></h3>
+<h5 id="-a-id-lightbolt-a-public-var-__lightbolt__"><a id='lightbolt'></a>public  var <strong>lightbolt</strong></h5>
+<p><em>lightbolt field</em></p>
+<blockquote>
+<p>Returns
+ <a href="..\..\api\entity\effect\LightningBolt.html"><code>LightningBolt</code></a></p>
+</blockquote>
+<hr>
+<h3 id="public-methods-for-hook-hook-hook-md-">Public Methods for <a href="..\..\hook\Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Get the name of this hook.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\..\hook\Hook.html"><code>Hook</code></a></td>
+<td>simple class name /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public final <span class="hljs-type">String</span> getHookName<span class="hljs-literal">()</span> {
+    return getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>;
+}
+
+@<span class="hljs-type">Override</span>
+public <span class="hljs-built_in">int</span> hashCode<span class="hljs-literal">()</span> {
+    <span class="hljs-built_in">int</span> hash = getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>.length<span class="hljs-literal">()</span>;
+
+    return hash getClass<span class="hljs-literal">()</span>.getSimpleName<span class="hljs-literal">()</span>.hashCode<span class="hljs-literal">()</span> + <span class="hljs-number">2</span>;
+}
+
+/** <span class="hljs-type">Calls</span> a <span class="hljs-type">Hook</span> <span class="hljs-keyword">if</span> not already executed
+</code></pre><hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

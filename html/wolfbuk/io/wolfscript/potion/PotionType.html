@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PotionType</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html'>potion</a></li>
+<li class='current'><a href='#'>PotionType</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\Potion.html'>Potion</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\PotionBrewer.html'>PotionBrewer</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\PotionEffect.html'>PotionEffect</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\PotionEffectType.html'>PotionEffectType</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\PotionType.html'>PotionType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="potiontype-__enum__">PotionType <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.potion.PotionType</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>enum PotionType</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0: <br> <em>0 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>null: <br> <em>null PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>1: <br> <em>1 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.REGENERATION: <br> <em>PotionEffectType.REGENERATION PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>2: <br> <em>2 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.SPEED: <br> <em>PotionEffectType.SPEED PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>3: <br> <em>3 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.FIRE<em>RESISTANCE: <br> _PotionEffectType.FIRE_RESISTANCE PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>4: <br> <em>4 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.POISON: <br> <em>PotionEffectType.POISON PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>5: <br> <em>5 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.HEAL: <br> <em>PotionEffectType.HEAL PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>6: <br> <em>6 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.NIGHT<em>VISION: <br> _PotionEffectType.NIGHT_VISION PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>8: <br> <em>8 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.WEAKNESS: <br> <em>PotionEffectType.WEAKNESS PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>9: <br> <em>9 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.INCREASE<em>DAMAGE: <br> _PotionEffectType.INCREASE_DAMAGE PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>10: <br> <em>10 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.SLOW: <br> <em>PotionEffectType.SLOW PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>11: <br> <em>11 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.JUMP: <br> <em>PotionEffectType.JUMP PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>12: <br> <em>12 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.HARM: <br> <em>PotionEffectType.HARM PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>13: <br> <em>13 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.WATER<em>BREATHING: <br> _PotionEffectType.WATER_BREATHING PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>14: <br> <em>14 PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td>PotionEffectType.INVISIBILITY: <br> <em>PotionEffectType.INVISIBILITY PotionType</em></td>
+<td style="text-align:left">PotionType</td>
+</tr>
+<tr>
+<td> readonly property <strong>EffectType</strong> <br> <em>EffectType property</em></td>
+<td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+</tr>
+<tr>
+<td>static function <strong>getByEffect</strong>(effectType) <br> <em>getByEffect method</em></td>
+<td style="text-align:left"><a href="PotionType.html"><code>PotionType</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-potiontype-potiontype-md-">Public Properties for <a href="PotionType.html"><code>PotionType</code></a></h3>
+<h5 id="-a-id-effecttype-a-public-readonly-property-__effecttype__"><a id='effecttype'></a>public  readonly property <strong>EffectType</strong></h5>
+<p><em>EffectType property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-potiontype-potiontype-md-">Public Methods for <a href="PotionType.html"><code>PotionType</code></a></h3>
+<h5 id="-a-id-getbydamagevalue-a-public-static-function-__getbydamagevalue__-damage-"><a id='getbydamagevalue'></a>public static function <strong>getByDamageValue</strong>(damage)</h5>
+<p>_Deprecated: Magic value /
+    @Deprecated
+    public int getDamageValue() {
+        return damageValue;
+    }</p>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getMaxLevel</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> maxLevel;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isInstant</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> effect == <span class="hljs-keyword">null</span> ? <span class="hljs-keyword">true</span> : effect.isInstant();
+}
+
+<span class="hljs-javadoc">/** Magic value_</span>
+</code></pre><p><em>getByDamageValue method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>damage</td>
+<td><code>int</code></td>
+<td>the damage value</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td>the damage value</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getbyeffect-a-public-static-function-__getbyeffect__-effecttype-"><a id='getbyeffect'></a>public static function <strong>getByEffect</strong>(effectType)</h5>
+<p><em>getByEffect method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>effectType</td>
+<td><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+<td>effectType argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

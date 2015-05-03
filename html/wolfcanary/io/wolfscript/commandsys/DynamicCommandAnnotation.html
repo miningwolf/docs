@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API DynamicCommandAnnotation</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html'>commandsys</a></li>
+<li class='current'><a href='#'>DynamicCommandAnnotation</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandDependencyException.html'>CommandDependencyException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandException.html'>CommandException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandList.html'>CommandList</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandListener.html'>CommandListener</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandManager.html'>CommandManager</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandOwner.html'>CommandOwner</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DuplicateCommandException.html'>DuplicateCommandException</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DynamicCommandAnnotation.html'>DynamicCommandAnnotation</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DynamicTabCompleteAnnotation.html'>DynamicTabCompleteAnnotation</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\NativeCommand.html'>NativeCommand</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\PlayerSelector.html'>PlayerSelector</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteDispatch.html'>TabCompleteDispatch</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteException.html'>TabCompleteException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteHelper.html'>TabCompleteHelper</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\WolfCommand.html'>WolfCommand</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\WolfCommandPermissions.html'>WolfCommandPermissions</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\groupmod\0.html' class=''>commandsys.commands.groupmod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\player\0.html' class=''>commandsys.commands.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\playermod\0.html' class=''>commandsys.commands.playermod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\0.html' class=''>commandsys.commands.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\bans\0.html' class=''>commandsys.commands.system.bans</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\informational\0.html' class=''>commandsys.commands.system.informational</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\kits\0.html' class=''>commandsys.commands.system.kits</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\operator\0.html' class=''>commandsys.commands.system.operator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\reservelist\0.html' class=''>commandsys.commands.system.reservelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\whitelist\0.html' class=''>commandsys.commands.system.whitelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\0.html' class=''>commandsys.commands.vanilla</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\warp\0.html' class=''>commandsys.commands.warp</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\world\0.html' class=''>commandsys.commands.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="dynamiccommandannotation-__class__">DynamicCommandAnnotation <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.commandsys.DynamicCommandAnnotation
+Implements <code>Command</code></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>A fake Command annotation, used by the non-java based command system</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>DynamicCommandAnnotation</strong>(description, toolTip, parent, helpLookup, min, max, tabCompleteMethod, version) <br> <em>DynamicCommandAnnotation constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>aliases</strong>() <br> <em>aliases method</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> function <strong>description</strong>() <br> <em>description method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>helpLookup</strong>() <br> <em>helpLookup method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>max</strong>() <br> <em>max method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>min</strong>() <br> <em>min method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>parent</strong>() <br> <em>parent method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>permissions</strong>() <br> <em>permissions method</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> function <strong>searchTerms</strong>() <br> <em>searchTerms method</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> function <strong>toolTip</strong>() <br> <em>toolTip method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>version</strong>() <br> <em>version method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-dynamiccommandannotation-dynamiccommandannotation-md-">Public Constructors for <a href="DynamicCommandAnnotation.html"><code>DynamicCommandAnnotation</code></a></h3>
+<h5 id="-a-id-dynamiccommandannotation-a-new-__dynamiccommandannotation__-description-tooltip-parent-helplookup-min-max-tabcompletemethod-version-"><a id='dynamiccommandannotation'></a>new <strong>DynamicCommandAnnotation</strong>(description, toolTip, parent, helpLookup, min, max, tabCompleteMethod, version)</h5>
+<p><em>DynamicCommandAnnotation constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description</td>
+<td><code>String</code></td>
+<td>description argument</td>
+</tr>
+<tr>
+<td>toolTip</td>
+<td><code>String</code></td>
+<td>toolTip argument</td>
+</tr>
+<tr>
+<td>parent</td>
+<td><code>String</code></td>
+<td>parent argument</td>
+</tr>
+<tr>
+<td>helpLookup</td>
+<td><code>String</code></td>
+<td>helpLookup argument</td>
+</tr>
+<tr>
+<td>min</td>
+<td><code>int</code></td>
+<td>min argument</td>
+</tr>
+<tr>
+<td>max</td>
+<td><code>int</code></td>
+<td>max argument</td>
+</tr>
+<tr>
+<td>tabCompleteMethod</td>
+<td><code>String</code></td>
+<td>tabCompleteMethod argument</td>
+</tr>
+<tr>
+<td>version</td>
+<td><code>int</code></td>
+<td>version argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-dynamiccommandannotation-dynamiccommandannotation-md-">Public Methods for <a href="DynamicCommandAnnotation.html"><code>DynamicCommandAnnotation</code></a></h3>
+<h5 id="-a-id-aliases-a-public-function-__aliases__-"><a id='aliases'></a>public  function <strong>aliases</strong>()</h5>
+<p><em>aliases method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-description-a-public-function-__description__-"><a id='description'></a>public  function <strong>description</strong>()</h5>
+<p><em>description method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-helplookup-a-public-function-__helplookup__-"><a id='helplookup'></a>public  function <strong>helpLookup</strong>()</h5>
+<p><em>helpLookup method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-max-a-public-function-__max__-"><a id='max'></a>public  function <strong>max</strong>()</h5>
+<p><em>max method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-min-a-public-function-__min__-"><a id='min'></a>public  function <strong>min</strong>()</h5>
+<p><em>min method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-parent-a-public-function-__parent__-"><a id='parent'></a>public  function <strong>parent</strong>()</h5>
+<p><em>parent method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-permissions-a-public-function-__permissions__-"><a id='permissions'></a>public  function <strong>permissions</strong>()</h5>
+<p><em>permissions method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-searchterms-a-public-function-__searchterms__-"><a id='searchterms'></a>public  function <strong>searchTerms</strong>()</h5>
+<p><em>searchTerms method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tooltip-a-public-function-__tooltip__-"><a id='tooltip'></a>public  function <strong>toolTip</strong>()</h5>
+<p><em>toolTip method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-version-a-public-function-__version__-"><a id='version'></a>public  function <strong>version</strong>()</h5>
+<p><em>version method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

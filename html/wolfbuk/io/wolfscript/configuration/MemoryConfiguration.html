@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API MemoryConfiguration</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html'>configuration</a></li>
+<li class='current'><a href='#'>MemoryConfiguration</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\Configuration.html'>Configuration</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\ConfigurationOptions.html'>ConfigurationOptions</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\ConfigurationSection.html'>ConfigurationSection</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\InvalidConfigurationException.html'>InvalidConfigurationException</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\MemoryConfiguration.html'>MemoryConfiguration</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\MemoryConfigurationOptions.html'>MemoryConfigurationOptions</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\MemorySection.html'>MemorySection</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\file\0.html' class=''>configuration.file</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\serialization\0.html' class=''>configuration.serialization</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="memoryconfiguration-__class__">MemoryConfiguration <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.configuration.MemoryConfiguration
+Extends <a href="MemorySection.html"><code>MemorySection</code></a>
+Implements <a href="Configuration.html"><code>Configuration</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>This is a <a href="Configuration.html"><code>Configuration</code></a> implementation that does not save or load from any source, and stores all values in memory only. This is useful for temporary Configurations for providing defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>MemoryConfiguration</strong>(defaults) <br> <em>Creates an empty <a href="MemoryConfiguration.html"><code>MemoryConfiguration</code></a> with no default values.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>  property <strong>Defaults</strong> <br> <em>Defaults property</em></td>
+<td style="text-align:left"><a href="Configuration.html"><code>Configuration</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Parent</strong> <br> <em>Parent property</em></td>
+<td style="text-align:left"><a href="ConfigurationSection.html"><code>ConfigurationSection</code></a></td>
+</tr>
+<tr>
+<td> function <strong>addDefault</strong>(path, value) <br> <em>addDefault method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>addDefaults</strong>() <br> <em>addDefaults method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>addDefaults</strong>(defaults) <br> <em>addDefaults method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>options</strong>() <br> <em>options method</em></td>
+<td style="text-align:left"><a href="MemoryConfigurationOptions.html"><code>MemoryConfigurationOptions</code></a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="MemorySection.html"><code>MemorySection</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>static function <strong>createPath</strong>(section, key, relativeTo) <br> <em>Creates an empty MemorySection for use as a root <a href="Configuration.html"><code>Configuration</code></a></em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-memoryconfiguration-memoryconfiguration-md-">Public Constructors for <a href="MemoryConfiguration.html"><code>MemoryConfiguration</code></a></h3>
+<h5 id="-a-id-memoryconfiguration-a-new-__memoryconfiguration__-defaults-"><a id='memoryconfiguration'></a>new <strong>MemoryConfiguration</strong>(defaults)</h5>
+<p>_Creates an empty <a href="MemoryConfiguration.html"><code>MemoryConfiguration</code></a> with no default values. /
+    public MemoryConfiguration() {}</p>
+<pre><code>/** Creates an empty [<span class="hljs-link_label">`MemoryConfiguration`</span>](<span class="hljs-link_url">MemoryConfiguration.md</span>) using the specified [<span class="hljs-link_label">`Configuration`</span>](<span class="hljs-link_url">Configuration.md</span>) as a source for all default values._
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaults</td>
+<td><a href="Configuration.html"><code>Configuration</code></a></td>
+<td>Default value provider</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-memoryconfiguration-memoryconfiguration-md-">Public Properties for <a href="MemoryConfiguration.html"><code>MemoryConfiguration</code></a></h3>
+<h5 id="-a-id-defaults-a-public-property-__defaults__"><a id='defaults'></a>public   property <strong>Defaults</strong></h5>
+<p><em>Defaults property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Configuration.html"><code>Configuration</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaults</td>
+<td><a href="Configuration.html"><code>Configuration</code></a></td>
+<td>defaults argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-parent-a-public-readonly-property-__parent__"><a id='parent'></a>public  readonly property <strong>Parent</strong></h5>
+<p><em>Parent property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ConfigurationSection.html"><code>ConfigurationSection</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-memoryconfiguration-memoryconfiguration-md-">Public Methods for <a href="MemoryConfiguration.html"><code>MemoryConfiguration</code></a></h3>
+<h5 id="-a-id-adddefault-a-public-function-__adddefault__-path-value-"><a id='adddefault'></a>public  function <strong>addDefault</strong>(path, value)</h5>
+<p><em>addDefault method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>Object</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-adddefaults-a-public-function-__adddefaults__-"><a id='adddefaults'></a>public  function <strong>addDefaults</strong>()</h5>
+<p><em>addDefaults method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-adddefaults-a-public-function-__adddefaults__-defaults-"><a id='adddefaults'></a>public  function <strong>addDefaults</strong>(defaults)</h5>
+<p><em>addDefaults method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaults</td>
+<td><a href="Configuration.html"><code>Configuration</code></a></td>
+<td>defaults argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-options-a-public-function-__options__-"><a id='options'></a>public  function <strong>options</strong>()</h5>
+<p><em>options method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MemoryConfigurationOptions.html"><code>MemoryConfigurationOptions</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-memorysection-memorysection-md-">Public Methods for <a href="MemorySection.html"><code>MemorySection</code></a></h3>
+<h5 id="-a-id-createpath-a-public-static-function-__createpath__-section-key-relativeto-"><a id='createpath'></a>public static function <strong>createPath</strong>(section, key, relativeTo)</h5>
+<p><em>Creates an empty MemorySection for use as a root <a href="Configuration.html"><code>Configuration</code></a> section. <p> Note that calling this without being yourself a <a href="Configuration.html"><code>Configuration</code></a> will throw an exception!</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>section</td>
+<td><a href="ConfigurationSection.html"><code>ConfigurationSection</code></a></td>
+<td>Section to create a path for.</td>
+</tr>
+<tr>
+<td>key</td>
+<td><code>String</code></td>
+<td>Name of the specified section.</td>
+</tr>
+<tr>
+<td>relativeTo</td>
+<td><a href="ConfigurationSection.html"><code>ConfigurationSection</code></a></td>
+<td>Section to create the path relative to.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>Full path of the section from its root. /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public <span class="hljs-literal">static</span> <span class="hljs-built_in">String</span> createPath(ConfigurationSection section, <span class="hljs-built_in">String</span> key) {
+    <span class="hljs-keyword">return</span> createPath(section, key, (section == <span class="hljs-keyword">null</span>) ? <span class="hljs-keyword">null</span> : section.getRoot());
+}
+
+<span class="hljs-dartdoc"><span class="markdown">/** Creates a relative path to the given [<span class="hljs-link_label">`ConfigurationSection`</span>](<span class="hljs-link_url">ConfigurationSection.md</span>) from the given relative section. <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span></span> You may use this method for any given [<span class="hljs-link_label">`ConfigurationSection`</span>](<span class="hljs-link_url">ConfigurationSection.md</span>), not only [<span class="hljs-link_label">`MemorySection`</span>](<span class="hljs-link_url">MemorySection.md</span>).</span></span>
+</code></pre><h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

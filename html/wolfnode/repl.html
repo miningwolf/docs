@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API repl</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>repl</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li><a href='..\wolfnode\assert.html'>assert</a></li>
+<li><a href='..\wolfnode\child_process.html'>child_process</a></li>
+<li><a href='..\wolfnode\cluster.html'>cluster</a></li>
+<li><a href='..\wolfnode\debugger.html'>debugger</a></li>
+<li><a href='..\wolfnode\domain.html'>domain</a></li>
+<li><a href='..\wolfnode\os.html'>os</a></li>
+<li><a href='..\wolfnode\punycode.html'>punycode</a></li>
+<li><a href='..\wolfnode\readline.html'>readline</a></li>
+<li class='active'><a href='..\wolfnode\repl.html'>repl</a></li>
+<li><a href='..\wolfnode\smalloc.html'>smalloc</a></li>
+<li><a href='..\wolfnode\string_decoder.html'>string_decoder</a></li>
+<li><a href='..\wolfnode\tty.html'>tty</a></li>
+<li><a href='..\wolfnode\vm.html'>vm</a></li>
+<li><a href='..\wolfnode\zlib.html'>zlib</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="repl">REPL</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+</code></pre><p>A Read-Eval-Print-Loop (REPL) is available both as a standalone program and
+easily includable in other programs. The REPL provides a way to interactively
+run JavaScript and see the results.  It can be used for debugging, testing, or
+just trying things out.</p>
+<p>By executing <code>node</code> without any arguments from the command-line you will be
+dropped into the REPL. It has simplistic emacs line-editing.</p>
+<pre><code>mjr:~$ node
+<span class="hljs-keyword">Type</span> <span class="hljs-string">'.help'</span> <span class="hljs-keyword">for</span> options.
+&gt; a = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+[ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ]
+&gt; a.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(v)</span> <span class="hljs-comment">{
+...   console.log(v);
+...   }</span>);</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+</code></pre><p>For advanced line-editors, start node with the environmental variable
+<code>NODE_NO_READLINE=1</code>. This will start the main and debugger REPL in canonical
+terminal settings which will allow you to use with <code>rlwrap</code>.</p>
+<p>For example, you could add this to your bashrc file:</p>
+<pre><code><span class="hljs-keyword">alias</span> <span class="hljs-title">node</span>=<span class="hljs-string">"env NODE_NO_READLINE=1 rlwrap node"</span>
+</code></pre><h2 id="repl-start-options-">repl.start(options)</h2>
+<p>Returns and starts a <code>REPLServer</code> instance, that inherits from 
+[Readline Interface][]. Accepts an &quot;options&quot; Object that takes 
+the following values:</p>
+<ul>
+<li><p><code>prompt</code> - the prompt and <code>stream</code> for all I/O. Defaults to <code>&gt;</code>.</p>
+</li>
+<li><p><code>input</code> - the readable stream to listen to. Defaults to <code>process.stdin</code>.</p>
+</li>
+<li><p><code>output</code> - the writable stream to write readline data to. Defaults to
+<code>process.stdout</code>.</p>
+</li>
+<li><p><code>terminal</code> - pass <code>true</code> if the <code>stream</code> should be treated like a TTY, and
+have ANSI/VT100 escape codes written to it. Defaults to checking <code>isTTY</code>
+on the <code>output</code> stream upon instantiation.</p>
+</li>
+<li><p><code>eval</code> - function that will be used to eval each given line. Defaults to
+an async wrapper for <code>eval()</code>. See below for an example of a custom <code>eval</code>.</p>
+</li>
+<li><p><code>useColors</code> - a boolean which specifies whether or not the <code>writer</code> function
+should output colors. If a different <code>writer</code> function is set then this does
+nothing. Defaults to the repl&#39;s <code>terminal</code> value.</p>
+</li>
+<li><p><code>useGlobal</code> - if set to <code>true</code>, then the repl will use the <code>global</code> object,
+instead of running scripts in a separate context. Defaults to <code>false</code>.</p>
+</li>
+<li><p><code>ignoreUndefined</code> - if set to <code>true</code>, then the repl will not output the
+return value of command if it&#39;s <code>undefined</code>. Defaults to <code>false</code>.</p>
+</li>
+<li><p><code>writer</code> - the function to invoke for each command that gets evaluated which
+returns the formatting (including coloring) to display. Defaults to
+<code>util.inspect</code>.</p>
+</li>
+</ul>
+<p>You can use your own <code>eval</code> function if it has following signature:</p>
+<pre><code>function eval(cmd, context, filename, callback) {
+  callback(null, <span class="hljs-literal">result</span>);
+}
+</code></pre><p>Multiple REPLs may be started against the same running instance of node.  Each
+will share the same global object but will have unique I/O.</p>
+<p>Here is an example that starts a REPL on stdin, a Unix socket, and a TCP socket:</p>
+<pre><code>var net = <span class="hljs-built_in">require</span>(<span class="hljs-string">"net"</span>),
+    repl = <span class="hljs-built_in">require</span>(<span class="hljs-string">"repl"</span>);
+
+connections = <span class="hljs-number">0</span>;
+
+repl.start({
+  prompt: <span class="hljs-string">"node via stdin&gt; "</span>,
+  input: process.stdin,
+  output: process.stdout
+});
+
+net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(socket)</span></span> {
+  connections += <span class="hljs-number">1</span>;
+  repl.start({
+    prompt: <span class="hljs-string">"node via Unix socket&gt; "</span>,
+    input: socket,
+    output: socket
+  }).on(<span class="hljs-string">'exit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> {
+    socket.<span class="hljs-keyword">end</span>();
+  })
+}).listen(<span class="hljs-string">"/tmp/node-repl-sock"</span>);
+
+net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(socket)</span></span> {
+  connections += <span class="hljs-number">1</span>;
+  repl.start({
+    prompt: <span class="hljs-string">"node via TCP socket&gt; "</span>,
+    input: socket,
+    output: socket
+  }).on(<span class="hljs-string">'exit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> {
+    socket.<span class="hljs-keyword">end</span>();
+  });
+}).listen(<span class="hljs-number">5001</span>);
+</code></pre><p>Running this program from the command line will start a REPL on stdin.  Other
+REPL clients may connect through the Unix socket or TCP socket. <code>telnet</code> is useful
+for connecting to TCP sockets, and <code>socat</code> can be used to connect to both Unix and
+TCP sockets.</p>
+<p>By starting a REPL from a Unix socket-based server instead of stdin, you can
+connect to a long-running node process without restarting it.</p>
+<p>For an example of running a &quot;full-featured&quot; (<code>terminal</code>) REPL over
+a <code>net.Server</code> and <code>net.Socket</code> instance, see: <a href="https://gist.github.com/2209310" target="_blank" rel="nofollow">https://gist.github.com/2209310</a></p>
+<p>For an example of running a REPL instance over <code>curl(1)</code>,
+see: <a href="https://gist.github.com/2053342" target="_blank" rel="nofollow">https://gist.github.com/2053342</a></p>
+<h3 id="event-exit-">Event: &#39;exit&#39;</h3>
+<p><code>function () {}</code></p>
+<p>Emitted when the user exits the REPL in any of the defined ways. Namely, typing
+<code>.exit</code> at the repl, pressing Ctrl+C twice to signal SIGINT, or pressing Ctrl+D
+to signal &quot;end&quot; on the <code>input</code> stream.</p>
+<p>Example of listening for <code>exit</code>:</p>
+<pre><code><span class="hljs-keyword">r</span>.<span class="hljs-keyword">on</span>(<span class="hljs-string">'exit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">'Got "exit" event from repl!'</span>);
+  process.<span class="hljs-keyword">exit</span>();
+});
+</code></pre><h3 id="event-reset-">Event: &#39;reset&#39;</h3>
+<p><code>function (context) {}</code></p>
+<p>Emitted when the REPL&#39;s context is reset. This happens when you type <code>.clear</code>.
+If you start the repl with <code>{ useGlobal: true }</code> then this event will never
+be emitted.</p>
+<p>Example of listening for <code>reset</code>:</p>
+<pre><code><span class="hljs-comment">// Extend the initial repl context.</span>
+r = repl.start(<span class="hljs-comment">{ options ... }</span>);
+someExtension.extend(r.context);
+
+<span class="hljs-comment">// When a new context is created extend it as well.</span>
+r.<span class="hljs-keyword">on</span>(<span class="hljs-string">'reset'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(context)</span> <span class="hljs-comment">{
+  console.log('repl has a new context');
+  someExtension.extend(context);
+}</span>);</span>
+</code></pre><h2 id="repl-features">REPL Features</h2>
+<!-- type=misc -->
+<p>Inside the REPL, Control+D will exit.  Multi-line expressions can be input.
+Tab completion is supported for both global and local variables.</p>
+<p>The special variable <code>_</code> (underscore) contains the result of the last expression.</p>
+<pre><code>&gt; [ <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span> ]
+[ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ]
+&gt; <span class="hljs-name">_</span>.<span class="hljs-atom">length</span>
+<span class="hljs-number">3</span>
+&gt; <span class="hljs-name">_</span> += <span class="hljs-number">1</span>
+<span class="hljs-number">4</span>
+</code></pre><p>The REPL provides access to any variables in the global scope. You can expose
+a variable to the REPL explicitly by assigning it to the <code>context</code> object
+associated with each <code>REPLServer</code>.  For example:</p>
+<pre><code><span class="hljs-comment">// repl_test.js</span>
+<span class="hljs-keyword">var</span> repl = <span class="hljs-built_in">require</span>(<span class="hljs-string">"repl"</span>),
+    msg = <span class="hljs-string">"message"</span>;
+
+repl.start(<span class="hljs-string">"&gt; "</span>).context.m = msg;
+</code></pre><p>Things in the <code>context</code> object appear as local within the REPL:</p>
+<pre><code>mjr:~$ node repl_test<span class="hljs-class">.js</span>
+&gt; m
+<span class="hljs-string">'message'</span>
+</code></pre><p>There are a few special REPL commands:</p>
+<ul>
+<li><code>.break</code> - While inputting a multi-line expression, sometimes you get lost
+or just don&#39;t care about completing it. <code>.break</code> will start over.</li>
+<li><code>.clear</code> - Resets the <code>context</code> object to an empty object and clears any
+multi-line expression.</li>
+<li><code>.exit</code> - Close the I/O stream, which will cause the REPL to exit.</li>
+<li><code>.help</code> - Show this list of special commands.</li>
+<li><code>.save</code> - Save the current REPL session to a file<blockquote>
+<p>.save ./file/to/save.js</p>
+</blockquote>
+</li>
+<li><code>.load</code> - Load a file into the current REPL session.<blockquote>
+<p>.load ./file/to/load.js</p>
+</blockquote>
+</li>
+</ul>
+<p>The following key combinations in the REPL have these special effects:</p>
+<ul>
+<li><code>&lt;ctrl&gt;C</code> - Similar to the <code>.break</code> keyword.  Terminates the current
+command.  Press twice on a blank line to forcibly exit.</li>
+<li><code>&lt;ctrl&gt;D</code> - Similar to the <code>.exit</code> keyword.</li>
+</ul>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

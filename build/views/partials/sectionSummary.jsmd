@@ -1,0 +1,41 @@
+@{
+	var noun =  model.noun || "";
+	var scopes = model.scopes || [];
+    var helpers = model.require('../views/js/helpers.js');
+     	var path = model.require('path');
+
+     var fnNameClean = function(name){
+	   		if (model.db.hasOwnProperty(name))
+	   		  	return "[`" + helpers.fnEventName(name) + "`]" + "(#" + helpers.fnAnchor(helpers.fnEventName(name)) + ")"
+	   		  else
+	   		     return "`" + helpers.fnEventName(name) + "`";
+	   		};
+  
+    var fnDescriptionClean = function(text) {
+    	return	helpers.fnDescriptionClean(text, function(x){
+	   		var name = x.substr(7, x.length-8);
+	   		return fnNameClean(name);
+	   	})
+	};
+	
+	var lastNamespace = "";
+
+	@:## WolfScript @{noun}s Summary
+    scopes.forEach(function(scope){
+ 	 	Object.getOwnPropertyNames(model.db).sort().forEach(function(mainItemKey) {
+					var mainItem = model.db[mainItemKey];
+					if (mainItem && ( mainItem.namespace.indexOf(scope) === 0)  && (!mainItem.deprecated)  && (mainItem.type === "class"))
+					{
+					   if (mainItem.namespace !== lastNamespace)
+					   {
+					     lastNamespace = mainItem.namespace;
+						 	@:
+							@:### @helpers.toTitleCase(helpers.fnEventName(mainItem.namespace))  @noun s
+							@:@noun  | Title 
+							@:--- | --- 
+		   				}
+						@:@fnNameClean(mainItem.qualifiedname)  | @fnDescriptionClean(mainItem.title)
+					}
+		});
+	});
+	}

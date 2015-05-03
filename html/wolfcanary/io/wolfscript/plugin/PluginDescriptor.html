@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PluginDescriptor</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html'>plugin</a></li>
+<li class='current'><a href='#'>PluginDescriptor</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginDescriptor.html'>PluginDescriptor</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginException.html'>PluginException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginLangLoader.html'>PluginLangLoader</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginLifecycle.html'>PluginLifecycle</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginListener.html'>PluginListener</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginManager.html'>PluginManager</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\PluginState.html'>PluginState</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\Priority.html'>Priority</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\RegisteredPluginListener.html'>RegisteredPluginListener</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\dependencies\0.html' class=''>plugin.dependencies</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\lifecycle\0.html' class=''>plugin.lifecycle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="plugindescriptor-__class__">PluginDescriptor <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.plugin.PluginDescriptor</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Describes information about a plugin, including meta information and start/stop/load information. It also contains a refrence to the loaded instance of the plugin, should there be one.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> readonly property <strong>WolfInf</strong> <br> <em>WolfInf property</em></td>
+<td style="text-align:left"><code>PropertiesFile</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Author</strong> <br> <em>Author property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Version</strong> <br> <em>Version property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Path</strong> <br> <em>Path property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Language</strong> <br> <em>Language property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Name</strong> <br> <em>Name property</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>PluginLifecycle</strong> <br> <em>PluginLifecycle property</em></td>
+<td style="text-align:left"><a href="PluginLifecycle.html"><code>PluginLifecycle</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Plugin</strong> <br> <em>Plugin property</em></td>
+<td style="text-align:left"><code>Plugin</code></td>
+</tr>
+<tr>
+<td>  property <strong>Priority</strong> <br> <em>Priority property</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Dependencies</strong> <br> <em>Dependencies property</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>CurrentState</strong> <br> <em>Set: DO NOT CALL THIS METHOD. It is for internal use only.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>enableEarly</strong>() <br> <em>enableEarly method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-plugindescriptor-plugindescriptor-md-">Public Properties for <a href="PluginDescriptor.html"><code>PluginDescriptor</code></a></h3>
+<h5 id="-a-id-wolfinf-a-public-readonly-property-__wolfinf__"><a id='wolfinf'></a>public  readonly property <strong>WolfInf</strong></h5>
+<p><em>WolfInf property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PropertiesFile</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-author-a-public-readonly-property-__author__"><a id='author'></a>public  readonly property <strong>Author</strong></h5>
+<p><em>Author property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-version-a-public-readonly-property-__version__"><a id='version'></a>public  readonly property <strong>Version</strong></h5>
+<p><em>Version property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-path-a-public-readonly-property-__path__"><a id='path'></a>public  readonly property <strong>Path</strong></h5>
+<p><em>Path property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-language-a-public-readonly-property-__language__"><a id='language'></a>public  readonly property <strong>Language</strong></h5>
+<p><em>Language property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
+<p><em>Name property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-pluginlifecycle-a-public-readonly-property-__pluginlifecycle__"><a id='pluginlifecycle'></a>public  readonly property <strong>PluginLifecycle</strong></h5>
+<p><em>PluginLifecycle property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PluginLifecycle.html"><code>PluginLifecycle</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-plugin-a-public-readonly-property-__plugin__"><a id='plugin'></a>public  readonly property <strong>Plugin</strong></h5>
+<p><em>Plugin property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Plugin</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-priority-a-public-property-__priority__"><a id='priority'></a>public   property <strong>Priority</strong></h5>
+<p><em>Priority property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>priority</td>
+<td><code>int</code></td>
+<td>priority argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-dependencies-a-public-readonly-property-__dependencies__"><a id='dependencies'></a>public  readonly property <strong>Dependencies</strong></h5>
+<p><em>Dependencies property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-currentstate-a-public-writeonly-property-__currentstate__"><a id='currentstate'></a>public  writeonly property <strong>CurrentState</strong></h5>
+<p><em>Set: DO NOT CALL THIS METHOD. It is for internal use only.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td><a href="PluginState.html"><code>PluginState</code></a></td>
+<td>New plugin state</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-plugindescriptor-plugindescriptor-md-">Public Methods for <a href="PluginDescriptor.html"><code>PluginDescriptor</code></a></h3>
+<h5 id="-a-id-enableearly-a-public-function-__enableearly__-"><a id='enableearly'></a>public  function <strong>enableEarly</strong>()</h5>
+<p><em>enableEarly method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

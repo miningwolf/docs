@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API punycode</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>punycode</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li><a href='..\wolfnode\assert.html'>assert</a></li>
+<li><a href='..\wolfnode\child_process.html'>child_process</a></li>
+<li><a href='..\wolfnode\cluster.html'>cluster</a></li>
+<li><a href='..\wolfnode\debugger.html'>debugger</a></li>
+<li><a href='..\wolfnode\domain.html'>domain</a></li>
+<li><a href='..\wolfnode\os.html'>os</a></li>
+<li class='active'><a href='..\wolfnode\punycode.html'>punycode</a></li>
+<li><a href='..\wolfnode\readline.html'>readline</a></li>
+<li><a href='..\wolfnode\repl.html'>repl</a></li>
+<li><a href='..\wolfnode\smalloc.html'>smalloc</a></li>
+<li><a href='..\wolfnode\string_decoder.html'>string_decoder</a></li>
+<li><a href='..\wolfnode\tty.html'>tty</a></li>
+<li><a href='..\wolfnode\vm.html'>vm</a></li>
+<li><a href='..\wolfnode\zlib.html'>zlib</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="punycode">punycode</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Unstable</span>
+</code></pre><p><a href="http://mths.be/punycode" target="_blank" rel="nofollow">Punycode.js</a> is bundled with Node.js v0.6.2+. Use
+<code>require(&#39;punycode&#39;)</code> to access it. (To use it with other Node.js versions,
+use npm to install the <code>punycode</code> module first.)</p>
+<h2 id="punycode-decode-string-">punycode.decode(string)</h2>
+<p>Converts a Punycode string of ASCII-only symbols to a string of Unicode symbols.</p>
+<pre><code><span class="hljs-comment">// decode domain name parts</span>
+punycode.decode(<span class="hljs-string">'maana-pta'</span>); <span class="hljs-comment">// 'mañana'</span>
+punycode.decode(<span class="hljs-string">'--dqo34k'</span>); <span class="hljs-comment">// '☃-⌘'</span>
+</code></pre><h2 id="punycode-encode-string-">punycode.encode(string)</h2>
+<p>Converts a string of Unicode symbols to a Punycode string of ASCII-only symbols.</p>
+<pre><code><span class="hljs-comment">// encode domain name parts</span>
+punycode.<span class="hljs-keyword">encode</span>('<span class="hljs-keyword">ma</span>ñana'); <span class="hljs-comment">// 'maana-pta'</span>
+punycode.<span class="hljs-keyword">encode</span>('☃-⌘'); <span class="hljs-comment">// '--dqo34k'</span>
+</code></pre><h2 id="punycode-tounicode-domain-">punycode.toUnicode(domain)</h2>
+<p>Converts a Punycode string representing a domain name to Unicode. Only the
+Punycoded parts of the domain name will be converted, i.e. it doesn&#39;t matter if
+you call it on a string that has already been converted to Unicode.</p>
+<pre><code><span class="hljs-comment">// decode domain names</span>
+punycode.toUnicode(<span class="hljs-string">'xn--maana-pta.com'</span>); <span class="hljs-comment">// 'mañana.com'</span>
+punycode.toUnicode(<span class="hljs-string">'xn----dqo34k.com'</span>); <span class="hljs-comment">// '☃-⌘.com'</span>
+</code></pre><h2 id="punycode-toascii-domain-">punycode.toASCII(domain)</h2>
+<p>Converts a Unicode string representing a domain name to Punycode. Only the
+non-ASCII parts of the domain name will be converted, i.e. it doesn&#39;t matter if
+you call it with a domain that&#39;s already in ASCII.</p>
+<pre><code><span class="hljs-comment">// encode domain names</span>
+punycode.toASCII(<span class="hljs-string">'mañana.com'</span>); <span class="hljs-comment">// 'xn--maana-pta.com'</span>
+punycode.toASCII(<span class="hljs-string">'☃-⌘.com'</span>); <span class="hljs-comment">// 'xn----dqo34k.com'</span>
+</code></pre><h2 id="punycode-ucs2">punycode.ucs2</h2>
+<h3 id="punycode-ucs2-decode-string-">punycode.ucs2.decode(string)</h3>
+<p>Creates an array containing the numeric code point values of each Unicode
+symbol in the string. While <a href="http://mathiasbynens.be/notes/javascript-encoding" target="_blank" rel="nofollow">JavaScript uses UCS-2
+internally</a>, this function
+will convert a pair of surrogate halves (each of which UCS-2 exposes as
+separate characters) into a single code point, matching UTF-16.</p>
+<pre><code>punycode.ucs2.decode(<span class="hljs-string">'abc'</span>); <span class="hljs-comment">// [0x61, 0x62, 0x63]</span>
+<span class="hljs-comment">// surrogate pair for U+1D306 tetragram for centre:</span>
+punycode.ucs2.decode(<span class="hljs-string">'\uD834\uDF06'</span>); <span class="hljs-comment">// [0x1D306]</span>
+</code></pre><h3 id="punycode-ucs2-encode-codepoints-">punycode.ucs2.encode(codePoints)</h3>
+<p>Creates a string based on an array of numeric code point values.</p>
+<pre><code>punycode.ucs2.encode([<span class="hljs-number">0x61</span>, <span class="hljs-number">0x62</span>, <span class="hljs-number">0x63</span>]); <span class="hljs-regexp">//</span> <span class="hljs-string">'abc'</span>
+punycode.ucs2.encode([<span class="hljs-number">0x1D306</span>]); <span class="hljs-regexp">//</span> <span class="hljs-string">'\uD834\uDF06'</span>
+</code></pre><h2 id="punycode-version">punycode.version</h2>
+<p>A string representing the current Punycode.js version number.</p>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

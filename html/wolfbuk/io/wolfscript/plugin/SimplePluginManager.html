@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API SimplePluginManager</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html'>plugin</a></li>
+<li class='current'><a href='#'>SimplePluginManager</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\AuthorNagException.html'>AuthorNagException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\EventExecutor.html'>EventExecutor</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\Flags.html'>Flags</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\InvalidPluginException.html'>InvalidPluginException</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\Plugin.html'>Plugin</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginBase.html'>PluginBase</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginDescriptionFile.html'>PluginDescriptionFile</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLoadOrder.html'>PluginLoadOrder</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLoader.html'>PluginLoader</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginLogger.html'>PluginLogger</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\PluginManager.html'>PluginManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\RegisteredListener.html'>RegisteredListener</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\RegisteredServiceProvider.html'>RegisteredServiceProvider</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\ServicePriority.html'>ServicePriority</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\ServicesManager.html'>ServicesManager</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\SimplePluginManager.html'>SimplePluginManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\SimpleServicesManager.html'>SimpleServicesManager</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\TimedRegisteredListener.html'>TimedRegisteredListener</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\UnknownDependencyException.html'>UnknownDependencyException</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\java\0.html' class=''>plugin.java</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\messaging\0.html' class=''>plugin.messaging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="simplepluginmanager-__class__">SimplePluginManager <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.plugin.SimplePluginManager
+Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Handles all plugin management from the Server</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>SimplePluginManager</strong>(instance, commandMap) <br> <em>SimplePluginManager constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>useTimings</strong>(use) <br> <em>Registers the specified plugin loader</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-simplepluginmanager-simplepluginmanager-md-">Public Constructors for <a href="SimplePluginManager.html"><code>SimplePluginManager</code></a></h3>
+<h5 id="-a-id-simplepluginmanager-a-new-__simplepluginmanager__-instance-commandmap-"><a id='simplepluginmanager'></a>new <strong>SimplePluginManager</strong>(instance, commandMap)</h5>
+<p><em>SimplePluginManager constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>instance</td>
+<td><a href="..\Server.html"><code>Server</code></a></td>
+<td>instance argument</td>
+</tr>
+<tr>
+<td>commandMap</td>
+<td><a href="..\command\SimpleCommandMap.html"><code>SimpleCommandMap</code></a></td>
+<td>commandMap argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-simplepluginmanager-simplepluginmanager-md-">Public Methods for <a href="SimplePluginManager.html"><code>SimplePluginManager</code></a></h3>
+<h5 id="-a-id-usetimings-a-public-function-__usetimings__-use-"><a id='usetimings'></a>public  function <strong>useTimings</strong>(use)</h5>
+<p><em>Registers the specified plugin loader</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use</td>
+<td><code>boolean</code></td>
+<td>True if per event timing code should be used</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td>A list of all plugins loaded /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> Plugin[] loadPlugins(<span class="hljs-keyword">File</span> directory) {
+    Validate.notNull(directory, <span class="hljs-string">"Directory cannot be null"</span>);
+    Validate.isTrue(directory.isDirectory(), <span class="hljs-string">"Directory must be a directory"</span>);
+
+    List&lt;Plugin&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;Plugin&gt;();
+    Set&lt;Pattern&gt; filters = fileAssociations.keySet();
+
+    <span class="hljs-keyword">if</span> (!(server.getUpdateFolder().equals(<span class="hljs-string">""</span>))) {
+        updateDirectory = <span class="hljs-keyword">new</span> <span class="hljs-keyword">File</span>(directory, server.getUpdateFolder());
+    }
+
+    Map&lt;String, <span class="hljs-keyword">File</span>&gt; plugins = <span class="hljs-keyword">new</span> HashMap&lt;String, <span class="hljs-keyword">File</span>&gt;();
+    Set&lt;String&gt; loadedPlugins = <span class="hljs-keyword">new</span> HashSet&lt;String&gt;();
+    Map&lt;String, Collection&lt;String&gt;&gt; <span class="hljs-keyword">dependencies</span> = <span class="hljs-keyword">new</span> HashMap&lt;String, Collection&lt;String&gt;&gt;();
+    Map&lt;String, Collection&lt;String&gt;&gt; softDependencies = <span class="hljs-keyword">new</span> HashMap&lt;String, Collection&lt;String&gt;&gt;();
+
+    <span class="hljs-comment">// This is where it figures out all possible plugins</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">File</span> <span class="hljs-keyword">file</span> : directory.listFiles()) {
+        PluginLoader loader = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">for</span> (Pattern filter : filters) {
+            Matcher match = filter.matcher(<span class="hljs-keyword">file</span>.getName());
+            <span class="hljs-keyword">if</span> (match.<span class="hljs-keyword">find</span>()) {
+                loader = fileAssociations.get(filter);
+            }
+        }
+
+        <span class="hljs-keyword">if</span> (loader == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">continue</span>;
+
+        PluginDescriptionFile <span class="hljs-keyword">description</span> = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">description</span> = loader.getPluginDescription(<span class="hljs-keyword">file</span>);
+            String name = <span class="hljs-keyword">description</span>.getName();
+            <span class="hljs-keyword">if</span> (name.equalsIgnoreCase(<span class="hljs-string">"wolfscript"</span>) || name.equalsIgnoreCase(<span class="hljs-string">"minecraft"</span>) || name.equalsIgnoreCase(<span class="hljs-string">"mojang"</span>)) {
+                server.getLogger().log(Level.SEVERE, <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"': Restricted Name"</span>);
+                <span class="hljs-keyword">continue</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">description</span>.rawName.indexOf(<span class="hljs-string">' '</span>) != -<span class="hljs-number">1</span>) {
+                server.getLogger().warning(String.format(
+                    <span class="hljs-string">"Plugin `%s' uses the space-character (0x20) in its name `%s' - this is discouraged"</span>,
+                    <span class="hljs-keyword">description</span>.getFullName(),
+                    <span class="hljs-keyword">description</span>.rawName
+                    ));
+            }
+        } <span class="hljs-keyword">catch</span> (InvalidDescriptionException ex) {
+            server.getLogger().log(Level.SEVERE, <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"'"</span>, ex);
+            <span class="hljs-keyword">continue</span>;
+        }
+
+        <span class="hljs-keyword">File</span> replacedFile = plugins.put(<span class="hljs-keyword">description</span>.getName(), <span class="hljs-keyword">file</span>);
+        <span class="hljs-keyword">if</span> (replacedFile != <span class="hljs-keyword">null</span>) {
+            server.getLogger().severe(String.format(
+                <span class="hljs-string">"Ambiguous plugin name `%s' for files `%s' and `%s' in `%s'"</span>,
+                <span class="hljs-keyword">description</span>.getName(),
+                <span class="hljs-keyword">file</span>.getPath(),
+                replacedFile.getPath(),
+                directory.getPath()
+                ));
+        }
+
+        Collection&lt;String&gt; softDependencySet = <span class="hljs-keyword">description</span>.getSoftDepend();
+        <span class="hljs-keyword">if</span> (softDependencySet != <span class="hljs-keyword">null</span> &amp;&amp; !softDependencySet.isEmpty()) {
+            <span class="hljs-keyword">if</span> (softDependencies.containsKey(<span class="hljs-keyword">description</span>.getName())) {
+                <span class="hljs-comment">// Duplicates do not matter, they will be removed together if applicable</span>
+                softDependencies.get(<span class="hljs-keyword">description</span>.getName()).addAll(softDependencySet);
+            } <span class="hljs-keyword">else</span> {
+                softDependencies.put(<span class="hljs-keyword">description</span>.getName(), <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;(softDependencySet));
+            }
+        }
+
+        Collection&lt;String&gt; dependencySet = <span class="hljs-keyword">description</span>.getDepend();
+        <span class="hljs-keyword">if</span> (dependencySet != <span class="hljs-keyword">null</span> &amp;&amp; !dependencySet.isEmpty()) {
+            <span class="hljs-keyword">dependencies</span>.put(<span class="hljs-keyword">description</span>.getName(), <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;(dependencySet));
+        }
+
+        Collection&lt;String&gt; loadBeforeSet = <span class="hljs-keyword">description</span>.getLoadBefore();
+        <span class="hljs-keyword">if</span> (loadBeforeSet != <span class="hljs-keyword">null</span> &amp;&amp; !loadBeforeSet.isEmpty()) {
+            <span class="hljs-keyword">for</span> (String loadBeforeTarget : loadBeforeSet) {
+                <span class="hljs-keyword">if</span> (softDependencies.containsKey(loadBeforeTarget)) {
+                    softDependencies.get(loadBeforeTarget).add(<span class="hljs-keyword">description</span>.getName());
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-comment">// softDependencies is never iterated, so 'ghost' plugins aren't an issue</span>
+                    Collection&lt;String&gt; shortSoftDependency = <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;();
+                    shortSoftDependency.add(<span class="hljs-keyword">description</span>.getName());
+                    softDependencies.put(loadBeforeTarget, shortSoftDependency);
+                }
+            }
+        }
+    }
+
+    <span class="hljs-keyword">while</span> (!plugins.isEmpty()) {
+        <span class="hljs-keyword">boolean</span> missingDependency = <span class="hljs-keyword">true</span>;
+        Iterator&lt;String&gt; pluginIterator = plugins.keySet().iterator();
+
+        <span class="hljs-keyword">while</span> (pluginIterator.hasNext()) {
+            String plugin = pluginIterator.<span class="hljs-keyword">next</span>();
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">dependencies</span>.containsKey(plugin)) {
+                Iterator&lt;String&gt; dependencyIterator = <span class="hljs-keyword">dependencies</span>.get(plugin).iterator();
+
+                <span class="hljs-keyword">while</span> (dependencyIterator.hasNext()) {
+                    String dependency = dependencyIterator.<span class="hljs-keyword">next</span>();
+
+                    <span class="hljs-comment">// Dependency loaded</span>
+                    <span class="hljs-keyword">if</span> (loadedPlugins.contains(dependency)) {
+                        dependencyIterator.remove();
+
+                    <span class="hljs-comment">// We have a dependency not found</span>
+                    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!plugins.containsKey(dependency)) {
+                        missingDependency = <span class="hljs-keyword">false</span>;
+                        <span class="hljs-keyword">File</span> <span class="hljs-keyword">file</span> = plugins.get(plugin);
+                        pluginIterator.remove();
+                        softDependencies.remove(plugin);
+                        <span class="hljs-keyword">dependencies</span>.remove(plugin);
+
+                        server.getLogger().log(
+                            Level.SEVERE,
+                            <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"'"</span>,
+                            <span class="hljs-keyword">new</span> UnknownDependencyException(dependency));
+                        <span class="hljs-keyword">break</span>;
+                    }
+                }
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">dependencies</span>.containsKey(plugin) &amp;&amp; <span class="hljs-keyword">dependencies</span>.get(plugin).isEmpty()) {
+                    <span class="hljs-keyword">dependencies</span>.remove(plugin);
+                }
+            }
+            <span class="hljs-keyword">if</span> (softDependencies.containsKey(plugin)) {
+                Iterator&lt;String&gt; softDependencyIterator = softDependencies.get(plugin).iterator();
+
+                <span class="hljs-keyword">while</span> (softDependencyIterator.hasNext()) {
+                    String softDependency = softDependencyIterator.<span class="hljs-keyword">next</span>();
+
+                    <span class="hljs-comment">// Soft depend is no longer around</span>
+                    <span class="hljs-keyword">if</span> (!plugins.containsKey(softDependency)) {
+                        softDependencyIterator.remove();
+                    }
+                }
+
+                <span class="hljs-keyword">if</span> (softDependencies.get(plugin).isEmpty()) {
+                    softDependencies.remove(plugin);
+                }
+            }
+            <span class="hljs-keyword">if</span> (!(<span class="hljs-keyword">dependencies</span>.containsKey(plugin) || softDependencies.containsKey(plugin)) &amp;&amp; plugins.containsKey(plugin)) {
+                <span class="hljs-comment">// We're clear to load, no more soft or hard dependencies left</span>
+                <span class="hljs-keyword">File</span> <span class="hljs-keyword">file</span> = plugins.get(plugin);
+                pluginIterator.remove();
+                missingDependency = <span class="hljs-keyword">false</span>;
+
+                <span class="hljs-keyword">try</span> {
+                    result.add(loadPlugin(<span class="hljs-keyword">file</span>));
+                    loadedPlugins.add(plugin);
+                    <span class="hljs-keyword">continue</span>;
+                } <span class="hljs-keyword">catch</span> (InvalidPluginException ex) {
+                    server.getLogger().log(Level.SEVERE, <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"'"</span>, ex);
+                }
+            }
+        }
+
+        <span class="hljs-keyword">if</span> (missingDependency) {
+            <span class="hljs-comment">// We now iterate over plugins until something loads</span>
+            <span class="hljs-comment">// This loop will ignore soft dependencies</span>
+            pluginIterator = plugins.keySet().iterator();
+
+            <span class="hljs-keyword">while</span> (pluginIterator.hasNext()) {
+                String plugin = pluginIterator.<span class="hljs-keyword">next</span>();
+
+                <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">dependencies</span>.containsKey(plugin)) {
+                    softDependencies.remove(plugin);
+                    missingDependency = <span class="hljs-keyword">false</span>;
+                    <span class="hljs-keyword">File</span> <span class="hljs-keyword">file</span> = plugins.get(plugin);
+                    pluginIterator.remove();
+
+                    <span class="hljs-keyword">try</span> {
+                        result.add(loadPlugin(<span class="hljs-keyword">file</span>));
+                        loadedPlugins.add(plugin);
+                        <span class="hljs-keyword">break</span>;
+                    } <span class="hljs-keyword">catch</span> (InvalidPluginException ex) {
+                        server.getLogger().log(Level.SEVERE, <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"'"</span>, ex);
+                    }
+                }
+            }
+            <span class="hljs-comment">// We have no plugins left without a depend</span>
+            <span class="hljs-keyword">if</span> (missingDependency) {
+                softDependencies.clear();
+                <span class="hljs-keyword">dependencies</span>.clear();
+                Iterator&lt;<span class="hljs-keyword">File</span>&gt; failedPluginIterator = plugins.values().iterator();
+
+                <span class="hljs-keyword">while</span> (failedPluginIterator.hasNext()) {
+                    <span class="hljs-keyword">File</span> <span class="hljs-keyword">file</span> = failedPluginIterator.<span class="hljs-keyword">next</span>();
+                    failedPluginIterator.remove();
+                    server.getLogger().log(Level.SEVERE, <span class="hljs-string">"Could not load '"</span> + <span class="hljs-keyword">file</span>.getPath() + <span class="hljs-string">"' in folder '"</span> + directory.getPath() + <span class="hljs-string">"': circular dependency detected"</span>);
+                }
+            }
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result.toArray(<span class="hljs-keyword">new</span> Plugin[result.<span class="hljs-keyword">size</span>()]);
+}
+
+<span class="hljs-comment">/** Loads the plugin in the specified file &lt;p&gt; File must be valid according to the current enabled Plugin interfaces</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

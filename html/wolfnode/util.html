@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API util</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>util</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li><a href='..\wolfnode\buffer.html'>buffer</a></li>
+<li><a href='..\wolfnode\console.html'>console</a></li>
+<li><a href='..\wolfnode\crypto.html'>crypto</a></li>
+<li><a href='..\wolfnode\dgram.html'>dgram</a></li>
+<li><a href='..\wolfnode\dns.html'>dns</a></li>
+<li><a href='..\wolfnode\events.html'>events</a></li>
+<li><a href='..\wolfnode\fs.html'>fs</a></li>
+<li><a href='..\wolfnode\http.html'>http</a></li>
+<li><a href='..\wolfnode\https.html'>https</a></li>
+<li><a href='..\wolfnode\net.html'>net</a></li>
+<li><a href='..\wolfnode\path.html'>path</a></li>
+<li><a href='..\wolfnode\process.html'>process</a></li>
+<li><a href='..\wolfnode\querystring.html'>querystring</a></li>
+<li><a href='..\wolfnode\stream.html'>stream</a></li>
+<li><a href='..\wolfnode\timers.html'>timers</a></li>
+<li><a href='..\wolfnode\tls.html'>tls</a></li>
+<li><a href='..\wolfnode\url.html'>url</a></li>
+<li class='active'><a href='..\wolfnode\util.html'>util</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="util">util</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">4 - API Frozen</span>
+</code></pre><p>These functions are in the module <code>&#39;util&#39;</code>. Use <code>require(&#39;util&#39;)</code> to
+access them.</p>
+<p>The <code>util</code> module is primarily designed to support the needs of Node&#39;s
+internal APIs.  Many of these utilities are useful for your own
+programs.  If you find that these functions are lacking for your
+purposes, however, you are encouraged to write your own utilities.  We
+are not interested in any future additions to the <code>util</code> module that
+are unnecessary for Node&#39;s internal functionality.</p>
+<h2 id="util-debuglog-section-">util.debuglog(section)</h2>
+<ul>
+<li><code>section</code> {String} The section of the program to be debugged</li>
+<li>Returns: {Function} The logging function</li>
+</ul>
+<p>This is used to create a function which conditionally writes to stderr
+based on the existence of a <code>NODE_DEBUG</code> environment variable.  If the
+<code>section</code> name appears in that environment variable, then the returned
+function will be similar to <code>console.error()</code>.  If not, then the
+returned function is a no-op.</p>
+<p>For example:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> debuglog = util.debuglog(<span class="hljs-string">'foo'</span>);
+
+<span class="hljs-keyword">var</span> bar = <span class="hljs-number">123</span>;
+debuglog(<span class="hljs-string">'hello from foo [%d]'</span>, bar);
+</code></pre>
+<p>If this program is run with <code>NODE_DEBUG=foo</code> in the environment, then
+it will output something like:</p>
+<pre><code><span class="hljs-keyword">FOO</span> 3245: hello from foo<span class="hljs-sqbracket"> [123]</span>
+</code></pre><p>where <code>3245</code> is the process id.  If it is not run with that
+environment variable set, then it will not print anything.</p>
+<p>You may separate multiple <code>NODE_DEBUG</code> environment variables with a
+comma.  For example, <code>NODE_DEBUG=fs,net,tls</code>.</p>
+<h2 id="util-format-format-">util.format(format[, ...])</h2>
+<p>Returns a formatted string using the first argument as a <code>printf</code>-like format.</p>
+<p>The first argument is a string that contains zero or more <em>placeholders</em>.
+Each placeholder is replaced with the converted value from its corresponding
+argument. Supported placeholders are:</p>
+<ul>
+<li><code>%s</code> - String.</li>
+<li><code>%d</code> - Number (both integer and float).</li>
+<li><code>%j</code> - JSON.  Replaced with the string <code>&#39;[Circular]&#39;</code> if the argument<pre><code>   <span class="hljs-keyword">contains</span> circular references.
+</code></pre></li>
+<li><code>%%</code> - single percent sign (<code>&#39;%&#39;</code>). This does not consume an argument.</li>
+</ul>
+<p>If the placeholder does not have a corresponding argument, the placeholder is
+not replaced.</p>
+<pre><code>util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:%s'</span>
+</code></pre><p>If there are more arguments than placeholders, the extra arguments are
+converted to strings with <code>util.inspect()</code> and these strings are concatenated,
+delimited by a space.</p>
+<pre><code>util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:bar baz'</span>
+</code></pre><p>If the first argument is not a format string then <code>util.format()</code> returns
+a string that is the concatenation of all its arguments separated by spaces.
+Each argument is converted to a string with <code>util.inspect()</code>.</p>
+<pre><code>util.format(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'1 2 3'</span>
+</code></pre><h2 id="util-log-string-">util.log(string)</h2>
+<p>Output with timestamp on <code>stdout</code>.</p>
+<pre><code><span class="hljs-keyword">require</span>(<span class="hljs-string">'util'</span>)<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(<span class="hljs-string">'Timestamped message.'</span>);
+</code></pre><h2 id="util-inspect-object-options-">util.inspect(object[, options])</h2>
+<p>Return a string representation of <code>object</code>, which is useful for debugging.</p>
+<p>An optional <em>options</em> object may be passed that alters certain aspects of the
+formatted string:</p>
+<ul>
+<li><p><code>showHidden</code> - if <code>true</code> then the object&#39;s non-enumerable properties will be
+shown too. Defaults to <code>false</code>.</p>
+</li>
+<li><p><code>depth</code> - tells <code>inspect</code> how many times to recurse while formatting the
+object. This is useful for inspecting large complicated objects. Defaults to
+<code>2</code>. To make it recurse indefinitely pass <code>null</code>.</p>
+</li>
+<li><p><code>colors</code> - if <code>true</code>, then the output will be styled with ANSI color codes.
+Defaults to <code>false</code>. Colors are customizable, see below.</p>
+</li>
+<li><p><code>customInspect</code> - if <code>false</code>, then custom <code>inspect(depth, opts)</code> functions
+defined on the objects being inspected won&#39;t be called. Defaults to <code>true</code>.</p>
+</li>
+</ul>
+<p>Example of inspecting all properties of the <code>util</code> object:</p>
+<pre><code><span class="hljs-reserved">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+<span class="hljs-built_in">console</span>.log(util.inspect(util, { <span class="hljs-attribute">showHidden</span>: <span class="hljs-literal">true</span>, <span class="hljs-attribute">depth</span>: <span class="hljs-literal">null</span> }));
+</code></pre><p>Values may supply their own custom <code>inspect(depth, opts)</code> functions, when
+called they receive the current depth in the recursive inspection, as well as
+the options object passed to <code>util.inspect()</code>.</p>
+<h3 id="customizing-util-inspect-colors">Customizing <code>util.inspect</code> colors</h3>
+<!-- type=misc -->
+<p>Color output (if enabled) of <code>util.inspect</code> is customizable globally
+via <code>util.inspect.styles</code> and <code>util.inspect.colors</code> objects.</p>
+<p><code>util.inspect.styles</code> is a map assigning each style a color
+from <code>util.inspect.colors</code>.
+Highlighted styles and their default values are:</p>
+<ul>
+<li><code>number</code> (yellow)</li>
+<li><code>boolean</code> (yellow)</li>
+<li><code>string</code> (green)</li>
+<li><code>date</code> (magenta)</li>
+<li><code>regexp</code> (red)</li>
+<li><code>null</code> (bold)</li>
+<li><code>undefined</code> (grey)</li>
+<li><code>special</code> - only function at this time (cyan)</li>
+<li><code>name</code> (intentionally no styling)</li>
+</ul>
+<p>Predefined color codes are: <code>white</code>, <code>grey</code>, <code>black</code>, <code>blue</code>, <code>cyan</code>, 
+<code>green</code>, <code>magenta</code>, <code>red</code> and <code>yellow</code>.
+There are also <code>bold</code>, <code>italic</code>, <code>underline</code> and <code>inverse</code> codes.</p>
+<h3 id="custom-inspect-function-on-objects">Custom <code>inspect()</code> function on Objects</h3>
+<!-- type=misc -->
+<p>Objects also may define their own <code>inspect(depth)</code> function which <code>util.inspect()</code>
+will invoke and use the result of when inspecting the object:</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+<span class="hljs-keyword">var</span> obj = { name: <span class="hljs-string">'nate'</span> };
+obj.inspect = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(depth)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">'{'</span> + <span class="hljs-keyword">this</span>.name + <span class="hljs-string">'}'</span>;
+};
+
+util.inspect(obj);
+  <span class="hljs-comment">// "{nate}"</span>
+</code></pre><p>You may also return another Object entirely, and the returned String will be
+formatted according to the returned Object. This is similar to how
+<code>JSON.stringify()</code> works:</p>
+<pre><code><span class="hljs-keyword">var</span> obj = { foo: <span class="hljs-string">'this will not show up in the inspect() output'</span> };
+obj.inspect = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(depth)</span> </span>{
+  <span class="hljs-keyword">return</span> { bar: <span class="hljs-string">'baz'</span> };
+};
+
+util.inspect(obj);
+  <span class="hljs-comment">// "{ bar: 'baz' }"</span>
+</code></pre><h2 id="util-isarray-object-">util.isArray(object)</h2>
+<p>Internal alias for Array.isArray.</p>
+<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Array</code>. <code>false</code> otherwise.</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isArray([])
+  <span class="hljs-comment">// true</span>
+util.isArray(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>)
+  <span class="hljs-comment">// true</span>
+util.isArray({})
+  <span class="hljs-comment">// false</span>
+</code></pre><h2 id="util-isregexp-object-">util.isRegExp(object)</h2>
+<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. <code>false</code> otherwise.</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isRegExp(<span class="hljs-regexp">/some regexp/</span>)
+  <span class="hljs-comment">// true</span>
+util.isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'another regexp'</span>))
+  <span class="hljs-comment">// true</span>
+util.isRegExp({})
+  <span class="hljs-comment">// false</span>
+</code></pre><h2 id="util-isdate-object-">util.isDate(object)</h2>
+<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. <code>false</code> otherwise.</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>())
+  <span class="hljs-comment">// true</span>
+util.isDate(<span class="hljs-built_in">Date</span>())
+  <span class="hljs-comment">// false (without 'new' returns a String)</span>
+util.isDate({})
+  <span class="hljs-comment">// false</span>
+</code></pre><h2 id="util-iserror-object-">util.isError(object)</h2>
+<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Error</code>. <code>false</code> otherwise.</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isError(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>())
+  <span class="hljs-comment">// true</span>
+util.isError(<span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>())
+  <span class="hljs-comment">// true</span>
+util.isError({ name: <span class="hljs-string">'Error'</span>, message: <span class="hljs-string">'an error occurred'</span> })
+  <span class="hljs-comment">// false</span>
+</code></pre><h2 id="util-inherits-constructor-superconstructor-">util.inherits(constructor, superConstructor)</h2>
+<p>Inherit the prototype methods from one
+<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/constructor" target="_blank" rel="nofollow">constructor</a>
+into another.  The prototype of <code>constructor</code> will be set to a new
+object created from <code>superConstructor</code>.</p>
+<p>As an additional convenience, <code>superConstructor</code> will be accessible
+through the <code>constructor.super_</code> property.</p>
+<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">"util"</span>);
+<span class="hljs-keyword">var</span> events = <span class="hljs-built_in">require</span>(<span class="hljs-string">"events"</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyStream</span><span class="hljs-params">()</span> </span>{
+    events.EventEmitter.call(<span class="hljs-keyword">this</span>);
+}
+
+util.inherits(MyStream, events.EventEmitter);
+
+MyStream.prototype.write = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">"data"</span>, data);
+}
+
+<span class="hljs-keyword">var</span> stream = <span class="hljs-keyword">new</span> MyStream();
+
+<span class="hljs-built_in">console</span>.log(stream <span class="hljs-keyword">instanceof</span> events.EventEmitter); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(MyStream.super_ === events.EventEmitter); <span class="hljs-comment">// true</span>
+
+stream.on(<span class="hljs-string">"data"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Received data: "'</span> + data + <span class="hljs-string">'"'</span>);
+})
+stream.write(<span class="hljs-string">"It works!"</span>); <span class="hljs-comment">// Received data: "It works!"</span>
+</code></pre><h2 id="util-deprecate-function-string-">util.deprecate(function, string)</h2>
+<p>Marks that a method should not be used any more.</p>
+<pre><code>exports.puts = exports.deprecate(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">for</span> (var <span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>, len = arguments.<span class="hljs-built_in">length</span>; <span class="hljs-built_in">i</span> &lt; len; ++<span class="hljs-built_in">i</span>) <span class="hljs-cell">{
+    process.stdout.write(arguments[i] + <span class="hljs-string">'\n'</span>);
+  }</span>
+}, <span class="hljs-string">'util.puts: Use console.log instead'</span>)
+</code></pre><p>It returns a modified function which warns once by default. If
+<code>--no-deprecation</code> is set then this function is a NO-OP. If
+<code>--throw-deprecation</code> is set then the application will throw an exception
+if the deprecated API is used.</p>
+<h2 id="util-debug-string-">util.debug(string)</h2>
+<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: use console.<span class="hljs-function"><span class="hljs-title">error</span><span class="hljs-params">()</span></span> instead.
+</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
+<h2 id="util-error-">util.error([...])</h2>
+<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use console.<span class="hljs-function"><span class="hljs-title">error</span><span class="hljs-params">()</span></span> instead.
+</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
+<h2 id="util-puts-">util.puts([...])</h2>
+<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use console.<span class="hljs-function"><span class="hljs-title">log</span><span class="hljs-params">()</span></span> instead.
+</code></pre><p>Deprecated predecessor of <code>console.log</code>.</p>
+<h2 id="util-print-">util.print([...])</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-number">0</span> - <span class="hljs-attribute">Deprecated</span>: Use <span class="hljs-built_in">`console.log`</span> instead.
+</code></pre><p>Deprecated predecessor of <code>console.log</code>.</p>
+<h2 id="util-pump-readablestream-writablestream-callback-">util.pump(readableStream, writableStream[, callback])</h2>
+<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use readableStream.<span class="hljs-function"><span class="hljs-title">pipe</span><span class="hljs-params">(writableStream)</span></span>
+</code></pre><p>Deprecated predecessor of <code>stream.pipe()</code>.</p>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

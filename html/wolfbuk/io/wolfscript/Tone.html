@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API Tone</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+<li class='current'><a href='#'>Tone</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Achievement.html'>Achievement</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Art.html'>Art</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\BanEntry.html'>BanEntry</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Builder.html'>Builder</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\ChatColor.html'>ChatColor</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Chunk.html'>Chunk</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\ChunkSnapshot.html'>ChunkSnapshot</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\CoalType.html'>CoalType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Color.html'>Color</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\CropState.html'>CropState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Difficulty.html'>Difficulty</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\DyeColor.html'>DyeColor</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\EntityEffect.html'>EntityEffect</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Environment.html'>Environment</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\GameMode.html'>GameMode</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\GrassSpecies.html'>GrassSpecies</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Instrument.html'>Instrument</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Material.html'>Material</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\NetherWartsState.html'>NetherWartsState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\PortalType.html'>PortalType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Rotation.html'>Rotation</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\SandstoneType.html'>SandstoneType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Server.html'>Server</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\SkullType.html'>SkullType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Sound.html'>Sound</a></li>
+<li class='active'><a href='..\..\..\wolfbuk\io\wolfscript\Tone.html'>Tone</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TravelAgent.html'>TravelAgent</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TreeSpecies.html'>TreeSpecies</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\TreeType.html'>TreeType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\Type.html'>Type</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\UnsafeValues.html'>UnsafeValues</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WarningState.html'>WarningState</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WeatherType.html'>WeatherType</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WolfScript.html'>WolfScript</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldBorder.html'>WorldBorder</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldCreator.html'>WorldCreator</a></li>
+<li><a href='..\..\..\wolfbuk\io\wolfscript\WorldType.html'>WorldType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="tone-__enum__">Tone <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.Tone</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>A note class to store a specific note. /
+public class Note {</p>
+<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> An enum holding tones.
+</code></pre><table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x1: <br> <em>0x1 Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0x3: <br> <em>0x3 Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0x5: <br> <em>0x5 Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0x6: <br> <em>0x6 Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0x8: <br> <em>0x8 Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0xA: <br> <em>0xA Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>0xB: <br> <em>0xB Tone</em></td>
+<td style="text-align:left">Tone</td>
+</tr>
+<tr>
+<td>static final var <strong>TONES</strong> <br> <em>The number of tones including sharped tones.</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-tone-tone-md-">Public Methods for <a href="Tone.html"><code>Tone</code></a></h3>
+<h5 id="-a-id-getbyid-a-public-static-function-__getbyid__-id-"><a id='getbyid'></a>public static function <strong>getById</strong>(id)</h5>
+<p>_Deprecated: Magic value /
+        @Deprecated
+        public byte getId() {
+            return getId(false);
+        }</p>
+<pre><code>    /** Returns the id <span class="hljs-keyword">of</span> this tone. These method allows <span class="hljs-keyword">to</span> <span class="hljs-keyword">return</span> the sharped id <span class="hljs-keyword">of</span> the tone. If the tone couldn't be sharped it always <span class="hljs-keyword">return</span> the not sharped id <span class="hljs-keyword">of</span> this tone. Magic value /
+    @Deprecated
+    <span class="hljs-keyword">public</span> byte getId(boolean sharped) {
+        byte id = (byte) (sharped &amp;&amp; sharpable ? this.id + <span class="hljs-number">1</span> : this.id);
+
+        <span class="hljs-keyword">return</span> (byte) (id % TONES_COUNT);
+    }
+
+    /** Returns <span class="hljs-keyword">if</span> this tone could be sharped. Magic value /
+    @Deprecated
+    <span class="hljs-keyword">public</span> boolean isSharped(byte id) {
+        <span class="hljs-keyword">if</span> (id == getId(<span class="hljs-keyword">false</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (id == getId(<span class="hljs-keyword">true</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// The id isn't matching to the tone!</span>
+            throw <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"The id isn't matching to the tone."</span>);
+        }
+    }
+
+    /** Returns the tone <span class="hljs-keyword">to</span> id. Also returning the semitones. Magic value_
+</code></pre><p>_The number of tones including sharped tones. /
+        public static final byte TONES_COUNT = 12;</p>
+<pre><code>    private Tone(int <span class="hljs-property">id</span>, <span class="hljs-type">boolean</span> sharpable) {
+        this.<span class="hljs-property">id</span> = (byte) (<span class="hljs-property">id</span> % TONES_COUNT);
+        this.sharpable = sharpable;
+    }
+
+    /** Returns <span class="hljs-keyword">the</span> <span class="hljs-keyword">not</span> sharped <span class="hljs-property">id</span> <span class="hljs-keyword">of</span> this tone._
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>byte</code></td>
+<td>the id of the tone.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Tone.html"><code>Tone</code></a></td>
+<td>the not sharped id of this tone.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-tone-tone-md-">Public Fields for <a href="Tone.html"><code>Tone</code></a></h3>
+<h5 id="-a-id-tones-a-public-static-final-var-__tones__"><a id='tones'></a>public static final var <strong>TONES</strong></h5>
+<p><em>The number of tones including sharped tones.</em></p>
+<blockquote>
+<p>Returns
+ <code>byte</code></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

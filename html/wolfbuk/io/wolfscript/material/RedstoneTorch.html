@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API RedstoneTorch</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html'>material</a></li>
+<li class='current'><a href='#'>RedstoneTorch</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Attachable.html'>Attachable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Banner.html'>Banner</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Bed.html'>Bed</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Button.html'>Button</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Cake.html'>Cake</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Cauldron.html'>Cauldron</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Chest.html'>Chest</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Coal.html'>Coal</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\CocoaPlantSize.html'>CocoaPlantSize</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Colorable.html'>Colorable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Command.html'>Command</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Crops.html'>Crops</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\DetectorRail.html'>DetectorRail</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Diode.html'>Diode</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Directional.html'>Directional</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\DirectionalContainer.html'>DirectionalContainer</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Dispenser.html'>Dispenser</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Dye.html'>Dye</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\EnderChest.html'>EnderChest</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\ExtendedRails.html'>ExtendedRails</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\FlowerPot.html'>FlowerPot</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Furnace.html'>Furnace</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\FurnaceAndDispenser.html'>FurnaceAndDispenser</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Ladder.html'>Ladder</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Leaves.html'>Leaves</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Lever.html'>Lever</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\LongGrass.html'>LongGrass</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\MaterialData.html'>MaterialData</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\MonsterEggs.html'>MonsterEggs</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Mushroom.html'>Mushroom</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\NetherWarts.html'>NetherWarts</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Openable.html'>Openable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\PistonExtensionMaterial.html'>PistonExtensionMaterial</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\PoweredRail.html'>PoweredRail</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\PressurePlate.html'>PressurePlate</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\PressureSensor.html'>PressureSensor</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Pumpkin.html'>Pumpkin</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Rails.html'>Rails</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Redstone.html'>Redstone</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\RedstoneTorch.html'>RedstoneTorch</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\RedstoneWire.html'>RedstoneWire</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Sandstone.html'>Sandstone</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Sign.html'>Sign</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\SimpleAttachableMaterialData.html'>SimpleAttachableMaterialData</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Skull.html'>Skull</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\SmoothBrick.html'>SmoothBrick</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\SpawnEgg.html'>SpawnEgg</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Stairs.html'>Stairs</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Step.html'>Step</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\TexturedMaterial.html'>TexturedMaterial</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Torch.html'>Torch</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\TrapDoor.html'>TrapDoor</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Tree.html'>Tree</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Tripwire.html'>Tripwire</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\TripwireHook.html'>TripwireHook</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Vine.html'>Vine</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\WoodenStep.html'>WoodenStep</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\material\Wool.html'>Wool</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="redstonetorch-__class__">RedstoneTorch <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.material.RedstoneTorch
+Extends <a href="Torch.html"><code>Torch</code></a>
+Implements <a href="Redstone.html"><code>Redstone</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Represents a redstone torch</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>RedstoneTorch</strong>() <br> <em>RedstoneTorch constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>() <br> <em>clone method</em></td>
+<td style="text-align:left"><a href="RedstoneTorch.html"><code>RedstoneTorch</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isPowered</strong>() <br> <em>isPowered method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="Torch.html"><code>Torch</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>Torch</strong>() <br> <em>Torch constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>AttachedFace</strong> <br> <em>AttachedFace property</em></td>
+<td style="text-align:left"><a href="..\block\BlockFace.html"><code>BlockFace</code></a></td>
+</tr>
+<tr>
+<td> writeonly property <strong>FacingDirection</strong> <br> <em>FacingDirection property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>() <br> <em>clone method</em></td>
+<td style="text-align:left"><a href="Torch.html"><code>Torch</code></a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> readonly property <strong>Facing</strong> <br> <em>Facing property</em></td>
+<td style="text-align:left"><a href="..\block\BlockFace.html"><code>BlockFace</code></a></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>() <br> <em>clone method</em></td>
+<td style="text-align:left"><a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="MaterialData.html"><code>MaterialData</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>() <br> <em>clone method</em></td>
+<td style="text-align:left"><a href="MaterialData.html"><code>MaterialData</code></a></td>
+</tr>
+<tr>
+<td> function <strong>equals</strong>(obj) <br> <em>equals method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>toItemStack</strong>(amount) <br> <em>toItemStack method</em></td>
+<td style="text-align:left"><code>ItemStack</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-redstonetorch-redstonetorch-md-">Public Constructors for <a href="RedstoneTorch.html"><code>RedstoneTorch</code></a></h3>
+<h5 id="-a-id-redstonetorch-a-new-__redstonetorch__-"><a id='redstonetorch'></a>new <strong>RedstoneTorch</strong>()</h5>
+<p><em>RedstoneTorch constructor</em></p>
+<hr>
+<h3 id="public-methods-for-redstonetorch-redstonetorch-md-">Public Methods for <a href="RedstoneTorch.html"><code>RedstoneTorch</code></a></h3>
+<h5 id="-a-id-clone-a-public-function-__clone__-"><a id='clone'></a>public  function <strong>clone</strong>()</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="RedstoneTorch.html"><code>RedstoneTorch</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ispowered-a-public-function-__ispowered__-"><a id='ispowered'></a>public  function <strong>isPowered</strong>()</h5>
+<p><em>isPowered method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if powered, otherwise false</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-torch-torch-md-">Public Constructors for <a href="Torch.html"><code>Torch</code></a></h3>
+<h5 id="-a-id-torch-a-new-__torch__-"><a id='torch'></a>new <strong>Torch</strong>()</h5>
+<p><em>Torch constructor</em></p>
+<hr>
+<h3 id="public-properties-for-torch-torch-md-">Public Properties for <a href="Torch.html"><code>Torch</code></a></h3>
+<h5 id="-a-id-attachedface-a-public-readonly-property-__attachedface__"><a id='attachedface'></a>public  readonly property <strong>AttachedFace</strong></h5>
+<p><em>AttachedFace property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\block\BlockFace.html"><code>BlockFace</code></a></td>
+<td>BlockFace attached to</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-facingdirection-a-public-writeonly-property-__facingdirection__"><a id='facingdirection'></a>public  writeonly property <strong>FacingDirection</strong></h5>
+<p><em>FacingDirection property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>face</td>
+<td><a href="..\block\BlockFace.html"><code>BlockFace</code></a></td>
+<td>face argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-torch-torch-md-">Public Methods for <a href="Torch.html"><code>Torch</code></a></h3>
+<h5 id="-a-id-clone-a-public-function-__clone__-"><a id='clone'></a>public  function <strong>clone</strong>()</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Torch.html"><code>Torch</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-simpleattachablematerialdata-simpleattachablematerialdata-md-">Public Constructors for <a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></h3>
+<h5 id="-a-id-simpleattachablematerialdata-a-new-__simpleattachablematerialdata__-type-data-"><a id='simpleattachablematerialdata'></a>new <strong>SimpleAttachableMaterialData</strong>(type, data)</h5>
+<p>_Deprecated: Magic value /
+    @Deprecated
+    public SimpleAttachableMaterialData(int type) {
+        super(type);
+    }</p>
+<pre><code><span class="hljs-keyword">public</span> SimpleAttachableMaterialData(int <span class="hljs-class"><span class="hljs-keyword">type</span>, <span class="hljs-title">BlockFace</span> <span class="hljs-title">direction</span>) {</span>
+    this(<span class="hljs-class"><span class="hljs-keyword">type</span>);</span>
+    setFacingDirection(direction);
+}
+
+<span class="hljs-keyword">public</span> SimpleAttachableMaterialData(Material <span class="hljs-class"><span class="hljs-keyword">type</span>, <span class="hljs-title">BlockFace</span> <span class="hljs-title">direction</span>) {</span>
+    this(<span class="hljs-class"><span class="hljs-keyword">type</span>);</span>
+    setFacingDirection(direction);
+}
+
+<span class="hljs-keyword">public</span> SimpleAttachableMaterialData(Material <span class="hljs-class"><span class="hljs-keyword">type</span>) {</span>
+    super(<span class="hljs-class"><span class="hljs-keyword">type</span>);</span>
+}
+
+/** Magic value /
+@Deprecated
+<span class="hljs-keyword">public</span> SimpleAttachableMaterialData(int <span class="hljs-class"><span class="hljs-keyword">type</span>, <span class="hljs-title">byte</span> <span class="hljs-title">data</span>) {</span>
+    super(<span class="hljs-class"><span class="hljs-keyword">type</span>, <span class="hljs-title">data</span>);</span>
+}
+
+/** Magic value_
+</code></pre><p><em>SimpleAttachableMaterialData constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="..\Material.html"><code>Material</code></a></td>
+<td>the raw type id</td>
+</tr>
+<tr>
+<td>data</td>
+<td><code>byte</code></td>
+<td>the raw data value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-simpleattachablematerialdata-simpleattachablematerialdata-md-">Public Properties for <a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></h3>
+<h5 id="-a-id-facing-a-public-readonly-property-__facing__"><a id='facing'></a>public  readonly property <strong>Facing</strong></h5>
+<p><em>Facing property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\block\BlockFace.html"><code>BlockFace</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-simpleattachablematerialdata-simpleattachablematerialdata-md-">Public Methods for <a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></h3>
+<h5 id="-a-id-clone-a-public-function-__clone__-"><a id='clone'></a>public  function <strong>clone</strong>()</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SimpleAttachableMaterialData.html"><code>SimpleAttachableMaterialData</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-materialdata-materialdata-md-">Public Methods for <a href="MaterialData.html"><code>MaterialData</code></a></h3>
+<h5 id="-a-id-clone-a-public-function-__clone__-"><a id='clone'></a>public  function <strong>clone</strong>()</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MaterialData.html"><code>MaterialData</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-equals-a-public-function-__equals__-obj-"><a id='equals'></a>public  function <strong>equals</strong>(obj)</h5>
+<p><em>equals method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>obj</td>
+<td><code>Object</code></td>
+<td>obj argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
+<p><em>hashCode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-toitemstack-a-public-function-__toitemstack__-amount-"><a id='toitemstack'></a>public  function <strong>toItemStack</strong>(amount)</h5>
+<p><em>toItemStack method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td><code>int</code></td>
+<td>The stack size of the new stack</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ItemStack</code></td>
+<td>Raw data</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

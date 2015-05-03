@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API assert</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>assert</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li class='active'><a href='..\wolfnode\assert.html'>assert</a></li>
+<li><a href='..\wolfnode\child_process.html'>child_process</a></li>
+<li><a href='..\wolfnode\cluster.html'>cluster</a></li>
+<li><a href='..\wolfnode\debugger.html'>debugger</a></li>
+<li><a href='..\wolfnode\domain.html'>domain</a></li>
+<li><a href='..\wolfnode\os.html'>os</a></li>
+<li><a href='..\wolfnode\punycode.html'>punycode</a></li>
+<li><a href='..\wolfnode\readline.html'>readline</a></li>
+<li><a href='..\wolfnode\repl.html'>repl</a></li>
+<li><a href='..\wolfnode\smalloc.html'>smalloc</a></li>
+<li><a href='..\wolfnode\string_decoder.html'>string_decoder</a></li>
+<li><a href='..\wolfnode\tty.html'>tty</a></li>
+<li><a href='..\wolfnode\vm.html'>vm</a></li>
+<li><a href='..\wolfnode\zlib.html'>zlib</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="assert">Assert</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">5 - Locked</span>
+</code></pre><p>This module is used for writing unit tests for your applications, you can
+access it with <code>require(&#39;assert&#39;)</code>.</p>
+<h2 id="assert-fail-actual-expected-message-operator-">assert.fail(actual, expected, message, operator)</h2>
+<p>Throws an exception that displays the values for <code>actual</code> and <code>expected</code> separated by the provided operator.</p>
+<h2 id="assert-value-message-assert-ok-value-message-">assert(value[, message]), assert.ok(value[, message])</h2>
+<p>Tests if value is truthy, it is equivalent to <code>assert.equal(true, !!value, message);</code></p>
+<h2 id="assert-equal-actual-expected-message-">assert.equal(actual, expected[, message])</h2>
+<p>Tests shallow, coercive equality with the equal comparison operator ( <code>==</code> ).</p>
+<h2 id="assert-notequal-actual-expected-message-">assert.notEqual(actual, expected[, message])</h2>
+<p>Tests shallow, coercive non-equality with the not equal comparison operator ( <code>!=</code> ).</p>
+<h2 id="assert-deepequal-actual-expected-message-">assert.deepEqual(actual, expected[, message])</h2>
+<p>Tests for deep equality.</p>
+<h2 id="assert-notdeepequal-actual-expected-message-">assert.notDeepEqual(actual, expected[, message])</h2>
+<p>Tests for any deep inequality.</p>
+<h2 id="assert-strictequal-actual-expected-message-">assert.strictEqual(actual, expected[, message])</h2>
+<p>Tests strict equality, as determined by the strict equality operator ( <code>===</code> )</p>
+<h2 id="assert-notstrictequal-actual-expected-message-">assert.notStrictEqual(actual, expected[, message])</h2>
+<p>Tests strict non-equality, as determined by the strict not equal operator ( <code>!==</code> )</p>
+<h2 id="assert-throws-block-error-message-">assert.throws(block[, error][, message])</h2>
+<p>Expects <code>block</code> to throw an error. <code>error</code> can be constructor, <code>RegExp</code> or
+validation function.</p>
+<p>Validate instanceof using constructor:</p>
+<pre><code>assert.throws(
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Wrong value"</span>);
+  },
+  <span class="hljs-built_in">Error</span>
+);
+</code></pre><p>Validate error message using RegExp:</p>
+<pre><code>assert.throws(
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Wrong value"</span>);
+  },
+  <span class="hljs-regexp">/value/</span>
+);
+</code></pre><p>Custom error validation:</p>
+<pre><code>assert.throws(
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Wrong value"</span>);
+  },
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err)</span> </span>{
+    <span class="hljs-keyword">if</span> ( (err <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Error</span>) &amp;&amp; <span class="hljs-regexp">/value/</span>.test(err) ) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+  },
+  <span class="hljs-string">"unexpected error"</span>
+);
+</code></pre><h2 id="assert-doesnotthrow-block-message-">assert.doesNotThrow(block[, message])</h2>
+<p>Expects <code>block</code> not to throw an error, see <code>assert.throws</code> for details.</p>
+<h2 id="assert-iferror-value-">assert.ifError(value)</h2>
+<p>Tests if value is not a false value, throws if it is a true value. Useful when
+testing the first argument, <code>error</code> in callbacks.</p>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

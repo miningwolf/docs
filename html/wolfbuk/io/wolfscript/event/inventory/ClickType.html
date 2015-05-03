@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ClickType</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\0.html'>inventory</a></li>
+<li class='current'><a href='#'>ClickType</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\block\0.html' class=''>event.block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\enchantment\0.html' class=''>event.enchantment</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\hanging\0.html' class=''>event.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\0.html' class=''>event.inventory</a></li> 
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\BrewEvent.html'>BrewEvent</a></li>
+<li class='active'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\ClickType.html'>ClickType</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\CraftItemEvent.html'>CraftItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\DragType.html'>DragType</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\FurnaceBurnEvent.html'>FurnaceBurnEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\FurnaceExtractEvent.html'>FurnaceExtractEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\FurnaceSmeltEvent.html'>FurnaceSmeltEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryAction.html'>InventoryAction</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryClickEvent.html'>InventoryClickEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryCloseEvent.html'>InventoryCloseEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryCreativeEvent.html'>InventoryCreativeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryDragEvent.html'>InventoryDragEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryEvent.html'>InventoryEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryInteractEvent.html'>InventoryInteractEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryMoveItemEvent.html'>InventoryMoveItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryOpenEvent.html'>InventoryOpenEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryPickupItemEvent.html'>InventoryPickupItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\InventoryType.html'>InventoryType</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\PrepareItemCraftEvent.html'>PrepareItemCraftEvent</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\painting\0.html' class=''>event.painting</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\server\0.html' class=''>event.server</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\vehicle\0.html' class=''>event.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\weather\0.html' class=''>event.weather</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="clicktype-__enum__">ClickType <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.inventory.ClickType</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>What the client did to trigger this action (not the result).</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNKNOWN: <br> <em>The left (or primary) mouse button.</em></td>
+<td style="text-align:left">ClickType</td>
+</tr>
+<tr>
+<td> function <strong>isShiftClick</strong>() <br> <em>The left (or primary) mouse button.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-clicktype-clicktype-md-">Public Methods for <a href="ClickType.html"><code>ClickType</code></a></h3>
+<h5 id="-a-id-isshiftclick-a-public-function-__isshiftclick__-"><a id='isshiftclick'></a>public  function <strong>isShiftClick</strong>()</h5>
+<p>_The left (or primary) mouse button. /
+    LEFT,
+    /<strong> Holding shift while pressing the left mouse button. /
+    SHIFT_LEFT,
+    /</strong> The right mouse button. /
+    RIGHT,
+    /<strong> Holding shift while pressing the right mouse button. /
+    SHIFT_RIGHT,
+    /</strong> Clicking the left mouse button on the grey area around the inventory. /
+    WINDOW_BORDER_LEFT,
+    /<strong> Clicking the right mouse button on the grey area around the inventory. /
+    WINDOW_BORDER_RIGHT,
+    /</strong> The middle mouse button, or a &quot;scrollwheel click&quot;. /
+    MIDDLE,
+    /<strong> One of the number keys 1-9, correspond to slots on the hotbar. /
+    NUMBER_KEY,
+    /</strong> Pressing the left mouse button twice in quick succession. /
+    DOUBLE_CLICK,
+    /<strong> The &quot;Drop&quot; key (defaults to Q). /
+    DROP,
+    /</strong> Holding Ctrl while pressing the &quot;Drop&quot; key (defaults to Q). /
+    CONTROL_DROP,
+    /<strong> Any action done with the Creative inventory open. /
+    CREATIVE,
+    /</strong> A type of inventory manipulation not yet recognized by WolfScript. <p> This is only for transitional purposes on a new Minecraft update, and should never be relied upon. <p> Any ClickType.UNKNOWN is called on a best-effort basis. /
+    UNKNOWN,
+    ;</p>
+<pre><code><span class="hljs-comment">/** Gets whether this ClickType represents the pressing of a key on a keyboard._</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if this ClickType represents the pressing of a key /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> isKeyboardClick() {
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span> == ClickType.NUMBER_KEY) || (<span class="hljs-keyword">this</span> == ClickType.DROP) || (<span class="hljs-keyword">this</span> == ClickType.CONTROL_DROP);
+}
+
+<span class="hljs-comment">/** Gets whether this ClickType represents an action that can only be performed by a Player in creative mode.</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

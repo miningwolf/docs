@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API NumberConversions</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html'>util</a></li>
+<li class='current'><a href='#'>NumberConversions</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\BlockIterator.html'>BlockIterator</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\BlockVector.html'>BlockVector</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\CachedServerIcon.html'>CachedServerIcon</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\ChatPaginator.html'>ChatPaginator</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\EulerAngle.html'>EulerAngle</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\FileUtil.html'>FileUtil</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\Java15Compat.html'>Java15Compat</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\NumberConversions.html'>NumberConversions</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\StringUtil.html'>StringUtil</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\io\0.html' class=''>util.io</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\noise\0.html' class=''>util.noise</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\permissions\0.html' class=''>util.permissions</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="numberconversions-__class__">NumberConversions <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.util.NumberConversions</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Utils for casting number types to other number types</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static function <strong>toLong</strong>(object) <br> <em>toLong method</em></td>
+<td style="text-align:left"><code>long</code></td>
+</tr>
+<tr>
+<td>static function <strong>checkFinite</strong>(d, message) <br> <em>checkFinite method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td>static function <strong>checkFinite</strong>(d, message) <br> <em>checkFinite method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td>static function <strong>ceil</strong>(double) <br> <em>ceil method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static function <strong>floor</strong>(num) <br> <em>floor method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static function <strong>isFinite</strong>(d) <br> <em>isFinite method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>isFinite</strong>(f) <br> <em>isFinite method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>round</strong>(num) <br> <em>round method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static function <strong>square</strong>(num) <br> <em>square method</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td>static function <strong>toByte</strong>(object) <br> <em>toByte method</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td>static function <strong>toDouble</strong>(object) <br> <em>toDouble method</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td>static function <strong>toFloat</strong>(object) <br> <em>toFloat method</em></td>
+<td style="text-align:left"><code>float</code></td>
+</tr>
+<tr>
+<td>static function <strong>toInt</strong>(object) <br> <em>toInt method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static function <strong>toShort</strong>(object) <br> <em>toShort method</em></td>
+<td style="text-align:left"><code>short</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-numberconversions-numberconversions-md-">Public Methods for <a href="NumberConversions.html"><code>NumberConversions</code></a></h3>
+<h5 id="-a-id-tolong-a-public-static-function-__tolong__-object-"><a id='tolong'></a>public static function <strong>toLong</strong>(object)</h5>
+<p><em>toLong method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-checkfinite-a-public-static-function-__checkfinite__-d-message-"><a id='checkfinite'></a>public static function <strong>checkFinite</strong>(d, message)</h5>
+<p><em>checkFinite method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td><code>float</code></td>
+<td>d argument</td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>String</code></td>
+<td>message argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-checkfinite-a-public-static-function-__checkfinite__-d-message-"><a id='checkfinite'></a>public static function <strong>checkFinite</strong>(d, message)</h5>
+<p><em>checkFinite method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td><code>double</code></td>
+<td>d argument</td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>String</code></td>
+<td>message argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ceil-a-public-static-function-__ceil__-double-"><a id='ceil'></a>public static function <strong>ceil</strong>(double)</h5>
+<p><em>ceil method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>double</td>
+<td><code>final</code></td>
+<td>double argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-floor-a-public-static-function-__floor__-num-"><a id='floor'></a>public static function <strong>floor</strong>(num)</h5>
+<p><em>floor method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td><code>double</code></td>
+<td>num argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isfinite-a-public-static-function-__isfinite__-d-"><a id='isfinite'></a>public static function <strong>isFinite</strong>(d)</h5>
+<p><em>isFinite method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td><code>double</code></td>
+<td>d argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isfinite-a-public-static-function-__isfinite__-f-"><a id='isfinite'></a>public static function <strong>isFinite</strong>(f)</h5>
+<p><em>isFinite method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f</td>
+<td><code>float</code></td>
+<td>f argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-round-a-public-static-function-__round__-num-"><a id='round'></a>public static function <strong>round</strong>(num)</h5>
+<p><em>round method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td><code>double</code></td>
+<td>num argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-square-a-public-static-function-__square__-num-"><a id='square'></a>public static function <strong>square</strong>(num)</h5>
+<p><em>square method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td><code>double</code></td>
+<td>num argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>double</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tobyte-a-public-static-function-__tobyte__-object-"><a id='tobyte'></a>public static function <strong>toByte</strong>(object)</h5>
+<p><em>toByte method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-todouble-a-public-static-function-__todouble__-object-"><a id='todouble'></a>public static function <strong>toDouble</strong>(object)</h5>
+<p><em>toDouble method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>double</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tofloat-a-public-static-function-__tofloat__-object-"><a id='tofloat'></a>public static function <strong>toFloat</strong>(object)</h5>
+<p><em>toFloat method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-toint-a-public-static-function-__toint__-object-"><a id='toint'></a>public static function <strong>toInt</strong>(object)</h5>
+<p><em>toInt method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-toshort-a-public-static-function-__toshort__-object-"><a id='toshort'></a>public static function <strong>toShort</strong>(object)</h5>
+<p><em>toShort method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td><code>Object</code></td>
+<td>object argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

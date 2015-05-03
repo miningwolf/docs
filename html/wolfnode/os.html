@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API os</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>os</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li><a href='..\wolfnode\assert.html'>assert</a></li>
+<li><a href='..\wolfnode\child_process.html'>child_process</a></li>
+<li><a href='..\wolfnode\cluster.html'>cluster</a></li>
+<li><a href='..\wolfnode\debugger.html'>debugger</a></li>
+<li><a href='..\wolfnode\domain.html'>domain</a></li>
+<li class='active'><a href='..\wolfnode\os.html'>os</a></li>
+<li><a href='..\wolfnode\punycode.html'>punycode</a></li>
+<li><a href='..\wolfnode\readline.html'>readline</a></li>
+<li><a href='..\wolfnode\repl.html'>repl</a></li>
+<li><a href='..\wolfnode\smalloc.html'>smalloc</a></li>
+<li><a href='..\wolfnode\string_decoder.html'>string_decoder</a></li>
+<li><a href='..\wolfnode\tty.html'>tty</a></li>
+<li><a href='..\wolfnode\vm.html'>vm</a></li>
+<li><a href='..\wolfnode\zlib.html'>zlib</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="os">os</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">4 - API Frozen</span>
+</code></pre><p>Provides a few basic operating-system related utility functions.</p>
+<p>Use <code>require(&#39;os&#39;)</code> to access this module.</p>
+<h2 id="os-tmpdir-">os.tmpdir()</h2>
+<p>Returns the operating system&#39;s default directory for temp files.</p>
+<h2 id="os-endianness-">os.endianness()</h2>
+<p>Returns the endianness of the CPU. Possible values are <code>&quot;BE&quot;</code> or <code>&quot;LE&quot;</code>.</p>
+<h2 id="os-hostname-">os.hostname()</h2>
+<p>Returns the hostname of the operating system.</p>
+<h2 id="os-type-">os.type()</h2>
+<p>Returns the operating system name.</p>
+<h2 id="os-platform-">os.platform()</h2>
+<p>Returns the operating system platform.</p>
+<h2 id="os-arch-">os.arch()</h2>
+<p>Returns the operating system CPU architecture. Possible values are <code>&quot;x64&quot;</code>,
+<code>&quot;arm&quot;</code> and <code>&quot;ia32&quot;</code>.</p>
+<h2 id="os-release-">os.release()</h2>
+<p>Returns the operating system release.</p>
+<h2 id="os-uptime-">os.uptime()</h2>
+<p>Returns the system uptime in seconds.</p>
+<h2 id="os-loadavg-">os.loadavg()</h2>
+<p>Returns an array containing the 1, 5, and 15 minute load averages.</p>
+<p>The load average is a measure of system activity, calculated by the operating
+system and expressed as a fractional number.  As a rule of thumb, the load
+average should ideally be less than the number of logical CPUs in the system.</p>
+<p>The load average is a very UNIX-y concept; there is no real equivalent on
+Windows platforms.  That is why this function always returns <code>[0, 0, 0]</code> on
+Windows.</p>
+<h2 id="os-totalmem-">os.totalmem()</h2>
+<p>Returns the total amount of system memory in bytes.</p>
+<h2 id="os-freemem-">os.freemem()</h2>
+<p>Returns the amount of free system memory in bytes.</p>
+<h2 id="os-cpus-">os.cpus()</h2>
+<p>Returns an array of objects containing information about each CPU/core
+installed: model, speed (in MHz), and times (an object containing the number of
+milliseconds the CPU/core spent in: user, nice, sys, idle, and irq).</p>
+<p>Example inspection of os.cpus:</p>
+<pre><code><span class="hljs-collection">[ <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">252020</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">30340</span>,
+       idle: <span class="hljs-number">1070356870</span>,
+       irq: <span class="hljs-number">0</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">306960</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">26980</span>,
+       idle: <span class="hljs-number">1071569080</span>,
+       irq: <span class="hljs-number">0</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">248450</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">21750</span>,
+       idle: <span class="hljs-number">1070919370</span>,
+       irq: <span class="hljs-number">0</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">256880</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">19430</span>,
+       idle: <span class="hljs-number">1070905480</span>,
+       irq: <span class="hljs-number">20</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">511580</span>,
+       nice: <span class="hljs-number">20</span>,
+       sys: <span class="hljs-number">40900</span>,
+       idle: <span class="hljs-number">1070842510</span>,
+       irq: <span class="hljs-number">0</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">291660</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">34360</span>,
+       idle: <span class="hljs-number">1070888000</span>,
+       irq: <span class="hljs-number">10</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">308260</span>,
+       nice: <span class="hljs-number">0</span>,
+       sys: <span class="hljs-number">55410</span>,
+       idle: <span class="hljs-number">1071129970</span>,
+       irq: <span class="hljs-number">880</span> }</span> }</span>,
+  <span class="hljs-collection">{ model: 'Intel<span class="hljs-list">(<span class="hljs-keyword">R</span>)</span> Core<span class="hljs-list">(<span class="hljs-keyword">TM</span>)</span> i7 CPU         <span class="hljs-number">860</span>  @ <span class="hljs-number">2.80</span>GHz',
+    speed: <span class="hljs-number">2926</span>,
+    times:
+     <span class="hljs-collection">{ user: <span class="hljs-number">266450</span>,
+       nice: <span class="hljs-number">1480</span>,
+       sys: <span class="hljs-number">34920</span>,
+       idle: <span class="hljs-number">1072572010</span>,
+       irq: <span class="hljs-number">30</span> }</span> }</span> ]</span>
+</code></pre><h2 id="os-networkinterfaces-">os.networkInterfaces()</h2>
+<p>Get a list of network interfaces:</p>
+<pre><code>{ <span class="hljs-string">lo:</span>
+   [ { <span class="hljs-string">address:</span> <span class="hljs-string">'127.0.0.1'</span>,
+<span class="hljs-label">       netmask:</span> <span class="hljs-string">'255.0.0.0'</span>,
+<span class="hljs-label">       family:</span> <span class="hljs-string">'IPv4'</span>,
+<span class="hljs-label">       mac:</span> <span class="hljs-string">'00:00:00:00:00:00'</span>,
+<span class="hljs-label">       internal:</span> <span class="hljs-literal">true</span> },
+     { <span class="hljs-string">address:</span> <span class="hljs-string">'::1'</span>,
+<span class="hljs-label">       netmask:</span> <span class="hljs-string">'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff'</span>,
+<span class="hljs-label">       family:</span> <span class="hljs-string">'IPv6'</span>,
+<span class="hljs-label">       mac:</span> <span class="hljs-string">'00:00:00:00:00:00'</span>,
+<span class="hljs-label">       internal:</span> <span class="hljs-literal">true</span> } ],
+<span class="hljs-label">  eth0:</span>
+   [ { <span class="hljs-string">address:</span> <span class="hljs-string">'192.168.1.108'</span>,
+<span class="hljs-label">       netmask:</span> <span class="hljs-string">'255.255.255.0'</span>,
+<span class="hljs-label">       family:</span> <span class="hljs-string">'IPv4'</span>,
+<span class="hljs-label">       mac:</span> <span class="hljs-string">'01:02:03:0a:0b:0c'</span>,
+<span class="hljs-label">       internal:</span> <span class="hljs-literal">false</span> },
+     { <span class="hljs-string">address:</span> <span class="hljs-string">'fe80::a00:27ff:fe4e:66a1'</span>,
+<span class="hljs-label">       netmask:</span> <span class="hljs-string">'ffff:ffff:ffff:ffff::'</span>,
+<span class="hljs-label">       family:</span> <span class="hljs-string">'IPv6'</span>,
+<span class="hljs-label">       mac:</span> <span class="hljs-string">'01:02:03:0a:0b:0c'</span>,
+<span class="hljs-label">       internal:</span> <span class="hljs-literal">false</span> } ] }
+</code></pre><h2 id="os-eol">os.EOL</h2>
+<p>A constant defining the appropriate End-of-line marker for the operating system.</p>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

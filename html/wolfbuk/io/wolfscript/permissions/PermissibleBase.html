@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PermissibleBase</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html'>permissions</a></li>
+<li class='current'><a href='#'>PermissibleBase</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\Permissible.html'>Permissible</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\PermissibleBase.html'>PermissibleBase</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\Permission.html'>Permission</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\PermissionAttachment.html'>PermissionAttachment</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\PermissionAttachmentInfo.html'>PermissionAttachmentInfo</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\PermissionDefault.html'>PermissionDefault</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\PermissionRemovedExecutor.html'>PermissionRemovedExecutor</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\ServerOperator.html'>ServerOperator</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="permissiblebase-__class__">PermissibleBase <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.permissions.PermissibleBase
+Implements <a href="Permissible.html"><code>Permissible</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Base Permissible for use in any Permissible object via proxy or extension</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>PermissibleBase</strong>(opable) <br> <em>PermissibleBase constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>RemoveAttachmentRunnable</strong>(attachment) <br> <em>RemoveAttachmentRunnable constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>EffectivePermissions</strong> <br> <em>EffectivePermissions property</em></td>
+<td style="text-align:left"><code>Set&lt;PermissionAttachmentInfo&gt;</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Op</strong> <br> <em>Op property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>addAttachment</strong>(plugin) <br> <em>addAttachment method</em></td>
+<td style="text-align:left"><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isOp</strong>() <br> <em>isOp method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>addAttachment</strong>(plugin, ticks) <br> <em>addAttachment method</em></td>
+<td style="text-align:left"><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+</tr>
+<tr>
+<td> function <strong>hasPermission</strong>(inName) <br> <em>hasPermission method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>hasPermission</strong>(perm) <br> <em>hasPermission method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>addAttachment</strong>(plugin, name, value) <br> <em>addAttachment method</em></td>
+<td style="text-align:left"><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+</tr>
+<tr>
+<td> function <strong>addAttachment</strong>(plugin, name, value, ticks) <br> <em>addAttachment method</em></td>
+<td style="text-align:left"><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isPermissionSet</strong>(perm) <br> <em>isPermissionSet method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>isPermissionSet</strong>(name) <br> <em>isPermissionSet method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>recalculatePermissions</strong>() <br> <em>recalculatePermissions method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>removeAttachment</strong>(attachment) <br> <em>removeAttachment method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>run</strong>() <br> <em>run method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-permissiblebase-permissiblebase-md-">Public Constructors for <a href="PermissibleBase.html"><code>PermissibleBase</code></a></h3>
+<h5 id="-a-id-permissiblebase-a-new-__permissiblebase__-opable-"><a id='permissiblebase'></a>new <strong>PermissibleBase</strong>(opable)</h5>
+<p><em>PermissibleBase constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>opable</td>
+<td><a href="ServerOperator.html"><code>ServerOperator</code></a></td>
+<td>opable argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removeattachmentrunnable-a-new-__removeattachmentrunnable__-attachment-"><a id='removeattachmentrunnable'></a>new <strong>RemoveAttachmentRunnable</strong>(attachment)</h5>
+<p><em>RemoveAttachmentRunnable constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attachment</td>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td>attachment argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-permissiblebase-permissiblebase-md-">Public Properties for <a href="PermissibleBase.html"><code>PermissibleBase</code></a></h3>
+<h5 id="-a-id-effectivepermissions-a-public-readonly-property-__effectivepermissions__"><a id='effectivepermissions'></a>public  readonly property <strong>EffectivePermissions</strong></h5>
+<p><em>EffectivePermissions property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Set&lt;PermissionAttachmentInfo&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-op-a-public-writeonly-property-__op__"><a id='op'></a>public  writeonly property <strong>Op</strong></h5>
+<p><em>Op property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-permissiblebase-permissiblebase-md-">Public Methods for <a href="PermissibleBase.html"><code>PermissibleBase</code></a></h3>
+<h5 id="-a-id-addattachment-a-public-function-__addattachment__-plugin-"><a id='addattachment'></a>public  function <strong>addAttachment</strong>(plugin)</h5>
+<p><em>addAttachment method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugin</td>
+<td><a href="..\plugin\Plugin.html"><code>Plugin</code></a></td>
+<td>plugin argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isop-a-public-function-__isop__-"><a id='isop'></a>public  function <strong>isOp</strong>()</h5>
+<p><em>isOp method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-addattachment-a-public-function-__addattachment__-plugin-ticks-"><a id='addattachment'></a>public  function <strong>addAttachment</strong>(plugin, ticks)</h5>
+<p><em>addAttachment method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugin</td>
+<td><a href="..\plugin\Plugin.html"><code>Plugin</code></a></td>
+<td>plugin argument</td>
+</tr>
+<tr>
+<td>ticks</td>
+<td><code>int</code></td>
+<td>ticks argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-haspermission-a-public-function-__haspermission__-inname-"><a id='haspermission'></a>public  function <strong>hasPermission</strong>(inName)</h5>
+<p><em>hasPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inName</td>
+<td><code>String</code></td>
+<td>inName argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-haspermission-a-public-function-__haspermission__-perm-"><a id='haspermission'></a>public  function <strong>hasPermission</strong>(perm)</h5>
+<p><em>hasPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>perm</td>
+<td><a href="Permission.html"><code>Permission</code></a></td>
+<td>perm argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-addattachment-a-public-function-__addattachment__-plugin-name-value-"><a id='addattachment'></a>public  function <strong>addAttachment</strong>(plugin, name, value)</h5>
+<p><em>addAttachment method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugin</td>
+<td><a href="..\plugin\Plugin.html"><code>Plugin</code></a></td>
+<td>plugin argument</td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>name argument</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-addattachment-a-public-function-__addattachment__-plugin-name-value-ticks-"><a id='addattachment'></a>public  function <strong>addAttachment</strong>(plugin, name, value, ticks)</h5>
+<p><em>addAttachment method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugin</td>
+<td><a href="..\plugin\Plugin.html"><code>Plugin</code></a></td>
+<td>plugin argument</td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>name argument</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+<tr>
+<td>ticks</td>
+<td><code>int</code></td>
+<td>ticks argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ispermissionset-a-public-function-__ispermissionset__-perm-"><a id='ispermissionset'></a>public  function <strong>isPermissionSet</strong>(perm)</h5>
+<p><em>isPermissionSet method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>perm</td>
+<td><a href="Permission.html"><code>Permission</code></a></td>
+<td>perm argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ispermissionset-a-public-function-__ispermissionset__-name-"><a id='ispermissionset'></a>public  function <strong>isPermissionSet</strong>(name)</h5>
+<p><em>isPermissionSet method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>name argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-recalculatepermissions-a-public-function-__recalculatepermissions__-"><a id='recalculatepermissions'></a>public  function <strong>recalculatePermissions</strong>()</h5>
+<p><em>recalculatePermissions method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removeattachment-a-public-function-__removeattachment__-attachment-"><a id='removeattachment'></a>public  function <strong>removeAttachment</strong>(attachment)</h5>
+<p><em>removeAttachment method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attachment</td>
+<td><a href="PermissionAttachment.html"><code>PermissionAttachment</code></a></td>
+<td>attachment argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-run-a-public-function-__run__-"><a id='run'></a>public  function <strong>run</strong>()</h5>
+<p><em>run method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

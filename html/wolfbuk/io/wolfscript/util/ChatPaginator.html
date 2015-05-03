@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ChatPaginator</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html'>util</a></li>
+<li class='current'><a href='#'>ChatPaginator</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\BlockIterator.html'>BlockIterator</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\BlockVector.html'>BlockVector</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\CachedServerIcon.html'>CachedServerIcon</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\ChatPaginator.html'>ChatPaginator</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\EulerAngle.html'>EulerAngle</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\FileUtil.html'>FileUtil</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\Java15Compat.html'>Java15Compat</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\NumberConversions.html'>NumberConversions</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\util\StringUtil.html'>StringUtil</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\io\0.html' class=''>util.io</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\noise\0.html' class=''>util.noise</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\permissions\0.html' class=''>util.permissions</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="chatpaginator-__class__">ChatPaginator <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.util.ChatPaginator</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>The ChatPaginator takes a raw string of arbitrary length and breaks it down into an array of strings appropriate for displaying on the Minecraft player console.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>ChatPage</strong>(pageNumber, totalPages) <br> <em>ChatPage constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Lines</strong> <br> <em>Lines property</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>PageNumber</strong> <br> <em>PageNumber property</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>TotalPages</strong> <br> <em>TotalPages property</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static function <strong>wordWrap</strong>(rawString, lineLength) <br> <em>Breaks a raw string up into pages using the default width and height.</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td>static final var <strong>GUARANTEED</strong> <br> <em>GUARANTEED field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static final var <strong>AVERAGE</strong> <br> <em>AVERAGE field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static final var <strong>UNBOUNDED</strong> <br> <em>UNBOUNDED field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static final var <strong>OPEN</strong> <br> <em>OPEN field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static final var <strong>CLOSED</strong> <br> <em>CLOSED field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static final var <strong>UNBOUNDED</strong> <br> <em>UNBOUNDED field</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-chatpaginator-chatpaginator-md-">Public Constructors for <a href="ChatPaginator.html"><code>ChatPaginator</code></a></h3>
+<h5 id="-a-id-chatpage-a-new-__chatpage__-pagenumber-totalpages-"><a id='chatpage'></a>new <strong>ChatPage</strong>(pageNumber, totalPages)</h5>
+<p><em>ChatPage constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageNumber</td>
+<td><code>int</code></td>
+<td>pageNumber argument</td>
+</tr>
+<tr>
+<td>totalPages</td>
+<td><code>int</code></td>
+<td>totalPages argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-chatpaginator-chatpaginator-md-">Public Properties for <a href="ChatPaginator.html"><code>ChatPaginator</code></a></h3>
+<h5 id="-a-id-lines-a-public-readonly-property-__lines__"><a id='lines'></a>public  readonly property <strong>Lines</strong></h5>
+<p><em>Lines property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-pagenumber-a-public-readonly-property-__pagenumber__"><a id='pagenumber'></a>public  readonly property <strong>PageNumber</strong></h5>
+<p><em>PageNumber property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-totalpages-a-public-readonly-property-__totalpages__"><a id='totalpages'></a>public  readonly property <strong>TotalPages</strong></h5>
+<p><em>TotalPages property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-chatpaginator-chatpaginator-md-">Public Methods for <a href="ChatPaginator.html"><code>ChatPaginator</code></a></h3>
+<h5 id="-a-id-wordwrap-a-public-static-function-__wordwrap__-rawstring-linelength-"><a id='wordwrap'></a>public static function <strong>wordWrap</strong>(rawString, lineLength)</h5>
+<p><em>Breaks a raw string up into pages using the default width and height.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rawString</td>
+<td><code>String</code></td>
+<td>The raw string to break.</td>
+</tr>
+<tr>
+<td>lineLength</td>
+<td><code>int</code></td>
+<td>The desired width of a chat line.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td>A single chat page. /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ChatPage <span class="hljs-title">paginate</span><span class="hljs-params">(String unpaginatedString, <span class="hljs-keyword">int</span> pageNumber)</span> </span>{
+    <span class="hljs-keyword">return</span>  paginate(unpaginatedString, pageNumber, GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH, CLOSED_CHAT_PAGE_HEIGHT);
+}
+
+<span class="hljs-comment">/** Breaks a raw string up into pages using a provided width and height.</span>
+</code></pre><hr>
+<h3 id="public-fields-for-chatpaginator-chatpaginator-md-">Public Fields for <a href="ChatPaginator.html"><code>ChatPaginator</code></a></h3>
+<h5 id="-a-id-guaranteed-a-public-static-final-var-__guaranteed__"><a id='guaranteed'></a>public static final var <strong>GUARANTEED</strong></h5>
+<p><em>GUARANTEED field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<h5 id="-a-id-average-a-public-static-final-var-__average__"><a id='average'></a>public static final var <strong>AVERAGE</strong></h5>
+<p><em>AVERAGE field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<h5 id="-a-id-unbounded-a-public-static-final-var-__unbounded__"><a id='unbounded'></a>public static final var <strong>UNBOUNDED</strong></h5>
+<p><em>UNBOUNDED field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<h5 id="-a-id-open-a-public-static-final-var-__open__"><a id='open'></a>public static final var <strong>OPEN</strong></h5>
+<p><em>OPEN field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<h5 id="-a-id-closed-a-public-static-final-var-__closed__"><a id='closed'></a>public static final var <strong>CLOSED</strong></h5>
+<p><em>CLOSED field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<h5 id="-a-id-unbounded-a-public-static-final-var-__unbounded__"><a id='unbounded'></a>public static final var <strong>UNBOUNDED</strong></h5>
+<p><em>UNBOUNDED field</em></p>
+<blockquote>
+<p>Returns
+ <code>int</code></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

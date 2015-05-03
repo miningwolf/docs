@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PermissionManager</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html'>permissionsystem</a></li>
+<li class='current'><a href='#'>PermissionManager</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\MultiworldPermissionProvider.html'>MultiworldPermissionProvider</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\PermissionManager.html'>PermissionManager</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\PermissionNode.html'>PermissionNode</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\PermissionProvider.html'>PermissionProvider</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="permissionmanager-__class__">PermissionManager <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.permissionsystem.PermissionManager</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>This handles the loading of permission providers for groups and players</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>PermissionManager</strong>() <br> <em>PermissionManager constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>addPermission</strong>(path, value, owner, type, world) <br> <em>addPermission method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>getPlayerProvider</strong>(uuid, worldname) <br> <em>Load the permission set for the group with the given name.</em></td>
+<td style="text-align:left"><a href="PermissionProvider.html"><code>PermissionProvider</code></a></td>
+</tr>
+<tr>
+<td> function <strong>removeAllGroupPermissions</strong>(group) <br> <em>removeAllGroupPermissions method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>removeGroupPermission</strong>(path, group) <br> <em>removeGroupPermission method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>removePermissions</strong>(path, world) <br> <em>removePermissions method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>removePlayerPermission</strong>(path, player) <br> <em>removePlayerPermission method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>removePlayerPermission</strong>(path, player, world) <br> <em>removePlayerPermission method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>savePermissionsFromGroup</strong>(g) <br> <em>savePermissionsFromGroup method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>savePermissionsFromPlayer</strong>(p) <br> <em>savePermissionsFromPlayer method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-permissionmanager-permissionmanager-md-">Public Constructors for <a href="PermissionManager.html"><code>PermissionManager</code></a></h3>
+<h5 id="-a-id-permissionmanager-a-new-__permissionmanager__-"><a id='permissionmanager'></a>new <strong>PermissionManager</strong>()</h5>
+<p><em>PermissionManager constructor</em></p>
+<hr>
+<h3 id="public-methods-for-permissionmanager-permissionmanager-md-">Public Methods for <a href="PermissionManager.html"><code>PermissionManager</code></a></h3>
+<h5 id="-a-id-addpermission-a-public-function-__addpermission__-path-value-owner-type-world-"><a id='addpermission'></a>public  function <strong>addPermission</strong>(path, value, owner, type, world)</h5>
+<p><em>addPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>boolean</code></td>
+<td>value argument</td>
+</tr>
+<tr>
+<td>owner</td>
+<td><code>String</code></td>
+<td>owner argument</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>String</code></td>
+<td>type argument</td>
+</tr>
+<tr>
+<td>world</td>
+<td><code>String</code></td>
+<td>world argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getplayerprovider-a-public-function-__getplayerprovider__-uuid-worldname-"><a id='getplayerprovider'></a>public  function <strong>getPlayerProvider</strong>(uuid, worldname)</h5>
+<p><em>Load the permission set for the group with the given name.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid</td>
+<td><code>String</code></td>
+<td>uuid argument</td>
+</tr>
+<tr>
+<td>worldname</td>
+<td><code>String</code></td>
+<td>The Fully qualified name of the world to load permissions for</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PermissionProvider.html"><code>PermissionProvider</code></a></td>
+<td><a href="PermissionProvider.html"><code>PermissionProvider</code></a> /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public PermissionProvider getGroupsProvider(String <span class="hljs-property">name</span>, String worldname) {
+<span class="hljs-command">    return</span> backbone.loadGroupPermissions(<span class="hljs-property">name</span>, worldname);
+}
+
+/** Load <span class="hljs-keyword">the</span> permission <span class="hljs-keyword">set</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> group <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">given</span> <span class="hljs-property">name</span>.
+</code></pre><h5 id="-a-id-removeallgrouppermissions-a-public-function-__removeallgrouppermissions__-group-"><a id='removeallgrouppermissions'></a>public  function <strong>removeAllGroupPermissions</strong>(group)</h5>
+<p><em>removeAllGroupPermissions method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group</td>
+<td><a href="..\user\Group.html"><code>Group</code></a></td>
+<td>group argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removegrouppermission-a-public-function-__removegrouppermission__-path-group-"><a id='removegrouppermission'></a>public  function <strong>removeGroupPermission</strong>(path, group)</h5>
+<p><em>removeGroupPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>group</td>
+<td><a href="..\user\Group.html"><code>Group</code></a></td>
+<td>group argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removepermissions-a-public-function-__removepermissions__-path-world-"><a id='removepermissions'></a>public  function <strong>removePermissions</strong>(path, world)</h5>
+<p><em>removePermissions method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>world</td>
+<td><code>String</code></td>
+<td>world argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removeplayerpermission-a-public-function-__removeplayerpermission__-path-player-"><a id='removeplayerpermission'></a>public  function <strong>removePlayerPermission</strong>(path, player)</h5>
+<p><em>removePlayerPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>player</td>
+<td><a href="..\api\PlayerReference.html"><code>PlayerReference</code></a></td>
+<td>player argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removeplayerpermission-a-public-function-__removeplayerpermission__-path-player-world-"><a id='removeplayerpermission'></a>public  function <strong>removePlayerPermission</strong>(path, player, world)</h5>
+<p><em>removePlayerPermission method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+<tr>
+<td>player</td>
+<td><code>String</code></td>
+<td>player argument</td>
+</tr>
+<tr>
+<td>world</td>
+<td><code>String</code></td>
+<td>world argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-savepermissionsfromgroup-a-public-function-__savepermissionsfromgroup__-g-"><a id='savepermissionsfromgroup'></a>public  function <strong>savePermissionsFromGroup</strong>(g)</h5>
+<p><em>savePermissionsFromGroup method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g</td>
+<td><a href="..\user\Group.html"><code>Group</code></a></td>
+<td>g argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-savepermissionsfromplayer-a-public-function-__savepermissionsfromplayer__-p-"><a id='savepermissionsfromplayer'></a>public  function <strong>savePermissionsFromPlayer</strong>(p)</h5>
+<p><em>savePermissionsFromPlayer method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td><code>Player</code></td>
+<td>p argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

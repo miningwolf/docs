@@ -1,0 +1,174 @@
+@{
+    var helpers = model.require('../views/js/helpers.js');
+ 	var path = model.require('path');
+	
+	var mainItem = model.item;
+	var mainPath = model.path;
+
+	 var fnNameClean = function(name){
+	   		if (model.db.hasOwnProperty(name))
+	   		  	return "[`" + helpers.fnNameOnly(name) + "`]" + "(" + path.relative(mainPath, name.replace(/\./g, "/") + ".md") + ")"
+	   		  else
+	   		     return "`" + helpers.fnNameOnly(name) + "`";
+	   		};
+  
+    var fnDescriptionClean = function(text) {
+    	return	helpers.fnDescriptionClean(text, function(x){
+	   		var name = x.substr(7, x.length-8);
+	   		return fnNameClean(name);
+	   		})
+	 };
+			
+	var fnDeprecatedClean = function(doc) {
+			if (doc && doc.deprecated && doc.deprecated.length>0)
+			  return ': ' +  doc.deprecated.join(' ').trim();
+			else return "";
+	};
+
+	if (mainItem.constructors.length >0)
+	{
+		@:### Public Constructors for @fnNameClean(mainItem.qualifiedname)
+		@:
+		mainItem.constructors.forEach(function(item){
+			@:##### <a id='@item.name.toLowerCase() '></a>new __@item.name __(@helpers.getArgs(item) ) 
+				if (item.deprecated) {
+					@:_Deprecated@fnDeprecatedClean(item.doc) _
+						}
+				@:
+				@:_@fnDescriptionClean(item.description) _
+				@:
+				if (item.args.length > 0)
+				{
+					@:Argument | Type | Description  
+					@:--- | --- | --- 
+					item.args.forEach(function(arg){
+							@:@arg.name  | @fnNameClean(arg.type)  | @fnDescriptionClean(arg.description)
+					});
+				}
+				@:
+		});
+			@:---
+	}
+	if (mainItem.properties.length >0)
+	{
+		@:
+		@:### Public Properties for @fnNameClean(mainItem.qualifiedname)
+		@:
+		mainItem.properties.forEach(function(item){
+				@:##### <a id='@item.name.toLowerCase() '></a>@item.scope  @item.describe  @item.modifier  property __@item.name __
+					if (item.deprecated) {
+						@:_Deprecated@fnDeprecatedClean(item.doc) _
+				}
+				@:
+				@:_@fnDescriptionClean(item.description||item.title) _
+				@:
+				if (item.doc && item.doc.return)
+				{
+					@:Get | Description
+					@:--- | --- 
+					@:@fnNameClean(item.return)  | @fnDescriptionClean(item.doc.return[0])
+					@:
+				} else
+				{
+					@:Get | 
+					@:--- | 
+					@:@fnNameClean(item.return)  |
+					@:
+				}
+				if (item.args.length >0)
+				{
+					@:Set | Type | Description  
+					@:--- | --- | --- 
+					item.args.forEach(function(arg){
+						@:@arg.name  | @fnNameClean(arg.type)  | @fnDescriptionClean(arg.description)
+					});
+				}
+				@:
+				@:
+		});
+			@:---
+	}
+	if (mainItem.methods.length >0)
+	{
+		@:
+		@:### Public Methods for @fnNameClean(mainItem.qualifiedname)
+		@:
+		mainItem.methods.forEach(function(item){
+				@:##### <a id='@item.name.toLowerCase() '></a>@item.scope  @item.describe  function __@item.name __(@helpers.getArgs(item) )
+					if (item.deprecated) {
+						@:_Deprecated@fnDeprecatedClean(item.doc) _
+				}
+				@:
+				@:_@fnDescriptionClean(item.description||item.title) _
+				@:
+				if (item.args.length >0)
+				{
+					@:Argument | Type | Description  
+					@:--- | --- | --- 
+					item.args.forEach(function(arg){
+						@:@arg.name  | @fnNameClean(arg.type)  | @fnDescriptionClean(arg.description)
+					});
+					@:
+				}
+				if (item.doc && item.doc.return)
+				{
+					@:Returns | Description
+					@:--- | --- 
+					@:@fnNameClean(item.return)  | @fnDescriptionClean(item.doc.return[0])
+				} else
+				{
+					@:Returns | 
+					@:--- | 
+					@:@fnNameClean(item.return)  |
+				}
+				@:
+				@:
+		});
+			@:---
+	}
+	if (mainItem.fields)
+	{
+		@:
+		@:### Public Fields for @fnNameClean(mainItem.qualifiedname)
+		@:
+		mainItem.fields.forEach(function(item){
+				@:##### <a id='@item.name.toLowerCase() '></a>@item.scope  @item.describe  var __@item.name __
+						if (item.deprecated) {
+						@:_Deprecated@fnDeprecatedClean(item.doc) _
+							}
+				@:
+				@:_@fnDescriptionClean(item.description||item.title) _
+				@:
+				if (item.doc && item.doc.return)
+				{
+				@:Returns | Description
+				@:--- | --- 
+				item.doc.type
+					@:@fnNameClean(item.type)  | @fnDescriptionClean(item.doc.return[0])
+				} else
+				{
+				   @:>Returns
+				   @:>  @fnNameClean(item.type) 
+				}
+				@:
+		});
+			@:---
+	}
+
+	if (mainItem.extends && mainItem.extends.length >0)
+	{
+	  mainItem.extends.forEach(function(extend) {
+		  if (model.db.hasOwnProperty(extend))
+		  {
+			   var base = model.db[extend];
+			   var newmodel = {require: model.require, 
+								   db: model.db, 
+								   item: base, 
+								   path: model.path,
+								   renderPartial: model.renderPartial};
+			  @:@model.renderPartial('/build/views/partials/itemDetailTables.jsmd',newmodel)
+		  }
+		  	@:---
+		});
+	}
+}

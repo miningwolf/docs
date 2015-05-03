@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ChatFormat</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html'>chat</a></li>
+<li class='current'><a href='#'>ChatFormat</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\ChatFormat.html'>ChatFormat</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\Colors.html'>Colors</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\MessageReceiver.html'>MessageReceiver</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\ReceiverType.html'>ReceiverType</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\TextFormat.html'>TextFormat</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="chatformat-__enum__">ChatFormat <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.chat.ChatFormat</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>Enum containing all chat styles and colors.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RESET: &#39;R&#39;<br> <em><b>MARKER §</b></em></td>
+<td style="text-align:left">ChatFormat</td>
+</tr>
+<tr>
+<td>final function <strong>consoleFormat</strong>(text) <br> <em><b>MARKER §</b></em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-chatformat-chatformat-md-">Public Methods for <a href="ChatFormat.html"><code>ChatFormat</code></a></h3>
+<h5 id="-a-id-consoleformat-a-public-final-function-__consoleformat__-text-"><a id='consoleformat'></a>public final function <strong>consoleFormat</strong>(text)</h5>
+<p>_<b>MARKER §</b> /
+    MARKER(&#39;\u00A7&#39;),</p>
+<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;FONT COLOR=000000&gt;</span><span class="hljs-variable">&lt;b&gt;</span>BLACK<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/FONT&gt;</span> /
+BLACK('0'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="000066"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_BLUE<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_BLUE('1'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="006600"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_GREEN<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_GREEN('2'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="006666"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_AQUA<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_AQUA('3'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="990000"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_RED<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_RED('4'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="540054"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_PURPLE<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_PURPLE('5'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="FF9933"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>GOLD<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+GOLD('6'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="CCCCCC"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>GRAY<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+GRAY('7'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="333333"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>DARK_GRAY<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+DARK_GRAY('8'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="2A2A7F"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>BLUE<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+BLUE('9'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="33FF33"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>GREEN<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+GREEN('A'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="00FFFF"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>AQUA<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+AQUA('B'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="FF0022"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>RED<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+RED('C'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="FF00FF"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>LIGHT_PURPLE<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+LIGHT_PURPLE('D'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="FFFF00"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>YELLOW<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+YELLOW('E'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;font color="000000"&gt;</span><span class="hljs-variable">&lt;b&gt;</span>WHITE<span class="hljs-variable">&lt;/b&gt;</span><span class="hljs-variable">&lt;/font&gt;</span> /
+WHITE('F'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;b&gt;</span>OBFUSCATED<span class="hljs-variable">&lt;/b&gt;</span> /
+OBFUSCATED('K'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;b&gt;</span>BOLD<span class="hljs-variable">&lt;/b&gt;</span> /
+BOLD('L'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;s&gt;</span>STRIKED<span class="hljs-variable">&lt;/s&gt;</span> /
+STRIKED('M'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;u&gt;</span>UNDERLINED<span class="hljs-variable">&lt;/u&gt;</span> /
+UNDERLINED('N'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> <span class="hljs-variable">&lt;i&gt;</span>ITALIC<span class="hljs-variable">&lt;/i&gt;</span> /
+ITALIC('O'),
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> RESET /
+RESET('R');
+
+private final char code;
+
+private ChatFormat(char code) {
+    this.code = code;
+}
+
+public final String concat(String str) {
+    if (this == MARKER) {
+        return stringValue().concat(str);
+    }
+    else {
+        return toString().concat(str);
+    }
+}
+
+public final String concat(ChatFormat format) {
+    if (this == MARKER) {
+        return stringValue().concat(format.toString());
+    }
+    else {
+        return toString().concat(format.toString());
+    }
+}
+
+/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> Returns the char value of the `ChatFormat`_
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>String</code></td>
+<td>the text to be formatted</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>char value of the <code>ChatFormat</code> /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">char</span> charValue() {
+    <span class="hljs-keyword">return</span> code;
+}
+
+<span class="hljs-comment">/** Returns the `ChatFormat` as a `String`</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

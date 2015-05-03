@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API OperatorsProvider</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html'>user</a></li>
+<li class='current'><a href='#'>OperatorsProvider</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\user\Group.html'>Group</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\OperatorsProvider.html'>OperatorsProvider</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\user\ReservelistProvider.html'>ReservelistProvider</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\user\UserAndGroupsProvider.html'>UserAndGroupsProvider</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\user\WhitelistProvider.html'>WhitelistProvider</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="operatorsprovider-__class__">OperatorsProvider <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.user.OperatorsProvider</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Access to the backbone for operators</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>OperatorsProvider</strong>() <br> <em>OperatorsProvider constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Ops</strong> <br> <em>Get: Reload the ops from database</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-operatorsprovider-operatorsprovider-md-">Public Constructors for <a href="OperatorsProvider.html"><code>OperatorsProvider</code></a></h3>
+<h5 id="-a-id-operatorsprovider-a-new-__operatorsprovider__-"><a id='operatorsprovider'></a>new <strong>OperatorsProvider</strong>()</h5>
+<p><em>OperatorsProvider constructor</em></p>
+<hr>
+<h3 id="public-properties-for-operatorsprovider-operatorsprovider-md-">Public Properties for <a href="OperatorsProvider.html"><code>OperatorsProvider</code></a></h3>
+<h5 id="-a-id-ops-a-public-readonly-property-__ops__"><a id='ops'></a>public  readonly property <strong>Ops</strong></h5>
+<p>_Get: Reload the ops from database /
+    public void reload() {
+        ops = backboneOps.loadOps();
+        readOpsCfg();
+    }</p>
+<pre><code>/** Reads the config/ops.cfg file <span class="hljs-keyword">if</span> it exists <span class="hljs-literal">and</span> updates the database with the names found in it. /
+<span class="hljs-keyword">private</span> void readOpsCfg() {
+    <span class="hljs-keyword">try</span> {
+        BufferedReader reader = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> FileReader(<span class="hljs-keyword">new</span> File(<span class="hljs-string">"config/ops.cfg"</span>)));
+        String line;
+        <span class="hljs-keyword">while</span> ((line = reader.readLine()) != <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">if</span> (line.startsWith(<span class="hljs-string">"#"</span>)) {
+                <span class="hljs-keyword">continue</span>;
+            }
+            <span class="hljs-keyword">if</span> (!isOpped(line)) {
+                addPlayer(line);
+            }
+        }
+    }
+    <span class="hljs-keyword">catch</span> (FileNotFoundException e) {
+        <span class="hljs-built_in">log</span>.info(<span class="hljs-string">"Could not find config/ops.cfg. Creating one for you..."</span>);
+        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"config/ops.cfg"</span>);
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">if</span> (f.createNewFile()) {
+                PrintWriter pwriter = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(f));
+                pwriter.println(<span class="hljs-string">"# Note: This file is not guaranteed to be synchronous with the actual ops list in database."</span>);
+                pwriter.println(<span class="hljs-string">"# However, you may use it to quickly add new operators as you please."</span>);
+                pwriter.println(<span class="hljs-string">"# Any duplicate entries will be taken care of so don't worry."</span>);
+                pwriter.println(<span class="hljs-string">"# Lines starting with # are comments ;)"</span>);
+                pwriter.println(<span class="hljs-string">"# Add one name to each line."</span>);
+                pwriter.close();
+                <span class="hljs-built_in">log</span>.info(<span class="hljs-string">"You can now add ops to config/ops.cfg (one per line!). We left you a note."</span>);
+            }
+        }
+        <span class="hljs-keyword">catch</span> (IOException e1) {
+            <span class="hljs-built_in">log</span>.<span class="hljs-built_in">error</span>(<span class="hljs-string">"Failed to write config/ops.cfg! (Probably no write-access!)"</span>, e);
+        }
+    }
+    <span class="hljs-keyword">catch</span> (IOException e) {
+        <span class="hljs-built_in">log</span>.<span class="hljs-built_in">error</span>(<span class="hljs-string">"Failed to read from config/ops.cfg!"</span>, e);
+    }
+}
+
+/** Check <span class="hljs-keyword">if</span> a given Player name <span class="hljs-literal">or</span> UUID is opped._
+</code></pre><table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td>true if player is opped, false otherwise /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isOpped</span><span class="hljs-params">(String nameOrUUID)</span> </span>{
+    <span class="hljs-comment">// Did UUID get passed?</span>
+    <span class="hljs-keyword">if</span> (ToolBox.isUUID(nameOrUUID)) {
+        <span class="hljs-function"><span class="hljs-keyword">return</span> ops.<span class="hljs-title">contains</span><span class="hljs-params">(nameOrUUID)</span></span>;
+    }
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> ops.contains(ToolBox.usernameToUUID(nameOrUUID));
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isOpped</span><span class="hljs-params">(PlayerReference playerReference)</span> </span>{
+    <span class="hljs-keyword">if</span> (playerReference != <span class="hljs-keyword">null</span>) {
+        <span class="hljs-comment">// Lets update to UUID if we can get a UUID</span>
+        <span class="hljs-keyword">if</span> (ops.contains(playerReference.getName())) {
+            <span class="hljs-keyword">if</span> (playerReference.getUUIDString() != <span class="hljs-keyword">null</span>) {
+                removePlayer(playerReference.getName());
+                addPlayer(playerReference.getUUIDString());
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-comment">// UUID test it is</span>
+        <span class="hljs-keyword">return</span> ops.contains(playerReference.getUUIDString());
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+
+<span class="hljs-javadoc">/** Adds a new operators entry</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

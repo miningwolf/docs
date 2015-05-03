@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API Enchantment</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html'>enchantments</a></li>
+<li class='current'><a href='#'>Enchantment</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\Enchantment.html'>Enchantment</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\EnchantmentTarget.html'>EnchantmentTarget</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\EnchantmentWrapper.html'>EnchantmentWrapper</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="enchantment-__class__">Enchantment <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.enchantments.Enchantment</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>The various type of enchantments that may be added to armour or weapons</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static function <strong>values</strong>() <br> <em>Provides protection against environmental damage</em></td>
+<td style="text-align:left"><code>Enchantment[]</code></td>
+</tr>
+<tr>
+<td>static final var <strong>LURE</strong> <br> <em>Provides protection against environmental damage</em></td>
+<td style="text-align:left"><a href="Enchantment.html"><code>Enchantment</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-enchantment-enchantment-md-">Public Methods for <a href="Enchantment.html"><code>Enchantment</code></a></h3>
+<h5 id="-a-id-values-a-public-static-function-__values__-"><a id='values'></a>public static function <strong>values</strong>()</h5>
+<p>_Provides protection against environmental damage /
+    public static final Enchantment PROTECTION_ENVIRONMENTAL = new EnchantmentWrapper(0);</p>
+<pre><code>/** Provides protection against fire damage /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment PROTECTION_FIRE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(1<span class="hljs-function">)</span>;
+
+/** Provides protection against fall damage /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment PROTECTION_FALL =<span class="hljs-instruction"> new </span>EnchantmentWrapper(2<span class="hljs-function">)</span>;
+
+/** Provides protection against explosive damage /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment PROTECTION_EXPLOSIONS =<span class="hljs-instruction"> new </span>EnchantmentWrapper(3<span class="hljs-function">)</span>;
+
+/** Provides protection against projectile damage /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment PROTECTION_PROJECTILE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(4<span class="hljs-function">)</span>;
+
+/** Decreases the rate of air loss whilst underwater /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment OXYGEN =<span class="hljs-instruction"> new </span>EnchantmentWrapper(5<span class="hljs-function">)</span>;
+
+/** Increases the speed at which a player may mine underwater /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment WATER_WORKER =<span class="hljs-instruction"> new </span>EnchantmentWrapper(6<span class="hljs-function">)</span>;
+
+/** Damages the attacker /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment THORNS =<span class="hljs-instruction"> new </span>EnchantmentWrapper(7<span class="hljs-function">)</span>;
+
+/** Increases walking speed while in water /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DEPTH_STRIDER =<span class="hljs-instruction"> new </span>EnchantmentWrapper(8<span class="hljs-function">)</span>;
+
+/** Increases damage against all targets /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DAMAGE_ALL =<span class="hljs-instruction"> new </span>EnchantmentWrapper(16<span class="hljs-function">)</span>;
+
+/** Increases damage against undead targets /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DAMAGE_UNDEAD =<span class="hljs-instruction"> new </span>EnchantmentWrapper(17<span class="hljs-function">)</span>;
+
+/** Increases damage against arthropod targets /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DAMAGE_ARTHROPODS =<span class="hljs-instruction"> new </span>EnchantmentWrapper(18<span class="hljs-function">)</span>;
+
+/** All damage to other targets will knock them back when hit /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment KNOCKBACK =<span class="hljs-instruction"> new </span>EnchantmentWrapper(19<span class="hljs-function">)</span>;
+
+/** When attacking a target, has a chance to set them on fire /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment FIRE_ASPECT =<span class="hljs-instruction"> new </span>EnchantmentWrapper(20<span class="hljs-function">)</span>;
+
+/** Provides a chance of gaining extra loot when killing monsters /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment LOOT_BONUS_MOBS =<span class="hljs-instruction"> new </span>EnchantmentWrapper(21<span class="hljs-function">)</span>;
+
+/** Increases the rate at which you mine/dig /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DIG_SPEED =<span class="hljs-instruction"> new </span>EnchantmentWrapper(32<span class="hljs-function">)</span>;
+
+/** Allows blocks to drop themselves instead of fragments<span class="hljs-function"> (</span>for example, stone instead of cobblestone<span class="hljs-function">)</span> /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment SILK_TOUCH =<span class="hljs-instruction"> new </span>EnchantmentWrapper(33<span class="hljs-function">)</span>;
+
+/** Decreases the rate at which a tool looses durability /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment DURABILITY =<span class="hljs-instruction"> new </span>EnchantmentWrapper(34<span class="hljs-function">)</span>;
+
+/** Provides a chance of gaining extra loot when destroying blocks /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment LOOT_BONUS_BLOCKS =<span class="hljs-instruction"> new </span>EnchantmentWrapper(35<span class="hljs-function">)</span>;
+
+/** Provides extra damage when shooting arrows from bows /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment ARROW_DAMAGE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(48<span class="hljs-function">)</span>;
+
+/** Provides a knockback when an entity is hit by an arrow from a bow /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment ARROW_KNOCKBACK =<span class="hljs-instruction"> new </span>EnchantmentWrapper(49<span class="hljs-function">)</span>;
+
+/** Sets entities on fire when hit by arrows shot from a bow /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment ARROW_FIRE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(50<span class="hljs-function">)</span>;
+
+/** Provides infinite arrows when shooting a bow /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment ARROW_INFINITE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(51<span class="hljs-function">)</span>;
+
+/** Decreases odds of catching worthless junk /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment LUCK =<span class="hljs-instruction"> new </span>EnchantmentWrapper(61<span class="hljs-function">)</span>;
+
+/** Increases rate of fish biting your hook /<span class="hljs-keyword">
+public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Enchantment LURE =<span class="hljs-instruction"> new </span>EnchantmentWrapper(62<span class="hljs-function">)</span>;
+<span class="hljs-keyword">
+private</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Map&lt;Integer, Enchantment&gt; byId =<span class="hljs-instruction"> new </span>HashMap&lt;Integer,<span class="hljs-function"> Enchantment&gt;(</span><span class="hljs-function">)</span>;<span class="hljs-keyword">
+private</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Map&lt;String, Enchantment&gt; byName =<span class="hljs-instruction"> new </span>HashMap&lt;String,<span class="hljs-function"> Enchantment&gt;(</span><span class="hljs-function">)</span>;<span class="hljs-keyword">
+private</span><span class="hljs-keyword"> static</span> boolean acceptingNew = true;<span class="hljs-keyword">
+private</span><span class="hljs-keyword"> final</span><span class="hljs-instruction"> int </span>id;
+<span class="hljs-keyword">
+public</span><span class="hljs-function"> Enchantment(</span>int id<span class="hljs-function">)</span> {
+    this.id = id;
+}
+
+/** Gets the unique ID of this enchantment_
+</code></pre><table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enchantment[]</code></td>
+<td>Unique ID</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-enchantment-enchantment-md-">Public Fields for <a href="Enchantment.html"><code>Enchantment</code></a></h3>
+<h5 id="-a-id-lure-a-public-static-final-var-__lure__"><a id='lure'></a>public static final var <strong>LURE</strong></h5>
+<p>_Provides protection against environmental damage /
+    public static final Enchantment PROTECTION_ENVIRONMENTAL = new EnchantmentWrapper(0);</p>
+<pre><code>/** Provides protection against fire damage /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment PROTECTION_FIRE = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">1</span>);
+
+/** Provides protection against fall damage /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment PROTECTION_FALL = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">2</span>);
+
+/** Provides protection against explosive damage /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment PROTECTION_EXPLOSIONS = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">3</span>);
+
+/** Provides protection against projectile damage /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment PROTECTION_PROJECTILE = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">4</span>);
+
+/** Decreases the rate <span class="hljs-keyword">of</span> air loss whilst underwater /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment OXYGEN = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">5</span>);
+
+/** Increases the speed at which a player may mine underwater /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment WATER_WORKER = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">6</span>);
+
+/** Damages the attacker /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment THORNS = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">7</span>);
+
+/** Increases walking speed <span class="hljs-keyword">while</span> <span class="hljs-keyword">in</span> water /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DEPTH_STRIDER = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">8</span>);
+
+/** Increases damage against all targets /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DAMAGE_ALL = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">16</span>);
+
+/** Increases damage against undead targets /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DAMAGE_UNDEAD = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">17</span>);
+
+/** Increases damage against arthropod targets /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DAMAGE_ARTHROPODS = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">18</span>);
+
+/** All damage <span class="hljs-keyword">to</span> other targets will knock them back <span class="hljs-keyword">when</span> hit /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment KNOCKBACK = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">19</span>);
+
+/** <span class="hljs-keyword">When</span> attacking a target, has a chance <span class="hljs-keyword">to</span> <span class="hljs-keyword">set</span> them <span class="hljs-keyword">on</span> fire /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment FIRE_ASPECT = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">20</span>);
+
+/** Provides a chance <span class="hljs-keyword">of</span> gaining extra loot <span class="hljs-keyword">when</span> killing monsters /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment LOOT_BONUS_MOBS = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">21</span>);
+
+/** Increases the rate at which you mine/dig /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DIG_SPEED = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">32</span>);
+
+/** Allows blocks <span class="hljs-keyword">to</span> drop themselves instead <span class="hljs-keyword">of</span> fragments (<span class="hljs-keyword">for</span> example, stone instead <span class="hljs-keyword">of</span> cobblestone) /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment SILK_TOUCH = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">33</span>);
+
+/** Decreases the rate at which a tool looses durability /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment DURABILITY = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">34</span>);
+
+/** Provides a chance <span class="hljs-keyword">of</span> gaining extra loot <span class="hljs-keyword">when</span> destroying blocks /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment LOOT_BONUS_BLOCKS = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">35</span>);
+
+/** Provides extra damage <span class="hljs-keyword">when</span> shooting arrows <span class="hljs-keyword">from</span> bows /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment ARROW_DAMAGE = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">48</span>);
+
+/** Provides a knockback <span class="hljs-keyword">when</span> an entity <span class="hljs-keyword">is</span> hit <span class="hljs-keyword">by</span> an arrow <span class="hljs-keyword">from</span> a bow /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment ARROW_KNOCKBACK = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">49</span>);
+
+/** Sets entities <span class="hljs-keyword">on</span> fire <span class="hljs-keyword">when</span> hit <span class="hljs-keyword">by</span> arrows shot <span class="hljs-keyword">from</span> a bow /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment ARROW_FIRE = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">50</span>);
+
+/** Provides infinite arrows <span class="hljs-keyword">when</span> shooting a bow /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment ARROW_INFINITE = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">51</span>);
+
+/** Decreases odds <span class="hljs-keyword">of</span> catching worthless junk /
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Enchantment LUCK = <span class="hljs-keyword">new</span> EnchantmentWrapper(<span class="hljs-number">61</span>);
+
+/** Increases rate <span class="hljs-keyword">of</span> fish biting your hook_
+</code></pre><blockquote>
+<p>Returns
+ <a href="Enchantment.html"><code>Enchantment</code></a></p>
+</blockquote>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API BanDataAccess</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html'>backbone</a></li>
+<li class='current'><a href='#'>BanDataAccess</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\Backbone.html'>Backbone</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneBans.html'>BackboneBans</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneGroups.html'>BackboneGroups</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneKits.html'>BackboneKits</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneOperators.html'>BackboneOperators</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackbonePermissions.html'>BackbonePermissions</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneReservelist.html'>BackboneReservelist</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneUsers.html'>BackboneUsers</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneWarps.html'>BackboneWarps</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BackboneWhitelist.html'>BackboneWhitelist</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\BanDataAccess.html'>BanDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\GroupDataAccess.html'>GroupDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\KitDataAccess.html'>KitDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\OperatorsDataAccess.html'>OperatorsDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\PermissionDataAccess.html'>PermissionDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\PlayerDataAccess.html'>PlayerDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\ReservelistDataAccess.html'>ReservelistDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\WarpDataAccess.html'>WarpDataAccess</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\WhitelistDataAccess.html'>WhitelistDataAccess</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="bandataaccess-__class__">BanDataAccess <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.backbone.BanDataAccess
+Extends <a href="..\database\DataAccess.html"><code>DataAccess</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Ban Data Access</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>BanDataAccess</strong>() <br> <em>BanDataAccess constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Instance</strong> <br> <em>Instance property</em></td>
+<td style="text-align:left"><a href="..\database\DataAccess.html"><code>DataAccess</code></a></td>
+</tr>
+<tr>
+<td> var <strong>issuedDate</strong> <br> <em>Player uuid for this ban.</em></td>
+<td style="text-align:left"><code>long</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="..\database\DataAccess.html"><code>DataAccess</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>abstract readonly property <strong>Instance</strong> <br> <em>Get: Construct a new DataAccess object that represents a table</em></td>
+<td style="text-align:left"><a href="..\database\DataAccess.html"><code>DataAccess</code></a></td>
+</tr>
+<tr>
+<td> var <strong>id</strong> <br> <em>id field</em></td>
+<td style="text-align:left"><code>Integer</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-bandataaccess-bandataaccess-md-">Public Constructors for <a href="BanDataAccess.html"><code>BanDataAccess</code></a></h3>
+<h5 id="-a-id-bandataaccess-a-new-__bandataaccess__-"><a id='bandataaccess'></a>new <strong>BanDataAccess</strong>()</h5>
+<p><em>BanDataAccess constructor</em></p>
+<hr>
+<h3 id="public-properties-for-bandataaccess-bandataaccess-md-">Public Properties for <a href="BanDataAccess.html"><code>BanDataAccess</code></a></h3>
+<h5 id="-a-id-instance-a-public-readonly-property-__instance__"><a id='instance'></a>public  readonly property <strong>Instance</strong></h5>
+<p><em>Instance property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\database\DataAccess.html"><code>DataAccess</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-bandataaccess-bandataaccess-md-">Public Fields for <a href="BanDataAccess.html"><code>BanDataAccess</code></a></h3>
+<h5 id="-a-id-issueddate-a-public-var-__issueddate__"><a id='issueddate'></a>public  var <strong>issuedDate</strong></h5>
+<p>_Player uuid for this ban. /
+    @Column(columnName = &quot;uuid&quot;, dataType = DataType.STRING)
+    public String uuid;</p>
+<pre><code>/** Player name <span class="hljs-keyword">for</span> this ban. /
+@Column(columnName = <span class="hljs-string">"player"</span>, dataType = DataType.<span class="hljs-built_in">STRING</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> player;
+
+/** IP Address <span class="hljs-keyword">for</span> this ban. /
+@Column(columnName = <span class="hljs-string">"ip"</span>, dataType = DataType.<span class="hljs-built_in">STRING</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> ip;
+
+/** Reason <span class="hljs-keyword">for</span> this ban. /
+@Column(columnName = <span class="hljs-string">"reason"</span>, dataType = DataType.<span class="hljs-built_in">STRING</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> reason;
+
+/** Player who banned this player. /
+@Column(columnName = <span class="hljs-string">"banningPlayer"</span>, dataType = DataType.<span class="hljs-built_in">STRING</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> banningPlayer;
+
+/** <span class="hljs-built_in">Date</span> <span class="hljs-keyword">to</span> unban. /
+@Column(columnName = <span class="hljs-string">"unbanDate"</span>, dataType = DataType.<span class="hljs-built_in">LONG</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-built_in">long</span> unbanDate = -<span class="hljs-number">1</span>;
+
+/** <span class="hljs-built_in">Date</span> ban issued._
+</code></pre><blockquote>
+<p>Returns
+ <code>long</code></p>
+</blockquote>
+<hr>
+<h3 id="public-properties-for-dataaccess-database-dataaccess-md-">Public Properties for <a href="..\database\DataAccess.html"><code>DataAccess</code></a></h3>
+<h5 id="-a-id-instance-a-public-abstract-readonly-property-__instance__"><a id='instance'></a>public abstract readonly property <strong>Instance</strong></h5>
+<p><em>Get: Construct a new DataAccess object that represents a table in the database with the given name. This AccessObject is empty after it has been created. You need to get data from Database and load it. WolfScript will do this for you. For this simply call Wolf.db().load(yourDataAccess, String[]lookupFields, Object[]whereData); This will fill your AccessObject.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\database\DataAccess.html"><code>DataAccess</code></a></td>
+<td>HashMap that maps the Column meta data to the data present in database.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-fields-for-dataaccess-database-dataaccess-md-">Public Fields for <a href="..\database\DataAccess.html"><code>DataAccess</code></a></h3>
+<h5 id="-a-id-id-a-public-var-__id__"><a id='id'></a>public  var <strong>id</strong></h5>
+<p><em>id field</em></p>
+<blockquote>
+<p>Returns
+ <code>Integer</code></p>
+</blockquote>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

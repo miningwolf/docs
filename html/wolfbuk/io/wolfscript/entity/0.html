@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API wolfbuk.io.wolfscript.entity</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html'>entity</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Ageable.html'>Ageable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Ambient.html'>Ambient</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\AnimalTamer.html'>AnimalTamer</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Animals.html'>Animals</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ArmorStand.html'>ArmorStand</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Arrow.html'>Arrow</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Bat.html'>Bat</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Blaze.html'>Blaze</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Boat.html'>Boat</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\CaveSpider.html'>CaveSpider</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Chicken.html'>Chicken</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ComplexEntityPart.html'>ComplexEntityPart</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ComplexLivingEntity.html'>ComplexLivingEntity</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Cow.html'>Cow</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Creature.html'>Creature</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\CreatureType.html'>CreatureType</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Creeper.html'>Creeper</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Damageable.html'>Damageable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Egg.html'>Egg</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\EnderCrystal.html'>EnderCrystal</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\EnderDragon.html'>EnderDragon</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\EnderPearl.html'>EnderPearl</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\EnderSignal.html'>EnderSignal</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Enderman.html'>Enderman</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Endermite.html'>Endermite</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\EntityType.html'>EntityType</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ExperienceOrb.html'>ExperienceOrb</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Explosive.html'>Explosive</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\FallingBlock.html'>FallingBlock</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\FallingSand.html'>FallingSand</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Firework.html'>Firework</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Fish.html'>Fish</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\FishHook.html'>FishHook</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Flying.html'>Flying</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Ghast.html'>Ghast</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Giant.html'>Giant</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Golem.html'>Golem</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Guardian.html'>Guardian</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\IronGolem.html'>IronGolem</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Item.html'>Item</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ItemFrame.html'>ItemFrame</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\LargeFireball.html'>LargeFireball</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\LeashHitch.html'>LeashHitch</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\LightningStrike.html'>LightningStrike</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\MagmaCube.html'>MagmaCube</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Minecart.html'>Minecart</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Monster.html'>Monster</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\MushroomCow.html'>MushroomCow</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\NPC.html'>NPC</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Painting.html'>Painting</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\PigZombie.html'>PigZombie</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\PoweredMinecart.html'>PoweredMinecart</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Profession.html'>Profession</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Projectile.html'>Projectile</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Rabbit.html'>Rabbit</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Silverfish.html'>Silverfish</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\SkeletonType.html'>SkeletonType</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Slime.html'>Slime</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\SmallFireball.html'>SmallFireball</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Snowball.html'>Snowball</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Snowman.html'>Snowman</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Spider.html'>Spider</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Squid.html'>Squid</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\StorageMinecart.html'>StorageMinecart</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Style.html'>Style</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\TNTPrimed.html'>TNTPrimed</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Tameable.html'>Tameable</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ThrownExpBottle.html'>ThrownExpBottle</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\ThrownPotion.html'>ThrownPotion</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Type.html'>Type</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Vehicle.html'>Vehicle</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\WaterMob.html'>WaterMob</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Weather.html'>Weather</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Witch.html'>Witch</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Wither.html'>Wither</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\WitherSkull.html'>WitherSkull</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\Zombie.html'>Zombie</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\minecart\0.html' class=''>entity.minecart</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="entity-__classes-and-interfaces-__">ENTITY <strong>Classes and Interfaces </strong></h2>
+<blockquote>
+<p>io.wolfscript.entity</p>
+</blockquote>
+<hr>
+<p>Interfaces for non-voxel objects that can exist in a {@link io.wolfscript.World world}, including all players, monsters, projectiles, etc.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Description   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="Ageable.html"><code>Ageable</code></a></strong></td>
+<td style="text-align:left"><em>Represents an entity that can age and breed.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Ambient.html"><code>Ambient</code></a></strong></td>
+<td style="text-align:left"><em>Represents an ambient mob</em> </td>
+</tr>
+<tr>
+<td><strong><a href="AnimalTamer.html"><code>AnimalTamer</code></a></strong></td>
+<td style="text-align:left"><em>interface AnimalTamer</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Animals.html"><code>Animals</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Animal.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ArmorStand.html"><code>ArmorStand</code></a></strong></td>
+<td style="text-align:left"><em>interface ArmorStand</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Arrow.html"><code>Arrow</code></a></strong></td>
+<td style="text-align:left"><em>Represents an arrow.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Bat.html"><code>Bat</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Bat</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Blaze.html"><code>Blaze</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Blaze monster</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Boat.html"><code>Boat</code></a></strong></td>
+<td style="text-align:left"><em>Represents a boat entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="CaveSpider.html"><code>CaveSpider</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Spider.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Chicken.html"><code>Chicken</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Chicken.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ComplexEntityPart.html"><code>ComplexEntityPart</code></a></strong></td>
+<td style="text-align:left"><em>Represents a single part of a <a href="ComplexLivingEntity.html"><code>ComplexLivingEntity</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="ComplexLivingEntity.html"><code>ComplexLivingEntity</code></a></strong></td>
+<td style="text-align:left"><em>Represents a complex living entity - one that is made up of various smaller</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Cow.html"><code>Cow</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Cow.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Creature.html"><code>Creature</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Creature. Creatures are non-intelligent monsters or animals</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Creeper.html"><code>Creeper</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Creeper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Damageable.html"><code>Damageable</code></a></strong></td>
+<td style="text-align:left"><em>Represents an <code>Entity</code> that has health and can take damage.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Egg.html"><code>Egg</code></a></strong></td>
+<td style="text-align:left"><em>Represents a thrown egg.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EnderCrystal.html"><code>EnderCrystal</code></a></strong></td>
+<td style="text-align:left"><em>A crystal that heals nearby EnderDragons</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EnderDragon.html"><code>EnderDragon</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Ender Dragon</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EnderPearl.html"><code>EnderPearl</code></a></strong></td>
+<td style="text-align:left"><em>Represents a thrown Ender Pearl entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EnderSignal.html"><code>EnderSignal</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Ender Signal, which is often created upon throwing an ender</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Enderman.html"><code>Enderman</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Enderman.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Endermite.html"><code>Endermite</code></a></strong></td>
+<td style="text-align:left"><em>interface Endermite</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ExperienceOrb.html"><code>ExperienceOrb</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Experience Orb.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Explosive.html"><code>Explosive</code></a></strong></td>
+<td style="text-align:left"><em>A representation of an explosive entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="FallingBlock.html"><code>FallingBlock</code></a></strong></td>
+<td style="text-align:left"><em>Represents a falling block</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Firework.html"><code>Firework</code></a></strong></td>
+<td style="text-align:left"><em>interface Firework</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Fish.html"><code>Fish</code></a></strong></td>
+<td style="text-align:left"><em>Represents a fishing hook.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="FishHook.html"><code>FishHook</code></a></strong></td>
+<td style="text-align:left"><em>Represents a fishing hook.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Flying.html"><code>Flying</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Flying Entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Ghast.html"><code>Ghast</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Ghast.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Giant.html"><code>Giant</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Giant.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Golem.html"><code>Golem</code></a></strong></td>
+<td style="text-align:left"><em>A mechanical creature that may harm enemies.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Guardian.html"><code>Guardian</code></a></strong></td>
+<td style="text-align:left"><em>interface Guardian</em> </td>
+</tr>
+<tr>
+<td><strong><a href="IronGolem.html"><code>IronGolem</code></a></strong></td>
+<td style="text-align:left"><em>An iron Golem that protects Villages.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Item.html"><code>Item</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Item.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ItemFrame.html"><code>ItemFrame</code></a></strong></td>
+<td style="text-align:left"><em>Represents an Item Frame</em> </td>
+</tr>
+<tr>
+<td><strong><a href="LargeFireball.html"><code>LargeFireball</code></a></strong></td>
+<td style="text-align:left"><em>Represents a large <code>Fireball</code></em> </td>
+</tr>
+<tr>
+<td><strong><a href="LeashHitch.html"><code>LeashHitch</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Leash Hitch on a fence</em> </td>
+</tr>
+<tr>
+<td><strong><a href="LightningStrike.html"><code>LightningStrike</code></a></strong></td>
+<td style="text-align:left"><em>Represents an instance of a lightning strike. May or may not do damage.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="MagmaCube.html"><code>MagmaCube</code></a></strong></td>
+<td style="text-align:left"><em>Represents a MagmaCube.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Minecart.html"><code>Minecart</code></a></strong></td>
+<td style="text-align:left"><em>Represents a minecart entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Monster.html"><code>Monster</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Monster.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="MushroomCow.html"><code>MushroomCow</code></a></strong></td>
+<td style="text-align:left"><em>Represents a mushroom <a href="Cow.html"><code>Cow</code></a></em> </td>
+</tr>
+<tr>
+<td><strong><a href="NPC.html"><code>NPC</code></a></strong></td>
+<td style="text-align:left"><em>Represents a non-player character</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Painting.html"><code>Painting</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Painting.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PigZombie.html"><code>PigZombie</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Pig Zombie.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Projectile.html"><code>Projectile</code></a></strong></td>
+<td style="text-align:left"><em>Represents a shootable entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Rabbit.html"><code>Rabbit</code></a></strong></td>
+<td style="text-align:left"><em>interface Rabbit</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Silverfish.html"><code>Silverfish</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Silverfish.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Slime.html"><code>Slime</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Slime.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SmallFireball.html"><code>SmallFireball</code></a></strong></td>
+<td style="text-align:left"><em>Represents a small <code>Fireball</code></em> </td>
+</tr>
+<tr>
+<td><strong><a href="Snowball.html"><code>Snowball</code></a></strong></td>
+<td style="text-align:left"><em>Represents a snowball.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Snowman.html"><code>Snowman</code></a></strong></td>
+<td style="text-align:left"><em>Represents a snowman entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Spider.html"><code>Spider</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Spider.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Squid.html"><code>Squid</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Squid.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="TNTPrimed.html"><code>TNTPrimed</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Primed TNT.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Tameable.html"><code>Tameable</code></a></strong></td>
+<td style="text-align:left"><em>interface Tameable</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ThrownExpBottle.html"><code>ThrownExpBottle</code></a></strong></td>
+<td style="text-align:left"><em>Represents a thrown Experience bottle.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ThrownPotion.html"><code>ThrownPotion</code></a></strong></td>
+<td style="text-align:left"><em>Represents a thrown potion bottle</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Vehicle.html"><code>Vehicle</code></a></strong></td>
+<td style="text-align:left"><em>Represents a vehicle entity.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="WaterMob.html"><code>WaterMob</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Water Mob</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Weather.html"><code>Weather</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Weather related entity, such as a storm</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Witch.html"><code>Witch</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Witch</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Wither.html"><code>Wither</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Wither boss</em> </td>
+</tr>
+<tr>
+<td><strong><a href="WitherSkull.html"><code>WitherSkull</code></a></strong></td>
+<td style="text-align:left"><em>Represents a wither skull <code>Fireball</code>.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Zombie.html"><code>Zombie</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Zombie.</em> </td>
+</tr>
+<tr>
+<td><strong>Enums</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="EntityType.html"><code>EntityType</code></a></strong></td>
+<td style="text-align:left"><em>enum EntityType</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Profession.html"><code>Profession</code></a></strong></td>
+<td style="text-align:left"><em>Represents a villager NPC</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SkeletonType.html"><code>SkeletonType</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Skeleton.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Style.html"><code>Style</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Horse.</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Type.html"><code>Type</code></a></strong></td>
+<td style="text-align:left"><em>A wild tameable cat</em> </td>
+</tr>
+<tr>
+<td><strong>Child Namespaces</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="minecart\0.html"><code>minecart</code></a></strong></td>
+<td style="text-align:left"><em>Interfaces for various <a href="Minecart.html"><code>Minecart</code></a> types.</em> </td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

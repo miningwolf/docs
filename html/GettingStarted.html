@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API GettingStarted</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="assets\css\docs.css" rel="stylesheet" />
+  <link href="assets\css\github.css" rel="stylesheet" />
+  <link href="assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+ <li><a href='index.html'>home</a></li>
+<li class='current'><a href='#'>GettingStarted</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='index.html' class=''>home</a></li> 
+<li class='active'><a href='GettingStarted.html'>GettingStarted</a></li>
+<li><a href='License.html'>License</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='wolfbuk\Events.html' class=''>wolfbuk</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='wolfcanary\Events.html' class=''>wolfcanary</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="wolfscript-by-mining-wolf">WolfScript by Mining Wolf</h1>
+<h3 id="getting-started-preferred-">Getting started  (Preferred)</h3>
+<p>Place <code>minecraft.jar</code> in the <code>/plugins</code> directory of the Spigot (or Bukkit or CraftBukkit) server. </p>
+<p>Create a new subdirectory <code>wolftest</code> of <code>/plugins</code></p>
+<p>In /plugins/wolftest, place two files</p>
+<h4 id="package-json">Package.json</h4>
+<pre><code class="lang-js">{
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"wolftest"</span></span>,
+  "<span class="hljs-attribute">version</span>": <span class="hljs-value"><span class="hljs-string">"1.0.0"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"WolfTest plugin for WolfScript"</span></span>,
+  "<span class="hljs-attribute">main</span>": <span class="hljs-value"><span class="hljs-string">"main.js"</span></span>,
+  "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"wolfscript"</span></span>,
+  "<span class="hljs-attribute">author</span>": <span class="hljs-value"><span class="hljs-string">"YourName"</span>
+</span>}
+</code></pre>
+<h4 id="main-js">main.js</h4>
+<pre><code class="lang-js">exports.enable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{ 
+    <span class="hljs-keyword">this</span>.getLogger().info(<span class="hljs-string">"Hello World"</span>);
+ };
+exports.disable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{};
+</code></pre>
+<p>Run the server from the root of the minecraft (spigot) server directory (contains spigot.jar, the plugins folder)</p>
+<pre><code> <span class="hljs-title">java</span> -jar spigot.jar
+</code></pre><p>Tip:  use npm to package and distribute your wolf packs.  The wolfscript plugin will look in both the plugins directory as well as the node_modules subdirectory.</p>
+<p>Tip:  if this is the first time running spigot.jar you will need to accept the EULA for Minecraft.  Try running once, then edit eula.txt (change &quot;false&quot; to &quot;true&quot;) then rerun.</p>
+<h3 id="getting-started-canarymod-">Getting started (CanaryMod)</h3>
+<p>Place <code>minecraft.jar</code> in the <code>/pluginlangs</code> directory of the CanaryMod server. </p>
+<p>Edit <code>server.cfg</code> to include <code>plugin-dev-mode=true</code> (to allow loading of plugins from directories, unless you want to zip or jar your WolfScript plugins).</p>
+<p>Create a new subdirectory <code>wolftest</code> of <code>/plugins</code></p>
+<p>In /plugins/wolftest, place two files</p>
+<h4 id="canary-inf">Canary.inf</h4>
+<pre><code><span class="hljs-setting">main-class = <span class="hljs-value">main.js</span></span>
+<span class="hljs-setting">isLibrary = <span class="hljs-value"><span class="hljs-keyword">false</span></span></span>
+<span class="hljs-setting">name = <span class="hljs-value">wolftest</span></span>
+<span class="hljs-setting">author = <span class="hljs-value">Mining Wolf</span></span>
+<span class="hljs-setting">language=<span class="hljs-value">wolfscript</span></span>
+<span class="hljs-setting">version = <span class="hljs-value"><span class="hljs-number">1.0</span></span></span>
+</code></pre><h4 id="main-js">main.js</h4>
+<pre><code class="lang-js">exports.enable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{ 
+    <span class="hljs-keyword">this</span>.getLogman().info(<span class="hljs-string">"Hello World"</span>);
+ };
+exports.disable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{};
+</code></pre>
+<p>Run the server from the root of the canarymod server directory (contains canarymod.jar, the plugins, and pluginlangs folders)</p>
+<pre><code> <span class="hljs-title">java</span> -jar canarymod.jar
+</code></pre><p>Tip:  use npm to package and distribute your wolf packs.  For now, you just need a Canary.inf in the home directory of each wolf pack.</p>
+<h3 id="building-the-source-code">Building the source code</h3>
+<p>Build with </p>
+<pre><code><span class="hljs-keyword">ant</span>
+</code></pre>
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets\js\vendor\jquery.js"></script>
+    <script src="assets\js\vendor\fastclick.js"></script>
+    <script src="assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

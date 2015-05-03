@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API querystring</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\index.html'>Home </a></li>
+ <li><a href='..\wolfnode\globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>querystring</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\wolfnode\globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\buffer.html' class=''>Core</a></li> 
+<li><a href='..\wolfnode\buffer.html'>buffer</a></li>
+<li><a href='..\wolfnode\console.html'>console</a></li>
+<li><a href='..\wolfnode\crypto.html'>crypto</a></li>
+<li><a href='..\wolfnode\dgram.html'>dgram</a></li>
+<li><a href='..\wolfnode\dns.html'>dns</a></li>
+<li><a href='..\wolfnode\events.html'>events</a></li>
+<li><a href='..\wolfnode\fs.html'>fs</a></li>
+<li><a href='..\wolfnode\http.html'>http</a></li>
+<li><a href='..\wolfnode\https.html'>https</a></li>
+<li><a href='..\wolfnode\net.html'>net</a></li>
+<li><a href='..\wolfnode\path.html'>path</a></li>
+<li><a href='..\wolfnode\process.html'>process</a></li>
+<li class='active'><a href='..\wolfnode\querystring.html'>querystring</a></li>
+<li><a href='..\wolfnode\stream.html'>stream</a></li>
+<li><a href='..\wolfnode\timers.html'>timers</a></li>
+<li><a href='..\wolfnode\tls.html'>tls</a></li>
+<li><a href='..\wolfnode\url.html'>url</a></li>
+<li><a href='..\wolfnode\util.html'>util</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\wolfnode\assert.html' class=''>Other</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="query-string">Query String</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+</code></pre><!--name=querystring-->
+<p>This module provides utilities for dealing with query strings.
+It provides the following methods:</p>
+<h2 id="querystring-stringify-obj-sep-eq-options-">querystring.stringify(obj[, sep][, eq][, options])</h2>
+<p>Serialize an object to a query string.
+Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
+characters.</p>
+<p>Options object may contain <code>encodeURIComponent</code> property (<code>querystring.escape</code> by default),
+it can be used to encode string with <code>non-utf8</code> encoding if necessary.</p>
+<p>Example:</p>
+<pre><code>querystring.stringify({ <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], <span class="hljs-string">corge:</span> <span class="hljs-string">''</span> })
+<span class="hljs-comment">// returns</span>
+<span class="hljs-string">'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge='</span>
+
+querystring.stringify({<span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> <span class="hljs-string">'qux'</span>}, <span class="hljs-string">';'</span>, <span class="hljs-string">':'</span>)
+<span class="hljs-comment">// returns</span>
+<span class="hljs-string">'foo:bar;baz:qux'</span>
+
+<span class="hljs-comment">// Suppose gbkEncodeURIComponent function already exists,</span>
+<span class="hljs-comment">// it can encode string with `gbk` encoding</span>
+querystring.stringify({ <span class="hljs-string">w:</span> <span class="hljs-string">'中文'</span>, <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span> }, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>,
+  { <span class="hljs-string">encodeURIComponent:</span> gbkEncodeURIComponent })
+<span class="hljs-comment">// returns</span>
+<span class="hljs-string">'w=%D6%D0%CE%C4&amp;foo=bar'</span>
+</code></pre><h2 id="querystring-parse-str-sep-eq-options-">querystring.parse(str[, sep][, eq][, options])</h2>
+<p>Deserialize a query string to an object.
+Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
+characters.</p>
+<p>Options object may contain <code>maxKeys</code> property (equal to 1000 by default), it&#39;ll
+be used to limit processed keys. Set it to 0 to remove key count limitation.</p>
+<p>Options object may contain <code>decodeURIComponent</code> property (<code>querystring.unescape</code> by default),
+it can be used to decode a <code>non-utf8</code> encoding string if necessary.</p>
+<p>Example:</p>
+<pre><code>querystring.parse(<span class="hljs-string">'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge'</span>)
+<span class="hljs-comment">// returns</span>
+{ <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], <span class="hljs-string">corge:</span> <span class="hljs-string">''</span> }
+
+<span class="hljs-comment">// Suppose gbkDecodeURIComponent function already exists,</span>
+<span class="hljs-comment">// it can decode `gbk` encoding string</span>
+querystring.parse(<span class="hljs-string">'w=%D6%D0%CE%C4&amp;foo=bar'</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>,
+  { <span class="hljs-string">decodeURIComponent:</span> gbkDecodeURIComponent })
+<span class="hljs-comment">// returns</span>
+{ <span class="hljs-string">w:</span> <span class="hljs-string">'中文'</span>, <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span> }
+</code></pre><h2 id="querystring-escape">querystring.escape</h2>
+<p>The escape function used by <code>querystring.stringify</code>,
+provided so that it could be overridden if necessary.</p>
+<h2 id="querystring-unescape">querystring.unescape</h2>
+<p>The unescape function used by <code>querystring.parse</code>,
+provided so that it could be overridden if necessary.</p>
+<p>It will try to use <code>decodeURIComponent</code> in the first place,
+but if that fails it falls back to a safer equivalent that
+doesn&#39;t throw on malformed URLs.</p>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\assets\js\vendor\jquery.js"></script>
+    <script src="..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

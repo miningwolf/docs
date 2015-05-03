@@ -1,0 +1,5974 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API CommandList</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html'>commandsys</a></li>
+<li class='current'><a href='#'>CommandList</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandDependencyException.html'>CommandDependencyException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandException.html'>CommandException</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandList.html'>CommandList</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandListener.html'>CommandListener</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandManager.html'>CommandManager</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\CommandOwner.html'>CommandOwner</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DuplicateCommandException.html'>DuplicateCommandException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DynamicCommandAnnotation.html'>DynamicCommandAnnotation</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\DynamicTabCompleteAnnotation.html'>DynamicTabCompleteAnnotation</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\NativeCommand.html'>NativeCommand</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\PlayerSelector.html'>PlayerSelector</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteDispatch.html'>TabCompleteDispatch</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteException.html'>TabCompleteException</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\TabCompleteHelper.html'>TabCompleteHelper</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\WolfCommand.html'>WolfCommand</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\WolfCommandPermissions.html'>WolfCommandPermissions</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\groupmod\0.html' class=''>commandsys.commands.groupmod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\player\0.html' class=''>commandsys.commands.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\playermod\0.html' class=''>commandsys.commands.playermod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\0.html' class=''>commandsys.commands.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\bans\0.html' class=''>commandsys.commands.system.bans</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\informational\0.html' class=''>commandsys.commands.system.informational</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\kits\0.html' class=''>commandsys.commands.system.kits</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\operator\0.html' class=''>commandsys.commands.system.operator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\reservelist\0.html' class=''>commandsys.commands.system.reservelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\whitelist\0.html' class=''>commandsys.commands.system.whitelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\0.html' class=''>commandsys.commands.vanilla</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\warp\0.html' class=''>commandsys.commands.warp</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\world\0.html' class=''>commandsys.commands.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="commandlist-__class__">CommandList <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.commandsys.CommandList
+Implements <a href="CommandListener.html"><code>CommandListener</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Wolf &quot;native&quot; commands</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> writeonly property <strong>HomeCommand</strong> <br> <em>HomeCommand property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>block</strong> <br> <em>block property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>WarpCommand</strong> <br> <em>WarpCommand property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistAddCommand</strong>(caller) <br> <em>whitelistAddCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupBase</strong>(caller) <br> <em>groupBase method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupAdd</strong>(caller) <br> <em>groupAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>deleteworldTabComplete</strong>(caller) <br> <em>deleteworldTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>deleteworld</strong>(caller) <br> <em>deleteworld method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>createWorldTabComplete</strong>(caller) <br> <em>createWorldTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>createWorld</strong>(caller) <br> <em>createWorld method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>delWarpCommand</strong>(caller) <br> <em>delWarpCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>give</strong>(caller) <br> <em>give method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>gamerule</strong>(caller) <br> <em>gamerule method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>gamemode</strong>(caller) <br> <em>gamemode method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>fill</strong>(caller) <br> <em>fill method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>execute</strong>(caller) <br> <em>execute method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>entitydata</strong>(caller) <br> <em>entitydata method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>enchant</strong>(caller) <br> <em>enchant method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>emote</strong>(caller) <br> <em>emote method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>effect</strong>(caller) <br> <em>effect method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>difficulty</strong>(caller) <br> <em>difficulty method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>defaultspawnpoint</strong>(caller) <br> <em>defaultspawnpoint method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>defaultgamemode</strong>(caller) <br> <em>defaultgamemode method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>compassCommand</strong>(caller) <br> <em>compassCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>getPosCommand</strong>(caller) <br> <em>getPosCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>godCommand</strong>(caller) <br> <em>godCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>debug</strong>(caller) <br> <em>debug method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>(caller) <br> <em>clone method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>clear</strong>(caller) <br> <em>clear method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>broadcast</strong>(caller) <br> <em>broadcast method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>blockdata</strong>(caller) <br> <em>blockdata method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>achievement</strong>(caller) <br> <em>achievement method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>disablePluginCommand</strong>(caller) <br> <em>disablePluginCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>enablePluginCommand</strong>(caller) <br> <em>enablePluginCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>deopTabComplete</strong>(caller) <br> <em>deopTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>deop</strong>(caller) <br> <em>deop method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>createVanillaCommand</strong>(caller) <br> <em>createVanillaCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>banTabComplete</strong>(caller) <br> <em>banTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>banCommand</strong>(caller) <br> <em>banCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupCheck</strong>(caller) <br> <em>groupCheck method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchOnlinePlayer</strong>(caller) <br> <em>matchOnlinePlayer method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>matchKnownPlayer</strong>(caller) <br> <em>matchKnownPlayer method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>loadWorld</strong>(caller) <br> <em>loadWorld method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupmodAddTabComplete</strong>(caller) <br> <em>groupmodAddTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPerms</strong>(caller) <br> <em>groupPerms method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupmodPermissionTabComplete</strong>(caller) <br> <em>groupmodPermissionTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPermissionsAdd</strong>(caller) <br> <em>groupPermissionsAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPermissionsRemove</strong>(caller) <br> <em>groupPermissionsRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>listWarpsCommand</strong>(caller) <br> <em>listWarpsCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>homeCommand</strong>(caller) <br> <em>homeCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPermissionsCheck</strong>(caller) <br> <em>groupPermissionsCheck method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupmodPermissionAddRemoveCheckTabComplete</strong>(caller) <br> <em>groupmodPermissionAddRemoveCheckTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPermissionsList</strong>(caller) <br> <em>groupPermissionsList method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>helpCommand</strong>(caller) <br> <em>helpCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>ipBanCommand</strong>(caller) <br> <em>ipBanCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kickCommand</strong>(caller) <br> <em>kickCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitCommand</strong>(caller) <br> <em>kitCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitCreateCommand</strong>(caller) <br> <em>kitCreateCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitGiveCommand</strong>(caller) <br> <em>kitGiveCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitListCommand</strong>(caller) <br> <em>kitListCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitDeleteCommand</strong>(caller) <br> <em>kitDeleteCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>kitTabComplete</strong>(caller) <br> <em>kitTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>listPluginsCommand</strong>(caller) <br> <em>listPluginsCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupFlush</strong>(caller) <br> <em>groupFlush method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupList</strong>(caller) <br> <em>groupList method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupRemove</strong>(caller) <br> <em>groupRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupRename</strong>(caller) <br> <em>groupRename method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupPrefix</strong>(caller) <br> <em>groupPrefix method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupParent</strong>(caller) <br> <em>groupParent method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupmodParentTabComplete</strong>(caller) <br> <em>groupmodParentTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>killCommand</strong>(caller) <br> <em>killCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>groupBaseTabComplete</strong>(caller) <br> <em>groupBaseTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>spawnpoint</strong>(caller) <br> <em>spawnpoint method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchPluginName</strong>(caller) <br> <em>matchPluginName method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>spreadplayers</strong>(caller) <br> <em>spreadplayers method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerRemove</strong>(caller) <br> <em>playerRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupSet</strong>(caller) <br> <em>playerGroupSet method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mobspawnerTabComplete</strong>(caller) <br> <em>mobspawnerTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>mobspawnercheck</strong>(caller) <br> <em>mobspawnercheck method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mobspawnerset</strong>(caller) <br> <em>mobspawnerset method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mobspawner</strong>(caller) <br> <em>mobspawner method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mobTabComplete</strong>(caller) <br> <em>mobTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>mobcount</strong>(caller) <br> <em>mobcount method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mobclear</strong>(caller) <br> <em>mobclear method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>mob</strong>(caller) <br> <em>mob method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchWorldNameDimension</strong>(caller) <br> <em>matchWorldNameDimension method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupAdd</strong>(caller) <br> <em>playerGroupAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupList</strong>(caller) <br> <em>playerGroupList method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupCheck</strong>(caller) <br> <em>playerGroupCheck method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupRemove</strong>(caller) <br> <em>playerGroupRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchWarpNames</strong>(caller) <br> <em>matchWarpNames method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPrefix</strong>(caller) <br> <em>playerPrefix method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPermissions</strong>(caller) <br> <em>playerPermissions method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerAddTabComplete</strong>(caller) <br> <em>playerAddTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerAdd</strong>(caller) <br> <em>playerAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerBaseTabComplete</strong>(caller) <br> <em>playerBaseTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerBase</strong>(caller) <br> <em>playerBase method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPermissionsAdd</strong>(caller) <br> <em>playerPermissionsAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchToGroupTabComplete</strong>(caller) <br> <em>matchToGroupTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPermissionsRemove</strong>(caller) <br> <em>playerPermissionsRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerListCommand</strong>(caller) <br> <em>playerListCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroupTabComplete</strong>(caller) <br> <em>playerGroupTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>oplist</strong>(caller) <br> <em>oplist method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerGroup</strong>(caller) <br> <em>playerGroup method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>op</strong>(caller) <br> <em>op method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>muteCommand</strong>(caller) <br> <em>muteCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>motdCommand</strong>(caller) <br> <em>motdCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>matchWorldNamePlayerName</strong>(caller) <br> <em>matchWorldNamePlayerName method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPermissionsCheck</strong>(caller) <br> <em>playerPermissionsCheck method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playerPermissionsList</strong>(caller) <br> <em>playerPermissionsList method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>message</strong>(caller) <br> <em>message method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>messageraw</strong>(caller) <br> <em>messageraw method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>particle</strong>(caller) <br> <em>particle method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistTabComplete</strong>(caller) <br> <em>whitelistTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playsound</strong>(caller) <br> <em>playsound method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playermodGroupAddRemoveSet</strong>(caller) <br> <em>playermodGroupAddRemoveSet method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>playerinfo</strong>(caller) <br> <em>playerinfo method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>playermodPermissionRemove</strong>(caller) <br> <em>playermodPermissionRemove method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistReloadCommand</strong>(caller) <br> <em>whitelistReloadCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reservelistCommand</strong>(caller) <br> <em>reservelistCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reloadCommand</strong>(caller) <br> <em>reloadCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reservelistAdd</strong>(caller) <br> <em>reservelistAdd method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reloadPluginCommand</strong>(caller) <br> <em>reloadPluginCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>replaceitem</strong>(caller) <br> <em>replaceitem method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldCreate</strong>(caller) <br> <em>worldCreate method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>scoreboard</strong>(caller) <br> <em>scoreboard method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reservelistRemove</strong>(caller) <br> <em>reservelistRemove method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reservelistShow</strong>(caller) <br> <em>reservelistShow method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>reservelistTabComplete</strong>(caller) <br> <em>reservelistTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>saveall</strong>(caller) <br> <em>saveall method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>saveoff</strong>(caller) <br> <em>saveoff method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>saveon</strong>(caller) <br> <em>saveon method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistShowCommand</strong>(caller) <br> <em>whitelistShowCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>teleport</strong>(caller) <br> <em>teleport method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>stopCommand</strong>(caller) <br> <em>stopCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>sysinfo</strong>(caller) <br> <em>sysinfo method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>spawnCommand</strong>(caller) <br> <em>spawnCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>stats</strong>(caller) <br> <em>stats method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>summon</strong>(caller) <br> <em>summon method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>unloadWorld</strong>(caller) <br> <em>unloadWorld method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>warpUse</strong>(caller) <br> <em>warpUse method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>testforblock</strong>(caller) <br> <em>testforblock method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>title</strong>(caller) <br> <em>title method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>testfor</strong>(caller) <br> <em>testfor method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>testforblocks</strong>(caller) <br> <em>testforblocks method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>time</strong>(caller) <br> <em>time method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>unbanCommand</strong>(caller) <br> <em>unbanCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>unbanTabComplete</strong>(caller) <br> <em>unbanTabComplete method</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>uptime</strong>(caller) <br> <em>uptime method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>trigger</strong>(caller) <br> <em>trigger method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>toggledownfall</strong>(caller) <br> <em>toggledownfall method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldDelete</strong>(caller) <br> <em>worldDelete method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>weather</strong>(caller) <br> <em>weather method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>wolfscriptInfoCommand</strong>(caller) <br> <em>wolfscriptInfoCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldLoad</strong>(caller) <br> <em>worldLoad method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistCommand</strong>(caller) <br> <em>whitelistCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldInfo</strong>(caller) <br> <em>worldInfo method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>world</strong>(caller) <br> <em>world method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistRemoveCommand</strong>(caller) <br> <em>whitelistRemoveCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldList</strong>(caller) <br> <em>worldList method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistDisableCommand</strong>(caller) <br> <em>whitelistDisableCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>whitelistEnableCommand</strong>(caller) <br> <em>whitelistEnableCommand method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldUnload</strong>(caller) <br> <em>worldUnload method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>worldborder</strong>(caller) <br> <em>worldborder method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>xp</strong>(caller) <br> <em>xp method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-commandlist-commandlist-md-">Public Properties for <a href="CommandList.html"><code>CommandList</code></a></h3>
+<h5 id="-a-id-homecommand-a-public-writeonly-property-__homecommand__"><a id='homecommand'></a>public  writeonly property <strong>HomeCommand</strong></h5>
+<p><em>HomeCommand property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-block-a-public-writeonly-property-__block__"><a id='block'></a>public  writeonly property <strong>block</strong></h5>
+<p><em>block property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-warpcommand-a-public-writeonly-property-__warpcommand__"><a id='warpcommand'></a>public  writeonly property <strong>WarpCommand</strong></h5>
+<p><em>WarpCommand property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-commandlist-commandlist-md-">Public Methods for <a href="CommandList.html"><code>CommandList</code></a></h3>
+<h5 id="-a-id-whitelistaddcommand-a-public-function-__whitelistaddcommand__-caller-"><a id='whitelistaddcommand'></a>public  function <strong>whitelistAddCommand</strong>(caller)</h5>
+<p><em>whitelistAddCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupbase-a-public-function-__groupbase__-caller-"><a id='groupbase'></a>public  function <strong>groupBase</strong>(caller)</h5>
+<p><em>groupBase method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupadd-a-public-function-__groupadd__-caller-"><a id='groupadd'></a>public  function <strong>groupAdd</strong>(caller)</h5>
+<p><em>groupAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-deleteworldtabcomplete-a-public-function-__deleteworldtabcomplete__-caller-"><a id='deleteworldtabcomplete'></a>public  function <strong>deleteworldTabComplete</strong>(caller)</h5>
+<p><em>deleteworldTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-deleteworld-a-public-function-__deleteworld__-caller-"><a id='deleteworld'></a>public  function <strong>deleteworld</strong>(caller)</h5>
+<p><em>deleteworld method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-createworldtabcomplete-a-public-function-__createworldtabcomplete__-caller-"><a id='createworldtabcomplete'></a>public  function <strong>createWorldTabComplete</strong>(caller)</h5>
+<p><em>createWorldTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-createworld-a-public-function-__createworld__-caller-"><a id='createworld'></a>public  function <strong>createWorld</strong>(caller)</h5>
+<p><em>createWorld method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-delwarpcommand-a-public-function-__delwarpcommand__-caller-"><a id='delwarpcommand'></a>public  function <strong>delWarpCommand</strong>(caller)</h5>
+<p><em>delWarpCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-give-a-public-function-__give__-caller-"><a id='give'></a>public  function <strong>give</strong>(caller)</h5>
+<p><em>give method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-gamerule-a-public-function-__gamerule__-caller-"><a id='gamerule'></a>public  function <strong>gamerule</strong>(caller)</h5>
+<p><em>gamerule method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-gamemode-a-public-function-__gamemode__-caller-"><a id='gamemode'></a>public  function <strong>gamemode</strong>(caller)</h5>
+<p><em>gamemode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-fill-a-public-function-__fill__-caller-"><a id='fill'></a>public  function <strong>fill</strong>(caller)</h5>
+<p><em>fill method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-execute-a-public-function-__execute__-caller-"><a id='execute'></a>public  function <strong>execute</strong>(caller)</h5>
+<p><em>execute method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-entitydata-a-public-function-__entitydata__-caller-"><a id='entitydata'></a>public  function <strong>entitydata</strong>(caller)</h5>
+<p><em>entitydata method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-enchant-a-public-function-__enchant__-caller-"><a id='enchant'></a>public  function <strong>enchant</strong>(caller)</h5>
+<p><em>enchant method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-emote-a-public-function-__emote__-caller-"><a id='emote'></a>public  function <strong>emote</strong>(caller)</h5>
+<p><em>emote method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-effect-a-public-function-__effect__-caller-"><a id='effect'></a>public  function <strong>effect</strong>(caller)</h5>
+<p><em>effect method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-difficulty-a-public-function-__difficulty__-caller-"><a id='difficulty'></a>public  function <strong>difficulty</strong>(caller)</h5>
+<p><em>difficulty method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-defaultspawnpoint-a-public-function-__defaultspawnpoint__-caller-"><a id='defaultspawnpoint'></a>public  function <strong>defaultspawnpoint</strong>(caller)</h5>
+<p><em>defaultspawnpoint method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-defaultgamemode-a-public-function-__defaultgamemode__-caller-"><a id='defaultgamemode'></a>public  function <strong>defaultgamemode</strong>(caller)</h5>
+<p><em>defaultgamemode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-compasscommand-a-public-function-__compasscommand__-caller-"><a id='compasscommand'></a>public  function <strong>compassCommand</strong>(caller)</h5>
+<p><em>compassCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getposcommand-a-public-function-__getposcommand__-caller-"><a id='getposcommand'></a>public  function <strong>getPosCommand</strong>(caller)</h5>
+<p><em>getPosCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-godcommand-a-public-function-__godcommand__-caller-"><a id='godcommand'></a>public  function <strong>godCommand</strong>(caller)</h5>
+<p><em>godCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-debug-a-public-function-__debug__-caller-"><a id='debug'></a>public  function <strong>debug</strong>(caller)</h5>
+<p><em>debug method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-clone-a-public-function-__clone__-caller-"><a id='clone'></a>public  function <strong>clone</strong>(caller)</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-clear-a-public-function-__clear__-caller-"><a id='clear'></a>public  function <strong>clear</strong>(caller)</h5>
+<p><em>clear method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-broadcast-a-public-function-__broadcast__-caller-"><a id='broadcast'></a>public  function <strong>broadcast</strong>(caller)</h5>
+<p><em>broadcast method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-blockdata-a-public-function-__blockdata__-caller-"><a id='blockdata'></a>public  function <strong>blockdata</strong>(caller)</h5>
+<p><em>blockdata method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-achievement-a-public-function-__achievement__-caller-"><a id='achievement'></a>public  function <strong>achievement</strong>(caller)</h5>
+<p><em>achievement method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-disableplugincommand-a-public-function-__disableplugincommand__-caller-"><a id='disableplugincommand'></a>public  function <strong>disablePluginCommand</strong>(caller)</h5>
+<p><em>disablePluginCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-enableplugincommand-a-public-function-__enableplugincommand__-caller-"><a id='enableplugincommand'></a>public  function <strong>enablePluginCommand</strong>(caller)</h5>
+<p><em>enablePluginCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-deoptabcomplete-a-public-function-__deoptabcomplete__-caller-"><a id='deoptabcomplete'></a>public  function <strong>deopTabComplete</strong>(caller)</h5>
+<p><em>deopTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-deop-a-public-function-__deop__-caller-"><a id='deop'></a>public  function <strong>deop</strong>(caller)</h5>
+<p><em>deop method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-createvanillacommand-a-public-function-__createvanillacommand__-caller-"><a id='createvanillacommand'></a>public  function <strong>createVanillaCommand</strong>(caller)</h5>
+<p><em>createVanillaCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-bantabcomplete-a-public-function-__bantabcomplete__-caller-"><a id='bantabcomplete'></a>public  function <strong>banTabComplete</strong>(caller)</h5>
+<p><em>banTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-bancommand-a-public-function-__bancommand__-caller-"><a id='bancommand'></a>public  function <strong>banCommand</strong>(caller)</h5>
+<p><em>banCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupcheck-a-public-function-__groupcheck__-caller-"><a id='groupcheck'></a>public  function <strong>groupCheck</strong>(caller)</h5>
+<p><em>groupCheck method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchonlineplayer-a-public-function-__matchonlineplayer__-caller-"><a id='matchonlineplayer'></a>public  function <strong>matchOnlinePlayer</strong>(caller)</h5>
+<p><em>matchOnlinePlayer method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchknownplayer-a-public-function-__matchknownplayer__-caller-"><a id='matchknownplayer'></a>public  function <strong>matchKnownPlayer</strong>(caller)</h5>
+<p><em>matchKnownPlayer method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-loadworld-a-public-function-__loadworld__-caller-"><a id='loadworld'></a>public  function <strong>loadWorld</strong>(caller)</h5>
+<p><em>loadWorld method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupmodaddtabcomplete-a-public-function-__groupmodaddtabcomplete__-caller-"><a id='groupmodaddtabcomplete'></a>public  function <strong>groupmodAddTabComplete</strong>(caller)</h5>
+<p><em>groupmodAddTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupperms-a-public-function-__groupperms__-caller-"><a id='groupperms'></a>public  function <strong>groupPerms</strong>(caller)</h5>
+<p><em>groupPerms method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupmodpermissiontabcomplete-a-public-function-__groupmodpermissiontabcomplete__-caller-"><a id='groupmodpermissiontabcomplete'></a>public  function <strong>groupmodPermissionTabComplete</strong>(caller)</h5>
+<p><em>groupmodPermissionTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouppermissionsadd-a-public-function-__grouppermissionsadd__-caller-"><a id='grouppermissionsadd'></a>public  function <strong>groupPermissionsAdd</strong>(caller)</h5>
+<p><em>groupPermissionsAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouppermissionsremove-a-public-function-__grouppermissionsremove__-caller-"><a id='grouppermissionsremove'></a>public  function <strong>groupPermissionsRemove</strong>(caller)</h5>
+<p><em>groupPermissionsRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-listwarpscommand-a-public-function-__listwarpscommand__-caller-"><a id='listwarpscommand'></a>public  function <strong>listWarpsCommand</strong>(caller)</h5>
+<p><em>listWarpsCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-homecommand-a-public-function-__homecommand__-caller-"><a id='homecommand'></a>public  function <strong>homeCommand</strong>(caller)</h5>
+<p><em>homeCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouppermissionscheck-a-public-function-__grouppermissionscheck__-caller-"><a id='grouppermissionscheck'></a>public  function <strong>groupPermissionsCheck</strong>(caller)</h5>
+<p><em>groupPermissionsCheck method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupmodpermissionaddremovechecktabcomplete-a-public-function-__groupmodpermissionaddremovechecktabcomplete__-caller-"><a id='groupmodpermissionaddremovechecktabcomplete'></a>public  function <strong>groupmodPermissionAddRemoveCheckTabComplete</strong>(caller)</h5>
+<p><em>groupmodPermissionAddRemoveCheckTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouppermissionslist-a-public-function-__grouppermissionslist__-caller-"><a id='grouppermissionslist'></a>public  function <strong>groupPermissionsList</strong>(caller)</h5>
+<p><em>groupPermissionsList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-helpcommand-a-public-function-__helpcommand__-caller-"><a id='helpcommand'></a>public  function <strong>helpCommand</strong>(caller)</h5>
+<p><em>helpCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ipbancommand-a-public-function-__ipbancommand__-caller-"><a id='ipbancommand'></a>public  function <strong>ipBanCommand</strong>(caller)</h5>
+<p><em>ipBanCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kickcommand-a-public-function-__kickcommand__-caller-"><a id='kickcommand'></a>public  function <strong>kickCommand</strong>(caller)</h5>
+<p><em>kickCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitcommand-a-public-function-__kitcommand__-caller-"><a id='kitcommand'></a>public  function <strong>kitCommand</strong>(caller)</h5>
+<p><em>kitCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitcreatecommand-a-public-function-__kitcreatecommand__-caller-"><a id='kitcreatecommand'></a>public  function <strong>kitCreateCommand</strong>(caller)</h5>
+<p><em>kitCreateCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitgivecommand-a-public-function-__kitgivecommand__-caller-"><a id='kitgivecommand'></a>public  function <strong>kitGiveCommand</strong>(caller)</h5>
+<p><em>kitGiveCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitlistcommand-a-public-function-__kitlistcommand__-caller-"><a id='kitlistcommand'></a>public  function <strong>kitListCommand</strong>(caller)</h5>
+<p><em>kitListCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kitdeletecommand-a-public-function-__kitdeletecommand__-caller-"><a id='kitdeletecommand'></a>public  function <strong>kitDeleteCommand</strong>(caller)</h5>
+<p><em>kitDeleteCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kittabcomplete-a-public-function-__kittabcomplete__-caller-"><a id='kittabcomplete'></a>public  function <strong>kitTabComplete</strong>(caller)</h5>
+<p><em>kitTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-listpluginscommand-a-public-function-__listpluginscommand__-caller-"><a id='listpluginscommand'></a>public  function <strong>listPluginsCommand</strong>(caller)</h5>
+<p><em>listPluginsCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupflush-a-public-function-__groupflush__-caller-"><a id='groupflush'></a>public  function <strong>groupFlush</strong>(caller)</h5>
+<p><em>groupFlush method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouplist-a-public-function-__grouplist__-caller-"><a id='grouplist'></a>public  function <strong>groupList</strong>(caller)</h5>
+<p><em>groupList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupremove-a-public-function-__groupremove__-caller-"><a id='groupremove'></a>public  function <strong>groupRemove</strong>(caller)</h5>
+<p><em>groupRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-grouprename-a-public-function-__grouprename__-caller-"><a id='grouprename'></a>public  function <strong>groupRename</strong>(caller)</h5>
+<p><em>groupRename method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupprefix-a-public-function-__groupprefix__-caller-"><a id='groupprefix'></a>public  function <strong>groupPrefix</strong>(caller)</h5>
+<p><em>groupPrefix method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupparent-a-public-function-__groupparent__-caller-"><a id='groupparent'></a>public  function <strong>groupParent</strong>(caller)</h5>
+<p><em>groupParent method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupmodparenttabcomplete-a-public-function-__groupmodparenttabcomplete__-caller-"><a id='groupmodparenttabcomplete'></a>public  function <strong>groupmodParentTabComplete</strong>(caller)</h5>
+<p><em>groupmodParentTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-killcommand-a-public-function-__killcommand__-caller-"><a id='killcommand'></a>public  function <strong>killCommand</strong>(caller)</h5>
+<p><em>killCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groupbasetabcomplete-a-public-function-__groupbasetabcomplete__-caller-"><a id='groupbasetabcomplete'></a>public  function <strong>groupBaseTabComplete</strong>(caller)</h5>
+<p><em>groupBaseTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-spawnpoint-a-public-function-__spawnpoint__-caller-"><a id='spawnpoint'></a>public  function <strong>spawnpoint</strong>(caller)</h5>
+<p><em>spawnpoint method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchpluginname-a-public-function-__matchpluginname__-caller-"><a id='matchpluginname'></a>public  function <strong>matchPluginName</strong>(caller)</h5>
+<p><em>matchPluginName method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-spreadplayers-a-public-function-__spreadplayers__-caller-"><a id='spreadplayers'></a>public  function <strong>spreadplayers</strong>(caller)</h5>
+<p><em>spreadplayers method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerremove-a-public-function-__playerremove__-caller-"><a id='playerremove'></a>public  function <strong>playerRemove</strong>(caller)</h5>
+<p><em>playerRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergroupset-a-public-function-__playergroupset__-caller-"><a id='playergroupset'></a>public  function <strong>playerGroupSet</strong>(caller)</h5>
+<p><em>playerGroupSet method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobspawnertabcomplete-a-public-function-__mobspawnertabcomplete__-caller-"><a id='mobspawnertabcomplete'></a>public  function <strong>mobspawnerTabComplete</strong>(caller)</h5>
+<p><em>mobspawnerTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobspawnercheck-a-public-function-__mobspawnercheck__-caller-"><a id='mobspawnercheck'></a>public  function <strong>mobspawnercheck</strong>(caller)</h5>
+<p><em>mobspawnercheck method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobspawnerset-a-public-function-__mobspawnerset__-caller-"><a id='mobspawnerset'></a>public  function <strong>mobspawnerset</strong>(caller)</h5>
+<p><em>mobspawnerset method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobspawner-a-public-function-__mobspawner__-caller-"><a id='mobspawner'></a>public  function <strong>mobspawner</strong>(caller)</h5>
+<p><em>mobspawner method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobtabcomplete-a-public-function-__mobtabcomplete__-caller-"><a id='mobtabcomplete'></a>public  function <strong>mobTabComplete</strong>(caller)</h5>
+<p><em>mobTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobcount-a-public-function-__mobcount__-caller-"><a id='mobcount'></a>public  function <strong>mobcount</strong>(caller)</h5>
+<p><em>mobcount method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mobclear-a-public-function-__mobclear__-caller-"><a id='mobclear'></a>public  function <strong>mobclear</strong>(caller)</h5>
+<p><em>mobclear method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mob-a-public-function-__mob__-caller-"><a id='mob'></a>public  function <strong>mob</strong>(caller)</h5>
+<p><em>mob method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchworldnamedimension-a-public-function-__matchworldnamedimension__-caller-"><a id='matchworldnamedimension'></a>public  function <strong>matchWorldNameDimension</strong>(caller)</h5>
+<p><em>matchWorldNameDimension method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergroupadd-a-public-function-__playergroupadd__-caller-"><a id='playergroupadd'></a>public  function <strong>playerGroupAdd</strong>(caller)</h5>
+<p><em>playerGroupAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergrouplist-a-public-function-__playergrouplist__-caller-"><a id='playergrouplist'></a>public  function <strong>playerGroupList</strong>(caller)</h5>
+<p><em>playerGroupList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergroupcheck-a-public-function-__playergroupcheck__-caller-"><a id='playergroupcheck'></a>public  function <strong>playerGroupCheck</strong>(caller)</h5>
+<p><em>playerGroupCheck method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergroupremove-a-public-function-__playergroupremove__-caller-"><a id='playergroupremove'></a>public  function <strong>playerGroupRemove</strong>(caller)</h5>
+<p><em>playerGroupRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchwarpnames-a-public-function-__matchwarpnames__-caller-"><a id='matchwarpnames'></a>public  function <strong>matchWarpNames</strong>(caller)</h5>
+<p><em>matchWarpNames method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerprefix-a-public-function-__playerprefix__-caller-"><a id='playerprefix'></a>public  function <strong>playerPrefix</strong>(caller)</h5>
+<p><em>playerPrefix method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpermissions-a-public-function-__playerpermissions__-caller-"><a id='playerpermissions'></a>public  function <strong>playerPermissions</strong>(caller)</h5>
+<p><em>playerPermissions method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playeraddtabcomplete-a-public-function-__playeraddtabcomplete__-caller-"><a id='playeraddtabcomplete'></a>public  function <strong>playerAddTabComplete</strong>(caller)</h5>
+<p><em>playerAddTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playeradd-a-public-function-__playeradd__-caller-"><a id='playeradd'></a>public  function <strong>playerAdd</strong>(caller)</h5>
+<p><em>playerAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerbasetabcomplete-a-public-function-__playerbasetabcomplete__-caller-"><a id='playerbasetabcomplete'></a>public  function <strong>playerBaseTabComplete</strong>(caller)</h5>
+<p><em>playerBaseTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerbase-a-public-function-__playerbase__-caller-"><a id='playerbase'></a>public  function <strong>playerBase</strong>(caller)</h5>
+<p><em>playerBase method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpermissionsadd-a-public-function-__playerpermissionsadd__-caller-"><a id='playerpermissionsadd'></a>public  function <strong>playerPermissionsAdd</strong>(caller)</h5>
+<p><em>playerPermissionsAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchtogrouptabcomplete-a-public-function-__matchtogrouptabcomplete__-caller-"><a id='matchtogrouptabcomplete'></a>public  function <strong>matchToGroupTabComplete</strong>(caller)</h5>
+<p><em>matchToGroupTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpermissionsremove-a-public-function-__playerpermissionsremove__-caller-"><a id='playerpermissionsremove'></a>public  function <strong>playerPermissionsRemove</strong>(caller)</h5>
+<p><em>playerPermissionsRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerlistcommand-a-public-function-__playerlistcommand__-caller-"><a id='playerlistcommand'></a>public  function <strong>playerListCommand</strong>(caller)</h5>
+<p><em>playerListCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergrouptabcomplete-a-public-function-__playergrouptabcomplete__-caller-"><a id='playergrouptabcomplete'></a>public  function <strong>playerGroupTabComplete</strong>(caller)</h5>
+<p><em>playerGroupTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-oplist-a-public-function-__oplist__-caller-"><a id='oplist'></a>public  function <strong>oplist</strong>(caller)</h5>
+<p><em>oplist method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playergroup-a-public-function-__playergroup__-caller-"><a id='playergroup'></a>public  function <strong>playerGroup</strong>(caller)</h5>
+<p><em>playerGroup method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-op-a-public-function-__op__-caller-"><a id='op'></a>public  function <strong>op</strong>(caller)</h5>
+<p><em>op method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-mutecommand-a-public-function-__mutecommand__-caller-"><a id='mutecommand'></a>public  function <strong>muteCommand</strong>(caller)</h5>
+<p><em>muteCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-motdcommand-a-public-function-__motdcommand__-caller-"><a id='motdcommand'></a>public  function <strong>motdCommand</strong>(caller)</h5>
+<p><em>motdCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-matchworldnameplayername-a-public-function-__matchworldnameplayername__-caller-"><a id='matchworldnameplayername'></a>public  function <strong>matchWorldNamePlayerName</strong>(caller)</h5>
+<p><em>matchWorldNamePlayerName method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpermissionscheck-a-public-function-__playerpermissionscheck__-caller-"><a id='playerpermissionscheck'></a>public  function <strong>playerPermissionsCheck</strong>(caller)</h5>
+<p><em>playerPermissionsCheck method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpermissionslist-a-public-function-__playerpermissionslist__-caller-"><a id='playerpermissionslist'></a>public  function <strong>playerPermissionsList</strong>(caller)</h5>
+<p><em>playerPermissionsList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-message-a-public-function-__message__-caller-"><a id='message'></a>public  function <strong>message</strong>(caller)</h5>
+<p><em>message method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-messageraw-a-public-function-__messageraw__-caller-"><a id='messageraw'></a>public  function <strong>messageraw</strong>(caller)</h5>
+<p><em>messageraw method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-particle-a-public-function-__particle__-caller-"><a id='particle'></a>public  function <strong>particle</strong>(caller)</h5>
+<p><em>particle method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelisttabcomplete-a-public-function-__whitelisttabcomplete__-caller-"><a id='whitelisttabcomplete'></a>public  function <strong>whitelistTabComplete</strong>(caller)</h5>
+<p><em>whitelistTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playsound-a-public-function-__playsound__-caller-"><a id='playsound'></a>public  function <strong>playsound</strong>(caller)</h5>
+<p><em>playsound method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playermodgroupaddremoveset-a-public-function-__playermodgroupaddremoveset__-caller-"><a id='playermodgroupaddremoveset'></a>public  function <strong>playermodGroupAddRemoveSet</strong>(caller)</h5>
+<p><em>playermodGroupAddRemoveSet method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerinfo-a-public-function-__playerinfo__-caller-"><a id='playerinfo'></a>public  function <strong>playerinfo</strong>(caller)</h5>
+<p><em>playerinfo method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playermodpermissionremove-a-public-function-__playermodpermissionremove__-caller-"><a id='playermodpermissionremove'></a>public  function <strong>playermodPermissionRemove</strong>(caller)</h5>
+<p><em>playermodPermissionRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistreloadcommand-a-public-function-__whitelistreloadcommand__-caller-"><a id='whitelistreloadcommand'></a>public  function <strong>whitelistReloadCommand</strong>(caller)</h5>
+<p><em>whitelistReloadCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelistcommand-a-public-function-__reservelistcommand__-caller-"><a id='reservelistcommand'></a>public  function <strong>reservelistCommand</strong>(caller)</h5>
+<p><em>reservelistCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reloadcommand-a-public-function-__reloadcommand__-caller-"><a id='reloadcommand'></a>public  function <strong>reloadCommand</strong>(caller)</h5>
+<p><em>reloadCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelistadd-a-public-function-__reservelistadd__-caller-"><a id='reservelistadd'></a>public  function <strong>reservelistAdd</strong>(caller)</h5>
+<p><em>reservelistAdd method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reloadplugincommand-a-public-function-__reloadplugincommand__-caller-"><a id='reloadplugincommand'></a>public  function <strong>reloadPluginCommand</strong>(caller)</h5>
+<p><em>reloadPluginCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-replaceitem-a-public-function-__replaceitem__-caller-"><a id='replaceitem'></a>public  function <strong>replaceitem</strong>(caller)</h5>
+<p><em>replaceitem method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldcreate-a-public-function-__worldcreate__-caller-"><a id='worldcreate'></a>public  function <strong>worldCreate</strong>(caller)</h5>
+<p><em>worldCreate method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-scoreboard-a-public-function-__scoreboard__-caller-"><a id='scoreboard'></a>public  function <strong>scoreboard</strong>(caller)</h5>
+<p><em>scoreboard method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelistremove-a-public-function-__reservelistremove__-caller-"><a id='reservelistremove'></a>public  function <strong>reservelistRemove</strong>(caller)</h5>
+<p><em>reservelistRemove method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelistshow-a-public-function-__reservelistshow__-caller-"><a id='reservelistshow'></a>public  function <strong>reservelistShow</strong>(caller)</h5>
+<p><em>reservelistShow method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reservelisttabcomplete-a-public-function-__reservelisttabcomplete__-caller-"><a id='reservelisttabcomplete'></a>public  function <strong>reservelistTabComplete</strong>(caller)</h5>
+<p><em>reservelistTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-saveall-a-public-function-__saveall__-caller-"><a id='saveall'></a>public  function <strong>saveall</strong>(caller)</h5>
+<p><em>saveall method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-saveoff-a-public-function-__saveoff__-caller-"><a id='saveoff'></a>public  function <strong>saveoff</strong>(caller)</h5>
+<p><em>saveoff method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-saveon-a-public-function-__saveon__-caller-"><a id='saveon'></a>public  function <strong>saveon</strong>(caller)</h5>
+<p><em>saveon method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistshowcommand-a-public-function-__whitelistshowcommand__-caller-"><a id='whitelistshowcommand'></a>public  function <strong>whitelistShowCommand</strong>(caller)</h5>
+<p><em>whitelistShowCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-teleport-a-public-function-__teleport__-caller-"><a id='teleport'></a>public  function <strong>teleport</strong>(caller)</h5>
+<p><em>teleport method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-stopcommand-a-public-function-__stopcommand__-caller-"><a id='stopcommand'></a>public  function <strong>stopCommand</strong>(caller)</h5>
+<p><em>stopCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-sysinfo-a-public-function-__sysinfo__-caller-"><a id='sysinfo'></a>public  function <strong>sysinfo</strong>(caller)</h5>
+<p><em>sysinfo method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-spawncommand-a-public-function-__spawncommand__-caller-"><a id='spawncommand'></a>public  function <strong>spawnCommand</strong>(caller)</h5>
+<p><em>spawnCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-stats-a-public-function-__stats__-caller-"><a id='stats'></a>public  function <strong>stats</strong>(caller)</h5>
+<p><em>stats method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-summon-a-public-function-__summon__-caller-"><a id='summon'></a>public  function <strong>summon</strong>(caller)</h5>
+<p><em>summon method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-unloadworld-a-public-function-__unloadworld__-caller-"><a id='unloadworld'></a>public  function <strong>unloadWorld</strong>(caller)</h5>
+<p><em>unloadWorld method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-warpuse-a-public-function-__warpuse__-caller-"><a id='warpuse'></a>public  function <strong>warpUse</strong>(caller)</h5>
+<p><em>warpUse method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-testforblock-a-public-function-__testforblock__-caller-"><a id='testforblock'></a>public  function <strong>testforblock</strong>(caller)</h5>
+<p><em>testforblock method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-title-a-public-function-__title__-caller-"><a id='title'></a>public  function <strong>title</strong>(caller)</h5>
+<p><em>title method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-testfor-a-public-function-__testfor__-caller-"><a id='testfor'></a>public  function <strong>testfor</strong>(caller)</h5>
+<p><em>testfor method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-testforblocks-a-public-function-__testforblocks__-caller-"><a id='testforblocks'></a>public  function <strong>testforblocks</strong>(caller)</h5>
+<p><em>testforblocks method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-time-a-public-function-__time__-caller-"><a id='time'></a>public  function <strong>time</strong>(caller)</h5>
+<p><em>time method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-unbancommand-a-public-function-__unbancommand__-caller-"><a id='unbancommand'></a>public  function <strong>unbanCommand</strong>(caller)</h5>
+<p><em>unbanCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-unbantabcomplete-a-public-function-__unbantabcomplete__-caller-"><a id='unbantabcomplete'></a>public  function <strong>unbanTabComplete</strong>(caller)</h5>
+<p><em>unbanTabComplete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-uptime-a-public-function-__uptime__-caller-"><a id='uptime'></a>public  function <strong>uptime</strong>(caller)</h5>
+<p><em>uptime method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-trigger-a-public-function-__trigger__-caller-"><a id='trigger'></a>public  function <strong>trigger</strong>(caller)</h5>
+<p><em>trigger method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-toggledownfall-a-public-function-__toggledownfall__-caller-"><a id='toggledownfall'></a>public  function <strong>toggledownfall</strong>(caller)</h5>
+<p><em>toggledownfall method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worlddelete-a-public-function-__worlddelete__-caller-"><a id='worlddelete'></a>public  function <strong>worldDelete</strong>(caller)</h5>
+<p><em>worldDelete method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-weather-a-public-function-__weather__-caller-"><a id='weather'></a>public  function <strong>weather</strong>(caller)</h5>
+<p><em>weather method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wolfscriptinfocommand-a-public-function-__wolfscriptinfocommand__-caller-"><a id='wolfscriptinfocommand'></a>public  function <strong>wolfscriptInfoCommand</strong>(caller)</h5>
+<p><em>wolfscriptInfoCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldload-a-public-function-__worldload__-caller-"><a id='worldload'></a>public  function <strong>worldLoad</strong>(caller)</h5>
+<p><em>worldLoad method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistcommand-a-public-function-__whitelistcommand__-caller-"><a id='whitelistcommand'></a>public  function <strong>whitelistCommand</strong>(caller)</h5>
+<p><em>whitelistCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldinfo-a-public-function-__worldinfo__-caller-"><a id='worldinfo'></a>public  function <strong>worldInfo</strong>(caller)</h5>
+<p><em>worldInfo method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-world-a-public-function-__world__-caller-"><a id='world'></a>public  function <strong>world</strong>(caller)</h5>
+<p><em>world method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistremovecommand-a-public-function-__whitelistremovecommand__-caller-"><a id='whitelistremovecommand'></a>public  function <strong>whitelistRemoveCommand</strong>(caller)</h5>
+<p><em>whitelistRemoveCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldlist-a-public-function-__worldlist__-caller-"><a id='worldlist'></a>public  function <strong>worldList</strong>(caller)</h5>
+<p><em>worldList method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistdisablecommand-a-public-function-__whitelistdisablecommand__-caller-"><a id='whitelistdisablecommand'></a>public  function <strong>whitelistDisableCommand</strong>(caller)</h5>
+<p><em>whitelistDisableCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-whitelistenablecommand-a-public-function-__whitelistenablecommand__-caller-"><a id='whitelistenablecommand'></a>public  function <strong>whitelistEnableCommand</strong>(caller)</h5>
+<p><em>whitelistEnableCommand method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldunload-a-public-function-__worldunload__-caller-"><a id='worldunload'></a>public  function <strong>worldUnload</strong>(caller)</h5>
+<p><em>worldUnload method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldborder-a-public-function-__worldborder__-caller-"><a id='worldborder'></a>public  function <strong>worldborder</strong>(caller)</h5>
+<p><em>worldborder method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-xp-a-public-function-__xp__-caller-"><a id='xp'></a>public  function <strong>xp</strong>(caller)</h5>
+<p><em>xp method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller</td>
+<td><a href="..\chat\MessageReceiver.html"><code>MessageReceiver</code></a></td>
+<td>caller argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

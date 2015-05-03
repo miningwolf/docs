@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API AsyncPlayerChatEvent</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html'>event</a></li>
+ <li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\0.html'>player</a></li>
+<li class='current'><a href='#'>AsyncPlayerChatEvent</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\block\0.html' class=''>event.block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\enchantment\0.html' class=''>event.enchantment</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\entity\0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\hanging\0.html' class=''>event.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\inventory\0.html' class=''>event.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\painting\0.html' class=''>event.painting</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\0.html' class=''>event.player</a></li> 
+<li class='active'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\AsyncPlayerChatEvent.html'>AsyncPlayerChatEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAchievementAwardedEvent.html'>PlayerAchievementAwardedEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAnimationEvent.html'>PlayerAnimationEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerAnimationType.html'>PlayerAnimationType</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerArmorStandManipulateEvent.html'>PlayerArmorStandManipulateEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBedEnterEvent.html'>PlayerBedEnterEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBedLeaveEvent.html'>PlayerBedLeaveEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketEmptyEvent.html'>PlayerBucketEmptyEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketEvent.html'>PlayerBucketEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerBucketFillEvent.html'>PlayerBucketFillEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChangedWorldEvent.html'>PlayerChangedWorldEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChannelEvent.html'>PlayerChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChatEvent.html'>PlayerChatEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerChatTabCompleteEvent.html'>PlayerChatTabCompleteEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerCommandPreprocessEvent.html'>PlayerCommandPreprocessEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerDropItemEvent.html'>PlayerDropItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEditBookEvent.html'>PlayerEditBookEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEggThrowEvent.html'>PlayerEggThrowEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerEvent.html'>PlayerEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerExpChangeEvent.html'>PlayerExpChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerGameModeChangeEvent.html'>PlayerGameModeChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractAtEntityEvent.html'>PlayerInteractAtEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractEntityEvent.html'>PlayerInteractEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInteractEvent.html'>PlayerInteractEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerInventoryEvent.html'>PlayerInventoryEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemBreakEvent.html'>PlayerItemBreakEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemConsumeEvent.html'>PlayerItemConsumeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerItemHeldEvent.html'>PlayerItemHeldEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerJoinEvent.html'>PlayerJoinEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerKickEvent.html'>PlayerKickEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerLevelChangeEvent.html'>PlayerLevelChangeEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerMoveEvent.html'>PlayerMoveEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerPickupItemEvent.html'>PlayerPickupItemEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerPortalEvent.html'>PlayerPortalEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerToggleSprintEvent.html'>PlayerToggleSprintEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerUnleashEntityEvent.html'>PlayerUnleashEntityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerUnregisterChannelEvent.html'>PlayerUnregisterChannelEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\PlayerVelocityEvent.html'>PlayerVelocityEvent</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\Result.html'>Result</a></li>
+<li><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\player\State.html'>State</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\server\0.html' class=''>event.server</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\vehicle\0.html' class=''>event.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\weather\0.html' class=''>event.weather</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\event\world\0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="asyncplayerchatevent-__class__">AsyncPlayerChatEvent <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.player.AsyncPlayerChatEvent
+Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a>
+Implements <a href="..\Cancellable.html"><code>Cancellable</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>This event will sometimes fire synchronously, depending on how it was triggered. <p> The constructor provides a boolean to indicate if the event was fired synchronously or asynchronously. When asynchronous, this event can be called from any thread, sans the main thread, and has limited access to the API. <p> If a player is the direct cause of this event by an incoming packet, this event will be asynchronous. If a plugin triggers this event by compelling a player to chat, this event will be synchronous. <p> Care should be taken to check <code>#isAsynchronous()</code> and treat the event appropriately.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static readonly property <strong>HandlerList</strong> <br> <em>HandlerList property</em></td>
+<td style="text-align:left"><a href="..\HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="..\HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Recipients</strong> <br> <em>Recipients property</em></td>
+<td style="text-align:left"><code>Set&lt;Player&gt;</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Cancelled</strong> <br> <em>Cancelled property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>isCancelled</strong>() <br> <em>isCancelled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="PlayerEvent.html"><code>PlayerEvent</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>PlayerEvent</strong>(Player) <br> <em>PlayerEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>final readonly property <strong>Player</strong> <br> <em>Get: Returns the player involved in this event</em></td>
+<td style="text-align:left"><code>Player</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="..\Event.html"><code>Event</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>The default constructor is defined for cleaner code. This constructor</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-asyncplayerchatevent-asyncplayerchatevent-md-">Public Properties for <a href="AsyncPlayerChatEvent.html"><code>AsyncPlayerChatEvent</code></a></h3>
+<h5 id="-a-id-handlerlist-a-public-static-readonly-property-__handlerlist__"><a id='handlerlist'></a>public static readonly property <strong>HandlerList</strong></h5>
+<p><em>HandlerList property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlers-a-public-readonly-property-__handlers__"><a id='handlers'></a>public  readonly property <strong>Handlers</strong></h5>
+<p><em>Handlers property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="..\HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-recipients-a-public-readonly-property-__recipients__"><a id='recipients'></a>public  readonly property <strong>Recipients</strong></h5>
+<p><em>Recipients property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Set&lt;Player&gt;</code></td>
+<td>Message the player is attempting to send /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public <span class="hljs-keyword">String</span> getMessage() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">message</span>;
+}
+
+/** Sets the <span class="hljs-keyword">message</span> that the player will send. This <span class="hljs-keyword">message</span> will be used with `<span class="hljs-comment">#getFormat()`.</span>
+</code></pre><h5 id="-a-id-cancelled-a-public-writeonly-property-__cancelled__"><a id='cancelled'></a>public  writeonly property <strong>Cancelled</strong></h5>
+<p><em>Cancelled property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancel</td>
+<td><code>boolean</code></td>
+<td>cancel argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-asyncplayerchatevent-asyncplayerchatevent-md-">Public Methods for <a href="AsyncPlayerChatEvent.html"><code>AsyncPlayerChatEvent</code></a></h3>
+<h5 id="-a-id-iscancelled-a-public-function-__iscancelled__-"><a id='iscancelled'></a>public  function <strong>isCancelled</strong>()</h5>
+<p><em>isCancelled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-playerevent-playerevent-md-">Public Constructors for <a href="PlayerEvent.html"><code>PlayerEvent</code></a></h3>
+<h5 id="-a-id-playerevent-a-new-__playerevent__-player-"><a id='playerevent'></a>new <strong>PlayerEvent</strong>(Player)</h5>
+<p><em>PlayerEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Player</td>
+<td><code>final</code></td>
+<td>Player argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-playerevent-playerevent-md-">Public Properties for <a href="PlayerEvent.html"><code>PlayerEvent</code></a></h3>
+<h5 id="-a-id-player-a-public-final-readonly-property-__player__"><a id='player'></a>public final readonly property <strong>Player</strong></h5>
+<p><em>Get: Returns the player involved in this event</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Player</code></td>
+<td>Player who is involved in this event</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-event-event-md-">Public Methods for <a href="..\Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
+<p>_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
+    public Event() {
+        this(false);
+    }</p>
+<pre><code>/** This constructor <span class="hljs-keyword">is</span> used <span class="hljs-keyword">to</span> explicitly <span class="hljs-keyword">declare</span> an <span class="hljs-keyword">event</span> <span class="hljs-keyword">as</span> synchronous <span class="hljs-keyword">or</span> asynchronous._
+</code></pre><table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>name of this event /</td>
+</tr>
+</tbody>
+</table>
+<pre><code>public String getEventName() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-property">name</span> == null) {
+        <span class="hljs-property">name</span> = getClass().getSimpleName();
+    }
+<span class="hljs-command">    return</span> <span class="hljs-property">name</span>;
+}
+
+public abstract HandlerList getHandlers();
+
+/** Any custom event <span class="hljs-keyword">that</span> should <span class="hljs-keyword">not</span> <span class="hljs-keyword">by</span> synchronized <span class="hljs-keyword">with</span> other events must use <span class="hljs-keyword">the</span> specific constructor. These are <span class="hljs-keyword">the</span> caveats <span class="hljs-keyword">of</span> using an asynchronous event: &lt;ul&gt; &lt;li&gt;The event <span class="hljs-keyword">is</span> never fired <span class="hljs-keyword">from</span> inside code triggered <span class="hljs-keyword">by</span> a synchronous event. Attempting <span class="hljs-keyword">to</span> do so results <span class="hljs-keyword">in</span> an `IllegalStateException`. &lt;li&gt;However, asynchronous event handlers may fire synchronous <span class="hljs-keyword">or</span> asynchronous events &lt;li&gt;The event may be fired multiple <span class="hljs-keyword">times</span> simultaneously <span class="hljs-keyword">and</span> <span class="hljs-keyword">in</span> any order. &lt;li&gt;Any newly registered <span class="hljs-keyword">or</span> unregistered handler <span class="hljs-keyword">is</span> ignored <span class="hljs-keyword">after</span> an event starts execution. &lt;li&gt;The handlers <span class="hljs-keyword">for</span> this event may block <span class="hljs-keyword">for</span> any <span class="hljs-property">length</span> <span class="hljs-keyword">of</span> <span class="hljs-property">time</span>. &lt;li&gt;Some implementations may selectively declare a specific event use <span class="hljs-keyword">as</span> asynchronous. This behavior should be clearly defined. &lt;li&gt;Asynchronous calls are <span class="hljs-keyword">not</span> calculated <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> plugin timing system. &lt;/ul&gt;
+</code></pre><hr>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

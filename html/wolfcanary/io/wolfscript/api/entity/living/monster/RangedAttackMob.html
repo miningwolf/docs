@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API RangedAttackMob</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html'>api</a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\0.html'>entity</a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\0.html'>living</a></li>
+ <li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\0.html'>monster</a></li>
+<li class='current'><a href='#'>RangedAttackMob</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\ai\0.html' class=''>api.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\attributes\0.html' class=''>api.attributes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\chat\0.html' class=''>api.chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\0.html' class=''>api.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\effect\0.html' class=''>api.entity.effect</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\hanging\0.html' class=''>api.entity.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\0.html' class=''>api.entity.living</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\animal\0.html' class=''>api.entity.living.animal</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\0.html' class=''>api.entity.living.humanoid</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\0.html' class=''>api.entity.living.humanoid.npc</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\humanoid\npc\ai\0.html' class=''>api.entity.living.humanoid.npc.ai</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\0.html' class=''>api.entity.living.monster</a></li> 
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Blaze.html'>Blaze</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\CaveSpider.html'>CaveSpider</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\EnderDragon.html'>EnderDragon</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Enderman.html'>Enderman</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Endermite.html'>Endermite</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\EntityMob.html'>EntityMob</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Ghast.html'>Ghast</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\GiantZombie.html'>GiantZombie</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Guardian.html'>Guardian</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\MagmaCube.html'>MagmaCube</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\PigZombie.html'>PigZombie</a></li>
+<li class='active'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\RangedAttackMob.html'>RangedAttackMob</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Silverfish.html'>Silverfish</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Slime.html'>Slime</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Spider.html'>Spider</a></li>
+<li><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\living\monster\Zombie.html'>Zombie</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\throwable\0.html' class=''>api.entity.throwable</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\entity\vehicle\0.html' class=''>api.entity.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\factory\0.html' class=''>api.factory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\gui\0.html' class=''>api.gui</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\0.html' class=''>api.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\helper\0.html' class=''>api.inventory.helper</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\recipes\0.html' class=''>api.inventory.recipes</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\inventory\slot\0.html' class=''>api.inventory.slot</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\nbt\0.html' class=''>api.nbt</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\packet\0.html' class=''>api.packet</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\potion\0.html' class=''>api.potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\scoreboard\0.html' class=''>api.scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\statistics\0.html' class=''>api.statistics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\0.html' class=''>api.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\0.html' class=''>api.world.blocks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\0.html' class=''>api.world.blocks.properties</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\blocks\properties\helpers\0.html' class=''>api.world.blocks.properties.helpers</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\effects\0.html' class=''>api.world.effects</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\api\world\position\0.html' class=''>api.world.position</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="rangedattackmob-__interface__">RangedAttackMob <strong>interface</strong></h2>
+<blockquote>
+<p>io.wolfscript.api.entity.living.monster.RangedAttackMob</p>
+</blockquote>
+<hr>
+<h3 id="interface-overview">Interface Overview</h3>
+<p>Interface for distinguishing which mobs have ranged attack abilities.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ServerConfiguration</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html'>config</a></li>
+<li class='current'><a href='#'>ServerConfiguration</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\Configuration.html'>Configuration</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\ConfigurationContainer.html'>ConfigurationContainer</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\DatabaseConfiguration.html'>DatabaseConfiguration</a></li>
+<li class='active'><a href='..\..\..\..\wolfcanary\io\wolfscript\config\ServerConfiguration.html'>ServerConfiguration</a></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\config\WorldConfiguration.html'>WorldConfiguration</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="serverconfiguration-__class__">ServerConfiguration <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.config.ServerConfiguration
+Implements <a href="ConfigurationContainer.html"><code>ConfigurationContainer</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Server Configuration Container</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>ServerConfiguration</strong>(path) <br> <em>ServerConfiguration constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>PluginDevModeEnabled</strong> <br> <em>Get: Reloads the configuration file</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-serverconfiguration-serverconfiguration-md-">Public Constructors for <a href="ServerConfiguration.html"><code>ServerConfiguration</code></a></h3>
+<h5 id="-a-id-serverconfiguration-a-new-__serverconfiguration__-path-"><a id='serverconfiguration'></a>new <strong>ServerConfiguration</strong>(path)</h5>
+<p><em>ServerConfiguration constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>String</code></td>
+<td>path argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-serverconfiguration-serverconfiguration-md-">Public Properties for <a href="ServerConfiguration.html"><code>ServerConfiguration</code></a></h3>
+<h5 id="-a-id-plugindevmodeenabled-a-public-readonly-property-__plugindevmodeenabled__"><a id='plugindevmodeenabled'></a>public  readonly property <strong>PluginDevModeEnabled</strong></h5>
+<p>_Get: Reloads the configuration file /
+    @Override
+    public void reload() {
+        cfg.reload();
+        verifyConfig();
+    }</p>
+<pre><code>/** <span class="hljs-class">Get</span> the configuration file /
+@<span class="hljs-class">Override</span>
+public <span class="hljs-class">PropertiesFile</span> getFile() {
+    return cfg;
+}
+
+/** <span class="hljs-class">Creates</span> the default configuration /
+private void verifyConfig() {
+    cfg.getBoolean(<span class="hljs-comment">"announce-player-achievements"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"announce-player-achievements"</span>, <span class="hljs-comment">"Sets whether to inform all of a Player's Achievement"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"allow-enchantment-stacking"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"allow-enchantment-stacking"</span>, <span class="hljs-comment">"Sets whether to allow items with enchantments to stack with non-enchanted items"</span>);
+    cfg.getString(<span class="hljs-comment">"ban-default-message"</span>, <span class="hljs-comment">"You are banned from this server."</span>);
+    cfg.setComments(<span class="hljs-comment">"ban-default-message"</span>, <span class="hljs-comment">"The default message to use for user bans"</span>);
+    cfg.getString(<span class="hljs-comment">"ban-expiration-date-message"</span>, <span class="hljs-comment">"Your Ban will be lifted at "</span>);
+    cfg.setComments(<span class="hljs-comment">"ban-expiration-date-message"</span>, <span class="hljs-comment">"The message to prefix to the timestamp of a tempban expiration"</span>);
+    cfg.getString(<span class="hljs-comment">"chat-format"</span>, <span class="hljs-comment">"&lt;%prefix%name&amp;f&gt; %message"</span>);
+    cfg.setComments(<span class="hljs-comment">"chat-format"</span>, <span class="hljs-comment">"Valid default placeholders are:"</span>,
+                    <span class="hljs-comment">"%prefix (player prefix), %name (player name), %group (main group)"</span>,
+                    <span class="hljs-comment">"You can use standard color codes at all times. Use &amp; as identifier if you miss a § key"</span>,
+                    <span class="hljs-comment">"Plugins may extend the list of available placeholders"</span>
+                   );
+    cfg.getBoolean(<span class="hljs-comment">"command-block-enabled"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"command-block-enabled"</span>, <span class="hljs-comment">"Sets whether the Command Block is allowed or not"</span>);
+    cfg.getString(<span class="hljs-comment">"command-block-group"</span>, <span class="hljs-comment">"admins"</span>);
+    cfg.setComments(<span class="hljs-comment">"command-block-group"</span>, <span class="hljs-comment">"This groups permissions will determine what Command Block can and can not do!"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"command-block-op"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"command-block-op"</span>, <span class="hljs-comment">"Sets whether the Command Block is considered Operator or not (Vanilla command use)"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"command-block-silent"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"command-block-silent"</span>, <span class="hljs-comment">"Sets whether the Command Block logs command output (set to true to 'silence' CommandBlocks)"</span>);
+    cfg.getString(<span class="hljs-comment">"data-source"</span>, <span class="hljs-comment">"xml"</span>);
+    cfg.setComments(<span class="hljs-comment">"data-source"</span>, <span class="hljs-comment">"The Datasource type to use (Default available: xml, mysql, sqlite"</span>);
+    cfg.getString(<span class="hljs-comment">"date-format"</span>, <span class="hljs-comment">"yyyy.MM.dd, hh:mm:ss"</span>);
+    cfg.setComments(<span class="hljs-comment">"date-format"</span>, <span class="hljs-comment">"A formatting to display timestamps"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"death-messages"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"death-messages"</span>, <span class="hljs-comment">"Sets whether to send player death message or not"</span>);
+    //cfg.getBoolean(<span class="hljs-comment">"debug-enabled"</span>, <span class="hljs-keyword">false</span>); //<span class="hljs-class">REMOVED</span>
+    //cfg.setComments(<span class="hljs-comment">"debug-enabled"</span>, <span class="hljs-comment">"Sets whether to enable debug logging or not"</span>); // <span class="hljs-class">REMOVED</span>
+    if (cfg.containsKey(<span class="hljs-comment">"debug-enabled"</span>)) { // <span class="hljs-class">Remove</span> old key
+        cfg.removeKey(<span class="hljs-comment">"debug-enabled"</span>);
+    }
+    cfg.getString(<span class="hljs-comment">"default-world-name"</span>, <span class="hljs-comment">"default"</span>);
+    cfg.setComments(<span class="hljs-comment">"default-world-name"</span>, <span class="hljs-comment">"Name of the default loaded world"</span>);
+    cfg.getInt(<span class="hljs-comment">"default-world-size"</span>, <span class="hljs-number">29999984</span>);
+    cfg.setComments(<span class="hljs-comment">"default-world-size"</span>, <span class="hljs-comment">"This sets the maximum possible size in blocks, expressed as a radius, that the world border can obtain."</span>);
+    cfg.getBoolean(<span class="hljs-comment">"flight-kick"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"flight-kick"</span>, <span class="hljs-comment">"Enables kicking players who are floating too long."</span>);
+    cfg.getInt(<span class="hljs-comment">"flight-detect-ticks"</span>, <span class="hljs-number">80</span>);
+    cfg.setComments(<span class="hljs-comment">"flight-detect-ticks"</span>, <span class="hljs-comment">"The number of ticks a player may float before triggering flight-kick or flight-alert."</span>);
+    //cfg.getBoolean(<span class="hljs-comment">"logging"</span>, <span class="hljs-keyword">false</span>); //<span class="hljs-class">REMOVED</span>
+    if (cfg.containsKey(<span class="hljs-comment">"logging"</span>)) { // <span class="hljs-class">Remove</span> old key
+        cfg.removeKey(<span class="hljs-comment">"logging"</span>);
+    }
+    cfg.getString(<span class="hljs-comment">"logger-level"</span>, <span class="hljs-comment">"INFO"</span>);
+    cfg.setComments(<span class="hljs-comment">"logger-level"</span>, <span class="hljs-comment">"Sets the level of logging."</span>, <span class="hljs-comment">"Acceptable Values: OFF FATAL ERROR WARN INFO DEBUG TRACE ALL"</span>);
+
+    // <span class="hljs-class">RESERVED</span> <span class="hljs-class">SPACE</span>
+    cfg.getInt(<span class="hljs-comment">"max-players"</span>, <span class="hljs-number">20</span>);
+    cfg.setComments(<span class="hljs-comment">"max-players"</span>, <span class="hljs-comment">"The maximum allowed players online (Does not count ReserveList users connecting after server is full)"</span>);
+    cfg.getInt(<span class="hljs-comment">"max-tick-time"</span>, <span class="hljs-number">60000</span>);
+    cfg.setComments(<span class="hljs-comment">"max-tick-time"</span>, <span class="hljs-comment">"The maximum number of milliseconds a single tick may take before the server watchdog stops the server. Setting to -1 disables WatchDog."</span>);
+    cfg.getString(<span class="hljs-comment">"motd"</span>, <span class="hljs-comment">"WolfScript Minecraft Server"</span>);
+    cfg.setComments(<span class="hljs-comment">"motd"</span>, <span class="hljs-comment">"The Server list Message of the Day"</span>);
+    cfg.getInt(<span class="hljs-comment">"network-compression-threshold"</span>, <span class="hljs-number">256</span>);
+    cfg.setComments(<span class="hljs-comment">"network-compression-threshold"</span>, <span class="hljs-comment">"By default it allows packets that are n-1 bytes big to go normally, but a packet that n bytes or more will be compressed down."</span>);
+    cfg.getBoolean(<span class="hljs-comment">"online-mode"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"online-mode"</span>, <span class="hljs-comment">"Sets whether to authenticate connecting users."</span>,
+                    <span class="hljs-comment">"WARNING: Setting to false is INSECURE and should not be done in a production environment."</span>
+                   );
+    cfg.getInt(<span class="hljs-comment">"player-idle-timeout"</span>, <span class="hljs-number">1</span>);
+    cfg.setComments(<span class="hljs-comment">"player-idle-timeout"</span>, <span class="hljs-comment">"Timeout in minutes before kicking an idle player"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"playerlist-enabled"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"playerlist-enabled"</span>, <span class="hljs-comment">"Sets whether to send data to clients for the Player List"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"playerlist-autoupdate"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"playerlist-autoupdate"</span>, <span class="hljs-comment">"Sets whether the Player List should automatically be refreshed for every player or not"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"playerlist-usecolors"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"playerlist-usecolors"</span>, <span class="hljs-comment">"Sets whether the Player List should include colors and player prefixes"</span>);
+    cfg.getInt(<span class="hljs-comment">"playerlist-ticks"</span>, <span class="hljs-number">500</span>);
+    cfg.getBoolean(<span class="hljs-comment">"plugin-dev-mode"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"plugin-dev-mode"</span>, <span class="hljs-comment">"Setting this to true will enable loading plugins from folders; intended for Lua plugin developers"</span>);
+    // <span class="hljs-class">RESERVED</span> <span class="hljs-class">SPACE</span>
+    cfg.getBoolean(<span class="hljs-comment">"query-enabled"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"query-enabled"</span>, <span class="hljs-comment">"Enables GameSpy4 protocol server listener. Used to get information about server."</span>);
+    cfg.getInt(<span class="hljs-comment">"query-port"</span>, <span class="hljs-number">25565</span>);
+    cfg.setComments(<span class="hljs-comment">"query-port"</span>, <span class="hljs-comment">"Set the port for the query server"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"rcon-enabled"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"rcon-enabled"</span>, <span class="hljs-comment">"Whether to allow remote access or not"</span>);
+    cfg.getInt(<span class="hljs-comment">"rcon-port"</span>, <span class="hljs-number">25575</span>);
+    cfg.setComments(<span class="hljs-comment">"rcon-port"</span>, <span class="hljs-comment">"The port you want remote access to listen on (1-65534), DEFAULT: 25575"</span>);
+    cfg.getString(<span class="hljs-comment">"rcon-password"</span>, <span class="hljs-comment">""</span>);
+    cfg.setComments(<span class="hljs-comment">"rcon-password"</span>, <span class="hljs-comment">"Password for remote access"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"reservelist-enabled"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"reservelist-enabled"</span>, <span class="hljs-comment">"Sets whether the ReserveList (join after full) is enabled or not"</span>);
+    cfg.getString(<span class="hljs-comment">"reservelist-message"</span>, <span class="hljs-comment">"Not on reserve list."</span>); //<span class="hljs-class">This</span> seems redundant
+    cfg.getBoolean(<span class="hljs-comment">"save-homes"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"save-homes"</span>, <span class="hljs-comment">"Sets whether to save homes or not"</span>);
+    cfg.getString(<span class="hljs-comment">"server-full-message"</span>, <span class="hljs-comment">"The server is full."</span>);
+    cfg.setComments(<span class="hljs-comment">"server-full-message"</span>, <span class="hljs-comment">"Message to send if the server is full"</span>);
+    cfg.getString(<span class="hljs-comment">"server-ip"</span>, <span class="hljs-comment">""</span>);
+    cfg.setComments(<span class="hljs-comment">"server-ip"</span>, <span class="hljs-comment">"Set to the IP address that you want your server to listen on, or leave blank for automatic detection."</span>);
+    cfg.getInt(<span class="hljs-comment">"server-port"</span>, <span class="hljs-number">25565</span>);
+    cfg.setComments(<span class="hljs-comment">"server-port"</span>, <span class="hljs-comment">"The Port you want your server to listen on (1-65534), DEFAULT: 25565"</span>);
+    cfg.getString(<span class="hljs-comment">"server-locale"</span>, <span class="hljs-comment">"en_US"</span>);
+    cfg.setComments(<span class="hljs-comment">"server-locale"</span>, <span class="hljs-comment">"Sets the default server language to use for messages. Default supported Languages can be found in the lang/languages.txt"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"show-unknown-command"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"show-unknown-command"</span>, <span class="hljs-comment">"Sets whether to inform players of unknown commands"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"snooper-enabled"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"snooper-enabled"</span>, <span class="hljs-comment">"Sets whether Mojang may snoop or not"</span>);
+    cfg.getString(<span class="hljs-comment">"spam-protection"</span>, <span class="hljs-comment">"default"</span>);
+    cfg.setComments(<span class="hljs-comment">"spam-protection"</span>, <span class="hljs-comment">"Level of protection against Spam. Options: default - on for all but ignorerestiction users; off - no protections; all - on for all"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"strict-sign-characters"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"strict-sign-characters"</span>, <span class="hljs-comment">"Sets whether to strictly check characters on signs for invalid chat characters. Set to false to disable (and allow more characters)"</span>);
+    cfg.getString(<span class="hljs-comment">"texture-pack"</span>, <span class="hljs-comment">""</span>);
+    cfg.setComments(<span class="hljs-comment">"texture-pack"</span>, <span class="hljs-comment">"The name of the Server's texture/resource pack"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"update-lang-files"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"Whether to verify and update lang files or not, disable if you intend to make changes to those files"</span>);
+    cfg.getInt(<span class="hljs-comment">"view-distance"</span>, <span class="hljs-number">10</span>);
+    cfg.setComments(<span class="hljs-comment">"view-distance"</span>, <span class="hljs-comment">"Sets the maximum radius of loaded chunks around a player (3-15)"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"whitelist-enabled"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"whitelist-enabled"</span>, <span class="hljs-comment">"Whether the whitelist is enabled or not"</span>);
+    cfg.getString(<span class="hljs-comment">"whitelist-message"</span>, <span class="hljs-comment">"Not on whitelist."</span>);
+    cfg.setComments(<span class="hljs-comment">"whitelist-message"</span>, <span class="hljs-comment">"The message to send to non-whitelisted players"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"world-cache-timer-enabled"</span>, <span class="hljs-keyword">true</span>);
+    cfg.setComments(<span class="hljs-comment">"world-cache-timer-enabled"</span>, <span class="hljs-comment">"Enable automatic unloading of unused worlds."</span>);
+    cfg.getLong(<span class="hljs-comment">"world-cache-timeout"</span>, <span class="hljs-number">60</span>);
+    cfg.setComments(<span class="hljs-comment">"world-cache-timeout"</span>, <span class="hljs-comment">"The number of minutes a world should be empty before it will be unloaded (if use-world-cache is enabled)"</span>);
+    cfg.getBoolean(<span class="hljs-comment">"bungeecord"</span>, <span class="hljs-keyword">false</span>);
+    cfg.setComments(<span class="hljs-comment">"bungeecord"</span>, <span class="hljs-comment">"If you want to enable Bungeecord support. REQUIRES THAT ONLINE MODE IS DISABLED (false)"</span>);
+
+    cfg.save();
+}
+
+public boolean getAnnounceAchievements() {
+    return cfg.getBoolean(<span class="hljs-comment">"announce-player-achievements"</span>, <span class="hljs-keyword">true</span>);
+}
+
+/** <span class="hljs-class">Checks</span> if items are allowed to be stack with enchantments applied_
+</code></pre><table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td><code>true</code> if allowed; <code>false</code> if not /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">allowEnchantmentStacking</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">return</span> cfg.<span class="hljs-title">getBoolean</span><span class="hljs-params">(<span class="hljs-string">"alllow-enchantment-stacking"</span>, <span class="hljs-keyword">false</span>)</span></span>;
+}
+
+<span class="hljs-javadoc">/** Gets the ban default message</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

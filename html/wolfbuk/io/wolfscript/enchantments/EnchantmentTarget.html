@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API EnchantmentTarget</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>wolfbuk</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html'>enchantments</a></li>
+<li class='current'><a href='#'>EnchantmentTarget</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\block\0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\command\0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\configuration\0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\conversations\0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\0.html' class=''>enchantments</a></li> 
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\Enchantment.html'>Enchantment</a></li>
+<li class='active'><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\EnchantmentTarget.html'>EnchantmentTarget</a></li>
+<li><a href='..\..\..\..\wolfbuk\io\wolfscript\enchantments\EnchantmentWrapper.html'>EnchantmentWrapper</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\entity\0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\event\0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\generator\0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\inventory\0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\map\0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\material\0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\metadata\0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\permissions\0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\potion\0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\projectiles\0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scheduler\0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\scoreboard\0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\wolfbuk\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="enchantmenttarget-__enum__">EnchantmentTarget <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.enchantments.EnchantmentTarget</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>Represents the applicable target for a <a href="Enchantment.html"><code>Enchantment</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true: <br> <em>true EnchantmentTarget</em></td>
+<td style="text-align:left">EnchantmentTarget</td>
+</tr>
+<tr>
+<td> function <strong>includes</strong>(item) <br> <em>Allows the Enchantment to be placed on all items</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-enchantmenttarget-enchantmenttarget-md-">Public Methods for <a href="EnchantmentTarget.html"><code>EnchantmentTarget</code></a></h3>
+<h5 id="-a-id-includes-a-public-function-__includes__-item-"><a id='includes'></a>public  function <strong>includes</strong>(item)</h5>
+<p>_Allows the Enchantment to be placed on all items /
+    ALL {
+        @Override
+        public boolean includes(Material item) {
+            return true;
+        }
+    },</p>
+<pre><code>/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on armor /
+ARMOR {
+    @Override
+    public boolean includes(Material item) {
+        return ARMOR_FEET.includes(item)
+            || ARMOR_LEGS.includes(item)
+            || ARMOR_HEAD.includes(item)
+            || ARMOR_TORSO.includes(item);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on feet slot armor /
+ARMOR_FEET {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.LEATHER_BOOTS)
+            || item.<span class="hljs-keyword">equals</span>(Material.CHAINMAIL_BOOTS)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_BOOTS)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_BOOTS)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_BOOTS);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on leg slot armor /
+ARMOR_LEGS {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.LEATHER_LEGGINGS)
+            || item.<span class="hljs-keyword">equals</span>(Material.CHAINMAIL_LEGGINGS)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_LEGGINGS)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_LEGGINGS)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_LEGGINGS);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on torso slot armor /
+ARMOR_TORSO {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.LEATHER_CHESTPLATE)
+            || item.<span class="hljs-keyword">equals</span>(Material.CHAINMAIL_CHESTPLATE)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_CHESTPLATE)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_CHESTPLATE)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_CHESTPLATE);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on head slot armor /
+ARMOR_HEAD {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.LEATHER_HELMET)
+            || item.<span class="hljs-keyword">equals</span>(Material.CHAINMAIL_HELMET)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_HELMET)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_HELMET)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_HELMET);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on weapons (swords) /
+WEAPON {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.WOOD_SWORD)
+            || item.<span class="hljs-keyword">equals</span>(Material.STONE_SWORD)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_SWORD)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_SWORD)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_SWORD);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on tools (spades, pickaxe, hoes, axes) /
+TOOL {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.WOOD_SPADE)
+            || item.<span class="hljs-keyword">equals</span>(Material.STONE_SPADE)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_SPADE)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_SPADE)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_SPADE)
+            || item.<span class="hljs-keyword">equals</span>(Material.WOOD_PICKAXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.STONE_PICKAXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_PICKAXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_PICKAXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_PICKAXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.WOOD_HOE)         // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.STONE_HOE)        // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_HOE)         // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_HOE)      // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_HOE)         // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.WOOD_AXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.STONE_AXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.IRON_AXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.DIAMOND_AXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.GOLD_AXE)
+            || item.<span class="hljs-keyword">equals</span>(Material.SHEARS)           // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+            || item.<span class="hljs-keyword">equals</span>(Material.FLINT_AND_STEEL); // NOTE: No vanilla enchantments <span class="hljs-keyword">for</span> this
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on bows. /
+BOW {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.BOW);
+    }
+},
+
+/** Allows the Enchantment to <span class="hljs-keyword">be</span> placed on fishing rods. /
+FISHING_ROD {
+    @Override
+    public boolean includes(Material item) {
+        return item.<span class="hljs-keyword">equals</span>(Material.FISHING_ROD);
+    }
+};
+
+/** Check whether this target includes the specified item._
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item</td>
+<td><code>ItemStack</code></td>
+<td>The item to check</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>True if the target includes the item /</td>
+</tr>
+</tbody>
+</table>
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">boolean</span> <span class="hljs-keyword">includes</span>(Material item);
+
+<span class="hljs-comment">/** Check whether this target includes the specified item.</span>
+</code></pre><hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

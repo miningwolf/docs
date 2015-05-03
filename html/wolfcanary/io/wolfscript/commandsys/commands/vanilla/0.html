@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API wolfcanary.io.wolfscript.commandsys.commands.vanilla</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="..\..\..\..\..\..\assets\css\docs.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\css\github.css" rel="stylesheet" />
+  <link href="..\..\..\..\..\..\assets\fonts\foundation-icons.css" rel="stylesheet" />
+   <script src="..\..\..\..\..\..\assets\js\vendor\modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='..\..\..\..\..\..\index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfbuk\io\wolfscript\0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='..\..\..\..\..\..\wolfnode\globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="..\..\..\..\..\..\GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='..\..\..\..\..\..\index.html'>Home </a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>wolfcanary</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html'>io.wolfscript</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html'>commandsys</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\0.html'>commands</a></li>
+ <li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\0.html'>vanilla</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\api\0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\backbone\0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\bansystem\0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\channels\0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\chat\0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\groupmod\0.html' class=''>commandsys.commands.groupmod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\player\0.html' class=''>commandsys.commands.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\playermod\0.html' class=''>commandsys.commands.playermod</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\0.html' class=''>commandsys.commands.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\bans\0.html' class=''>commandsys.commands.system.bans</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\informational\0.html' class=''>commandsys.commands.system.informational</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\kits\0.html' class=''>commandsys.commands.system.kits</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\operator\0.html' class=''>commandsys.commands.system.operator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\reservelist\0.html' class=''>commandsys.commands.system.reservelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\system\whitelist\0.html' class=''>commandsys.commands.system.whitelist</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\0.html' class=''>commandsys.commands.vanilla</a></li> 
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Achievement.html'>Achievement</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\BlockData.html'>BlockData</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Broadcast.html'>Broadcast</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Clear.html'>Clear</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Clone.html'>Clone</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Debug.html'>Debug</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\DefaultGameMode.html'>DefaultGameMode</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\DefaultSpawnpoint.html'>DefaultSpawnpoint</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Difficulty.html'>Difficulty</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Effect.html'>Effect</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Emote.html'>Emote</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Enchant.html'>Enchant</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\EntityData.html'>EntityData</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Execute.html'>Execute</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Fill.html'>Fill</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\GameMode.html'>GameMode</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\GameRule.html'>GameRule</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Give.html'>Give</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Kill.html'>Kill</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Message.html'>Message</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\MessageRaw.html'>MessageRaw</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Particle.html'>Particle</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\PlaySound.html'>PlaySound</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\ReplaceItem.html'>ReplaceItem</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SaveAll.html'>SaveAll</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SaveOff.html'>SaveOff</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SaveOn.html'>SaveOn</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Scoreboard.html'>Scoreboard</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SetBlock.html'>SetBlock</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SpawnPoint.html'>SpawnPoint</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\SpreadPlayers.html'>SpreadPlayers</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Stats.html'>Stats</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Summon.html'>Summon</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Teleport.html'>Teleport</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\TestFor.html'>TestFor</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\TestForBlock.html'>TestForBlock</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\TestForBlocks.html'>TestForBlocks</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Time.html'>Time</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Title.html'>Title</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\ToggleDownfall.html'>ToggleDownfall</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Trigger.html'>Trigger</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\Weather.html'>Weather</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\WorldBorder.html'>WorldBorder</a></li>
+<li><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\vanilla\XP.html'>XP</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\warp\0.html' class=''>commandsys.commands.warp</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\commandsys\commands\world\0.html' class=''>commandsys.commands.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\config\0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\converter\0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\database\0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\event\command\0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\exceptions\0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\help\0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\hook\0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\kit\0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\logger\0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\metrics\0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\motd\0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\permissionsystem\0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\plugin\0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\serialize\0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\tasks\0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\user\0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\util\0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='..\..\..\..\..\..\wolfcanary\io\wolfscript\warp\0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="commandsys-commands-vanilla-__classes-and-interfaces-__">COMMANDSYS.COMMANDS.VANILLA <strong>Classes and Interfaces </strong></h2>
+<blockquote>
+<p>io.wolfscript.commandsys.commands.vanilla</p>
+</blockquote>
+<hr>
+<p>Classes and interfaces for namespace io.wolfscript.commandsys.commands.vanilla</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Description   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Classes</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="Achievement.html"><code>Achievement</code></a></strong></td>
+<td style="text-align:left"><em>Achievement command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="BlockData.html"><code>BlockData</code></a></strong></td>
+<td style="text-align:left"><em>BlockData command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Broadcast.html"><code>Broadcast</code></a></strong></td>
+<td style="text-align:left"><em>Broadcast command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Clear.html"><code>Clear</code></a></strong></td>
+<td style="text-align:left"><em>Clear Inventory command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Clone.html"><code>Clone</code></a></strong></td>
+<td style="text-align:left"><em>Clone command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Debug.html"><code>Debug</code></a></strong></td>
+<td style="text-align:left"><em>Debug command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="DefaultGameMode.html"><code>DefaultGameMode</code></a></strong></td>
+<td style="text-align:left"><em>Default GameMode command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="DefaultSpawnpoint.html"><code>DefaultSpawnpoint</code></a></strong></td>
+<td style="text-align:left"><em>Default GameMode command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Difficulty.html"><code>Difficulty</code></a></strong></td>
+<td style="text-align:left"><em>Difficulty command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Effect.html"><code>Effect</code></a></strong></td>
+<td style="text-align:left"><em>Effect command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Emote.html"><code>Emote</code></a></strong></td>
+<td style="text-align:left"><em>Emote command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Enchant.html"><code>Enchant</code></a></strong></td>
+<td style="text-align:left"><em>Enchant command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="EntityData.html"><code>EntityData</code></a></strong></td>
+<td style="text-align:left"><em>EntityData command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Execute.html"><code>Execute</code></a></strong></td>
+<td style="text-align:left"><em>Execute command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Fill.html"><code>Fill</code></a></strong></td>
+<td style="text-align:left"><em>Fill command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="GameMode.html"><code>GameMode</code></a></strong></td>
+<td style="text-align:left"><em>GameMode command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="GameRule.html"><code>GameRule</code></a></strong></td>
+<td style="text-align:left"><em>GameRule command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Give.html"><code>Give</code></a></strong></td>
+<td style="text-align:left"><em>Give command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Kill.html"><code>Kill</code></a></strong></td>
+<td style="text-align:left"><em>Kill command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Message.html"><code>Message</code></a></strong></td>
+<td style="text-align:left"><em>Message command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="MessageRaw.html"><code>MessageRaw</code></a></strong></td>
+<td style="text-align:left"><em>Message Raw command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Particle.html"><code>Particle</code></a></strong></td>
+<td style="text-align:left"><em>Particle command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="PlaySound.html"><code>PlaySound</code></a></strong></td>
+<td style="text-align:left"><em>PlaySound command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ReplaceItem.html"><code>ReplaceItem</code></a></strong></td>
+<td style="text-align:left"><em>ReplaceItem command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SaveAll.html"><code>SaveAll</code></a></strong></td>
+<td style="text-align:left"><em>Save-All command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SaveOff.html"><code>SaveOff</code></a></strong></td>
+<td style="text-align:left"><em>Save-Off command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SaveOn.html"><code>SaveOn</code></a></strong></td>
+<td style="text-align:left"><em>Save-On command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Scoreboard.html"><code>Scoreboard</code></a></strong></td>
+<td style="text-align:left"><em>Scoreboard command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SetBlock.html"><code>SetBlock</code></a></strong></td>
+<td style="text-align:left"><em>SetBlock command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SpawnPoint.html"><code>SpawnPoint</code></a></strong></td>
+<td style="text-align:left"><em>SetSpawnPoint command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="SpreadPlayers.html"><code>SpreadPlayers</code></a></strong></td>
+<td style="text-align:left"><em>SpreadPlayers command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Stats.html"><code>Stats</code></a></strong></td>
+<td style="text-align:left"><em>Stats command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Summon.html"><code>Summon</code></a></strong></td>
+<td style="text-align:left"><em>Summon command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Teleport.html"><code>Teleport</code></a></strong></td>
+<td style="text-align:left"><em>Teleport command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="TestFor.html"><code>TestFor</code></a></strong></td>
+<td style="text-align:left"><em>TestFor command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="TestForBlock.html"><code>TestForBlock</code></a></strong></td>
+<td style="text-align:left"><em>TestForBlock command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="TestForBlocks.html"><code>TestForBlocks</code></a></strong></td>
+<td style="text-align:left"><em>TestForBlocks command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Time.html"><code>Time</code></a></strong></td>
+<td style="text-align:left"><em>Time command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Title.html"><code>Title</code></a></strong></td>
+<td style="text-align:left"><em>Title command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="ToggleDownfall.html"><code>ToggleDownfall</code></a></strong></td>
+<td style="text-align:left"><em>ToggleDownfall command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Trigger.html"><code>Trigger</code></a></strong></td>
+<td style="text-align:left"><em>Trigger command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="Weather.html"><code>Weather</code></a></strong></td>
+<td style="text-align:left"><em>Weather command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="WorldBorder.html"><code>WorldBorder</code></a></strong></td>
+<td style="text-align:left"><em>WorldBorder command wrapper</em> </td>
+</tr>
+<tr>
+<td><strong><a href="XP.html"><code>XP</code></a></strong></td>
+<td style="text-align:left"><em>XP command wrapper</em> </td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="..\..\..\..\..\..\assets\js\vendor\jquery.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\vendor\fastclick.js"></script>
+    <script src="..\..\..\..\..\..\assets\js\foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>
