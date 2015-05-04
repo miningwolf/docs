@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.ServerCommandEvent
 >Extends [`ServerEvent`](ServerEvent.md)
-
+``` javascript
 this.on('server.ServerCommandEvent', function (e) { });
+```
+
 
 ---
 

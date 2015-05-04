@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerShearEntityEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerShearEntityEvent', function (e) { });
+```
+
 
 ---
 

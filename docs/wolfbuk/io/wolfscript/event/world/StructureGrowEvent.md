@@ -3,8 +3,10 @@
 >io.wolfscript.event.world.StructureGrowEvent
 >Extends [`WorldEvent`](WorldEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('world.StructureGrowEvent', function (e) { });
+```
+
 
 ---
 

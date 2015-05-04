@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="potioneffectapplied-__class__">PotionEffectApplied <strong>class</strong></h2>
+            <h2 id="potioneffectappliedevent-__class__">PotionEffectAppliedEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.PotionEffectApplied
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.PotionEffectApplied'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.PotionEffectApplied&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>PotionEffectApplied<br> Called when a <a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a> is applied to a <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></p>
+<p>PotionEffectAppliedEvent<br> Called when a <a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a> is applied to a <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PotionEffectApplied</strong>(entity, effect) <br> <em>Constructs a new PotionEffectApplied</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Get: Gets the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> having a <a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a> applied to</em></td>
 <td style="text-align:left"><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
@@ -205,31 +202,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-potioneffectapplied-potioneffectapplied-md-">Public Constructors for <a href="PotionEffectApplied.html"><code>PotionEffectApplied</code></a></h3>
-<h5 id="-a-id-potioneffectapplied-a-new-__potioneffectapplied__-entity-effect-"><a id='potioneffectapplied'></a>new <strong>PotionEffectApplied</strong>(entity, effect)</h5>
-<p><em>Constructs a new PotionEffectApplied</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
-<td>the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> having the <a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a> applied to</td>
-</tr>
-<tr>
-<td>effect</td>
-<td><a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a></td>
-<td>the <a href="../../api/potion/PotionEffect.html"><code>PotionEffect</code></a> being applied</td>
 </tr>
 </tbody>
 </table>

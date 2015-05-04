@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.entity.EntityDeathEvent
 >Extends [`EntityEvent`](EntityEvent.md)
-
+``` javascript
 this.on('entity.EntityDeathEvent', function (e) { });
+```
+
 
 ---
 

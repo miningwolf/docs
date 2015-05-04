@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="blockleftclick-__class__">BlockLeftClick <strong>class</strong></h2>
+            <h2 id="blockleftclickevent-__class__">BlockLeftClickEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.BlockLeftClick
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.BlockLeftClick'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.BlockLeftClick&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Left click hook. Contains information about a Player left clicking.</p>
+<p>Left click event. Contains information about a Player left clicking.</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BlockLeftClick</strong>(player, block) <br> <em>BlockLeftClick constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Get: Get the <a href="../../api/world/blocks/Block.html"><code>Block</code></a> the <code>Player</code> is left clicking</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -248,31 +245,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-blockleftclick-blockleftclick-md-">Public Constructors for <a href="BlockLeftClick.html"><code>BlockLeftClick</code></a></h3>
-<h5 id="-a-id-blockleftclick-a-new-__blockleftclick__-player-block-"><a id='blockleftclick'></a>new <strong>BlockLeftClick</strong>(player, block)</h5>
-<p><em>BlockLeftClick constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
 </tr>
 </tbody>
 </table>

@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerUnleashEntityEvent
 >Extends [`EntityUnleashEvent`](../entity/EntityUnleashEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerUnleashEntityEvent', function (e) { });
+```
+
 
 ---
 

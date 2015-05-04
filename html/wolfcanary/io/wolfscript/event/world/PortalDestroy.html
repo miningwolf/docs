@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="portaldestroy-__class__">PortalDestroy <strong>class</strong></h2>
+            <h2 id="portaldestroyevent-__class__">PortalDestroyEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.PortalDestroy
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.PortalDestroy'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.PortalDestroy&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class PortalDestroy</p>
+<p>class PortalDestroyEvent</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PortalDestroy</strong>(pos, world) <br> <em>Constructs a new PortalDestroy</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>BlockSet</strong> <br> <em>Get: Get the set of blocks that make up the Portal</em></td>
 <td style="text-align:left"><code>Block[][]</code></td>
@@ -232,31 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-portaldestroy-portaldestroy-md-">Public Constructors for <a href="PortalDestroy.html"><code>PortalDestroy</code></a></h3>
-<h5 id="-a-id-portaldestroy-a-new-__portaldestroy__-pos-world-"><a id='portaldestroy'></a>new <strong>PortalDestroy</strong>(pos, world)</h5>
-<p><em>Constructs a new PortalDestroy</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pos</td>
-<td><a href="../../api/world/position/Position.html"><code>Position</code></a></td>
-<td>pos argument</td>
-</tr>
-<tr>
-<td>world</td>
-<td><a href="../../api/world/World.html"><code>World</code></a></td>
-<td>world argument</td>
 </tr>
 </tbody>
 </table>

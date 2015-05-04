@@ -1,19 +1,20 @@
-## VehicleDamage __class__
+## VehicleDamageEvent __class__
 
 >io.wolfscript.event.entity.VehicleDamage
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.VehicleDamage', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Vehicle Damage hook. Contains information about a vehicle receiving damage.
+Vehicle Damage event. Contains information about a vehicle receiving damage.
 
 Method | Type   
 --- | :--- 
-new __VehicleDamage__(vehicle, attacker, source, dealt) <br> _VehicleDamage constructor_ | _constructor_
  readonly property __Attacker__ <br> _Get: Get the entity that is inflicting the damage to the vehicle_ | [`Entity`](../../api/entity/Entity.md)
  readonly property __DamageDealt__ <br> _Get: Gets the amount of damage dealt_ | `float`
  readonly property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) type_ | [`DamageSource`](../../api/DamageSource.md)
@@ -38,20 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VehicleDamage`](VehicleDamage.md)
-
-##### <a id='vehicledamage'></a>new __VehicleDamage__(vehicle, attacker, source, dealt) 
-
-_VehicleDamage constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-vehicle | [`Vehicle`](../../api/entity/vehicle/Vehicle.md) | vehicle argument
-attacker | [`Entity`](../../api/entity/Entity.md) | attacker argument
-source | [`DamageSource`](../../api/DamageSource.md) | source argument
-dealt | `float` | dealt argument
-
----
 
 ### Public Properties for [`VehicleDamage`](VehicleDamage.md)
 

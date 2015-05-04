@@ -1,19 +1,20 @@
-## Flow __class__
+## FlowEvent __class__
 
 >io.wolfscript.event.world.Flow
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.Flow', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Flow hook. Contains information about a liquid flowing from one block to another
+Flow event. Contains information about a liquid flowing from one block to another
 
 Method | Type   
 --- | :--- 
-new __Flow__(from, to) <br> _Flow constructor_ | _constructor_
  readonly property __BlockFrom__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) flowing from_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __BlockTo__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) flowing to_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Flow`](Flow.md)
-
-##### <a id='flow'></a>new __Flow__(from, to) 
-
-_Flow constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-from | [`Block`](../../api/world/blocks/Block.md) | from argument
-to | [`Block`](../../api/world/blocks/Block.md) | to argument
-
----
 
 ### Public Properties for [`Flow`](Flow.md)
 

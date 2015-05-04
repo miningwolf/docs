@@ -1,19 +1,20 @@
-## ConsoleCommand __class__
+## ConsoleCommandEvent __class__
 
 >io.wolfscript.event.command.ConsoleCommand
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('command.ConsoleCommand', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Server command hook. Contains the command issued by the server
+Server command event. Contains the command issued by the server
 
 Method | Type   
 --- | :--- 
-new __ConsoleCommand__(receiver, textInput) <br> _Constructs a new ConsoleCommand_ | _constructor_
  readonly property __Caller__ <br> _Caller property_ | [`MessageReceiver`](../../chat/MessageReceiver.md)
  readonly property __Command__ <br> _Get: Get command that was issued by the console_ | `String[]`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ConsoleCommand`](ConsoleCommand.md)
-
-##### <a id='consolecommand'></a>new __ConsoleCommand__(receiver, textInput) 
-
-_Constructs a new ConsoleCommand_
-
-Argument | Type | Description  
---- | --- | --- 
-receiver | [`MessageReceiver`](../../chat/MessageReceiver.md) | the [`MessageReceiver`](../../chat/MessageReceiver.md) executing the command
-textInput | `String` | the text input
-
----
 
 ### Public Properties for [`ConsoleCommand`](ConsoleCommand.md)
 

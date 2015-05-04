@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="slimesplit-__class__">SlimeSplit <strong>class</strong></h2>
+            <h2 id="slimesplitevent-__class__">SlimeSplitEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.SlimeSplit
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.SlimeSplit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.SlimeSplit&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Slime split hook, Contains information about a slime split.</p>
+<p>Slime split event, Contains information about a slime split.</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>SlimeSplit</strong>(originalSlime) <br> <em>Constructs a new SlimeSplit</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>ChildSlimes</strong> <br> <em>Get: Get the <a href="../../api/entity/living/monster/Slime.html"><code>Slime</code></a>s that should be spawned</em></td>
 <td style="text-align:left"><code>List&lt;Slime&gt;</code></td>
@@ -205,26 +202,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-slimesplit-slimesplit-md-">Public Constructors for <a href="SlimeSplit.html"><code>SlimeSplit</code></a></h3>
-<h5 id="-a-id-slimesplit-a-new-__slimesplit__-originalslime-"><a id='slimesplit'></a>new <strong>SlimeSplit</strong>(originalSlime)</h5>
-<p><em>Constructs a new SlimeSplit</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>originalSlime</td>
-<td><a href="../../api/entity/living/monster/Slime.html"><code>Slime</code></a></td>
-<td>the original <a href="../../api/entity/living/monster/Slime.html"><code>Slime</code></a> that died</td>
 </tr>
 </tbody>
 </table>

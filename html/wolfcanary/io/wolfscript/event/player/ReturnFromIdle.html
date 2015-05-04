@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="returnfromidle-__class__">ReturnFromIdle <strong>class</strong></h2>
+            <h2 id="returnfromidleevent-__class__">ReturnFromIdleEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.ReturnFromIdle
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.ReturnFromIdle'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.ReturnFromIdle&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when the Player is no longer idle</p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ReturnFromIdle</strong>(player, idle) <br> <em>ReturnFromIdle constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Get the <code>Player</code> that was Idle</em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-returnfromidle-returnfromidle-md-">Public Constructors for <a href="ReturnFromIdle.html"><code>ReturnFromIdle</code></a></h3>
-<h5 id="-a-id-returnfromidle-a-new-__returnfromidle__-player-idle-"><a id='returnfromidle'></a>new <strong>ReturnFromIdle</strong>(player, idle)</h5>
-<p><em>ReturnFromIdle constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>idle</td>
-<td><code>long</code></td>
-<td>idle argument</td>
 </tr>
 </tbody>
 </table>

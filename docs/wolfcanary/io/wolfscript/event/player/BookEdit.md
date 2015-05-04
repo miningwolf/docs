@@ -1,9 +1,11 @@
-## BookEdit __class__
+## BookEditEvent __class__
 
 >io.wolfscript.event.player.BookEdit
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BookEdit', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a `Player` edits a Book [`Item`](../../api/inventory/Item.md)
 
 Method | Type   
 --- | :--- 
-new __BookEdit__(book, player) <br> _BookEdit constructor_ | _constructor_
 final readonly property __Book__ <br> _Get: Gets the Book [`Item`](../../api/inventory/Item.md) being editted_ | [`Item`](../../api/inventory/Item.md)
 final readonly property __Player__ <br> _Get: Gets the `Player` editting the Book_ | `Player`
 final function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BookEdit`](BookEdit.md)
-
-##### <a id='bookedit'></a>new __BookEdit__(book, player) 
-
-_BookEdit constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-book | [`Item`](../../api/inventory/Item.md) | book argument
-player | `Player` | player argument
-
----
 
 ### Public Properties for [`BookEdit`](BookEdit.md)
 

@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.PrepareItemCraftEvent
 >Extends [`InventoryEvent`](InventoryEvent.md)
-
+``` javascript
 this.on('inventory.PrepareItemCraftEvent', function (e) { });
+```
+
 
 ---
 

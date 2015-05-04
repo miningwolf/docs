@@ -1,19 +1,20 @@
-## FoodExhaustion __class__
+## FoodExhaustionEvent __class__
 
 >io.wolfscript.event.player.FoodExhaustion
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.FoodExhaustion', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Food exhaustion change hook. Contains information about a player's food exhaustion changes
+Food exhaustion change event. Contains information about a player's food exhaustion changes
 
 Method | Type   
 --- | :--- 
-new __FoodExhaustion__(player, oldval, newval) <br> _Constructs a new FoodExhaustion_ | _constructor_
   property __NewValue__ <br> _Get: Gets the new exhaustion level<br>Set: Sets the new value to actually be set_ | `float`
  readonly property __OldValue__ <br> _Get: Gets the old (current) exhaustion level_ | `float`
  readonly property __Player__ <br> _Get: Gets the `Player` who's food exhaustion is changing_ | `Player`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`FoodExhaustion`](FoodExhaustion.md)
-
-##### <a id='foodexhaustion'></a>new __FoodExhaustion__(player, oldval, newval) 
-
-_Constructs a new FoodExhaustion_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who's Food Exhaustion is changing
-oldval | `float` | the old (current) value
-newval | `float` | the new value
-
----
 
 ### Public Properties for [`FoodExhaustion`](FoodExhaustion.md)
 

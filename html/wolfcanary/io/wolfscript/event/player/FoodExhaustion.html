@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="foodexhaustion-__class__">FoodExhaustion <strong>class</strong></h2>
+            <h2 id="foodexhaustionevent-__class__">FoodExhaustionEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.FoodExhaustion
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.FoodExhaustion'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.FoodExhaustion&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Food exhaustion change hook. Contains information about a player&#39;s food exhaustion changes</p>
+<p>Food exhaustion change event. Contains information about a player&#39;s food exhaustion changes</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>FoodExhaustion</strong>(player, oldval, newval) <br> <em>Constructs a new FoodExhaustion</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>  property <strong>NewValue</strong> <br> <em>Get: Gets the new exhaustion level<br>Set: Sets the new value to actually be set</em></td>
 <td style="text-align:left"><code>float</code></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-foodexhaustion-foodexhaustion-md-">Public Constructors for <a href="FoodExhaustion.html"><code>FoodExhaustion</code></a></h3>
-<h5 id="-a-id-foodexhaustion-a-new-__foodexhaustion__-player-oldval-newval-"><a id='foodexhaustion'></a>new <strong>FoodExhaustion</strong>(player, oldval, newval)</h5>
-<p><em>Constructs a new FoodExhaustion</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> who&#39;s Food Exhaustion is changing</td>
-</tr>
-<tr>
-<td>oldval</td>
-<td><code>float</code></td>
-<td>the old (current) value</td>
-</tr>
-<tr>
-<td>newval</td>
-<td><code>float</code></td>
-<td>the new value</td>
 </tr>
 </tbody>
 </table>

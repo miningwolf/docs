@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockMultiPlaceEvent
 >Extends [`BlockPlaceEvent`](BlockPlaceEvent.md)
-
+``` javascript
 this.on('block.BlockMultiPlaceEvent', function (e) { });
+```
+
 
 ---
 

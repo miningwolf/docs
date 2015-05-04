@@ -1,9 +1,11 @@
-## ServerListPing __class__
+## ServerListPingEvent __class__
 
 >io.wolfscript.event.system.ServerListPing
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('system.ServerListPing', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a client ping the server
 
 Method | Type   
 --- | :--- 
-new __ServerListPing__(remoteSocket, requesterProtocol, hostNamePinged, portPinged, motd, currentPlayers, maxPlayers, favicon) <br> _ServerListPing constructor_ | _constructor_
  writeonly property __Motd__ <br> _Set: Set the MOTD that will be sent to the client_ | `void`
  readonly property __RequesterAddress__ <br> _Get: Gets the `InetAddress` (IP) of the requesting party_ | `InetAddress`
   property __Favicon__ <br> _Favicon property_ | `String`
@@ -45,24 +46,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ServerListPing`](ServerListPing.md)
-
-##### <a id='serverlistping'></a>new __ServerListPing__(remoteSocket, requesterProtocol, hostNamePinged, portPinged, motd, currentPlayers, maxPlayers, favicon) 
-
-_ServerListPing constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-remoteSocket | `InetSocketAddress` | remoteSocket argument
-requesterProtocol | `int` | requesterProtocol argument
-hostNamePinged | `String` | hostNamePinged argument
-portPinged | `int` | portPinged argument
-motd | [`ChatComponent`](../../api/chat/ChatComponent.md) | motd argument
-currentPlayers | `int` | currentPlayers argument
-maxPlayers | `int` | maxPlayers argument
-favicon | `String` | favicon argument
-
----
 
 ### Public Properties for [`ServerListPing`](ServerListPing.md)
 

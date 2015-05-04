@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-The Grab mode used with SlotClick
+The Grab mode used with SlotClickEvent
 
 Item | Type   
 --- | :--- 

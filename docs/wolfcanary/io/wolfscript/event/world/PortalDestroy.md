@@ -1,19 +1,20 @@
-## PortalDestroy __class__
+## PortalDestroyEvent __class__
 
 >io.wolfscript.event.world.PortalDestroy
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.PortalDestroy', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class PortalDestroy
+class PortalDestroyEvent
 
 Method | Type   
 --- | :--- 
-new __PortalDestroy__(pos, world) <br> _Constructs a new PortalDestroy_ | _constructor_
  readonly property __BlockSet__ <br> _Get: Get the set of blocks that make up the Portal_ | `Block[][]`
  readonly property __Position__ <br> _Get: Gets the [`Position`](../../api/world/position/Position.md) where the portal is being destroyed_ | [`Position`](../../api/world/position/Position.md)
  readonly property __World__ <br> _Get: Gets the world the portal was_ | [`World`](../../api/world/World.md)
@@ -37,18 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PortalDestroy`](PortalDestroy.md)
-
-##### <a id='portaldestroy'></a>new __PortalDestroy__(pos, world) 
-
-_Constructs a new PortalDestroy_
-
-Argument | Type | Description  
---- | --- | --- 
-pos | [`Position`](../../api/world/position/Position.md) | pos argument
-world | [`World`](../../api/world/World.md) | world argument
-
----
 
 ### Public Properties for [`PortalDestroy`](PortalDestroy.md)
 

@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="playerlist-__class__">PlayerList <strong>class</strong></h2>
+            <h2 id="playerlistevent-__class__">PlayerListEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.PlayerList
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.PlayerList'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.PlayerList&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class PlayerList</p>
+<p>class PlayerListEvent</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PlayerList</strong>(data, receiver) <br> <em>Constructs a new PlayerListEntryHook</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>final readonly property <strong>Data</strong> <br> <em>Get: Gets the <a href="../../api/PlayerListData.html"><code>PlayerListData</code></a> being sent</em></td>
 <td style="text-align:left"><a href="../../api/PlayerListData.html"><code>PlayerListData</code></a></td>
@@ -248,31 +245,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-playerlist-playerlist-md-">Public Constructors for <a href="PlayerList.html"><code>PlayerList</code></a></h3>
-<h5 id="-a-id-playerlist-a-new-__playerlist__-data-receiver-"><a id='playerlist'></a>new <strong>PlayerList</strong>(data, receiver)</h5>
-<p><em>Constructs a new PlayerListEntryHook</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td><a href="../../api/PlayerListData.html"><code>PlayerListData</code></a></td>
-<td>data argument</td>
-</tr>
-<tr>
-<td>receiver</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> to receiver the <a href="../../api/PlayerListData.html"><code>PlayerListData</code></a></td>
 </tr>
 </tbody>
 </table>

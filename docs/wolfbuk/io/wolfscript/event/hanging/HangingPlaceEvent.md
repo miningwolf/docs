@@ -3,8 +3,10 @@
 >io.wolfscript.event.hanging.HangingPlaceEvent
 >Extends [`HangingEvent`](HangingEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('hanging.HangingPlaceEvent', function (e) { });
+```
+
 
 ---
 

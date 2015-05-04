@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="smelt-__class__">Smelt <strong>class</strong></h2>
+            <h2 id="smeltevent-__class__">SmeltEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.Smelt
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.Smelt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.Smelt&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class Smelt</p>
+<p>class SmeltEvent</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Smelt</strong>(furnace, smelted, result) <br> <em>Constructs a new Smelt</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Furnace</strong> <br> <em>Get: Gets the <a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a> doing the smelting</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-smelt-smelt-md-">Public Constructors for <a href="Smelt.html"><code>Smelt</code></a></h3>
-<h5 id="-a-id-smelt-a-new-__smelt__-furnace-smelted-result-"><a id='smelt'></a>new <strong>Smelt</strong>(furnace, smelted, result)</h5>
-<p><em>Constructs a new Smelt</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>furnace</td>
-<td><a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a></td>
-<td>the <a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a> doing the smelting</td>
-</tr>
-<tr>
-<td>smelted</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the <a href="../../api/inventory/Item.html"><code>Item</code></a> that was smelted</td>
-</tr>
-<tr>
-<td>result</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the <a href="../../api/inventory/Item.html"><code>Item</code></a> result</td>
 </tr>
 </tbody>
 </table>

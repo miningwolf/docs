@@ -1,19 +1,20 @@
-## LeafDecay __class__
+## LeafDecayEvent __class__
 
 >io.wolfscript.event.world.LeafDecay
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.LeafDecay', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Block update hook. Contains information about a block updating.
+Block update event. Contains information about a block updating.
 
 Method | Type   
 --- | :--- 
-new __LeafDecay__(block) <br> _LeafDecay constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the leaf block that is about to decay_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`LeafDecay`](LeafDecay.md)
-
-##### <a id='leafdecay'></a>new __LeafDecay__(block) 
-
-_LeafDecay constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-
----
 
 ### Public Properties for [`LeafDecay`](LeafDecay.md)
 

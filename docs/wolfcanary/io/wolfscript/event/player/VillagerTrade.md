@@ -1,9 +1,11 @@
-## VillagerTrade __class__
+## VillagerTradeEvent __class__
 
 >io.wolfscript.event.player.VillagerTrade
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.VillagerTrade', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ VillagerTrade Hook<br> Called when a `Player` trades with a [`VillagerTrade`](..
 
 Method | Type   
 --- | :--- 
-new __VillagerTrade__(player, villager, trade) <br> _Constructs a new VillagerTrade_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` who is trading_ | `Player`
  readonly property __Trade__ <br> _Get: Gets the [`VillagerTrade`](../../api/VillagerTrade.md)_ | [`VillagerTrade`](../../api/VillagerTrade.md)
  readonly property __Villager__ <br> _Get: Gets the `Villager` merchant_ | `Villager`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VillagerTrade`](VillagerTrade.md)
-
-##### <a id='villagertrade'></a>new __VillagerTrade__(player, villager, trade) 
-
-_Constructs a new VillagerTrade_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who is trading
-villager | `Villager` | the `Villager` merchant
-trade | [`VillagerTrade`](../../api/VillagerTrade.md) | the [`VillagerTrade`](../../api/VillagerTrade.md)
-
----
 
 ### Public Properties for [`VillagerTrade`](VillagerTrade.md)
 

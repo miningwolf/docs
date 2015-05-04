@@ -135,12 +135,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="serverlistping-__class__">ServerListPing <strong>class</strong></h2>
+            <h2 id="serverlistpingevent-__class__">ServerListPingEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.system.ServerListPing
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'system.ServerListPing'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;system.ServerListPing&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when a client ping the server</p>
@@ -152,10 +153,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ServerListPing</strong>(remoteSocket, requesterProtocol, hostNamePinged, portPinged, motd, currentPlayers, maxPlayers, favicon) <br> <em>ServerListPing constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> writeonly property <strong>Motd</strong> <br> <em>Set: Set the MOTD that will be sent to the client</em></td>
 <td style="text-align:left"><code>void</code></td>
@@ -243,61 +240,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-serverlistping-serverlistping-md-">Public Constructors for <a href="ServerListPing.html"><code>ServerListPing</code></a></h3>
-<h5 id="-a-id-serverlistping-a-new-__serverlistping__-remotesocket-requesterprotocol-hostnamepinged-portpinged-motd-currentplayers-maxplayers-favicon-"><a id='serverlistping'></a>new <strong>ServerListPing</strong>(remoteSocket, requesterProtocol, hostNamePinged, portPinged, motd, currentPlayers, maxPlayers, favicon)</h5>
-<p><em>ServerListPing constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>remoteSocket</td>
-<td><code>InetSocketAddress</code></td>
-<td>remoteSocket argument</td>
-</tr>
-<tr>
-<td>requesterProtocol</td>
-<td><code>int</code></td>
-<td>requesterProtocol argument</td>
-</tr>
-<tr>
-<td>hostNamePinged</td>
-<td><code>String</code></td>
-<td>hostNamePinged argument</td>
-</tr>
-<tr>
-<td>portPinged</td>
-<td><code>int</code></td>
-<td>portPinged argument</td>
-</tr>
-<tr>
-<td>motd</td>
-<td><a href="../../api/chat/ChatComponent.html"><code>ChatComponent</code></a></td>
-<td>motd argument</td>
-</tr>
-<tr>
-<td>currentPlayers</td>
-<td><code>int</code></td>
-<td>currentPlayers argument</td>
-</tr>
-<tr>
-<td>maxPlayers</td>
-<td><code>int</code></td>
-<td>maxPlayers argument</td>
-</tr>
-<tr>
-<td>favicon</td>
-<td><code>String</code></td>
-<td>favicon argument</td>
 </tr>
 </tbody>
 </table>

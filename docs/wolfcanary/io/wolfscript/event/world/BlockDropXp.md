@@ -1,9 +1,11 @@
-## BlockDropXp __class__
+## BlockDropXpEvent __class__
 
 >io.wolfscript.event.world.BlockDropXp
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.BlockDropXp', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Event thrown when a block that drop experience (spawner, ore, redstone ore) is d
 
 Method | Type   
 --- | :--- 
-new __BlockDropXp__(block, xp) <br> _BlockDropXp constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the block that gives the dropped experience_ | [`Block`](../../api/world/blocks/Block.md)
   property __Xp__ <br> _Get: Get the experience amount that will be dropped.<br>Set: Set the experience amount that will be dropped._ | `int`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockDropXp`](BlockDropXp.md)
-
-##### <a id='blockdropxp'></a>new __BlockDropXp__(block, xp) 
-
-_BlockDropXp constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-xp | `int` | xp argument
-
----
 
 ### Public Properties for [`BlockDropXp`](BlockDropXp.md)
 

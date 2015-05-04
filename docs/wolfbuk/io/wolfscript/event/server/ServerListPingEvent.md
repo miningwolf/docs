@@ -3,8 +3,10 @@
 >io.wolfscript.event.server.ServerListPingEvent
 >Extends [`ServerEvent`](ServerEvent.md)
 >Implements `Iterable<Player`
-
+``` javascript
 this.on('server.ServerListPingEvent', function (e) { });
+```
+
 
 ---
 

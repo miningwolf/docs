@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerGameModeChangeEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerGameModeChangeEvent', function (e) { });
+```
+
 
 ---
 

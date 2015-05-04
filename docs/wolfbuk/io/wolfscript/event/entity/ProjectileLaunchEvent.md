@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.ProjectileLaunchEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.ProjectileLaunchEvent', function (e) { });
+```
+
 
 ---
 

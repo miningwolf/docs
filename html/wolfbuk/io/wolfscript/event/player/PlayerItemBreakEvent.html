@@ -186,8 +186,9 @@
 <blockquote>
 <p>io.wolfscript.event.player.PlayerItemBreakEvent
 Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.PlayerItemBreakEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.PlayerItemBreakEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Fired when a player&#39;s item breaks (such as a shovel or flint and steel). <p> The item that&#39;s breaking will exist in the inventory with a stack size of 0. After the event, the item&#39;s durability will be reset to 0.</p>

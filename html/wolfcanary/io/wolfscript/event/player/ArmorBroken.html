@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="armorbroken-__class__">ArmorBroken <strong>class</strong></h2>
+            <h2 id="armorbrokenevent-__class__">ArmorBrokenEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.ArmorBroken
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.ArmorBroken'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.ArmorBroken&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when a piece of Armor has been destroyed</p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ArmorBroken</strong>(player, armor) <br> <em>ArmorBroken constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Armor</strong> <br> <em>Armor property</em></td>
 <td style="text-align:left"><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-armorbroken-armorbroken-md-">Public Constructors for <a href="ArmorBroken.html"><code>ArmorBroken</code></a></h3>
-<h5 id="-a-id-armorbroken-a-new-__armorbroken__-player-armor-"><a id='armorbroken'></a>new <strong>ArmorBroken</strong>(player, armor)</h5>
-<p><em>ArmorBroken constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>armor</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>armor argument</td>
 </tr>
 </tbody>
 </table>

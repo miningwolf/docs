@@ -1,20 +1,20 @@
-## TNTActivate __class__
+## TNTActivateEvent __class__
 
 >io.wolfscript.event.world.TNTActivate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.TNTActivate', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class TNTActivate
+class TNTActivateEvent
 
 Method | Type   
 --- | :--- 
-new __TNTActivate__(tnt, activator, cause) <br> _Constructs a new TNTActivate for a TNT Block_ | _constructor_
-new __TNTActivate__(tntMinecart) <br> _Constucts a new TNTActivate for a `TNTMinecart`_ | _constructor_
  readonly property __Activator__ <br> _Get: Gets the [`LivingBase`](../../api/entity/living/LivingBase.md) that is causing the TNT to activate (if applicable)_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
  readonly property __Cause__ <br> _Get: Gets the `ActivationCause` of the TNT Activation_ | `ActivationCause`
  readonly property __TNT__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) of TNT being activated if not a TNTMinecart call_ | [`Block`](../../api/world/blocks/Block.md)
@@ -39,27 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`TNTActivate`](TNTActivate.md)
-
-##### <a id='tntactivate'></a>new __TNTActivate__(tnt, activator, cause) 
-
-_Constructs a new TNTActivate for a TNT Block_
-
-Argument | Type | Description  
---- | --- | --- 
-tnt | [`Block`](../../api/world/blocks/Block.md) | the TNT being activated
-activator | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) activating the TNT if present
-cause | `ActivationCause` | the `ActivationCause`
-
-##### <a id='tntactivate'></a>new __TNTActivate__(tntMinecart) 
-
-_Constucts a new TNTActivate for a `TNTMinecart`_
-
-Argument | Type | Description  
---- | --- | --- 
-tntMinecart | `TNTMinecart` | the TNTMinecart being activated
-
----
 
 ### Public Properties for [`TNTActivate`](TNTActivate.md)
 

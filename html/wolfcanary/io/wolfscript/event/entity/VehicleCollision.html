@@ -153,12 +153,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="vehiclecollision-__class__">VehicleCollision <strong>class</strong></h2>
+            <h2 id="vehiclecollisionevent-__class__">VehicleCollisionEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.VehicleCollision
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.VehicleCollision'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.VehicleCollision&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Is called when a vehicle collides with a LivingEntity</p>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>VehicleCollision</strong>(vehicle, entity) <br> <em>Constructs a Collision hook.</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Get: Get the <a href="../../api/entity/living/EntityLiving.html"><code>EntityLiving</code></a> that got hit by the vehicle</em></td>
 <td style="text-align:left"><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
@@ -225,31 +222,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-vehiclecollision-vehiclecollision-md-">Public Constructors for <a href="VehicleCollision.html"><code>VehicleCollision</code></a></h3>
-<h5 id="-a-id-vehiclecollision-a-new-__vehiclecollision__-vehicle-entity-"><a id='vehiclecollision'></a>new <strong>VehicleCollision</strong>(vehicle, entity)</h5>
-<p><em>Constructs a Collision hook.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vehicle</td>
-<td><a href="../../api/entity/vehicle/Vehicle.html"><code>Vehicle</code></a></td>
-<td>vehicle argument</td>
-</tr>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>entity that got hit by a vehicle</td>
 </tr>
 </tbody>
 </table>

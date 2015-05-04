@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-Button press enum for SlotClick
+Button press enum for SlotClickEvent
 
 Item | Type   
 --- | :--- 

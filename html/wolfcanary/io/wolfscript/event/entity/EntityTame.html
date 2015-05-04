@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="entitytame-__class__">EntityTame <strong>class</strong></h2>
+            <h2 id="entitytameevent-__class__">EntityTameEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.EntityTame
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.EntityTame'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.EntityTame&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Entity tame hook</p>
+<p>Entity tame event</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>EntityTame</strong>(animal, player, isTamed) <br> <em>EntityTame constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Animal</strong> <br> <em>Get: Get the animal in question</em></td>
 <td style="text-align:left"><a href="../../api/entity/living/animal/EntityAnimal.html"><code>EntityAnimal</code></a></td>
@@ -233,36 +230,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-entitytame-entitytame-md-">Public Constructors for <a href="EntityTame.html"><code>EntityTame</code></a></h3>
-<h5 id="-a-id-entitytame-a-new-__entitytame__-animal-player-istamed-"><a id='entitytame'></a>new <strong>EntityTame</strong>(animal, player, isTamed)</h5>
-<p><em>EntityTame constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>animal</td>
-<td><a href="../../api/entity/living/animal/EntityAnimal.html"><code>EntityAnimal</code></a></td>
-<td>animal argument</td>
-</tr>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>isTamed</td>
-<td><code>boolean</code></td>
-<td>isTamed argument</td>
 </tr>
 </tbody>
 </table>

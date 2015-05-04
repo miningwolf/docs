@@ -3,8 +3,10 @@
 >io.wolfscript.event.world.WorldUnloadEvent
 >Extends [`WorldEvent`](WorldEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('world.WorldUnloadEvent', function (e) { });
+```
+
 
 ---
 

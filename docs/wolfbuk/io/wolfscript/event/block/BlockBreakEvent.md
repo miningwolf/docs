@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.BlockBreakEvent
 >Extends [`BlockExpEvent`](BlockExpEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.BlockBreakEvent', function (e) { });
+```
+
 
 ---
 

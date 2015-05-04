@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="chunkcreation-__class__">ChunkCreation <strong>class</strong></h2>
+            <h2 id="chunkcreationevent-__class__">ChunkCreationEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.ChunkCreation
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.ChunkCreation'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.ChunkCreation&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Chunk creation hook. Contains information about a new chunk being created.</p>
+<p>Chunk creation event. Contains information about a new chunk being created.</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ChunkCreation</strong>(x, z, dimension) <br> <em>ChunkCreation constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>BiomeData</strong> <br> <em>Get: Gets the biomedata for the chunk</em></td>
 <td style="text-align:left"><code>BiomeType[]</code></td>
@@ -228,36 +225,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-chunkcreation-chunkcreation-md-">Public Constructors for <a href="ChunkCreation.html"><code>ChunkCreation</code></a></h3>
-<h5 id="-a-id-chunkcreation-a-new-__chunkcreation__-x-z-dimension-"><a id='chunkcreation'></a>new <strong>ChunkCreation</strong>(x, z, dimension)</h5>
-<p><em>ChunkCreation constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x</td>
-<td><code>int</code></td>
-<td>x argument</td>
-</tr>
-<tr>
-<td>z</td>
-<td><code>int</code></td>
-<td>z argument</td>
-</tr>
-<tr>
-<td>dimension</td>
-<td><a href="../../api/world/World.html"><code>World</code></a></td>
-<td>dimension argument</td>
 </tr>
 </tbody>
 </table>

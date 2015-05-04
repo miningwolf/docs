@@ -1,9 +1,11 @@
-## BlockPlace __class__
+## BlockPlaceEvent __class__
 
 >io.wolfscript.event.player.BlockPlace
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BlockPlace', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a player right-clicks a block, eg. uses it.
 
 Method | Type   
 --- | :--- 
-new __BlockPlace__(player, clicked, placed) <br> _Constructs a new BlockPlace_ | _constructor_
  readonly property __BlockClicked__ <br> _Get: Get the [`Block`](../../api/world/blocks/Block.md) that was clicked_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __BlockPlaced__ <br> _Get: Gets the block that will be placed_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Get the player who is placing a [`Block`](../../api/world/blocks/Block.md)_ | `Player`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockPlace`](BlockPlace.md)
-
-##### <a id='blockplace'></a>new __BlockPlace__(player, clicked, placed) 
-
-_Constructs a new BlockPlace_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` placing a [`Block`](../../api/world/blocks/Block.md)
-clicked | [`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) being clicked
-placed | [`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) to be placed
-
----
 
 ### Public Properties for [`BlockPlace`](BlockPlace.md)
 

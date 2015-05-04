@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.FoodLevelChangeEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.FoodLevelChangeEvent', function (e) { });
+```
+
 
 ---
 

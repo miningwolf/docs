@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="inventory-__class__">Inventory <strong>class</strong></h2>
+            <h2 id="inventoryevent-__class__">InventoryEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Inventory
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Inventory'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Inventory&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Inventory hook. Contains information about a player either opening or closing an inventory</p>
+<p>Inventory event. Contains information about a player either opening or closing an inventory</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Inventory</strong>(player, inventory, closing) <br> <em>Inventory constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Inventory</strong> <br> <em>Get: Gets the <a href="../../api/inventory/Inventory.html"><code>Inventory</code></a></em></td>
 <td style="text-align:left"><a href="../../api/inventory/Inventory.html"><code>Inventory</code></a></td>
@@ -252,36 +249,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-inventory-inventory-md-">Public Constructors for <a href="Inventory.html"><code>Inventory</code></a></h3>
-<h5 id="-a-id-inventory-a-new-__inventory__-player-inventory-closing-"><a id='inventory'></a>new <strong>Inventory</strong>(player, inventory, closing)</h5>
-<p><em>Inventory constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>inventory</td>
-<td><a href="../../api/inventory/Inventory.html"><code>Inventory</code></a></td>
-<td>inventory argument</td>
-</tr>
-<tr>
-<td>closing</td>
-<td><code>boolean</code></td>
-<td>closing argument</td>
 </tr>
 </tbody>
 </table>

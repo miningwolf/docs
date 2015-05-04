@@ -1,9 +1,11 @@
-## BlockGrow __class__
+## BlockGrowEvent __class__
 
 >io.wolfscript.event.world.BlockGrow
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.BlockGrow', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a block "grows"
 
 Method | Type   
 --- | :--- 
-new __BlockGrow__(original, growth) <br> _BlockGrow constructor_ | _constructor_
  readonly property __Growth__ <br> _Growth property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Original__ <br> _Original property_ | [`Block`](../../api/world/blocks/Block.md)
  function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockGrow`](BlockGrow.md)
-
-##### <a id='blockgrow'></a>new __BlockGrow__(original, growth) 
-
-_BlockGrow constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-original | [`Block`](../../api/world/blocks/Block.md) | original argument
-growth | [`Block`](../../api/world/blocks/Block.md) | growth argument
-
----
 
 ### Public Properties for [`BlockGrow`](BlockGrow.md)
 

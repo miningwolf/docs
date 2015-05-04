@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerRespawnEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerRespawnEvent', function (e) { });
+```
+
 
 ---
 

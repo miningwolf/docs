@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockPistonRetractEvent
 >Extends [`BlockPistonEvent`](BlockPistonEvent.md)
-
+``` javascript
 this.on('block.BlockPistonRetractEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,9 +1,11 @@
-## PortalUse __class__
+## PortalUseEvent __class__
 
 >io.wolfscript.event.player.PortalUse
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.PortalUse', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ PortalUse Hook
 
 Method | Type   
 --- | :--- 
-new __PortalUse__(player, to) <br> _Constructs a new PortalUse_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` using a portal_ | `Player`
  readonly property __To__ <br> _Get: Gets the [`Location`](../../api/world/position/Location.md) the portal goes to_ | [`Location`](../../api/world/position/Location.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PortalUse`](PortalUse.md)
-
-##### <a id='portaluse'></a>new __PortalUse__(player, to) 
-
-_Constructs a new PortalUse_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` using the Portal
-to | [`Location`](../../api/world/position/Location.md) | the [`Location`](../../api/world/position/Location.md) the portal goes to
-
----
 
 ### Public Properties for [`PortalUse`](PortalUse.md)
 

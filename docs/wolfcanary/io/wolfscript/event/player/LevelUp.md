@@ -1,19 +1,20 @@
-## LevelUp __class__
+## LevelUpEvent __class__
 
 >io.wolfscript.event.player.LevelUp
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.LevelUp', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-LevelUp hook. Called when a `Player` levels up
+LevelUp event. Called when a `Player` levels up
 
 Method | Type   
 --- | :--- 
-new __LevelUp__(player) <br> _LevelUp constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Get the `Player` instance_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`LevelUp`](LevelUp.md)
-
-##### <a id='levelup'></a>new __LevelUp__(player) 
-
-_LevelUp constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-
----
 
 ### Public Properties for [`LevelUp`](LevelUp.md)
 

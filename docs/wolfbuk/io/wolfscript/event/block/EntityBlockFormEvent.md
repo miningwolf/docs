@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.EntityBlockFormEvent
 >Extends [`BlockFormEvent`](BlockFormEvent.md)
-
+``` javascript
 this.on('block.EntityBlockFormEvent', function (e) { });
+```
+
 
 ---
 

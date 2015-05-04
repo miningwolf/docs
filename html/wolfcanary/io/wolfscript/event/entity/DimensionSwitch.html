@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="dimensionswitch-__class__">DimensionSwitch <strong>class</strong></h2>
+            <h2 id="dimensionswitchevent-__class__">DimensionSwitchEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.DimensionSwitch
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.DimensionSwitch'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.DimensionSwitch&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Dimension switch hook. Contains information about an entity changeing dimentions</p>
+<p>Dimension switch event. Contains information about an entity changeing dimentions</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>DimensionSwitch</strong>(entity, to, from) <br> <em>DimensionSwitch constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Get: Get the entity involved here.</em></td>
 <td style="text-align:left"><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
@@ -229,36 +226,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-dimensionswitch-dimensionswitch-md-">Public Constructors for <a href="DimensionSwitch.html"><code>DimensionSwitch</code></a></h3>
-<h5 id="-a-id-dimensionswitch-a-new-__dimensionswitch__-entity-to-from-"><a id='dimensionswitch'></a>new <strong>DimensionSwitch</strong>(entity, to, from)</h5>
-<p><em>DimensionSwitch constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>entity argument</td>
-</tr>
-<tr>
-<td>to</td>
-<td><a href="../../api/world/position/Location.html"><code>Location</code></a></td>
-<td>to argument</td>
-</tr>
-<tr>
-<td>from</td>
-<td><a href="../../api/world/position/Location.html"><code>Location</code></a></td>
-<td>from argument</td>
 </tr>
 </tbody>
 </table>

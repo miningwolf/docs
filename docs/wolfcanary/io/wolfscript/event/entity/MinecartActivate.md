@@ -1,19 +1,20 @@
-## MinecartActivate __class__
+## MinecartActivateEvent __class__
 
 >io.wolfscript.event.entity.MinecartActivate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.MinecartActivate', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-MinecartActivate<br> Called when a [`Minecart`](../../api/entity/vehicle/Minecart.md) passes over an activation rail.
+MinecartActivateEvent<br> Called when a [`Minecart`](../../api/entity/vehicle/Minecart.md) passes over an activation rail.
 
 Method | Type   
 --- | :--- 
-new __MinecartActivate__(minecart, power) <br> _Constructs a new MinecartActivate_ | _constructor_
  readonly property __Minecart__ <br> _Get: Gets the [`Minecart`](../../api/entity/vehicle/Minecart.md)_ | [`Minecart`](../../api/entity/vehicle/Minecart.md)
  function __isPowered__() <br> _Checks if the [`Minecart`](../../api/entity/vehicle/Minecart.md) is receiving power or not_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`MinecartActivate`](MinecartActivate.md)
-
-##### <a id='minecartactivate'></a>new __MinecartActivate__(minecart, power) 
-
-_Constructs a new MinecartActivate_
-
-Argument | Type | Description  
---- | --- | --- 
-minecart | [`Minecart`](../../api/entity/vehicle/Minecart.md) | the [`Minecart`](../../api/entity/vehicle/Minecart.md) being activated
-power | `boolean` | whether the [`Minecart`](../../api/entity/vehicle/Minecart.md) is receiving power or not
-
----
 
 ### Public Properties for [`MinecartActivate`](MinecartActivate.md)
 

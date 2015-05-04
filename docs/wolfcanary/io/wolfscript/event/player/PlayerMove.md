@@ -1,19 +1,20 @@
-## PlayerMove __class__
+## PlayerMoveEvent __class__
 
 >io.wolfscript.event.player.PlayerMove
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.PlayerMove', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Player move hook. Contains information about a player's movement
+Player move event. Contains information about a player's movement
 
 Method | Type   
 --- | :--- 
-new __PlayerMove__(player, from, to) <br> _PlayerMove constructor_ | _constructor_
  readonly property __From__ <br> _Get: Gets the from [`Location`](../../api/world/position/Location.md)_ | [`Location`](../../api/world/position/Location.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
  readonly property __To__ <br> _Get: Gets the to [`Location`](../../api/world/position/Location.md) (same as player's location)_ | [`Location`](../../api/world/position/Location.md)
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerMove`](PlayerMove.md)
-
-##### <a id='playermove'></a>new __PlayerMove__(player, from, to) 
-
-_PlayerMove constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-from | [`Location`](../../api/world/position/Location.md) | from argument
-to | [`Location`](../../api/world/position/Location.md) | to argument
-
----
 
 ### Public Properties for [`PlayerMove`](PlayerMove.md)
 

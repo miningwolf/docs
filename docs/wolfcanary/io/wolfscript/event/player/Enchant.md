@@ -1,19 +1,20 @@
-## Enchant __class__
+## EnchantEvent __class__
 
 >io.wolfscript.event.player.Enchant
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Enchant', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Enchant hook. Contains information about a player enchanting an item.
+Enchant event. Contains information about a player enchanting an item.
 
 Method | Type   
 --- | :--- 
-new __Enchant__(player, item, enchtab) <br> _Enchant constructor_ | _constructor_
  readonly property __EnchantmentList__ <br> _Get: Gets the new [`Enchantment`](../../api/inventory/Enchantment.md) as list_ | `List<Enchantment>`
  readonly property __EnchantmentTable__ <br> _Get: Gets the `EnchantmentTable` in use_ | `EnchantmentTable`
  readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md)_ | [`Item`](../../api/inventory/Item.md)
@@ -42,19 +43,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Enchant`](Enchant.md)
-
-##### <a id='enchant'></a>new __Enchant__(player, item, enchtab) 
-
-_Enchant constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-item | [`Item`](../../api/inventory/Item.md) | item argument
-enchtab | `EnchantmentTable` | enchtab argument
-
----
 
 ### Public Properties for [`Enchant`](Enchant.md)
 

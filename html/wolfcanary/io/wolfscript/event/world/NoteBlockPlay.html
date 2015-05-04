@@ -156,12 +156,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="noteblockplay-__class__">NoteBlockPlay <strong>class</strong></h2>
+            <h2 id="noteblockplayevent-__class__">NoteBlockPlayEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.NoteBlockPlay
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.NoteBlockPlay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.NoteBlockPlay&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when a <a href="../../api/world/blocks/NoteBlock.html"><code>NoteBlock</code></a> is played</p>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>NoteBlockPlay</strong>(noteBlock) <br> <em>Constructs a new NoteBlockPlay</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>final readonly property <strong>NoteBlock</strong> <br> <em>Get: Gets the <a href="../../api/world/blocks/NoteBlock.html"><code>NoteBlock</code></a> being played</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/NoteBlock.html"><code>NoteBlock</code></a></td>
@@ -224,26 +221,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-noteblockplay-noteblockplay-md-">Public Constructors for <a href="NoteBlockPlay.html"><code>NoteBlockPlay</code></a></h3>
-<h5 id="-a-id-noteblockplay-a-new-__noteblockplay__-noteblock-"><a id='noteblockplay'></a>new <strong>NoteBlockPlay</strong>(noteBlock)</h5>
-<p><em>Constructs a new NoteBlockPlay</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>noteBlock</td>
-<td><a href="../../api/world/blocks/NoteBlock.html"><code>NoteBlock</code></a></td>
-<td>the <a href="../../api/world/blocks/NoteBlock.html"><code>NoteBlock</code></a> being played</td>
 </tr>
 </tbody>
 </table>

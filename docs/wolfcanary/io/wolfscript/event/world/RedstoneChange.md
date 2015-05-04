@@ -1,19 +1,20 @@
-## RedstoneChange __class__
+## RedstoneChangeEvent __class__
 
 >io.wolfscript.event.world.RedstoneChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.RedstoneChange', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-RedstoneChange hook. Contains information about power flowing from one block to another
+RedstoneChange event. Contains information about power flowing from one block to another
 
 Method | Type   
 --- | :--- 
-new __RedstoneChange__(source, oldLevel, newLevel) <br> _RedstoneChange constructor_ | _constructor_
  readonly property __NewLevel__ <br> _Get: get the powerlevel for redstone that it would be after the change_ | `int`
  readonly property __OldLevel__ <br> _Get: Get the power level for the redstone before the change_ | `int`
  readonly property __SourceBlock__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) the redstone is on_ | [`Block`](../../api/world/blocks/Block.md)
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`RedstoneChange`](RedstoneChange.md)
-
-##### <a id='redstonechange'></a>new __RedstoneChange__(source, oldLevel, newLevel) 
-
-_RedstoneChange constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-source | [`Block`](../../api/world/blocks/Block.md) | source argument
-oldLevel | `int` | oldLevel argument
-newLevel | `int` | newLevel argument
-
----
 
 ### Public Properties for [`RedstoneChange`](RedstoneChange.md)
 

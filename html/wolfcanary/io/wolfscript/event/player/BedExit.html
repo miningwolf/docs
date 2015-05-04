@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="bedexit-__class__">BedExit <strong>class</strong></h2>
+            <h2 id="bedexitevent-__class__">BedExitEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.BedExit
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.BedExit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.BedExit&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Bed exit hook, called when a player leaves a bed</p>
+<p>Bed exit event, called when a player leaves a bed</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BedExit</strong>(player, bed) <br> <em>Create a new BedExit</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Bed</strong> <br> <em>Get: Get the bed <a href="../../api/world/blocks/Block.html"><code>Block</code></a> the <code>Player</code> is leaving</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-bedexit-bedexit-md-">Public Constructors for <a href="BedExit.html"><code>BedExit</code></a></h3>
-<h5 id="-a-id-bedexit-a-new-__bedexit__-player-bed-"><a id='bedexit'></a>new <strong>BedExit</strong>(player, bed)</h5>
-<p><em>Create a new BedExit</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the player that left the bed</td>
-</tr>
-<tr>
-<td>bed</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>the bed the player left</td>
 </tr>
 </tbody>
 </table>

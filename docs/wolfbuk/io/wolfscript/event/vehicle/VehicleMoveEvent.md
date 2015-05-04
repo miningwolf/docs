@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.vehicle.VehicleMoveEvent
 >Extends [`VehicleEvent`](VehicleEvent.md)
-
+``` javascript
 this.on('vehicle.VehicleMoveEvent', function (e) { });
+```
+
 
 ---
 

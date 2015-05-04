@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="redstonechange-__class__">RedstoneChange <strong>class</strong></h2>
+            <h2 id="redstonechangeevent-__class__">RedstoneChangeEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.RedstoneChange
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.RedstoneChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.RedstoneChange&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>RedstoneChange hook. Contains information about power flowing from one block to another</p>
+<p>RedstoneChange event. Contains information about power flowing from one block to another</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>RedstoneChange</strong>(source, oldLevel, newLevel) <br> <em>RedstoneChange constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>NewLevel</strong> <br> <em>Get: get the powerlevel for redstone that it would be after the change</em></td>
 <td style="text-align:left"><code>int</code></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-redstonechange-redstonechange-md-">Public Constructors for <a href="RedstoneChange.html"><code>RedstoneChange</code></a></h3>
-<h5 id="-a-id-redstonechange-a-new-__redstonechange__-source-oldlevel-newlevel-"><a id='redstonechange'></a>new <strong>RedstoneChange</strong>(source, oldLevel, newLevel)</h5>
-<p><em>RedstoneChange constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>source</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>source argument</td>
-</tr>
-<tr>
-<td>oldLevel</td>
-<td><code>int</code></td>
-<td>oldLevel argument</td>
-</tr>
-<tr>
-<td>newLevel</td>
-<td><code>int</code></td>
-<td>newLevel argument</td>
 </tr>
 </tbody>
 </table>

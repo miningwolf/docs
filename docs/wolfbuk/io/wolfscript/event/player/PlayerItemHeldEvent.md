@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerItemHeldEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerItemHeldEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,19 +1,20 @@
-## PlayerCommand __class__
+## PlayerCommandEvent __class__
 
 >io.wolfscript.event.command.PlayerCommand
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('command.PlayerCommand', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Player command hook. Contains a player and a command String Array
+Player command event. Contains a player and a command String Array
 
 Method | Type   
 --- | :--- 
-new __PlayerCommand__(player) <br> _Constructs a new PlayerCommand_ | _constructor_
  readonly property __Command__ <br> _Get: Get command that was issued by the `Player`_ | `String[]`
  readonly property __Player__ <br> _Get: Get the `Player` who issued this command_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,17 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerCommand`](PlayerCommand.md)
-
-##### <a id='playercommand'></a>new __PlayerCommand__(player) 
-
-_Constructs a new PlayerCommand_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` executing the commmand
-
----
 
 ### Public Properties for [`PlayerCommand`](PlayerCommand.md)
 

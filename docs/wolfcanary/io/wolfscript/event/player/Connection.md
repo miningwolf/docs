@@ -1,19 +1,20 @@
-## Connection __class__
+## ConnectionEvent __class__
 
 >io.wolfscript.event.player.Connection
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.Connection', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Connection hook. Contains information about a player connecting.
+Connection event. Contains information about a player connecting.
 
 Method | Type   
 --- | :--- 
-new __Connection__(player, message, firstTime) <br> _Connection constructor_ | _constructor_
   property __Message__ <br> _Get: Gets the message sent to all<br>Set: Sets the message set to all_ | `String`
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
  writeonly property __Hidden__ <br> _Hidden property_ | `void`
@@ -32,19 +33,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Connection`](Connection.md)
-
-##### <a id='connection'></a>new __Connection__(player, message, firstTime) 
-
-_Connection constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-message | `String` | message argument
-firstTime | `boolean` | firstTime argument
-
----
 
 ### Public Properties for [`Connection`](Connection.md)
 

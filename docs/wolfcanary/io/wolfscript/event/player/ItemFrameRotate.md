@@ -1,9 +1,11 @@
-## ItemFrameRotate __class__
+## ItemFrameRotateEvent __class__
 
 >io.wolfscript.event.player.ItemFrameRotate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ItemFrameRotate', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a `Player` rotates an [`Item`](../../api/inventory/Item.md) in an [`
 
 Method | Type   
 --- | :--- 
-new __ItemFrameRotate__(player, itemFrame) <br> _ItemFrameRotate constructor_ | _constructor_
  readonly property __CurrentRotation__ <br> _CurrentRotation property_ | `int`
 final readonly property __ItemFrame__ <br> _Get: Gets the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) being interacted with_ | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)
   property __NewRotation__ <br> _Get: Gets the new rotation that the [`Item`](../../api/inventory/Item.md) in the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) will be at.<br>Set: Sets the new rotation._ | `int`
@@ -38,18 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemFrameRotate`](ItemFrameRotate.md)
-
-##### <a id='itemframerotate'></a>new __ItemFrameRotate__(player, itemFrame) 
-
-_ItemFrameRotate constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-itemFrame | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) | itemFrame argument
-
----
 
 ### Public Properties for [`ItemFrameRotate`](ItemFrameRotate.md)
 

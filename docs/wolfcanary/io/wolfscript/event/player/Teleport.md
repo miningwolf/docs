@@ -1,19 +1,20 @@
-## Teleport __class__
+## TeleportEvent __class__
 
 >io.wolfscript.event.player.Teleport
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Teleport', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Teleport hook. Contains player who is teleporting and their destination
+Teleport event. Contains player who is teleporting and their destination
 
 Method | Type   
 --- | :--- 
-new __Teleport__(player, destination, cause) <br> _Teleport constructor_ | _constructor_
  readonly property __CurrentLocation__ <br> _Get: Gets the `Player`'s current location_ | [`Location`](../../api/world/position/Location.md)
  readonly property __Destination__ <br> _Get: Get the destination [`Location`](../../api/world/position/Location.md) for the teleport._ | [`Location`](../../api/world/position/Location.md)
  readonly property __Player__ <br> _Get: Get the `Player` instance._ | `Player`
@@ -38,19 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Teleport`](Teleport.md)
-
-##### <a id='teleport'></a>new __Teleport__(player, destination, cause) 
-
-_Teleport constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-destination | [`Location`](../../api/world/position/Location.md) | destination argument
-cause | `TeleportCause` | cause argument
-
----
 
 ### Public Properties for [`Teleport`](Teleport.md)
 

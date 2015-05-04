@@ -1,9 +1,11 @@
-## PluginDisable __class__
+## PluginDisableEvent __class__
 
 >io.wolfscript.event.system.PluginDisable
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.PluginDisable', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a plugin is disabled
 
 Method | Type   
 --- | :--- 
-new __PluginDisable__(plugin) <br> _PluginDisable constructor_ | _constructor_
  readonly property __Plugin__ <br> _Get: Retrieve the plugin that is disabled_ | `Plugin`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PluginDisable`](PluginDisable.md)
-
-##### <a id='plugindisable'></a>new __PluginDisable__(plugin) 
-
-_PluginDisable constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-plugin | `Plugin` | plugin argument
-
----
 
 ### Public Properties for [`PluginDisable`](PluginDisable.md)
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityChangeBlockEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityChangeBlockEvent', function (e) { });
+```
+
 
 ---
 

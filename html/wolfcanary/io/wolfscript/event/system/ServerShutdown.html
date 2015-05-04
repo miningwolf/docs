@@ -135,15 +135,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="servershutdown-__class__">ServerShutdown <strong>class</strong></h2>
+            <h2 id="servershutdownevent-__class__">ServerShutdownEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.system.ServerShutdown
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'system.ServerShutdown'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;system.ServerShutdown&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Server shutdown hook. Contains information about the reason the server is shutting down</p>
+<p>Server shutdown event. Contains information about the reason the server is shutting down</p>
 <table>
 <thead>
 <tr>
@@ -152,10 +153,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ServerShutdown</strong>(reason) <br> <em>ServerShutdown constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>  property <strong>Reason</strong> <br> <em>Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed</em></td>
 <td style="text-align:left"><code>String</code></td>
@@ -183,26 +180,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-servershutdown-servershutdown-md-">Public Constructors for <a href="ServerShutdown.html"><code>ServerShutdown</code></a></h3>
-<h5 id="-a-id-servershutdown-a-new-__servershutdown__-reason-"><a id='servershutdown'></a>new <strong>ServerShutdown</strong>(reason)</h5>
-<p><em>ServerShutdown constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>reason</td>
-<td><code>String</code></td>
-<td>reason argument</td>
 </tr>
 </tbody>
 </table>

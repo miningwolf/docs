@@ -3,8 +3,10 @@
 >io.wolfscript.event.weather.LightningStrikeEvent
 >Extends [`WeatherEvent`](WeatherEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('weather.LightningStrikeEvent', function (e) { });
+```
+
 
 ---
 

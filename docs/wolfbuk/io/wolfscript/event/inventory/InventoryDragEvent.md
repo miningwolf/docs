@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.InventoryDragEvent
 >Extends [`InventoryInteractEvent`](InventoryInteractEvent.md)
-
+``` javascript
 this.on('inventory.InventoryDragEvent', function (e) { });
+```
+
 
 ---
 

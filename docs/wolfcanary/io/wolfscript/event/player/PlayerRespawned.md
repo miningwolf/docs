@@ -1,19 +1,20 @@
-## PlayerRespawned __class__
+## PlayerRespawnedEvent __class__
 
 >io.wolfscript.event.player.PlayerRespawned
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.PlayerRespawned', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Player respawned hook. Contains the reference to the freshly spawned player entity and the location it spawned in. The location can not be overridden at this point. If you need the player to go somewhere else, use `Player#teleportTo(Location)` etc
+Player respawned event. Contains the reference to the freshly spawned player entity and the location it spawned in. The location can not be overridden at this point. If you need the player to go somewhere else, use `Player#teleportTo(Location)` etc
 
 Method | Type   
 --- | :--- 
-new __PlayerRespawned__(player, location) <br> _PlayerRespawned constructor_ | _constructor_
  readonly property __Location__ <br> _Get: Gets the [`Location`](../../api/world/position/Location.md) where this player will finally spawn_ | [`Location`](../../api/world/position/Location.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerRespawned`](PlayerRespawned.md)
-
-##### <a id='playerrespawned'></a>new __PlayerRespawned__(player, location) 
-
-_PlayerRespawned constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-location | [`Location`](../../api/world/position/Location.md) | location argument
-
----
 
 ### Public Properties for [`PlayerRespawned`](PlayerRespawned.md)
 

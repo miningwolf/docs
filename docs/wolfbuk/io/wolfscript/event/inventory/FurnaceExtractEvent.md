@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.FurnaceExtractEvent
 >Extends [`BlockExpEvent`](../block/BlockExpEvent.md)
-
+``` javascript
 this.on('inventory.FurnaceExtractEvent', function (e) { });
+```
+
 
 ---
 

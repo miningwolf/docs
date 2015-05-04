@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="kick-__class__">Kick <strong>class</strong></h2>
+            <h2 id="kickevent-__class__">KickEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Kick
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Kick'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Kick&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Kick hook. Contains the player who was kicked and the MessageReceiver who kicked them</p>
+<p>Kick event. Contains the player who was kicked and the MessageReceiver who kicked them</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Kick</strong>(kickedPlayer, moderator, reason) <br> <em>Kick constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>KickedPlayer</strong> <br> <em>Get: Get the <code>Player</code> being kicked</em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-kick-kick-md-">Public Constructors for <a href="Kick.html"><code>Kick</code></a></h3>
-<h5 id="-a-id-kick-a-new-__kick__-kickedplayer-moderator-reason-"><a id='kick'></a>new <strong>Kick</strong>(kickedPlayer, moderator, reason)</h5>
-<p><em>Kick constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>kickedPlayer</td>
-<td><code>Player</code></td>
-<td>kickedPlayer argument</td>
-</tr>
-<tr>
-<td>moderator</td>
-<td><a href="../../chat/MessageReceiver.html"><code>MessageReceiver</code></a></td>
-<td>moderator argument</td>
-</tr>
-<tr>
-<td>reason</td>
-<td><code>String</code></td>
-<td>reason argument</td>
 </tr>
 </tbody>
 </table>

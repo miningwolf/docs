@@ -1,19 +1,20 @@
-## ItemUse __class__
+## ItemUseEvent __class__
 
 >io.wolfscript.event.player.ItemUse
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ItemUse', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Item use hook. Called when a `Player` uses an [`Item`](../../api/inventory/Item.md)
+Item use event. Called when a `Player` uses an [`Item`](../../api/inventory/Item.md)
 
 Method | Type   
 --- | :--- 
-new __ItemUse__(player, item, clicked) <br> _ItemUse constructor_ | _constructor_
  readonly property __BlockClicked__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) being clicked on, or Air if no block is being clicked_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md)_ | [`Item`](../../api/inventory/Item.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemUse`](ItemUse.md)
-
-##### <a id='itemuse'></a>new __ItemUse__(player, item, clicked) 
-
-_ItemUse constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-item | [`Item`](../../api/inventory/Item.md) | item argument
-clicked | [`Block`](../../api/world/blocks/Block.md) | clicked argument
-
----
 
 ### Public Properties for [`ItemUse`](ItemUse.md)
 

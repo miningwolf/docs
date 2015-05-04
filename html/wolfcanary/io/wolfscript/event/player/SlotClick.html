@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="slotclick-__class__">SlotClick <strong>class</strong></h2>
+            <h2 id="slotclickevent-__class__">SlotClickEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.SlotClick
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.SlotClick'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.SlotClick&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class SlotClick</p>
+<p>class SlotClickEvent</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>SlotClick</strong>(player, inventory, item, slotType, secondarySlotType, grabMode, button, slotId, transNum) <br> <em>Constructs a new SlotClick</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>ButtonPress</strong> <br> <em>Get: Gets the button pressed</em></td>
 <td style="text-align:left"><a href="../../api/inventory/slot/ButtonPress.html"><code>ButtonPress</code></a></td>
@@ -288,66 +285,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-slotclick-slotclick-md-">Public Constructors for <a href="SlotClick.html"><code>SlotClick</code></a></h3>
-<h5 id="-a-id-slotclick-a-new-__slotclick__-player-inventory-item-slottype-secondaryslottype-grabmode-button-slotid-transnum-"><a id='slotclick'></a>new <strong>SlotClick</strong>(player, inventory, item, slotType, secondarySlotType, grabMode, button, slotId, transNum)</h5>
-<p><em>Constructs a new SlotClick</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> clicking</td>
-</tr>
-<tr>
-<td>inventory</td>
-<td><a href="../../api/inventory/Inventory.html"><code>Inventory</code></a></td>
-<td>the <a href="../../api/inventory/Inventory.html"><code>Inventory</code></a> thats open</td>
-</tr>
-<tr>
-<td>item</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the <a href="../../api/inventory/Item.html"><code>Item</code></a> in the slot clicked</td>
-</tr>
-<tr>
-<td>slotType</td>
-<td><a href="../../api/inventory/slot/SlotType.html"><code>SlotType</code></a></td>
-<td>the <a href="../../api/inventory/slot/SlotType.html"><code>SlotType</code></a> being clicked</td>
-</tr>
-<tr>
-<td>secondarySlotType</td>
-<td><a href="../../api/inventory/slot/SecondarySlotType.html"><code>SecondarySlotType</code></a></td>
-<td>the <a href="../../api/inventory/slot/SecondarySlotType.html"><code>SecondarySlotType</code></a> being clicked</td>
-</tr>
-<tr>
-<td>grabMode</td>
-<td><a href="../../api/inventory/slot/GrabMode.html"><code>GrabMode</code></a></td>
-<td>the <a href="../../api/inventory/slot/GrabMode.html"><code>GrabMode</code></a> of the link</td>
-</tr>
-<tr>
-<td>button</td>
-<td><a href="../../api/inventory/slot/ButtonPress.html"><code>ButtonPress</code></a></td>
-<td>the <a href="../../api/inventory/slot/ButtonPress.html"><code>ButtonPress</code></a></td>
-</tr>
-<tr>
-<td>slotId</td>
-<td><code>short</code></td>
-<td>the slot id</td>
-</tr>
-<tr>
-<td>transNum</td>
-<td><code>short</code></td>
-<td>the transaction number</td>
 </tr>
 </tbody>
 </table>

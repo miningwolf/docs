@@ -1,9 +1,11 @@
-## EntityMount __class__
+## EntityMountEvent __class__
 
 >io.wolfscript.event.entity.EntityMount
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntityMount', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when one entity is trying to mount another
 
 Method | Type   
 --- | :--- 
-new __EntityMount__(entity, rider) <br> _EntityMount constructor_ | _constructor_
  readonly property __Entity__ <br> _Get: Get the entity that is about to mount another one_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
  readonly property __Rider__ <br> _Get: Get the entity that is about to mount the other one_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityMount`](EntityMount.md)
-
-##### <a id='entitymount'></a>new __EntityMount__(entity, rider) 
-
-_EntityMount constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | entity argument
-rider | [`LivingBase`](../../api/entity/living/LivingBase.md) | rider argument
-
----
 
 ### Public Properties for [`EntityMount`](EntityMount.md)
 

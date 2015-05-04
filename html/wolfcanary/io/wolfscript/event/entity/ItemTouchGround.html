@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="itemtouchground-__class__">ItemTouchGround <strong>class</strong></h2>
+            <h2 id="itemtouchgroundevent-__class__">ItemTouchGroundEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.ItemTouchGround
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.ItemTouchGround'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.ItemTouchGround&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>ItemTouchGround<br> Called when an <a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a> hits the ground</p>
+<p>ItemTouchGroundEvent<br> Called when an <a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a> hits the ground</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ItemTouchGround</strong>(item) <br> <em>Constructs a new ItemTouchGround</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>EntityItem</strong> <br> <em>Get: Gets the <a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a> hitting the ground</em></td>
 <td style="text-align:left"><a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a></td>
@@ -221,26 +218,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-itemtouchground-itemtouchground-md-">Public Constructors for <a href="ItemTouchGround.html"><code>ItemTouchGround</code></a></h3>
-<h5 id="-a-id-itemtouchground-a-new-__itemtouchground__-item-"><a id='itemtouchground'></a>new <strong>ItemTouchGround</strong>(item)</h5>
-<p><em>Constructs a new ItemTouchGround</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>item</td>
-<td><a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a></td>
-<td>the <a href="../../api/entity/EntityItem.html"><code>EntityItem</code></a> hitting the ground</td>
 </tr>
 </tbody>
 </table>

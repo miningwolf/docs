@@ -49,8 +49,10 @@
 	}
 	if (mainItem.qualifiedname.substr(0,20) == "io.wolfscript.event." && mainItem.type == "class")
 	{
-		@:
+		@:``` javascript
 	 	@:this.on('@helpers.fnEventName(mainItem.qualifiedname) ', function (e) @brackets );
+		@:```
+		@:
 	}
     @:
 	@:---
@@ -64,13 +66,6 @@
 	} else
 	{
 		@:@{fnDescriptionClean(mainItem.description)}
-		@:
-	}
-	if (mainItem.type === "event")
-	{
-		@:``` javascript
-		@:this.on('@helpers.fnEventName(mainItem.qualifiedname) ', function (e) @brackets );
-		@:```
 		@:
 	}
 	if (mainItem.type === "enum")

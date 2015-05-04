@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.InventoryClickEvent
 >Extends [`InventoryInteractEvent`](InventoryInteractEvent.md)
-
+``` javascript
 this.on('inventory.InventoryClickEvent', function (e) { });
+```
+
 
 ---
 

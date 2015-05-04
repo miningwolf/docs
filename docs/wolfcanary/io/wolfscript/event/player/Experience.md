@@ -1,19 +1,20 @@
-## Experience __class__
+## ExperienceEvent __class__
 
 >io.wolfscript.event.player.Experience
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Experience', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Experience hook. Contains information about player experience changes.
+Experience event. Contains information about player experience changes.
 
 Method | Type   
 --- | :--- 
-new __Experience__(player, oldval, newval) <br> _Experience constructor_ | _constructor_
  readonly property __NewValue__ <br> _Get: Gets the new experience value_ | `int`
  readonly property __OldValue__ <br> _Get: Gets the old experience value_ | `int`
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Experience`](Experience.md)
-
-##### <a id='experience'></a>new __Experience__(player, oldval, newval) 
-
-_Experience constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-oldval | `int` | oldval argument
-newval | `int` | newval argument
-
----
 
 ### Public Properties for [`Experience`](Experience.md)
 

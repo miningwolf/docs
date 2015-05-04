@@ -3,8 +3,10 @@
 >io.wolfscript.event.hanging.HangingBreakEvent
 >Extends [`HangingEvent`](HangingEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('hanging.HangingBreakEvent', function (e) { });
+```
+
 
 ---
 

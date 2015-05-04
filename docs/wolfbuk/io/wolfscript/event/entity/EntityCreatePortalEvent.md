@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityCreatePortalEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityCreatePortalEvent', function (e) { });
+```
+
 
 ---
 

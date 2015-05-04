@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.CreeperPowerEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.CreeperPowerEvent', function (e) { });
+```
+
 
 ---
 

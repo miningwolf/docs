@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="preconnection-__class__">PreConnection <strong>class</strong></h2>
+            <h2 id="preconnectionevent-__class__">PreConnectionEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.PreConnection
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.PreConnection'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.PreConnection&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Login checks hook. Comes with ip, name and a kickReason that is to be returned, and should be null if a player should not be kicked.</p>
+<p>Login checks event. Comes with ip, name and a kickReason that is to be returned, and should be null if a player should not be kicked.</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PreConnection</strong>(ip, name, id, dimType, world) <br> <em>PreConnection constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Ip</strong> <br> <em>Get: Get the IP of the joining <code>Player</code></em></td>
 <td style="text-align:left"><code>String</code></td>
@@ -244,46 +241,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-preconnection-preconnection-md-">Public Constructors for <a href="PreConnection.html"><code>PreConnection</code></a></h3>
-<h5 id="-a-id-preconnection-a-new-__preconnection__-ip-name-id-dimtype-world-"><a id='preconnection'></a>new <strong>PreConnection</strong>(ip, name, id, dimType, world)</h5>
-<p><em>PreConnection constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ip</td>
-<td><code>String</code></td>
-<td>ip argument</td>
-</tr>
-<tr>
-<td>name</td>
-<td><code>String</code></td>
-<td>name argument</td>
-</tr>
-<tr>
-<td>id</td>
-<td><code>UUID</code></td>
-<td>id argument</td>
-</tr>
-<tr>
-<td>dimType</td>
-<td><a href="../../api/world/DimensionType.html"><code>DimensionType</code></a></td>
-<td>dimType argument</td>
-</tr>
-<tr>
-<td>world</td>
-<td><code>String</code></td>
-<td>world argument</td>
 </tr>
 </tbody>
 </table>

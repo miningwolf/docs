@@ -1,19 +1,20 @@
-## ProjectileHit __class__
+## ProjectileHitEvent __class__
 
 >io.wolfscript.event.entity.ProjectileHit
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.ProjectileHit', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-ProjectileHit<br> Called when a Projectile hits something
+ProjectileHitEvent<br> Called when a Projectile hits something
 
 Method | Type   
 --- | :--- 
-new __ProjectileHit__(projectile, hit) <br> _Constructs a new ProjectileHit_ | _constructor_
  readonly property __EntityHit__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) hit by the projectile_ | [`Entity`](../../api/entity/Entity.md)
  readonly property __Projectile__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) projectile_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ProjectileHit`](ProjectileHit.md)
-
-##### <a id='projectilehit'></a>new __ProjectileHit__(projectile, hit) 
-
-_Constructs a new ProjectileHit_
-
-Argument | Type | Description  
---- | --- | --- 
-projectile | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) projectile
-hit | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) hit if present
-
----
 
 ### Public Properties for [`ProjectileHit`](ProjectileHit.md)
 

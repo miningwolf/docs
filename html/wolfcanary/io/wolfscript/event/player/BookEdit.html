@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="bookedit-__class__">BookEdit <strong>class</strong></h2>
+            <h2 id="bookeditevent-__class__">BookEditEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.BookEdit
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.BookEdit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.BookEdit&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when a <code>Player</code> edits a Book <a href="../../api/inventory/Item.html"><code>Item</code></a></p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BookEdit</strong>(book, player) <br> <em>BookEdit constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>final readonly property <strong>Book</strong> <br> <em>Get: Gets the Book <a href="../../api/inventory/Item.html"><code>Item</code></a> being editted</em></td>
 <td style="text-align:left"><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
@@ -248,31 +245,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-bookedit-bookedit-md-">Public Constructors for <a href="BookEdit.html"><code>BookEdit</code></a></h3>
-<h5 id="-a-id-bookedit-a-new-__bookedit__-book-player-"><a id='bookedit'></a>new <strong>BookEdit</strong>(book, player)</h5>
-<p><em>BookEdit constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>book</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>book argument</td>
-</tr>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
 </tr>
 </tbody>
 </table>

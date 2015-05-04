@@ -1,19 +1,20 @@
-## PotionEffectApplied __class__
+## PotionEffectAppliedEvent __class__
 
 >io.wolfscript.event.entity.PotionEffectApplied
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('entity.PotionEffectApplied', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-PotionEffectApplied<br> Called when a [`PotionEffect`](../../api/potion/PotionEffect.md) is applied to a [`LivingBase`](../../api/entity/living/LivingBase.md)
+PotionEffectAppliedEvent<br> Called when a [`PotionEffect`](../../api/potion/PotionEffect.md) is applied to a [`LivingBase`](../../api/entity/living/LivingBase.md)
 
 Method | Type   
 --- | :--- 
-new __PotionEffectApplied__(entity, effect) <br> _Constructs a new PotionEffectApplied_ | _constructor_
  readonly property __Entity__ <br> _Get: Gets the [`LivingBase`](../../api/entity/living/LivingBase.md) having a [`PotionEffect`](../../api/potion/PotionEffect.md) applied to_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
   property __PotionEffect__ <br> _Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md) being applied<br>Set: Sets the [`PotionEffect`](../../api/potion/PotionEffect.md) to apply_ | [`PotionEffect`](../../api/potion/PotionEffect.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PotionEffectApplied`](PotionEffectApplied.md)
-
-##### <a id='potioneffectapplied'></a>new __PotionEffectApplied__(entity, effect) 
-
-_Constructs a new PotionEffectApplied_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) having the [`PotionEffect`](../../api/potion/PotionEffect.md) applied to
-effect | [`PotionEffect`](../../api/potion/PotionEffect.md) | the [`PotionEffect`](../../api/potion/PotionEffect.md) being applied
-
----
 
 ### Public Properties for [`PotionEffectApplied`](PotionEffectApplied.md)
 

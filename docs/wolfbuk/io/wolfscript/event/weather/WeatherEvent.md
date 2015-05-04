@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.weather.WeatherEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('weather.WeatherEvent', function (e) { });
+```
+
 
 ---
 

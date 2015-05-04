@@ -1,19 +1,20 @@
-## PortalCreate __class__
+## PortalCreateEvent __class__
 
 >io.wolfscript.event.world.PortalCreate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.PortalCreate', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class PortalCreate
+class PortalCreateEvent
 
 Method | Type   
 --- | :--- 
-new __PortalCreate__(pos, world) <br> _Constructs a new PortalCreate_ | _constructor_
  readonly property __BlockSet__ <br> _Get: Get the set of blocks that are used to create this portal_ | `Block[][]`
  readonly property __Position__ <br> _Get: Gets the [`Position`](../../api/world/position/Position.md) where the portal is started_ | [`Position`](../../api/world/position/Position.md)
  readonly property __World__ <br> _Get: Gets the world the portal will be in_ | [`World`](../../api/world/World.md)
@@ -37,18 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PortalCreate`](PortalCreate.md)
-
-##### <a id='portalcreate'></a>new __PortalCreate__(pos, world) 
-
-_Constructs a new PortalCreate_
-
-Argument | Type | Description  
---- | --- | --- 
-pos | [`Position`](../../api/world/position/Position.md) | the [`Position`](../../api/world/position/Position.md) where the portal is started
-world | [`World`](../../api/world/World.md) | the [`World`](../../api/world/World.md) the portal is being made in
-
----
 
 ### Public Properties for [`PortalCreate`](PortalCreate.md)
 

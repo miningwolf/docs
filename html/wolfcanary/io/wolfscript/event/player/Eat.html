@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="eat-__class__">Eat <strong>class</strong></h2>
+            <h2 id="eatevent-__class__">EatEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Eat
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Eat'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Eat&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class Eat</p>
+<p>class EatEvent</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Eat</strong>(player, item, levelGain, saturationGain) <br> <em>Constructs a new Eat</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Item</strong> <br> <em>Get: Gets the <a href="../../api/inventory/Item.html"><code>Item</code></a> that is being consumed</em></td>
 <td style="text-align:left"><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
@@ -264,41 +261,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-eat-eat-md-">Public Constructors for <a href="Eat.html"><code>Eat</code></a></h3>
-<h5 id="-a-id-eat-a-new-__eat__-player-item-levelgain-saturationgain-"><a id='eat'></a>new <strong>Eat</strong>(player, item, levelGain, saturationGain)</h5>
-<p><em>Constructs a new Eat</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> eating</td>
-</tr>
-<tr>
-<td>item</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the <a href="../../api/inventory/Item.html"><code>Item</code></a> being eaten</td>
-</tr>
-<tr>
-<td>levelGain</td>
-<td><code>int</code></td>
-<td>the amount of food level the <code>Player</code> will gain</td>
-</tr>
-<tr>
-<td>saturationGain</td>
-<td><code>float</code></td>
-<td>the amount of food saturation the <code>Player</code> will gain</td>
 </tr>
 </tbody>
 </table>

@@ -1,19 +1,20 @@
-## Chat __class__
+## ChatEvent __class__
 
 >io.wolfscript.event.player.Chat
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Chat', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Chat hook. Contains player, prefix, message and receivers information
+Chat event. Contains player, prefix, message and receivers information
 
 Method | Type   
 --- | :--- 
-new __Chat__(player, format) <br> _Chat constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Get the `Player` instance_ | `Player`
   property __Message__ <br> _Get: Get the message this player has sent<br>Set: Change the message completely_ | `String`
   property __Format__ <br> _Get: Get the chat format. This is a string like this:<br>Set: Override the default chatting format._ | `String`
@@ -49,18 +50,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Chat`](Chat.md)
-
-##### <a id='chat'></a>new __Chat__(player, format) 
-
-_Chat constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-format | `String` | format argument
-
----
 
 ### Public Properties for [`Chat`](Chat.md)
 

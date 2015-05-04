@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.AsyncPlayerPreLoginEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('player.AsyncPlayerPreLoginEvent', function (e) { });
+```
+
 
 ---
 

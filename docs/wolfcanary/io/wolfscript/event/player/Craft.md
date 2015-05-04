@@ -1,19 +1,20 @@
-## Craft __class__
+## CraftEvent __class__
 
 >io.wolfscript.event.player.Craft
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Craft', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class Craft
+class CraftEvent
 
 Method | Type   
 --- | :--- 
-new __Craft__(player, craftingMatrix, recipeResult) <br> _Creates a new Craft._ | _constructor_
  readonly property __CraftingMatrix__ <br> _Get: Returns the crafting inventory the player is working on._ | [`CraftingMatrix`](../../api/inventory/CraftingMatrix.md)
  readonly property __MatchingRecipe__ <br> _Get: Gets the recipe that matches the matrix_ | [`Recipe`](../../api/inventory/recipes/Recipe.md)
  readonly property __Player__ <br> _Get: Gets the crafting player._ | `Player`
@@ -38,19 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Craft`](Craft.md)
-
-##### <a id='craft'></a>new __Craft__(player, craftingMatrix, recipeResult) 
-
-_Creates a new Craft._
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | The crafting player.
-craftingMatrix | [`CraftingMatrix`](../../api/inventory/CraftingMatrix.md) | The crafting inventory used.
-recipeResult | [`Item`](../../api/inventory/Item.md) | The recipe's result.
-
----
 
 ### Public Properties for [`Craft`](Craft.md)
 

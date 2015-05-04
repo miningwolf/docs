@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockRedstoneEvent
 >Extends [`BlockEvent`](BlockEvent.md)
-
+``` javascript
 this.on('block.BlockRedstoneEvent', function (e) { });
+```
+
 
 ---
 

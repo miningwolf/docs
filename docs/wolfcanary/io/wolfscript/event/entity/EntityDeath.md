@@ -1,19 +1,20 @@
-## EntityDeath __class__
+## EntityDeathEvent __class__
 
 >io.wolfscript.event.entity.EntityDeath
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('entity.EntityDeath', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class EntityDeath
+class EntityDeathEvent
 
 Method | Type   
 --- | :--- 
-new __EntityDeath__(entity, cause) <br> _Constructs a new EntityDeath_ | _constructor_
  readonly property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the [`Entity`](../../api/entity/Entity.md)_ | [`DamageSource`](../../api/DamageSource.md)
  readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) that is dying_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityDeath`](EntityDeath.md)
-
-##### <a id='entitydeath'></a>new __EntityDeath__(entity, cause) 
-
-_Constructs a new EntityDeath_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) that is dying
-cause | [`DamageSource`](../../api/DamageSource.md) | the [`DamageSource`](../../api/DamageSource.md) that killed the Entity
-
----
 
 ### Public Properties for [`EntityDeath`](EntityDeath.md)
 

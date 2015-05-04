@@ -1,19 +1,20 @@
-## PistonRetract __class__
+## PistonRetractEvent __class__
 
 >io.wolfscript.event.world.PistonRetract
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.PistonRetract', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Piston Retract hook<br> Called when a piston retracts
+Piston Retract event<br> Called when a piston retracts
 
 Method | Type   
 --- | :--- 
-new __PistonRetract__(piston, moving) <br> _PistonRetract constructor_ | _constructor_
  readonly property __Moving__ <br> _Moving property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Piston__ <br> _Get: Gets the piston [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PistonRetract`](PistonRetract.md)
-
-##### <a id='pistonretract'></a>new __PistonRetract__(piston, moving) 
-
-_PistonRetract constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-piston | [`Block`](../../api/world/blocks/Block.md) | piston argument
-moving | [`Block`](../../api/world/blocks/Block.md) | moving argument
-
----
 
 ### Public Properties for [`PistonRetract`](PistonRetract.md)
 

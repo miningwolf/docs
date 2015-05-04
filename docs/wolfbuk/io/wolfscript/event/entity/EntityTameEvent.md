@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityTameEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityTameEvent', function (e) { });
+```
+
 
 ---
 

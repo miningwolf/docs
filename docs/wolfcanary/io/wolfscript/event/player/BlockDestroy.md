@@ -1,9 +1,11 @@
-## BlockDestroy __class__
+## BlockDestroyEvent __class__
 
 >io.wolfscript.event.player.BlockDestroy
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BlockDestroy', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a player destroy a block
 
 Method | Type   
 --- | :--- 
-new __BlockDestroy__(player, block) <br> _BlockDestroy constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the [`Block`](../../api/world/blocks/Block.md) the `Player` is left clicking_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Gets the `Player` clicking_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockDestroy`](BlockDestroy.md)
-
-##### <a id='blockdestroy'></a>new __BlockDestroy__(player, block) 
-
-_BlockDestroy constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-
----
 
 ### Public Properties for [`BlockDestroy`](BlockDestroy.md)
 

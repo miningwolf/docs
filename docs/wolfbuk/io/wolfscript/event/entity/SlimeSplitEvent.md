@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.SlimeSplitEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.SlimeSplitEvent', function (e) { });
+```
+
 
 ---
 

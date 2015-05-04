@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerAchievementAwardedEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerAchievementAwardedEvent', function (e) { });
+```
+
 
 ---
 

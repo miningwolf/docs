@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerPortalEvent
 >Extends [`PlayerTeleportEvent`](PlayerTeleportEvent.md)
-
+``` javascript
 this.on('player.PlayerPortalEvent', function (e) { });
+```
+
 
 ---
 

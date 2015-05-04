@@ -1,19 +1,20 @@
-## FireworkExplode __class__
+## FireworkExplodeEvent __class__
 
 >io.wolfscript.event.world.FireworkExplode
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.FireworkExplode', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class FireworkExplode
+class FireworkExplodeEvent
 
 Method | Type   
 --- | :--- 
-new __FireworkExplode__(rocket) <br> _Constructs a new FireworkExplode_ | _constructor_
  readonly property __FireworkRocket__ <br> _Get: Gets the [`FireworkRocket`](../../api/entity/FireworkRocket.md) set to explode_ | [`FireworkRocket`](../../api/entity/FireworkRocket.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`FireworkExplode`](FireworkExplode.md)
-
-##### <a id='fireworkexplode'></a>new __FireworkExplode__(rocket) 
-
-_Constructs a new FireworkExplode_
-
-Argument | Type | Description  
---- | --- | --- 
-rocket | [`FireworkRocket`](../../api/entity/FireworkRocket.md) | the [`FireworkRocket`](../../api/entity/FireworkRocket.md) to explode
-
----
 
 ### Public Properties for [`FireworkExplode`](FireworkExplode.md)
 

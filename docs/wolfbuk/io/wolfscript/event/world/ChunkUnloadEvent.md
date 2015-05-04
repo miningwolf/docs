@@ -3,8 +3,10 @@
 >io.wolfscript.event.world.ChunkUnloadEvent
 >Extends [`ChunkEvent`](ChunkEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('world.ChunkUnloadEvent', function (e) { });
+```
+
 
 ---
 

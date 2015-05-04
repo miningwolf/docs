@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="leafdecay-__class__">LeafDecay <strong>class</strong></h2>
+            <h2 id="leafdecayevent-__class__">LeafDecayEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.LeafDecay
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.LeafDecay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.LeafDecay&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Block update hook. Contains information about a block updating.</p>
+<p>Block update event. Contains information about a block updating.</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>LeafDecay</strong>(block) <br> <em>LeafDecay constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Get: Get the leaf block that is about to decay</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -224,26 +221,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-leafdecay-leafdecay-md-">Public Constructors for <a href="LeafDecay.html"><code>LeafDecay</code></a></h3>
-<h5 id="-a-id-leafdecay-a-new-__leafdecay__-block-"><a id='leafdecay'></a>new <strong>LeafDecay</strong>(block)</h5>
-<p><em>LeafDecay constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
 </tr>
 </tbody>
 </table>

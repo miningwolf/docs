@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="chickenlayegg-__class__">ChickenLayEgg <strong>class</strong></h2>
+            <h2 id="chickenlayeggevent-__class__">ChickenLayEggEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.ChickenLayEgg
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.ChickenLayEgg'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.ChickenLayEgg&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Chicken lay egg hook, called when a chicken lay an egg.</p>
+<p>Chicken lay egg event, called when a chicken lay an egg.</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ChickenLayEgg</strong>(chicken, egg, nextEggIn) <br> <em>Creates a new ChickenLayEgg</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Chicken</strong> <br> <em>Get: Get the <code>Chicken</code> the laid the egg</em></td>
 <td style="text-align:left"><code>Chicken</code></td>
@@ -229,36 +226,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-chickenlayegg-chickenlayegg-md-">Public Constructors for <a href="ChickenLayEgg.html"><code>ChickenLayEgg</code></a></h3>
-<h5 id="-a-id-chickenlayegg-a-new-__chickenlayegg__-chicken-egg-nexteggin-"><a id='chickenlayegg'></a>new <strong>ChickenLayEgg</strong>(chicken, egg, nextEggIn)</h5>
-<p><em>Creates a new ChickenLayEgg</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>chicken</td>
-<td><code>Chicken</code></td>
-<td>the chicken that laid the egg</td>
-</tr>
-<tr>
-<td>egg</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the egg that has been laid</td>
-</tr>
-<tr>
-<td>nextEggIn</td>
-<td><code>int</code></td>
-<td>the time until next egg will be laid</td>
 </tr>
 </tbody>
 </table>

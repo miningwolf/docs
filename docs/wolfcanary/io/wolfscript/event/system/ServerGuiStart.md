@@ -1,9 +1,11 @@
-## ServerGuiStart __class__
+## ServerGuiStartEvent __class__
 
 >io.wolfscript.event.system.ServerGuiStart
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.ServerGuiStart', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a GUI is started
 
 Method | Type   
 --- | :--- 
-new __ServerGuiStart__(gui) <br> _ServerGuiStart constructor_ | _constructor_
   property __Gui__ <br> _Gui property_ | [`GUIControl`](../../api/gui/GUIControl.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ServerGuiStart`](ServerGuiStart.md)
-
-##### <a id='serverguistart'></a>new __ServerGuiStart__(gui) 
-
-_ServerGuiStart constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-gui | [`GUIControl`](../../api/gui/GUIControl.md) | gui argument
-
----
 
 ### Public Properties for [`ServerGuiStart`](ServerGuiStart.md)
 

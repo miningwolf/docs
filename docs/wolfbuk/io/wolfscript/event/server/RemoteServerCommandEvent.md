@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.RemoteServerCommandEvent
 >Extends [`ServerCommandEvent`](ServerCommandEvent.md)
-
+``` javascript
 this.on('server.RemoteServerCommandEvent', function (e) { });
+```
+
 
 ---
 

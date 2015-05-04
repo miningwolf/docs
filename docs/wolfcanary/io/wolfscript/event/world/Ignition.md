@@ -1,19 +1,20 @@
-## Ignition __class__
+## IgnitionEvent __class__
 
 >io.wolfscript.event.world.Ignition
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.Ignition', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Ignition hook. Contains information about a [`Block`](../../api/world/blocks/Block.md) being set on fire.
+Ignition event. Contains information about a [`Block`](../../api/world/blocks/Block.md) being set on fire.
 
 Method | Type   
 --- | :--- 
-new __Ignition__(ignited, player, clicked, cause) <br> _Ignition constructor_ | _constructor_
  readonly property __Block__ <br> _Block property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Cause__ <br> _Get: Gets the `IgnitionCause` causing the ignition_ | `IgnitionCause`
  readonly property __ClickedBlock__ <br> _Get: The [`Block`](../../api/world/blocks/Block.md) that was clicked to cause an ignition if applicable._ | [`Block`](../../api/world/blocks/Block.md)
@@ -38,20 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Ignition`](Ignition.md)
-
-##### <a id='ignition'></a>new __Ignition__(ignited, player, clicked, cause) 
-
-_Ignition constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-ignited | [`Block`](../../api/world/blocks/Block.md) | ignited argument
-player | `Player` | player argument
-clicked | [`Block`](../../api/world/blocks/Block.md) | clicked argument
-cause | `IgnitionCause` | cause argument
-
----
 
 ### Public Properties for [`Ignition`](Ignition.md)
 

@@ -135,12 +135,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="serverguistart-__class__">ServerGuiStart <strong>class</strong></h2>
+            <h2 id="serverguistartevent-__class__">ServerGuiStartEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.system.ServerGuiStart
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'system.ServerGuiStart'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;system.ServerGuiStart&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when a GUI is started</p>
@@ -152,10 +153,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ServerGuiStart</strong>(gui) <br> <em>ServerGuiStart constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>  property <strong>Gui</strong> <br> <em>Gui property</em></td>
 <td style="text-align:left"><a href="../../api/gui/GUIControl.html"><code>GUIControl</code></a></td>
@@ -183,26 +180,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-serverguistart-serverguistart-md-">Public Constructors for <a href="ServerGuiStart.html"><code>ServerGuiStart</code></a></h3>
-<h5 id="-a-id-serverguistart-a-new-__serverguistart__-gui-"><a id='serverguistart'></a>new <strong>ServerGuiStart</strong>(gui)</h5>
-<p><em>ServerGuiStart constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>gui</td>
-<td><a href="../../api/gui/GUIControl.html"><code>GUIControl</code></a></td>
-<td>gui argument</td>
 </tr>
 </tbody>
 </table>

@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="signshow-__class__">SignShow <strong>class</strong></h2>
+            <h2 id="signshowevent-__class__">SignShowEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.SignShow
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.SignShow'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.SignShow&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Sign Change hook. Contains information about a sign shown to a player</p>
+<p>Sign Change event. Contains information about a sign shown to a player</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>SignShow</strong>(player, sign) <br> <em>Constructs a new SignShow</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Gets the <code>Player</code> being shown a <a href="../../api/world/blocks/Sign.html"><code>Sign</code></a></em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-signshow-signshow-md-">Public Constructors for <a href="SignShow.html"><code>SignShow</code></a></h3>
-<h5 id="-a-id-signshow-a-new-__signshow__-player-sign-"><a id='signshow'></a>new <strong>SignShow</strong>(player, sign)</h5>
-<p><em>Constructs a new SignShow</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> being shown a <a href="../../api/world/blocks/Sign.html"><code>Sign</code></a></td>
-</tr>
-<tr>
-<td>sign</td>
-<td><a href="../../api/world/blocks/Sign.html"><code>Sign</code></a></td>
-<td>the <a href="../../api/world/blocks/Sign.html"><code>Sign</code></a> being shown</td>
 </tr>
 </tbody>
 </table>

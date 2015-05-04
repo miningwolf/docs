@@ -1,9 +1,11 @@
-## GameModeChange __class__
+## GameModeChangeEvent __class__
 
 >io.wolfscript.event.player.GameModeChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.GameModeChange', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a `Player` changes GameModes
 
 Method | Type   
 --- | :--- 
-new __GameModeChange__(player, newMode) <br> _GameModeChange constructor_ | _constructor_
  readonly property __NewMode__ <br> _Get: Gets the new (changing to) [`GameMode`](../../api/GameMode.md)_ | [`GameMode`](../../api/GameMode.md)
  readonly property __OldMode__ <br> _Get: Gets the old (current) [`GameMode`](../../api/GameMode.md)_ | [`GameMode`](../../api/GameMode.md)
  readonly property __Player__ <br> _Get: Gets the `Player` changing modes_ | `Player`
@@ -37,18 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`GameModeChange`](GameModeChange.md)
-
-##### <a id='gamemodechange'></a>new __GameModeChange__(player, newMode) 
-
-_GameModeChange constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-newMode | [`GameMode`](../../api/GameMode.md) | newMode argument
-
----
 
 ### Public Properties for [`GameModeChange`](GameModeChange.md)
 

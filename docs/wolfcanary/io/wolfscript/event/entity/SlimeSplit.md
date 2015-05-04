@@ -1,19 +1,20 @@
-## SlimeSplit __class__
+## SlimeSplitEvent __class__
 
 >io.wolfscript.event.entity.SlimeSplit
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('entity.SlimeSplit', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Slime split hook, Contains information about a slime split.
+Slime split event, Contains information about a slime split.
 
 Method | Type   
 --- | :--- 
-new __SlimeSplit__(originalSlime) <br> _Constructs a new SlimeSplit_ | _constructor_
  readonly property __ChildSlimes__ <br> _Get: Get the [`Slime`](../../api/entity/living/monster/Slime.md)s that should be spawned_ | `List<Slime>`
  readonly property __OriginalSlime__ <br> _Get: Get the original [`Slime`](../../api/entity/living/monster/Slime.md) that died_ | [`Slime`](../../api/entity/living/monster/Slime.md)
  function __toString__() <br> _toString method_ | `String`
@@ -29,17 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`SlimeSplit`](SlimeSplit.md)
-
-##### <a id='slimesplit'></a>new __SlimeSplit__(originalSlime) 
-
-_Constructs a new SlimeSplit_
-
-Argument | Type | Description  
---- | --- | --- 
-originalSlime | [`Slime`](../../api/entity/living/monster/Slime.md) | the original [`Slime`](../../api/entity/living/monster/Slime.md) that died
-
----
 
 ### Public Properties for [`SlimeSplit`](SlimeSplit.md)
 

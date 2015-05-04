@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerBucketFillEvent
 >Extends [`PlayerBucketEvent`](PlayerBucketEvent.md)
-
+``` javascript
 this.on('player.PlayerBucketFillEvent', function (e) { });
+```
+
 
 ---
 

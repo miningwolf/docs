@@ -1,19 +1,20 @@
-## BlockLeftClick __class__
+## BlockLeftClickEvent __class__
 
 >io.wolfscript.event.player.BlockLeftClick
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BlockLeftClick', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Left click hook. Contains information about a Player left clicking.
+Left click event. Contains information about a Player left clicking.
 
 Method | Type   
 --- | :--- 
-new __BlockLeftClick__(player, block) <br> _BlockLeftClick constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the [`Block`](../../api/world/blocks/Block.md) the `Player` is left clicking_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Gets the `Player` clicking_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockLeftClick`](BlockLeftClick.md)
-
-##### <a id='blockleftclick'></a>new __BlockLeftClick__(player, block) 
-
-_BlockLeftClick constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-
----
 
 ### Public Properties for [`BlockLeftClick`](BlockLeftClick.md)
 

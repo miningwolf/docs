@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.vehicle.VehicleBlockCollisionEvent
 >Extends [`VehicleCollisionEvent`](VehicleCollisionEvent.md)
-
+``` javascript
 this.on('vehicle.VehicleBlockCollisionEvent', function (e) { });
+```
+
 
 ---
 

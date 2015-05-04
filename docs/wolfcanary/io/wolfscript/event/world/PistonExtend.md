@@ -1,9 +1,11 @@
-## PistonExtend __class__
+## PistonExtendEvent __class__
 
 >io.wolfscript.event.world.PistonExtend
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.PistonExtend', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Piston Extend Hook<br> Called when a Piston extends
 
 Method | Type   
 --- | :--- 
-new __PistonExtend__(piston, moving) <br> _PistonExtend constructor_ | _constructor_
  readonly property __Moving__ <br> _Moving property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Piston__ <br> _Get: Gets the piston [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PistonExtend`](PistonExtend.md)
-
-##### <a id='pistonextend'></a>new __PistonExtend__(piston, moving) 
-
-_PistonExtend constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-piston | [`Block`](../../api/world/blocks/Block.md) | piston argument
-moving | [`Block`](../../api/world/blocks/Block.md) | moving argument
-
----
 
 ### Public Properties for [`PistonExtend`](PistonExtend.md)
 

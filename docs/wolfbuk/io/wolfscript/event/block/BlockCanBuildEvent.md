@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockCanBuildEvent
 >Extends [`BlockEvent`](BlockEvent.md)
-
+``` javascript
 this.on('block.BlockCanBuildEvent', function (e) { });
+```
+
 
 ---
 

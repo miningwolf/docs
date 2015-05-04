@@ -1,19 +1,20 @@
-## Eat __class__
+## EatEvent __class__
 
 >io.wolfscript.event.player.Eat
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Eat', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class Eat
+class EatEvent
 
 Method | Type   
 --- | :--- 
-new __Eat__(player, item, levelGain, saturationGain) <br> _Constructs a new Eat_ | _constructor_
  readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) that is being consumed_ | [`Item`](../../api/inventory/Item.md)
   property __LevelGain__ <br> _Get: Gets the amount of Food Level the `Player` will gain from consuming<br>Set: Sets the Food Level the `Player` will gain from consuming_ | `int`
  readonly property __Player__ <br> _Get: Gets the `Player` eating_ | `Player`
@@ -40,20 +41,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Eat`](Eat.md)
-
-##### <a id='eat'></a>new __Eat__(player, item, levelGain, saturationGain) 
-
-_Constructs a new Eat_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` eating
-item | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) being eaten
-levelGain | `int` | the amount of food level the `Player` will gain
-saturationGain | `float` | the amount of food saturation the `Player` will gain
-
----
 
 ### Public Properties for [`Eat`](Eat.md)
 

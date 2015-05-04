@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.entity.ProjectileHitEvent
 >Extends [`EntityEvent`](EntityEvent.md)
-
+``` javascript
 this.on('entity.ProjectileHitEvent', function (e) { });
+```
+
 
 ---
 

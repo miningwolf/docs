@@ -135,12 +135,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="servertick-__class__">ServerTick <strong>class</strong></h2>
+            <h2 id="servertickevent-__class__">ServerTickEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.system.ServerTick
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'system.ServerTick'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;system.ServerTick&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called in the servers tick loop, before world processing. For informational use</p>
@@ -152,10 +153,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ServerTick</strong>(deltaTime) <br> <em>ServerTick constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>  property <strong>DeltaTime</strong> <br> <em>DeltaTime property</em></td>
 <td style="text-align:left"><code>long</code></td>
@@ -183,26 +180,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-servertick-servertick-md-">Public Constructors for <a href="ServerTick.html"><code>ServerTick</code></a></h3>
-<h5 id="-a-id-servertick-a-new-__servertick__-deltatime-"><a id='servertick'></a>new <strong>ServerTick</strong>(deltaTime)</h5>
-<p><em>ServerTick constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>deltaTime</td>
-<td><code>long</code></td>
-<td>deltaTime argument</td>
 </tr>
 </tbody>
 </table>

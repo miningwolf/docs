@@ -1,19 +1,20 @@
-## MobTarget __class__
+## MobTargetEvent __class__
 
 >io.wolfscript.event.entity.MobTarget
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.MobTarget', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class MobTarget
+class MobTargetEvent
 
 Method | Type   
 --- | :--- 
-new __MobTarget__(entity, target) <br> _Constructs a new MobTarget_ | _constructor_
  readonly property __Entity__ <br> _Get: Gets the [`EntityLiving`](../../api/entity/living/EntityLiving.md) doing the targeting_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
  readonly property __Target__ <br> _Get: Gets the [`EntityLiving`](../../api/entity/living/EntityLiving.md) being targeted_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`MobTarget`](MobTarget.md)
-
-##### <a id='mobtarget'></a>new __MobTarget__(entity, target) 
-
-_Constructs a new MobTarget_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) doing the targeting
-target | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) target
-
----
 
 ### Public Properties for [`MobTarget`](MobTarget.md)
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerItemConsumeEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerItemConsumeEvent', function (e) { });
+```
+
 
 ---
 

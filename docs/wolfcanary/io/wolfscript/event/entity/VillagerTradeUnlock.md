@@ -1,19 +1,20 @@
-## VillagerTradeUnlock __class__
+## VillagerTradeUnlockEvent __class__
 
 >io.wolfscript.event.entity.VillagerTradeUnlock
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.VillagerTradeUnlock', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-VillagerTradeUnlock hook<br> Called when a Trade is unlocked
+VillagerTradeUnlock event<br> Called when a Trade is unlocked
 
 Method | Type   
 --- | :--- 
-new __VillagerTradeUnlock__(villager, trade) <br> _Constructs a new VillagerTradeUnlock_ | _constructor_
  readonly property __Trade__ <br> _Get: Gets the [`VillagerTrade`](../../api/VillagerTrade.md) unlocked_ | [`VillagerTrade`](../../api/VillagerTrade.md)
  readonly property __Villager__ <br> _Get: Gets the `Villager` merchant_ | `Villager`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VillagerTradeUnlock`](VillagerTradeUnlock.md)
-
-##### <a id='villagertradeunlock'></a>new __VillagerTradeUnlock__(villager, trade) 
-
-_Constructs a new VillagerTradeUnlock_
-
-Argument | Type | Description  
---- | --- | --- 
-villager | `Villager` | the `Villager` merchant
-trade | [`VillagerTrade`](../../api/VillagerTrade.md) | the [`VillagerTrade`](../../api/VillagerTrade.md) unlocked
-
----
 
 ### Public Properties for [`VillagerTradeUnlock`](VillagerTradeUnlock.md)
 

@@ -1,19 +1,20 @@
-## Ban __class__
+## BanEvent __class__
 
 >io.wolfscript.event.player.Ban
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.Ban', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Ban hook. Contains information about an issued Ban
+Ban event. Contains information about an issued Ban
 
 Method | Type   
 --- | :--- 
-new __Ban__(banned, ip, moderator, reason, bantime) <br> _Ban constructor_ | _constructor_
  readonly property __BannedPlayer__ <br> _BannedPlayer property_ | [`PlayerReference`](../../api/PlayerReference.md)
  readonly property __Bantime__ <br> _Get: Return the ban time as unix timestamp._ | `long`
  readonly property __Ip__ <br> _Get: Gets the banned IP address_ | `String`
@@ -33,21 +34,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Ban`](Ban.md)
-
-##### <a id='ban'></a>new __Ban__(banned, ip, moderator, reason, bantime) 
-
-_Ban constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-banned | [`PlayerReference`](../../api/PlayerReference.md) | banned argument
-ip | `String` | ip argument
-moderator | [`MessageReceiver`](../../chat/MessageReceiver.md) | moderator argument
-reason | `String` | reason argument
-bantime | `long` | bantime argument
-
----
 
 ### Public Properties for [`Ban`](Ban.md)
 

@@ -1,19 +1,20 @@
-## HangingEntityDestroy __class__
+## HangingEntityDestroyEvent __class__
 
 >io.wolfscript.event.entity.HangingEntityDestroy
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.HangingEntityDestroy', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-HangingEntity destroy hook. Contains information about a painting or item frame being destroyed. In case the it was destroyed by a player, you will get this player too.
+HangingEntity destroy event. Contains information about a painting or item frame being destroyed. In case the it was destroyed by a player, you will get this player too.
 
 Method | Type   
 --- | :--- 
-new __HangingEntityDestroy__(hanging, player, source) <br> _HangingEntityDestroy constructor_ | _constructor_
  readonly property __DamageSource__ <br> _Get: Gets the DamageSource associated_ | [`DamageSource`](../../api/DamageSource.md)
  readonly property __Painting__ <br> _Get: Gets the [`HangingEntity`](../../api/entity/hanging/HangingEntity.md)_ | [`HangingEntity`](../../api/entity/hanging/HangingEntity.md)
  readonly property __Player__ <br> _Get: Gets the `Player` who destroyed the item frame or painting._ | `Player`
@@ -38,19 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`HangingEntityDestroy`](HangingEntityDestroy.md)
-
-##### <a id='hangingentitydestroy'></a>new __HangingEntityDestroy__(hanging, player, source) 
-
-_HangingEntityDestroy constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-hanging | [`HangingEntity`](../../api/entity/hanging/HangingEntity.md) | hanging argument
-player | `Player` | player argument
-source | [`DamageSource`](../../api/DamageSource.md) | source argument
-
----
 
 ### Public Properties for [`HangingEntityDestroy`](HangingEntityDestroy.md)
 

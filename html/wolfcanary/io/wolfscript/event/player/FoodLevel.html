@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="foodlevel-__class__">FoodLevel <strong>class</strong></h2>
+            <h2 id="foodlevelevent-__class__">FoodLevelEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.FoodLevel
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.FoodLevel'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.FoodLevel&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Food level hook. Contains information about a player&#39;s food level changes</p>
+<p>Food level event. Contains information about a player&#39;s food level changes</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>FoodLevel</strong>(player, oldval, newval) <br> <em>Constructs a new FoodLevel</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td>  property <strong>NewValue</strong> <br> <em>Get: Gets the new level<br>Set: Sets the new value to actually be set</em></td>
 <td style="text-align:left"><code>int</code></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-foodlevel-foodlevel-md-">Public Constructors for <a href="FoodLevel.html"><code>FoodLevel</code></a></h3>
-<h5 id="-a-id-foodlevel-a-new-__foodlevel__-player-oldval-newval-"><a id='foodlevel'></a>new <strong>FoodLevel</strong>(player, oldval, newval)</h5>
-<p><em>Constructs a new FoodLevel</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> who&#39;s Food Level is changing</td>
-</tr>
-<tr>
-<td>oldval</td>
-<td><code>int</code></td>
-<td>the old (current) value</td>
-</tr>
-<tr>
-<td>newval</td>
-<td><code>int</code></td>
-<td>the new value</td>
 </tr>
 </tbody>
 </table>

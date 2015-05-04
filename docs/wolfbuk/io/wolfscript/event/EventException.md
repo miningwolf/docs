@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.EventException
 >Extends `Exception`
-
+``` javascript
 this.on('event.EventException', function (e) { });
+```
+
 
 ---
 

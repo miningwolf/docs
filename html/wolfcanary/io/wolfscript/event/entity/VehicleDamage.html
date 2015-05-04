@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="vehicledamage-__class__">VehicleDamage <strong>class</strong></h2>
+            <h2 id="vehicledamageevent-__class__">VehicleDamageEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.VehicleDamage
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.VehicleDamage'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.VehicleDamage&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Vehicle Damage hook. Contains information about a vehicle receiving damage.</p>
+<p>Vehicle Damage event. Contains information about a vehicle receiving damage.</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>VehicleDamage</strong>(vehicle, attacker, source, dealt) <br> <em>VehicleDamage constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Attacker</strong> <br> <em>Get: Get the entity that is inflicting the damage to the vehicle</em></td>
 <td style="text-align:left"><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
@@ -233,41 +230,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-vehicledamage-vehicledamage-md-">Public Constructors for <a href="VehicleDamage.html"><code>VehicleDamage</code></a></h3>
-<h5 id="-a-id-vehicledamage-a-new-__vehicledamage__-vehicle-attacker-source-dealt-"><a id='vehicledamage'></a>new <strong>VehicleDamage</strong>(vehicle, attacker, source, dealt)</h5>
-<p><em>VehicleDamage constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vehicle</td>
-<td><a href="../../api/entity/vehicle/Vehicle.html"><code>Vehicle</code></a></td>
-<td>vehicle argument</td>
-</tr>
-<tr>
-<td>attacker</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>attacker argument</td>
-</tr>
-<tr>
-<td>source</td>
-<td><a href="../../api/DamageSource.html"><code>DamageSource</code></a></td>
-<td>source argument</td>
-</tr>
-<tr>
-<td>dealt</td>
-<td><code>float</code></td>
-<td>dealt argument</td>
 </tr>
 </tbody>
 </table>

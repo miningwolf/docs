@@ -1,19 +1,20 @@
-## LightningStrike __class__
+## LightningStrikeEvent __class__
 
 >io.wolfscript.event.world.LightningStrike
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('world.LightningStrike', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class LightningStrike
+class LightningStrikeEvent
 
 Method | Type   
 --- | :--- 
-new __LightningStrike__(lightbolt) <br> _Creates a new LightningStrike_ | _constructor_
  readonly property __LightningBolt__ <br> _Get: Gets the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking_ | [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
 final function __toString__() <br> _{@inheritDoc}_ | `String`
  var __lightbolt__ <br> _lightbolt field_ | [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
@@ -29,17 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`LightningStrike`](LightningStrike.md)
-
-##### <a id='lightningstrike'></a>new __LightningStrike__(lightbolt) 
-
-_Creates a new LightningStrike_
-
-Argument | Type | Description  
---- | --- | --- 
-lightbolt | [`LightningBolt`](../../api/entity/effect/LightningBolt.md) | the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking
-
----
 
 ### Public Properties for [`LightningStrike`](LightningStrike.md)
 

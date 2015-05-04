@@ -1,19 +1,20 @@
-## PlayerList __class__
+## PlayerListEvent __class__
 
 >io.wolfscript.event.player.PlayerList
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.PlayerList', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class PlayerList
+class PlayerListEvent
 
 Method | Type   
 --- | :--- 
-new __PlayerList__(data, receiver) <br> _Constructs a new PlayerListEntryHook_ | _constructor_
 final readonly property __Data__ <br> _Get: Gets the [`PlayerListData`](../../api/PlayerListData.md) being sent_ | [`PlayerListData`](../../api/PlayerListData.md)
 final readonly property __Receiver__ <br> _Get: Gets the `Player` to receive the PlayerListEntry_ | `Player`
 final function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerList`](PlayerList.md)
-
-##### <a id='playerlist'></a>new __PlayerList__(data, receiver) 
-
-_Constructs a new PlayerListEntryHook_
-
-Argument | Type | Description  
---- | --- | --- 
-data | [`PlayerListData`](../../api/PlayerListData.md) | data argument
-receiver | `Player` | the `Player` to receiver the [`PlayerListData`](../../api/PlayerListData.md)
-
----
 
 ### Public Properties for [`PlayerList`](PlayerList.md)
 

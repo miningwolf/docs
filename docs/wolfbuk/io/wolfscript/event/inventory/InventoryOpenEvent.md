@@ -3,8 +3,10 @@
 >io.wolfscript.event.inventory.InventoryOpenEvent
 >Extends [`InventoryEvent`](InventoryEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('inventory.InventoryOpenEvent', function (e) { });
+```
+
 
 ---
 

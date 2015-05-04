@@ -1,19 +1,20 @@
-## PermissionCheck __class__
+## PermissionCheckEvent __class__
 
 >io.wolfscript.event.system.PermissionCheck
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.PermissionCheck', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-This hook is called after the PermissionProvider has resolved the permission, to alter the final outcome and eventually temporary allow a permission to a player
+This event is called after the PermissionProvider has resolved the permission, to alter the final outcome and eventually temporary allow a permission to a player
 
 Method | Type   
 --- | :--- 
-new __PermissionCheck__(permission, player, result) <br> _PermissionCheck constructor_ | _constructor_
  readonly property __Permission__ <br> _Get: Gets the permission that was checked_ | `String`
   property __Result__ <br> _Get: Get the result of the check.<br>Set: Override the final result for the permission check_ | `boolean`
  readonly property __Subject__ <br> _Get: Get the MessageReceiver for whom the permission check was issued_ | [`MessageReceiver`](../../chat/MessageReceiver.md)
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PermissionCheck`](PermissionCheck.md)
-
-##### <a id='permissioncheck'></a>new __PermissionCheck__(permission, player, result) 
-
-_PermissionCheck constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-permission | `String` | permission argument
-player | [`MessageReceiver`](../../chat/MessageReceiver.md) | player argument
-result | `boolean` | result argument
-
----
 
 ### Public Properties for [`PermissionCheck`](PermissionCheck.md)
 

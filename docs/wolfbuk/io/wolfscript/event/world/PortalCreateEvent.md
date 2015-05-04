@@ -3,8 +3,10 @@
 >io.wolfscript.event.world.PortalCreateEvent
 >Extends [`WorldEvent`](WorldEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('world.PortalCreateEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,19 +1,20 @@
-## Kick __class__
+## KickEvent __class__
 
 >io.wolfscript.event.player.Kick
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.Kick', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Kick hook. Contains the player who was kicked and the MessageReceiver who kicked them
+Kick event. Contains the player who was kicked and the MessageReceiver who kicked them
 
 Method | Type   
 --- | :--- 
-new __Kick__(kickedPlayer, moderator, reason) <br> _Kick constructor_ | _constructor_
  readonly property __KickedPlayer__ <br> _Get: Get the `Player` being kicked_ | `Player`
  readonly property __Moderator__ <br> _Get: Get the [`MessageReceiver`](../../chat/MessageReceiver.md) that has issued the kick_ | [`MessageReceiver`](../../chat/MessageReceiver.md)
  readonly property __Reason__ <br> _Get: Gets the reason for the kick_ | `String`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Kick`](Kick.md)
-
-##### <a id='kick'></a>new __Kick__(kickedPlayer, moderator, reason) 
-
-_Kick constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-kickedPlayer | `Player` | kickedPlayer argument
-moderator | [`MessageReceiver`](../../chat/MessageReceiver.md) | moderator argument
-reason | `String` | reason argument
-
----
 
 ### Public Properties for [`Kick`](Kick.md)
 

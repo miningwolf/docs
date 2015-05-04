@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.entity.EntityCombustByBlockEvent
 >Extends [`EntityCombustEvent`](EntityCombustEvent.md)
-
+``` javascript
 this.on('entity.EntityCombustByBlockEvent', function (e) { });
+```
+
 
 ---
 

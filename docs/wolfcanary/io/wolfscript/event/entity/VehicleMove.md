@@ -1,9 +1,11 @@
-## VehicleMove __class__
+## VehicleMoveEvent __class__
 
 >io.wolfscript.event.entity.VehicleMove
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.VehicleMove', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a LivingEntity moves a vehicle
 
 Method | Type   
 --- | :--- 
-new __VehicleMove__(vehicle, from, to) <br> _VehicleMove constructor_ | _constructor_
  readonly property __From__ <br> _From property_ | [`Vector3D`](../../api/world/position/Vector3D.md)
   property __To__ <br> _To property<br>Set: Override this vehicles target position_ | [`Vector3D`](../../api/world/position/Vector3D.md)
  readonly property __Vehicle__ <br> _Vehicle property_ | [`Vehicle`](../../api/entity/vehicle/Vehicle.md)
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VehicleMove`](VehicleMove.md)
-
-##### <a id='vehiclemove'></a>new __VehicleMove__(vehicle, from, to) 
-
-_VehicleMove constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-vehicle | [`Vehicle`](../../api/entity/vehicle/Vehicle.md) | vehicle argument
-from | [`Vector3D`](../../api/world/position/Vector3D.md) | from argument
-to | [`Vector3D`](../../api/world/position/Vector3D.md) | to argument
-
----
 
 ### Public Properties for [`VehicleMove`](VehicleMove.md)
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.vehicle.VehicleEnterEvent
 >Extends [`VehicleEvent`](VehicleEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('vehicle.VehicleEnterEvent', function (e) { });
+```
+
 
 ---
 

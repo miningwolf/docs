@@ -1,19 +1,20 @@
-## EntityTame __class__
+## EntityTameEvent __class__
 
 >io.wolfscript.event.entity.EntityTame
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntityTame', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Entity tame hook
+Entity tame event
 
 Method | Type   
 --- | :--- 
-new __EntityTame__(animal, player, isTamed) <br> _EntityTame constructor_ | _constructor_
  readonly property __Animal__ <br> _Get: Get the animal in question_ | [`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md)
  readonly property __Player__ <br> _Get: Get the player that is wanting to tame the animal_ | `Player`
  writeonly property __Tamed__ <br> _Set: Override the tame result._ | `void`
@@ -38,19 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityTame`](EntityTame.md)
-
-##### <a id='entitytame'></a>new __EntityTame__(animal, player, isTamed) 
-
-_EntityTame constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-animal | [`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md) | animal argument
-player | `Player` | player argument
-isTamed | `boolean` | isTamed argument
-
----
 
 ### Public Properties for [`EntityTame`](EntityTame.md)
 

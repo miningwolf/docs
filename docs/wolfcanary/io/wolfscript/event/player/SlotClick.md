@@ -1,19 +1,20 @@
-## SlotClick __class__
+## SlotClickEvent __class__
 
 >io.wolfscript.event.player.SlotClick
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.SlotClick', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class SlotClick
+class SlotClickEvent
 
 Method | Type   
 --- | :--- 
-new __SlotClick__(player, inventory, item, slotType, secondarySlotType, grabMode, button, slotId, transNum) <br> _Constructs a new SlotClick_ | _constructor_
  readonly property __ButtonPress__ <br> _Get: Gets the button pressed_ | [`ButtonPress`](../../api/inventory/slot/ButtonPress.md)
  readonly property __Player__ <br> _Get: Gets the `Player` doing the clicking_ | `Player`
  readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) in the slot clicked_ | [`Item`](../../api/inventory/Item.md)
@@ -46,25 +47,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`SlotClick`](SlotClick.md)
-
-##### <a id='slotclick'></a>new __SlotClick__(player, inventory, item, slotType, secondarySlotType, grabMode, button, slotId, transNum) 
-
-_Constructs a new SlotClick_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` clicking
-inventory | [`Inventory`](../../api/inventory/Inventory.md) | the [`Inventory`](../../api/inventory/Inventory.md) thats open
-item | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) in the slot clicked
-slotType | [`SlotType`](../../api/inventory/slot/SlotType.md) | the [`SlotType`](../../api/inventory/slot/SlotType.md) being clicked
-secondarySlotType | [`SecondarySlotType`](../../api/inventory/slot/SecondarySlotType.md) | the [`SecondarySlotType`](../../api/inventory/slot/SecondarySlotType.md) being clicked
-grabMode | [`GrabMode`](../../api/inventory/slot/GrabMode.md) | the [`GrabMode`](../../api/inventory/slot/GrabMode.md) of the link
-button | [`ButtonPress`](../../api/inventory/slot/ButtonPress.md) | the [`ButtonPress`](../../api/inventory/slot/ButtonPress.md)
-slotId | `short` | the slot id
-transNum | `short` | the transaction number
-
----
 
 ### Public Properties for [`SlotClick`](SlotClick.md)
 

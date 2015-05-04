@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.painting.PaintingBreakByEntityEvent
 >Extends [`PaintingBreakEvent`](PaintingBreakEvent.md)
-
+``` javascript
 this.on('painting.PaintingBreakByEntityEvent', function (e) { });
+```
+
 
 ---
 

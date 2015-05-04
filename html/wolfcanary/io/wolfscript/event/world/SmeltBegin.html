@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="smeltbegin-__class__">SmeltBegin <strong>class</strong></h2>
+            <h2 id="smeltbeginevent-__class__">SmeltBeginEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.SmeltBegin
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.SmeltBegin'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.SmeltBegin&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class SmeltBegin</p>
+<p>class SmeltBeginEvent</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>SmeltBegin</strong>(furnace, smelting) <br> <em>Constructs a new Smelt</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Furnace</strong> <br> <em>Get: Gets the <a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a> doing the smelting</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-smeltbegin-smeltbegin-md-">Public Constructors for <a href="SmeltBegin.html"><code>SmeltBegin</code></a></h3>
-<h5 id="-a-id-smeltbegin-a-new-__smeltbegin__-furnace-smelting-"><a id='smeltbegin'></a>new <strong>SmeltBegin</strong>(furnace, smelting)</h5>
-<p><em>Constructs a new Smelt</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>furnace</td>
-<td><a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a></td>
-<td>the <a href="../../api/world/blocks/Furnace.html"><code>Furnace</code></a> doing the smelting</td>
-</tr>
-<tr>
-<td>smelting</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>the <a href="../../api/inventory/Item.html"><code>Item</code></a> being smelted</td>
 </tr>
 </tbody>
 </table>

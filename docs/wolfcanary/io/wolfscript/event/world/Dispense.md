@@ -1,19 +1,20 @@
-## Dispense __class__
+## DispenseEvent __class__
 
 >io.wolfscript.event.world.Dispense
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.Dispense', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Dispense hook. Contains information about a Dispenser dispensing an entity.
+Dispense event. Contains information about a Dispenser dispensing an entity.
 
 Method | Type   
 --- | :--- 
-new __Dispense__(dispenser, entity) <br> _Dispense constructor_ | _constructor_
  readonly property __Dispenser__ <br> _Get: Gets the [`Dispenser`](../../api/world/blocks/Dispenser.md)_ | [`Dispenser`](../../api/world/blocks/Dispenser.md)
  readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) being dispensed_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Dispense`](Dispense.md)
-
-##### <a id='dispense'></a>new __Dispense__(dispenser, entity) 
-
-_Dispense constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-dispenser | [`Dispenser`](../../api/world/blocks/Dispenser.md) | dispenser argument
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-
----
 
 ### Public Properties for [`Dispense`](Dispense.md)
 

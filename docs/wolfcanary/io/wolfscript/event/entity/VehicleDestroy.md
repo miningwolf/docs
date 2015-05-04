@@ -1,9 +1,11 @@
-## VehicleDestroy __class__
+## VehicleDestroyEvent __class__
 
 >io.wolfscript.event.entity.VehicleDestroy
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('entity.VehicleDestroy', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ VehicleDestoryHook<br> Called when a Minecart or Boat is destroyed
 
 Method | Type   
 --- | :--- 
-new __VehicleDestroy__(vehicle) <br> _VehicleDestroy constructor_ | _constructor_
  readonly property __Vehicle__ <br> _Get: The [`Vehicle`](../../api/entity/vehicle/Vehicle.md) being destoryed_ | [`Vehicle`](../../api/entity/vehicle/Vehicle.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VehicleDestroy`](VehicleDestroy.md)
-
-##### <a id='vehicledestroy'></a>new __VehicleDestroy__(vehicle) 
-
-_VehicleDestroy constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-vehicle | [`Vehicle`](../../api/entity/vehicle/Vehicle.md) | vehicle argument
-
----
 
 ### Public Properties for [`VehicleDestroy`](VehicleDestroy.md)
 

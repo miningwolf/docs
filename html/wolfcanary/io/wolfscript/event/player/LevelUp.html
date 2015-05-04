@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="levelup-__class__">LevelUp <strong>class</strong></h2>
+            <h2 id="levelupevent-__class__">LevelUpEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.LevelUp
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.LevelUp'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.LevelUp&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>LevelUp hook. Called when a <code>Player</code> levels up</p>
+<p>LevelUp event. Called when a <code>Player</code> levels up</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>LevelUp</strong>(player) <br> <em>LevelUp constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Get the <code>Player</code> instance</em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -224,26 +221,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-levelup-levelup-md-">Public Constructors for <a href="LevelUp.html"><code>LevelUp</code></a></h3>
-<h5 id="-a-id-levelup-a-new-__levelup__-player-"><a id='levelup'></a>new <strong>LevelUp</strong>(player)</h5>
-<p><em>LevelUp constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
 </tr>
 </tbody>
 </table>

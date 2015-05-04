@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerBedEnterEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerBedEnterEvent', function (e) { });
+```
+
 
 ---
 

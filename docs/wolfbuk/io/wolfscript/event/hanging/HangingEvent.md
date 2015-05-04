@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.hanging.HangingEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('hanging.HangingEvent', function (e) { });
+```
+
 
 ---
 

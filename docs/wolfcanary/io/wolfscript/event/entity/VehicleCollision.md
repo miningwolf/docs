@@ -1,9 +1,11 @@
-## VehicleCollision __class__
+## VehicleCollisionEvent __class__
 
 >io.wolfscript.event.entity.VehicleCollision
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.VehicleCollision', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a vehicle collides with a LivingEntity
 
 Method | Type   
 --- | :--- 
-new __VehicleCollision__(vehicle, entity) <br> _Constructs a Collision hook._ | _constructor_
  readonly property __Entity__ <br> _Get: Get the [`EntityLiving`](../../api/entity/living/EntityLiving.md) that got hit by the vehicle_ | [`Entity`](../../api/entity/Entity.md)
  readonly property __Vehicle__ <br> _Get: Get the [`Vehicle`](../../api/entity/vehicle/Vehicle.md) that caused the collision_ | [`Vehicle`](../../api/entity/vehicle/Vehicle.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VehicleCollision`](VehicleCollision.md)
-
-##### <a id='vehiclecollision'></a>new __VehicleCollision__(vehicle, entity) 
-
-_Constructs a Collision hook._
-
-Argument | Type | Description  
---- | --- | --- 
-vehicle | [`Vehicle`](../../api/entity/vehicle/Vehicle.md) | vehicle argument
-entity | [`Entity`](../../api/entity/Entity.md) | entity that got hit by a vehicle
-
----
 
 ### Public Properties for [`VehicleCollision`](VehicleCollision.md)
 

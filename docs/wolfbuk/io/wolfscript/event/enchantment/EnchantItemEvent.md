@@ -3,8 +3,10 @@
 >io.wolfscript.event.enchantment.EnchantItemEvent
 >Extends [`InventoryEvent`](../inventory/InventoryEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('enchantment.EnchantItemEvent', function (e) { });
+```
+
 
 ---
 

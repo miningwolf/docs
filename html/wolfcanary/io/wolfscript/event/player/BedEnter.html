@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="bedenter-__class__">BedEnter <strong>class</strong></h2>
+            <h2 id="bedenterevent-__class__">BedEnterEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.BedEnter
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.BedEnter'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.BedEnter&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Bed enter hook, called when a player enters a bed</p>
+<p>Bed enter event, called when a player enters a bed</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BedEnter</strong>(player, bed) <br> <em>Create a new BedEnter</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Bed</strong> <br> <em>Get: Get the bed <a href="../../api/world/blocks/Block.html"><code>Block</code></a> the <code>Player</code> is entering</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -248,31 +245,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-bedenter-bedenter-md-">Public Constructors for <a href="BedEnter.html"><code>BedEnter</code></a></h3>
-<h5 id="-a-id-bedenter-a-new-__bedenter__-player-bed-"><a id='bedenter'></a>new <strong>BedEnter</strong>(player, bed)</h5>
-<p><em>Create a new BedEnter</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the player that entered the bed</td>
-</tr>
-<tr>
-<td>bed</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>the bed that the player entered</td>
 </tr>
 </tbody>
 </table>

@@ -156,12 +156,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="blockdropxp-__class__">BlockDropXp <strong>class</strong></h2>
+            <h2 id="blockdropxpevent-__class__">BlockDropXpEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.BlockDropXp
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.BlockDropXp'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.BlockDropXp&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Event thrown when a block that drop experience (spawner, ore, redstone ore) is destroyed</p>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BlockDropXp</strong>(block, xp) <br> <em>BlockDropXp constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Get: Get the block that gives the dropped experience</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-blockdropxp-blockdropxp-md-">Public Constructors for <a href="BlockDropXp.html"><code>BlockDropXp</code></a></h3>
-<h5 id="-a-id-blockdropxp-a-new-__blockdropxp__-block-xp-"><a id='blockdropxp'></a>new <strong>BlockDropXp</strong>(block, xp)</h5>
-<p><em>BlockDropXp constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
-</tr>
-<tr>
-<td>xp</td>
-<td><code>int</code></td>
-<td>xp argument</td>
 </tr>
 </tbody>
 </table>

@@ -1,9 +1,11 @@
-## ServerTick __class__
+## ServerTickEvent __class__
 
 >io.wolfscript.event.system.ServerTick
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.ServerTick', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called in the servers tick loop, before world processing. For informational use
 
 Method | Type   
 --- | :--- 
-new __ServerTick__(deltaTime) <br> _ServerTick constructor_ | _constructor_
   property __DeltaTime__ <br> _DeltaTime property_ | `long`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ServerTick`](ServerTick.md)
-
-##### <a id='servertick'></a>new __ServerTick__(deltaTime) 
-
-_ServerTick constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-deltaTime | `long` | deltaTime argument
-
----
 
 ### Public Properties for [`ServerTick`](ServerTick.md)
 

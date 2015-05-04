@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.BlockFormEvent
 >Extends [`BlockGrowEvent`](BlockGrowEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.BlockFormEvent', function (e) { });
+```
+
 
 ---
 

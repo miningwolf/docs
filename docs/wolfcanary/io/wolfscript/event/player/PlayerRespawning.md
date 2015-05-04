@@ -1,19 +1,20 @@
-## PlayerRespawning __class__
+## PlayerRespawningEvent __class__
 
 >io.wolfscript.event.player.PlayerRespawning
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.PlayerRespawning', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Player pre-respawn hook. This hook is called before the new location and repsawn point for a player is determined. Use it to alter those information.
+Player pre-respawn event. This hook is called before the new location and repsawn point for a player is determined. Use it to alter those information.
 
 Method | Type   
 --- | :--- 
-new __PlayerRespawning__(player, respawn, bedSpawn) <br> _PlayerRespawning constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
   property __RespawnLocation__ <br> _Get: Gets the respawn [`Location`](../../api/world/position/Location.md)<br>Set: Sets the respawn [`Location`](../../api/world/position/Location.md)_ | [`Location`](../../api/world/position/Location.md)
  function __isBedSpawn__() <br> _Returns true if the player is supposed to respawn at his bed_ | `boolean`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerRespawning`](PlayerRespawning.md)
-
-##### <a id='playerrespawning'></a>new __PlayerRespawning__(player, respawn, bedSpawn) 
-
-_PlayerRespawning constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-respawn | [`Location`](../../api/world/position/Location.md) | respawn argument
-bedSpawn | `boolean` | bedSpawn argument
-
----
 
 ### Public Properties for [`PlayerRespawning`](PlayerRespawning.md)
 

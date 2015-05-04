@@ -1,19 +1,20 @@
-## SignChange __class__
+## SignChangeEvent __class__
 
 >io.wolfscript.event.player.SignChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.SignChange', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Sign Change hook. Contains information about a sign either being changed by a player
+Sign Change event. Contains information about a sign either being changed by a player
 
 Method | Type   
 --- | :--- 
-new __SignChange__(player, sign) <br> _SignChange constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
  readonly property __Sign__ <br> _Get: Gets the [`Sign`](../../api/world/blocks/Sign.md)_ | [`Sign`](../../api/world/blocks/Sign.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`SignChange`](SignChange.md)
-
-##### <a id='signchange'></a>new __SignChange__(player, sign) 
-
-_SignChange constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-sign | [`Sign`](../../api/world/blocks/Sign.md) | sign argument
-
----
 
 ### Public Properties for [`SignChange`](SignChange.md)
 

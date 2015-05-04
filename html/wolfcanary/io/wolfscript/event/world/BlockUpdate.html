@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="blockupdate-__class__">BlockUpdate <strong>class</strong></h2>
+            <h2 id="blockupdateevent-__class__">BlockUpdateEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.BlockUpdate
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.BlockUpdate'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.BlockUpdate&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Block update hook. Contains information about a block updating.</p>
+<p>Block update event. Contains information about a block updating.</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>BlockUpdate</strong>(block, newBlockType) <br> <em>BlockUpdate constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Get: Gets <a href="../../api/world/blocks/Block.html"><code>Block</code></a> updating</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -232,55 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-blockupdate-blockupdate-md-">Public Constructors for <a href="BlockUpdate.html"><code>BlockUpdate</code></a></h3>
-<h5 id="-a-id-blockupdate-a-new-__blockupdate__-block-newblockid-"><a id='blockupdate'></a>new <strong>BlockUpdate</strong>(block, newBlockId)</h5>
-<p><em>Deprecated: Use the other constructor instead</em></p>
-<p><em>BlockUpdate constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
-</tr>
-<tr>
-<td>newBlockId</td>
-<td><code>int</code></td>
-<td>newBlockId argument</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-blockupdate-a-new-__blockupdate__-block-newblocktype-"><a id='blockupdate'></a>new <strong>BlockUpdate</strong>(block, newBlockType)</h5>
-<p><em>BlockUpdate constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
-</tr>
-<tr>
-<td>newBlockType</td>
-<td><a href="../../api/world/blocks/BlockType.html"><code>BlockType</code></a></td>
-<td>newBlockType argument</td>
 </tr>
 </tbody>
 </table>

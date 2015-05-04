@@ -1,9 +1,11 @@
-## PlayerArmSwing __class__
+## PlayerArmSwingEvent __class__
 
 >io.wolfscript.event.player.PlayerArmSwing
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.PlayerArmSwing', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Player Left Click Hook<br> Called when a `Player` swings their arm with a Left C
 
 Method | Type   
 --- | :--- 
-new __PlayerArmSwing__(player) <br> _PlayerArmSwing constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` clicking_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerArmSwing`](PlayerArmSwing.md)
-
-##### <a id='playerarmswing'></a>new __PlayerArmSwing__(player) 
-
-_PlayerArmSwing constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-
----
 
 ### Public Properties for [`PlayerArmSwing`](PlayerArmSwing.md)
 

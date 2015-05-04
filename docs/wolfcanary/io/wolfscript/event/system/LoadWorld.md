@@ -1,19 +1,20 @@
-## LoadWorld __class__
+## LoadWorldEvent __class__
 
 >io.wolfscript.event.system.LoadWorld
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.LoadWorld', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class LoadWorld
+class LoadWorldEvent
 
 Method | Type   
 --- | :--- 
-new __LoadWorld__(world) <br> _LoadWorld constructor_ | _constructor_
  readonly property __World__ <br> _Get: Gets the [`World`](../../api/world/World.md) that has loaded_ | [`World`](../../api/world/World.md)
  function __toString__() <br> _{@inheritDoc}_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`LoadWorld`](LoadWorld.md)
-
-##### <a id='loadworld'></a>new __LoadWorld__(world) 
-
-_LoadWorld constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-world | [`World`](../../api/world/World.md) | world argument
-
----
 
 ### Public Properties for [`LoadWorld`](LoadWorld.md)
 

@@ -1,9 +1,11 @@
-## ItemPickup __class__
+## ItemPickupEvent __class__
 
 >io.wolfscript.event.player.ItemPickup
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ItemPickup', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Item Hook. Contains EntityItem and Player
 
 Method | Type   
 --- | :--- 
-new __ItemPickup__(player, item) <br> _ItemPickup constructor_ | _constructor_
  readonly property __Item__ <br> _Get: Gets the [`EntityItem`](../../api/entity/EntityItem.md)_ | [`EntityItem`](../../api/entity/EntityItem.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemPickup`](ItemPickup.md)
-
-##### <a id='itempickup'></a>new __ItemPickup__(player, item) 
-
-_ItemPickup constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-item | [`EntityItem`](../../api/entity/EntityItem.md) | item argument
-
----
 
 ### Public Properties for [`ItemPickup`](ItemPickup.md)
 

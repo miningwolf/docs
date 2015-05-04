@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="mobtarget-__class__">MobTarget <strong>class</strong></h2>
+            <h2 id="mobtargetevent-__class__">MobTargetEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.MobTarget
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.MobTarget'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.MobTarget&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class MobTarget</p>
+<p>class MobTargetEvent</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>MobTarget</strong>(entity, target) <br> <em>Constructs a new MobTarget</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Get: Gets the <a href="../../api/entity/living/EntityLiving.html"><code>EntityLiving</code></a> doing the targeting</em></td>
 <td style="text-align:left"><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
@@ -225,31 +222,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-mobtarget-mobtarget-md-">Public Constructors for <a href="MobTarget.html"><code>MobTarget</code></a></h3>
-<h5 id="-a-id-mobtarget-a-new-__mobtarget__-entity-target-"><a id='mobtarget'></a>new <strong>MobTarget</strong>(entity, target)</h5>
-<p><em>Constructs a new MobTarget</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
-<td>the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> doing the targeting</td>
-</tr>
-<tr>
-<td>target</td>
-<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
-<td>the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> target</td>
 </tr>
 </tbody>
 </table>

@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.ServiceRegisterEvent
 >Extends [`ServiceEvent`](ServiceEvent.md)
-
+``` javascript
 this.on('server.ServiceRegisterEvent', function (e) { });
+```
+
 
 ---
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerToggleSprintEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerToggleSprintEvent', function (e) { });
+```
+
 
 ---
 

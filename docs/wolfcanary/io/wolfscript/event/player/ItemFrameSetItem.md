@@ -1,9 +1,11 @@
-## ItemFrameSetItem __class__
+## ItemFrameSetItemEvent __class__
 
 >io.wolfscript.event.player.ItemFrameSetItem
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ItemFrameSetItem', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when an `Player` sets and [`Item`](../../api/inventory/Item.md) in a [`It
 
 Method | Type   
 --- | :--- 
-new __ItemFrameSetItem__(player, itemFrame, item) <br> _ItemFrameSetItem constructor_ | _constructor_
  readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) being placed into the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)_ | [`Item`](../../api/inventory/Item.md)
  readonly property __ItemFrame__ <br> _Get: Gets the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) being interacted with_ | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)
 final readonly property __Player__ <br> _Get: Gets the `Player` interacting with the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)_ | `Player`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemFrameSetItem`](ItemFrameSetItem.md)
-
-##### <a id='itemframesetitem'></a>new __ItemFrameSetItem__(player, itemFrame, item) 
-
-_ItemFrameSetItem constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-itemFrame | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) | itemFrame argument
-item | [`Item`](../../api/inventory/Item.md) | item argument
-
----
 
 ### Public Properties for [`ItemFrameSetItem`](ItemFrameSetItem.md)
 

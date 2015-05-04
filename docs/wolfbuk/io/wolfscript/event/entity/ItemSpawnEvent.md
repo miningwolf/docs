@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.ItemSpawnEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.ItemSpawnEvent', function (e) { });
+```
+
 
 ---
 

@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.PluginEnableEvent
 >Extends [`PluginEvent`](PluginEvent.md)
-
+``` javascript
 this.on('server.PluginEnableEvent', function (e) { });
+```
+
 
 ---
 

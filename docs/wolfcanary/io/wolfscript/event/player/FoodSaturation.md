@@ -1,19 +1,20 @@
-## FoodSaturation __class__
+## FoodSaturationEvent __class__
 
 >io.wolfscript.event.player.FoodSaturation
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.FoodSaturation', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Food saturation change hook. Contains information about a player's food saturation changes
+Food saturation change event. Contains information about a player's food saturation changes
 
 Method | Type   
 --- | :--- 
-new __FoodSaturation__(player, oldval, newval) <br> _Constructs a new FoodSaturation_ | _constructor_
   property __NewValue__ <br> _Get: Gets the new level<br>Set: Sets the new value to actually be set_ | `float`
  readonly property __OldValue__ <br> _Get: Gets the old (current) level_ | `float`
  readonly property __Player__ <br> _Get: Gets the `Player` who's food saturation is changing_ | `Player`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`FoodSaturation`](FoodSaturation.md)
-
-##### <a id='foodsaturation'></a>new __FoodSaturation__(player, oldval, newval) 
-
-_Constructs a new FoodSaturation_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who's Food Level is changing
-oldval | `float` | the old (current) value
-newval | `float` | the new value
-
----
 
 ### Public Properties for [`FoodSaturation`](FoodSaturation.md)
 

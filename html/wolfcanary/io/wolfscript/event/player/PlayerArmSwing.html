@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="playerarmswing-__class__">PlayerArmSwing <strong>class</strong></h2>
+            <h2 id="playerarmswingevent-__class__">PlayerArmSwingEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.PlayerArmSwing
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.PlayerArmSwing'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.PlayerArmSwing&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Player Left Click Hook<br> Called when a <code>Player</code> swings their arm with a Left Click</p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PlayerArmSwing</strong>(player) <br> <em>PlayerArmSwing constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Gets the <code>Player</code> clicking</em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -224,26 +221,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-playerarmswing-playerarmswing-md-">Public Constructors for <a href="PlayerArmSwing.html"><code>PlayerArmSwing</code></a></h3>
-<h5 id="-a-id-playerarmswing-a-new-__playerarmswing__-player-"><a id='playerarmswing'></a>new <strong>PlayerArmSwing</strong>(player)</h5>
-<p><em>PlayerArmSwing constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
 </tr>
 </tbody>
 </table>

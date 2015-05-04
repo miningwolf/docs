@@ -1,9 +1,11 @@
-## BlockRightClick __class__
+## BlockRightClickEvent __class__
 
 >io.wolfscript.event.player.BlockRightClick
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BlockRightClick', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a player right-clicks a block, eg. uses it.
 
 Method | Type   
 --- | :--- 
-new __BlockRightClick__(player, clicked) <br> _Construct a new BlockRightClick_ | _constructor_
  readonly property __BlockClicked__ <br> _Get: Get the [`Block`](../../api/world/blocks/Block.md) that was clicked._ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Get the `Player` who clicked the [`Block`](../../api/world/blocks/Block.md)_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockRightClick`](BlockRightClick.md)
-
-##### <a id='blockrightclick'></a>new __BlockRightClick__(player, clicked) 
-
-_Construct a new BlockRightClick_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the Player doing the clicking
-clicked | [`Block`](../../api/world/blocks/Block.md) | the block being clicked
-
----
 
 ### Public Properties for [`BlockRightClick`](BlockRightClick.md)
 

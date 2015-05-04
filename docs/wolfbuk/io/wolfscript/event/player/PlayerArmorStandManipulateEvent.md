@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerArmorStandManipulateEvent
 >Extends [`PlayerInteractEntityEvent`](PlayerInteractEntityEvent.md)
-
+``` javascript
 this.on('player.PlayerArmorStandManipulateEvent', function (e) { });
+```
+
 
 ---
 

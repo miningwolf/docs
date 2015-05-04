@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerInteractEntityEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerInteractEntityEvent', function (e) { });
+```
+
 
 ---
 

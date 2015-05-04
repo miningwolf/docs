@@ -156,12 +156,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="liquiddestroy-__class__">LiquidDestroy <strong>class</strong></h2>
+            <h2 id="liquiddestroyevent-__class__">LiquidDestroyEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.LiquidDestroy
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.LiquidDestroy'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.LiquidDestroy&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Is called when a liquid is about to destroy something (crops, popping off torches etc)</p>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>LiquidDestroy</strong>(liquidType, toDestroy) <br> <em>LiquidDestroy constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Get: Get the block that would be destroyed by the liquid flow</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -236,50 +233,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-liquiddestroy-liquiddestroy-md-">Public Constructors for <a href="LiquidDestroy.html"><code>LiquidDestroy</code></a></h3>
-<h5 id="-a-id-liquiddestroy-a-new-__liquiddestroy__-block-"><a id='liquiddestroy'></a>new <strong>LiquidDestroy</strong>(block)</h5>
-<p><em>Deprecated</em></p>
-<p><em>LiquidDestroy constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-liquiddestroy-a-new-__liquiddestroy__-liquidtype-todestroy-"><a id='liquiddestroy'></a>new <strong>LiquidDestroy</strong>(liquidType, toDestroy)</h5>
-<p><em>LiquidDestroy constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>liquidType</td>
-<td><a href="../../api/world/blocks/BlockType.html"><code>BlockType</code></a></td>
-<td>liquidType argument</td>
-</tr>
-<tr>
-<td>toDestroy</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>toDestroy argument</td>
 </tr>
 </tbody>
 </table>

@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.HorseJumpEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.HorseJumpEvent', function (e) { });
+```
+
 
 ---
 

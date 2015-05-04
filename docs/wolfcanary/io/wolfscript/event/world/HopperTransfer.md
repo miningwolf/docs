@@ -1,9 +1,11 @@
-## HopperTransfer __class__
+## HopperTransferEvent __class__
 
 >io.wolfscript.event.world.HopperTransfer
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.HopperTransfer', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Hook parameter for when Hoppers Transfer Items
 
 Method | Type   
 --- | :--- 
-new __HopperTransfer__(hopper, itemTransferred, inputting) <br> _HopperTransfer constructor_ | _constructor_
  readonly property __Hopper__ <br> _Get: Gets the hopper involved with this transfer._ | [`Hopper`](../../api/inventory/Hopper.md)
  readonly property __ItemTransferred__ <br> _Get: Gets the item being transferred in this event._ | [`Item`](../../api/inventory/Item.md)
  function __isInputting__() <br> _Is the transfer inputting into the Hopper?_ | `boolean`
@@ -38,19 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`HopperTransfer`](HopperTransfer.md)
-
-##### <a id='hoppertransfer'></a>new __HopperTransfer__(hopper, itemTransferred, inputting) 
-
-_HopperTransfer constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-hopper | [`Hopper`](../../api/inventory/Hopper.md) | hopper argument
-itemTransferred | [`Item`](../../api/inventory/Item.md) | itemTransferred argument
-inputting | `boolean` | inputting argument
-
----
 
 ### Public Properties for [`HopperTransfer`](HopperTransfer.md)
 

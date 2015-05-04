@@ -3,8 +3,10 @@
 >io.wolfscript.event.inventory.FurnaceSmeltEvent
 >Extends [`BlockEvent`](../block/BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('inventory.FurnaceSmeltEvent', function (e) { });
+```
+
 
 ---
 

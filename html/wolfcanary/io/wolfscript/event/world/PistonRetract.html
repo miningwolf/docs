@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="pistonretract-__class__">PistonRetract <strong>class</strong></h2>
+            <h2 id="pistonretractevent-__class__">PistonRetractEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.PistonRetract
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.PistonRetract'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.PistonRetract&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Piston Retract hook<br> Called when a piston retracts</p>
+<p>Piston Retract event<br> Called when a piston retracts</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PistonRetract</strong>(piston, moving) <br> <em>PistonRetract constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Moving</strong> <br> <em>Moving property</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-pistonretract-pistonretract-md-">Public Constructors for <a href="PistonRetract.html"><code>PistonRetract</code></a></h3>
-<h5 id="-a-id-pistonretract-a-new-__pistonretract__-piston-moving-"><a id='pistonretract'></a>new <strong>PistonRetract</strong>(piston, moving)</h5>
-<p><em>PistonRetract constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>piston</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>piston argument</td>
-</tr>
-<tr>
-<td>moving</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>moving argument</td>
 </tr>
 </tbody>
 </table>

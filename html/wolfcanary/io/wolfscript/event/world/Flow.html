@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="flow-__class__">Flow <strong>class</strong></h2>
+            <h2 id="flowevent-__class__">FlowEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.Flow
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.Flow'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.Flow&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Flow hook. Contains information about a liquid flowing from one block to another</p>
+<p>Flow event. Contains information about a liquid flowing from one block to another</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Flow</strong>(from, to) <br> <em>Flow constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>BlockFrom</strong> <br> <em>Get: Gets the <a href="../../api/world/blocks/Block.html"><code>Block</code></a> flowing from</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-flow-flow-md-">Public Constructors for <a href="Flow.html"><code>Flow</code></a></h3>
-<h5 id="-a-id-flow-a-new-__flow__-from-to-"><a id='flow'></a>new <strong>Flow</strong>(from, to)</h5>
-<p><em>Flow constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>from</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>from argument</td>
-</tr>
-<tr>
-<td>to</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>to argument</td>
 </tr>
 </tbody>
 </table>

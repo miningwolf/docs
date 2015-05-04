@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('player.PlayerEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,9 +1,11 @@
-## EntityRightClick __class__
+## EntityRightClickEvent __class__
 
 >io.wolfscript.event.player.EntityRightClick
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.EntityRightClick', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a player right-clicks an entity, for instance a villager for trad
 
 Method | Type   
 --- | :--- 
-new __EntityRightClick__(clicked, player) <br> _Construct a new EntityRightClick_ | _constructor_
  readonly property __Entity__ <br> _Get: Returns the entity that was clicked_ | [`Entity`](../../api/entity/Entity.md)
  readonly property __Player__ <br> _Get: Get the player who clicked_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityRightClick`](EntityRightClick.md)
-
-##### <a id='entityrightclick'></a>new __EntityRightClick__(clicked, player) 
-
-_Construct a new EntityRightClick_
-
-Argument | Type | Description  
---- | --- | --- 
-clicked | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) clicked
-player | `Player` | the `Player` clicking
-
----
 
 ### Public Properties for [`EntityRightClick`](EntityRightClick.md)
 

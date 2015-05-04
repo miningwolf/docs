@@ -1,19 +1,20 @@
-## ServerShutdown __class__
+## ServerShutdownEvent __class__
 
 >io.wolfscript.event.system.ServerShutdown
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.ServerShutdown', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Server shutdown hook. Contains information about the reason the server is shutting down
+Server shutdown event. Contains information about the reason the server is shutting down
 
 Method | Type   
 --- | :--- 
-new __ServerShutdown__(reason) <br> _ServerShutdown constructor_ | _constructor_
   property __Reason__ <br> _Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed_ | `String`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ServerShutdown`](ServerShutdown.md)
-
-##### <a id='servershutdown'></a>new __ServerShutdown__(reason) 
-
-_ServerShutdown constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-reason | `String` | reason argument
-
----
 
 ### Public Properties for [`ServerShutdown`](ServerShutdown.md)
 

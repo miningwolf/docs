@@ -1,19 +1,20 @@
-## ItemTouchGround __class__
+## ItemTouchGroundEvent __class__
 
 >io.wolfscript.event.entity.ItemTouchGround
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.ItemTouchGround', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-ItemTouchGround<br> Called when an [`EntityItem`](../../api/entity/EntityItem.md) hits the ground
+ItemTouchGroundEvent<br> Called when an [`EntityItem`](../../api/entity/EntityItem.md) hits the ground
 
 Method | Type   
 --- | :--- 
-new __ItemTouchGround__(item) <br> _Constructs a new ItemTouchGround_ | _constructor_
  readonly property __EntityItem__ <br> _Get: Gets the [`EntityItem`](../../api/entity/EntityItem.md) hitting the ground_ | [`EntityItem`](../../api/entity/EntityItem.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemTouchGround`](ItemTouchGround.md)
-
-##### <a id='itemtouchground'></a>new __ItemTouchGround__(item) 
-
-_Constructs a new ItemTouchGround_
-
-Argument | Type | Description  
---- | --- | --- 
-item | [`EntityItem`](../../api/entity/EntityItem.md) | the [`EntityItem`](../../api/entity/EntityItem.md) hitting the ground
-
----
 
 ### Public Properties for [`ItemTouchGround`](ItemTouchGround.md)
 

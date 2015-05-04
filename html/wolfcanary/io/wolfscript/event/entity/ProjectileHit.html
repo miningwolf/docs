@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="projectilehit-__class__">ProjectileHit <strong>class</strong></h2>
+            <h2 id="projectilehitevent-__class__">ProjectileHitEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.ProjectileHit
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.ProjectileHit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.ProjectileHit&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>ProjectileHit<br> Called when a Projectile hits something</p>
+<p>ProjectileHitEvent<br> Called when a Projectile hits something</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ProjectileHit</strong>(projectile, hit) <br> <em>Constructs a new ProjectileHit</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>EntityHit</strong> <br> <em>Get: Gets the <a href="../../api/entity/Entity.html"><code>Entity</code></a> hit by the projectile</em></td>
 <td style="text-align:left"><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
@@ -225,31 +222,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-projectilehit-projectilehit-md-">Public Constructors for <a href="ProjectileHit.html"><code>ProjectileHit</code></a></h3>
-<h5 id="-a-id-projectilehit-a-new-__projectilehit__-projectile-hit-"><a id='projectilehit'></a>new <strong>ProjectileHit</strong>(projectile, hit)</h5>
-<p><em>Constructs a new ProjectileHit</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>projectile</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>the <a href="../../api/entity/Entity.html"><code>Entity</code></a> projectile</td>
-</tr>
-<tr>
-<td>hit</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>the <a href="../../api/entity/Entity.html"><code>Entity</code></a> hit if present</td>
 </tr>
 </tbody>
 </table>

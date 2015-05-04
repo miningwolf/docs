@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.PotionSplashEvent
 >Extends [`ProjectileHitEvent`](ProjectileHitEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.PotionSplashEvent', function (e) { });
+```
+
 
 ---
 

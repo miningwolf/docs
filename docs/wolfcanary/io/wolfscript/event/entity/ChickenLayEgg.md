@@ -1,19 +1,20 @@
-## ChickenLayEgg __class__
+## ChickenLayEggEvent __class__
 
 >io.wolfscript.event.entity.ChickenLayEgg
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.ChickenLayEgg', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Chicken lay egg hook, called when a chicken lay an egg.
+Chicken lay egg event, called when a chicken lay an egg.
 
 Method | Type   
 --- | :--- 
-new __ChickenLayEgg__(chicken, egg, nextEggIn) <br> _Creates a new ChickenLayEgg_ | _constructor_
  readonly property __Chicken__ <br> _Get: Get the `Chicken` the laid the egg_ | `Chicken`
   property __Egg__ <br> _Get: Get the egg that was laid<br>Set: Change the egg that should be laid_ | [`Item`](../../api/inventory/Item.md)
   property __NextEggIn__ <br> _Get: Get the time until the next egg will be laid for the chicken that laid the egg<br>Set: Set the time until next egg will be laid from the chicken that laid the egg_ | `int`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ChickenLayEgg`](ChickenLayEgg.md)
-
-##### <a id='chickenlayegg'></a>new __ChickenLayEgg__(chicken, egg, nextEggIn) 
-
-_Creates a new ChickenLayEgg_
-
-Argument | Type | Description  
---- | --- | --- 
-chicken | `Chicken` | the chicken that laid the egg
-egg | [`Item`](../../api/inventory/Item.md) | the egg that has been laid
-nextEggIn | `int` | the time until next egg will be laid
-
----
 
 ### Public Properties for [`ChickenLayEgg`](ChickenLayEgg.md)
 

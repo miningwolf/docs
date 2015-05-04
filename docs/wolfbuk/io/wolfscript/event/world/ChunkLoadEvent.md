@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.world.ChunkLoadEvent
 >Extends [`ChunkEvent`](ChunkEvent.md)
-
+``` javascript
 this.on('world.ChunkLoadEvent', function (e) { });
+```
+
 
 ---
 

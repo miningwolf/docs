@@ -1,19 +1,20 @@
-## PotionEffectFinish __class__
+## PotionEffectFinishEvent __class__
 
 >io.wolfscript.event.entity.PotionEffectFinish
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('entity.PotionEffectFinish', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-PotionEffectFinish<br> Called when a [`PotionEffect`](../../api/potion/PotionEffect.md) finishes it's effect on a [`LivingBase`](../../api/entity/living/LivingBase.md)
+PotionEffectFinishEvent<br> Called when a [`PotionEffect`](../../api/potion/PotionEffect.md) finishes it's effect on a [`LivingBase`](../../api/entity/living/LivingBase.md)
 
 Method | Type   
 --- | :--- 
-new __PotionEffectFinish__(entity, effect) <br> _Constructs a new PotionEffectFinshHook_ | _constructor_
  readonly property __Entity__ <br> _Get: Gets the [`LivingBase`](../../api/entity/living/LivingBase.md) having a [`PotionEffect`](../../api/potion/PotionEffect.md) finishing it's effect_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
  readonly property __PotionEffect__ <br> _Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md) finishing_ | [`PotionEffect`](../../api/potion/PotionEffect.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PotionEffectFinish`](PotionEffectFinish.md)
-
-##### <a id='potioneffectfinish'></a>new __PotionEffectFinish__(entity, effect) 
-
-_Constructs a new PotionEffectFinshHook_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) having the [`PotionEffect`](../../api/potion/PotionEffect.md) finishing it's effect
-effect | [`PotionEffect`](../../api/potion/PotionEffect.md) | the [`PotionEffect`](../../api/potion/PotionEffect.md) being finished
-
----
 
 ### Public Properties for [`PotionEffectFinish`](PotionEffectFinish.md)
 

@@ -1,19 +1,20 @@
-## Damage __class__
+## DamageEvent __class__
 
 >io.wolfscript.event.entity.Damage
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.Damage', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Damage hook. Contains information about an entity taking damage.
+Damage event. Contains information about an entity taking damage.
 
 Method | Type   
 --- | :--- 
-new __Damage__(attacker, defender, source, dealt) <br> _Constructs a new Damage_ | _constructor_
  readonly property __Attacker__ <br> _Get: Gets the attacking [`EntityLiving`](../../api/entity/living/EntityLiving.md) if present_ | [`Entity`](../../api/entity/Entity.md)
   property __DamageDealt__ <br> _Get: Gets the amount of damage dealt<br>Set: Sets the amount of damage dealt_ | `float`
   property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) type<br>Set: Sets the [`DamageSource`](../../api/DamageSource.md)_ | [`DamageSource`](../../api/DamageSource.md)
@@ -38,20 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Damage`](Damage.md)
-
-##### <a id='damage'></a>new __Damage__(attacker, defender, source, dealt) 
-
-_Constructs a new Damage_
-
-Argument | Type | Description  
---- | --- | --- 
-attacker | [`Entity`](../../api/entity/Entity.md) | the Entity attacking if present
-defender | [`Entity`](../../api/entity/Entity.md) | the Entity being hurt
-source | [`DamageSource`](../../api/DamageSource.md) | the DamageSource of the cause
-dealt | `float` | the amount of damage to be dealt
-
----
 
 ### Public Properties for [`Damage`](Damage.md)
 

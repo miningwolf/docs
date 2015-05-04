@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="ban-__class__">Ban <strong>class</strong></h2>
+            <h2 id="banevent-__class__">BanEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Ban
 Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Ban'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Ban&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Ban hook. Contains information about an issued Ban</p>
+<p>Ban event. Contains information about an issued Ban</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Ban</strong>(banned, ip, moderator, reason, bantime) <br> <em>Ban constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>BannedPlayer</strong> <br> <em>BannedPlayer property</em></td>
 <td style="text-align:left"><a href="../../api/PlayerReference.html"><code>PlayerReference</code></a></td>
@@ -244,46 +241,6 @@ Extends <a href="../../hook/Hook.html"><code>Hook</code></a></p>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-ban-ban-md-">Public Constructors for <a href="Ban.html"><code>Ban</code></a></h3>
-<h5 id="-a-id-ban-a-new-__ban__-banned-ip-moderator-reason-bantime-"><a id='ban'></a>new <strong>Ban</strong>(banned, ip, moderator, reason, bantime)</h5>
-<p><em>Ban constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>banned</td>
-<td><a href="../../api/PlayerReference.html"><code>PlayerReference</code></a></td>
-<td>banned argument</td>
-</tr>
-<tr>
-<td>ip</td>
-<td><code>String</code></td>
-<td>ip argument</td>
-</tr>
-<tr>
-<td>moderator</td>
-<td><a href="../../chat/MessageReceiver.html"><code>MessageReceiver</code></a></td>
-<td>moderator argument</td>
-</tr>
-<tr>
-<td>reason</td>
-<td><code>String</code></td>
-<td>reason argument</td>
-</tr>
-<tr>
-<td>bantime</td>
-<td><code>long</code></td>
-<td>bantime argument</td>
 </tr>
 </tbody>
 </table>

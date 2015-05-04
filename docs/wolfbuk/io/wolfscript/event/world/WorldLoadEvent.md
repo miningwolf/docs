@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.world.WorldLoadEvent
 >Extends [`WorldEvent`](WorldEvent.md)
-
+``` javascript
 this.on('world.WorldLoadEvent', function (e) { });
+```
+
 
 ---
 

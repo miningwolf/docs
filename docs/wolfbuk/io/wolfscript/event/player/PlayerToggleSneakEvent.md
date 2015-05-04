@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerToggleSneakEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerToggleSneakEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,19 +1,20 @@
-## TreeGrow __class__
+## TreeGrowEvent __class__
 
 >io.wolfscript.event.world.TreeGrow
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.TreeGrow', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class TreeGrow
+class TreeGrowEvent
 
 Method | Type   
 --- | :--- 
-new __TreeGrow__(sapling) <br> _Constructs a new TreeGrow_ | _constructor_
  readonly property __Sapling__ <br> _Get: Gets the sapling trying to grow_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _{@inheritDoc}_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`TreeGrow`](TreeGrow.md)
-
-##### <a id='treegrow'></a>new __TreeGrow__(sapling) 
-
-_Constructs a new TreeGrow_
-
-Argument | Type | Description  
---- | --- | --- 
-sapling | [`Block`](../../api/world/blocks/Block.md) | the sapling trying to grow
-
----
 
 ### Public Properties for [`TreeGrow`](TreeGrow.md)
 

@@ -1,19 +1,20 @@
-## EntityLightningStruck __class__
+## EntityLightningStruckEvent __class__
 
 >io.wolfscript.event.entity.EntityLightningStruck
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntityLightningStruck', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class EntityLightningStruck
+class EntityLightningStruckEvent
 
 Method | Type   
 --- | :--- 
-new __EntityLightningStruck__(bolt, entity) <br> _Constructs a new EntityLightningStruck_ | _constructor_
  readonly property __LightningBolt__ <br> _Get: Gets the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking_ | [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
  readonly property __StruckEntity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) being struck_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityLightningStruck`](EntityLightningStruck.md)
-
-##### <a id='entitylightningstruck'></a>new __EntityLightningStruck__(bolt, entity) 
-
-_Constructs a new EntityLightningStruck_
-
-Argument | Type | Description  
---- | --- | --- 
-bolt | [`LightningBolt`](../../api/entity/effect/LightningBolt.md) | the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking
-entity | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) being stuck
-
----
 
 ### Public Properties for [`EntityLightningStruck`](EntityLightningStruck.md)
 

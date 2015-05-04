@@ -1,19 +1,20 @@
-## EntityMove __class__
+## EntityMoveEvent __class__
 
 >io.wolfscript.event.entity.EntityMove
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntityMove', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class EntityMove
+class EntityMoveEvent
 
 Method | Type   
 --- | :--- 
-new __EntityMove__(entity, from) <br> _EntityMove constructor_ | _constructor_
  readonly property __Entity__ <br> _Entity property_ | [`Entity`](../../api/entity/Entity.md)
  readonly property __From__ <br> _From property_ | [`Location`](../../api/world/position/Location.md)
  readonly property __To__ <br> _To property_ | [`Location`](../../api/world/position/Location.md)
@@ -37,18 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityMove`](EntityMove.md)
-
-##### <a id='entitymove'></a>new __EntityMove__(entity, from) 
-
-_EntityMove constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-from | [`Location`](../../api/world/position/Location.md) | from argument
-
----
 
 ### Public Properties for [`EntityMove`](EntityMove.md)
 

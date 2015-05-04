@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="itemframesetitem-__class__">ItemFrameSetItem <strong>class</strong></h2>
+            <h2 id="itemframesetitemevent-__class__">ItemFrameSetItemEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.ItemFrameSetItem
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.ItemFrameSetItem'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.ItemFrameSetItem&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when an <code>Player</code> sets and <a href="../../api/inventory/Item.html"><code>Item</code></a> in a <a href="../../api/entity/hanging/ItemFrame.html"><code>ItemFrame</code></a></p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ItemFrameSetItem</strong>(player, itemFrame, item) <br> <em>ItemFrameSetItem constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Item</strong> <br> <em>Get: Gets the <a href="../../api/inventory/Item.html"><code>Item</code></a> being placed into the <a href="../../api/entity/hanging/ItemFrame.html"><code>ItemFrame</code></a></em></td>
 <td style="text-align:left"><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
@@ -252,36 +249,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-itemframesetitem-itemframesetitem-md-">Public Constructors for <a href="ItemFrameSetItem.html"><code>ItemFrameSetItem</code></a></h3>
-<h5 id="-a-id-itemframesetitem-a-new-__itemframesetitem__-player-itemframe-item-"><a id='itemframesetitem'></a>new <strong>ItemFrameSetItem</strong>(player, itemFrame, item)</h5>
-<p><em>ItemFrameSetItem constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>itemFrame</td>
-<td><a href="../../api/entity/hanging/ItemFrame.html"><code>ItemFrame</code></a></td>
-<td>itemFrame argument</td>
-</tr>
-<tr>
-<td>item</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>item argument</td>
 </tr>
 </tbody>
 </table>

@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.MapInitializeEvent
 >Extends [`ServerEvent`](ServerEvent.md)
-
+``` javascript
 this.on('server.MapInitializeEvent', function (e) { });
+```
+
 
 ---
 

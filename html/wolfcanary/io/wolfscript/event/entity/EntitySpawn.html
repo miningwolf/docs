@@ -153,15 +153,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="entityspawn-__class__">EntitySpawn <strong>class</strong></h2>
+            <h2 id="entityspawnevent-__class__">EntitySpawnEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.EntitySpawn
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.EntitySpawn'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.EntitySpawn&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Entity spawn hook. Contains information about an entity spawning.</p>
+<p>Entity spawn event. Contains information about an entity spawning.</p>
 <table>
 <thead>
 <tr>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>EntitySpawn</strong>(entity) <br> <em>EntitySpawn constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Get: Gets the <a href="../../api/entity/Entity.html"><code>Entity</code></a> spawning</em></td>
 <td style="text-align:left"><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
@@ -221,26 +218,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-entityspawn-entityspawn-md-">Public Constructors for <a href="EntitySpawn.html"><code>EntitySpawn</code></a></h3>
-<h5 id="-a-id-entityspawn-a-new-__entityspawn__-entity-"><a id='entityspawn'></a>new <strong>EntitySpawn</strong>(entity)</h5>
-<p><em>EntitySpawn constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>entity argument</td>
 </tr>
 </tbody>
 </table>

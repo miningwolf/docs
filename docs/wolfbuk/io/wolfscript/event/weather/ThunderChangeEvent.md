@@ -3,8 +3,10 @@
 >io.wolfscript.event.weather.ThunderChangeEvent
 >Extends [`WeatherEvent`](WeatherEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('weather.ThunderChangeEvent', function (e) { });
+```
+
 
 ---
 

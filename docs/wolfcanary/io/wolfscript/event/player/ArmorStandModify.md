@@ -1,19 +1,20 @@
-## ArmorStandModify __class__
+## ArmorStandModifyEvent __class__
 
 >io.wolfscript.event.player.ArmorStandModify
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ArmorStandModify', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class ArmorStandModify
+class ArmorStandModifyEvent
 
 Method | Type   
 --- | :--- 
-new __ArmorStandModify__(armorStand, player, slotId, current, setting) <br> _ArmorStandModify constructor_ | _constructor_
  readonly property __CurrentItem__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) currently in the ArmorStand_ | [`Item`](../../api/inventory/Item.md)
  readonly property __Player__ <br> _Get: Gets the `Player` modifying the ArmorStand_ | `Player`
  readonly property __SettingItem__ <br> _SettingItem property_ | [`Item`](../../api/inventory/Item.md)
@@ -38,21 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ArmorStandModify`](ArmorStandModify.md)
-
-##### <a id='armorstandmodify'></a>new __ArmorStandModify__(armorStand, player, slotId, current, setting) 
-
-_ArmorStandModify constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-armorStand | [`ArmorStand`](../../api/entity/ArmorStand.md) | armorStand argument
-player | `Player` | player argument
-slotId | `int` | slotId argument
-current | [`Item`](../../api/inventory/Item.md) | current argument
-setting | [`Item`](../../api/inventory/Item.md) | setting argument
-
----
 
 ### Public Properties for [`ArmorStandModify`](ArmorStandModify.md)
 

@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.InventoryEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('inventory.InventoryEvent', function (e) { });
+```
+
 
 ---
 

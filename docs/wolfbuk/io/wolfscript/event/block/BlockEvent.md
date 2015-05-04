@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('block.BlockEvent', function (e) { });
+```
+
 
 ---
 

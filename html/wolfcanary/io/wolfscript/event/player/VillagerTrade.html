@@ -176,12 +176,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="villagertrade-__class__">VillagerTrade <strong>class</strong></h2>
+            <h2 id="villagertradeevent-__class__">VillagerTradeEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.VillagerTrade
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.VillagerTrade'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.VillagerTrade&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>VillagerTrade Hook<br> Called when a <code>Player</code> trades with a <a href="../../api/VillagerTrade.html"><code>VillagerTrade</code></a> from an <code>Villager</code></p>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>VillagerTrade</strong>(player, villager, trade) <br> <em>Constructs a new VillagerTrade</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Gets the <code>Player</code> who is trading</em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -252,36 +249,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-villagertrade-villagertrade-md-">Public Constructors for <a href="VillagerTrade.html"><code>VillagerTrade</code></a></h3>
-<h5 id="-a-id-villagertrade-a-new-__villagertrade__-player-villager-trade-"><a id='villagertrade'></a>new <strong>VillagerTrade</strong>(player, villager, trade)</h5>
-<p><em>Constructs a new VillagerTrade</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> who is trading</td>
-</tr>
-<tr>
-<td>villager</td>
-<td><code>Villager</code></td>
-<td>the <code>Villager</code> merchant</td>
-</tr>
-<tr>
-<td>trade</td>
-<td><a href="../../api/VillagerTrade.html"><code>VillagerTrade</code></a></td>
-<td>the <a href="../../api/VillagerTrade.html"><code>VillagerTrade</code></a></td>
 </tr>
 </tbody>
 </table>

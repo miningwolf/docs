@@ -147,8 +147,9 @@
 <blockquote>
 <p>io.wolfscript.event.server.ServiceUnregisterEvent
 Extends <a href="ServiceEvent.html"><code>ServiceEvent</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'server.ServiceUnregisterEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;server.ServiceUnregisterEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>This event is called when a service is unregistered. <p> Warning: The order in which register and unregister events are called should not be relied upon.</p>

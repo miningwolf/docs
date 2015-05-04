@@ -1,19 +1,20 @@
-## StatGained __class__
+## StatGainedEvent __class__
 
 >io.wolfscript.event.player.StatGained
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.StatGained', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-StatGained<br> Called when a `Player` gains a Stat
+StatGainedEvent<br> Called when a `Player` gains a Stat
 
 Method | Type   
 --- | :--- 
-new __StatGained__(player, stat, gain) <br> _Constructs a new StatGained_ | _constructor_
  readonly property __Gain__ <br> _Get: Gets the amount of the stat gained_ | `int`
  readonly property __Player__ <br> _Get: Gets the `Player` gaining a [`Stat`](../../api/statistics/Stat.md)_ | `Player`
  readonly property __Stat__ <br> _Get: Gets the [`Stat`](../../api/statistics/Stat.md) being gained_ | [`Stat`](../../api/statistics/Stat.md)
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`StatGained`](StatGained.md)
-
-##### <a id='statgained'></a>new __StatGained__(player, stat, gain) 
-
-_Constructs a new StatGained_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` gaining a stat
-stat | [`Stat`](../../api/statistics/Stat.md) | the [`Stat`](../../api/statistics/Stat.md) being gained
-gain | `int` | gain argument
-
----
 
 ### Public Properties for [`StatGained`](StatGained.md)
 

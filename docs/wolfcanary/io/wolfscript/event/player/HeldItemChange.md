@@ -1,19 +1,20 @@
-## HeldItemChange __class__
+## HeldItemChangeEvent __class__
 
 >io.wolfscript.event.player.HeldItemChange
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.HeldItemChange', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Held item change hook. Contains information about a player's held slot changes
+Held item change event. Contains information about a player's held slot changes
 
 Method | Type   
 --- | :--- 
-new __HeldItemChange__(player, oldval, newval) <br> _Constructs a new HeldItemChange_ | _constructor_
   property __NewValue__ <br> _Get: Gets the new held slot<br>Set: Sets the new value to actually be set_ | `int`
  readonly property __OldValue__ <br> _Get: Gets the old (current) held slot_ | `int`
  readonly property __Player__ <br> _Get: Gets the `Player` whose held slot is changing_ | `Player`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`HeldItemChange`](HeldItemChange.md)
-
-##### <a id='helditemchange'></a>new __HeldItemChange__(player, oldval, newval) 
-
-_Constructs a new HeldItemChange_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` whose hold slot is changing
-oldval | `int` | the old (current) value
-newval | `int` | the new value
-
----
 
 ### Public Properties for [`HeldItemChange`](HeldItemChange.md)
 

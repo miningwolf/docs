@@ -1,19 +1,20 @@
-## BedExit __class__
+## BedExitEvent __class__
 
 >io.wolfscript.event.player.BedExit
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.BedExit', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Bed exit hook, called when a player leaves a bed
+Bed exit event, called when a player leaves a bed
 
 Method | Type   
 --- | :--- 
-new __BedExit__(player, bed) <br> _Create a new BedExit_ | _constructor_
  readonly property __Bed__ <br> _Get: Get the bed [`Block`](../../api/world/blocks/Block.md) the `Player` is leaving_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Gets the `Player` leaving the bed_ | `Player`
  function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BedExit`](BedExit.md)
-
-##### <a id='bedexit'></a>new __BedExit__(player, bed) 
-
-_Create a new BedExit_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the player that left the bed
-bed | [`Block`](../../api/world/blocks/Block.md) | the bed the player left
-
----
 
 ### Public Properties for [`BedExit`](BedExit.md)
 

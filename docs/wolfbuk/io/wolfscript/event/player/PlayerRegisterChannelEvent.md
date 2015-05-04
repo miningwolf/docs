@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerRegisterChannelEvent
 >Extends [`PlayerChannelEvent`](PlayerChannelEvent.md)
-
+``` javascript
 this.on('player.PlayerRegisterChannelEvent', function (e) { });
+```
+
 
 ---
 

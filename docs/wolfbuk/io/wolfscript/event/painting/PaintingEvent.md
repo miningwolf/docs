@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.painting.PaintingEvent
 >Extends [`Event`](../Event.md)
-
+``` javascript
 this.on('painting.PaintingEvent', function (e) { });
+```
+
 
 ---
 

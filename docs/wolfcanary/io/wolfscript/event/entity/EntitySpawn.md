@@ -1,19 +1,20 @@
-## EntitySpawn __class__
+## EntitySpawnEvent __class__
 
 >io.wolfscript.event.entity.EntitySpawn
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntitySpawn', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Entity spawn hook. Contains information about an entity spawning.
+Entity spawn event. Contains information about an entity spawning.
 
 Method | Type   
 --- | :--- 
-new __EntitySpawn__(entity) <br> _EntitySpawn constructor_ | _constructor_
  readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) spawning_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntitySpawn`](EntitySpawn.md)
-
-##### <a id='entityspawn'></a>new __EntitySpawn__(entity) 
-
-_EntitySpawn constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-
----
 
 ### Public Properties for [`EntitySpawn`](EntitySpawn.md)
 

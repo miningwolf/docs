@@ -156,8 +156,9 @@
 <p>io.wolfscript.event.inventory.InventoryMoveItemEvent
 Extends <a href="../Event.html"><code>Event</code></a>
 Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'inventory.InventoryMoveItemEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;inventory.InventoryMoveItemEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when some entity or block (e.g. hopper) tries to move items directly from one inventory to another. <p> When this event is called, the initiator may already have removed the item from the source inventory and is ready to move it into the destination inventory. <p> If this event is cancelled, the items will be returned to the source inventory, if needed. <p> If this event is not cancelled, the initiator will try to put the ItemStack into the destination inventory. If this is not possible and the ItemStack has not been modified, the source inventory slot will be restored to its former state. Otherwise any additional items will be discarded.</p>

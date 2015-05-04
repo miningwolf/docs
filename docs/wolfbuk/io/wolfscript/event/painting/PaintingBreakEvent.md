@@ -3,8 +3,10 @@
 >io.wolfscript.event.painting.PaintingBreakEvent
 >Extends [`PaintingEvent`](PaintingEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('painting.PaintingBreakEvent', function (e) { });
+```
+
 
 ---
 

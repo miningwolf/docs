@@ -1,9 +1,11 @@
-## NoteBlockPlay __class__
+## NoteBlockPlayEvent __class__
 
 >io.wolfscript.event.world.NoteBlockPlay
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.NoteBlockPlay', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a [`NoteBlock`](../../api/world/blocks/NoteBlock.md) is played
 
 Method | Type   
 --- | :--- 
-new __NoteBlockPlay__(noteBlock) <br> _Constructs a new NoteBlockPlay_ | _constructor_
 final readonly property __NoteBlock__ <br> _Get: Gets the [`NoteBlock`](../../api/world/blocks/NoteBlock.md) being played_ | [`NoteBlock`](../../api/world/blocks/NoteBlock.md)
 final function __toString__() <br> _{@inheritDoc}_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`NoteBlockPlay`](NoteBlockPlay.md)
-
-##### <a id='noteblockplay'></a>new __NoteBlockPlay__(noteBlock) 
-
-_Constructs a new NoteBlockPlay_
-
-Argument | Type | Description  
---- | --- | --- 
-noteBlock | [`NoteBlock`](../../api/world/blocks/NoteBlock.md) | the [`NoteBlock`](../../api/world/blocks/NoteBlock.md) being played
-
----
 
 ### Public Properties for [`NoteBlockPlay`](NoteBlockPlay.md)
 

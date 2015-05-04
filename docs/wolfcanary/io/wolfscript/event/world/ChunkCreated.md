@@ -1,19 +1,20 @@
-## ChunkCreated __class__
+## ChunkCreatedEvent __class__
 
 >io.wolfscript.event.world.ChunkCreated
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('world.ChunkCreated', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Chunk created hook
+Chunk created event
 
 Method | Type   
 --- | :--- 
-new __ChunkCreated__(chunk, world) <br> _ChunkCreated constructor_ | _constructor_
  readonly property __Chunk__ <br> _Get: Gets the [`Chunk`](../../api/world/Chunk.md)_ | [`Chunk`](../../api/world/Chunk.md)
  readonly property __World__ <br> _Get: Gets the world that this chunk is a part of._ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ChunkCreated`](ChunkCreated.md)
-
-##### <a id='chunkcreated'></a>new __ChunkCreated__(chunk, world) 
-
-_ChunkCreated constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-chunk | [`Chunk`](../../api/world/Chunk.md) | chunk argument
-world | [`World`](../../api/world/World.md) | world argument
-
----
 
 ### Public Properties for [`ChunkCreated`](ChunkCreated.md)
 

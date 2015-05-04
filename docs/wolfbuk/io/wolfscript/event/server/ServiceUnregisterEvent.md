@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.server.ServiceUnregisterEvent
 >Extends [`ServiceEvent`](ServiceEvent.md)
-
+``` javascript
 this.on('server.ServiceUnregisterEvent', function (e) { });
+```
+
 
 ---
 

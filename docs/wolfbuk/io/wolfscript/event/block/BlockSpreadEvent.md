@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.block.BlockSpreadEvent
 >Extends [`BlockFormEvent`](BlockFormEvent.md)
-
+``` javascript
 this.on('block.BlockSpreadEvent', function (e) { });
+```
+
 
 ---
 

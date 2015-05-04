@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="craft-__class__">Craft <strong>class</strong></h2>
+            <h2 id="craftevent-__class__">CraftEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Craft
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Craft'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Craft&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>class Craft</p>
+<p>class CraftEvent</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Craft</strong>(player, craftingMatrix, recipeResult) <br> <em>Creates a new Craft.</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>CraftingMatrix</strong> <br> <em>Get: Returns the crafting inventory the player is working on.</em></td>
 <td style="text-align:left"><a href="../../api/inventory/CraftingMatrix.html"><code>CraftingMatrix</code></a></td>
@@ -256,36 +253,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-craft-craft-md-">Public Constructors for <a href="Craft.html"><code>Craft</code></a></h3>
-<h5 id="-a-id-craft-a-new-__craft__-player-craftingmatrix-reciperesult-"><a id='craft'></a>new <strong>Craft</strong>(player, craftingMatrix, recipeResult)</h5>
-<p><em>Creates a new Craft.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>The crafting player.</td>
-</tr>
-<tr>
-<td>craftingMatrix</td>
-<td><a href="../../api/inventory/CraftingMatrix.html"><code>CraftingMatrix</code></a></td>
-<td>The crafting inventory used.</td>
-</tr>
-<tr>
-<td>recipeResult</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>The recipe&#39;s result.</td>
 </tr>
 </tbody>
 </table>

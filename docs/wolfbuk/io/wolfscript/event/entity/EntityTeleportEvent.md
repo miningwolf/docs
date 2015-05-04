@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityTeleportEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityTeleportEvent', function (e) { });
+```
+
 
 ---
 

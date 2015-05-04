@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerItemBreakEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerItemBreakEvent', function (e) { });
+```
+
 
 ---
 

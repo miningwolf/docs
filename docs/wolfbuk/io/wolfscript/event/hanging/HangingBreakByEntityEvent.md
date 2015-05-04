@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.hanging.HangingBreakByEntityEvent
 >Extends [`HangingBreakEvent`](HangingBreakEvent.md)
-
+``` javascript
 this.on('hanging.HangingBreakByEntityEvent', function (e) { });
+```
+
 
 ---
 

@@ -1,19 +1,20 @@
-## ChunkLoaded __class__
+## ChunkLoadedEvent __class__
 
 >io.wolfscript.event.world.ChunkLoaded
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('world.ChunkLoaded', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Chunk created hook
+Chunk created event
 
 Method | Type   
 --- | :--- 
-new __ChunkLoaded__(chunk, world, newchunk) <br> _ChunkLoaded constructor_ | _constructor_
  readonly property __Chunk__ <br> _Get: Gets the [`Chunk`](../../api/world/Chunk.md)_ | [`Chunk`](../../api/world/Chunk.md)
  readonly property __World__ <br> _Get: Gets the world this chunk is a part of._ | [`World`](../../api/world/World.md)
  function __isNew__() <br> _Gets whether this chunk was a freshly created chunk_ | `boolean`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ChunkLoaded`](ChunkLoaded.md)
-
-##### <a id='chunkloaded'></a>new __ChunkLoaded__(chunk, world, newchunk) 
-
-_ChunkLoaded constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-chunk | [`Chunk`](../../api/world/Chunk.md) | chunk argument
-world | [`World`](../../api/world/World.md) | world argument
-newchunk | `boolean` | newchunk argument
-
----
 
 ### Public Properties for [`ChunkLoaded`](ChunkLoaded.md)
 

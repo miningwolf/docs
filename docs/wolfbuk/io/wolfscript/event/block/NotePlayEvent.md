@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.NotePlayEvent
 >Extends [`BlockEvent`](BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.NotePlayEvent', function (e) { });
+```
+
 
 ---
 

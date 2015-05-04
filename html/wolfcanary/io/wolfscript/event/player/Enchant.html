@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="enchant-__class__">Enchant <strong>class</strong></h2>
+            <h2 id="enchantevent-__class__">EnchantEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Enchant
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Enchant'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Enchant&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Enchant hook. Contains information about a player enchanting an item.</p>
+<p>Enchant event. Contains information about a player enchanting an item.</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Enchant</strong>(player, item, enchtab) <br> <em>Enchant constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>EnchantmentList</strong> <br> <em>Get: Gets the new <a href="../../api/inventory/Enchantment.html"><code>Enchantment</code></a> as list</em></td>
 <td style="text-align:left"><code>List&lt;Enchantment&gt;</code></td>
@@ -272,36 +269,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-enchant-enchant-md-">Public Constructors for <a href="Enchant.html"><code>Enchant</code></a></h3>
-<h5 id="-a-id-enchant-a-new-__enchant__-player-item-enchtab-"><a id='enchant'></a>new <strong>Enchant</strong>(player, item, enchtab)</h5>
-<p><em>Enchant constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>item</td>
-<td><a href="../../api/inventory/Item.html"><code>Item</code></a></td>
-<td>item argument</td>
-</tr>
-<tr>
-<td>enchtab</td>
-<td><code>EnchantmentTable</code></td>
-<td>enchtab argument</td>
 </tr>
 </tbody>
 </table>

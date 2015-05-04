@@ -1,19 +1,20 @@
-## Explosion __class__
+## ExplosionEvent __class__
 
 >io.wolfscript.event.world.Explosion
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.Explosion', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Explosion hook. Contains information about an explosion.
+Explosion event. Contains information about an explosion.
 
 Method | Type   
 --- | :--- 
-new __Explosion__(block, entity) <br> _Explosion constructor_ | _constructor_
  readonly property __AffectedBlocks__ <br> _Get: Gets the list of affected blocks_ | `List<Block>`
  readonly property __Block__ <br> _Get: Gets the base affected [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) causing the explosion_ | [`Entity`](../../api/entity/Entity.md)
@@ -37,18 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Explosion`](Explosion.md)
-
-##### <a id='explosion'></a>new __Explosion__(block, entity) 
-
-_Explosion constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-
----
 
 ### Public Properties for [`Explosion`](Explosion.md)
 

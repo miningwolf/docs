@@ -1,19 +1,20 @@
-## Inventory __class__
+## InventoryEvent __class__
 
 >io.wolfscript.event.player.Inventory
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.Inventory', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Inventory hook. Contains information about a player either opening or closing an inventory
+Inventory event. Contains information about a player either opening or closing an inventory
 
 Method | Type   
 --- | :--- 
-new __Inventory__(player, inventory, closing) <br> _Inventory constructor_ | _constructor_
  readonly property __Inventory__ <br> _Get: Gets the [`Inventory`](../../api/inventory/Inventory.md)_ | [`Inventory`](../../api/inventory/Inventory.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
  function __isClosing__() <br> _isClosing method_ | `boolean`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Inventory`](Inventory.md)
-
-##### <a id='inventory'></a>new __Inventory__(player, inventory, closing) 
-
-_Inventory constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-inventory | [`Inventory`](../../api/inventory/Inventory.md) | inventory argument
-closing | `boolean` | closing argument
-
----
 
 ### Public Properties for [`Inventory`](Inventory.md)
 

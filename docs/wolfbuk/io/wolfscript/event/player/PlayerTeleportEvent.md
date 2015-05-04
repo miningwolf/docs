@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerTeleportEvent
 >Extends [`PlayerMoveEvent`](PlayerMoveEvent.md)
-
+``` javascript
 this.on('player.PlayerTeleportEvent', function (e) { });
+```
+
 
 ---
 

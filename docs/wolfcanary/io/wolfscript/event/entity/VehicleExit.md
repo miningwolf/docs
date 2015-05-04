@@ -1,9 +1,11 @@
-## VehicleExit __class__
+## VehicleExitEvent __class__
 
 >io.wolfscript.event.entity.VehicleExit
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.VehicleExit', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a LivingEntity exits a vehicle
 
 Method | Type   
 --- | :--- 
-new __VehicleExit__(vehicle, entity) <br> _VehicleExit constructor_ | _constructor_
  readonly property __Entity__ <br> _Entity property_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
  readonly property __Vehicle__ <br> _Vehicle property_ | [`Vehicle`](../../api/entity/vehicle/Vehicle.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`VehicleExit`](VehicleExit.md)
-
-##### <a id='vehicleexit'></a>new __VehicleExit__(vehicle, entity) 
-
-_VehicleExit constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-vehicle | [`Vehicle`](../../api/entity/vehicle/Vehicle.md) | vehicle argument
-entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | entity argument
-
----
 
 ### Public Properties for [`VehicleExit`](VehicleExit.md)
 

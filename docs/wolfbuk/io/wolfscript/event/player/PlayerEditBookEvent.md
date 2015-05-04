@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerEditBookEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerEditBookEvent', function (e) { });
+```
+
 
 ---
 

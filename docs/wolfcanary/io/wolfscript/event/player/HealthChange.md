@@ -1,19 +1,20 @@
-## HealthChange __class__
+## HealthChangeEvent __class__
 
 >io.wolfscript.event.player.HealthChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.HealthChange', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Health Change hook
+Health Change event
 
 Method | Type   
 --- | :--- 
-new __HealthChange__(player, oldVal, newVal) <br> _Constructs a new HealthChange hook_ | _constructor_
  readonly property __NewValue__ <br> _Get: Gets the new Health value_ | `float`
  readonly property __OldValue__ <br> _Get: Gets the old Health value_ | `float`
  readonly property __Player__ <br> _Get: Gets the `Player` who's health is changing_ | `Player`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`HealthChange`](HealthChange.md)
-
-##### <a id='healthchange'></a>new __HealthChange__(player, oldVal, newVal) 
-
-_Constructs a new HealthChange hook_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who's health is changing
-oldVal | `float` | the old health value
-newVal | `float` | the new health value
-
----
 
 ### Public Properties for [`HealthChange`](HealthChange.md)
 

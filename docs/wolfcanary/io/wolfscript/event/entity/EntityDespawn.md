@@ -1,19 +1,20 @@
-## EntityDespawn __class__
+## EntityDespawnEvent __class__
 
 >io.wolfscript.event.entity.EntityDespawn
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EntityDespawn', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Entity despawn hook. Contains information about an entity despawning.
+Entity despawn event. Contains information about an entity despawning.
 
 Method | Type   
 --- | :--- 
-new __EntityDespawn__(entity) <br> _EntityDespawn constructor_ | _constructor_
  readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) despawning_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -35,17 +36,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EntityDespawn`](EntityDespawn.md)
-
-##### <a id='entitydespawn'></a>new __EntityDespawn__(entity) 
-
-_EntityDespawn constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-
----
 
 ### Public Properties for [`EntityDespawn`](EntityDespawn.md)
 

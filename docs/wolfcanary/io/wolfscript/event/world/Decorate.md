@@ -1,9 +1,11 @@
-## Decorate __class__
+## DecorateEvent __class__
 
 >io.wolfscript.event.world.Decorate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.Decorate', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when decorating terrain with trees, glowstone etc.
 
 Method | Type   
 --- | :--- 
-new __Decorate__(x, z, world, name) <br> _Decorate constructor_ | _constructor_
  readonly property __DecoratorType__ <br> _Get: Gets the `DecoratorType`_ | `DecoratorType`
  readonly property __World__ <br> _Get: Return the [`World`](../../api/world/World.md)_ | [`World`](../../api/world/World.md)
  readonly property __X__ <br> _Get: Gets the x coordinate_ | `int`
@@ -39,20 +40,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Decorate`](Decorate.md)
-
-##### <a id='decorate'></a>new __Decorate__(x, z, world, name) 
-
-_Decorate constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-x | `int` | x argument
-z | `int` | z argument
-world | [`World`](../../api/world/World.md) | world argument
-name | `String` | name argument
-
----
 
 ### Public Properties for [`Decorate`](Decorate.md)
 

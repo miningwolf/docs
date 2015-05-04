@@ -1,9 +1,11 @@
-## LiquidDestroy __class__
+## LiquidDestroyEvent __class__
 
 >io.wolfscript.event.world.LiquidDestroy
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.LiquidDestroy', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Is called when a liquid is about to destroy something (crops, popping off torche
 
 Method | Type   
 --- | :--- 
-new __LiquidDestroy__(liquidType, toDestroy) <br> _LiquidDestroy constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the block that would be destroyed by the liquid flow_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __LiquidType__ <br> _Get: Returns the [`BlockType`](../../api/world/blocks/BlockType.md) of the liquid._ | [`BlockType`](../../api/world/blocks/BlockType.md)
  writeonly property __ForceDestroy__ <br> _Set: Set this to true to force the block to be destroyed._ | `void`
@@ -38,27 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`LiquidDestroy`](LiquidDestroy.md)
-
-##### <a id='liquiddestroy'></a>new __LiquidDestroy__(block) 
-_Deprecated_
-
-_LiquidDestroy constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-
-##### <a id='liquiddestroy'></a>new __LiquidDestroy__(liquidType, toDestroy) 
-
-_LiquidDestroy constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-liquidType | [`BlockType`](../../api/world/blocks/BlockType.md) | liquidType argument
-toDestroy | [`Block`](../../api/world/blocks/Block.md) | toDestroy argument
-
----
 
 ### Public Properties for [`LiquidDestroy`](LiquidDestroy.md)
 

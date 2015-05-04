@@ -3,8 +3,10 @@
 >io.wolfscript.event.painting.PaintingPlaceEvent
 >Extends [`PaintingEvent`](PaintingEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('painting.PaintingPlaceEvent', function (e) { });
+```
+
 
 ---
 

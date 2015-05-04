@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.BlockDispenseEvent
 >Extends [`BlockEvent`](BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.BlockDispenseEvent', function (e) { });
+```
+
 
 ---
 

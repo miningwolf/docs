@@ -1,19 +1,20 @@
-## BlockUpdate __class__
+## BlockUpdateEvent __class__
 
 >io.wolfscript.event.world.BlockUpdate
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.BlockUpdate', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Block update hook. Contains information about a block updating.
+Block update event. Contains information about a block updating.
 
 Method | Type   
 --- | :--- 
-new __BlockUpdate__(block, newBlockType) <br> _BlockUpdate constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Gets [`Block`](../../api/world/blocks/Block.md) updating_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __NewBlockId__ <br> _Get: Gets the block id of the new [`Block`](../../api/world/blocks/Block.md)_ | `int`
  readonly property __NewBlockType__ <br> _Get: Gets the block type of the new [`Block`](../../api/world/blocks/Block.md)_ | [`BlockType`](../../api/world/blocks/BlockType.md)
@@ -37,28 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockUpdate`](BlockUpdate.md)
-
-##### <a id='blockupdate'></a>new __BlockUpdate__(block, newBlockId) 
-_Deprecated: Use the other constructor instead_
-
-_BlockUpdate constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-newBlockId | `int` | newBlockId argument
-
-##### <a id='blockupdate'></a>new __BlockUpdate__(block, newBlockType) 
-
-_BlockUpdate constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-newBlockType | [`BlockType`](../../api/world/blocks/BlockType.md) | newBlockType argument
-
----
 
 ### Public Properties for [`BlockUpdate`](BlockUpdate.md)
 

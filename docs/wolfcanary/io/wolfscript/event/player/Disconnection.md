@@ -1,19 +1,20 @@
-## Disconnection __class__
+## DisconnectionEvent __class__
 
 >io.wolfscript.event.player.Disconnection
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.Disconnection', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Disconnection hook. Contains information about a `Player` disconnecting.
+Disconnection event. Contains information about a `Player` disconnecting.
 
 Method | Type   
 --- | :--- 
-new __Disconnection__(player, reason, leave) <br> _Disconnection constructor_ | _constructor_
   property __LeaveMessage__ <br> _Get: Gets the LeaveMessage<br>Set: Sets the LeaveMessage_ | `String`
  readonly property __Player__ <br> _Get: Gets the `Player` disconnected_ | `Player`
   property __Reason__ <br> _Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed_ | `String`
@@ -32,19 +33,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`Disconnection`](Disconnection.md)
-
-##### <a id='disconnection'></a>new __Disconnection__(player, reason, leave) 
-
-_Disconnection constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-reason | `String` | reason argument
-leave | `String` | leave argument
-
----
 
 ### Public Properties for [`Disconnection`](Disconnection.md)
 

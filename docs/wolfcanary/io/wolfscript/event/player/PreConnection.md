@@ -1,19 +1,20 @@
-## PreConnection __class__
+## PreConnectionEvent __class__
 
 >io.wolfscript.event.player.PreConnection
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.PreConnection', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Login checks hook. Comes with ip, name and a kickReason that is to be returned, and should be null if a player should not be kicked.
+Login checks event. Comes with ip, name and a kickReason that is to be returned, and should be null if a player should not be kicked.
 
 Method | Type   
 --- | :--- 
-new __PreConnection__(ip, name, id, dimType, world) <br> _PreConnection constructor_ | _constructor_
  readonly property __Ip__ <br> _Get: Get the IP of the joining `Player`_ | `String`
   property __KickReason__ <br> _Get: Get the currently set kick reason<br>Set: Set the kick reason. Make it null to not kick the `Player`_ | `String`
  readonly property __Name__ <br> _Get: Get the name of the joining `Player`_ | `String`
@@ -33,21 +34,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PreConnection`](PreConnection.md)
-
-##### <a id='preconnection'></a>new __PreConnection__(ip, name, id, dimType, world) 
-
-_PreConnection constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-ip | `String` | ip argument
-name | `String` | name argument
-id | `UUID` | id argument
-dimType | [`DimensionType`](../../api/world/DimensionType.md) | dimType argument
-world | `String` | world argument
-
----
 
 ### Public Properties for [`PreConnection`](PreConnection.md)
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.ExplosionPrimeEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.ExplosionPrimeEvent', function (e) { });
+```
+
 
 ---
 

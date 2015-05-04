@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerBucketEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerBucketEvent', function (e) { });
+```
+
 
 ---
 

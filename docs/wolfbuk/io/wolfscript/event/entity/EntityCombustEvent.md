@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityCombustEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityCombustEvent', function (e) { });
+```
+
 
 ---
 

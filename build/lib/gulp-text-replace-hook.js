@@ -41,7 +41,7 @@ module.exports = function() {
         Object.getOwnPropertyNames(model).sort().forEach(function(itemKey){
            var mainItem = model[itemKey];
 
-           if (mainItem.namespace && mainItem.namespace.substr(0,17) === 'wolfscript.event.')
+           if (mainItem.namespace && mainItem.namespace.substr(0,20) === 'io.wolfscript.event.')
              {
                var oldName = mainItem.name;
                var newName = mainItem.name.substr(0, mainItem.name.length-4) + 'Event';
@@ -82,8 +82,6 @@ module.exports = function() {
 
                   });
 
-                mainItem.type = "event";
-
                 mainItem.constructors = [];
 
              }
@@ -99,7 +97,7 @@ module.exports = function() {
 
        if (changes.length>0)
           changes.forEach(function(change){
-           text = text.replace( new RegExp(change + 'Hook', 'g'), function(x){return change;});        
+           text = text.replace( new RegExp(change + 'Hook', 'g'), function(x){return change + 'Event';});        
           });
 
         file.contents = new Buffer(JSON.stringify(JSON.parse(text)));

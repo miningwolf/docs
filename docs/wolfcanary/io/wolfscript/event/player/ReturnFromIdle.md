@@ -1,9 +1,11 @@
-## ReturnFromIdle __class__
+## ReturnFromIdleEvent __class__
 
 >io.wolfscript.event.player.ReturnFromIdle
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.ReturnFromIdle', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when the Player is no longer idle
 
 Method | Type   
 --- | :--- 
-new __ReturnFromIdle__(player, idle) <br> _ReturnFromIdle constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Get the `Player` that was Idle_ | `Player`
  readonly property __TimeIdle__ <br> _Get: Gets the amount of time the `Player` was idle_ | `long`
  function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ReturnFromIdle`](ReturnFromIdle.md)
-
-##### <a id='returnfromidle'></a>new __ReturnFromIdle__(player, idle) 
-
-_ReturnFromIdle constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-idle | `long` | idle argument
-
----
 
 ### Public Properties for [`ReturnFromIdle`](ReturnFromIdle.md)
 

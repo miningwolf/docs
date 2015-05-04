@@ -129,15 +129,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="playercommand-__class__">PlayerCommand <strong>class</strong></h2>
+            <h2 id="playercommandevent-__class__">PlayerCommandEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.command.PlayerCommand
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'command.PlayerCommand'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;command.PlayerCommand&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Player command hook. Contains a player and a command String Array</p>
+<p>Player command event. Contains a player and a command String Array</p>
 <table>
 <thead>
 <tr>
@@ -146,10 +147,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PlayerCommand</strong>(player) <br> <em>Constructs a new PlayerCommand</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Command</strong> <br> <em>Get: Get command that was issued by the <code>Player</code></em></td>
 <td style="text-align:left"><code>String[]</code></td>
@@ -201,26 +198,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-playercommand-playercommand-md-">Public Constructors for <a href="PlayerCommand.html"><code>PlayerCommand</code></a></h3>
-<h5 id="-a-id-playercommand-a-new-__playercommand__-player-"><a id='playercommand'></a>new <strong>PlayerCommand</strong>(player)</h5>
-<p><em>Constructs a new PlayerCommand</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>the <code>Player</code> executing the commmand</td>
 </tr>
 </tbody>
 </table>

@@ -162,8 +162,9 @@
 <blockquote>
 <p>io.wolfscript.event.block.BlockMultiPlaceEvent
 Extends <a href="BlockPlaceEvent.html"><code>BlockPlaceEvent</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'block.BlockMultiPlaceEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;block.BlockMultiPlaceEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Fired when a single block placement action of a player triggers the creation of multiple blocks(e.g. placing a bed block). The block returned by <code>#getBlockPlaced()</code> and its related methods is the block where the placed block would exist if the placement only affected a single block.</p>

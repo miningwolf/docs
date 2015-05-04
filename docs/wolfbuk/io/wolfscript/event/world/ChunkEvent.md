@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.world.ChunkEvent
 >Extends [`WorldEvent`](WorldEvent.md)
-
+``` javascript
 this.on('world.ChunkEvent', function (e) { });
+```
+
 
 ---
 

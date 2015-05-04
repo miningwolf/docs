@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="explosion-__class__">Explosion <strong>class</strong></h2>
+            <h2 id="explosionevent-__class__">ExplosionEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.Explosion
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.Explosion'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.Explosion&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Explosion hook. Contains information about an explosion.</p>
+<p>Explosion event. Contains information about an explosion.</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Explosion</strong>(block, entity) <br> <em>Explosion constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>AffectedBlocks</strong> <br> <em>Get: Gets the list of affected blocks</em></td>
 <td style="text-align:left"><code>List&lt;Block&gt;</code></td>
@@ -232,31 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-explosion-explosion-md-">Public Constructors for <a href="Explosion.html"><code>Explosion</code></a></h3>
-<h5 id="-a-id-explosion-a-new-__explosion__-block-entity-"><a id='explosion'></a>new <strong>Explosion</strong>(block, entity)</h5>
-<p><em>Explosion constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>block argument</td>
-</tr>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/Entity.html"><code>Entity</code></a></td>
-<td>entity argument</td>
 </tr>
 </tbody>
 </table>

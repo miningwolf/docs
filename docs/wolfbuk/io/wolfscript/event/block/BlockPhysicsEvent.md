@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.BlockPhysicsEvent
 >Extends [`BlockEvent`](BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.BlockPhysicsEvent', function (e) { });
+```
+
 
 ---
 

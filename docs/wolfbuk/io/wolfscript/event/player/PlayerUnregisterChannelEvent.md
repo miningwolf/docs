@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerUnregisterChannelEvent
 >Extends [`PlayerChannelEvent`](PlayerChannelEvent.md)
-
+``` javascript
 this.on('player.PlayerUnregisterChannelEvent', function (e) { });
+```
+
 
 ---
 

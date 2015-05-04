@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityTargetEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityTargetEvent', function (e) { });
+```
+
 
 ---
 

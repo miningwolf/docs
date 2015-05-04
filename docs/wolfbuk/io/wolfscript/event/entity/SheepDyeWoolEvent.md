@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.SheepDyeWoolEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.SheepDyeWoolEvent', function (e) { });
+```
+
 
 ---
 

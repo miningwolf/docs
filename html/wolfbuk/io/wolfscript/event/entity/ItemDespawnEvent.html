@@ -176,8 +176,9 @@
 <p>io.wolfscript.event.entity.ItemDespawnEvent
 Extends <a href="EntityEvent.html"><code>EntityEvent</code></a>
 Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.ItemDespawnEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.ItemDespawnEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>This event is called when a <a href="../../entity/Item.html"><code>Item</code></a> is removed from the world because it has existed for 5 minutes. <p> Cancelling the event results in the item being allowed to exist for 5 more minutes. This behavior is not guaranteed and may change in future versions.</p>

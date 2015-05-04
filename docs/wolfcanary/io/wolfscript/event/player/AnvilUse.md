@@ -1,19 +1,20 @@
-## AnvilUse __class__
+## AnvilUseEvent __class__
 
 >io.wolfscript.event.player.AnvilUse
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.AnvilUse', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class AnvilUse
+class AnvilUseEvent
 
 Method | Type   
 --- | :--- 
-new __AnvilUse__(player, anvil) <br> _Constructs a new AnvilUse_ | _constructor_
  readonly property __Anvil__ <br> _Get: Gets the `Anvil` in use_ | `Anvil`
  readonly property __Player__ <br> _Get: Gets the `Player` using the `Anvil`_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`AnvilUse`](AnvilUse.md)
-
-##### <a id='anviluse'></a>new __AnvilUse__(player, anvil) 
-
-_Constructs a new AnvilUse_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` using the `Anvil`
-anvil | `Anvil` | the `Anvil` being used
-
----
 
 ### Public Properties for [`AnvilUse`](AnvilUse.md)
 

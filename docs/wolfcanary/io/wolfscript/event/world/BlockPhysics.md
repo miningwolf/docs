@@ -1,19 +1,20 @@
-## BlockPhysics __class__
+## BlockPhysicsEvent __class__
 
 >io.wolfscript.event.world.BlockPhysics
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.BlockPhysics', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Block physics hook. Contains information about a block's physics being updated.
+Block physics event. Contains information about a block's physics being updated.
 
 Method | Type   
 --- | :--- 
-new __BlockPhysics__(block, placed) <br> _BlockPhysics constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
  function __wasPlaced__() <br> _Gets whether this [`Block`](../../api/world/blocks/Block.md) was just placed_ | `boolean`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BlockPhysics`](BlockPhysics.md)
-
-##### <a id='blockphysics'></a>new __BlockPhysics__(block, placed) 
-
-_BlockPhysics constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-block | [`Block`](../../api/world/blocks/Block.md) | block argument
-placed | `boolean` | placed argument
-
----
 
 ### Public Properties for [`BlockPhysics`](BlockPhysics.md)
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.LeavesDecayEvent
 >Extends [`BlockEvent`](BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.LeavesDecayEvent', function (e) { });
+```
+
 
 ---
 

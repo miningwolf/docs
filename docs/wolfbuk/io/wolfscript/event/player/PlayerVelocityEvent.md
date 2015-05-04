@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerVelocityEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerVelocityEvent', function (e) { });
+```
+
 
 ---
 

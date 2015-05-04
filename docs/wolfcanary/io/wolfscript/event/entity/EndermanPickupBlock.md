@@ -1,19 +1,20 @@
-## EndermanPickupBlock __class__
+## EndermanPickupBlockEvent __class__
 
 >io.wolfscript.event.entity.EndermanPickupBlock
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.EndermanPickupBlock', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Enderman pick up block hook. Contains information about an Enderman picking up a block
+Enderman pick up block event. Contains information about an Enderman picking up a block
 
 Method | Type   
 --- | :--- 
-new __EndermanPickupBlock__(enderman, block) <br> _Constructs a new EndermanPickUpBlockHook_ | _constructor_
  readonly property __Block__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Enderman__ <br> _Get: Gets the [`Enderman`](../../api/entity/living/monster/Enderman.md)_ | [`Enderman`](../../api/entity/living/monster/Enderman.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`EndermanPickupBlock`](EndermanPickupBlock.md)
-
-##### <a id='endermanpickupblock'></a>new __EndermanPickupBlock__(enderman, block) 
-
-_Constructs a new EndermanPickUpBlockHook_
-
-Argument | Type | Description  
---- | --- | --- 
-enderman | [`Enderman`](../../api/entity/living/monster/Enderman.md) | the [`Enderman`](../../api/entity/living/monster/Enderman.md) picking up a block
-block | [`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) being picked up
-
----
 
 ### Public Properties for [`EndermanPickupBlock`](EndermanPickupBlock.md)
 

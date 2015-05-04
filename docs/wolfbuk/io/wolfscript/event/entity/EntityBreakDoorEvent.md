@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.entity.EntityBreakDoorEvent
 >Extends [`EntityChangeBlockEvent`](EntityChangeBlockEvent.md)
-
+``` javascript
 this.on('entity.EntityBreakDoorEvent', function (e) { });
+```
+
 
 ---
 

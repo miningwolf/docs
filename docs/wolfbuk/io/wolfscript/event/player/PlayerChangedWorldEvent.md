@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerChangedWorldEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerChangedWorldEvent', function (e) { });
+```
+
 
 ---
 

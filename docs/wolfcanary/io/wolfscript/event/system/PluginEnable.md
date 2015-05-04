@@ -1,9 +1,11 @@
-## PluginEnable __class__
+## PluginEnableEvent __class__
 
 >io.wolfscript.event.system.PluginEnable
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.PluginEnable', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a plugin is enabled.
 
 Method | Type   
 --- | :--- 
-new __PluginEnable__(plugin) <br> _PluginEnable constructor_ | _constructor_
  readonly property __Plugin__ <br> _Get: Retrieve the plugin that is enabled_ | `Plugin`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PluginEnable`](PluginEnable.md)
-
-##### <a id='pluginenable'></a>new __PluginEnable__(plugin) 
-
-_PluginEnable constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-plugin | `Plugin` | plugin argument
-
----
 
 ### Public Properties for [`PluginEnable`](PluginEnable.md)
 

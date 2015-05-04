@@ -156,12 +156,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="pistonextend-__class__">PistonExtend <strong>class</strong></h2>
+            <h2 id="pistonextendevent-__class__">PistonExtendEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.PistonExtend
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.PistonExtend'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.PistonExtend&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Piston Extend Hook<br> Called when a Piston extends</p>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>PistonExtend</strong>(piston, moving) <br> <em>PistonExtend constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Moving</strong> <br> <em>Moving property</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -228,31 +225,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-pistonextend-pistonextend-md-">Public Constructors for <a href="PistonExtend.html"><code>PistonExtend</code></a></h3>
-<h5 id="-a-id-pistonextend-a-new-__pistonextend__-piston-moving-"><a id='pistonextend'></a>new <strong>PistonExtend</strong>(piston, moving)</h5>
-<p><em>PistonExtend constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>piston</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>piston argument</td>
-</tr>
-<tr>
-<td>moving</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>moving argument</td>
 </tr>
 </tbody>
 </table>

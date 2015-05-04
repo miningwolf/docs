@@ -1,19 +1,20 @@
-## FoodLevel __class__
+## FoodLevelEvent __class__
 
 >io.wolfscript.event.player.FoodLevel
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.FoodLevel', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Food level hook. Contains information about a player's food level changes
+Food level event. Contains information about a player's food level changes
 
 Method | Type   
 --- | :--- 
-new __FoodLevel__(player, oldval, newval) <br> _Constructs a new FoodLevel_ | _constructor_
   property __NewValue__ <br> _Get: Gets the new level<br>Set: Sets the new value to actually be set_ | `int`
  readonly property __OldValue__ <br> _Get: Gets the old (current) level_ | `int`
  readonly property __Player__ <br> _Get: Gets the `Player` who's food level is changing_ | `Player`
@@ -30,19 +31,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`FoodLevel`](FoodLevel.md)
-
-##### <a id='foodlevel'></a>new __FoodLevel__(player, oldval, newval) 
-
-_Constructs a new FoodLevel_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who's Food Level is changing
-oldval | `int` | the old (current) value
-newval | `int` | the new value
-
----
 
 ### Public Properties for [`FoodLevel`](FoodLevel.md)
 

@@ -1,9 +1,11 @@
-## ItemDrop __class__
+## ItemDropEvent __class__
 
 >io.wolfscript.event.player.ItemDrop
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.ItemDrop', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Item Hook. Contains EntityItem and Player
 
 Method | Type   
 --- | :--- 
-new __ItemDrop__(player, item) <br> _ItemDrop constructor_ | _constructor_
  readonly property __Item__ <br> _Get: Gets the [`EntityItem`](../../api/entity/EntityItem.md)_ | [`EntityItem`](../../api/entity/EntityItem.md)
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ItemDrop`](ItemDrop.md)
-
-##### <a id='itemdrop'></a>new __ItemDrop__(player, item) 
-
-_ItemDrop constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-item | [`EntityItem`](../../api/entity/EntityItem.md) | item argument
-
----
 
 ### Public Properties for [`ItemDrop`](ItemDrop.md)
 

@@ -1,19 +1,20 @@
-## SignShow __class__
+## SignShowEvent __class__
 
 >io.wolfscript.event.player.SignShow
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.SignShow', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Sign Change hook. Contains information about a sign shown to a player
+Sign Change event. Contains information about a sign shown to a player
 
 Method | Type   
 --- | :--- 
-new __SignShow__(player, sign) <br> _Constructs a new SignShow_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` being shown a [`Sign`](../../api/world/blocks/Sign.md)_ | `Player`
  readonly property __Sign__ <br> _Get: Gets the [`Sign`](../../api/world/blocks/Sign.md) being shown_ | [`Sign`](../../api/world/blocks/Sign.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`SignShow`](SignShow.md)
-
-##### <a id='signshow'></a>new __SignShow__(player, sign) 
-
-_Constructs a new SignShow_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` being shown a [`Sign`](../../api/world/blocks/Sign.md)
-sign | [`Sign`](../../api/world/blocks/Sign.md) | the [`Sign`](../../api/world/blocks/Sign.md) being shown
-
----
 
 ### Public Properties for [`SignShow`](SignShow.md)
 

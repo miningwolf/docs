@@ -3,8 +3,10 @@
 >io.wolfscript.event.inventory.InventoryMoveItemEvent
 >Extends [`Event`](../Event.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('inventory.InventoryMoveItemEvent', function (e) { });
+```
+
 
 ---
 

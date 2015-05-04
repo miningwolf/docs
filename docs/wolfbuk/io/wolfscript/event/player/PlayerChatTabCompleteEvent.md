@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerChatTabCompleteEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerChatTabCompleteEvent', function (e) { });
+```
+
 
 ---
 

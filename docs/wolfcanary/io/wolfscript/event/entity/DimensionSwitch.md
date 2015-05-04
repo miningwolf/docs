@@ -1,19 +1,20 @@
-## DimensionSwitch __class__
+## DimensionSwitchEvent __class__
 
 >io.wolfscript.event.entity.DimensionSwitch
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('entity.DimensionSwitch', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Dimension switch hook. Contains information about an entity changeing dimentions
+Dimension switch event. Contains information about an entity changeing dimentions
 
 Method | Type   
 --- | :--- 
-new __DimensionSwitch__(entity, to, from) <br> _DimensionSwitch constructor_ | _constructor_
  readonly property __Entity__ <br> _Get: Get the entity involved here._ | [`Entity`](../../api/entity/Entity.md)
  readonly property __LocationFrom__ <br> _Get: Get the location the entity is warping to._ | [`Location`](../../api/world/position/Location.md)
  readonly property __LocationTo__ <br> _Get: Get the entities current location._ | [`Location`](../../api/world/position/Location.md)
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`DimensionSwitch`](DimensionSwitch.md)
-
-##### <a id='dimensionswitch'></a>new __DimensionSwitch__(entity, to, from) 
-
-_DimensionSwitch constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-entity | [`Entity`](../../api/entity/Entity.md) | entity argument
-to | [`Location`](../../api/world/position/Location.md) | to argument
-from | [`Location`](../../api/world/position/Location.md) | from argument
-
----
 
 ### Public Properties for [`DimensionSwitch`](DimensionSwitch.md)
 

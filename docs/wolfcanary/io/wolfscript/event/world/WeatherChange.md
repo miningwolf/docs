@@ -1,9 +1,11 @@
-## WeatherChange __class__
+## WeatherChangeEvent __class__
 
 >io.wolfscript.event.world.WeatherChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.WeatherChange', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ WeatherChange Hook
 
 Method | Type   
 --- | :--- 
-new __WeatherChange__(world, on, thunder) <br> _Constructs a new WeatherChange_ | _constructor_
  readonly property __World__ <br> _Get: Gets the [`World`](../../api/world/World.md) of the change_ | [`World`](../../api/world/World.md)
  function __isThunderChange__() <br> _Checks if it's a thunder change or rain change_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
@@ -37,19 +38,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`WeatherChange`](WeatherChange.md)
-
-##### <a id='weatherchange'></a>new __WeatherChange__(world, on, thunder) 
-
-_Constructs a new WeatherChange_
-
-Argument | Type | Description  
---- | --- | --- 
-world | [`World`](../../api/world/World.md) | the World where weather is changing
-on | `boolean` | whether weather is turning on or off
-thunder | `boolean` | whether or not thunder is changing
-
----
 
 ### Public Properties for [`WeatherChange`](WeatherChange.md)
 

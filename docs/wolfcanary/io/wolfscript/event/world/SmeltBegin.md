@@ -1,19 +1,20 @@
-## SmeltBegin __class__
+## SmeltBeginEvent __class__
 
 >io.wolfscript.event.world.SmeltBegin
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.SmeltBegin', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class SmeltBegin
+class SmeltBeginEvent
 
 Method | Type   
 --- | :--- 
-new __SmeltBegin__(furnace, smelting) <br> _Constructs a new Smelt_ | _constructor_
  readonly property __Furnace__ <br> _Get: Gets the [`Furnace`](../../api/world/blocks/Furnace.md) doing the smelting_ | [`Furnace`](../../api/world/blocks/Furnace.md)
  readonly property __Smelting__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) smelting_ | [`Item`](../../api/inventory/Item.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`SmeltBegin`](SmeltBegin.md)
-
-##### <a id='smeltbegin'></a>new __SmeltBegin__(furnace, smelting) 
-
-_Constructs a new Smelt_
-
-Argument | Type | Description  
---- | --- | --- 
-furnace | [`Furnace`](../../api/world/blocks/Furnace.md) | the [`Furnace`](../../api/world/blocks/Furnace.md) doing the smelting
-smelting | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) being smelted
-
----
 
 ### Public Properties for [`SmeltBegin`](SmeltBegin.md)
 

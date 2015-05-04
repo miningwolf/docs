@@ -3,8 +3,10 @@
 >io.wolfscript.event.player.PlayerChatEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('player.PlayerChatEvent', function (e) { });
+```
+
 
 ---
 

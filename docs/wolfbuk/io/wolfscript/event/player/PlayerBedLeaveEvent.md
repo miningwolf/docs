@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerBedLeaveEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerBedLeaveEvent', function (e) { });
+```
+
 
 ---
 

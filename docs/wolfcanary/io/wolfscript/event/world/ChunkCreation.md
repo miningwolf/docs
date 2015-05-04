@@ -1,19 +1,20 @@
-## ChunkCreation __class__
+## ChunkCreationEvent __class__
 
 >io.wolfscript.event.world.ChunkCreation
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('world.ChunkCreation', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Chunk creation hook. Contains information about a new chunk being created.
+Chunk creation event. Contains information about a new chunk being created.
 
 Method | Type   
 --- | :--- 
-new __ChunkCreation__(x, z, dimension) <br> _ChunkCreation constructor_ | _constructor_
  readonly property __BiomeData__ <br> _Get: Gets the biomedata for the chunk_ | `BiomeType[]`
  readonly property __BlockData__ <br> _Get: Gets the block data of the chunk_ | `int[]`
  readonly property __World__ <br> _Get: Gets the dimension the chunk is in_ | [`World`](../../api/world/World.md)
@@ -34,19 +35,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ChunkCreation`](ChunkCreation.md)
-
-##### <a id='chunkcreation'></a>new __ChunkCreation__(x, z, dimension) 
-
-_ChunkCreation constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-x | `int` | x argument
-z | `int` | z argument
-dimension | [`World`](../../api/world/World.md) | dimension argument
-
----
 
 ### Public Properties for [`ChunkCreation`](ChunkCreation.md)
 

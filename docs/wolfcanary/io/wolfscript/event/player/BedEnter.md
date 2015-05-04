@@ -1,19 +1,20 @@
-## BedEnter __class__
+## BedEnterEvent __class__
 
 >io.wolfscript.event.player.BedEnter
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.BedEnter', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Bed enter hook, called when a player enters a bed
+Bed enter event, called when a player enters a bed
 
 Method | Type   
 --- | :--- 
-new __BedEnter__(player, bed) <br> _Create a new BedEnter_ | _constructor_
  readonly property __Bed__ <br> _Get: Get the bed [`Block`](../../api/world/blocks/Block.md) the `Player` is entering_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: Gets the `Player` entering the bed_ | `Player`
  function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`BedEnter`](BedEnter.md)
-
-##### <a id='bedenter'></a>new __BedEnter__(player, bed) 
-
-_Create a new BedEnter_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the player that entered the bed
-bed | [`Block`](../../api/world/blocks/Block.md) | the bed that the player entered
-
----
 
 ### Public Properties for [`BedEnter`](BedEnter.md)
 

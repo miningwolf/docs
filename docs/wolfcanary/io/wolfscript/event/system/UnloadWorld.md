@@ -1,9 +1,11 @@
-## UnloadWorld __class__
+## UnloadWorldEvent __class__
 
 >io.wolfscript.event.system.UnloadWorld
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('system.UnloadWorld', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called before a world is unloaded.<br> Before a world is unloaded, it will be sa
 
 Method | Type   
 --- | :--- 
-new __UnloadWorld__(world) <br> _UnloadWorld constructor_ | _constructor_
  readonly property __World__ <br> _Get: Returns the world that is about to be unloaded_ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -28,17 +29,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`UnloadWorld`](UnloadWorld.md)
-
-##### <a id='unloadworld'></a>new __UnloadWorld__(world) 
-
-_UnloadWorld constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-world | [`World`](../../api/world/World.md) | world argument
-
----
 
 ### Public Properties for [`UnloadWorld`](UnloadWorld.md)
 

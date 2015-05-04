@@ -3,8 +3,10 @@
 >io.wolfscript.event.block.SignChangeEvent
 >Extends [`BlockEvent`](BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('block.SignChangeEvent', function (e) { });
+```
+
 
 ---
 

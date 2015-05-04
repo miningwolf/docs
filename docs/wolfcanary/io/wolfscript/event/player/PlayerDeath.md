@@ -1,19 +1,20 @@
-## PlayerDeath __class__
+## PlayerDeathEvent __class__
 
 >io.wolfscript.event.player.PlayerDeath
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.PlayerDeath', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Player Death hook
+Player Death event
 
 Method | Type   
 --- | :--- 
-new __PlayerDeath__(player, source, msg) <br> _Constructs a new PlayerDeath_ | _constructor_
  readonly property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the `Player`_ | [`DamageSource`](../../api/DamageSource.md)
  readonly property __Player__ <br> _Get: Gets the `Player` who died_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
@@ -29,19 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerDeath`](PlayerDeath.md)
-
-##### <a id='playerdeath'></a>new __PlayerDeath__(player, source, msg) 
-
-_Constructs a new PlayerDeath_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` that died
-source | [`DamageSource`](../../api/DamageSource.md) | the [`DamageSource`](../../api/DamageSource.md) that killed the `Player`
-msg | [`ChatComponent`](../../api/chat/ChatComponent.md) | the Death message to send all if DeathMessages aren't disabled
-
----
 
 ### Public Properties for [`PlayerDeath`](PlayerDeath.md)
 

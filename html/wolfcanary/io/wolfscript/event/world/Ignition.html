@@ -156,15 +156,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="ignition-__class__">Ignition <strong>class</strong></h2>
+            <h2 id="ignitionevent-__class__">IgnitionEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.Ignition
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.Ignition'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.Ignition&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Ignition hook. Contains information about a <a href="../../api/world/blocks/Block.html"><code>Block</code></a> being set on fire.</p>
+<p>Ignition event. Contains information about a <a href="../../api/world/blocks/Block.html"><code>Block</code></a> being set on fire.</p>
 <table>
 <thead>
 <tr>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Ignition</strong>(ignited, player, clicked, cause) <br> <em>Ignition constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Block</strong> <br> <em>Block property</em></td>
 <td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
@@ -236,41 +233,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-ignition-ignition-md-">Public Constructors for <a href="Ignition.html"><code>Ignition</code></a></h3>
-<h5 id="-a-id-ignition-a-new-__ignition__-ignited-player-clicked-cause-"><a id='ignition'></a>new <strong>Ignition</strong>(ignited, player, clicked, cause)</h5>
-<p><em>Ignition constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ignited</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>ignited argument</td>
-</tr>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>clicked</td>
-<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
-<td>clicked argument</td>
-</tr>
-<tr>
-<td>cause</td>
-<td><code>IgnitionCause</code></td>
-<td>cause argument</td>
 </tr>
 </tbody>
 </table>

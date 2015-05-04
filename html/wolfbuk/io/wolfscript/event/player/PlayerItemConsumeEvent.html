@@ -187,8 +187,9 @@
 <p>io.wolfscript.event.player.PlayerItemConsumeEvent
 Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a>
 Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.PlayerItemConsumeEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.PlayerItemConsumeEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>This event will fire when a player is finishing consuming an item (food, potion, milk bucket). <br> If the ItemStack is modified the server will use the effects of the new item and not remove the original one from the player&#39;s inventory. <br> If the event is cancelled the effect will not be applied and the item will not be removed from the player&#39;s inventory.</p>

@@ -156,12 +156,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="weatherchange-__class__">WeatherChange <strong>class</strong></h2>
+            <h2 id="weatherchangeevent-__class__">WeatherChangeEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.WeatherChange
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.WeatherChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;world.WeatherChange&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>WeatherChange Hook</p>
@@ -173,10 +174,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>WeatherChange</strong>(world, on, thunder) <br> <em>Constructs a new WeatherChange</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>World</strong> <br> <em>Get: Gets the <a href="../../api/world/World.html"><code>World</code></a> of the change</em></td>
 <td style="text-align:left"><a href="../../api/world/World.html"><code>World</code></a></td>
@@ -232,36 +229,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-weatherchange-weatherchange-md-">Public Constructors for <a href="WeatherChange.html"><code>WeatherChange</code></a></h3>
-<h5 id="-a-id-weatherchange-a-new-__weatherchange__-world-on-thunder-"><a id='weatherchange'></a>new <strong>WeatherChange</strong>(world, on, thunder)</h5>
-<p><em>Constructs a new WeatherChange</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>world</td>
-<td><a href="../../api/world/World.html"><code>World</code></a></td>
-<td>the World where weather is changing</td>
-</tr>
-<tr>
-<td>on</td>
-<td><code>boolean</code></td>
-<td>whether weather is turning on or off</td>
-</tr>
-<tr>
-<td>thunder</td>
-<td><code>boolean</code></td>
-<td>whether or not thunder is changing</td>
 </tr>
 </tbody>
 </table>

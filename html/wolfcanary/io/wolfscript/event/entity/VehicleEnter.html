@@ -153,12 +153,13 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="vehicleenter-__class__">VehicleEnter <strong>class</strong></h2>
+            <h2 id="vehicleenterevent-__class__">VehicleEnterEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.entity.VehicleEnter
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.VehicleEnter'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;entity.VehicleEnter&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Is called when a LivingEntity enters a vehicle</p>
@@ -170,10 +171,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>VehicleEnter</strong>(vehicle, entity) <br> <em>VehicleEnter constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Entity</strong> <br> <em>Entity property</em></td>
 <td style="text-align:left"><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
@@ -225,31 +222,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-vehicleenter-vehicleenter-md-">Public Constructors for <a href="VehicleEnter.html"><code>VehicleEnter</code></a></h3>
-<h5 id="-a-id-vehicleenter-a-new-__vehicleenter__-vehicle-entity-"><a id='vehicleenter'></a>new <strong>VehicleEnter</strong>(vehicle, entity)</h5>
-<p><em>VehicleEnter constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vehicle</td>
-<td><a href="../../api/entity/vehicle/Vehicle.html"><code>Vehicle</code></a></td>
-<td>vehicle argument</td>
-</tr>
-<tr>
-<td>entity</td>
-<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
-<td>entity argument</td>
 </tr>
 </tbody>
 </table>

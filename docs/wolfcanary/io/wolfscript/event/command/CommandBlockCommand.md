@@ -1,19 +1,20 @@
-## CommandBlockCommand __class__
+## CommandBlockCommandEvent __class__
 
 >io.wolfscript.event.command.CommandBlockCommand
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('command.CommandBlockCommand', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-CommandBlockCommand<br> Called when a CommandBlock executes a command.
+CommandBlockCommandEvent<br> Called when a CommandBlock executes a command.
 
 Method | Type   
 --- | :--- 
-new __CommandBlockCommand__(reference) <br> _Constructs a new CommandBlockCommand_ | _constructor_
  readonly property __Arguments__ <br> _Get: Gets the command and arguments_ | `String[]`
  readonly property __CommandBlock__ <br> _Get: Gets the CommandBlock if actually a CommandBlock_ | `CommandBlock`
  readonly property __CommandBlockMinecart__ <br> _Get: Gets the CommandBlockMinecart if actually a CommandBlockMinecart_ | `CommandBlockMinecart`
@@ -38,17 +39,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`CommandBlockCommand`](CommandBlockCommand.md)
-
-##### <a id='commandblockcommand'></a>new __CommandBlockCommand__(reference) 
-
-_Constructs a new CommandBlockCommand_
-
-Argument | Type | Description  
---- | --- | --- 
-reference | [`CommandBlockLogic`](../../api/CommandBlockLogic.md) | the [`CommandBlockLogic`](../../api/CommandBlockLogic.md) used (either CommandBlock or CommandBlockMinecart)
-
----
 
 ### Public Properties for [`CommandBlockCommand`](CommandBlockCommand.md)
 

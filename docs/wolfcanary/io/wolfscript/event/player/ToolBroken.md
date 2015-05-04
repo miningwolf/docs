@@ -1,19 +1,20 @@
-## ToolBroken __class__
+## ToolBrokenEvent __class__
 
 >io.wolfscript.event.player.ToolBroken
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.ToolBroken', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class ToolBroken
+class ToolBrokenEvent
 
 Method | Type   
 --- | :--- 
-new __ToolBroken__(player, tool) <br> _ToolBroken constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` who's tool has broken_ | `Player`
  readonly property __Tool__ <br> _Tool property_ | [`Item`](../../api/inventory/Item.md)
  function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ToolBroken`](ToolBroken.md)
-
-##### <a id='toolbroken'></a>new __ToolBroken__(player, tool) 
-
-_ToolBroken constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-tool | [`Item`](../../api/inventory/Item.md) | tool argument
-
----
 
 ### Public Properties for [`ToolBroken`](ToolBroken.md)
 

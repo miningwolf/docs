@@ -3,8 +3,10 @@
 >io.wolfscript.event.entity.EntityDamageEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('entity.EntityDamageEvent', function (e) { });
+```
+
 
 ---
 

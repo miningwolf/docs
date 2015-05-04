@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerQuitEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
-
+``` javascript
 this.on('player.PlayerQuitEvent', function (e) { });
+```
+
 
 ---
 

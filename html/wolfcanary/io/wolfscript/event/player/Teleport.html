@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="teleport-__class__">Teleport <strong>class</strong></h2>
+            <h2 id="teleportevent-__class__">TeleportEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.Teleport
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.Teleport'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.Teleport&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Teleport hook. Contains player who is teleporting and their destination</p>
+<p>Teleport event. Contains player who is teleporting and their destination</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>Teleport</strong>(player, destination, cause) <br> <em>Teleport constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>CurrentLocation</strong> <br> <em>Get: Gets the <code>Player</code>&#39;s current location</em></td>
 <td style="text-align:left"><a href="../../api/world/position/Location.html"><code>Location</code></a></td>
@@ -256,36 +253,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-teleport-teleport-md-">Public Constructors for <a href="Teleport.html"><code>Teleport</code></a></h3>
-<h5 id="-a-id-teleport-a-new-__teleport__-player-destination-cause-"><a id='teleport'></a>new <strong>Teleport</strong>(player, destination, cause)</h5>
-<p><em>Teleport constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>destination</td>
-<td><a href="../../api/world/position/Location.html"><code>Location</code></a></td>
-<td>destination argument</td>
-</tr>
-<tr>
-<td>cause</td>
-<td><code>TeleportCause</code></td>
-<td>cause argument</td>
 </tr>
 </tbody>
 </table>

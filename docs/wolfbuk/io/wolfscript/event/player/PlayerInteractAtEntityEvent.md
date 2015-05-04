@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.player.PlayerInteractAtEntityEvent
 >Extends [`PlayerInteractEntityEvent`](PlayerInteractEntityEvent.md)
-
+``` javascript
 this.on('player.PlayerInteractAtEntityEvent', function (e) { });
+```
+
 
 ---
 

@@ -3,8 +3,10 @@
 >io.wolfscript.event.inventory.BrewEvent
 >Extends [`BlockEvent`](../block/BlockEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('inventory.BrewEvent', function (e) { });
+```
+
 
 ---
 

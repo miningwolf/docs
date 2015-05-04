@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.inventory.InventoryCloseEvent
 >Extends [`InventoryEvent`](InventoryEvent.md)
-
+``` javascript
 this.on('inventory.InventoryCloseEvent', function (e) { });
+```
+
 
 ---
 

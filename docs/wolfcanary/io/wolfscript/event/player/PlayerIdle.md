@@ -1,19 +1,20 @@
-## PlayerIdle __class__
+## PlayerIdleEvent __class__
 
 >io.wolfscript.event.player.PlayerIdle
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('player.PlayerIdle', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-class PlayerIdle
+class PlayerIdleEvent
 
 Method | Type   
 --- | :--- 
-new __PlayerIdle__(player, millisIdle) <br> _Constructs a new PlayerIdle_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the idle `Player`_ | `Player`
  readonly property __TimeIdle__ <br> _Get: Gets the number of milliseconds the player has been idle_ | `long`
  function __toString__() <br> _{@inheritDoc}_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`PlayerIdle`](PlayerIdle.md)
-
-##### <a id='playeridle'></a>new __PlayerIdle__(player, millisIdle) 
-
-_Constructs a new PlayerIdle_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | the `Player` who is idle
-millisIdle | `long` | the number of milliseconds the player has been idle
-
----
 
 ### Public Properties for [`PlayerIdle`](PlayerIdle.md)
 

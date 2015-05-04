@@ -2,8 +2,10 @@
 
 >io.wolfscript.event.entity.EntityPortalExitEvent
 >Extends [`EntityTeleportEvent`](EntityTeleportEvent.md)
-
+``` javascript
 this.on('entity.EntityPortalExitEvent', function (e) { });
+```
+
 
 ---
 

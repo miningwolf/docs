@@ -1,19 +1,20 @@
-## TimeChange __class__
+## TimeChangeEvent __class__
 
 >io.wolfscript.event.world.TimeChange
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
-
+``` javascript
 this.on('world.TimeChange', function (e) { });
+```
+
 
 ---
 
 ### Class Overview
 
-Time Change hook
+Time Change event
 
 Method | Type   
 --- | :--- 
-new __TimeChange__(world, time) <br> _Constructs a new TimeChange_ | _constructor_
  readonly property __Time__ <br> _Get: Gets the time the [`World`](../../api/world/World.md) is being set to_ | `long`
  readonly property __World__ <br> _Get: Gets the [`World`](../../api/world/World.md) the time is changing in_ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
@@ -36,18 +37,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`TimeChange`](TimeChange.md)
-
-##### <a id='timechange'></a>new __TimeChange__(world, time) 
-
-_Constructs a new TimeChange_
-
-Argument | Type | Description  
---- | --- | --- 
-world | [`World`](../../api/world/World.md) | the [`World`](../../api/world/World.md) the time is changing in
-time | `long` | the time being set to
-
----
 
 ### Public Properties for [`TimeChange`](TimeChange.md)
 

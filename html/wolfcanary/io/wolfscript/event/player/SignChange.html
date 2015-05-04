@@ -176,15 +176,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="signchange-__class__">SignChange <strong>class</strong></h2>
+            <h2 id="signchangeevent-__class__">SignChangeEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.player.SignChange
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'player.SignChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;player.SignChange&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Sign Change hook. Contains information about a sign either being changed by a player</p>
+<p>Sign Change event. Contains information about a sign either being changed by a player</p>
 <table>
 <thead>
 <tr>
@@ -193,10 +194,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>SignChange</strong>(player, sign) <br> <em>SignChange constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Gets the <code>Player</code></em></td>
 <td style="text-align:left"><code>Player</code></td>
@@ -248,31 +245,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-signchange-signchange-md-">Public Constructors for <a href="SignChange.html"><code>SignChange</code></a></h3>
-<h5 id="-a-id-signchange-a-new-__signchange__-player-sign-"><a id='signchange'></a>new <strong>SignChange</strong>(player, sign)</h5>
-<p><em>SignChange constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>sign</td>
-<td><a href="../../api/world/blocks/Sign.html"><code>Sign</code></a></td>
-<td>sign argument</td>
 </tr>
 </tbody>
 </table>

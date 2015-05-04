@@ -129,15 +129,16 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="consolecommand-__class__">ConsoleCommand <strong>class</strong></h2>
+            <h2 id="consolecommandevent-__class__">ConsoleCommandEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.command.ConsoleCommand
 Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'command.ConsoleCommand'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
-<p>this.on(&#39;command.ConsoleCommand&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Server command hook. Contains the command issued by the server</p>
+<p>Server command event. Contains the command issued by the server</p>
 <table>
 <thead>
 <tr>
@@ -146,10 +147,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>new <strong>ConsoleCommand</strong>(receiver, textInput) <br> <em>Constructs a new ConsoleCommand</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
 <tr>
 <td> readonly property <strong>Caller</strong> <br> <em>Caller property</em></td>
 <td style="text-align:left"><a href="../../chat/MessageReceiver.html"><code>MessageReceiver</code></a></td>
@@ -201,31 +198,6 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-constructors-for-consolecommand-consolecommand-md-">Public Constructors for <a href="ConsoleCommand.html"><code>ConsoleCommand</code></a></h3>
-<h5 id="-a-id-consolecommand-a-new-__consolecommand__-receiver-textinput-"><a id='consolecommand'></a>new <strong>ConsoleCommand</strong>(receiver, textInput)</h5>
-<p><em>Constructs a new ConsoleCommand</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>receiver</td>
-<td><a href="../../chat/MessageReceiver.html"><code>MessageReceiver</code></a></td>
-<td>the <a href="../../chat/MessageReceiver.html"><code>MessageReceiver</code></a> executing the command</td>
-</tr>
-<tr>
-<td>textInput</td>
-<td><code>String</code></td>
-<td>the text input</td>
 </tr>
 </tbody>
 </table>

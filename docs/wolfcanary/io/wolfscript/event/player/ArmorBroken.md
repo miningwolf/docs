@@ -1,9 +1,11 @@
-## ArmorBroken __class__
+## ArmorBrokenEvent __class__
 
 >io.wolfscript.event.player.ArmorBroken
 >Extends [`Hook`](../../hook/Hook.md)
-
+``` javascript
 this.on('player.ArmorBroken', function (e) { });
+```
+
 
 ---
 
@@ -13,7 +15,6 @@ Called when a piece of Armor has been destroyed
 
 Method | Type   
 --- | :--- 
-new __ArmorBroken__(player, armor) <br> _ArmorBroken constructor_ | _constructor_
  readonly property __Armor__ <br> _Armor property_ | [`Item`](../../api/inventory/Item.md)
  readonly property __Player__ <br> _Get: Gets the `Player` who's armor has broken_ | `Player`
  function __toString__() <br> _toString method_ | `String`
@@ -29,18 +30,6 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 
 ---
 
-### Public Constructors for [`ArmorBroken`](ArmorBroken.md)
-
-##### <a id='armorbroken'></a>new __ArmorBroken__(player, armor) 
-
-_ArmorBroken constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-armor | [`Item`](../../api/inventory/Item.md) | armor argument
-
----
 
 ### Public Properties for [`ArmorBroken`](ArmorBroken.md)
 

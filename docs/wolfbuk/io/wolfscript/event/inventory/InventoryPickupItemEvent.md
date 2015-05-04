@@ -3,8 +3,10 @@
 >io.wolfscript.event.inventory.InventoryPickupItemEvent
 >Extends [`Event`](../Event.md)
 >Implements [`Cancellable`](../Cancellable.md)
-
+``` javascript
 this.on('inventory.InventoryPickupItemEvent', function (e) { });
+```
+
 
 ---
 
