@@ -56,6 +56,6 @@ _NetherWart age property, Values: 0 - 3_
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

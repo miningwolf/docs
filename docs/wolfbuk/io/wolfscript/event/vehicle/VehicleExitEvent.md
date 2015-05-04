@@ -4,6 +4,8 @@
 >Extends [`VehicleEvent`](VehicleEvent.md)
 >Implements [`Cancellable`](../Cancellable.md)
 
+this.on('vehicle.VehicleExitEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -196,6 +198,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

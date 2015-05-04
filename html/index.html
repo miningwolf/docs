@@ -74,11 +74,36 @@
           <section class="doc-content">
             <h1 id="wolfscript-by-mining-wolf">WolfScript by Mining Wolf</h1>
 <h5 id="the-mining-wolf-s-guide-to-programming-minecraft-mods">The Mining Wolf&#39;s Guide to Programming Minecraft Mods</h5>
-<p><a href="https://gitter.im/miningwolf/wolfscript?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge" target="_blank" rel="nofollow"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a></p>
 <h3 id="about">About</h3>
-<p>This repository contains the reference documentation for writing Minecraft plugins.<br>It allows you to write server plugins/mods in JavasScript and makes available the full Node.js API 
-and a game API that is equivalent to the full Minecraft Server API (two flavors of this API are provided:
-WolfBuk and WolfCanary for Bukkit/Spigot and CanaryMod servers respectively).</p>
+<p>WolfScript is a modern, easy-to-learn language for writing Minecraft mods and plugins.  </p>
+<p>The plugins written with WolfScript are just like any other professional plugin and have full 
+access to all the events and commands of the server. </p>
+<p>The base language for WolfScript is JavaScript, which is not only powers much of the web but also
+is powering more and more servers worldwide, such as at Walmart, Paypal, Netflix and the Mail Online.
+With six companies (Mozilla, Google, Apple, Microsoft, Opera, Red Hat) competing over the best J
+JavaScript implementation, the underlaying interpreters have become remarkably fast, and
+highly suitable for the event-based environment of a modern game server such as Minecraft.</p>
+<p>On top of JavaScript we&#39;ve added a special implementation of Node.js, WolfNode, which integrates the work
+of the &quot;Project Odd&quot; team at Red Hat to bring this to the Java-based environment of Minecraft.
+This allows all the benefits of running a close-to-vanilla version of Minecraft, without the need
+to write anything in Java, and yet having access to over 130,000 packages of common programming
+tasks, from running a website to display gamer dashboards, to integrating the virtual world
+of minecraft with the real world of lights, sensors and the Internet of Things.</p>
+<p>On top of JavaScript and WolfNode we provide a full MineCraft Server API, for subscribing to events
+triggered by players, entities, etc..   Since these APIs have been undergoing fairly rapid evolution and
+even copyright challenges, we&#39;ve integrated with the two or most popular families of servers 
+(Spigot/Bukkit/CraftBukkit and CanaryMod) and provide an abstracted API called the <em>WolfBuk API</em> and <em>WolfCanary API</em>
+respectively.</p>
+<h3 id="-kid-tested-cio-approved-">&quot;Kid Tested, CIO Approved&quot;</h3>
+<p>WolfScript was designed from the ground up to be simple to use.  In fact it was written first as a weekend
+exercise to teach programming for seven to ten year old gamers in our family. </p>
+<p>However, while there are excellent JavaScript implementations already out there, we didnt want to stop there.<br>We wanted to make it a learning environment that teaches the same skills required to power the Walmart web servers
+on the first shopping day after Thanksgiving.  We wanted to teach bona fide programming techniques that can be used
+at any modern Internet startup.</p>
+<p>Therefore the language itself includes the full Node.js (io.js) implementation and is designed to be developed 
+using the latest tools like Microsoft Visual Studio Code, Docker, continuous integration testing environments, etc., 
+in fact the same environments this public company CIO likes to see his teams use at his day job.</p>
+<p>This simplicity and power comes with no compromises:</p>
 <ul>
 <li><p>Anything you can do in Java you can do in WolfScript, with few exceptions.</p>
 </li>
@@ -87,9 +112,13 @@ WolfBuk and WolfCanary for Bukkit/Spigot and CanaryMod servers respectively).</p
 </ul>
 <p>The WolfServer runtime uses a highly performant, open-source javascript engine (DynJS) without dependency on Nashorn or Rhino.</p>
 <p>By combining Node.js with Minecraft, you can write plugins for MineCraft in a simple way, and harness the full ecosystem of more than 130,000 packages.</p>
-<h3 id="wolfscript-events">WolfScript Events</h3>
-<p>Have a look at the <a href="./wolfbuk/Events.html">WolfBuk Events</a> and <a href="./wolfcanary/Events.html">WolfCanary Events</a> for a sense of what you are able to work with when writing a WolfScript plugin.</p>
-<p>Then click on Getting Started to get an instance of the server up and running.</p>
+<h3 id="anatomy-of-a-plugin">Anatomy of a Plugin</h3>
+<p>At the most basic level, most plugins subscribe to events that are constantly happening on the server (players joining
+and interacting with their worlds), filter and take actions as a result of these events, thus changing the players&#39; 
+experiences.</p>
+<p>Have a look at the <a href="./wolfbuk/Events.html">WolfBuk Events</a> and <a href="./wolfcanary/Events.html">WolfCanary Events</a> for a 
+sense of what you are able to work with when writing a WolfScript plugin.</p>
+<p>Then click on Getting Started to get an instance of the server and WolfScript language up and running.</p>
 
 
           </section>

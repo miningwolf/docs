@@ -3,6 +3,8 @@
 >io.wolfscript.event.player.AsyncPlayerPreLoginEvent
 >Extends [`Event`](../Event.md)
 
+this.on('player.AsyncPlayerPreLoginEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -252,6 +254,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

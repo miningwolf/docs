@@ -1,8 +1,8 @@
 # WolfScript by Mining Wolf
 
-### Getting started  (Preferred)
+### Getting started  (Preferred WolfBuk API)
 
-Place `minecraft.jar` in the `/plugins` directory of the Spigot (or Bukkit or CraftBukkit) server. 
+Place `wolfscript.jar` in the `/plugins` directory of the Spigot (or Bukkit or CraftBukkit) server. 
 
 Create a new subdirectory `wolftest` of `/plugins`
 
@@ -40,9 +40,9 @@ Tip:  use npm to package and distribute your wolf packs.  The wolfscript plugin 
 Tip:  if this is the first time running spigot.jar you will need to accept the EULA for Minecraft.  Try running once, then edit eula.txt (change "false" to "true") then rerun.
 
 
-### Getting started (CanaryMod)
+### Getting started (Alternate WolfCanary API)
 
-Place `minecraft.jar` in the `/pluginlangs` directory of the CanaryMod server. 
+Place `wolfscript.jar` in the `/pluginlangs` directory of the CanaryMod server. 
 
 Edit `server.cfg` to include `plugin-dev-mode=true` (to allow loading of plugins from directories, unless you want to zip or jar your WolfScript plugins).
 
@@ -63,7 +63,7 @@ In /plugins/wolftest, place two files
 
 ``` js
 exports.enable = function (){ 
-    this.getLogman().info("Hello World");
+    this.getLogger().info("Hello World");
  };
 exports.disable = function (){};
  ```
@@ -77,7 +77,6 @@ Run the server from the root of the canarymod server directory (contains canarym
 Tip:  use npm to package and distribute your wolf packs.  For now, you just need a Canary.inf in the home directory of each wolf pack.
 
 ### Building the source code
-
 
 Build with 
 

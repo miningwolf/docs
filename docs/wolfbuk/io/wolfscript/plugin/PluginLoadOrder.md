@@ -18,6 +18,6 @@ STARTUP: <br> _Indicates that the plugin will be loaded at startup_ | PluginLoad
 
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

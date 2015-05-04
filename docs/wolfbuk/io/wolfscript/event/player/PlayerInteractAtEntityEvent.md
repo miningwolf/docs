@@ -3,6 +3,8 @@
 >io.wolfscript.event.player.PlayerInteractAtEntityEvent
 >Extends [`PlayerInteractEntityEvent`](PlayerInteractEntityEvent.md)
 
+this.on('player.PlayerInteractAtEntityEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -253,6 +255,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.block.BlockPistonRetractEvent
 >Extends [`BlockPistonEvent`](BlockPistonEvent.md)
 
+this.on('block.BlockPistonRetractEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -252,6 +254,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

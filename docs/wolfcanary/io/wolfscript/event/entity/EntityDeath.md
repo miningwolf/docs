@@ -3,6 +3,8 @@
 >io.wolfscript.event.entity.EntityDeath
 >Extends [`Hook`](../../hook/Hook.md)
 
+this.on('entity.EntityDeath', function (e) { });
+
 ---
 
 ### Class Overview
@@ -117,6 +119,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

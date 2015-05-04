@@ -3,6 +3,8 @@
 >io.wolfscript.event.world.ChunkCreation
 >Extends [`Hook`](../../hook/Hook.md)
 
+this.on('world.ChunkCreation', function (e) { });
+
 ---
 
 ### Class Overview
@@ -171,6 +173,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.EventException
 >Extends `Exception`
 
+this.on('event.EventException', function (e) { });
+
 ---
 
 ### Class Overview
@@ -71,6 +73,6 @@ Get | Description
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

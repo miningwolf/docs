@@ -56,6 +56,6 @@ _Rotated Pillar axis property, Values: `Axis`_
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

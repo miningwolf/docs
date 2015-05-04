@@ -78,6 +78,6 @@ MEGA_SPRUCE_TAIGA_HILLS: <br> _MEGA_SPRUCE_TAIGA_HILLS Biome_ | Biome
 
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

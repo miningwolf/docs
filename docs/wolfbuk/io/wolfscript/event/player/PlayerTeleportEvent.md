@@ -3,6 +3,8 @@
 >io.wolfscript.event.player.PlayerTeleportEvent
 >Extends [`PlayerMoveEvent`](PlayerMoveEvent.md)
 
+this.on('player.PlayerTeleportEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -283,6 +285,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

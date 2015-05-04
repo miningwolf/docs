@@ -157,6 +157,7 @@
 Extends <a href="../Event.html"><code>Event</code></a>
 Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </blockquote>
+<p>this.on(&#39;inventory.InventoryMoveItemEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>Called when some entity or block (e.g. hopper) tries to move items directly from one inventory to another. <p> When this event is called, the initiator may already have removed the item from the source inventory and is ready to move it into the destination inventory. <p> If this event is cancelled, the items will be returned to the source inventory, if needed. <p> If this event is not cancelled, the initiator will try to put the ItemStack into the destination inventory. If this is not possible and the ItemStack has not been modified, the source inventory slot will be restored to its former state. Otherwise any additional items will be discarded.</p>
@@ -503,7 +504,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </table>
 <hr>
 <hr>
-<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
 
 
           </section>

@@ -176,6 +176,6 @@ _The special character which prefixes all chat colour codes. Use this if you nee
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

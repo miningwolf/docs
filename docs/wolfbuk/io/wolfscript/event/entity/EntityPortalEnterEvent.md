@@ -3,6 +3,8 @@
 >io.wolfscript.event.entity.EntityPortalEnterEvent
 >Extends [`EntityEvent`](EntityEvent.md)
 
+this.on('entity.EntityPortalEnterEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -178,6 +180,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -26,10 +26,9 @@
 	   	})
 	};  
 
-	if (mainItem.type === "event")
-	{
-		@:## @helpers.fnEventName(mainItem.qualifiedname)  __@mainItem.type __
-	} else if (mainItem.type === "namespace")
+  
+
+	if (mainItem.type === "namespace")
 	{
 		@:## @mainItem.packagename.replace("io.wolfscript.","").replace("io.wolfscript","API").toUpperCase()  __Classes and Interfaces __
 		@:
@@ -47,6 +46,11 @@
 	if (mainItem.implements)
 	{
 	    @:>Implements @{fnNameClean(mainItem.implements.join(", "))}
+	}
+	if (mainItem.qualifiedname.substr(0,20) == "io.wolfscript.event." && mainItem.type == "class")
+	{
+		@:
+	 	@:this.on('@helpers.fnEventName(mainItem.qualifiedname) ', function (e) @brackets );
 	}
     @:
 	@:---
@@ -85,6 +89,6 @@
 	@:---
 	@:
 	@:@model.renderPartial('/build/views/partials/itemDetailTables.jsmd',model)
-	@:###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+	@:##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 }	
 

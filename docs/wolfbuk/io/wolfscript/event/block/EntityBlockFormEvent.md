@@ -3,6 +3,8 @@
 >io.wolfscript.event.block.EntityBlockFormEvent
 >Extends [`BlockFormEvent`](BlockFormEvent.md)
 
+this.on('block.EntityBlockFormEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -277,6 +279,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

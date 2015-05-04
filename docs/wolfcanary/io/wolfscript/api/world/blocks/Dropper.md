@@ -26,6 +26,6 @@ __Inherited items from [`Dispenser`](Dispenser.md)__ |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.inventory.InventoryClickEvent
 >Extends [`InventoryInteractEvent`](InventoryInteractEvent.md)
 
+this.on('inventory.InventoryClickEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -445,6 +447,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

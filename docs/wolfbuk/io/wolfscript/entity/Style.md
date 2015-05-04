@@ -22,6 +22,6 @@ BLACK_DOTS: <br> _Small black dots_ | Style
 
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

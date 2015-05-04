@@ -316,6 +316,6 @@ _Represents the largest size that a Plugin Channel may be._
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

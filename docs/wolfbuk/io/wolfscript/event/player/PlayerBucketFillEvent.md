@@ -3,6 +3,8 @@
 >io.wolfscript.event.player.PlayerBucketFillEvent
 >Extends [`PlayerBucketEvent`](PlayerBucketEvent.md)
 
+this.on('player.PlayerBucketFillEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -261,6 +263,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

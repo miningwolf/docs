@@ -3,6 +3,8 @@
 >io.wolfscript.event.world.ChunkLoaded
 >Extends [`Hook`](../../hook/Hook.md)
 
+this.on('world.ChunkLoaded', function (e) { });
+
 ---
 
 ### Class Overview
@@ -128,6 +130,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.entity.HangingEntityDestroy
 >Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
+this.on('entity.HangingEntityDestroy', function (e) { });
+
 ---
 
 ### Class Overview
@@ -180,6 +182,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

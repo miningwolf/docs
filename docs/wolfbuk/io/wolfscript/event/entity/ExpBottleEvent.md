@@ -3,6 +3,8 @@
 >io.wolfscript.event.entity.ExpBottleEvent
 >Extends [`ProjectileHitEvent`](ProjectileHitEvent.md)
 
+this.on('entity.ExpBottleEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -262,6 +264,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.world.ChunkPopulateEvent
 >Extends [`ChunkEvent`](ChunkEvent.md)
 
+this.on('world.ChunkPopulateEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -177,6 +179,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

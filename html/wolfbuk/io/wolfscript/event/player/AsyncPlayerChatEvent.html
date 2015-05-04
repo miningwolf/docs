@@ -188,6 +188,7 @@
 Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a>
 Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </blockquote>
+<p>this.on(&#39;player.AsyncPlayerChatEvent&#39;, function (e) { });</p>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
 <p>This event will sometimes fire synchronously, depending on how it was triggered. <p> The constructor provides a boolean to indicate if the event was fired synchronously or asynchronously. When asynchronous, this event can be called from any thread, sans the main thread, and has limited access to the API. <p> If a player is the direct cause of this event by an incoming packet, this event will be asynchronous. If a plugin triggers this event by compelling a player to chat, this event will be synchronous. <p> Care should be taken to check <code>#isAsynchronous()</code> and treat the event appropriately.</p>
@@ -569,7 +570,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <hr>
 <hr>
-<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
 
 
           </section>

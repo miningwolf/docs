@@ -3,6 +3,8 @@
 >io.wolfscript.event.player.PlayerRegisterChannelEvent
 >Extends [`PlayerChannelEvent`](PlayerChannelEvent.md)
 
+this.on('player.PlayerRegisterChannelEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -187,6 +189,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

@@ -3,6 +3,8 @@
 >io.wolfscript.event.entity.EntityDamageByEntityEvent
 >Extends [`EntityDamageEvent`](EntityDamageEvent.md)
 
+this.on('entity.EntityDamageByEntityEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -319,6 +321,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

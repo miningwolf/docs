@@ -73,8 +73,8 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="wolfscript-by-mining-wolf">WolfScript by Mining Wolf</h1>
-<h3 id="getting-started-preferred-">Getting started  (Preferred)</h3>
-<p>Place <code>minecraft.jar</code> in the <code>/plugins</code> directory of the Spigot (or Bukkit or CraftBukkit) server. </p>
+<h3 id="getting-started-preferred-wolfbuk-api-">Getting started  (Preferred WolfBuk API)</h3>
+<p>Place <code>wolfscript.jar</code> in the <code>/plugins</code> directory of the Spigot (or Bukkit or CraftBukkit) server. </p>
 <p>Create a new subdirectory <code>wolftest</code> of <code>/plugins</code></p>
 <p>In /plugins/wolftest, place two files</p>
 <h4 id="package-json">Package.json</h4>
@@ -97,8 +97,8 @@ exports.disable = <span class="hljs-function"><span class="hljs-keyword">functio
 <pre><code> <span class="hljs-title">java</span> -jar spigot.jar
 </code></pre><p>Tip:  use npm to package and distribute your wolf packs.  The wolfscript plugin will look in both the plugins directory as well as the node_modules subdirectory.</p>
 <p>Tip:  if this is the first time running spigot.jar you will need to accept the EULA for Minecraft.  Try running once, then edit eula.txt (change &quot;false&quot; to &quot;true&quot;) then rerun.</p>
-<h3 id="getting-started-canarymod-">Getting started (CanaryMod)</h3>
-<p>Place <code>minecraft.jar</code> in the <code>/pluginlangs</code> directory of the CanaryMod server. </p>
+<h3 id="getting-started-alternate-wolfcanary-api-">Getting started (Alternate WolfCanary API)</h3>
+<p>Place <code>wolfscript.jar</code> in the <code>/pluginlangs</code> directory of the CanaryMod server. </p>
 <p>Edit <code>server.cfg</code> to include <code>plugin-dev-mode=true</code> (to allow loading of plugins from directories, unless you want to zip or jar your WolfScript plugins).</p>
 <p>Create a new subdirectory <code>wolftest</code> of <code>/plugins</code></p>
 <p>In /plugins/wolftest, place two files</p>
@@ -111,7 +111,7 @@ exports.disable = <span class="hljs-function"><span class="hljs-keyword">functio
 <span class="hljs-setting">version = <span class="hljs-value"><span class="hljs-number">1.0</span></span></span>
 </code></pre><h4 id="main-js">main.js</h4>
 <pre><code class="lang-js">exports.enable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{ 
-    <span class="hljs-keyword">this</span>.getLogman().info(<span class="hljs-string">"Hello World"</span>);
+    <span class="hljs-keyword">this</span>.getLogger().info(<span class="hljs-string">"Hello World"</span>);
  };
 exports.disable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span>{};
 </code></pre>

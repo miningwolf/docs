@@ -3,6 +3,8 @@
 >io.wolfscript.event.inventory.FurnaceExtractEvent
 >Extends [`BlockExpEvent`](../block/BlockExpEvent.md)
 
+this.on('inventory.FurnaceExtractEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -230,6 +232,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 

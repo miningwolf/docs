@@ -3,6 +3,8 @@
 >io.wolfscript.event.vehicle.VehicleUpdateEvent
 >Extends [`VehicleEvent`](VehicleEvent.md)
 
+this.on('vehicle.VehicleUpdateEvent', function (e) { });
+
 ---
 
 ### Class Overview
@@ -155,6 +157,6 @@ Returns |
 ---
 
 
-###### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
+##### This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.
 	
 
