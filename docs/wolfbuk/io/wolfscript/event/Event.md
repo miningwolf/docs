@@ -1,10 +1,6 @@
 ## Event __class__
 
 >io.wolfscript.event.Event
-``` javascript
-this.on('event.Event', function (e) { });
-```
-
 
 ---
 

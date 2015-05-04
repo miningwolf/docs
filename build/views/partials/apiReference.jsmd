@@ -47,7 +47,7 @@
 	{
 	    @:>Implements @{fnNameClean(mainItem.implements.join(", "))}
 	}
-	if (mainItem.qualifiedname.substr(0,20) == "io.wolfscript.event." && mainItem.type == "class")
+	if (mainItem.qualifiedname.substr(0,20) == "io.wolfscript.event." && mainItem.type == "class" && mainItem.extends)
 	{
 		@:``` javascript
 	 	@:this.on('@helpers.fnEventName(mainItem.qualifiedname) ', function (e) @brackets );

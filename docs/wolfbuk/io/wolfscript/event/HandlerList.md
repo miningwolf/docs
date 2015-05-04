@@ -1,10 +1,6 @@
 ## HandlerList __class__
 
 >io.wolfscript.event.HandlerList
-``` javascript
-this.on('event.HandlerList', function (e) { });
-```
-
 
 ---
 

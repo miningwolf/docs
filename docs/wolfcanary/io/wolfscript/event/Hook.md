@@ -1,10 +1,6 @@
 ## Hook __class__
 
 >io.wolfscript.event.Hook
-``` javascript
-this.on('event.Hook', function (e) { });
-```
-
 
 ---
 

@@ -1,10 +1,6 @@
 ## Dispatcher __class__
 
 >io.wolfscript.event.Dispatcher
-``` javascript
-this.on('event.Dispatcher', function (e) { });
-```
-
 
 ---
 
