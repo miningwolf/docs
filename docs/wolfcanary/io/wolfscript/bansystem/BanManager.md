@@ -14,17 +14,17 @@ new __BanManager__() <br> _BanManager constructor_ | _constructor_
  readonly property __AllBans__ <br> _Get: Get all bans_ | `Ban[]`
  function __isIpBanned__(ip) <br> _Check if the given IP is banned_ | `boolean`
  function __issueBan__(player, reason) <br> _Issue a permanent ban for this player with a given reason_ | `void`
- function __issueBan__(player, reason, time) <br> _Issue a temporary ban._ | `void`
+ function __issueBan__(player, reason, time) <br> _issueBan method_ | `void`
  function __getAllBans__(banType) <br> _Get all bans of a certain BanType_ | `Ban[]`
  function __getBan__(uuid) <br> _Gets a [`Ban`](Ban.md) for a given player's uuid_ | [`Ban`](Ban.md)
- function __isBanned__(subject) <br> _Check if banned and unban if ban has expired. Returns true if still_ | `boolean`
+ function __isBanned__(subject) <br> _isBanned method_ | `boolean`
  function __issueBan__(ban) <br> _Issues a ban using the given [`Ban`](Ban.md)_ | `void`
  function __getBanFromName__(player) <br> _Gets a [`Ban`](Ban.md) for a given player's name_ | [`Ban`](Ban.md)
  function __issueIpBan__(player, reason, bantime) <br> _issueIpBan method_ | `void`
- function __issueIpBan__(player, reason, time) <br> _Issue an IP Ban with the given amount of time_ | `void`
+ function __issueIpBan__(player, reason, time) <br> _issueIpBan method_ | `void`
  function __issueIpBan__(player, reason) <br> _Ban player by IP_ | `void`
- function __reload__() <br> _Take a string and parse an amount of seconds. A String should be_ | `void`
- function __unban__(subject) <br> _Unban a subject, player or ip_ | `void`
+ function __reload__() <br> _Reloads the bans from datasource_ | `void`
+ function __unban__(subject) <br> _unban method_ | `void`
  function __unban__(player) <br> _Unban this player (this will NOT work with IPBans!)_ | `void`
 
 
@@ -85,13 +85,13 @@ Returns |
 
 ##### <a id='issueban'></a>public  function __issueBan__(player, reason, time)
 
-_Issue a temporary ban._
+_issueBan method_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | the `Player` being banned
-reason | `String` | the reason for the ban
-time | `String` | The time component must be NUMBER HOUR/DAY/WEEK/MONTH. <br> Example: /ban player Being incredibly stupid 5 HOURS If you put nothing as time unit, it will evaluate as HOURS!
+player | `Player` | player argument
+reason | `String` | reason argument
+time | `String` | time argument
 
 Returns | 
 --- | 
@@ -126,15 +126,15 @@ Returns | Description
 
 ##### <a id='isbanned'></a>public  function __isBanned__(subject)
 
-_Check if banned and unban if ban has expired. Returns true if still banned, false otherwise. THIS WILL ALSO WORK FOR IP!_
+_isBanned method_
 
 Argument | Type | Description  
 --- | --- | --- 
-subject | `String` | the uuid/ip of the subject who was banned
+subject | `String` | subject argument
 
-Returns | Description
---- | --- 
-`boolean` | `true` if banned; `false` if not
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='issueban'></a>public  function __issueBan__(ban)
@@ -180,13 +180,13 @@ Returns |
 
 ##### <a id='issueipban'></a>public  function __issueIpBan__(player, reason, time)
 
-_Issue an IP Ban with the given amount of time_
+_issueIpBan method_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | the `Player` who's IP is being banned
-reason | `String` | the reason for the ban
-time | `String` | The time component must be NUMBER HOUR/DAY/WEEK/MONTH. <br> Example: /ban player Being incredibly stupid 5 HOURS If you put nothing as time unit, it will evaluate as HOURS!
+player | `Player` | player argument
+reason | `String` | reason argument
+time | `String` | time argument
 
 Returns | 
 --- | 
@@ -209,44 +209,20 @@ Returns |
 
 ##### <a id='reload'></a>public  function __reload__()
 
-_Take a string and parse an amount of seconds. A String should be formatted like this: number hours|days|months Ex: 1 month and it will return the amount of seconds that contain one month_
+_Reloads the bans from datasource_
 
-Returns | Description
---- | --- 
-`void` | long amount of seconds /
-    private long parseTimeSpec(String ts) throws NumberFormatException {
-        String[] split = ts.split(" ");
-
-        if (split.length < 2) {
-            return -1;
-        }
-        long seconds = Integer.parseInt(split[0]);
-
-        if (split[1].toLowerCase().startsWith("hour")) {
-            seconds = 3600;
-        }
-        else if (split[1].toLowerCase().startsWith("day")) {
-            seconds = 86400;
-        }
-        else if (split[1].toLowerCase().startsWith("week")) {
-            seconds = 604800;
-        }
-        else if (split[1].toLowerCase().startsWith("month")) {
-            seconds = 2629743;
-        }
-        return seconds;
-    }
-
-    /** Reloads the bans from datasource
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='unban'></a>public  function __unban__(subject)
 
-_Unban a subject, player or ip_
+_unban method_
 
 Argument | Type | Description  
 --- | --- | --- 
-subject | `String` | the uuid/ip of the subject
+subject | `String` | subject argument
 
 Returns | 
 --- | 

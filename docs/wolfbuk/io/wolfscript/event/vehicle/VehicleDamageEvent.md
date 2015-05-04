@@ -12,10 +12,9 @@ Raised when a vehicle receives damage.
 
 Method | Type   
 --- | :--- 
-new __VehicleDamageEvent__(Vehicle, Entity, int) <br> _VehicleDamageEvent constructor_ | _constructor_
 new __VehicleDamageEvent__(Vehicle, Entity, double) <br> _VehicleDamageEvent constructor_ | _constructor_
  readonly property __Attacker__ <br> _Get: Gets the Entity that is attacking the vehicle_ | `Entity`
-  property __Damage__ <br> _Get: Gets the damage done to the vehicle<br>Set: This method exists for legacy reasons to provide backwards_ | `double`
+  property __Damage__ <br> _Get: Gets the damage done to the vehicle<br>Set: Sets the damage done to the vehicle_ | `double`
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
@@ -30,7 +29,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -43,6 +42,7 @@ final function __isAsynchronous__() <br> _Any custom event that should not by sy
 ### Public Constructors for [`VehicleDamageEvent`](VehicleDamageEvent.md)
 
 ##### <a id='vehicledamageevent'></a>new __VehicleDamageEvent__(Vehicle, Entity, int) 
+_Deprecated_
 
 _VehicleDamageEvent constructor_
 
@@ -78,17 +78,11 @@ Get | Description
 
 ##### <a id='damage'></a>public   property __Damage__
 
-_Get: Gets the damage done to the vehicle<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets the damage done to the vehicle<br>Set: Sets the damage done to the vehicle_
 
 Get | Description
 --- | --- 
-`double` | the damage /
-    @Deprecated
-    public int _INVALID_getDamage() {
-        return NumberConversions.ceil(getDamage());
-    }
-
-    /** Sets the damage done to the vehicle
+`double` | the damage done to the vehicle
 
 Set | Type | Description  
 --- | --- | --- 
@@ -212,11 +206,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

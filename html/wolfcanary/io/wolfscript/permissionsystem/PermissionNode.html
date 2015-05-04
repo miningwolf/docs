@@ -137,11 +137,11 @@
 </thead>
 <tbody>
 <tr>
-<td>new <strong>PermissionNode</strong>(name, value) <br> <em>ID in the database</em></td>
+<td>new <strong>PermissionNode</strong>(name, value) <br> <em>Create a new PermissionNode.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>  property <strong>Id</strong> <br> <em>Get: Get the database ID for this node<br>Set: Set the database ID for this Node.</em></td>
+<td>  property <strong>Id</strong> <br> <em>Id property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@
 <td style="text-align:left"><a href="PermissionNode.html"><code>PermissionNode</code></a></td>
 </tr>
 <tr>
-<td> function <strong>hasChilds</strong>() <br> <em>Get all childs for this node</em></td>
+<td> function <strong>hasChilds</strong>() <br> <em>Check if this node has childs</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -205,14 +205,8 @@
 <hr>
 <h3 id="public-constructors-for-permissionnode-permissionnode-md-">Public Constructors for <a href="PermissionNode.html"><code>PermissionNode</code></a></h3>
 <h5 id="-a-id-permissionnode-a-new-__permissionnode__-name-value-"><a id='permissionnode'></a>new <strong>PermissionNode</strong>(name, value)</h5>
-<p>_ID in the database /
-    private int id;</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-built_in">Map</span><span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, PermissionNode<span class="hljs-subst">&gt;</span> childs <span class="hljs-subst">=</span> <span class="hljs-literal">new</span> HashMap<span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, PermissionNode<span class="hljs-subst">&gt;</span>();
-
-<span class="hljs-keyword">private</span> PermissionNode <span class="hljs-keyword">parent</span> <span class="hljs-subst">=</span> <span class="hljs-built_in">null</span>;
-
-<span class="hljs-comment">/** Create a new PermissionNode._</span>
-</code></pre><table>
+<p><em>Create a new PermissionNode.</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -236,7 +230,7 @@
 <hr>
 <h3 id="public-properties-for-permissionnode-permissionnode-md-">Public Properties for <a href="PermissionNode.html"><code>PermissionNode</code></a></h3>
 <h5 id="-a-id-id-a-public-property-__id__"><a id='id'></a>public   property <strong>Id</strong></h5>
-<p><em>Get: Get the database ID for this node<br>Set: Set the database ID for this Node. <b style="color:red">Do not use this unless you&#39;re dead sure what you&#39;re doing! it is HIGHLY unlikely that you will need this</b></em></p>
+<p><em>Id property</em></p>
 <table>
 <thead>
 <tr>
@@ -263,7 +257,7 @@
 <tr>
 <td>id</td>
 <td><code>int</code></td>
-<td>the id to set</td>
+<td>id argument</td>
 </tr>
 </tbody>
 </table>
@@ -526,7 +520,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-haschilds-a-public-function-__haschilds__-"><a id='haschilds'></a>public  function <strong>hasChilds</strong>()</h5>
-<p><em>Get all childs for this node</em></p>
+<p><em>Check if this node has childs</em></p>
 <table>
 <thead>
 <tr>
@@ -537,16 +531,11 @@
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>a map of name=&gt;permissionNode pairs representing this nodes children /</td>
+<td>true if this node has children, false otherwise</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-built_in">Map</span><span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, PermissionNode<span class="hljs-subst">&gt;</span> getChilds() {
-    <span class="hljs-keyword">return</span> childs;
-}
-
-<span class="hljs-comment">/** Check if this node has childs</span>
-</code></pre><h5 id="-a-id-iswildcard-a-public-function-__iswildcard__-"><a id='iswildcard'></a>public  function <strong>isWildcard</strong>()</h5>
+<h5 id="-a-id-iswildcard-a-public-function-__iswildcard__-"><a id='iswildcard'></a>public  function <strong>isWildcard</strong>()</h5>
 <p><em>Check if this is an asterisk permission, granting access to all subsequent nodes</em></p>
 <table>
 <thead>

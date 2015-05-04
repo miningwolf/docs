@@ -12,7 +12,7 @@ Called when a piece of Armor has been destroyed
 Method | Type   
 --- | :--- 
 new __ArmorBroken__(player, armor) <br> _ArmorBroken constructor_ | _constructor_
- readonly property __Armor__ <br> _Get: Gets the armor that was broken<p/>_ | [`Item`](../../api/inventory/Item.md)
+ readonly property __Armor__ <br> _Armor property_ | [`Item`](../../api/inventory/Item.md)
  readonly property __Player__ <br> _Get: Gets the `Player` who's armor has broken_ | `Player`
  function __toString__() <br> _toString method_ | `String`
  |
@@ -44,11 +44,11 @@ armor | [`Item`](../../api/inventory/Item.md) | armor argument
 
 ##### <a id='armor'></a>public  readonly property __Armor__
 
-_Get: Gets the armor that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1_
+_Armor property_
 
-Get | Description
---- | --- 
-[`Item`](../../api/inventory/Item.md) | the tool that was broken
+Get | 
+--- | 
+[`Item`](../../api/inventory/Item.md) |
 
 
 

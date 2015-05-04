@@ -6,10 +6,7 @@
 
 ### Enum Overview
 
-Represents a villager NPC /
-public interface Villager extends Ageable, NPC {
-
-    /** Gets the current profession of this villager.
+Represents the various different Villager professions there may be.
 
 Item | Type   
 --- | :--- 

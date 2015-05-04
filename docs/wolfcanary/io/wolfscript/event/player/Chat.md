@@ -21,7 +21,7 @@ new __Chat__(player, format) <br> _Chat constructor_ | _constructor_
  readonly property __PlayerDisplayName__ <br> _Get: Get the currently used name for this player_ | `String`
  readonly property __ReceiverList__ <br> _Get: Get a list of all receivers for this message_ | `List<Player>`
  function __setReceiverList__() <br> _Override the list of receivers_ | `void`
- function __buildSendMessage__() <br> _Returns the map containing the placeholder => value mappings_ | `String`
+ function __buildSendMessage__() <br> _Create the message that will be sent from the placeholder list and the format._ | `String`
  function __addToReceiverList__(player) <br> _Add a `Player` to the receiver list. This better not be null!_ | `void`
  function __appendToMessage__(toAppend) <br> _Append the given String to the existing message_ | `void`
  function __removeFromReceiverList__(player) <br> _Remove a `Player` from the receiver list_ | `void`
@@ -169,16 +169,11 @@ Returns |
 
 ##### <a id='buildsendmessage'></a>public  function __buildSendMessage__()
 
-_Returns the map containing the placeholder => value mappings_
+_Create the message that will be sent from the placeholder list and the format._
 
 Returns | Description
 --- | --- 
-`String` | placeholder map /
-    public Map<String, String> getPlaceholderMapping() {
-        return placeholders;
-    }
-
-    /** Create the message that will be sent from the placeholder list and the format.
+`String` | message
 
 
 ##### <a id='addtoreceiverlist'></a>public  function __addToReceiverList__(player)

@@ -10,7 +10,7 @@ EulerAngle is used to represent 3 angles, one for each axis (x, y, z). The angle
 
 Method | Type   
 --- | :--- 
-new __EulerAngle__(x, y, z) <br> _A EulerAngle with every axis set to 0_ | _constructor_
+new __EulerAngle__(x, y, z) <br> _Creates a EularAngle with each axis set to the_ | _constructor_
   property __X__ <br> _Get: Returns the angle on the x axis in radians<br>Set: Return a EulerAngle which is the result of changing_ | `double`
   property __Y__ <br> _Get: Returns the angle on the y axis in radians<br>Set: Return a EulerAngle which is the result of changing_ | `double`
   property __Z__ <br> _Get: Returns the angle on the z axis in radians<br>Set: Return a EulerAngle which is the result of changing_ | `double`
@@ -28,14 +28,7 @@ static final var __ZERO__ <br> _A EulerAngle with every axis set to 0_ | [`Euler
 
 ##### <a id='eulerangle'></a>new __EulerAngle__(x, y, z) 
 
-_A EulerAngle with every axis set to 0 /
-    public static final EulerAngle ZERO = new EulerAngle(0, 0, 0);
-
-    private final double x;
-    private final double y;
-    private final double z;
-
-    /** Creates a EularAngle with each axis set to the passed angle in radians_
+_Creates a EularAngle with each axis set to the passed angle in radians_
 
 Argument | Type | Description  
 --- | --- | --- 

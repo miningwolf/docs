@@ -135,19 +135,39 @@
 </thead>
 <tbody>
 <tr>
-<td>  property <strong>Id</strong> <br> <em>Get: get the ID of this kit<br>Set: Only set this if you&#39;re 110% sure what you&#39;re doing.</em></td>
+<td>  property <strong>Delay</strong> <br> <em>Delay property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>ItemsAsStringList</strong> <br> <em>Get: Mostly used for adding the items into the database</em></td>
-<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+<td> readonly property <strong>Content</strong> <br> <em>Content property</em></td>
+<td style="text-align:left"><code>List&lt;Item&gt;</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Id</strong> <br> <em>Set: Only set this if you&#39;re 110% sure what you&#39;re doing.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Owner</strong> <br> <em>Owner property</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Groups</strong> <br> <em>Groups property</em></td>
+<td style="text-align:left"><code>String[]</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Id</strong> <br> <em>Get: get the ID of this kit</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>  property <strong>Name</strong> <br> <em>Name property</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> function <strong>canBeGiven</strong>(player) <br> <em>Time between uses as unix timestamp applicable number</em></td>
+<td> readonly property <strong>ItemsAsStringList</strong> <br> <em>Get: Mostly used for adding the items into the database</em></td>
+<td style="text-align:left"><code>List&lt;String&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>canBeGiven</strong>(player) <br> <em>Tests if a given <code>Player</code> can receive this kit</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -155,15 +175,27 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
+<td> function <strong>setGroups</strong>() <br> <em>setGroups method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>setContent</strong>() <br> <em>setContent method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
 <td> function <strong>setContentFromStrings</strong>() <br> <em>Used to create a new item list from data coming from the database</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>setOwner</strong>() <br> <em>setOwner method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h3 id="public-properties-for-kit-kit-md-">Public Properties for <a href="Kit.html"><code>Kit</code></a></h3>
-<h5 id="-a-id-id-a-public-property-__id__"><a id='id'></a>public   property <strong>Id</strong></h5>
-<p><em>Get: get the ID of this kit<br>Set: Only set this if you&#39;re 110% sure what you&#39;re doing. Changing the ID will not always have an effect. If you want to copy a kit and create a new one, change this kit to your likings, then add it as new to the BackboneKits. A new ID will be auto-assigned then.</em></p>
+<h5 id="-a-id-delay-a-public-property-__delay__"><a id='delay'></a>public   property <strong>Delay</strong></h5>
+<p><em>Delay property</em></p>
 <table>
 <thead>
 <tr>
@@ -187,14 +219,14 @@
 </thead>
 <tbody>
 <tr>
-<td>id</td>
+<td>delay</td>
 <td><code>int</code></td>
-<td>id argument</td>
+<td>delay argument</td>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-itemsasstringlist-a-public-readonly-property-__itemsasstringlist__"><a id='itemsasstringlist'></a>public  readonly property <strong>ItemsAsStringList</strong></h5>
-<p><em>Get: Mostly used for adding the items into the database</em></p>
+<h5 id="-a-id-content-a-public-readonly-property-__content__"><a id='content'></a>public  readonly property <strong>Content</strong></h5>
+<p><em>Content property</em></p>
 <table>
 <thead>
 <tr>
@@ -203,7 +235,83 @@
 </thead>
 <tbody>
 <tr>
-<td><code>List&lt;String&gt;</code></td>
+<td><code>List&lt;Item&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-id-a-public-writeonly-property-__id__"><a id='id'></a>public  writeonly property <strong>Id</strong></h5>
+<p><em>Set: Only set this if you&#39;re 110% sure what you&#39;re doing. Changing the ID will not always have an effect. If you want to copy a kit and create a new one, change this kit to your likings, then add it as new to the BackboneKits. A new ID will be auto-assigned then.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>int</code></td>
+<td>id argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-owner-a-public-readonly-property-__owner__"><a id='owner'></a>public  readonly property <strong>Owner</strong></h5>
+<p><em>Owner property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-groups-a-public-readonly-property-__groups__"><a id='groups'></a>public  readonly property <strong>Groups</strong></h5>
+<p><em>Groups property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
+<p><em>Get: get the ID of this kit</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
 <td></td>
 </tr>
 </tbody>
@@ -239,59 +347,26 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-itemsasstringlist-a-public-readonly-property-__itemsasstringlist__"><a id='itemsasstringlist'></a>public  readonly property <strong>ItemsAsStringList</strong></h5>
+<p><em>Get: Mostly used for adding the items into the database</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;String&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-methods-for-kit-kit-md-">Public Methods for <a href="Kit.html"><code>Kit</code></a></h3>
 <h5 id="-a-id-canbegiven-a-public-function-__canbegiven__-player-"><a id='canbegiven'></a>public  function <strong>canBeGiven</strong>(player)</h5>
-<p>_Time between uses as unix timestamp applicable number /
-    private int delay;</p>
-<pre><code>/** Owner <span class="hljs-keyword">if</span> applicable /
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span>[] owners = <span class="hljs-literal">null</span>;
-
-/** Groups <span class="hljs-keyword">if</span> applicable /
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span>[] groups = <span class="hljs-literal">null</span>;
-
-/** List of last usages per player /
-<span class="hljs-keyword">private</span> Map&lt;<span class="hljs-built_in">String</span>, Long&gt; lastUsages = <span class="hljs-keyword">new</span> HashMap&lt;<span class="hljs-built_in">String</span>, Long&gt;();
-
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span> name;
-
-/** The content of this kit as IItems <span class="hljs-keyword">Each</span> list entry shall be a different Item /
-<span class="hljs-keyword">private</span> List&lt;Item&gt; content = <span class="hljs-keyword">new</span> ArrayList&lt;Item&gt;();
-
-<span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> getDelay() {
-    return delay;
-}
-
-<span class="hljs-keyword">public</span> void setDelay(<span class="hljs-built_in">int</span> delay) {
-    this.delay = delay;
-}
-
-<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span>[] getOwner() {
-    return owners;
-}
-
-<span class="hljs-keyword">public</span> void setOwner(<span class="hljs-built_in">String</span>[] owner) {
-    this.owners = owner;
-}
-
-<span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span>[] getGroups() {
-    return groups;
-}
-
-<span class="hljs-keyword">public</span> void setGroups(<span class="hljs-built_in">String</span>[] groups) {
-    this.groups = groups;
-}
-
-<span class="hljs-keyword">public</span> List&lt;Item&gt; getContent() {
-    return content;
-}
-
-<span class="hljs-keyword">public</span> void setContent(ArrayList&lt;Item&gt; content) {
-    this.content = content;
-}
-
-/** Tests <span class="hljs-keyword">if</span> a given `Player` can receive this kit_
-</code></pre><table>
+<p><em>Tests if a given <code>Player</code> can receive this kit</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -358,8 +433,53 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-setgroups-a-public-function-__setgroups__-"><a id='setgroups'></a>public  function <strong>setGroups</strong>()</h5>
+<p><em>setGroups method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setcontent-a-public-function-__setcontent__-"><a id='setcontent'></a>public  function <strong>setContent</strong>()</h5>
+<p><em>setContent method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-setcontentfromstrings-a-public-function-__setcontentfromstrings__-"><a id='setcontentfromstrings'></a>public  function <strong>setContentFromStrings</strong>()</h5>
 <p><em>Used to create a new item list from data coming from the database</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setowner-a-public-function-__setowner__-"><a id='setowner'></a>public  function <strong>setOwner</strong>()</h5>
+<p><em>setOwner method</em></p>
 <table>
 <thead>
 <tr>

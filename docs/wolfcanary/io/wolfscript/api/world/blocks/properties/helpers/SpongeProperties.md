@@ -11,7 +11,7 @@ Sponge properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyWet__(block, value) <br> _Sponge wet property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyWet__(block, value) <br> _Applies whether the `Sponge` is wet or not_ | [`Block`](../../Block.md)
 static final var __wet__ <br> _Sponge wet property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applywet'></a>public static function __applyWet__(block, value)
 
-_Sponge wet property, Values: true, false /
-    public static final BlockBooleanProperty wet = getInstanceFor(Sponge, "wet");
-
-    /** Applies whether the `Sponge` is wet or not_
+_Applies whether the `Sponge` is wet or not_
 
 Argument | Type | Description  
 --- | --- | --- 

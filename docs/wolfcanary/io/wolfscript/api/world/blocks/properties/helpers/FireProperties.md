@@ -11,7 +11,7 @@ Fire properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _Fire age property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyAge__(block, value) <br> _Applies age to the `Fire`_ | [`Block`](../../Block.md)
 static function __applyAlt__(block, value) <br> _Applies whether the `Fire` is alternated or not, Official information about this is still unknown_ | [`Block`](../../Block.md)
 static function __applyEast__(block, value) <br> _Applies whether the `Fire` texture is shown east or not_ | [`Block`](../../Block.md)
 static function __applyNorth__(block, value) <br> _Applies whether the `Fire` texture is shown north or not_ | [`Block`](../../Block.md)
@@ -39,28 +39,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyage'></a>public static function __applyAge__(block, value)
 
-_Fire age property, Values: 0 - 15 /
-    public static final BlockIntegerProperty age = getInstanceFor(FireBlock, "age");
-
-    /** Fire upper property, Values: 0 - 2 /
-    public static final BlockIntegerProperty upper = getInstanceFor(FireBlock, "upper");
-
-    /** Fire alt property, Values: true, false /
-    public static final BlockBooleanProperty alt = getInstanceFor(FireBlock, "alt");
-
-    /** Fire north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(FireBlock, "north");
-
-    /** Fire east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(FireBlock, "east");
-
-    /** Fire south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(FireBlock, "south");
-
-    /** Fire west property, Values: true, false /
-    public static final BlockBooleanProperty west = getInstanceFor(FireBlock, "west");
-
-    /** Applies age to the `Fire`_
+_Applies age to the `Fire`_
 
 Argument | Type | Description  
 --- | --- | --- 

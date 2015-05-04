@@ -13,9 +13,10 @@ Method | Type
 --- | :--- 
 static function __applyEast__(block, value) <br> _Applies east to the {@code Redstone Wire}_ | [`Block`](../../Block.md)
 static function __applyNorth__(block, value) <br> _Applies north to the {@code Redstone Wire}_ | [`Block`](../../Block.md)
-static function __applyPower__(block, value) <br> _Redstone Wire power property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyPower__(block, value) <br> _Applies power to the {@code Redstone Wire}_ | [`Block`](../../Block.md)
 static function __applySouth__(block, value) <br> _Applies south to the {@code Redstone Wire}_ | [`Block`](../../Block.md)
 static function __applyWest__(block, value) <br> _Applies west to the {@code Redstone Wire}_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `AttachPosition`
 static final var __power__ <br> _Redstone Wire power property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 static final var __north__ <br> _Redstone Wire north property, Values: `AttachPosition`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __south__ <br> _Redstone Wire south property, Values: `AttachPosition`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
@@ -63,22 +64,7 @@ Returns | Description
 
 ##### <a id='applypower'></a>public static function __applyPower__(block, value)
 
-_Redstone Wire power property, Values: 0 - 15 /
-    public static final BlockIntegerProperty power = getInstanceFor(RedstoneWire, "power");
-
-    /** Redstone Wire north property, Values: `AttachPosition` /
-    public static final BlockEnumProperty north = getInstanceFor(RedstoneWire, "north");
-
-    /** Redstone Wire south property, Values: `AttachPosition` /
-    public static final BlockEnumProperty south = getInstanceFor(RedstoneWire, "south");
-
-    /** Redstone Wire east property, Values: `AttachPosition` /
-    public static final BlockEnumProperty east = getInstanceFor(RedstoneWire, "east");
-
-    /** Redstone Wire west property, Values: `AttachPosition` /
-    public static final BlockEnumProperty west = getInstanceFor(RedstoneWire, "west");
-
-    /** Redstone Wire attach positions_
+_Applies power to the {@code Redstone Wire}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -116,6 +102,19 @@ value | `AttachPosition` | the `AttachPosition` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`AttachPosition` |
 
 
 ---

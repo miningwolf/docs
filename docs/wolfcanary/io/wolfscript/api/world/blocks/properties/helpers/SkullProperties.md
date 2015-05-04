@@ -11,7 +11,7 @@ Skull properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Skull facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Skull`_ | [`Block`](../../Block.md)
 static function __applyNoDrop__(block, value) <br> _Applies whether the `Skull` can drop or not_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Skull facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __noDrop__ <br> _Skull nodrop property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
@@ -29,13 +29,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Skull facing property, Values: [`BlockFace`](../../BlockFace.md) /
-    public static final BlockEnumProperty facing = getInstanceFor(SkeletonHead, "facing");
-
-    /** Skull nodrop property, Values: true, false /
-    public static final BlockBooleanProperty noDrop = getInstanceFor(SkeletonHead, "nodrop");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Skull`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Skull`_
 
 Argument | Type | Description  
 --- | --- | --- 

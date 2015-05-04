@@ -10,11 +10,11 @@ Manages services and service providers. Services are an interface specifying a l
 
 Method | Type   
 --- | :--- 
- readonly property __KnownServices__ <br> _Get: Get registrations of providers for a service. The returned list is_ | `Collection<Class<?>>`
- function __getRegistrations__(plugin) <br> _Queries for a provider. This may return if no provider has been_ | `List<RegisteredServiceProvider<?>>`
+ readonly property __KnownServices__ <br> _Get: Get a list of known services. A service is known if it has registered_ | `Collection<Class<?>>`
+ function __getRegistrations__(plugin) <br> _Get registrations of providers for a plugin._ | `List<RegisteredServiceProvider<?>>`
  function __unregister__(provider) <br> _Unregister a particular provider for a particular service._ | `void`
  function __unregister__(provider) <br> _Unregister a particular provider._ | `void`
- function __unregisterAll__(plugin) <br> _Register a provider of a service._ | `void`
+ function __unregisterAll__(plugin) <br> _Unregister all the providers registered by a particular plugin._ | `void`
 
 
 
@@ -25,14 +25,11 @@ Method | Type
 
 ##### <a id='knownservices'></a>public  readonly property __KnownServices__
 
-_Get: Get registrations of providers for a service. The returned list is unmodifiable._
+_Get: Get a list of known services. A service is known if it has registered providers for it._
 
 Get | Description
 --- | --- 
-`Collection<Class<?>>` | list of registrations /
-    public <T> Collection<RegisteredServiceProvider<T>> getRegistrations(Class<T> service);
-
-    /** Get a list of known services. A service is known if it has registered providers for it.
+`Collection<Class<?>>` | list of known services
 
 
 
@@ -42,7 +39,7 @@ Get | Description
 
 ##### <a id='getregistrations'></a>public  function __getRegistrations__(plugin)
 
-_Queries for a provider. This may return if no provider has been registered for a service. The highest priority provider is returned._
+_Get registrations of providers for a plugin._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -50,10 +47,7 @@ plugin | [`Plugin`](Plugin.md) | The plugin
 
 Returns | Description
 --- | --- 
-`List<RegisteredServiceProvider<?>>` | provider or null /
-    public <T> T load(Class<T> service);
-
-    /** Queries for a provider registration. This may return if no provider has been registered for a service.
+`List<RegisteredServiceProvider<?>>` | provider registration or null
 
 
 ##### <a id='unregister'></a>public  function __unregister__(provider)
@@ -84,11 +78,11 @@ Returns |
 
 ##### <a id='unregisterall'></a>public  function __unregisterAll__(plugin)
 
-_Register a provider of a service._
+_Unregister all the providers registered by a particular plugin._
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](Plugin.md) | plugin with the provider
+plugin | [`Plugin`](Plugin.md) | The plugin
 
 Returns | 
 --- | 

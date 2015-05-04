@@ -158,7 +158,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>This event is called when the player drags an item in their cursor across the inventory. The ItemStack is distributed across the slots the HumanEntity dragged over. The method of distribution is described by the DragType returned by <code>#getType()</code>. <p> Canceling this event will result in none of the changes described in <code>#getNewItems()</code> being applied to the Inventory. <p> Because InventoryDragEvent occurs within a modification of the Inventory, not all Inventory related methods are safe to use. <p> The following should never be invoked by an EventHandler for InventoryDragEvent using the HumanEntity or InventoryView associated with this event. <ul> <li><code>HumanEntity#closeInventory()</code> <li><code>HumanEntity#openInventory(Inventory)</code> <li>{@link HumanEntity#openWorkbench(Location, boolean)} <li>{@link HumanEntity#openEnchanting(Location, boolean)} <li><code>InventoryView#close()</code> </ul> To invoke one of these methods, schedule a task using {@link WolfScriptScheduler#runTask(Plugin, Runnable)}, which will run the task on the next tick.  Also be aware that this is not an exhaustive list, and other methods could potentially create issues as well. <p> Assuming the EntityHuman associated with this event is an instance of a Player, manipulating the MaxStackSize or contents of an Inventory will require an Invocation of <code>Player#updateInventory()</code>. <p> Any modifications to slots that are modified by the results of this InventoryDragEvent will be overwritten. To change these slots, this event should be cancelled and the changes applied. Alternatively, scheduling a task using {@link WolfScriptScheduler#runTask(Plugin, Runnable)}, which would execute the task on the next tick, would work as well.</p>
+<p>class InventoryDragEvent</p>
 <table>
 <thead>
 <tr>
@@ -192,7 +192,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 <td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>RawSlots</strong> <br> <em>Get: Gets all items to be added to the inventory in this drag.</em></td>
+<td> readonly property <strong>RawSlots</strong> <br> <em>Get: Gets the raw slot ids to be changed in this drag.</em></td>
 <td style="text-align:left"><code>Set&lt;Integer&gt;</code></td>
 </tr>
 <tr>
@@ -284,7 +284,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -421,7 +421,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 </tbody>
 </table>
 <h5 id="-a-id-rawslots-a-public-readonly-property-__rawslots__"><a id='rawslots'></a>public  readonly property <strong>RawSlots</strong></h5>
-<p><em>Get: Gets all items to be added to the inventory in this drag.</em></p>
+<p><em>Get: Gets the raw slot ids to be changed in this drag.</em></p>
 <table>
 <thead>
 <tr>
@@ -432,16 +432,11 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 <tbody>
 <tr>
 <td><code>Set&lt;Integer&gt;</code></td>
-<td>map from raw slot id to new ItemStack /</td>
+<td>list of raw slot ids, suitable for getView().getItem(int)</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-built_in">Map</span><span class="hljs-subst">&lt;</span><span class="hljs-built_in">Integer</span>, ItemStack<span class="hljs-subst">&gt;</span> getNewItems() {
-    <span class="hljs-keyword">return</span> Collections<span class="hljs-built_in">.</span>unmodifiableMap(addedItems);
-}
-
-<span class="hljs-comment">/** Gets the raw slot ids to be changed in this drag.</span>
-</code></pre><h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
+<h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
 <p><em>Get: Gets the DragType that describes the behavior of ItemStacks placed after this InventoryDragEvent. <p> The ItemStacks and the raw slots that they&#39;re being applied to can be found using <code>#getNewItems()</code>.</em></p>
 <table>
 <thead>
@@ -733,18 +728,17 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

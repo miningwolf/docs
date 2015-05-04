@@ -179,11 +179,11 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>hasCommand</strong>(command) <br> <em>Checks whether this manager has <tt>command</tt>.</em></td>
+<td> function <strong>hasCommand</strong>(command) <br> <em>hasCommand method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>matchCommand</strong>(caller, command, onlySubcommands) <br> <em>Register an already implemented WolfCommand to the help system.</em></td>
+<td> function <strong>matchCommand</strong>(caller, command, onlySubcommands) <br> <em>Build a list of commands matching the given string.</em></td>
 <td style="text-align:left"><code>StringBuilder</code></td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@
 <td style="text-align:left"><code>List&lt;String&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>unregisterCommand</strong>(name) <br> <em>Remove a command from the command list.</em></td>
+<td> function <strong>unregisterCommand</strong>(name) <br> <em>unregisterCommand method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -247,7 +247,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-hascommand-a-public-function-__hascommand__-command-"><a id='hascommand'></a>public  function <strong>hasCommand</strong>(command)</h5>
-<p><em>Checks whether this manager has <tt>command</tt>.</em></p>
+<p><em>hasCommand method</em></p>
 <table>
 <thead>
 <tr>
@@ -260,7 +260,7 @@
 <tr>
 <td>command</td>
 <td><code>String</code></td>
-<td>The command to search for.</td>
+<td>command argument</td>
 </tr>
 </tbody>
 </table>
@@ -268,18 +268,17 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td><tt>true</tt> if this manager has <tt>command</tt>, <tt>false</tt> otherwise.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-matchcommand-a-public-function-__matchcommand__-caller-command-onlysubcommands-"><a id='matchcommand'></a>public  function <strong>matchCommand</strong>(caller, command, onlySubcommands)</h5>
-<p><em>Register an already implemented WolfCommand to the help system. This will automatically update the help system as well.</em></p>
+<p><em>Build a list of commands matching the given string.</em></p>
 <table>
 <thead>
 <tr>
@@ -437,7 +436,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-unregistercommand-a-public-function-__unregistercommand__-name-"><a id='unregistercommand'></a>public  function <strong>unregisterCommand</strong>(name)</h5>
-<p><em>Remove a command from the command list.</em></p>
+<p><em>unregisterCommand method</em></p>
 <table>
 <thead>
 <tr>
@@ -450,7 +449,7 @@
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>the name of the command</td>
+<td>name argument</td>
 </tr>
 </tbody>
 </table>
@@ -458,13 +457,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td><tt>true</tt> if the command was removed, <tt>false</tt> otherwise.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

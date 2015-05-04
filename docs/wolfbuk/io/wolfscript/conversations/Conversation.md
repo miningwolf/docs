@@ -18,12 +18,12 @@ new __Conversation__(plugin, forWhom, firstPrompt) <br> _Initializes a new Conve
  readonly property __Prefix__ <br> _Get: Gets the [`ConversationPrefix`](ConversationPrefix.md) that prepends all output from this_ | [`ConversationPrefix`](ConversationPrefix.md)
  readonly property __State__ <br> _Get: Returns Returns the current state of the conversation._ | `ConversationState`
  writeonly property __LocalEchoEnabled__ <br> _Set: Sets the status of local echo for this conversation. If local echo is_ | `void`
- function __abandon__() <br> _Adds a [`ConversationAbandonedListener`](ConversationAbandonedListener.md)._ | `void`
+ function __abandon__() <br> _Abandons and resets the current conversation. Restores the user's_ | `void`
  function __acceptInput__(input) <br> _Passes player input into the current prompt. The next prompt (as_ | `void`
  function __begin__() <br> _Displays the first prompt of this conversation and begins redirecting_ | `void`
  function __isLocalEchoEnabled__() <br> _Gets the status of local echo for this conversation. If local echo is_ | `boolean`
  function __isModal__() <br> _Gets the modality of this conversation. If a conversation is modal, all_ | `boolean`
- function __outputNextPrompt__() <br> _Abandons and resets the current conversation. Restores the user's_ | `void`
+ function __outputNextPrompt__() <br> _Displays the next user prompt and abandons the conversation if the next_ | `void`
 
 
 
@@ -124,7 +124,7 @@ localEchoEnabled | `boolean` | The status of local echo.
 
 ##### <a id='abandon'></a>public  function __abandon__()
 
-_Adds a [`ConversationAbandonedListener`](ConversationAbandonedListener.md)._
+_Abandons and resets the current conversation. Restores the user's normal chat behavior._
 
 Returns | 
 --- | 
@@ -173,7 +173,7 @@ Returns | Description
 
 ##### <a id='outputnextprompt'></a>public  function __outputNextPrompt__()
 
-_Abandons and resets the current conversation. Restores the user's normal chat behavior._
+_Displays the next user prompt and abandons the conversation if the next prompt is null._
 
 Returns | 
 --- | 

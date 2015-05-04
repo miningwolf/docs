@@ -12,7 +12,7 @@ Piston Extend Hook<br> Called when a Piston extends
 Method | Type   
 --- | :--- 
 new __PistonExtend__(piston, moving) <br> _PistonExtend constructor_ | _constructor_
- readonly property __Moving__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) the piston is pushing/pulling_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Moving__ <br> _Moving property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Piston__ <br> _Get: Gets the piston [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -51,11 +51,11 @@ moving | [`Block`](../../api/world/blocks/Block.md) | moving argument
 
 ##### <a id='moving'></a>public  readonly property __Moving__
 
-_Get: Gets the [`Block`](../../api/world/blocks/Block.md) the piston is pushing/pulling_
+_Moving property_
 
-Get | Description
---- | --- 
-[`Block`](../../api/world/blocks/Block.md) | [`Block`](../../api/world/blocks/Block.md)
+Get | 
+--- | 
+[`Block`](../../api/world/blocks/Block.md) |
 
 
 

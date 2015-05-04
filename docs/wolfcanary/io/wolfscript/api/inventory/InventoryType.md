@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-Inventory Type enum <p/> List of all inventory types
+enum InventoryType
 
 Item | Type   
 --- | :--- 

@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-Server Task <p/> Extend this class to add synchronized tasks to the Server queue.<br> Task are set to execute along with the Server's main thread.<br> Exact timing is not guaranteed, and based on how often the Server ticks.
+class ServerTask
 
 Method | Type   
 --- | :--- 

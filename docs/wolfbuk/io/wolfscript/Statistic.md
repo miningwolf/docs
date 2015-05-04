@@ -65,8 +65,8 @@ FURNACE_INTERACTION: <br> _FURNACE_INTERACTION Statistic_ | Statistic
 CRAFTING_TABLE_INTERACTION: <br> _CRAFTING_TABLE_INTERACTION Statistic_ | Statistic
 CHEST_OPENED: <br> _CHEST_OPENED Statistic_ | Statistic
  readonly property __Type__ <br> _Get: Gets the type of this statistic._ | `Type`
- function __isBlock__() <br> _Checks if this is a substatistic dealing with blocks._ | `boolean`
- function __isSubstatistic__() <br> _Checks if this is a substatistic._ | `boolean`
+ function __isBlock__() <br> _isBlock method_ | `boolean`
+ function __isSubstatistic__() <br> _isSubstatistic method_ | `boolean`
 
 
 
@@ -91,20 +91,20 @@ Get | Description
 
 ##### <a id='isblock'></a>public  function __isBlock__()
 
-_Checks if this is a substatistic dealing with blocks. <p> This is a redundant method and equivalent to checking <code>getType() == Type.BLOCK</code>_
+_isBlock method_
 
-Returns | Description
---- | --- 
-`boolean` | true if this deals with blocks
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='issubstatistic'></a>public  function __isSubstatistic__()
 
-_Checks if this is a substatistic. <p> A substatistic exists en masse for each block, item, or entitytype, depending on `#getType()`. <p> This is a redundant method and equivalent to checking <code>getType() != Type.UNTYPED</code>_
+_isSubstatistic method_
 
-Returns | Description
---- | --- 
-`boolean` | true if this is a substatistic
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

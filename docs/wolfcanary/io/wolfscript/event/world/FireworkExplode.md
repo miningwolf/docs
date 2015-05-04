@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-FireworkExplode <p/> Called when a Firework Rocket is to explode
+class FireworkExplode
 
 Method | Type   
 --- | :--- 

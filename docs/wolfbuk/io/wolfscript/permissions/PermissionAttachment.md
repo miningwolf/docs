@@ -15,7 +15,7 @@ new __PermissionAttachment__(plugin, Permissible) <br> _PermissionAttachment con
  readonly property __Plugin__ <br> _Get: Gets the plugin responsible for this attachment_ | [`Plugin`](../plugin/Plugin.md)
   property __RemovalCallback__ <br> _Get: Gets the class that was previously set to be called when this<br>Set: Sets an object to be called for when this attachment is removed from a_ | [`PermissionRemovedExecutor`](PermissionRemovedExecutor.md)
  function __remove__() <br> _Removes this attachment from its registered [`Permissible`](Permissible.md)_ | `boolean`
- function __setPermission__(name, value) <br> _Gets a copy of all set permissions and values contained within this_ | `void`
+ function __setPermission__(name, value) <br> _Sets a permission to the given value, by its fully qualified name_ | `void`
  function __setPermission__(perm, value) <br> _Sets a permission to the given value_ | `void`
  function __unsetPermission__(name) <br> _Removes the specified permission from this attachment._ | `void`
  function __unsetPermission__(perm) <br> _Removes the specified permission from this attachment._ | `void`
@@ -87,21 +87,16 @@ Returns | Description
 
 ##### <a id='setpermission'></a>public  function __setPermission__(name, value)
 
-_Gets a copy of all set permissions and values contained within this attachment. <p> This map may be modified but will not affect the attachment, as it is a copy._
+_Sets a permission to the given value, by its fully qualified name_
 
 Argument | Type | Description  
 --- | --- | --- 
 name | `String` | Name of the permission
 value | `boolean` | New value of the permission
 
-Returns | Description
---- | --- 
-`void` | Copy of all permissions and values expressed by this attachment /
-    public Map<String, Boolean> getPermissions() {
-        return new LinkedHashMap<String, Boolean>(permissions);
-    }
-
-    /** Sets a permission to the given value, by its fully qualified name
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='setpermission'></a>public  function __setPermission__(perm, value)

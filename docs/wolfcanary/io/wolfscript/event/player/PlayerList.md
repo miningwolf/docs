@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-PlayerList <p/> Called when a `Player` information is sent to another `Player`
+class PlayerList
 
 Method | Type   
 --- | :--- 

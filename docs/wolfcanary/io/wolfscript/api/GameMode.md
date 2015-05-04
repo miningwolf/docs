@@ -15,7 +15,7 @@ CREATIVE: <br> _CREATIVE GameMode_ | GameMode
 ADVENTURE: <br> _ADVENTURE GameMode_ | GameMode
 SPECTATOR: <br> _SPECTATOR GameMode_ | GameMode
 final readonly property __Id__ <br> _Id property_ | `int`
-static function __fromId__(id) <br> _fromId method_ | [`GameMode`](GameMode.md)
+final static function __fromId__(id) <br> _fromId method_ | [`GameMode`](GameMode.md)
 
 
 
@@ -38,7 +38,7 @@ Get |
 
 ### Public Methods for [`GameMode`](GameMode.md)
 
-##### <a id='fromid'></a>public static function __fromId__(id)
+##### <a id='fromid'></a>public final static function __fromId__(id)
 
 _fromId method_
 

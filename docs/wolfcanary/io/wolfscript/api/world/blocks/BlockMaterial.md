@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Block Material <p/> Contains technical information about a [`Block`](Block.md)
+interface BlockMaterial
 
 Method | Type   
 --- | :--- 

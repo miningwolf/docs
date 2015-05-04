@@ -12,12 +12,11 @@ Called when a player throws an egg and it might hatch
 Method | Type   
 --- | :--- 
 new __PlayerEggThrowEvent__(Player, Egg, boolean, byte, EntityType) <br> _PlayerEggThrowEvent constructor_ | _constructor_
-new __PlayerEggThrowEvent__(player, egg, hatching, numHatches, hatchingType) <br> _PlayerEggThrowEvent constructor_ | _constructor_
  readonly property __Egg__ <br> _Get: Gets the egg involved in this event._ | [`Egg`](../../entity/Egg.md)
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
   property __HatchingType__ <br> _Get: Get the type of the mob being hatched (EntityType.CHICKEN by default)<br>Set: Change the type of mob being hatched by the egg_ | [`EntityType`](../../entity/EntityType.md)
-  property __NumHatches__ <br> _Get: Get the number of mob hatches from the egg. By default the number will<br>Set: Change the number of mobs coming out of the hatched egg_ | `byte`
+  property __NumHatches__ <br> _NumHatches property<br>Set: Change the number of mobs coming out of the hatched egg_ | `byte`
  writeonly property __Hatching__ <br> _Set: Sets whether the egg will hatch or not._ | `void`
  function __isHatching__() <br> _Gets whether the egg is hatching or not. Will be what the server_ | `boolean`
  |
@@ -30,7 +29,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -55,6 +54,7 @@ byte | `final` | byte argument
 EntityType | `final` | EntityType argument
 
 ##### <a id='playereggthrowevent'></a>new __PlayerEggThrowEvent__(player, egg, hatching, numHatches, hatchingType) 
+_Deprecated_
 
 _PlayerEggThrowEvent constructor_
 
@@ -140,11 +140,11 @@ hatchType | [`EntityType`](../../entity/EntityType.md) | The type of the mob bei
 
 ##### <a id='numhatches'></a>public   property __NumHatches__
 
-_Get: Get the number of mob hatches from the egg. By default the number will be the number the server would've done <ul> <li>7/8 chance of being 0 <li>31/256 ~= 1/8 chance to be 1 <li>1/256 chance to be 4 </ul><br>Set: Change the number of mobs coming out of the hatched egg <p> The boolean hatching will override this number. Ie. If hatching = false, this number will not matter_
+_NumHatches property<br>Set: Change the number of mobs coming out of the hatched egg <p> The boolean hatching will override this number. Ie. If hatching = false, this number will not matter_
 
-Get | Description
---- | --- 
-`byte` | The number of mobs going to be hatched by the egg
+Get | 
+--- | 
+`byte` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -248,11 +248,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

@@ -37,7 +37,7 @@ Item | Type
 'o': <br> _'o' ChatColor_ | ChatColor
 0x14: <br> _0x14 ChatColor_ | ChatColor
 'r': <br> _'r' ChatColor_ | ChatColor
- readonly property __Char__ <br> _Get: The special character which prefixes all chat colour codes. Use this if_ | `char`
+ readonly property __Char__ <br> _Get: Gets the char value associated with this color_ | `char`
 static function __getByChar__(code) <br> _Gets the color represented by the specified color code_ | [`ChatColor`](ChatColor.md)
 static function __getByChar__(code) <br> _Gets the color represented by the specified color code_ | [`ChatColor`](ChatColor.md)
 static function __getLastColors__(input) <br> _Gets the ChatColors used at the end of the given input string._ | `String`
@@ -46,7 +46,7 @@ static function __getLastColors__(input) <br> _Gets the ChatColors used at the e
 static function __stripColor__(String) <br> _Strips the given message of all color codes_ | `String`
  function __toString__() <br> _toString method_ | `String`
 static function __translateAlternateColorCodes__(altColorChar, textToTranslate) <br> _Translates a string using an alternate color code character into a_ | `String`
-static final var __COLOR__ <br> _Represents black_ | `char`
+static final var __COLOR__ <br> _The special character which prefixes all chat colour codes. Use this if_ | `char`
 
 
 
@@ -57,29 +57,7 @@ static final var __COLOR__ <br> _Represents black_ | `char`
 
 ##### <a id='char'></a>public  readonly property __Char__
 
-_Get: The special character which prefixes all chat colour codes. Use this if you need to dynamically convert colour codes from your custom format. /
-    public static final char COLOR_CHAR = '\u00A7';
-    private static final Pattern STRIP_COLOR_PATTERN = Pattern.compile("(?i)" + String.valueOf(COLOR_CHAR) + "[0-9A-FK-OR]");
-
-    private final int intCode;
-    private final char code;
-    private final boolean isFormat;
-    private final String toString;
-    private final static Map<Integer, ChatColor> BY_ID = Maps.newHashMap();
-    private final static Map<Character, ChatColor> BY_CHAR = Maps.newHashMap();
-
-    private ChatColor(char code, int intCode) {
-        this(code, intCode, false);
-    }
-
-    private ChatColor(char code, int intCode, boolean isFormat) {
-        this.code = code;
-        this.intCode = intCode;
-        this.isFormat = isFormat;
-        this.toString = new String(new char[] {COLOR_CHAR, code});
-    }
-
-    /** Gets the char value associated with this color_
+_Get: Gets the char value associated with this color_
 
 Get | Description
 --- | --- 
@@ -190,52 +168,7 @@ Returns | Description
 
 ##### <a id='color'></a>public static final var __COLOR__
 
-_Represents black /
-    BLACK('0', 0x00),
-    /** Represents dark blue /
-    DARK_BLUE('1', 0x1),
-    /** Represents dark green /
-    DARK_GREEN('2', 0x2),
-    /** Represents dark blue (aqua) /
-    DARK_AQUA('3', 0x3),
-    /** Represents dark red /
-    DARK_RED('4', 0x4),
-    /** Represents dark purple /
-    DARK_PURPLE('5', 0x5),
-    /** Represents gold /
-    GOLD('6', 0x6),
-    /** Represents gray /
-    GRAY('7', 0x7),
-    /** Represents dark gray /
-    DARK_GRAY('8', 0x8),
-    /** Represents blue /
-    BLUE('9', 0x9),
-    /** Represents green /
-    GREEN('a', 0xA),
-    /** Represents aqua /
-    AQUA('b', 0xB),
-    /** Represents red /
-    RED('c', 0xC),
-    /** Represents light purple /
-    LIGHT_PURPLE('d', 0xD),
-    /** Represents yellow /
-    YELLOW('e', 0xE),
-    /** Represents white /
-    WHITE('f', 0xF),
-    /** Represents magical characters that change around randomly /
-    MAGIC('k', 0x10, true),
-    /** Makes the text bold. /
-    BOLD('l', 0x11, true),
-    /** Makes a line appear through the text. /
-    STRIKETHROUGH('m', 0x12, true),
-    /** Makes the text appear underlined. /
-    UNDERLINE('n', 0x13, true),
-    /** Makes the text italic. /
-    ITALIC('o', 0x14, true),
-    /** Resets all previous chat colors or formats. /
-    RESET('r', 0x15);
-
-    /** The special character which prefixes all chat colour codes. Use this if you need to dynamically convert colour codes from your custom format._
+_The special character which prefixes all chat colour codes. Use this if you need to dynamically convert colour codes from your custom format._
 
 >Returns
 >  `char`

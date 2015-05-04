@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -157,10 +153,8 @@
 </blockquote>
 <hr>
 <h3 id="enum-overview">Enum Overview</h3>
-<p>Represents a world, which may contain entities, chunks and blocks /
-public interface World extends PluginMessageRecipient, Metadatable {</p>
-<pre><code>/** Gets the [<span class="hljs-link_label">`Block`</span>](<span class="hljs-link_url">block/Block.md</span>) at the given coordinates
-</code></pre><table>
+<p>Represents various map environment types that a world may be</p>
+<table>
 <thead>
 <tr>
 <th>Item</th>
@@ -169,7 +163,7 @@ public interface World extends PluginMessageRecipient, Metadatable {</p>
 </thead>
 <tbody>
 <tr>
-<td>NORMAL: 0<br> <em>Represents the &quot;normal&quot;/&quot;surface world&quot; map</em></td>
+<td>NORMAL: 0<br> <em>NORMAL Environment</em></td>
 <td style="text-align:left">Environment</td>
 </tr>
 <tr>
@@ -186,21 +180,8 @@ public interface World extends PluginMessageRecipient, Metadatable {</p>
 <h3 id="public-properties-for-environment-environment-md-">Public Properties for <a href="Environment.html"><code>Environment</code></a></h3>
 <h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: Represents the &quot;normal&quot;/&quot;surface world&quot; map /
-        NORMAL(0),
-        /<strong> Represents a nether based map (&quot;hell&quot;) /
-        NETHER(-1),
-        /</strong> Represents the &quot;end&quot; map /
-        THE_END(1);</p>
-<pre><code>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> id;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Map&lt;Integer, Environment&gt; lookup = <span class="hljs-keyword">new</span> <span class="hljs-keyword">HashMap</span>&lt;Integer, Environment&gt;();
-
-    <span class="hljs-keyword">private</span> Environment(<span class="hljs-built_in">int</span> id) {
-        <span class="hljs-keyword">this</span>.id = id;
-    }
-
-    <span class="hljs-comment">/** Gets the dimension ID of this environment_</span>
-</code></pre><table>
+<p><em>Get: Gets the dimension ID of this environment</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

@@ -153,7 +153,7 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>setPermission</strong>(name, value) <br> <em>Gets a copy of all set permissions and values contained within this</em></td>
+<td> function <strong>setPermission</strong>(name, value) <br> <em>Sets a permission to the given value, by its fully qualified name</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -280,7 +280,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-setpermission-a-public-function-__setpermission__-name-value-"><a id='setpermission'></a>public  function <strong>setPermission</strong>(name, value)</h5>
-<p><em>Gets a copy of all set permissions and values contained within this attachment. <p> This map may be modified but will not affect the attachment, as it is a copy.</em></p>
+<p><em>Sets a permission to the given value, by its fully qualified name</em></p>
 <table>
 <thead>
 <tr>
@@ -306,22 +306,16 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>Copy of all permissions and values expressed by this attachment /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-built_in">Map</span><span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, <span class="hljs-built_in">Boolean</span><span class="hljs-subst">&gt;</span> getPermissions() {
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">new</span> LinkedHashMap<span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, <span class="hljs-built_in">Boolean</span><span class="hljs-subst">&gt;</span>(permissions);
-}
-
-<span class="hljs-comment">/** Sets a permission to the given value, by its fully qualified name</span>
-</code></pre><h5 id="-a-id-setpermission-a-public-function-__setpermission__-perm-value-"><a id='setpermission'></a>public  function <strong>setPermission</strong>(perm, value)</h5>
+<h5 id="-a-id-setpermission-a-public-function-__setpermission__-perm-value-"><a id='setpermission'></a>public  function <strong>setPermission</strong>(perm, value)</h5>
 <p><em>Sets a permission to the given value</em></p>
 <table>
 <thead>

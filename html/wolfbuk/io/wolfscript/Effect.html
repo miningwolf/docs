@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -276,57 +272,8 @@
 </table>
 <h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: An alternate click sound. /
-    CLICK2(1000, Type.SOUND),
-    /<strong> A click sound. /
-    CLICK1(1001, Type.SOUND),
-    /</strong> Sound of a bow firing. /
-    BOW_FIRE(1002, Type.SOUND),
-    /<strong> Sound of a door opening/closing. /
-    DOOR_TOGGLE(1003, Type.SOUND),
-    /</strong> Sound of fire being extinguished. /
-    EXTINGUISH(1004, Type.SOUND),
-    /<strong> A song from a record. Needs the record item ID as additional info /
-    RECORD_PLAY(1005, Type.SOUND, Material.class),
-    /</strong> Sound of ghast shrieking. /
-    GHAST_SHRIEK(1007, Type.SOUND),
-    /<strong> Sound of ghast firing. /
-    GHAST_SHOOT(1008, Type.SOUND),
-    /</strong> Sound of blaze firing. /
-    BLAZE_SHOOT(1009, Type.SOUND),
-    /<strong> Sound of zombies chewing on wooden doors. /
-    ZOMBIE_CHEW_WOODEN_DOOR(1010, Type.SOUND),
-    /</strong> Sound of zombies chewing on iron doors. /
-    ZOMBIE_CHEW_IRON_DOOR(1011, Type.SOUND),
-    /<strong> Sound of zombies destroying a door. /
-    ZOMBIE_DESTROY_DOOR(1012, Type.SOUND),
-    /</strong> A visual smoke effect. Needs direction as additional info. /
-    SMOKE(2000, Type.VISUAL, BlockFace.class),
-    /<strong> Sound of a block breaking. Needs block ID as additional info. /
-    STEP_SOUND(2001, Type.SOUND, Material.class),
-    /</strong> Visual effect of a splash potion breaking. Needs potion data value as additional info. /
-    POTION_BREAK(2002, Type.VISUAL, Potion.class),
-    /<strong> An ender eye signal; a visual effect. /
-    ENDER_SIGNAL(2003, Type.VISUAL),
-    /</strong> The flames seen on a mobspawner; a visual effect. /
-    MOBSPAWNER_FLAMES(2004, Type.VISUAL);</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> id;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">Type</span> <span class="hljs-keyword">type</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">Class</span>&lt;?&gt; <span class="hljs-type">data</span>;
-<span class="hljs-keyword">private</span> static <span class="hljs-keyword">final</span> Map&lt;<span class="hljs-type">Integer</span>, Effect&gt; BY_ID = Maps.newHashMap();
-
-Effect(<span class="hljs-built_in">int</span> id, <span class="hljs-keyword">Type</span> <span class="hljs-keyword">type</span>) {
-    this(id,<span class="hljs-keyword">type</span>,null);
-}
-
-Effect(<span class="hljs-built_in">int</span> id, <span class="hljs-keyword">Type</span> <span class="hljs-keyword">type</span>, <span class="hljs-keyword">Class</span>&lt;?&gt; <span class="hljs-type">data</span>) {
-    this.id = id;
-    this.<span class="hljs-keyword">type</span> = <span class="hljs-keyword">type</span>;
-    this.<span class="hljs-type">data</span> = <span class="hljs-type">data</span>;
-}
-
-/** Gets the ID for this effect._
-</code></pre><table>
+<p><em>Get: Gets the ID for this effect.</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

@@ -382,60 +382,8 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-enablelateplugins-a-public-function-__enablelateplugins__-"><a id='enablelateplugins'></a>public  function <strong>enableLatePlugins</strong>()</h5>
-<p>_{@inheritDoc} /
-    @Override
-    public boolean enablePlugin(String name) throws PluginLoadFailedException {
-        PluginDescriptor descriptor = getPluginDescriptor(name);
-        if (descriptor == null) {
-            return false;
-        }
-        if (descriptor.getCurrentState() == PluginState.ENABLED) {
-            return true;
-        }
-        Set<String> deps = dependencies.getDependencies(descriptor.getName());
-        for (String s : deps) {
-            PluginDescriptor dep = getPluginDescriptor(s);
-            if (dep == null) {
-                log.warn(&quot;Dependency &quot; + s + &quot; of &quot; + descriptor.getName() + &quot; is unsatisfied; cannot enable.&quot;);
-                return false;
-            }
-            if (dep.getCurrentState() == PluginState.ENABLED) {
-                continue;
-            }
-            if (!enablePlugin(s)) {
-                log.warn(&quot;Dependency &quot; + s + &quot; of &quot; + descriptor.getName() + &quot; cannot be enabled; cannot enable.&quot;);
-                return false;
-            }
-        }
-        if (descriptor.getCurrentState() == PluginState.KNOWN) {
-            descriptor.getPluginLifecycle().load();
-        }
-        log.info(&quot;Enabling plugin &quot; + name);
-        boolean enabled = descriptor.getPluginLifecycle().enable();
-        if (!enabled) {
-            log.warn(&quot;Unable to enable plugin &quot; + descriptor.getName() + &quot;. Will disable it.&quot;);
-            disablePlugin(name);
-            return false;
-        }
-        Wolf.hooks().callHook(new PluginEnable(descriptor.getPlugin()));
-        Set<String> rdeps = dependencies.getDependants(descriptor.getName());
-        for (String s : rdeps) {
-            PluginDescriptor dep = getPluginDescriptor(s);
-            if (dep == null) {
-                //Don&#39;t really care... although, shouldn&#39;t be possible
-                continue;
-            }
-            if (dep.getCurrentState() == PluginState.ENABLED) {
-                continue;
-            }
-            if (!enablePlugin(s)) {
-                log.warn(s + &quot; (dependent on &quot; + descriptor.getName() + &quot;) could not be enabled&quot;);
-            }
-        }
-        return true;
-    }</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> {<span class="hljs-comment">@inheritDoc}_</span>
-</code></pre><table>
+<p><em>{@inheritDoc}</em></p>
+<table>
 <thead>
 <tr>
 <th>Returns</th>
@@ -449,45 +397,8 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-getplugin-a-public-function-__getplugin__-name-"><a id='getplugin'></a>public  function <strong>getPlugin</strong>(name)</h5>
-<p>_{@inheritDoc} /
-    @Override
-    public boolean reloadPlugin(String name) throws PluginLoadFailedException, InvalidPluginException {
-        PluginDescriptor descriptor = getPluginDescriptor(name);
-        if (descriptor != null) {
-            disablePlugin(name);
-            log.info(&quot;Unloading plugin &quot; + name);
-            descriptor.getPluginLifecycle().unload();
-            descriptor.reloadInf();
-            updateDependencies(descriptor);
-            //Call enable directly instead of enable() to avoid recursing
-            log.info(&quot;Loading plugin &quot; + name);
-            descriptor.getPluginLifecycle().load();
-            log.info(&quot;Enabling plugin &quot; + name);
-            boolean enabled = descriptor.getPluginLifecycle().enable();
-            if (!enabled) {
-                log.warn(&quot;Failed to enable &quot; + name + &quot; after reloading&quot;);
-                return false;
-            }
-            Set<String> rdeps = dependencies.getDependants(descriptor.getName());
-            for (String s : rdeps) {
-                PluginDescriptor dep = getPluginDescriptor(s);
-                if (dep == null) {
-                    //Don&#39;t really care... although, shouldn&#39;t be possible
-                    continue;
-                }
-                if (dep.getCurrentState() == PluginState.KNOWN) {
-                    continue;
-                }
-                if (!reloadPlugin(s)) {
-                    log.warn(s + &quot; (dependent on &quot; + descriptor.getName() + &quot;) could not be reloaded...&quot;);
-                }
-            }
-            return true;
-        }
-        return false;
-    }</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> {<span class="hljs-comment">@inheritDoc}_</span>
-</code></pre><table>
+<p><em>{@inheritDoc}</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

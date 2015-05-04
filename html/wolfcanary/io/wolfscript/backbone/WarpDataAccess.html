@@ -177,6 +177,10 @@ Extends <a href="../database/LocationDataAccess.html"><code>LocationDataAccess</
 <td style="text-align:left"><code>List&lt;String&gt;</code></td>
 </tr>
 <tr>
+<td> var <strong>location</strong> <br> <em>Serialised location of this warp.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
 <td></td>
 <td style="text-align:left"></td>
 </tr>
@@ -249,7 +253,7 @@ Extends <a href="../database/LocationDataAccess.html"><code>LocationDataAccess</
 <td style="text-align:left"><a href="../database/DataAccess.html"><code>DataAccess</code></a></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Name</strong> <br> <em>Get: Load a Data set into this DataAccess object</em></td>
+<td>final readonly property <strong>Name</strong> <br> <em>Get: This shall return the name of the Table this DataAccess belongs to</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -330,7 +334,6 @@ Extends <a href="../database/LocationDataAccess.html"><code>LocationDataAccess</
  <code>List&lt;String&gt;</code></p>
 </blockquote>
 <h5 id="-a-id-location-a-public-var-__location__"><a id='location'></a>public  var <strong>location</strong></h5>
-<p><em>Deprecated</em></p>
 <p><em>Serialised location of this warp.</em></p>
 <blockquote>
 <p>Returns
@@ -518,7 +521,7 @@ Extends <a href="../database/LocationDataAccess.html"><code>LocationDataAccess</
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-final-readonly-property-__name__"><a id='name'></a>public final readonly property <strong>Name</strong></h5>
-<p><em>Get: Load a Data set into this DataAccess object</em></p>
+<p><em>Get: This shall return the name of the Table this DataAccess belongs to</em></p>
 <table>
 <thead>
 <tr>
@@ -529,7 +532,7 @@ Extends <a href="../database/LocationDataAccess.html"><code>LocationDataAccess</
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>HashMap that maps the Column meta data to the data present in database.</td>
+<td>the table name</td>
 </tr>
 </tbody>
 </table>

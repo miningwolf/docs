@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-LightningStrike <p/> Called when a [`LightningBolt`](../../api/entity/effect/LightningBolt.md) strikes
+class LightningStrike
 
 Method | Type   
 --- | :--- 

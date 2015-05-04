@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-/kit delete
+class KitDelete
 
 Method | Type   
 --- | :--- 

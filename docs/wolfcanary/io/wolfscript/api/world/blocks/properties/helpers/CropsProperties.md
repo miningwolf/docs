@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Crops properties helper<br/> Applies to<br/> <ul>Wheat</ul> <ul>Carrots</ul> <ul>Potatoes</ul> <ul>Melon (Stem)</ul> <ul>Pumpkin (Stem)</ul>
+class CropsProperties
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _Crops age property, Values: 0 - 7_ | [`Block`](../../Block.md)
+static function __applyAge__(block, value) <br> _Applies age to the `Crops`_ | [`Block`](../../Block.md)
 static final var __age__ <br> _Crops age property, Values: 0 - 7_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyage'></a>public static function __applyAge__(block, value)
 
-_Crops age property, Values: 0 - 7 /
-    public static final BlockIntegerProperty age = getInstanceFor(Wheat, "age");
-
-    /** Applies age to the `Crops`_
+_Applies age to the `Crops`_
 
 Argument | Type | Description  
 --- | --- | --- 

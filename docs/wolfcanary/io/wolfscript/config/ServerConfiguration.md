@@ -44,9 +44,9 @@ new __ServerConfiguration__(path) <br> _ServerConfiguration constructor_ | _cons
  readonly property __ServerLocale__ <br> _Get: Gets the server's default locale_ | `String`
  readonly property __WorldCacheTimeout__ <br> _Get: Gets the World Cache timeout_ | `long`
  readonly property __WhitelistMessage__ <br> _Get: Get the message shown to players who are not whitelisted._ | `String`
- readonly property __SpamProtectionLevel__ <br> _Get: Gets the spam protection level_ | `String`
+ readonly property __SpamProtectionLevel__ <br> _SpamProtectionLevel property_ | `String`
  readonly property __StrictSignCharacterChecks__ <br> _Get: Gets whether characters on signs are checked for validity or not_ | `boolean`
- readonly property __TexturePack__ <br> _Get: Server Texture/Resource Pack name_ | `String`
+ readonly property __TexturePack__ <br> _TexturePack property_ | `String`
  readonly property __ViewDistance__ <br> _Get: Get the view distance of clients: maximum radius of loaded chunks around a player_ | `int`
  function __isQueryEnabled__() <br> _Get whether server query-ing is enabled_ | `boolean`
  function __allowEnchantmentStacking__() <br> _Checks if items are allowed to be stack with enchantments applied_ | `boolean`
@@ -411,11 +411,11 @@ Get | Description
 
 ##### <a id='spamprotectionlevel'></a>public  readonly property __SpamProtectionLevel__
 
-_Get: Gets the spam protection level<br/> default - on for restricted users; off - totally off; all - on for all users_
+_SpamProtectionLevel property_
 
-Get | Description
---- | --- 
-`String` | the spam protection level
+Get | 
+--- | 
+`String` |
 
 
 
@@ -431,11 +431,11 @@ Get | Description
 
 ##### <a id='texturepack'></a>public  readonly property __TexturePack__
 
-_Get: Server Texture/Resource Pack name_
+_TexturePack property_
 
-Get | Description
---- | --- 
-`String` | the server texture/resource pack name
+Get | 
+--- | 
+`String` |
 
 
 

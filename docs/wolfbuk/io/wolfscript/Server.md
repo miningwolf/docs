@@ -11,7 +11,7 @@ Represents a server implementation.
 
 Method | Type   
 --- | :--- 
-  property __IdleTimeout__ <br> _Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific_ | `int`
+  property __IdleTimeout__ <br> _Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of_ | `int`
  readonly property __HelpMap__ <br> _Get: Gets the [`HelpMap`](help/HelpMap.md) providing help topics for this server._ | [`HelpMap`](help/HelpMap.md)
  readonly property __ConsoleSender__ <br> _Get: Gets a `ConsoleCommandSender` that may be used as an input source_ | `ConsoleCommandSender`
   property __DefaultGameMode__ <br> _Get: Gets the default [`GameMode`](GameMode.md) for new players.<br>Set: Sets the default [`GameMode`](GameMode.md) for new players._ | [`GameMode`](GameMode.md)
@@ -22,9 +22,9 @@ Method | Type
  readonly property __AllowNether__ <br> _Get: Gets whether this server allows the Nether or not._ | `boolean`
  readonly property __AllowFlight__ <br> _Get: Gets whether this server allows flying or not._ | `boolean`
  readonly property __ConnectionThrottle__ <br> _Get: Gets the value of the connection throttle setting._ | `long`
- readonly property __Name__ <br> _Get: Used for all administrative messages, such as an operator using a_ | `String`
+ readonly property __Name__ <br> _Get: Gets the name of this server implementation._ | `String`
  readonly property __Messenger__ <br> _Get: Gets the [`Messenger`](plugin/messaging/Messenger.md) responsible for this server._ | [`Messenger`](plugin/messaging/Messenger.md)
- readonly property __MaxPlayers__ <br> _Get: Gets an array copy of all currently logged in players._ | `int`
+ readonly property __MaxPlayers__ <br> _Get: Get the maximum amount of players which can login to this server._ | `int`
  readonly property __Ip__ <br> _Get: Get the IP that this server is bound to, or empty string if not_ | `String`
  readonly property __Logger__ <br> _Get: Returns the primary logger associated with this server instance._ | `Logger`
  readonly property __OnlineMode__ <br> _Get: Gets whether the Server is in online mode or not._ | `boolean`
@@ -33,15 +33,15 @@ Method | Type
  readonly property __Operators__ <br> _Get: Gets a set containing all player operators._ | `Set<OfflinePlayer>`
  readonly property __WorldType__ <br> _Get: Get world type (level-type setting) for default world._ | `String`
  readonly property __UpdateFolderFile__ <br> _Get: Gets the update folder. The update folder is used to safely update_ | `File`
- readonly property __TicksPerMonsterSpawns__ <br> _Get: Gets the default ticks per monster spawns value._ | `int`
+ readonly property __TicksPerMonsterSpawns__ <br> _TicksPerMonsterSpawns property_ | `int`
  readonly property __ServicesManager__ <br> _Get: Gets a services manager._ | [`ServicesManager`](plugin/ServicesManager.md)
  readonly property __Port__ <br> _Get: Get the game port that the server runs on._ | `int`
  readonly property __UpdateFolder__ <br> _Get: Gets the name of the update folder. The update folder is used to safely_ | `String`
  readonly property __ServerName__ <br> _Get: Get the name of this server._ | `String`
  readonly property __ServerId__ <br> _Get: Get an ID of this server. The ID is a simple generally alphanumeric ID_ | `String`
  readonly property __Scheduler__ <br> _Get: Gets the scheduler for managing scheduled events._ | [`WolfScriptScheduler`](scheduler/WolfScriptScheduler.md)
- readonly property __TicksPerAnimalSpawns__ <br> _Get: Gets default ticks per animal spawns value._ | `int`
-  property __SpawnRadius__ <br> _Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._ | `int`
+ readonly property __TicksPerAnimalSpawns__ <br> _TicksPerAnimalSpawns property_ | `int`
+  property __SpawnRadius__ <br> _Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._ | `int`
  readonly property __Version__ <br> _Get: Gets the version string of this server implementation._ | `String`
  readonly property __ViewDistance__ <br> _Get: Get the view distance from this server._ | `int`
  readonly property __WarningState__ <br> _Get: Gets the current warning state for the server._ | `WarningState`
@@ -56,7 +56,7 @@ Method | Type
  function __broadcast__(message, permission) <br> _Broadcasts the specified message to every user with the given_ | `int`
  function __clearRecipes__() <br> _Clears the list of crafting recipes._ | `void`
  function __addRecipe__(recipe) <br> _Adds a recipe to the crafting manager._ | `boolean`
- function __configureDbConfig__(config) <br> _Dispatches a command on this server, and executes it if found._ | `void`
+ function __configureDbConfig__(config) <br> _Populates a given `ServerConfig` with values attributes to this_ | `void`
  function __broadcastMessage__(message) <br> _Broadcast a message to all players._ | `int`
  function __createWorld__(creator) <br> _Creates or loads a world with the given name using the specified_ | `World`
  function __resetRecipes__() <br> _Resets the list of crafting recipes to the default._ | `void`
@@ -76,7 +76,7 @@ Method | Type
  function __reload__() <br> _Reloads the server, refreshing settings and plugin information._ | `void`
  function __shutdown__() <br> _Shutdowns the server, stopping everything._ | `void`
  function __unbanIP__(address) <br> _Unbans the specified address from the server._ | `void`
- function __useExactLoginLocation__() <br> _Gets whether to use vanilla (false) or exact behaviour (true)._ | `boolean`
+ function __useExactLoginLocation__() <br> _useExactLoginLocation method_ | `boolean`
 static final var __BROADCAST__ <br> _Used for all administrative messages, such as an operator using a_ | `String`
 static final var __BROADCAST__ <br> _Used for all announcement messages, such as informing users that a_ | `String`
  |
@@ -95,14 +95,11 @@ __Inherited items from [`PluginMessageRecipient`](plugin/messaging/PluginMessage
 
 ##### <a id='idletimeout'></a>public   property __IdleTimeout__
 
-_Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific server-icon. <p> Size and type are implementation defined. An incompatible file is guaranteed to throw an implementation-defined `Exception`._
+_Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout._
 
 Get | Description
 --- | --- 
-`int` | a cached server-icon that can be used for a `ServerListPingEvent#setServerIcon(CachedServerIcon)` /
-    CachedServerIcon loadServerIcon(File file) throws IllegalArgumentException, Exception;
-
-    /** Creates a cached server-icon for the specific image. <p> Size and type are implementation defined. An incompatible file is guaranteed to throw an implementation-defined `Exception`.
+`int` | the idle timeout in minutes
 
 Set | Type | Description  
 --- | --- | --- 
@@ -214,13 +211,7 @@ Get | Description
 
 ##### <a id='name'></a>public  readonly property __Name__
 
-_Get: Used for all administrative messages, such as an operator using a command. <p> For use in {@link #broadcast(java.lang.String, java.lang.String)}. /
-    public static final String BROADCAST_CHANNEL_ADMINISTRATIVE = "wolfscript.broadcast.admin";
-
-    /** Used for all announcement messages, such as informing users that a player has joined. <p> For use in {@link #broadcast(java.lang.String, java.lang.String)}. /
-    public static final String BROADCAST_CHANNEL_USERS = "wolfscript.broadcast.user";
-
-    /** Gets the name of this server implementation._
+_Get: Gets the name of this server implementation._
 
 Get | Description
 --- | --- 
@@ -240,15 +231,11 @@ Get | Description
 
 ##### <a id='maxplayers'></a>public  readonly property __MaxPlayers__
 
-_Get: Gets an array copy of all currently logged in players. <p> This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Get the maximum amount of players which can login to this server._
 
 Get | Description
 --- | --- 
-`int` | an array of Players that are currently online /
-    @Deprecated
-    public Player[] _INVALID_getOnlinePlayers();
-
-    /** Gets a view of all currently logged in players. This {@linkplain Collections#unmodifiableCollection(Collection) view} is a reused object, making some operations like `Collection#size()` zero-allocation. <p> The collection is a view backed by the internal representation, such that, changes to the internal state of the server will be reflected immediately. However, the reuse of the returned collection (identity) is not strictly guaranteed for future or all implementations. Casting the collection, or relying on interface implementations (like `Serializable` or `List`), is deprecated. <p> Iteration behavior is undefined outside of self-contained main-thread uses. Normal and immediate iterator use without consequences that affect the collection are fully supported. The effects following (non-exhaustive) {@link Entity#teleport(Location) teleportation}, {@link Player#setHealth(double) death}, and {@link Player#kickPlayer( String) kicking} are undefined. Any use of this collection from asynchronous threads is unsafe. <p> For safe consequential iteration or mimicking the old array behavior, using `Collection#toArray(Object[])` is recommended. For making snapshots, `ImmutableList#copyOf(Collection)` is recommended.
+`int` | the amount of players this server allows
 
 
 
@@ -334,11 +321,11 @@ Get | Description
 
 ##### <a id='tickspermonsterspawns'></a>public  readonly property __TicksPerMonsterSpawns__
 
-_Get: Gets the default ticks per monster spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft's default. </ul> <p> <b>Note:</b> If set to 0, monsters spawning will be disabled. We recommend using spawn-monsters to control this instead. <p> Minecraft default: 1._
+_TicksPerMonsterSpawns property_
 
-Get | Description
---- | --- 
-`int` | the default ticks per monsters spawn value
+Get | 
+--- | 
+`int` |
 
 
 
@@ -404,24 +391,21 @@ Get | Description
 
 ##### <a id='ticksperanimalspawns'></a>public  readonly property __TicksPerAnimalSpawns__
 
-_Get: Gets default ticks per animal spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft's default. </ul> <p> <b>Note:</b> If set to 0, animal spawning will be disabled. We recommend using spawn-animals to control this instead. <p> Minecraft default: 400._
+_TicksPerAnimalSpawns property_
 
-Get | Description
---- | --- 
-`int` | the default ticks per animal spawns value
+Get | 
+--- | 
+`int` |
 
 
 
 ##### <a id='spawnradius'></a>public   property __SpawnRadius__
 
-_Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._
+_Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._
 
 Get | Description
 --- | --- 
-`int` | a map of aliases to command names /
-    public Map<String, String[]> getCommandAliases();
-
-    /** Gets the radius, in blocks, around each worlds spawn point to protect.
+`int` | spawn radius, or 0 if none
 
 Set | Type | Description  
 --- | --- | --- 
@@ -592,15 +576,15 @@ Returns | Description
 
 ##### <a id='configuredbconfig'></a>public  function __configureDbConfig__(config)
 
-_Dispatches a command on this server, and executes it if found._
+_Populates a given `ServerConfig` with values attributes to this server._
 
 Argument | Type | Description  
 --- | --- | --- 
 config | `ServerConfig` | the server config to populate
 
-Returns | Description
---- | --- 
-`void` | returns false if no target is found
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='broadcastmessage'></a>public  function __broadcastMessage__(message)
@@ -892,11 +876,11 @@ Returns |
 
 ##### <a id='useexactloginlocation'></a>public  function __useExactLoginLocation__()
 
-_Gets whether to use vanilla (false) or exact behaviour (true). <ul> <li>Vanilla behaviour: check for collisions and move the player if needed. <li>Exact behaviour: spawn players exactly where they should be. </ul>_
+_useExactLoginLocation method_
 
-Returns | Description
---- | --- 
-`boolean` | true if exact location locations are used for spawning, false for vanilla collision detection or otherwise
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

@@ -7,14 +7,14 @@
 
 ### Class Overview
 
-Dispenser/Dropper properties helper
+class DispenserProperties
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Dispenser/Dropper facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`Block`](../../Block.md)
-static function __applyTriggered__(block, value) <br> _Applies triggered to the `Dispenser/Dropper`_ | [`Block`](../../Block.md)
-static final var __facing__ <br> _Dispenser/Dropper facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
-static final var __triggered__ <br> _Dispenser/Dropper triggered property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+static function __applyFacing__(block, value) <br> _applyFacing method_ | [`Block`](../../Block.md)
+static function __applyTriggered__(block, value) <br> _applyTriggered method_ | [`Block`](../../Block.md)
+static final var __facing__ <br> _facing field_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
+static final var __triggered__ <br> _triggered field_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
@@ -29,36 +29,30 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Dispenser/Dropper facing property, Values: [`BlockFace`](../../BlockFace.md) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Dispenser, "facing");
-
-    /** Dispenser/Dropper triggered property, Values: true, false /
-    public static final BlockBooleanProperty triggered = getInstanceFor(Dispenser, "triggered");
-
-    /** Applies facing to the `Dispsener/Dropper`_
+_applyFacing method_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
-value | [`BlockFace`](../../BlockFace.md) | the [`BlockFace`](../../BlockFace.md) value to apply
+block | [`Block`](../../Block.md) | block argument
+value | [`BlockFace`](../../BlockFace.md) | value argument
 
-Returns | Description
---- | --- 
-[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+Returns | 
+--- | 
+[`Block`](../../Block.md) |
 
 
 ##### <a id='applytriggered'></a>public static function __applyTriggered__(block, value)
 
-_Applies triggered to the `Dispenser/Dropper`_
+_applyTriggered method_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
-value | `boolean` | the `boolean` value to apply
+block | [`Block`](../../Block.md) | block argument
+value | `boolean` | value argument
 
-Returns | Description
---- | --- 
-[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+Returns | 
+--- | 
+[`Block`](../../Block.md) |
 
 
 ---
@@ -67,14 +61,14 @@ Returns | Description
 
 ##### <a id='facing'></a>public static final var __facing__
 
-_Dispenser/Dropper facing property, Values: [`BlockFace`](../../BlockFace.md)_
+_facing field_
 
 >Returns
 >  [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 
 ##### <a id='triggered'></a>public static final var __triggered__
 
-_Dispenser/Dropper triggered property, Values: true, false_
+_triggered field_
 
 >Returns
 >  [`BlockBooleanProperty`](../BlockBooleanProperty.md)

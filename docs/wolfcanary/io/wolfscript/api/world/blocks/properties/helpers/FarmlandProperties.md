@@ -11,7 +11,7 @@ Farmland properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyMositure__(block, value) <br> _Farmland moisture property, Values: 0 - 7_ | [`Block`](../../Block.md)
+static function __applyMositure__(block, value) <br> _Applies moisture to the `Farmland`_ | [`Block`](../../Block.md)
 static final var __moisture__ <br> _Farmland moisture property, Values: 0 - 7_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applymositure'></a>public static function __applyMositure__(block, value)
 
-_Farmland moisture property, Values: 0 - 7 /
-    public static final BlockIntegerProperty moisture = getInstanceFor(Farmland, "moisture");
-
-    /** Applies moisture to the `Farmland`_
+_Applies moisture to the `Farmland`_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -21,7 +21,7 @@ static readonly property __HandlerList__ <br> _HandlerList property_ | [`Handler
  readonly property __Item__ <br> _Get: Gets the item to be enchanted (can be modified)_ | `ItemStack`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
- function __whichButton__() <br> _Get map of enchantment (levels, keyed by type) to be added to item_ | `int`
+ function __whichButton__() <br> _Which button was pressed to initiate the enchanting._ | `int`
  |
 __Inherited items from [`InventoryEvent`](../inventory/InventoryEvent.md)__ |
 new __InventoryEvent__(transaction) <br> _InventoryEvent constructor_ | _constructor_
@@ -36,7 +36,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -157,16 +157,11 @@ Returns |
 
 ##### <a id='whichbutton'></a>public  function __whichButton__()
 
-_Get map of enchantment (levels, keyed by type) to be added to item (modify map returned to change values). Note: Any enchantments not allowed for the item will be ignored_
+_Which button was pressed to initiate the enchanting._
 
 Returns | Description
 --- | --- 
-`int` | map of enchantment levels, keyed by enchantment /
-    public Map<Enchantment, Integer> getEnchantsToAdd() {
-        return enchants;
-    }
-
-    /** Which button was pressed to initiate the enchanting.
+`int` | The button index (0, 1, or 2).
 
 
 ---
@@ -280,11 +275,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

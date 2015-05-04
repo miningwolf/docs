@@ -127,7 +127,6 @@
 <li class='active'><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/AuxiliarySoundEffect.html'>AuxiliarySoundEffect</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/Particle.html'>Particle</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/SoundEffect.html'>SoundEffect</a></li>
-<li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/0.html' class=''>api.world.position</a></li> 
 <li class='divider'></li>
@@ -201,12 +200,16 @@
 </thead>
 <tbody>
 <tr>
-<td>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z) <br> <em>The Auxiliary Sound Effect Type</em></td>
+<td>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z) <br> <em>Constructs a new AuxiliarySoundEffect for a specified location</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z, extra) <br> <em>Constructs a new AuxiliarySoundEffect for a specified location</em></td>
+<td>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z, extra) <br> <em>AuxiliarySoundEffect constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Digits</strong> <br> <em>Digits property</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td> var <strong>x</strong> <br> <em>x field</em></td>
@@ -217,7 +220,7 @@
 <hr>
 <h3 id="public-constructors-for-auxiliarysoundeffect-auxiliarysoundeffect-md-">Public Constructors for <a href="AuxiliarySoundEffect.html"><code>AuxiliarySoundEffect</code></a></h3>
 <h5 id="-a-id-auxiliarysoundeffect-a-new-__auxiliarysoundeffect__-type-x-y-z-"><a id='auxiliarysoundeffect'></a>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z)</h5>
-<p><em>The Auxiliary Sound Effect Type</em></p>
+<p><em>Constructs a new AuxiliarySoundEffect for a specified location</em></p>
 <table>
 <thead>
 <tr>
@@ -250,7 +253,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-auxiliarysoundeffect-a-new-__auxiliarysoundeffect__-type-x-y-z-extra-"><a id='auxiliarysoundeffect'></a>new <strong>AuxiliarySoundEffect</strong>(type, x, y, z, extra)</h5>
-<p><em>Constructs a new AuxiliarySoundEffect for a specified location</em></p>
+<p><em>AuxiliarySoundEffect constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -263,27 +266,44 @@
 <tr>
 <td>type</td>
 <td><code>Type</code></td>
-<td>the type of effect to play</td>
+<td>type argument</td>
 </tr>
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>the x coordinate to play at</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>y</td>
 <td><code>int</code></td>
-<td>the y coordinate to play at</td>
+<td>y argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>the z coordinate to play at</td>
+<td>z argument</td>
 </tr>
 <tr>
 <td>extra</td>
 <td><code>int</code></td>
-<td>extra bits like Potion ID or Direction for extra help see: <a href="http://wiki.vg/Protocol#Effects" target="_blank" rel="nofollow">http://wiki.vg/Protocol#Effects</a></td>
+<td>extra argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-auxiliarysoundeffect-auxiliarysoundeffect-md-">Public Properties for <a href="AuxiliarySoundEffect.html"><code>AuxiliarySoundEffect</code></a></h3>
+<h5 id="-a-id-digits-a-public-readonly-property-__digits__"><a id='digits'></a>public  readonly property <strong>Digits</strong></h5>
+<p><em>Digits property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>

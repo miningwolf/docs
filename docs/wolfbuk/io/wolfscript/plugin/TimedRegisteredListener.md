@@ -14,7 +14,7 @@ Method | Type
 new __TimedRegisteredListener__(Listener, EventExecutor, EventPriority, Plugin, boolean) <br> _TimedRegisteredListener constructor_ | _constructor_
  readonly property __Count__ <br> _Get: Gets the total times this listener has been called_ | `int`
  readonly property __TotalTime__ <br> _Get: Gets the total time calls to this listener have taken_ | `long`
- function __hasMultiple__() <br> _Gets the class of the events this listener handled. If it handled_ | `boolean`
+ function __hasMultiple__() <br> _hasMultiple method_ | `boolean`
  function __reset__() <br> _Resets the call count and total time for this listener_ | `void`
  |
 __Inherited items from [`RegisteredListener`](RegisteredListener.md)__ |
@@ -22,7 +22,7 @@ new __RegisteredListener__(Listener, EventExecutor, EventPriority, Plugin, boole
  readonly property __Listener__ <br> _Get: Gets the listener for this registration_ | `Listener`
  readonly property __Plugin__ <br> _Get: Gets the plugin for this registration_ | [`Plugin`](Plugin.md)
  readonly property __Priority__ <br> _Get: Gets the priority for this registration_ | `EventPriority`
- function __isIgnoringCancelled__() <br> _Calls the event executor_ | `boolean`
+ function __isIgnoringCancelled__() <br> _Whether this listener accepts cancelled events_ | `boolean`
 
 
 
@@ -74,16 +74,11 @@ Get | Description
 
 ##### <a id='hasmultiple'></a>public  function __hasMultiple__()
 
-_Gets the class of the events this listener handled. If it handled multiple classes of event, the closest shared superclass will be returned, such that for any event this listener has handled, <code>this.getEventClass().isAssignableFrom(event.getClass())</code> and no class <code>this.getEventClass().isAssignableFrom(clazz) {@literal && this.getEventClass() != clazz &&} event.getClass().isAssignableFrom(clazz)</code> for all handled events._
+_hasMultiple method_
 
-Returns | Description
---- | --- 
-`boolean` | the event class handled by this RegisteredListener /
-    public Class<? extends Event> getEventClass() {
-        return eventClass;
-    }
-
-    /** Gets whether this listener has handled multiple events, such that for some two events, <code>eventA.getClass() != eventB.getClass()</code>.
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='reset'></a>public  function __reset__()
@@ -150,7 +145,7 @@ Get | Description
 
 ##### <a id='isignoringcancelled'></a>public  function __isIgnoringCancelled__()
 
-_Calls the event executor_
+_Whether this listener accepts cancelled events_
 
 Returns | Description
 --- | --- 

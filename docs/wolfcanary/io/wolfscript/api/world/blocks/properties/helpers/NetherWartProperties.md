@@ -11,7 +11,7 @@ NetherWart properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _NetherWart age property, Values: 0 - 3_ | [`Block`](../../Block.md)
+static function __applyAge__(block, value) <br> _Applies age to the `NetherWart`_ | [`Block`](../../Block.md)
 static final var __age__ <br> _NetherWart age property, Values: 0 - 3_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyage'></a>public static function __applyAge__(block, value)
 
-_NetherWart age property, Values: 0 - 3 /
-    public static final BlockIntegerProperty age = getInstanceFor(NetherWart, "age");
-
-    /** Applies age to the `NetherWart`_
+_Applies age to the `NetherWart`_
 
 Argument | Type | Description  
 --- | --- | --- 

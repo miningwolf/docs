@@ -11,7 +11,7 @@ Furnace properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Furnace facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Furnace`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Furnace facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Furnace facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Furnace, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Furnace`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Furnace`_
 
 Argument | Type | Description  
 --- | --- | --- 

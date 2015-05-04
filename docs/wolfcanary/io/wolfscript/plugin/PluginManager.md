@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Main interface for the Wolf Plugin Manager - responsible for enabling/disabling/loading plugins.
+interface PluginManager
 
 Method | Type   
 --- | :--- 

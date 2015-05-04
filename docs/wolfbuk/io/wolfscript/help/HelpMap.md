@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-The HelpMap tracks all help topics registered in a WolfScript server. When the server starts up or is reloaded, help is processed and topics are added in the following order: <ol> <li>General topics are loaded from the help.yml <li>Plugins load and optionally call `addTopic()` <li>Registered plugin commands are processed by [`HelpTopicFactory`](HelpTopicFactory.md) objects to create topics <li>Topic contents are amended as directed in help.yml </ol>
+interface HelpMap
 
 Method | Type   
 --- | :--- 

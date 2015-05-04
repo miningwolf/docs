@@ -256,7 +256,7 @@
 <td style="text-align:left"><code>List&lt;Integer&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>contains</strong>(path) <br> <em>Gets a Map containing all keys and their values for this section.</em></td>
+<td> function <strong>contains</strong>(path) <br> <em>Checks if this <a href="ConfigurationSection.html"><code>ConfigurationSection</code></a> contains the given path.</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -300,7 +300,7 @@
 <td style="text-align:left"><code>List&lt;Short&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>getVector</strong>(path) <br> <em>Gets the requested List of Maps by path.</em></td>
+<td> function <strong>getVector</strong>(path) <br> <em>Gets the requested Vector by path.</em></td>
 <td style="text-align:left"><code>Vector</code></td>
 </tr>
 <tr>
@@ -1276,7 +1276,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-contains-a-public-function-__contains__-path-"><a id='contains'></a>public  function <strong>contains</strong>(path)</h5>
-<p><em>Gets a Map containing all keys and their values for this section. <p> If deep is set to true, then this will contain all the keys and values within any child <a href="ConfigurationSection.html"><code>ConfigurationSection</code></a>s (and their children, etc). These keys will be in a valid path notation for you to use. <p> If deep is set to false, then this will contain only the keys and values of any direct children, and not their own children.</em></p>
+<p><em>Checks if this <a href="ConfigurationSection.html"><code>ConfigurationSection</code></a> contains the given path. <p> If the value for the requested path does not exist but a default value has been specified, this will return true.</em></p>
 <table>
 <thead>
 <tr>
@@ -1303,14 +1303,11 @@
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>Map of keys and values of this section. /</td>
+<td>True if this section contains the requested path, either via default or being set.</td>
 </tr>
 </tbody>
 </table>
-<pre><code>public <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">Object</span>&gt; getValues(boolean deep);
-
-<span class="hljs-dartdoc"><span class="markdown">/** Checks if this [<span class="hljs-link_label">`ConfigurationSection`</span>](<span class="hljs-link_url">ConfigurationSection.md</span>) contains the given path. <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span></span> If the value for the requested path does not exist but a default value has been specified, this will return true.</span></span>
-</code></pre><h5 id="-a-id-isvector-a-public-function-__isvector__-path-"><a id='isvector'></a>public  function <strong>isVector</strong>(path)</h5>
+<h5 id="-a-id-isvector-a-public-function-__isvector__-path-"><a id='isvector'></a>public  function <strong>isVector</strong>(path)</h5>
 <p><em>Checks if the specified path is a Vector. <p> If the path exists but is not a Vector, this will return false. If the path does not exist, this will return false. If the path does not exist but a default value has been specified, this will check if that default value is a Vector and return appropriately.</em></p>
 <table>
 <thead>
@@ -1636,7 +1633,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-getvector-a-public-function-__getvector__-path-"><a id='getvector'></a>public  function <strong>getVector</strong>(path)</h5>
-<p><em>Gets the requested List of Maps by path. <p> If the List does not exist but a default value has been specified, this will return the default value. If the List does not exist and no default value was specified, this will return an empty List. <p> This method will attempt to cast any values into a Map if possible, but may miss any values out if they are not compatible.</em></p>
+<p><em>Gets the requested Vector by path. <p> If the Vector does not exist but a default value has been specified, this will return the default value. If the Vector does not exist and no default value was specified, this will return null.</em></p>
 <table>
 <thead>
 <tr>
@@ -1649,7 +1646,7 @@
 <tr>
 <td>path</td>
 <td><code>String</code></td>
-<td>Path of the List to get.</td>
+<td>Path of the Vector to get.</td>
 </tr>
 </tbody>
 </table>
@@ -1663,15 +1660,11 @@
 <tbody>
 <tr>
 <td><code>Vector</code></td>
-<td>Requested List of Maps. /</td>
+<td>Requested Vector.</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> List&lt;Map&lt;?, ?&gt;&gt; getMapList(String path);
-
-// WolfScript
-/** Gets the requested Vector by path. &lt;p&gt; <span class="hljs-keyword">If</span> the Vector does not <span class="hljs-keyword">exist</span> but a <span class="hljs-keyword">default</span> <span class="hljs-keyword">value</span> has been specified, this will <span class="hljs-keyword">return</span> the <span class="hljs-keyword">default</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> the Vector does not <span class="hljs-keyword">exist</span> and no <span class="hljs-keyword">default</span> <span class="hljs-keyword">value</span> was specified, this will <span class="hljs-keyword">return</span> null.
-</code></pre><h5 id="-a-id-getvector-a-public-function-__getvector__-path-def-"><a id='getvector'></a>public  function <strong>getVector</strong>(path, def)</h5>
+<h5 id="-a-id-getvector-a-public-function-__getvector__-path-def-"><a id='getvector'></a>public  function <strong>getVector</strong>(path, def)</h5>
 <p><em>Gets the requested <code>Vector</code> by path, returning a default value if not found. <p> If the Vector does not exist then the specified default value will returned regardless of if a default has been identified in the root <a href="Configuration.html"><code>Configuration</code></a>.</em></p>
 <table>
 <thead>

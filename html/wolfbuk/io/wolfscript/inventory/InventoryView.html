@@ -98,7 +98,6 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/inventory/Property.html'>Property</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapelessRecipe.html'>ShapelessRecipe</a></li>
@@ -149,24 +148,20 @@
 </thead>
 <tbody>
 <tr>
-<td>final writeonly property <strong>Cursor</strong> <br> <em>Set: Sets the item on the cursor of one of the viewing players.</em></td>
-<td style="text-align:left"><code>void</code></td>
+<td>final readonly property <strong>Title</strong> <br> <em>Get: Get the title of this inventory window.</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td>abstract readonly property <strong>BottomInventory</strong> <br> <em>Get: Get the lower inventory involved in this transaction.</em></td>
 <td style="text-align:left"><a href="Inventory.html"><code>Inventory</code></a></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Cursor</strong> <br> <em>Get: Get the item on the cursor of one of the viewing players.</em></td>
-<td style="text-align:left"><code>ItemStack</code></td>
-</tr>
-<tr>
 <td>abstract readonly property <strong>Player</strong> <br> <em>Get: Get the player viewing.</em></td>
 <td style="text-align:left"><code>HumanEntity</code></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Title</strong> <br> <em>Get: Get the title of this inventory window.</em></td>
-<td style="text-align:left"><code>String</code></td>
+<td>final  property <strong>Cursor</strong> <br> <em>Get: Get the item on the cursor of one of the viewing players.<br>Set: Sets the item on the cursor of one of the viewing players.</em></td>
+<td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
 <td>abstract readonly property <strong>TopInventory</strong> <br> <em>Get: Get the upper inventory involved in this transaction.</em></td>
@@ -175,6 +170,14 @@
 <tr>
 <td>abstract readonly property <strong>Type</strong> <br> <em>Get: Determine the type of inventory involved in the transaction. This</em></td>
 <td style="text-align:left"><a href="../event/inventory/InventoryType.html"><code>InventoryType</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Type</strong> <br> <em>Type property</em></td>
+<td style="text-align:left"><a href="../event/inventory/InventoryType.html"><code>InventoryType</code></a></td>
+</tr>
+<tr>
+<td> function <strong>getItem</strong>(slot) <br> <em>Gets one item in this inventory view by its raw slot ID.</em></td>
+<td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
 <td>final function <strong>countSlots</strong>() <br> <em>Check the total number of slots in this view, combining the upper and</em></td>
@@ -187,10 +190,6 @@
 <tr>
 <td>final function <strong>convertSlot</strong>(rawSlot) <br> <em>Converts a raw slot ID into its local slot ID into whichever of the two</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> function <strong>getItem</strong>(slot) <br> <em>Gets one item in this inventory view by its raw slot ID.</em></td>
-<td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
 <td> function <strong>setItem</strong>(slot, item) <br> <em>Sets one item in this inventory view by its raw slot ID.</em></td>
@@ -208,67 +207,9 @@
 </table>
 <hr>
 <h3 id="public-properties-for-inventoryview-inventoryview-md-">Public Properties for <a href="InventoryView.html"><code>InventoryView</code></a></h3>
-<h5 id="-a-id-cursor-a-public-final-writeonly-property-__cursor__"><a id='cursor'></a>public final writeonly property <strong>Cursor</strong></h5>
-<p><em>Set: Sets the item on the cursor of one of the viewing players.</em></p>
+<h5 id="-a-id-title-a-public-final-readonly-property-__title__"><a id='title'></a>public final readonly property <strong>Title</strong></h5>
+<p><em>Get: Get the title of this inventory window.</em></p>
 <table>
-<thead>
-<tr>
-<th>Get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Set</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>item</td>
-<td><code>ItemStack</code></td>
-<td>The item to put on the cursor, or null to remove the item on their cursor.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
-<p><em>Deprecated: Magic value</em></p>
-<p>_Get: Represents various extra properties of certain inventory windows. /
-    public enum Property {
-        /<strong> The progress of the down-pointing arrow in a brewing inventory. /
-        BREW_TIME(0, InventoryType.BREWING),
-        /</strong> The progress of the right-pointing arrow in a furnace inventory. /
-        COOK_TIME(0, InventoryType.FURNACE),
-        /<strong> The progress of the flame in a furnace inventory. /
-        BURN_TIME(1, InventoryType.FURNACE),
-        /</strong> How many total ticks the current fuel should last. /
-        TICKS_FOR_CURRENT_FUEL(2, InventoryType.FURNACE),
-        /<strong> In an enchanting inventory, the top button&#39;s experience level value. /
-        ENCHANT_BUTTON1(0, InventoryType.ENCHANTING),
-        /</strong> In an enchanting inventory, the middle button&#39;s experience level value. /
-        ENCHANT_BUTTON2(1, InventoryType.ENCHANTING),
-        /** In an enchanting inventory, the bottom button&#39;s experience level value. /
-        ENCHANT_BUTTON3(2, InventoryType.ENCHANTING);
-        int id;
-        InventoryType style;
-        private Property(int id, InventoryType appliesTo) {
-            this.id = id;
-            style = appliesTo;
-        }</p>
-<pre><code>    <span class="hljs-keyword">public</span> <span class="hljs-function">InventoryType <span class="hljs-title">getType</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> style;
-    }
-
-    <span class="hljs-javadoc">/**_</span>
-</code></pre><table>
 <thead>
 <tr>
 <th>Get</th>
@@ -277,8 +218,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td>the id of this view</td>
+<td><code>String</code></td>
+<td>The title.</td>
 </tr>
 </tbody>
 </table>
@@ -298,22 +239,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-cursor-a-public-final-readonly-property-__cursor__"><a id='cursor'></a>public final readonly property <strong>Cursor</strong></h5>
-<p><em>Get: Get the item on the cursor of one of the viewing players.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ItemStack</code></td>
-<td>The item on the player&#39;s cursor, or null if they aren&#39;t holding one.</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-player-a-public-abstract-readonly-property-__player__"><a id='player'></a>public abstract readonly property <strong>Player</strong></h5>
 <p><em>Get: Get the player viewing.</em></p>
 <table>
@@ -330,8 +255,9 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-title-a-public-final-readonly-property-__title__"><a id='title'></a>public final readonly property <strong>Title</strong></h5>
-<p><em>Get: Get the title of this inventory window.</em></p>
+<h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Id property</em></p>
 <table>
 <thead>
 <tr>
@@ -341,8 +267,40 @@
 </thead>
 <tbody>
 <tr>
-<td><code>String</code></td>
-<td>The title.</td>
+<td><code>int</code></td>
+<td>the id of this view</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-cursor-a-public-final-property-__cursor__"><a id='cursor'></a>public final  property <strong>Cursor</strong></h5>
+<p><em>Get: Get the item on the cursor of one of the viewing players.<br>Set: Sets the item on the cursor of one of the viewing players.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ItemStack</code></td>
+<td>The item on the player&#39;s cursor, or null if they aren&#39;t holding one.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item</td>
+<td><code>ItemStack</code></td>
+<td>The item to put on the cursor, or null to remove the item on their cursor.</td>
 </tr>
 </tbody>
 </table>
@@ -378,8 +336,55 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
+<p><em>Type property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../event/inventory/InventoryType.html"><code>InventoryType</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-methods-for-inventoryview-inventoryview-md-">Public Methods for <a href="InventoryView.html"><code>InventoryView</code></a></h3>
+<h5 id="-a-id-getitem-a-public-function-__getitem__-slot-"><a id='getitem'></a>public  function <strong>getItem</strong>(slot)</h5>
+<p><em>Gets one item in this inventory view by its raw slot ID.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slot</td>
+<td><code>int</code></td>
+<td>The ID as returned by InventoryClickEvent.getRawSlot()</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ItemStack</code></td>
+<td>The item currently in the slot.</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-countslots-a-public-final-function-__countslots__-"><a id='countslots'></a>public final function <strong>countSlots</strong>()</h5>
 <p><em>Check the total number of slots in this view, combining the upper and lower inventories. <p> Note though that it&#39;s possible for this to be greater than the sum of the two inventories if for example some slots are not being used.</em></p>
 <table>
@@ -440,38 +445,6 @@
 <tr>
 <td><code>int</code></td>
 <td>The converted slot ID.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-getitem-a-public-function-__getitem__-slot-"><a id='getitem'></a>public  function <strong>getItem</strong>(slot)</h5>
-<p><em>Gets one item in this inventory view by its raw slot ID.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>slot</td>
-<td><code>int</code></td>
-<td>The ID as returned by InventoryClickEvent.getRawSlot()</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ItemStack</code></td>
-<td>The item currently in the slot.</td>
 </tr>
 </tbody>
 </table>

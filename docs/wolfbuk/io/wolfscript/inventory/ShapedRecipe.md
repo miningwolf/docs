@@ -13,7 +13,7 @@ Method | Type
 --- | :--- 
 new __ShapedRecipe__(result) <br> _Create a shaped recipe to craft the specified ItemStack. The_ | _constructor_
  readonly property __Result__ <br> _Get: Get the result._ | `ItemStack`
- readonly property __Shape__ <br> _Get: Get a copy of the ingredients map._ | `String[]`
+ readonly property __Shape__ <br> _Get: Get the shape._ | `String[]`
  function __setIngredient__(key, ingredient) <br> _Sets the material that a character in the recipe shape refers to._ | [`ShapedRecipe`](ShapedRecipe.md)
  function __setIngredient__(key, ingredient) <br> _Sets the material that a character in the recipe shape refers to._ | [`ShapedRecipe`](ShapedRecipe.md)
  function __shape__(String) <br> _Set the shape of this recipe to the specified rows. Each character_ | [`ShapedRecipe`](ShapedRecipe.md)
@@ -48,24 +48,11 @@ Get | Description
 
 ##### <a id='shape'></a>public  readonly property __Shape__
 
-_Get: Get a copy of the ingredients map._
+_Get: Get the shape._
 
 Get | Description
 --- | --- 
-`String[]` | The mapping of character to ingredients. /
-    public Map<Character, ItemStack> getIngredientMap() {
-        HashMap<Character, ItemStack> result = new HashMap<Character, ItemStack>();
-        for (Map.Entry<Character, ItemStack> ingredient : ingredients.entrySet()) {
-            if (ingredient.getValue() == null) {
-                result.put(ingredient.getKey(), null);
-            } else {
-                result.put(ingredient.getKey(), ingredient.getValue().clone());
-            }
-        }
-        return result;
-    }
-
-    /** Get the shape.
+`String[]` | The recipe's shape.
 
 
 

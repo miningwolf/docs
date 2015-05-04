@@ -8,7 +8,7 @@
 
 ### Class Overview
 
-Called when a block is broken by a player. <p> If you wish to have the block drop experience, you must set the experience value above 0. By default, experience will be set in the event if: <ol> <li>The player is not in creative or adventure mode <li>The player can loot the block (ie: does not destroy it completely, by using the correct tool) <li>The player does not have silk touch <li>The block drops experience in vanilla Minecraft </ol> <p> Note: Plugins wanting to simulate a traditional block drop should set the block to air and utilize their own methods for determining what the default drop for the block being broken is and what to do about it, if anything. <p> If a Block Break event is cancelled, the block will not break and experience will not drop.
+class BlockBreakEvent
 
 Method | Type   
 --- | :--- 
@@ -32,7 +32,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -215,11 +215,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

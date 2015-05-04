@@ -173,7 +173,7 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>  property <strong>Default</strong> <br> <em>Get: Gets the children of this permission.<br>Set: Sets the default value of this permission.</em></td>
+<td>  property <strong>Default</strong> <br> <em>Get: Gets the default value of this permission.<br>Set: Sets the default value of this permission.</em></td>
 <td style="text-align:left"><a href="PermissionDefault.html"><code>PermissionDefault</code></a></td>
 </tr>
 <tr>
@@ -193,15 +193,15 @@
 <td style="text-align:left"><a href="Permission.html"><code>Permission</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>loadPermission</strong>(name) <br> <em>Loads a Permission from a map of data, usually used from retrieval from</em></td>
+<td>static function <strong>loadPermission</strong>(name) <br> <em>loadPermission method</em></td>
 <td style="text-align:left"><a href="Permission.html"><code>Permission</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>loadPermission</strong>(name, def) <br> <em>Loads a Permission from a map of data, usually used from retrieval from</em></td>
+<td>static function <strong>loadPermission</strong>(name, def) <br> <em>loadPermission method</em></td>
 <td style="text-align:left"><a href="Permission.html"><code>Permission</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>loadPermissions</strong>(error, def) <br> <em>Loads a list of Permissions from a map of data, usually used from</em></td>
+<td>static function <strong>loadPermissions</strong>(error, def) <br> <em>loadPermissions method</em></td>
 <td style="text-align:left"><code>List&lt;Permission&gt;</code></td>
 </tr>
 <tr>
@@ -447,7 +447,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-default-a-public-property-__default__"><a id='default'></a>public   property <strong>Default</strong></h5>
-<p><em>Get: Gets the children of this permission. <p> If you change this map in any form, you must call <code>#recalculatePermissibles()</code> to recalculate all <a href="Permissible.html"><code>Permissible</code></a>s<br>Set: Sets the default value of this permission. <p> This will not be saved to disk, and is a temporary operation until the server reloads permissions. Changing this default will cause all <a href="Permissible.html"><code>Permissible</code></a>s that contain this permission to recalculate their permissions</em></p>
+<p><em>Get: Gets the default value of this permission.<br>Set: Sets the default value of this permission. <p> This will not be saved to disk, and is a temporary operation until the server reloads permissions. Changing this default will cause all <a href="Permissible.html"><code>Permissible</code></a>s that contain this permission to recalculate their permissions</em></p>
 <table>
 <thead>
 <tr>
@@ -458,16 +458,11 @@
 <tbody>
 <tr>
 <td><a href="PermissionDefault.html"><code>PermissionDefault</code></a></td>
-<td>Permission children /</td>
+<td>Default value of this permission.</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-built_in">Map</span><span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, <span class="hljs-built_in">Boolean</span><span class="hljs-subst">&gt;</span> getChildren() {
-    <span class="hljs-keyword">return</span> children;
-}
-
-<span class="hljs-comment">/** Gets the default value of this permission.</span>
-</code></pre><table>
+<table>
 <thead>
 <tr>
 <th>Set</th>
@@ -590,7 +585,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-loadpermission-a-public-static-function-__loadpermission__-name-"><a id='loadpermission'></a>public static function <strong>loadPermission</strong>(name)</h5>
-<p><em>Loads a Permission from a map of data, usually used from retrieval from a yaml file. <p> The data may contain the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul></em></p>
+<p><em>loadPermission method</em></p>
 <table>
 <thead>
 <tr>
@@ -603,7 +598,7 @@
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>Name of the permission</td>
+<td>name argument</td>
 </tr>
 </tbody>
 </table>
@@ -611,18 +606,17 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="Permission.html"><code>Permission</code></a></td>
-<td>Permission object</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-loadpermission-a-public-static-function-__loadpermission__-name-def-"><a id='loadpermission'></a>public static function <strong>loadPermission</strong>(name, def)</h5>
-<p><em>Loads a Permission from a map of data, usually used from retrieval from a yaml file. <p> The data may contain the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul></em></p>
+<p><em>loadPermission method</em></p>
 <table>
 <thead>
 <tr>
@@ -635,12 +629,12 @@
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>Name of the permission</td>
+<td>name argument</td>
 </tr>
 <tr>
 <td>def</td>
 <td><a href="PermissionDefault.html"><code>PermissionDefault</code></a></td>
-<td>Default permission value to use if not set</td>
+<td>def argument</td>
 </tr>
 </tbody>
 </table>
@@ -648,18 +642,17 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="Permission.html"><code>Permission</code></a></td>
-<td>Permission object</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-loadpermissions-a-public-static-function-__loadpermissions__-error-def-"><a id='loadpermissions'></a>public static function <strong>loadPermissions</strong>(error, def)</h5>
-<p><em>Loads a list of Permissions from a map of data, usually used from retrieval from a yaml file. <p> The data may contain a list of name:data, where the data contains the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul></em></p>
+<p><em>loadPermissions method</em></p>
 <table>
 <thead>
 <tr>
@@ -672,12 +665,12 @@
 <tr>
 <td>error</td>
 <td><code>String</code></td>
-<td>An error message to show if a permission is invalid.</td>
+<td>error argument</td>
 </tr>
 <tr>
 <td>def</td>
 <td><a href="PermissionDefault.html"><code>PermissionDefault</code></a></td>
-<td>Default permission value to use if missing</td>
+<td>def argument</td>
 </tr>
 </tbody>
 </table>
@@ -685,13 +678,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>List&lt;Permission&gt;</code></td>
-<td>Permission object</td>
+<td></td>
 </tr>
 </tbody>
 </table>

@@ -11,7 +11,7 @@ Portal properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAxis__(block, value) <br> _Portal axis property, Values: `Axis` (excluding Y)_ | [`Block`](../../Block.md)
+static function __applyAxis__(block, value) <br> _Applies axis to the `Portal`_ | [`Block`](../../Block.md)
 static final var __axis__ <br> _Portal axis property, Values: `Axis` (excluding Y)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyaxis'></a>public static function __applyAxis__(block, value)
 
-_Portal axis property, Values: `Axis` (excluding Y) /
-    public static final BlockEnumProperty axis = getInstanceFor(Portal, "axis");
-
-    /** Applies axis to the `Portal`_
+_Applies axis to the `Portal`_
 
 Argument | Type | Description  
 --- | --- | --- 

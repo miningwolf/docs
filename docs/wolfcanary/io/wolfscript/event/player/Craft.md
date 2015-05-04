@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Craft Hook <p/> Called when a matching crafting recipe if found for a `Player` crafting
+class Craft
 
 Method | Type   
 --- | :--- 

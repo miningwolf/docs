@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Wolf Class Loader <p/> Used to load and manage plugin jars/classes
+class WolfClassLoader
 
 Method | Type   
 --- | :--- 

@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-/kit create
+class KitCreate
 
 Method | Type   
 --- | :--- 

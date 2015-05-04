@@ -11,8 +11,9 @@ Lever properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Lever facing property, Values: `Orientation`_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a `Orientation` facing property to the `Lever`_ | [`Block`](../../Block.md)
 static function __applyPowered__(block, value) <br> _Applies whether the `Level` is powered or not (possibly referring to handle position)_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Orientation`
 static final var __facing__ <br> _Lever facing property, Values: `Orientation`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __powered__ <br> _Lever powered property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
@@ -29,13 +30,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Lever facing property, Values: `Orientation` /
-    public static final BlockEnumProperty facing = getInstanceFor(Lever, "facing");
-
-    /** Lever powered property, Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(Lever, "powered");
-
-    /** Lever orientation_
+_Applies a `Orientation` facing property to the `Lever`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -59,6 +54,19 @@ value | `boolean` | the `boolean` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Orientation` |
 
 
 ---

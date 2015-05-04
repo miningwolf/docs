@@ -129,7 +129,6 @@
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/Direction.html'>Direction</a></li>
 <li class='active'><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/Location.html'>Location</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/Position.html'>Position</a></li>
-<li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/ReadMode.html'>ReadMode</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/Rotations.html'>Rotations</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/Vector3D.html'>Vector3D</a></li>
 <li class='divider'></li>
@@ -316,7 +315,7 @@ Extends <a href="Vector3D.html"><code>Vector3D</code></a></p>
 <td style="text-align:left"><code>double</code></td>
 </tr>
 <tr>
-<td> function <strong>getDistance</strong>(v) <br> <em>This is the nullvector (0,0,0)</em></td>
+<td> function <strong>getDistance</strong>(v) <br> <em>Get the distance between this and the given vector</em></td>
 <td style="text-align:left"><code>double</code></td>
 </tr>
 <tr>
@@ -1223,37 +1222,8 @@ Extends <a href="Vector3D.html"><code>Vector3D</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-getdistance-a-public-function-__getdistance__-v-"><a id='getdistance'></a>public  function <strong>getDistance</strong>(v)</h5>
-<p>_This is the nullvector (0,0,0) /
-    public static final Vector3D zero = new Vector3D(0, 0, 0);</p>
-<pre><code>/** Shortcut to Vector3D(0,0,1) /
-public static final Vector3D forward = new Vector3D(0, 0, 1);
-
-<span class="hljs-component">public Vector3D(double x, double y, double z) {
-    this<span class="hljs-string">.x</span> = x;
-    this<span class="hljs-string">.y</span> = y;
-    this<span class="hljs-string">.z</span> = z;
-}</span>
-
-<span class="hljs-component">public Vector3D(int x, int y, int z) {
-    this<span class="hljs-string">.x</span> = x;
-    this<span class="hljs-string">.y</span> = y;
-    this<span class="hljs-string">.z</span> = z;
-}</span>
-
-<span class="hljs-component">public Vector3D(float x, float y, float z) {
-    this<span class="hljs-string">.x</span> = x;
-    this<span class="hljs-string">.y</span> = y;
-    this<span class="hljs-string">.z</span> = z;
-}</span>
-
-<span class="hljs-component">public Vector3D() {
-    this<span class="hljs-string">.x</span> = 0;
-    this<span class="hljs-string">.y</span> = 0;
-    this<span class="hljs-string">.z</span> = 0;
-}</span>
-
-/** Copy constructor copies the primitives_
-</code></pre><table>
+<p><em>Get the distance between this and the given vector</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

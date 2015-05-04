@@ -172,7 +172,7 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>abandon</strong>() <br> <em>Adds a <a href="ConversationAbandonedListener.html"><code>ConversationAbandonedListener</code></a>.</em></td>
+<td> function <strong>abandon</strong>() <br> <em>Abandons and resets the current conversation. Restores the user&#39;s</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -192,7 +192,7 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>outputNextPrompt</strong>() <br> <em>Abandons and resets the current conversation. Restores the user&#39;s</em></td>
+<td> function <strong>outputNextPrompt</strong>() <br> <em>Displays the next user prompt and abandons the conversation if the next</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -371,7 +371,7 @@
 <hr>
 <h3 id="public-methods-for-conversation-conversation-md-">Public Methods for <a href="Conversation.html"><code>Conversation</code></a></h3>
 <h5 id="-a-id-abandon-a-public-function-__abandon__-"><a id='abandon'></a>public  function <strong>abandon</strong>()</h5>
-<p><em>Adds a <a href="ConversationAbandonedListener.html"><code>ConversationAbandonedListener</code></a>.</em></p>
+<p><em>Abandons and resets the current conversation. Restores the user&#39;s normal chat behavior.</em></p>
 <table>
 <thead>
 <tr>
@@ -464,7 +464,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-outputnextprompt-a-public-function-__outputnextprompt__-"><a id='outputnextprompt'></a>public  function <strong>outputNextPrompt</strong>()</h5>
-<p><em>Abandons and resets the current conversation. Restores the user&#39;s normal chat behavior.</em></p>
+<p><em>Displays the next user prompt and abandons the conversation if the next prompt is null.</em></p>
 <table>
 <thead>
 <tr>

@@ -12,7 +12,8 @@ Dirt properties helper
 Method | Type   
 --- | :--- 
 static function __applySnowy__(block, value) <br> _Applies whether the `Dirt` is snowy_ | [`Block`](../../Block.md)
-static function __applyVariant__(block, value) <br> _Dirt variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies variant to the `Dirt`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __variant__ <br> _Dirt variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __snowy__ <br> _Dirt snowy property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
@@ -43,13 +44,7 @@ Returns | Description
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_Dirt variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(Dirt, "variant");
-
-    /** Dirt snowy property, Values: true, false /
-    public static final BlockBooleanProperty snowy = getInstanceFor(Dirt, "snowy");
-
-    /** Dirt variants_
+_Applies variant to the `Dirt`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -59,6 +54,19 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

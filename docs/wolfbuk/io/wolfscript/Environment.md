@@ -6,14 +6,11 @@
 
 ### Enum Overview
 
-Represents a world, which may contain entities, chunks and blocks /
-public interface World extends PluginMessageRecipient, Metadatable {
-
-    /** Gets the [`Block`](block/Block.md) at the given coordinates
+Represents various map environment types that a world may be
 
 Item | Type   
 --- | :--- 
-NORMAL: 0<br> _Represents the "normal"/"surface world" map_ | Environment
+NORMAL: 0<br> _NORMAL Environment_ | Environment
 NETHER: -1<br> _Represents a nether based map ("hell")_ | Environment
 THE_END: 1<br> _Represents the "end" map_ | Environment
 
@@ -27,21 +24,7 @@ THE_END: 1<br> _Represents the "end" map_ | Environment
 ##### <a id='id'></a>public  readonly property __Id__
 _Deprecated: Magic value_
 
-_Get: Represents the "normal"/"surface world" map /
-        NORMAL(0),
-        /** Represents a nether based map ("hell") /
-        NETHER(-1),
-        /** Represents the "end" map /
-        THE_END(1);
-
-        private final int id;
-        private static final Map<Integer, Environment> lookup = new HashMap<Integer, Environment>();
-
-        private Environment(int id) {
-            this.id = id;
-        }
-
-        /** Gets the dimension ID of this environment_
+_Get: Gets the dimension ID of this environment_
 
 Get | Description
 --- | --- 

@@ -152,21 +152,7 @@ Returns |
 ##### <a id='valueof'></a>public static function __valueOf__(value)
 _Deprecated: Magic value_
 
-_An enum representing all possible scales a map can be set to. /
-    public static enum Scale {
-        CLOSEST(0),
-        CLOSE(1),
-        NORMAL(2),
-        FAR(3),
-        FARTHEST(4);
-
-        private byte value;
-
-        private Scale(int value) {
-            this.value = (byte) value;
-        }
-
-        /** Get the scale given the raw value._
+_Get the scale given the raw value._
 
 Argument | Type | Description  
 --- | --- | --- 

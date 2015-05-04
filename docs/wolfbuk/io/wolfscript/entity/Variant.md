@@ -6,10 +6,7 @@
 
 ### Enum Overview
 
-Represents a Horse. /
-public interface Horse extends Animals, Vehicle, InventoryHolder, Tameable {
-
-    /** Represents the different types of horses that may exist.
+Represents the different types of horses that may exist.
 
 Item | Type   
 --- | :--- 

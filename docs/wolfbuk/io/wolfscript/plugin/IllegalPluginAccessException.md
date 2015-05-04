@@ -11,8 +11,8 @@ Thrown when a plugin attempts to interact with the server when it is not enabled
 
 Method | Type   
 --- | :--- 
-new __IllegalPluginAccessException__() <br> _Creates a new instance of <code>IllegalPluginAccessException</code>_ | _constructor_
-new __IllegalPluginAccessException__(msg) <br> _Constructs an instance of <code>IllegalPluginAccessException</code>_ | _constructor_
+new __IllegalPluginAccessException__() <br> _IllegalPluginAccessException constructor_ | _constructor_
+new __IllegalPluginAccessException__(msg) <br> _IllegalPluginAccessException constructor_ | _constructor_
 
 
 
@@ -22,16 +22,16 @@ new __IllegalPluginAccessException__(msg) <br> _Constructs an instance of <code>
 
 ##### <a id='illegalpluginaccessexception'></a>new __IllegalPluginAccessException__() 
 
-_Creates a new instance of <code>IllegalPluginAccessException</code> without detail message._
+_IllegalPluginAccessException constructor_
 
 
 ##### <a id='illegalpluginaccessexception'></a>new __IllegalPluginAccessException__(msg) 
 
-_Constructs an instance of <code>IllegalPluginAccessException</code> with the specified detail message._
+_IllegalPluginAccessException constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-msg | `String` | the detail message.
+msg | `String` | msg argument
 
 ---
 ---

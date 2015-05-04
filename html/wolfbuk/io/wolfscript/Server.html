@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -168,7 +164,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td>  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific</em></td>
+<td>  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -212,7 +208,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>long</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Name</strong> <br> <em>Get: Used for all administrative messages, such as an operator using a</em></td>
+<td> readonly property <strong>Name</strong> <br> <em>Get: Gets the name of this server implementation.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -220,7 +216,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><a href="plugin/messaging/Messenger.html"><code>Messenger</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>MaxPlayers</strong> <br> <em>Get: Gets an array copy of all currently logged in players.</em></td>
+<td> readonly property <strong>MaxPlayers</strong> <br> <em>Get: Get the maximum amount of players which can login to this server.</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -256,7 +252,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>File</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>TicksPerMonsterSpawns</strong> <br> <em>Get: Gets the default ticks per monster spawns value.</em></td>
+<td> readonly property <strong>TicksPerMonsterSpawns</strong> <br> <em>TicksPerMonsterSpawns property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -284,11 +280,11 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>Get: Gets default ticks per animal spawns value.</em></td>
+<td> readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>TicksPerAnimalSpawns property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td>  property <strong>SpawnRadius</strong> <br> <em>Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></td>
+<td>  property <strong>SpawnRadius</strong> <br> <em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -348,7 +344,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>configureDbConfig</strong>(config) <br> <em>Dispatches a command on this server, and executes it if found.</em></td>
+<td> function <strong>configureDbConfig</strong>(config) <br> <em>Populates a given <code>ServerConfig</code> with values attributes to this</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -428,7 +424,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>useExactLoginLocation</strong>() <br> <em>Gets whether to use vanilla (false) or exact behaviour (true).</em></td>
+<td> function <strong>useExactLoginLocation</strong>() <br> <em>useExactLoginLocation method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -460,7 +456,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <hr>
 <h3 id="public-properties-for-server-server-md-">Public Properties for <a href="Server.html"><code>Server</code></a></h3>
 <h5 id="-a-id-idletimeout-a-public-property-__idletimeout__"><a id='idletimeout'></a>public   property <strong>IdleTimeout</strong></h5>
-<p><em>Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific server-icon. <p> Size and type are implementation defined. An incompatible file is guaranteed to throw an implementation-defined <code>Exception</code>.</em></p>
+<p><em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout.</em></p>
 <table>
 <thead>
 <tr>
@@ -471,14 +467,11 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>a cached server-icon that can be used for a <code>ServerListPingEvent#setServerIcon(CachedServerIcon)</code> /</td>
+<td>the idle timeout in minutes</td>
 </tr>
 </tbody>
 </table>
-<pre><code>CachedServerIcon loadServerIcon(File <span class="hljs-keyword">file</span>) throws IllegalArgumentException, Exception;
-
-/** Creates <span class="hljs-keyword">a</span> cached server-icon <span class="hljs-keyword">for</span> the specific image. &lt;<span class="hljs-keyword">p</span>&gt; Size <span class="hljs-built_in">and</span> <span class="hljs-built_in">type</span> are implementation defined. An incompatible <span class="hljs-keyword">file</span> <span class="hljs-keyword">is</span> guaranteed <span class="hljs-keyword">to</span> <span class="hljs-keyword">throw</span> <span class="hljs-keyword">an</span> implementation-defined `Exception`.
-</code></pre><table>
+<table>
 <thead>
 <tr>
 <th>Set</th>
@@ -671,13 +664,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
-<p>_Get: Used for all administrative messages, such as an operator using a command. <p> For use in {@link #broadcast(java.lang.String, java.lang.String)}. /
-    public static final String BROADCAST_CHANNEL_ADMINISTRATIVE = &quot;wolfscript.broadcast.admin&quot;;</p>
-<pre><code>/** Used <span class="hljs-keyword">for</span> all announcement messages, such as informing users that a player has joined. &lt;p&gt; <span class="hljs-keyword">For</span> use <span class="hljs-keyword">in</span> {@link #broadcast(java.lang.<span class="hljs-built_in">String</span>, java.lang.<span class="hljs-built_in">String</span>)}. /
-<span class="hljs-keyword">public</span> static final <span class="hljs-built_in">String</span> BROADCAST_CHANNEL_USERS = <span class="hljs-string">"wolfscript.broadcast.user"</span>;
-
-/** Gets the name of this <span class="hljs-built_in">server</span> implementation._
-</code></pre><table>
+<p><em>Get: Gets the name of this server implementation.</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>
@@ -708,7 +696,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tbody>
 </table>
 <h5 id="-a-id-maxplayers-a-public-readonly-property-__maxplayers__"><a id='maxplayers'></a>public  readonly property <strong>MaxPlayers</strong></h5>
-<p><em>Get: Gets an array copy of all currently logged in players. <p> This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.</em></p>
+<p><em>Get: Get the maximum amount of players which can login to this server.</em></p>
 <table>
 <thead>
 <tr>
@@ -719,15 +707,11 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>an array of Players that are currently online /</td>
+<td>the amount of players this server allows</td>
 </tr>
 </tbody>
 </table>
-<pre><code>@Deprecated
-public Player[] _INVALID_getOnlinePlayers();
-
-/** Gets a view <span class="hljs-keyword">of</span> all currently logged <span class="hljs-keyword">in</span> players. This {@linkplain Collections#unmodifiableCollection(Collection) view} <span class="hljs-keyword">is</span> a reused object, making some operations like `Collection#size()` zero-allocation. &lt;p&gt; The collection <span class="hljs-keyword">is</span> a view backed <span class="hljs-keyword">by</span> the internal representation, <span class="hljs-keyword">such</span> <span class="hljs-keyword">that</span>, changes to the internal state <span class="hljs-keyword">of</span> the server will <span class="hljs-keyword">be</span> reflected immediately. However, the reuse <span class="hljs-keyword">of</span> the returned collection (identity) <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> strictly guaranteed <span class="hljs-keyword">for</span> future <span class="hljs-keyword">or</span> all implementations. Casting the collection, <span class="hljs-keyword">or</span> relying on interface implementations (like `Serializable` <span class="hljs-keyword">or</span> `List`), <span class="hljs-keyword">is</span> deprecated. &lt;p&gt; Iteration behavior <span class="hljs-keyword">is</span> undefined outside <span class="hljs-keyword">of</span> self-contained main-thread uses. Normal <span class="hljs-keyword">and</span> immediate iterator use without consequences <span class="hljs-keyword">that</span> affect the collection are fully supported. The effects following (non-exhaustive) {@link Entity#teleport(Location) teleportation}, {@link Player#setHealth(double) death}, <span class="hljs-keyword">and</span> {@link Player#kickPlayer( String) kicking} are undefined. Any use <span class="hljs-keyword">of</span> this collection <span class="hljs-keyword">from</span> asynchronous threads <span class="hljs-keyword">is</span> unsafe. &lt;p&gt; For safe consequential iteration <span class="hljs-keyword">or</span> mimicking the old array behavior, using `Collection#toArray(Object[])` <span class="hljs-keyword">is</span> recommended. For making snapshots, `ImmutableList#copyOf(Collection)` <span class="hljs-keyword">is</span> recommended.
-</code></pre><h5 id="-a-id-ip-a-public-readonly-property-__ip__"><a id='ip'></a>public  readonly property <strong>Ip</strong></h5>
+<h5 id="-a-id-ip-a-public-readonly-property-__ip__"><a id='ip'></a>public  readonly property <strong>Ip</strong></h5>
 <p><em>Get: Get the IP that this server is bound to, or empty string if not specified.</em></p>
 <table>
 <thead>
@@ -856,18 +840,17 @@ public Player[] _INVALID_getOnlinePlayers();
 </tbody>
 </table>
 <h5 id="-a-id-tickspermonsterspawns-a-public-readonly-property-__tickspermonsterspawns__"><a id='tickspermonsterspawns'></a>public  readonly property <strong>TicksPerMonsterSpawns</strong></h5>
-<p><em>Get: Gets the default ticks per monster spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft&#39;s default. </ul> <p> <b>Note:</b> If set to 0, monsters spawning will be disabled. We recommend using spawn-monsters to control this instead. <p> Minecraft default: 1.</em></p>
+<p><em>TicksPerMonsterSpawns property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>the default ticks per monsters spawn value</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -968,23 +951,22 @@ public Player[] _INVALID_getOnlinePlayers();
 </tbody>
 </table>
 <h5 id="-a-id-ticksperanimalspawns-a-public-readonly-property-__ticksperanimalspawns__"><a id='ticksperanimalspawns'></a>public  readonly property <strong>TicksPerAnimalSpawns</strong></h5>
-<p><em>Get: Gets default ticks per animal spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft&#39;s default. </ul> <p> <b>Note:</b> If set to 0, animal spawning will be disabled. We recommend using spawn-animals to control this instead. <p> Minecraft default: 400.</em></p>
+<p><em>TicksPerAnimalSpawns property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>the default ticks per animal spawns value</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-spawnradius-a-public-property-__spawnradius__"><a id='spawnradius'></a>public   property <strong>SpawnRadius</strong></h5>
-<p><em>Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></p>
+<p><em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></p>
 <table>
 <thead>
 <tr>
@@ -995,14 +977,11 @@ public Player[] _INVALID_getOnlinePlayers();
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>a map of aliases to command names /</td>
+<td>spawn radius, or 0 if none</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> Map&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">String</span>[]&gt; getCommandAliases();
-
-/** Gets the radius, <span class="hljs-keyword">in</span> blocks, around <span class="hljs-keyword">each</span> worlds spawn point <span class="hljs-keyword">to</span> protect.
-</code></pre><table>
+<table>
 <thead>
 <tr>
 <th>Set</th>
@@ -1343,7 +1322,7 @@ public Player[] _INVALID_getOnlinePlayers();
 </tbody>
 </table>
 <h5 id="-a-id-configuredbconfig-a-public-function-__configuredbconfig__-config-"><a id='configuredbconfig'></a>public  function <strong>configureDbConfig</strong>(config)</h5>
-<p><em>Dispatches a command on this server, and executes it if found.</em></p>
+<p><em>Populates a given <code>ServerConfig</code> with values attributes to this server.</em></p>
 <table>
 <thead>
 <tr>
@@ -1364,13 +1343,12 @@ public Player[] _INVALID_getOnlinePlayers();
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>returns false if no target is found</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2024,18 +2002,17 @@ public Player[] _INVALID_getOnlinePlayers();
 </tbody>
 </table>
 <h5 id="-a-id-useexactloginlocation-a-public-function-__useexactloginlocation__-"><a id='useexactloginlocation'></a>public  function <strong>useExactLoginLocation</strong>()</h5>
-<p><em>Gets whether to use vanilla (false) or exact behaviour (true). <ul> <li>Vanilla behaviour: check for collisions and move the player if needed. <li>Exact behaviour: spawn players exactly where they should be. </ul></em></p>
+<p><em>useExactLoginLocation method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>true if exact location locations are used for spawning, false for vanilla collision detection or otherwise</td>
+<td></td>
 </tr>
 </tbody>
 </table>

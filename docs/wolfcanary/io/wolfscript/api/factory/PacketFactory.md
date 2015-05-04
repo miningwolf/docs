@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Packet manufacturing Factory <p/> See <a href="http://wiki.vg/Protocol">wiki.vg/Protocol</a> for information about Packets <p/> Some implemented packets may not function as intended or at all.
+interface PacketFactory
 
 Method | Type   
 --- | :--- 

@@ -11,7 +11,7 @@ Ladder properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Ladder facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Ladder`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Ladder facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Ladder facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Ladder, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Ladder`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Ladder`_
 
 Argument | Type | Description  
 --- | --- | --- 

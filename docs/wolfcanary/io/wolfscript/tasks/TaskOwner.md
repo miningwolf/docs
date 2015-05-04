@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Interface for defining a [`ServerTask`](ServerTask.md) owner <p/> Has no other use outside of the [`ServerTask`](ServerTask.md)
+interface TaskOwner
 
 Method | Type   
 --- | :--- 

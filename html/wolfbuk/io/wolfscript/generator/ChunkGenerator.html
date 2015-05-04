@@ -76,7 +76,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
-<li><a href='../../../../wolfbuk/io/wolfscript/generator/BiomeGrid.html'>BiomeGrid</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/generator/BlockPopulator.html'>BlockPopulator</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/generator/ChunkGenerator.html'>ChunkGenerator</a></li>
 <li class='divider'></li>
@@ -132,7 +131,7 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>generate</strong>(world, random, x, z) <br> <em>Shapes the chunk for the given coordinates.</em></td>
+<td> function <strong>generate</strong>(world, random, x, z) <br> <em>generate method</em></td>
 <td style="text-align:left"><code>byte[]</code></td>
 </tr>
 <tr>
@@ -190,7 +189,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-generate-a-public-function-__generate__-world-random-x-z-"><a id='generate'></a>public  function <strong>generate</strong>(world, random, x, z)</h5>
-<p><em>Shapes the chunk for the given coordinates. <p> This method should return a byte[32768] in the following format: <pre> for (int x = 0; x &lt; 16; x++) { for (int z = 0; z &lt; 16; z++) { for (int y = 0; y &lt; 128; y++) { // result[(x 16 + z) 128 + y] = ??; } } } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note this deprecated method will only be called when both generateExtBlockSections() and generateBlockSections() are unimplemented and return null.</em></p>
+<p><em>generate method</em></p>
 <table>
 <thead>
 <tr>
@@ -203,22 +202,22 @@
 <tr>
 <td>world</td>
 <td><code>World</code></td>
-<td>The world this chunk will be used for</td>
+<td>world argument</td>
 </tr>
 <tr>
 <td>random</td>
 <td><code>Random</code></td>
-<td>The random generator to use</td>
+<td>random argument</td>
 </tr>
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>The X-coordinate of the chunk</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>The Z-coordinate of the chunk</td>
+<td>z argument</td>
 </tr>
 </tbody>
 </table>
@@ -226,19 +225,18 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>byte[]</code></td>
-<td>byte[] containing the types for each block created by this generator</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-generateblocksections-a-public-function-__generateblocksections__-world-random-x-z-biomes-"><a id='generateblocksections'></a>public  function <strong>generateBlockSections</strong>(world, random, x, z, biomes)</h5>
-<p><em>Deprecated: Magic value</em></p>
-<p><em>Shapes the chunk for the given coordinates. <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks.  If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a byte[][] array in the following format: <pre> byte[][] result = new byte[world-height / 16][]; </pre> Each section {@code (sectionID = (Y&gt;&gt;4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new byte[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(byte[][] result, int x, int y, int z, byte blkid) { {@code if (result[y &gt;&gt; 4) == null) {} {@code result[y &gt;&gt; 4] = new byte[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> byte getBlock(byte[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4) == null) {} return (byte)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop</em></p>
+<p><em>Deprecated</em></p>
+<p><em>generateBlockSections method</em></p>
 <table>
 <thead>
 <tr>
@@ -251,27 +249,27 @@
 <tr>
 <td>world</td>
 <td><code>World</code></td>
-<td>The world this chunk will be used for</td>
+<td>world argument</td>
 </tr>
 <tr>
 <td>random</td>
 <td><code>Random</code></td>
-<td>The random generator to use</td>
+<td>random argument</td>
 </tr>
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>The X-coordinate of the chunk</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>The Z-coordinate of the chunk</td>
+<td>z argument</td>
 </tr>
 <tr>
 <td>biomes</td>
 <td><code>BiomeGrid</code></td>
-<td>Proposed biome values for chunk - can be updated by generator</td>
+<td>biomes argument</td>
 </tr>
 </tbody>
 </table>
@@ -279,19 +277,18 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>byte[][]</code></td>
-<td>short[][] containing the types for each block created by this generator</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-generateextblocksections-a-public-function-__generateextblocksections__-world-random-x-z-biomes-"><a id='generateextblocksections'></a>public  function <strong>generateExtBlockSections</strong>(world, random, x, z, biomes)</h5>
-<p><em>Deprecated: Magic value</em></p>
-<p><em>Shapes the chunk for the given coordinates, with extended block IDs supported (0-4095). <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks. If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a short[][] array in the following format: <pre> short[][] result = new short[world-height / 16][]; </pre> Each section {@code (sectionID = (Y&gt;&gt;4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new short[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y &gt;&gt; 4] == null) {} {@code result[y &gt;&gt; 4] = new short[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4] == null) {} return (short)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y &gt;&gt; 4) == null) {} {@code result[y &gt;&gt; 4] = new short[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4) == null) {} return (short)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note generators that do not return block IDs above 255 should not implement this method, or should have it return null (which will result in the generateBlockSections() method being called).</em></p>
+<p><em>Deprecated</em></p>
+<p><em>generateExtBlockSections method</em></p>
 <table>
 <thead>
 <tr>
@@ -304,27 +301,27 @@
 <tr>
 <td>world</td>
 <td><code>World</code></td>
-<td>The world this chunk will be used for</td>
+<td>world argument</td>
 </tr>
 <tr>
 <td>random</td>
 <td><code>Random</code></td>
-<td>The random generator to use</td>
+<td>random argument</td>
 </tr>
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>The X-coordinate of the chunk</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>The Z-coordinate of the chunk</td>
+<td>z argument</td>
 </tr>
 <tr>
 <td>biomes</td>
 <td><code>BiomeGrid</code></td>
-<td>Proposed biome values for chunk - can be updated by generator</td>
+<td>biomes argument</td>
 </tr>
 </tbody>
 </table>
@@ -332,13 +329,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>short[][]</code></td>
-<td>short[][] containing the types for each block created by this generator</td>
+<td></td>
 </tr>
 </tbody>
 </table>

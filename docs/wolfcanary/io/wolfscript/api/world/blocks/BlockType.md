@@ -10,7 +10,9 @@ Static class of BlockTypes
 
 Method | Type   
 --- | :--- 
-new __BlockType__(id, data, machineName) <br> _BlockType constructor_ | _constructor_
+new __BlockType__(id, machineName) <br> _BlockType constructor_ | _constructor_
+new __BlockType__(id, machineName, mod) <br> _BlockType constructor_ | _constructor_
+new __BlockType__(id, data, machineName) <br> _This will create this blockType and also add it to the BlockTypes cache,_ | _constructor_
  readonly property __Data__ <br> _Get: Get the ID of this BlockType_ | `short`
  readonly property __Id__ <br> _Get: Get the ID of this BlockType_ | `short`
  readonly property __MachineName__ <br> _Get: Returns a "machine readable" name._ | `String`
@@ -421,9 +423,28 @@ static final var __DarkOakDoor__ <br> _DarkOakDoor field_ | [`BlockType`](BlockT
 
 ### Public Constructors for [`BlockType`](BlockType.md)
 
-##### <a id='blocktype'></a>new __BlockType__(id, data, machineName) 
+##### <a id='blocktype'></a>new __BlockType__(id, machineName) 
 
 _BlockType constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `int` | id argument
+machineName | `String` | machineName argument
+
+##### <a id='blocktype'></a>new __BlockType__(id, machineName, mod) 
+
+_BlockType constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `int` | id argument
+machineName | `String` | machineName argument
+mod | `String` | mod argument
+
+##### <a id='blocktype'></a>new __BlockType__(id, data, machineName) 
+
+_This will create this blockType and also add it to the BlockTypes cache, if a BlockType with the same name doesn't already exist. IF a BlockType with the given name already exists, nothing will happen to the BlockType list, you can still use this BlockType if you need to_
 
 Argument | Type | Description  
 --- | --- | --- 

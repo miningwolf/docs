@@ -10,33 +10,33 @@ Enum containing all chat styles and colors.
 
 Item | Type   
 --- | :--- 
-MARKER: '\u00A7'<br> _<b>MARKER §</b>_ | ChatFormat
-BLACK: '0'<br> _<FONT COLOR=000000><b>BLACK</b></FONT>_ | ChatFormat
-DARK_BLUE: '1'<br> _<font color="000066"><b>DARK_BLUE</b></font>_ | ChatFormat
-DARK_GREEN: '2'<br> _<font color="006600"><b>DARK_GREEN</b></font>_ | ChatFormat
-DARK_AQUA: '3'<br> _<font color="006666"><b>DARK_AQUA</b></font>_ | ChatFormat
-DARK_RED: '4'<br> _<font color="990000"><b>DARK_RED</b></font>_ | ChatFormat
-DARK_PURPLE: '5'<br> _<font color="540054"><b>DARK_PURPLE</b></font>_ | ChatFormat
-GOLD: '6'<br> _<font color="FF9933"><b>GOLD</b></font>_ | ChatFormat
-GRAY: '7'<br> _<font color="CCCCCC"><b>GRAY</b></font>_ | ChatFormat
-DARK_GRAY: '8'<br> _<font color="333333"><b>DARK_GRAY</b></font>_ | ChatFormat
-BLUE: '9'<br> _<font color="2A2A7F"><b>BLUE</b></font>_ | ChatFormat
-GREEN: 'A'<br> _<font color="33FF33"><b>GREEN</b></font>_ | ChatFormat
-AQUA: 'B'<br> _<font color="00FFFF"><b>AQUA</b></font>_ | ChatFormat
-RED: 'C'<br> _<font color="FF0022"><b>RED</b></font>_ | ChatFormat
-LIGHT_PURPLE: 'D'<br> _<font color="FF00FF"><b>LIGHT_PURPLE</b></font>_ | ChatFormat
-YELLOW: 'E'<br> _<font color="FFFF00"><b>YELLOW</b></font>_ | ChatFormat
-WHITE: 'F'<br> _<font color="000000"><b>WHITE</b></font>_ | ChatFormat
-OBFUSCATED: 'K'<br> _<b>OBFUSCATED</b>_ | ChatFormat
-BOLD: 'L'<br> _<b>BOLD</b>_ | ChatFormat
-STRIKED: 'M'<br> _<s>STRIKED</s>_ | ChatFormat
-UNDERLINED: 'N'<br> _<u>UNDERLINED</u>_ | ChatFormat
-ITALIC: 'O'<br> _<i>ITALIC</i>_ | ChatFormat
+MARKER: '\u00A7'<br> _MARKER ChatFormat_ | ChatFormat
+BLACK: '0'<br> _BLACK ChatFormat_ | ChatFormat
+DARK_BLUE: '1'<br> _DARK_BLUE ChatFormat_ | ChatFormat
+DARK_GREEN: '2'<br> _DARK_GREEN ChatFormat_ | ChatFormat
+DARK_AQUA: '3'<br> _DARK_AQUA ChatFormat_ | ChatFormat
+DARK_RED: '4'<br> _DARK_RED ChatFormat_ | ChatFormat
+DARK_PURPLE: '5'<br> _DARK_PURPLE ChatFormat_ | ChatFormat
+GOLD: '6'<br> _GOLD ChatFormat_ | ChatFormat
+GRAY: '7'<br> _GRAY ChatFormat_ | ChatFormat
+DARK_GRAY: '8'<br> _DARK_GRAY ChatFormat_ | ChatFormat
+BLUE: '9'<br> _BLUE ChatFormat_ | ChatFormat
+GREEN: 'A'<br> _GREEN ChatFormat_ | ChatFormat
+AQUA: 'B'<br> _AQUA ChatFormat_ | ChatFormat
+RED: 'C'<br> _RED ChatFormat_ | ChatFormat
+LIGHT_PURPLE: 'D'<br> _LIGHT_PURPLE ChatFormat_ | ChatFormat
+YELLOW: 'E'<br> _YELLOW ChatFormat_ | ChatFormat
+WHITE: 'F'<br> _WHITE ChatFormat_ | ChatFormat
+OBFUSCATED: 'K'<br> _OBFUSCATED ChatFormat_ | ChatFormat
+BOLD: 'L'<br> _BOLD ChatFormat_ | ChatFormat
+STRIKED: 'M'<br> _STRIKED ChatFormat_ | ChatFormat
+UNDERLINED: 'N'<br> _UNDERLINED ChatFormat_ | ChatFormat
+ITALIC: 'O'<br> _ITALIC ChatFormat_ | ChatFormat
 RESET: 'R'<br> _RESET_ | ChatFormat
 final function __charValue__() <br> _Returns the char value of the `ChatFormat`_ | `char`
 final function __concat__(str) <br> _concat method_ | `String`
 final function __concat__(format) <br> _concat method_ | `String`
-final function __consoleFormat__(text) <br> _Replaces all Color formatting with an & symbol_ | `String`
+static final function __consoleFormat__(text) <br> _Replaces all Color formatting with an & symbol_ | `String`
 static function __formatString__(str, marker) <br> _Formats a given `String` by replacing the specified marker with the Section Symbol (§)_ | `String`
 static function __removeFormatting__(str) <br> _removes all color formatting from a line_ | `String`
 final function __stringValue__() <br> _Returns the `ChatFormat` as a `String`_ | `String`
@@ -84,7 +84,7 @@ Returns |
 `String` |
 
 
-##### <a id='consoleformat'></a>public final function __consoleFormat__(text)
+##### <a id='consoleformat'></a>public static final function __consoleFormat__(text)
 
 _Replaces all Color formatting with an & symbol_
 

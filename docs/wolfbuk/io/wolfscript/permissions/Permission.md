@@ -20,14 +20,14 @@ new __Permission__(name, defaultValue) <br> _Permission constructor_ | _construc
 new __Permission__(name, description, defaultValue) <br> _Permission constructor_ | _constructor_
  readonly property __Name__ <br> _Get: Returns the unique fully qualified name of this Permission_ | `String`
   property __Description__ <br> _Get: Gets a brief description of this permission, if set<br>Set: Sets the description of this permission._ | `String`
-  property __Default__ <br> _Get: Gets the children of this permission.<br>Set: Sets the default value of this permission._ | [`PermissionDefault`](PermissionDefault.md)
+  property __Default__ <br> _Get: Gets the default value of this permission.<br>Set: Sets the default value of this permission._ | [`PermissionDefault`](PermissionDefault.md)
  readonly property __Permissibles__ <br> _Get: Gets a set containing every [`Permissible`](Permissible.md) that has this_ | `Set<Permissible>`
  function __recalculatePermissibles__() <br> _Recalculates all [`Permissible`](Permissible.md)s that contain this permission._ | `void`
  function __addParent__(perm, value) <br> _Adds this permission to the specified parent permission._ | `void`
  function __addParent__(name, value) <br> _Adds this permission to the specified parent permission._ | [`Permission`](Permission.md)
-static function __loadPermission__(name) <br> _Loads a Permission from a map of data, usually used from retrieval from_ | [`Permission`](Permission.md)
-static function __loadPermission__(name, def) <br> _Loads a Permission from a map of data, usually used from retrieval from_ | [`Permission`](Permission.md)
-static function __loadPermissions__(error, def) <br> _Loads a list of Permissions from a map of data, usually used from_ | `List<Permission>`
+static function __loadPermission__(name) <br> _loadPermission method_ | [`Permission`](Permission.md)
+static function __loadPermission__(name, def) <br> _loadPermission method_ | [`Permission`](Permission.md)
+static function __loadPermissions__(error, def) <br> _loadPermissions method_ | `List<Permission>`
 static final var __DEFAULT__ <br> _DEFAULT field_ | [`PermissionDefault`](PermissionDefault.md)
 
 
@@ -137,16 +137,11 @@ value | `String` | The new description to set
 
 ##### <a id='default'></a>public   property __Default__
 
-_Get: Gets the children of this permission. <p> If you change this map in any form, you must call `#recalculatePermissibles()` to recalculate all [`Permissible`](Permissible.md)s<br>Set: Sets the default value of this permission. <p> This will not be saved to disk, and is a temporary operation until the server reloads permissions. Changing this default will cause all [`Permissible`](Permissible.md)s that contain this permission to recalculate their permissions_
+_Get: Gets the default value of this permission.<br>Set: Sets the default value of this permission. <p> This will not be saved to disk, and is a temporary operation until the server reloads permissions. Changing this default will cause all [`Permissible`](Permissible.md)s that contain this permission to recalculate their permissions_
 
 Get | Description
 --- | --- 
-[`PermissionDefault`](PermissionDefault.md) | Permission children /
-    public Map<String, Boolean> getChildren() {
-        return children;
-    }
-
-    /** Gets the default value of this permission.
+[`PermissionDefault`](PermissionDefault.md) | Default value of this permission.
 
 Set | Type | Description  
 --- | --- | --- 
@@ -206,43 +201,43 @@ Returns | Description
 
 ##### <a id='loadpermission'></a>public static function __loadPermission__(name)
 
-_Loads a Permission from a map of data, usually used from retrieval from a yaml file. <p> The data may contain the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul>_
+_loadPermission method_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `String` | Name of the permission
+name | `String` | name argument
 
-Returns | Description
---- | --- 
-[`Permission`](Permission.md) | Permission object
+Returns | 
+--- | 
+[`Permission`](Permission.md) |
 
 
 ##### <a id='loadpermission'></a>public static function __loadPermission__(name, def)
 
-_Loads a Permission from a map of data, usually used from retrieval from a yaml file. <p> The data may contain the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul>_
+_loadPermission method_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `String` | Name of the permission
-def | [`PermissionDefault`](PermissionDefault.md) | Default permission value to use if not set
+name | `String` | name argument
+def | [`PermissionDefault`](PermissionDefault.md) | def argument
 
-Returns | Description
---- | --- 
-[`Permission`](Permission.md) | Permission object
+Returns | 
+--- | 
+[`Permission`](Permission.md) |
 
 
 ##### <a id='loadpermissions'></a>public static function __loadPermissions__(error, def)
 
-_Loads a list of Permissions from a map of data, usually used from retrieval from a yaml file. <p> The data may contain a list of name:data, where the data contains the following keys: <ul> <li>default: Boolean true or false. If not specified, false. <li>children: {@code Map<String, Boolean>} of child permissions. If not specified, empty list. <li>description: Short string containing a very small description of this description. If not specified, empty string. </ul>_
+_loadPermissions method_
 
 Argument | Type | Description  
 --- | --- | --- 
-error | `String` | An error message to show if a permission is invalid.
-def | [`PermissionDefault`](PermissionDefault.md) | Default permission value to use if missing
+error | `String` | error argument
+def | [`PermissionDefault`](PermissionDefault.md) | def argument
 
-Returns | Description
---- | --- 
-`List<Permission>` | Permission object
+Returns | 
+--- | 
+`List<Permission>` |
 
 
 ---

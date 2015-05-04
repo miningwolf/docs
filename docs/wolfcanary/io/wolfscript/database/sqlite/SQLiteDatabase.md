@@ -13,6 +13,8 @@ Method | Type
 --- | :--- 
 static readonly property __Instance__ <br> _Instance property_ | [`SQLiteDatabase`](SQLiteDatabase.md)
  readonly property __String__ <br> _Get: Get the database entry for a Java List._ | `String`
+ function __getColumnNames__(data) <br> _getColumnNames method_ | `List<String>`
+ function __getDataTypeSyntax__(type) <br> _getDataTypeSyntax method_ | `String`
  |
 __Inherited items from [`Database`](../Database.md)__ |
 static readonly property ____ <br> _ property_ | [`Database`](../Database.md)
@@ -45,6 +47,36 @@ Get | Description
 --- | --- 
 `String` | a string representation of the passed list.
 
+
+
+---
+
+### Public Methods for [`SQLiteDatabase`](SQLiteDatabase.md)
+
+##### <a id='getcolumnnames'></a>public  function __getColumnNames__(data)
+
+_getColumnNames method_
+
+Argument | Type | Description  
+--- | --- | --- 
+data | [`DataAccess`](../DataAccess.md) | data argument
+
+Returns | 
+--- | 
+`List<String>` |
+
+
+##### <a id='getdatatypesyntax'></a>public  function __getDataTypeSyntax__(type)
+
+_getDataTypeSyntax method_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `DataType` | type argument
+
+Returns | 
+--- | 
+`String` |
 
 
 ---

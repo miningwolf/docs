@@ -144,7 +144,7 @@
 <td style="text-align:left"><a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>getAlias</strong>(ConfigurationSerializable) <br> <em>Attempts to get a registered <a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a> class by</em></td>
+<td>static function <strong>getAlias</strong>(ConfigurationSerializable) <br> <em>Gets the correct alias for the given <a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a></em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -235,7 +235,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-getalias-a-public-static-function-__getalias__-configurationserializable-"><a id='getalias'></a>public static function <strong>getAlias</strong>(ConfigurationSerializable)</h5>
-<p><em>Attempts to get a registered <a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a> class by its alias</em></p>
+<p><em>Gets the correct alias for the given <a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a> class</em></p>
 <table>
 <thead>
 <tr>
@@ -262,16 +262,11 @@
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>Registered class, or null if not found /</td>
+<td>Alias to use for the class</td>
 </tr>
 </tbody>
 </table>
-<pre><code>public <span class="hljs-literal">static</span> Class&lt;? <span class="hljs-keyword">extends</span> ConfigurationSerializable&gt; getClassByAlias(<span class="hljs-built_in">String</span> alias) {
-    <span class="hljs-keyword">return</span> aliases.<span class="hljs-literal">get</span>(alias);
-}
-
-<span class="hljs-dartdoc"><span class="markdown">/** Gets the correct alias for the given [<span class="hljs-link_label">`ConfigurationSerializable`</span>](<span class="hljs-link_url">ConfigurationSerializable.md</span>) class</span></span>
-</code></pre><h5 id="-a-id-registerclass-a-public-static-function-__registerclass__-configurationserializable-"><a id='registerclass'></a>public static function <strong>registerClass</strong>(ConfigurationSerializable)</h5>
+<h5 id="-a-id-registerclass-a-public-static-function-__registerclass__-configurationserializable-"><a id='registerclass'></a>public static function <strong>registerClass</strong>(ConfigurationSerializable)</h5>
 <p><em>Registers the given <a href="ConfigurationSerializable.html"><code>ConfigurationSerializable</code></a> class by its alias</em></p>
 <table>
 <thead>

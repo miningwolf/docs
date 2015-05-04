@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Player Idle Hook<p/> Called when a Player is idle for too long and just before them being kicked for idling.<br/> Canceling this hook will stop the kicking process.<br/> NOTE: This hook only fires if PlayerIdle time is set above 0 in the sever.cfg and for `Player`(s) who aren't set to ignoresRestrictions
+class PlayerIdle
 
 Method | Type   
 --- | :--- 

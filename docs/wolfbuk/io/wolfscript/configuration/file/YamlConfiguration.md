@@ -17,10 +17,10 @@ static function __loadConfiguration__(reader) <br> _Creates a new [`YamlConfigur
  function __saveToString__() <br> _saveToString method_ | `String`
  |
 __Inherited items from [`FileConfiguration`](FileConfiguration.md)__ |
-new __FileConfiguration__() <br> _This value specified that the system default encoding should be_ | _constructor_
+new __FileConfiguration__() <br> _Creates an empty [`FileConfiguration`](FileConfiguration.md) with no default values._ | _constructor_
 new __FileConfiguration__(defaults) <br> _Creates an empty [`FileConfiguration`](FileConfiguration.md) using the specified {@link_ | _constructor_
  function __options__() <br> _options method_ | [`FileConfigurationOptions`](FileConfigurationOptions.md)
-abstract function __saveToString__() <br> _Saves this [`FileConfiguration`](FileConfiguration.md) to the specified location._ | `String`
+abstract function __saveToString__() <br> _Saves this [`FileConfiguration`](FileConfiguration.md) to a string, and returns it._ | `String`
  |
 __Inherited items from [`MemoryConfiguration`](../MemoryConfiguration.md)__ |
 new __MemoryConfiguration__() <br> _Creates an empty [`MemoryConfiguration`](../MemoryConfiguration.md) with no default values._ | _constructor_
@@ -168,7 +168,7 @@ Returns |
 
 ##### <a id='fileconfiguration'></a>new __FileConfiguration__() 
 
-_This value specified that the system default encoding should be completely ignored, as it cannot handle the ASCII character set, or it is a strict-subset of UTF8 already (plain ASCII)._
+_Creates an empty [`FileConfiguration`](FileConfiguration.md) with no default values._
 
 
 ##### <a id='fileconfiguration'></a>new __FileConfiguration__(defaults) 
@@ -194,7 +194,7 @@ Returns |
 
 ##### <a id='savetostring'></a>public abstract function __saveToString__()
 
-_Saves this [`FileConfiguration`](FileConfiguration.md) to the specified location. <p> If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown. <p> This method will save using the system default encoding, or possibly using UTF8._
+_Saves this [`FileConfiguration`](FileConfiguration.md) to a string, and returns it._
 
 Returns | Description
 --- | --- 

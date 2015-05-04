@@ -127,7 +127,6 @@
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/AuxiliarySoundEffect.html'>AuxiliarySoundEffect</a></li>
 <li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/Particle.html'>Particle</a></li>
 <li class='active'><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/SoundEffect.html'>SoundEffect</a></li>
-<li><a href='../../../../../../wolfcanary/io/wolfscript/api/world/effects/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../../wolfcanary/io/wolfscript/api/world/position/0.html' class=''>api.world.position</a></li> 
 <li class='divider'></li>
@@ -201,8 +200,12 @@
 </thead>
 <tbody>
 <tr>
-<td>new <strong>SoundEffect</strong>(type, x, y, z, volume, pitch) <br> <em>The Sounds!</em></td>
+<td>new <strong>SoundEffect</strong>(type, x, y, z, volume, pitch) <br> <em>Constructs a new SoundEffect</em></td>
 <td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>McName</strong> <br> <em>McName property</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td> var <strong>volume</strong> <br> <em>volume field</em></td>
@@ -213,7 +216,7 @@
 <hr>
 <h3 id="public-constructors-for-soundeffect-soundeffect-md-">Public Constructors for <a href="SoundEffect.html"><code>SoundEffect</code></a></h3>
 <h5 id="-a-id-soundeffect-a-new-__soundeffect__-type-x-y-z-volume-pitch-"><a id='soundeffect'></a>new <strong>SoundEffect</strong>(type, x, y, z, volume, pitch)</h5>
-<p><em>The Sounds!</em></p>
+<p><em>Constructs a new SoundEffect</em></p>
 <table>
 <thead>
 <tr>
@@ -252,6 +255,23 @@
 <td>pitch</td>
 <td><code>float</code></td>
 <td>the frequency of the sound (between 0.0 and 1.0)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-soundeffect-soundeffect-md-">Public Properties for <a href="SoundEffect.html"><code>SoundEffect</code></a></h3>
+<h5 id="-a-id-mcname-a-public-readonly-property-__mcname__"><a id='mcname'></a>public  readonly property <strong>McName</strong></h5>
+<p><em>McName property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>

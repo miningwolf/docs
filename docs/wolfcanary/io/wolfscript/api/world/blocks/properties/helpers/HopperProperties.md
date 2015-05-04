@@ -12,7 +12,7 @@ Hopper properties helper
 Method | Type   
 --- | :--- 
 static function __applyEnabled__(block, value) <br> _Applies whether the `Hopper` is enabled or not._ | [`Block`](../../Block.md)
-static function __applyFacing__(block, value) <br> _Hopper facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Hopper`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Hopper facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 static final var __enabled__ <br> _Hopper enabled property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
@@ -43,13 +43,7 @@ Returns | Description
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Hopper facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Hopper, "facing");
-
-    /** Hopper enabled property, Values: true, false /
-    public static final BlockBooleanProperty enabled = getInstanceFor(Hopper, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Hopper`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Hopper`_
 
 Argument | Type | Description  
 --- | --- | --- 

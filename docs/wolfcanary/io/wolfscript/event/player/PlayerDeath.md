@@ -12,7 +12,7 @@ Player Death hook
 Method | Type   
 --- | :--- 
 new __PlayerDeath__(player, source, msg) <br> _Constructs a new PlayerDeath_ | _constructor_
- readonly property __DamageSource__ <br> _Get: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_ | [`DamageSource`](../../api/DamageSource.md)
+ readonly property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the `Player`_ | [`DamageSource`](../../api/DamageSource.md)
  readonly property __Player__ <br> _Get: Gets the `Player` who died_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -45,7 +45,7 @@ msg | [`ChatComponent`](../../api/chat/ChatComponent.md) | the Death message to 
 
 ##### <a id='damagesource'></a>public  readonly property __DamageSource__
 
-_Get: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_
+_Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the `Player`_
 
 Get | Description
 --- | --- 
@@ -56,16 +56,11 @@ Get | Description
 ##### <a id='deathmessage'></a>public   property __DeathMessage__
 _Deprecated: Replaced by #setDeathMessage1_
 
-_Get: Gets the message to send on Death<br>Set: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_
+_Get: Gets the message to send on Death<br>Set: Sets the message to send, if death message are enabled_
 
-Get | Description
---- | --- 
-`String` | the ChatComponent containing the death message /
-    public ChatComponent getDeathMessage1() {
-        return msg;
-    }
-
-    /** Sets the message to send, if death message are enabled
+Get | 
+--- | 
+`String` |
 
 Set | Type | Description  
 --- | --- | --- 

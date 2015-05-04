@@ -14,9 +14,9 @@ Method | Type
 new __Connection__(player, message, firstTime) <br> _Connection constructor_ | _constructor_
   property __Message__ <br> _Get: Gets the message sent to all<br>Set: Sets the message set to all_ | `String`
  readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
- writeonly property __Hidden__ <br> _Set: Sets whether this should be a hidden connect/disconnect_ | `void`
+ writeonly property __Hidden__ <br> _Hidden property_ | `void`
  function __isFirstConnection__() <br> _Returns true if this player has never connected before._ | `boolean`
- function __isHidden__() <br> _Gets whether this should be a hidden connect/disconnect_ | `boolean`
+ function __isHidden__() <br> _isHidden method_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`Hook`](../../hook/Hook.md)__ |
@@ -71,7 +71,7 @@ Get | Description
 
 ##### <a id='hidden'></a>public  writeonly property __Hidden__
 
-_Set: Sets whether this should be a hidden connect/disconnect_
+_Hidden property_
 
 Get | 
 --- | 
@@ -79,7 +79,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-hidden | `boolean` | `true` to hide message; `false` for not
+hidden | `boolean` | hidden argument
 
 
 ---
@@ -97,11 +97,11 @@ Returns | Description
 
 ##### <a id='ishidden'></a>public  function __isHidden__()
 
-_Gets whether this should be a hidden connect/disconnect_
+_isHidden method_
 
-Returns | Description
---- | --- 
-`boolean` | `true` for hidden; `false` for not
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='tostring'></a>public final function __toString__()

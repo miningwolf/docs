@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Slot click hook <p/> Called when a `Player` clicks a slot or outside a inventory window
+class SlotClick
 
 Method | Type   
 --- | :--- 

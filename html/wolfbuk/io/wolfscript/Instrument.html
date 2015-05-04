@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -192,25 +188,8 @@
 <h3 id="public-properties-for-instrument-instrument-md-">Public Properties for <a href="Instrument.html"><code>Instrument</code></a></h3>
 <h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: Piano is the standard instrument for a note block. /
-    PIANO(0x0),
-    /<strong> Bass drum is normally played when a note block is on top of a stone-like block /
-    BASS_DRUM(0x1),
-    /</strong> Snare drum is normally played when a note block is on top of a sandy block. /
-    SNARE_DRUM(0x2),
-    /<strong> Sticks are normally played when a note block is on top of a glass block. /
-    STICKS(0x3),
-    /</strong> Bass guitar is normally played when a note block is on top of a wooden block. /
-    BASS_GUITAR(0x4);</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> byte <span class="hljs-class"><span class="hljs-keyword">type</span>;</span>
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> static <span class="hljs-type">Map</span>&lt;<span class="hljs-type">Byte</span>, <span class="hljs-type">Instrument</span>&gt; <span class="hljs-type">BY_DATA</span> = <span class="hljs-type">Maps</span>.newHashMap();
-
-<span class="hljs-keyword">private</span> <span class="hljs-type">Instrument</span>(<span class="hljs-keyword">final</span> int <span class="hljs-class"><span class="hljs-keyword">type</span>) {</span>
-    <span class="hljs-keyword">this</span>.<span class="hljs-keyword">type</span> = (byte) <span class="hljs-class"><span class="hljs-keyword">type</span>;</span>
-}
-
-<span class="hljs-comment">/**_</span>
-</code></pre><table>
+<p><em>Type property</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

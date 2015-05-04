@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-The Travel Agent handles the creation and the research of Nether and End portals when Entities try to use one. <p> It is used in [`EntityPortalEvent`](event/entity/EntityPortalEvent.md) and in [`PlayerPortalEvent`](event/player/PlayerPortalEvent.md) to help developers reproduce and/or modify Vanilla behaviour.
+interface TravelAgent
 
 Method | Type   
 --- | :--- 

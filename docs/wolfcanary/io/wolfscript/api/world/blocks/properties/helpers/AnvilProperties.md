@@ -12,7 +12,7 @@ Anvil properties helper
 Method | Type   
 --- | :--- 
 static function __applyDamage__(block, value) <br> _Applies damage to the `Anvil`_ | [`Block`](../../Block.md)
-static function __applyFacing__(block, value) <br> _Anvil damage property, Values: 0 - 2_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Anvil`_ | [`Block`](../../Block.md)
 static final var __damage__ <br> _Anvil damage property, Values: 0 - 2_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 static final var __facing__ <br> _Anvil facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
@@ -43,13 +43,7 @@ Returns | Description
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Anvil damage property, Values: 0 - 2 /
-    public static final BlockIntegerProperty damage = getInstanceFor(Anvil, "damage");
-
-    /** Anvil facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Anvil, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Anvil`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Anvil`_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -8,7 +8,7 @@
 
 ### Class Overview
 
-Represents a Wool/Cloth block
+class Wool
 
 Method | Type   
 --- | :--- 

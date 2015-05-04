@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -223,7 +219,7 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>static final var <strong>TONES</strong> <br> <em>An enum holding tones.</em></td>
+<td>static final var <strong>TONES</strong> <br> <em>The number of tones including sharped tones.</em></td>
 <td style="text-align:left"><code>byte</code></td>
 </tr>
 </tbody>
@@ -280,29 +276,8 @@
 <h3 id="public-properties-for-note-note-md-">Public Properties for <a href="Note.html"><code>Note</code></a></h3>
 <h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: An enum holding tones. /
-    public enum Tone {
-        G(0x1, true),
-        A(0x3, true),
-        B(0x5, false),
-        C(0x6, true),
-        D(0x8, true),
-        E(0xA, false),
-        F(0xB, true);</p>
-<pre><code>   <span class="hljs-keyword"> private</span><span class="hljs-keyword"> final</span> boolean sharpable;
-   <span class="hljs-keyword"> private</span><span class="hljs-keyword"> final</span> byte id;
-
-   <span class="hljs-keyword"> private</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> Map&lt;Byte, Note.Tone&gt; BY_DATA =<span class="hljs-function"> Maps.newHashMap(</span><span class="hljs-function">)</span>;
-    /** The number of tones including sharped tones. /
-   <span class="hljs-keyword"> public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> byte TONES_COUNT = 12;
-
-   <span class="hljs-keyword"> private</span><span class="hljs-function"> Tone(</span>int id, boolean sharpable<span class="hljs-function">)</span> {
-        this.id =<span class="hljs-function"> (</span>byte<span class="hljs-function">)</span><span class="hljs-function"> (</span>id % TONES_COUNT<span class="hljs-function">)</span>;
-        this.sharpable = sharpable;
-    }
-
-    /** Returns the<span class="hljs-instruction"> not </span>sharped id of this tone._
-</code></pre><table>
+<p><em>Get: Returns the not sharped id of this tone.</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>
@@ -705,21 +680,8 @@
 <hr>
 <h3 id="public-fields-for-note-note-md-">Public Fields for <a href="Note.html"><code>Note</code></a></h3>
 <h5 id="-a-id-tones-a-public-static-final-var-__tones__"><a id='tones'></a>public static final var <strong>TONES</strong></h5>
-<p>_An enum holding tones. /
-    public enum Tone {
-        G(0x1, true),
-        A(0x3, true),
-        B(0x5, false),
-        C(0x6, true),
-        D(0x8, true),
-        E(0xA, false),
-        F(0xB, true);</p>
-<pre><code>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> sharpable;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">byte</span> id;
-
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Map&lt;<span class="hljs-keyword">Byte</span>, Note.Tone&gt; BY_DATA = Maps.newHashMap();
-    <span class="hljs-comment">/** The number of tones including sharped tones._</span>
-</code></pre><blockquote>
+<p><em>The number of tones including sharped tones.</em></p>
+<blockquote>
 <p>Returns
  <code>byte</code></p>
 </blockquote>

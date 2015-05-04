@@ -14,13 +14,13 @@ Method | Type
 new __WhitelistDataAccess__() <br> _WhitelistDataAccess constructor_ | _constructor_
  readonly property __Instance__ <br> _Instance property_ | [`DataAccess`](../database/DataAccess.md)
  var __uuid__ <br> _UUID for this reservelist entry_ | `String`
- var __player__ <br> _Playername for this_ | `String`
+ var __player__ <br> _Playername for this whitelist entry_ | `String`
  |
 __Inherited items from [`DataAccess`](../database/DataAccess.md)__ |
 new __DataAccess__(tableName) <br> _Construct a new DataAccess object that represents a table_ | _constructor_
 new __DataAccess__(tableName, tableSuffix) <br> _DataAccess constructor_ | _constructor_
 abstract readonly property __Instance__ <br> _Get: Returns an empty instance of this [`DataAccess`](../database/DataAccess.md) object_ | [`DataAccess`](../database/DataAccess.md)
-final readonly property __Name__ <br> _Get: Load a Data set into this DataAccess object_ | `String`
+final readonly property __Name__ <br> _Get: This shall return the name of the Table this DataAccess belongs to_ | `String`
 final function __getColumnForName__(name) <br> _Retrieves a Column with the given name from this DataAccess._ | `Column`
 final function __hasColumn__(name) <br> _Checks if this [`DataAccess`](../database/DataAccess.md) has a Column with the given name._ | `boolean`
 final function __hasData__() <br> _Check if there is data in this DataAccess object._ | `boolean`
@@ -69,7 +69,7 @@ _UUID for this reservelist entry_
 
 ##### <a id='player'></a>public  var __player__
 
-_Playername for this <p/> /** Playername for this whitelist entry_
+_Playername for this whitelist entry_
 
 >Returns
 >  `String`
@@ -110,11 +110,11 @@ Get | Description
 
 ##### <a id='name'></a>public final readonly property __Name__
 
-_Get: Load a Data set into this DataAccess object_
+_Get: This shall return the name of the Table this DataAccess belongs to_
 
 Get | Description
 --- | --- 
-`String` | HashMap that maps the Column meta data to the data present in database.
+`String` | the table name
 
 
 

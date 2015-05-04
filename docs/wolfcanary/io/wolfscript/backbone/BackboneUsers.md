@@ -15,7 +15,7 @@ new __BackboneUsers__() <br> _BackboneUsers constructor_ | _constructor_
  function __addUser__(player) <br> _Add a new Player to the data source._ | `void`
  function __addUser__(nameOrUUID, group) <br> _Used to update a player. This can not override existing player entries._ | `void`
 static function __createDefaults__() <br> _createDefaults method_ | `void`
- function __getModularGroups__(uuid) <br> _Load and return String array sets._ | `Group[]`
+ function __getModularGroups__(uuid) <br> _Returns the additional groups for the given player_ | `Group[]`
  function __removeUser__(uuid) <br> _Remove a player from the data source_ | `void`
  function __updatePlayer__(player) <br> _Update a Player._ | `void`
  function __validateUsers__() <br> _Validate all user entries in the database._ | `void`
@@ -79,7 +79,7 @@ Returns |
 
 ##### <a id='getmodulargroups'></a>public  function __getModularGroups__(uuid)
 
-_Load and return String array sets. Each Array in the hashMap value has prefix, group and isMuted for a player, in that order._
+_Returns the additional groups for the given player_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -87,32 +87,7 @@ uuid | `String` | the player's name
 
 Returns | Description
 --- | --- 
-`Group[]` | A hashmap with a key of player name, and string array value with a prefix and group for a player, in that order. /
-    public Map<String, String[]> loadUsers() {
-        Map<String, String[]> players = new HashMap<String, String[]>();
-        List<DataAccess> daos = new ArrayList<DataAccess>();
-
-        try {
-            Database.get().loadAll(schema, daos, new HashMap<String, Object>());
-            for (DataAccess dao : daos) {
-                PlayerDataAccess data = (PlayerDataAccess)dao;
-                String[] row = new String[3];
-
-                row[0] = data.prefix;
-                row[1] = data.group;
-                row[2] = Boolean.toString(data.isMuted);
-                players.put(data.uuid == null ? "" : data.uuid, row);
-            }
-            return players;
-        }
-        catch (DatabaseReadException e) {
-            log.error(e.getMessage(), e);
-        }
-
-        return null;
-    }
-
-    /** Returns the additional groups for the given player
+`Group[]` | Group array
 
 
 ##### <a id='removeuser'></a>public  function __removeUser__(uuid)

@@ -155,7 +155,7 @@ Implements <a href="../PluginLifecycle.html"><code>PluginLifecycle</code></a></p
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>unload</strong>() <br> <em>Implement this method in order to do actual loading. Be sure to set the plugin object in</em></td>
+<td> function <strong>unload</strong>() <br> <em>{@inheritDoc}</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -213,21 +213,8 @@ Implements <a href="../PluginLifecycle.html"><code>PluginLifecycle</code></a></p
 </tbody>
 </table>
 <h5 id="-a-id-unload-a-public-function-__unload__-"><a id='unload'></a>public  function <strong>unload</strong>()</h5>
-<p>_Implement this method in order to do actual loading. Be sure to set the plugin object in <code>PluginLifecycleBase#desc</code> /
-    protected abstract void _load() throws PluginLoadFailedException;</p>
-<pre><code>/** {@inheritDoc} /
-public <span class="hljs-type">Plugin</span> load() throws <span class="hljs-type">PluginLoadFailedException</span> {
-    unload();
-    _load();
-    desc.setCurrentState(<span class="hljs-type">PluginState</span>.<span class="hljs-type">DISABLED</span>);
-    <span class="hljs-keyword">return</span> desc.getPlugin();
-}
-
-/** <span class="hljs-type">Implement</span> this <span class="hljs-keyword">method</span> <span class="hljs-keyword">in</span> order to <span class="hljs-keyword">do</span> specific unloading code /
-protected abstract <span class="hljs-type">void</span> _unload();
-
-/** {@inheritDoc}_
-</code></pre><table>
+<p><em>{@inheritDoc}</em></p>
+<table>
 <thead>
 <tr>
 <th>Returns</th>

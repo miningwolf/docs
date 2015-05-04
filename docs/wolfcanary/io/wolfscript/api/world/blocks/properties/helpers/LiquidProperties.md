@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Liquid properties helper<br/> Applies to:<br/> <ul>Water</ul> <ul>Lava</ul>
+class LiquidProperties
 
 Method | Type   
 --- | :--- 
-static function __applyLevel__(block, value) <br> _Liquid level property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyLevel__(block, value) <br> _Applies level to the `Liquid`_ | [`Block`](../../Block.md)
 static final var __level__ <br> _Liquid level property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applylevel'></a>public static function __applyLevel__(block, value)
 
-_Liquid level property, Values: 0 - 15 /
-    public static final BlockIntegerProperty level = getInstanceFor(Water, "level");
-
-    /** Applies level to the `Liquid`_
+_Applies level to the `Liquid`_
 
 Argument | Type | Description  
 --- | --- | --- 

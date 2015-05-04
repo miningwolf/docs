@@ -82,7 +82,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
-<li><a href='../../../../wolfbuk/io/wolfscript/map/CharacterSprite.html'>CharacterSprite</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCanvas.html'>MapCanvas</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursor.html'>MapCursor</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursorCollection.html'>MapCursorCollection</a></li>
@@ -91,8 +90,6 @@
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/map/MapRenderer.html'>MapRenderer</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapView.html'>MapView</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MinecraftFont.html'>MinecraftFont</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/map/Scale.html'>Scale</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/map/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
 <li class='divider'></li>
@@ -144,8 +141,12 @@
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td> function <strong>initialize</strong>(map) <br> <em>Get whether the renderer is contextual, i.e. has different canvases for</em></td>
+<td> function <strong>initialize</strong>(map) <br> <em>Initialize this MapRenderer for the given map.</em></td>
 <td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>isContextual</strong>() <br> <em>isContextual method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td> function <strong>render</strong>(map, canvas, player) <br> <em>render method</em></td>
@@ -178,7 +179,7 @@
 <hr>
 <h3 id="public-methods-for-maprenderer-maprenderer-md-">Public Methods for <a href="MapRenderer.html"><code>MapRenderer</code></a></h3>
 <h5 id="-a-id-initialize-a-public-function-__initialize__-map-"><a id='initialize'></a>public  function <strong>initialize</strong>(map)</h5>
-<p><em>Get whether the renderer is contextual, i.e. has different canvases for different players.</em></p>
+<p><em>Initialize this MapRenderer for the given map.</em></p>
 <table>
 <thead>
 <tr>
@@ -199,22 +200,31 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>True if contextual, false otherwise. /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">final</span> <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isContextual</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">return</span> contextual;
-}
-
-<span class="hljs-javadoc">/** Initialize this MapRenderer for the given map.</span>
-</code></pre><h5 id="-a-id-render-a-public-function-__render__-map-canvas-player-"><a id='render'></a>public  function <strong>render</strong>(map, canvas, player)</h5>
+<h5 id="-a-id-iscontextual-a-public-function-__iscontextual__-"><a id='iscontextual'></a>public  function <strong>isContextual</strong>()</h5>
+<p><em>isContextual method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-render-a-public-function-__render__-map-canvas-player-"><a id='render'></a>public  function <strong>render</strong>(map, canvas, player)</h5>
 <p><em>render method</em></p>
 <table>
 <thead>

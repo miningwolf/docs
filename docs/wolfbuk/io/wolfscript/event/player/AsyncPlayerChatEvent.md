@@ -17,7 +17,7 @@ new __AsyncPlayerChatEvent__(boolean, Player, String, Set) <br> _AsyncPlayerChat
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
   property __Message__ <br> _Get: Gets the message that the player is attempting to send. This message<br>Set: Sets the message that the player will send. This message will be used_ | `String`
- readonly property __Recipients__ <br> _Get: Sets the format to use to display this chat message._ | `Set<Player>`
+ readonly property __Recipients__ <br> _Get: Gets a set of recipients that this chat message will be displayed to._ | `Set<Player>`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
@@ -30,7 +30,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -102,7 +102,7 @@ message | `String` | New message that the player will send
 
 ##### <a id='recipients'></a>public  readonly property __Recipients__
 
-_Get: Sets the format to use to display this chat message. <p> When this event finishes execution, the first format parameter is the `Player#getDisplayName()` and the second parameter is `#getMessage()`_
+_Get: Gets a set of recipients that this chat message will be displayed to. <p> The set returned is not guaranteed to be mutable and may auto-populate on access. Any listener accessing the returned set should be aware that it may reduce performance for a lazy set implementation. <p> Listeners should be aware that modifying the list may throw `UnsupportedOperationException` if the event caller provides an unmodifiable set._
 
 Get | Description
 --- | --- 
@@ -207,11 +207,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

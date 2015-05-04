@@ -12,7 +12,7 @@ Method | Type
 --- | :--- 
  readonly property __BanEntries__ <br> _Get: Gets a set containing every [`BanEntry`](BanEntry.md) in this list._ | `Set<BanEntry>`
  function __addBan__(target, reason, expires, source) <br> _Adds a ban to the this list. If a previous ban exists, this will_ | [`BanEntry`](BanEntry.md)
- function __getBanEntry__(target) <br> _Represents a ban-type that a [`BanList`](BanList.md) may track._ | [`BanEntry`](BanEntry.md)
+ function __getBanEntry__(target) <br> _Gets a [`BanEntry`](BanEntry.md) by target._ | [`BanEntry`](BanEntry.md)
  function __isBanned__(target) <br> _Gets if a [`BanEntry`](BanEntry.md) exists for the target, indicating an active_ | `boolean`
  function __pardon__(target) <br> _Removes the specified target from this list, therefore indicating a_ | `void`
 
@@ -55,16 +55,7 @@ Returns | Description
 
 ##### <a id='getbanentry'></a>public  function __getBanEntry__(target)
 
-_Represents a ban-type that a [`BanList`](BanList.md) may track. /
-    public enum Type {
-        /** Banned player names /
-        NAME,
-        /** Banned player IP addresses /
-        IP,
-        ;
-    }
-
-    /** Gets a [`BanEntry`](BanEntry.md) by target._
+_Gets a [`BanEntry`](BanEntry.md) by target._
 
 Argument | Type | Description  
 --- | --- | --- 

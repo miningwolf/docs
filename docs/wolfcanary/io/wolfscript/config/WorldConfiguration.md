@@ -29,7 +29,7 @@ new __WorldConfiguration__(path, worldname) <br> _WorldConfiguration constructor
  readonly property __WorldName__ <br> _Get: Get the world name_ | `String`
  readonly property __WorldSeed__ <br> _Get: Get the world seed._ | `String`
  function __isEndAllowed__() <br> _Get whether the end is allowed_ | `boolean`
-static function __create__(name, dimensionType) <br> _Creates a new WorldConfig for use with `WorldManager#createWorld(WorldConfiguration)`<p/>_ | [`WorldConfiguration`](WorldConfiguration.md)
+static function __create__(name, dimensionType) <br> _create method_ | [`WorldConfiguration`](WorldConfiguration.md)
  function __allowWarpAutoLoad__() <br> _Gets whether to load a world when a warp is used_ | `boolean`
  function __canSpawnGolems__() <br> _Get whether golems can be spawned_ | `boolean`
  function __canSpawnMonsters__() <br> _Get whether monsters can be spawned_ | `boolean`
@@ -243,16 +243,16 @@ Returns | Description
 
 ##### <a id='create'></a>public static function __create__(name, dimensionType)
 
-_Creates a new WorldConfig for use with `WorldManager#createWorld(WorldConfiguration)`<p/> Before passing on to createWorld, these settings should be modified using `WorldConfiguration#getFile()`<br/> and then calling `PropertiesFile#save()` followed with `WorldConfiguration#reload()` when finished <ul> <li>worldType (String)</li> <li>spawn-protection (Integer)</li> <li>max-build-height (Integer)</li> <li>generate-structures (Boolean)</li> <li>generator-settings (String)</li> <li>world-seed (String)</li> <li>startup-autoload (Boolean)</li> <li>warp-autoload (Boolean)</li> <li>allow-nether (Boolean)</li> <li>allow-end (Boolean)</li> <li>allow-flight (Boolean)</li> <li>pvp (Boolean)</li> <li>difficulty (Integer)</li> <li>gamemode (Integer)</li> <li>forceDefaultGameMode (Boolean)</li> <li>forceDefaultGameModeDimensional (Boolean)</li> <li>auto-heal (String)</li> <li>enable-experience (Boolean)</li> <li>enable-health (Boolean)</li> <li>spawn-villagers (Boolean)</li> <li>spawn-golems (Boolean)</li> <li>spawn-animals (Boolean)</li> <li>spawn-monsters (Boolean)</li> <li>natural-animals (String[])</li> <li>natural-monsters (String[])</li> <li>natural-golems (String[])</li> <li>natural-wateranimals (String[])</li> <li>natural-spawn-rate (Integer)</li> <li>ender-blocks (int[])</li> <li>disallowed-blocks (int[])</li> </ul> <br/> NOTE: Settings list may not be entirely up to date._
+_create method_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `String` | name of the World
-dimensionType | [`DimensionType`](../api/world/DimensionType.md) | [`DimensionType`](../api/world/DimensionType.md) of the world
+name | `String` | name argument
+dimensionType | [`DimensionType`](../api/world/DimensionType.md) | dimensionType argument
 
-Returns | Description
---- | --- 
-[`WorldConfiguration`](WorldConfiguration.md) | the new WorldConfiguraion or `null` if a configuration is already existant
+Returns | 
+--- | 
+[`WorldConfiguration`](WorldConfiguration.md) |
 
 
 ##### <a id='allowwarpautoload'></a>public  function __allowWarpAutoLoad__()

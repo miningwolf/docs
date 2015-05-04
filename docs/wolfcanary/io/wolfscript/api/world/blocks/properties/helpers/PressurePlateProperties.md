@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Pressure Plate properties helper<br/> Applies to<br/> <ul>Wooden Pressure Plate</ul> <ul>Stone Pressure Plate</ul>
+class PressurePlateProperties
 
 Method | Type   
 --- | :--- 
-static function __applyPowered__(block, value) <br> _Pressure Plate powered property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyPowered__(block, value) <br> _Applies whether the {@code Pressure Plate} is powered or not_ | [`Block`](../../Block.md)
 static final var __powered__ <br> _Pressure Plate powered property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applypowered'></a>public static function __applyPowered__(block, value)
 
-_Pressure Plate powered property, Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(WoodenPressurePlate, "powered");
-
-    /** Applies whether the {@code Pressure Plate} is powered or not_
+_Applies whether the {@code Pressure Plate} is powered or not_
 
 Argument | Type | Description  
 --- | --- | --- 

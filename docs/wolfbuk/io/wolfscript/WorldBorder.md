@@ -13,7 +13,7 @@ Method | Type
   property __DamageBuffer__ <br> _Get: Gets the current border damage buffer.<br>Set: Sets the amount of blocks a player may safely be outside the border before taking damage._ | `double`
   property __WarningDistance__ <br> _Get: Gets the current border warning distance.<br>Set: Sets the warning distance that causes the screen to be tinted red when the player is within the specified number of blocks from the border._ | `int`
   property __WarningTime__ <br> _Get: Gets the current border warning time in seconds.<br>Set: Sets the warning time that causes the screen to be tinted red when a contracting border will reach the player within the specified time._ | `int`
-  property __Center__ <br> _Get: Gets the current border center.<br>Set: Sets the new border center._ | `Location`
+  property __Center__ <br> _Center property_ | `Location`
   property __DamageAmount__ <br> _Get: Gets the current border damage amount.<br>Set: Sets the amount of damage a player takes when outside the border plus the border buffer._ | `double`
   property __Size__ <br> _Get: Gets the current side length of the border.<br>Set: Sets the border to a square region with the specified side length in blocks._ | `double`
  function __reset__() <br> _Resets the border to default values._ | `void`
@@ -68,7 +68,7 @@ seconds | `int` | The amount of time in seconds. (The default is 15 seconds.)
 
 ##### <a id='center'></a>public   property __Center__
 
-_Get: Gets the current border center.<br>Set: Sets the new border center._
+_Center property_
 
 Get | Description
 --- | --- 
@@ -76,7 +76,7 @@ Get | Description
 
 Set | Type | Description  
 --- | --- | --- 
-location | `Location` | The new location of the border center. (Only x/z used)
+location | `Location` | location argument
 
 
 ##### <a id='damageamount'></a>public   property __DamageAmount__

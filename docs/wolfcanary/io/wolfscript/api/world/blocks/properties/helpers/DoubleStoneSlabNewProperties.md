@@ -11,15 +11,17 @@ New Double Stone Slab properties helper
 
 Method | Type   
 --- | :--- 
-static function __applySeamless__(block, value) <br> _New Double Stone Slab seamless property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applySeamless__(block, value) <br> _Applies whether the {@code Stone Slab} is seamless or not_ | [`Block`](../../Block.md)
 static final var __seamless__ <br> _New Double Stone Slab seamless property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`StoneSlabNewProperties`](StoneSlabNewProperties.md)__ |
-static function __applyVariant__(block, value) <br> _New Stone Slab variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies level to the {@code New Stone Slab}_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __variant__ <br> _New Stone Slab variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`SlabProperties`](SlabProperties.md)__ |
-static function __applyHalf__(block, value) <br> _Slab half property, Values: `Half`_ | [`Block`](../../Block.md)
+static function __applyHalf__(block, value) <br> _Applies half to the `Slab`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Half`
 static final var __half__ <br> _Slab half property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -39,10 +41,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyseamless'></a>public static function __applySeamless__(block, value)
 
-_New Double Stone Slab seamless property, Values: true, false /
-    public static final BlockBooleanProperty seamless = getInstanceFor(DoubleRedSandstoneSlab, "seamless");
-
-    /** Applies whether the {@code Stone Slab} is seamless or not_
+_Applies whether the {@code Stone Slab} is seamless or not_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -71,10 +70,7 @@ _New Double Stone Slab seamless property, Values: true, false_
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_New Stone Slab variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(RedSandstoneSlab, "variant");
-
-    /** New Stone slab variants_
+_Applies level to the {@code New Stone Slab}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -84,6 +80,19 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---
@@ -103,10 +112,7 @@ _New Stone Slab variant property, Values: `Variant`_
 
 ##### <a id='applyhalf'></a>public static function __applyHalf__(block, value)
 
-_Slab half property, Values: `Half` /
-    public static final BlockEnumProperty half = getInstanceFor(StoneSlab, "half");
-
-    /** Slab halves_
+_Applies half to the `Slab`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -116,6 +122,19 @@ value | `Half` | the `Half` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Half` |
 
 
 ---

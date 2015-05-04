@@ -17,7 +17,7 @@ CLOCKWISE_135: <br> _Rotated clockwise by 135 degrees_ | Rotation
 FLIPPED: <br> _Flipped upside-down, a 180 degree rotation_ | Rotation
 FLIPPED_45: <br> _Flipped upside-down + 45 degree rotation_ | Rotation
 COUNTER_CLOCKWISE: <br> _Rotated counter-clockwise by 90 degrees_ | Rotation
- function __rotateClockwise__() <br> _No rotation_ | [`Rotation`](Rotation.md)
+ function __rotateClockwise__() <br> _Rotate clockwise by 90 degrees._ | [`Rotation`](Rotation.md)
  function __rotateCounterClockwise__() <br> _Rotate counter-clockwise by 90 degrees._ | [`Rotation`](Rotation.md)
 
 
@@ -29,27 +29,7 @@ COUNTER_CLOCKWISE: <br> _Rotated counter-clockwise by 90 degrees_ | Rotation
 
 ##### <a id='rotateclockwise'></a>public  function __rotateClockwise__()
 
-_No rotation /
-    NONE,
-    /** Rotated clockwise by 45 degrees /
-    CLOCKWISE_45,
-    /** Rotated clockwise by 90 degrees /
-    CLOCKWISE,
-    /** Rotated clockwise by 135 degrees /
-    CLOCKWISE_135,
-    /** Flipped upside-down, a 180 degree rotation /
-    FLIPPED,
-    /** Flipped upside-down + 45 degree rotation /
-    FLIPPED_45,
-    /** Rotated counter-clockwise by 90 degrees /
-    COUNTER_CLOCKWISE,
-    /** Rotated counter-clockwise by 45 degrees /
-    COUNTER_CLOCKWISE_45
-    ;
-
-    private static final Rotation [] rotations = values();
-
-    /** Rotate clockwise by 90 degrees._
+_Rotate clockwise by 90 degrees._
 
 Returns | Description
 --- | --- 

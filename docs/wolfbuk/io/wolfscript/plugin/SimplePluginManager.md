@@ -14,7 +14,7 @@ Method | Type
 new __SimplePluginManager__(instance, commandMap) <br> _SimplePluginManager constructor_ | _constructor_
  readonly property __Permissions__ <br> _Permissions property_ | `Set<Permission>`
  function __getDefaultPermissions__(op) <br> _getDefaultPermissions method_ | `Set<Permission>`
- function __loadPlugins__(directory) <br> _Registers the specified plugin loader_ | `Plugin[]`
+ function __loadPlugins__(directory) <br> _Loads the plugins contained within the specified directory_ | `Plugin[]`
  function __isPluginEnabled__(plugin) <br> _Checks if the given plugin is enabled or not_ | `boolean`
  function __enablePlugin__(Plugin) <br> _enablePlugin method_ | `void`
  function __disablePlugins__() <br> _disablePlugins method_ | `void`
@@ -25,7 +25,7 @@ new __SimplePluginManager__(instance, commandMap) <br> _SimplePluginManager cons
  function __getPermissionSubscriptions__(permission) <br> _getPermissionSubscriptions method_ | `Set<Permissible>`
  function __getPermission__(name) <br> _getPermission method_ | [`Permission`](../permissions/Permission.md)
  function __addPermission__(perm) <br> _addPermission method_ | `void`
- function __isPluginEnabled__(name) <br> _Loads the plugin in the specified file_ | `boolean`
+ function __isPluginEnabled__(name) <br> _Checks if the given plugin is enabled or not_ | `boolean`
  function __subscribeToDefaultPerms__(op, permissible) <br> _subscribeToDefaultPerms method_ | `void`
  function __removePermission__(perm) <br> _removePermission method_ | `void`
  function __recalculatePermissionDefaults__(perm) <br> _recalculatePermissionDefaults method_ | `void`
@@ -87,7 +87,7 @@ Returns |
 
 ##### <a id='loadplugins'></a>public  function __loadPlugins__(directory)
 
-_Registers the specified plugin loader_
+_Loads the plugins contained within the specified directory_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -222,7 +222,7 @@ Returns |
 
 ##### <a id='ispluginenabled'></a>public  function __isPluginEnabled__(name)
 
-_Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces_
+_Checks if the given plugin is enabled or not <p> Please note that the name of the plugin is case-sensitive._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -230,7 +230,7 @@ name | `String` | Name of the plugin to check
 
 Returns | Description
 --- | --- 
-`boolean` | The Plugin loaded, or null if it was invalid
+`boolean` | true if the plugin is enabled, otherwise false
 
 
 ##### <a id='subscribetodefaultperms'></a>public  function __subscribeToDefaultPerms__(op, permissible)

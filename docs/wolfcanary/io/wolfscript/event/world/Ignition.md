@@ -12,7 +12,7 @@ Ignition hook. Contains information about a [`Block`](../../api/world/blocks/Blo
 Method | Type   
 --- | :--- 
 new __Ignition__(ignited, player, clicked, cause) <br> _Ignition constructor_ | _constructor_
- readonly property __Block__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md) that is about to go up in flames_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Block__ <br> _Block property_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Cause__ <br> _Get: Gets the `IgnitionCause` causing the ignition_ | `IgnitionCause`
  readonly property __ClickedBlock__ <br> _Get: The [`Block`](../../api/world/blocks/Block.md) that was clicked to cause an ignition if applicable._ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __Player__ <br> _Get: The `Player` starting the fire if present_ | `Player`
@@ -55,11 +55,11 @@ cause | `IgnitionCause` | cause argument
 
 ##### <a id='block'></a>public  readonly property __Block__
 
-_Get: Gets the [`Block`](../../api/world/blocks/Block.md) that is about to go up in flames <p/> Block Statuses: <b>NOTE: Block statuses are subject to future removal. Use `#getCause` instead.</b> <ul> <li><b>1</b> - Lava</li> <li><b>2</b> - Flint&Steel</li> <li><b>3</b> - Spread</li> <li><b>4</b> - Burned Up</li> <li><b>5</b> - Lightning Strike</li> <li><b>6</b> - Small FireBall click</li> <li><b>7</b> - FireBall hitting a block</li> </ul>_
+_Block property_
 
-Get | Description
---- | --- 
-[`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) catching fire
+Get | 
+--- | 
+[`Block`](../../api/world/blocks/Block.md) |
 
 
 

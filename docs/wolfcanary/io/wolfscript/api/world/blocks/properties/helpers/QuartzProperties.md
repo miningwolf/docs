@@ -11,7 +11,8 @@ Quartz properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyVariant__(block, value) <br> _Quartz variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies variant to the `Quartz`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __variant__ <br> _Quartz variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,26 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_Quartz variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(QuartzBlock, "variant");
-
-    /** Quartz variants /
-    public enum Variant {
-        DEFAULT,
-        CHISELED,
-        LINES_Y,
-        LINES_X,
-        LINES_Z;
-
-        public static Variant valueOf(int ordinal) {
-            if (ordinal < 0 || ordinal >= values().length) {
-                throw new IllegalArgumentException();
-            }
-            return values()[ordinal];
-        }
-    }
-
-    /** Applies variant to the `Quartz`_
+_Applies variant to the `Quartz`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -56,6 +38,19 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

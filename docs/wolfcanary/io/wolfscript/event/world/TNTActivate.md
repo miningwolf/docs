@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-TNT Activate Hook <p/> Called when a TNT block or TNTMinecart is activated
+class TNTActivate
 
 Method | Type   
 --- | :--- 

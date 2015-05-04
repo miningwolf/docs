@@ -10,11 +10,11 @@ interface CommandMap
 
 Method | Type   
 --- | :--- 
- function __clearCommands__() <br> _Looks for the requested command and executes it if found._ | `void`
+ function __clearCommands__() <br> _Clears all registered commands._ | `void`
  function __getCommand__(name) <br> _Gets the command registered to the specified name_ | [`Command`](Command.md)
- function __register__(label, fallbackPrefix, command) <br> _Registers a command. Returns true on success; false if name is already_ | `boolean`
- function __register__(fallbackPrefix, command) <br> _Registers a command. Returns true on success; false if name is already_ | `boolean`
- function __registerAll__(fallbackPrefix) <br> _Registers all the commands belonging to a certain plugin._ | `void`
+ function __register__(label, fallbackPrefix, command) <br> _register method_ | `boolean`
+ function __register__(fallbackPrefix, command) <br> _register method_ | `boolean`
+ function __registerAll__(fallbackPrefix) <br> _registerAll method_ | `void`
 
 
 
@@ -25,11 +25,11 @@ Method | Type
 
 ##### <a id='clearcommands'></a>public  function __clearCommands__()
 
-_Looks for the requested command and executes it if found._
+_Clears all registered commands._
 
-Returns | Description
---- | --- 
-`void` | returns false if no target is found, true otherwise.
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='getcommand'></a>public  function __getCommand__(name)
@@ -47,40 +47,40 @@ Returns | Description
 
 ##### <a id='register'></a>public  function __register__(label, fallbackPrefix, command)
 
-_Registers a command. Returns true on success; false if name is already taken and fallback had to be used. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul>_
+_register method_
 
 Argument | Type | Description  
 --- | --- | --- 
-label | `String` | the label of the command, without the '/'-prefix.
-fallbackPrefix | `String` | a prefix which is prepended to the command with a ':' one or more times to make the command unique
-command | [`Command`](Command.md) | the command to register
+label | `String` | label argument
+fallbackPrefix | `String` | fallbackPrefix argument
+command | [`Command`](Command.md) | command argument
 
-Returns | Description
---- | --- 
-`boolean` | true if command was registered with the passed in label, false otherwise, which indicates the fallbackPrefix was used one or more times
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='register'></a>public  function __register__(fallbackPrefix, command)
 
-_Registers a command. Returns true on success; false if name is already taken and fallback had to be used. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul>_
+_register method_
 
 Argument | Type | Description  
 --- | --- | --- 
-fallbackPrefix | `String` | a prefix which is prepended to the command with a ':' one or more times to make the command unique
-command | [`Command`](Command.md) | the command to register, from which label is determined from the command name
+fallbackPrefix | `String` | fallbackPrefix argument
+command | [`Command`](Command.md) | command argument
 
-Returns | Description
---- | --- 
-`boolean` | true if command was registered with the passed in label, false otherwise, which indicates the fallbackPrefix was used one or more times
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='registerall'></a>public  function __registerAll__(fallbackPrefix)
 
-_Registers all the commands belonging to a certain plugin. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul>_
+_registerAll method_
 
 Argument | Type | Description  
 --- | --- | --- 
-fallbackPrefix | `String` | a prefix which is prepended to each command with a ':' one or more times to make the command unique
+fallbackPrefix | `String` | fallbackPrefix argument
 
 Returns | 
 --- | 

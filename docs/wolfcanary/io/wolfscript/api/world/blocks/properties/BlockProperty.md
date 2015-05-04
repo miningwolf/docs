@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Block IProperty/PropertyHelper wrapper
+interface BlockProperty
 
 Method | Type   
 --- | :--- 

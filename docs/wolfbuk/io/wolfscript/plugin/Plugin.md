@@ -15,7 +15,7 @@ Method | Type
  readonly property __Config__ <br> _Get: Gets a [`FileConfiguration`](../configuration/file/FileConfiguration.md) for this plugin, read through_ | [`FileConfiguration`](../configuration/file/FileConfiguration.md)
  readonly property __Name__ <br> _Get: Returns the name of the plugin._ | `String`
  readonly property __Logger__ <br> _Get: Returns the plugin logger associated with this server's logger. The_ | `Logger`
- readonly property __Database__ <br> _Get: Gets the `EbeanServer` tied to this plugin. This will only be_ | `EbeanServer`
+ readonly property __Database__ <br> _Database property_ | `EbeanServer`
  readonly property __Description__ <br> _Get: Returns the plugin.yaml file containing the details for this plugin_ | [`PluginDescriptionFile`](PluginDescriptionFile.md)
  readonly property __PluginLoader__ <br> _Get: Gets the associated PluginLoader responsible for this plugin_ | [`PluginLoader`](PluginLoader.md)
  readonly property __Server__ <br> _Get: Returns the Server instance currently running this plugin_ | [`Server`](../Server.md)
@@ -81,11 +81,11 @@ Get | Description
 
 ##### <a id='database'></a>public  readonly property __Database__
 
-_Get: Gets the `EbeanServer` tied to this plugin. This will only be available if enabled in the `PluginDescriptionFile#isDatabaseEnabled()` <p> <i>For more information on the use of <a href="http://www.avaje.org/"> Avaje Ebeans ORM</a>, see <a href="http://www.avaje.org/ebean/documentation.html">Avaje Ebeans Documentation</a></i> <p> <i>For an example using Ebeans ORM, see <a href="https://github.com/WolfScript/HomeWolfScript">WolfScript's Homewolfscript Plugin </a></i>_
+_Database property_
 
-Get | Description
---- | --- 
-`EbeanServer` | ebean server instance or null if not enabled
+Get | 
+--- | 
+`EbeanServer` |
 
 
 

@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Message Of The Day Owner interface<p/> Used to associate either the Server or a Plugin as the owner of a MOTDListener
+interface MOTDOwner
 
 Method | Type   
 --- | :--- 

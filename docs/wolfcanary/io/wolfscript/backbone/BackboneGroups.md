@@ -13,7 +13,7 @@ Method | Type
 --- | :--- 
 new __BackboneGroups__() <br> _BackboneGroups constructor_ | _constructor_
  function __addGroup__(group) <br> _Add a new Group to the list of Groups._ | `void`
-static function __createDefaults__() <br> _Load and return all recorded groups_ | `void`
+static function __createDefaults__() <br> _Creates a set of default groups and puts them into the database_ | `void`
  function __removeGroup__(group) <br> _Remove a group from the data source_ | `void`
  function __renameGroup__(subject, newname) <br> _renameGroup method_ | `void`
  function __updateGroup__(group) <br> _Update a Group and all its child groups._ | `void`
@@ -54,43 +54,11 @@ Returns |
 
 ##### <a id='createdefaults'></a>public static function __createDefaults__()
 
-_Load and return all recorded groups_
+_Creates a set of default groups and puts them into the database_
 
-Returns | Description
---- | --- 
-`void` | An ArrayList containing all recorded groups. /
-    public BiMap<String, Group> loadGroups() {
-        List<DataAccess> dataList = new ArrayList<DataAccess>();
-        BiMap<String, Group> groups = HashBiMap.create();
-
-        try {
-            Database.get().loadAll(schema, dataList, new HashMap<String, Object>());
-            for (DataAccess da : dataList) {
-                GroupDataAccess data = (GroupDataAccess)da;
-                if (groups.containsKey(data.name)) {
-                    continue;
-                }
-                Group g = new Group();
-
-                g.setDefaultGroup(data.isDefault);
-                g.setId(data.id);
-                g.setName(data.name);
-                g.setWorldName(ToolBox.stringToNull(data.worldName));
-                g.setPrefix(data.prefix);
-                if (!data.isDefault || !data.name.equals(data.parent)) {
-                    g.setParent(loadParents(data.parent, groups));
-                }
-                groups.put(g.getName(), g);
-            }
-        }
-        catch (DatabaseReadException e) {
-            log.error(e.getMessage(), e);
-        }
-
-        return groups;
-    }
-
-    /** Creates a set of default groups and puts them into the database
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='removegroup'></a>public  function __removeGroup__(group)

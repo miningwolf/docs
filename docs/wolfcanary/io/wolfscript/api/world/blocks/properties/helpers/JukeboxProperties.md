@@ -11,7 +11,7 @@ Jukebox properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyRecord__(block, value) <br> _Jukebox has_record property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyRecord__(block, value) <br> _Applies whether the `Jukebox` has a record or not. The TileEntity should be used to set the record ID._ | [`Block`](../../Block.md)
 final static var __hasRecord__ <br> _Jukebox has_record property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyrecord'></a>public static function __applyRecord__(block, value)
 
-_Jukebox has_record property, Values: true, false /
-    public final static BlockBooleanProperty hasRecord = getInstanceFor(Jukebox, "has_record");
-
-    /** Applies whether the `Jukebox` has a record or not. The TileEntity should be used to set the record ID._
+_Applies whether the `Jukebox` has a record or not. The TileEntity should be used to set the record ID._
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Colored Block properties helper<br/> Applies to<br/> <ul>Stained Hardened Clay</ul> <ul>Wool</ul>
+class ColoredBlockProperties
 
 Method | Type   
 --- | :--- 
-static function __applyColor__(block, value) <br> _Colored Block color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM)_ | [`Block`](../../Block.md)
+static function __applyColor__(block, value) <br> _Applies color to the {@code Colored Block}_ | [`Block`](../../Block.md)
 static final var __color__ <br> _Colored Block color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applycolor'></a>public static function __applyColor__(block, value)
 
-_Colored Block color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM) /
-    public static final BlockEnumProperty color = getInstanceFor(WhiteWool, "color");
-
-    /** Applies color to the {@code Colored Block}_
+_Applies color to the {@code Colored Block}_
 
 Argument | Type | Description  
 --- | --- | --- 

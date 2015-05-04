@@ -12,8 +12,9 @@ Flower Pot properties helper
 Method | Type   
 --- | :--- 
 static function __applyContents__(block, value) <br> _Applies contents to the {@code Flower Pot}_ | [`Block`](../../Block.md)
-static function __applyLegacyData__(block, value) <br> _Flower Pot legacy_data property, values: 0 - 15_ | [`Block`](../../Block.md)
-static final var __legacyData__ <br> _Flower Pot legacy_data property, values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
+static function __applyLegacyData__(block, value) <br> _Applies legacy data to the {@code Flower Pot}_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Contents`
+static final var __legacyData__ <br> _legacyData field_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 static final var __contents__ <br> _Flower Pot contents property, Values: `Contents`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -43,7 +44,7 @@ Returns | Description
 
 ##### <a id='applylegacydata'></a>public static function __applyLegacyData__(block, value)
 
-_Flower Pot legacy_data property, values: 0 - 15<br/>_
+_Applies legacy data to the {@code Flower Pot}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -55,13 +56,26 @@ Returns | Description
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Contents` |
+
+
 ---
 
 ### Public Fields for [`FlowerPotProperties`](FlowerPotProperties.md)
 
 ##### <a id='legacydata'></a>public static final var __legacyData__
 
-_Flower Pot legacy_data property, values: 0 - 15<br/>_
+_legacyData field_
 
 >Returns
 >  [`BlockIntegerProperty`](../BlockIntegerProperty.md)

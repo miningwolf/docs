@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li class='active'><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -171,7 +167,7 @@
 <td style="text-align:left">TreeSpecies</td>
 </tr>
 <tr>
-<td>REDWOOD: 0x1<br> <em>Represents the darker barked/leaved tree species.</em></td>
+<td>REDWOOD: 0x1<br> <em>REDWOOD TreeSpecies</em></td>
 <td style="text-align:left">TreeSpecies</td>
 </tr>
 <tr>
@@ -196,28 +192,8 @@
 <h3 id="public-properties-for-treespecies-treespecies-md-">Public Properties for <a href="TreeSpecies.html"><code>TreeSpecies</code></a></h3>
 <h5 id="-a-id-data-a-public-readonly-property-__data__"><a id='data'></a>public  readonly property <strong>Data</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: Represents the common tree species. /
-    GENERIC(0x0),
-    /<strong> Represents the darker barked/leaved tree species. /
-    REDWOOD(0x1),
-    /</strong> Represents birches. /
-    BIRCH(0x2),
-    /<strong> Represents jungle trees. /
-    JUNGLE(0x3),
-    /</strong> Represents acacia trees. /
-    ACACIA(0x4),
-    /** Represents dark oak trees. /
-    DARK_OAK(0x5),
-    ;</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> byte <span class="hljs-type">data</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> static Map&lt;Byte, TreeSpecies&gt; BY_DATA = Maps.newHashMap();
-
-<span class="hljs-keyword">private</span> TreeSpecies(<span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> <span class="hljs-type">data</span>) {
-    this.<span class="hljs-type">data</span> = (byte) <span class="hljs-type">data</span>;
-}
-
-/** Gets the <span class="hljs-built_in">associated</span> <span class="hljs-type">data</span> <span class="hljs-keyword">value</span> representing this species_
-</code></pre><table>
+<p><em>Get: Gets the associated data value representing this species</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

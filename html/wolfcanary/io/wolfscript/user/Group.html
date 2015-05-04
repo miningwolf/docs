@@ -170,7 +170,7 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>canIgnorerestrictions</strong>() <br> <em>ID for retrieving permissions from the database</em></td>
+<td> function <strong>canIgnorerestrictions</strong>() <br> <em>Check if this group can ignore restrictions</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -462,31 +462,8 @@
 <hr>
 <h3 id="public-methods-for-group-group-md-">Public Methods for <a href="Group.html"><code>Group</code></a></h3>
 <h5 id="-a-id-canignorerestrictions-a-public-function-__canignorerestrictions__-"><a id='canignorerestrictions'></a>public  function <strong>canIgnorerestrictions</strong>()</h5>
-<p>_ID for retrieving permissions from the database /
-    private int id;</p>
-<pre><code>/** <span class="hljs-keyword">Group</span> Name /
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span> name;
-
-/** <span class="hljs-keyword">Group</span> Prefix/Color /
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span> prefix = null;
-
-/** The fully qualified world name valid <span class="hljs-keyword">for</span> this <span class="hljs-keyword">group</span>. <span class="hljs-keyword">If</span> this <span class="hljs-keyword">group</span> <span class="hljs-keyword">is</span> valid <span class="hljs-keyword">for</span> all worlds, this may be null /
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">String</span> worldName = null;
-
-/** The permission provider <span class="hljs-keyword">for</span> querying permissions etc. /
-<span class="hljs-keyword">private</span> PermissionProvider permissions;
-
-/** List <span class="hljs-keyword">of</span> groups this <span class="hljs-keyword">group</span> <span class="hljs-keyword">inherits</span>/has control over /
-<span class="hljs-keyword">private</span> List&lt;<span class="hljs-keyword">Group</span>&gt; childGroups = <span class="hljs-keyword">new</span> ArrayList&lt;<span class="hljs-keyword">Group</span>&gt;();
-
-/** The parent <span class="hljs-keyword">group</span> (the <span class="hljs-keyword">group</span> this <span class="hljs-keyword">group</span> <span class="hljs-keyword">is</span> a child <span class="hljs-keyword">of</span>). Parents have control over their childs /
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">Group</span> parent = null;
-
-/** <span class="hljs-keyword">Is</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">if</span> it<span class="hljs-comment">'s the default group /</span>
-<span class="hljs-keyword">private</span> <span class="hljs-built_in">boolean</span> defaultGroup = <span class="hljs-literal">false</span>;
-
-/** Check <span class="hljs-keyword">if</span> this <span class="hljs-keyword">group</span> can ignore restrictions_
-</code></pre><table>
+<p><em>Check if this group can ignore restrictions</em></p>
+<table>
 <thead>
 <tr>
 <th>Returns</th>

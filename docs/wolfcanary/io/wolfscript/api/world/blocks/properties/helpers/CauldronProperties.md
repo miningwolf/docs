@@ -11,7 +11,7 @@ Cauldron properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyLevel__(block, value) <br> _Cauldron [water] level property, Values: 0 - 3_ | [`Block`](../../Block.md)
+static function __applyLevel__(block, value) <br> _Applies level to the `Cauldron`_ | [`Block`](../../Block.md)
 static final var __level__ <br> _Cauldron [water] level property, Values: 0 - 3_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applylevel'></a>public static function __applyLevel__(block, value)
 
-_Cauldron [water] level property, Values: 0 - 3 /
-    public static final BlockIntegerProperty level = getInstanceFor(Cauldron, "level");
-
-    /** Applies level to the `Cauldron`_
+_Applies level to the `Cauldron`_
 
 Argument | Type | Description  
 --- | --- | --- 

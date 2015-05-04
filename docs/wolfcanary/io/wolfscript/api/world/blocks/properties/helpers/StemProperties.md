@@ -12,7 +12,7 @@ Stem properties helper
 Method | Type   
 --- | :--- 
 static function __applyAge__(block, value) <br> _Applies age to the `Stem`_ | [`Block`](../../Block.md)
-static function __applyFacing__(block, value) <br> _Stem facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Stem`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Stem facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 static final var __age__ <br> _Stem age property, Values: 0 - 7_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
@@ -43,13 +43,7 @@ Returns | Description
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Stem facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(MelonStem, "facing");
-
-    /** Stem age property, Values: 0 - 7 /
-    public static final BlockIntegerProperty age = getInstanceFor(MelonStem, "age");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Stem`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Stem`_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -139,7 +139,7 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>final function <strong>consoleFormat</strong>(text) <br> <em>Replaces all Color formatting with an &amp; symbol</em></td>
+<td>static final function <strong>consoleFormat</strong>(text) <br> <em>Replaces all Color formatting with an &amp; symbol</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>final function <strong>removeFormatting</strong>(text) <br> <em>The character sequence to make the following text bold.</em></td>
+<td>static final function <strong>removeFormatting</strong>(text) <br> <em>removeFormatting method</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -258,7 +258,7 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 </table>
 <hr>
 <h3 id="public-methods-for-textformat-textformat-md-">Public Methods for <a href="TextFormat.html"><code>TextFormat</code></a></h3>
-<h5 id="-a-id-consoleformat-a-public-final-function-__consoleformat__-text-"><a id='consoleformat'></a>public final function <strong>consoleFormat</strong>(text)</h5>
+<h5 id="-a-id-consoleformat-a-public-static-final-function-__consoleformat__-text-"><a id='consoleformat'></a>public static final function <strong>consoleFormat</strong>(text)</h5>
 <p><em>Replaces all Color formatting with an &amp; symbol</em></p>
 <table>
 <thead>
@@ -322,28 +322,9 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-removeformatting-a-public-final-function-__removeformatting__-text-"><a id='removeformatting'></a>public final function <strong>removeFormatting</strong>(text)</h5>
-<p>_The character sequence to make the following text bold. /
-    public static final String BOLD = &quot;\u00A7l&quot;;</p>
-<pre><code>/** The character seqence <span class="hljs-keyword">to</span> make the following <span class="hljs-keyword">text</span> striked. /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> STRIKE = <span class="hljs-string">"\u00A7m"</span>;
-
-/** The characted sequence <span class="hljs-keyword">to</span> make the following <span class="hljs-keyword">text</span> underlined. /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> UNDERLINED = <span class="hljs-string">"\u00A7n"</span>;
-
-/** The character sequence <span class="hljs-keyword">to</span> make the following <span class="hljs-keyword">text</span> italic. /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> ITALICS = <span class="hljs-string">"\u00A7o"</span>;
-
-/** The character sequence <span class="hljs-keyword">to</span> display everything <span class="hljs-keyword">as</span> completely random /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> RANDOM = <span class="hljs-string">"\u00A7k"</span>;
-/** The character sequence <span class="hljs-keyword">to</span> create a <span class="hljs-keyword">new</span> line <span class="hljs-keyword">of</span> <span class="hljs-keyword">text</span> /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> NEW_LINE = <span class="hljs-string">"\n"</span>;
-
-/** The character sequence <span class="hljs-keyword">to</span> reset all <span class="hljs-keyword">text</span> formatting. /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final <span class="hljs-built_in">String</span> RESET = <span class="hljs-string">"\u00A7r"</span>;
-
-/** Removes all minecraft-style formatting <span class="hljs-keyword">from</span> &lt;tt&gt;<span class="hljs-keyword">text</span>&lt;/tt&gt;._
-</code></pre><table>
+<h5 id="-a-id-removeformatting-a-public-static-final-function-__removeformatting__-text-"><a id='removeformatting'></a>public static final function <strong>removeFormatting</strong>(text)</h5>
+<p><em>removeFormatting method</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -355,7 +336,7 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 <tr>
 <td>text</td>
 <td><code>String</code></td>
-<td>The text to be stripped of formatting.</td>
+<td>text argument</td>
 </tr>
 </tbody>
 </table>
@@ -363,13 +344,12 @@ Extends <a href="Colors.html"><code>Colors</code></a></p>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td><tt>text</tt> with all color/style tags stripped.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

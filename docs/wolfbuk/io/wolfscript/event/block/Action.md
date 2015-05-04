@@ -14,7 +14,7 @@ LEFT_CLICK_BLOCK: <br> _Left-clicking a block_ | Action
 RIGHT_CLICK_BLOCK: <br> _Right-clicking a block_ | Action
 LEFT_CLICK_AIR: <br> _Left-clicking the air_ | Action
 RIGHT_CLICK_AIR: <br> _Right-clicking the air_ | Action
-PHYSICAL: <br> _Stepping onto or into a block (Ass-pressure)_ | Action
+PHYSICAL: <br> _PHYSICAL Action_ | Action
 
 
 

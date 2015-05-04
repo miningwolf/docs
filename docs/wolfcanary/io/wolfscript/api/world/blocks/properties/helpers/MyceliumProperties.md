@@ -11,7 +11,7 @@ Mycelium properties helper
 
 Method | Type   
 --- | :--- 
-static function __applySnowy__(block, value) <br> _Mycelium snowy property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applySnowy__(block, value) <br> _Applies whether the `Mycelium` is snowy or not_ | [`Block`](../../Block.md)
 static final var __snowy__ <br> _Mycelium snowy property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applysnowy'></a>public static function __applySnowy__(block, value)
 
-_Mycelium snowy property, Values: true, false /
-    public static final BlockBooleanProperty snowy = getInstanceFor(Mycelium, "snowy");
-
-    /** Applies whether the `Mycelium` is snowy or not_
+_Applies whether the `Mycelium` is snowy or not_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -18,7 +18,7 @@ final readonly property __Server__ <br> _Get: Returns the Server instance curren
 final readonly property __Description__ <br> _Get: Returns the plugin.yaml file containing the details for this plugin_ | [`PluginDescriptionFile`](../PluginDescriptionFile.md)
  readonly property __Database__ <br> _Database property_ | `EbeanServer`
  readonly property __DatabaseClasses__ <br> _Get: Provides a list of all classes that should be persisted in the database_ | `List<Class<?>>`
-static readonly property __ProvidingPlugin__ <br> _Get: This method provides fast access to the plugin that has {@link_ | [`JavaPlugin`](JavaPlugin.md)
+static readonly property __ProvidingPlugin__ <br> _Get: This method provides fast access to the plugin that has provided the_ | [`JavaPlugin`](JavaPlugin.md)
 final readonly property __Logger__ <br> _Logger property_ | `Logger`
 final readonly property __PluginLoader__ <br> _Get: Gets the associated PluginLoader responsible for this plugin_ | [`PluginLoader`](../PluginLoader.md)
 final writeonly property __Naggable__ <br> _Naggable property_ | `void`
@@ -122,11 +122,11 @@ Get | Description
 
 ##### <a id='providingplugin'></a>public static readonly property __ProvidingPlugin__
 
-_Get: This method provides fast access to the plugin that has {@link #getProvidingPlugin(Class) provided} the given plugin class, which is usually the plugin that implemented it. <p> An exception to this would be if plugin's jar that contained the class does not extend the class, where the intended plugin would have resided in a different jar / classloader._
+_Get: This method provides fast access to the plugin that has provided the given class._
 
 Get | Description
 --- | --- 
-[`JavaPlugin`](JavaPlugin.md) | the plugin that provides and implements said class
+[`JavaPlugin`](JavaPlugin.md) | the plugin that provided the class
 
 
 

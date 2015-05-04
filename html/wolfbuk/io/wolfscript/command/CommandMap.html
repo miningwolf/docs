@@ -143,7 +143,7 @@
 </thead>
 <tbody>
 <tr>
-<td> function <strong>clearCommands</strong>() <br> <em>Looks for the requested command and executes it if found.</em></td>
+<td> function <strong>clearCommands</strong>() <br> <em>Clears all registered commands.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -151,15 +151,15 @@
 <td style="text-align:left"><a href="Command.html"><code>Command</code></a></td>
 </tr>
 <tr>
-<td> function <strong>register</strong>(label, fallbackPrefix, command) <br> <em>Registers a command. Returns true on success; false if name is already</em></td>
+<td> function <strong>register</strong>(label, fallbackPrefix, command) <br> <em>register method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>register</strong>(fallbackPrefix, command) <br> <em>Registers a command. Returns true on success; false if name is already</em></td>
+<td> function <strong>register</strong>(fallbackPrefix, command) <br> <em>register method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>registerAll</strong>(fallbackPrefix) <br> <em>Registers all the commands belonging to a certain plugin.</em></td>
+<td> function <strong>registerAll</strong>(fallbackPrefix) <br> <em>registerAll method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -167,18 +167,17 @@
 <hr>
 <h3 id="public-methods-for-commandmap-commandmap-md-">Public Methods for <a href="CommandMap.html"><code>CommandMap</code></a></h3>
 <h5 id="-a-id-clearcommands-a-public-function-__clearcommands__-"><a id='clearcommands'></a>public  function <strong>clearCommands</strong>()</h5>
-<p><em>Looks for the requested command and executes it if found.</em></p>
+<p><em>Clears all registered commands.</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>returns false if no target is found, true otherwise.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -215,7 +214,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-register-a-public-function-__register__-label-fallbackprefix-command-"><a id='register'></a>public  function <strong>register</strong>(label, fallbackPrefix, command)</h5>
-<p><em>Registers a command. Returns true on success; false if name is already taken and fallback had to be used. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul></em></p>
+<p><em>register method</em></p>
 <table>
 <thead>
 <tr>
@@ -228,17 +227,17 @@
 <tr>
 <td>label</td>
 <td><code>String</code></td>
-<td>the label of the command, without the &#39;/&#39;-prefix.</td>
+<td>label argument</td>
 </tr>
 <tr>
 <td>fallbackPrefix</td>
 <td><code>String</code></td>
-<td>a prefix which is prepended to the command with a &#39;:&#39; one or more times to make the command unique</td>
+<td>fallbackPrefix argument</td>
 </tr>
 <tr>
 <td>command</td>
 <td><a href="Command.html"><code>Command</code></a></td>
-<td>the command to register</td>
+<td>command argument</td>
 </tr>
 </tbody>
 </table>
@@ -246,18 +245,17 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>true if command was registered with the passed in label, false otherwise, which indicates the fallbackPrefix was used one or more times</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-register-a-public-function-__register__-fallbackprefix-command-"><a id='register'></a>public  function <strong>register</strong>(fallbackPrefix, command)</h5>
-<p><em>Registers a command. Returns true on success; false if name is already taken and fallback had to be used. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul></em></p>
+<p><em>register method</em></p>
 <table>
 <thead>
 <tr>
@@ -270,12 +268,12 @@
 <tr>
 <td>fallbackPrefix</td>
 <td><code>String</code></td>
-<td>a prefix which is prepended to the command with a &#39;:&#39; one or more times to make the command unique</td>
+<td>fallbackPrefix argument</td>
 </tr>
 <tr>
 <td>command</td>
 <td><a href="Command.html"><code>Command</code></a></td>
-<td>the command to register, from which label is determined from the command name</td>
+<td>command argument</td>
 </tr>
 </tbody>
 </table>
@@ -283,18 +281,17 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>true if command was registered with the passed in label, false otherwise, which indicates the fallbackPrefix was used one or more times</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-registerall-a-public-function-__registerall__-fallbackprefix-"><a id='registerall'></a>public  function <strong>registerAll</strong>(fallbackPrefix)</h5>
-<p><em>Registers all the commands belonging to a certain plugin. <p> Caller can use:- <ul> <li>command.getName() to determine the label registered for this command <li>command.getAliases() to determine the aliases which where registered </ul></em></p>
+<p><em>registerAll method</em></p>
 <table>
 <thead>
 <tr>
@@ -307,7 +304,7 @@
 <tr>
 <td>fallbackPrefix</td>
 <td><code>String</code></td>
-<td>a prefix which is prepended to each command with a &#39;:&#39; one or more times to make the command unique</td>
+<td>fallbackPrefix argument</td>
 </tr>
 </tbody>
 </table>

@@ -92,7 +92,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/AuthorNagException.html'>AuthorNagException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/EventExecutor.html'>EventExecutor</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/plugin/Flags.html'>Flags</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidPluginException.html'>InvalidPluginException</a></li>
@@ -164,7 +163,7 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 <td style="text-align:left"><code>Set&lt;Permission&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>loadPlugins</strong>(directory) <br> <em>Registers the specified plugin loader</em></td>
+<td> function <strong>loadPlugins</strong>(directory) <br> <em>Loads the plugins contained within the specified directory</em></td>
 <td style="text-align:left"><code>Plugin[]</code></td>
 </tr>
 <tr>
@@ -208,7 +207,7 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>isPluginEnabled</strong>(name) <br> <em>Loads the plugin in the specified file</em></td>
+<td> function <strong>isPluginEnabled</strong>(name) <br> <em>Checks if the given plugin is enabled or not</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -337,7 +336,7 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-loadplugins-a-public-function-__loadplugins__-directory-"><a id='loadplugins'></a>public  function <strong>loadPlugins</strong>(directory)</h5>
-<p><em>Registers the specified plugin loader</em></p>
+<p><em>Loads the plugins contained within the specified directory</em></p>
 <table>
 <thead>
 <tr>
@@ -648,7 +647,7 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-ispluginenabled-a-public-function-__ispluginenabled__-name-"><a id='ispluginenabled'></a>public  function <strong>isPluginEnabled</strong>(name)</h5>
-<p><em>Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces</em></p>
+<p><em>Checks if the given plugin is enabled or not <p> Please note that the name of the plugin is case-sensitive.</em></p>
 <table>
 <thead>
 <tr>
@@ -675,7 +674,7 @@ Implements <a href="PluginManager.html"><code>PluginManager</code></a></p>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>The Plugin loaded, or null if it was invalid</td>
+<td>true if the plugin is enabled, otherwise false</td>
 </tr>
 </tbody>
 </table>

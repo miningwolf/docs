@@ -221,7 +221,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -421,18 +421,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

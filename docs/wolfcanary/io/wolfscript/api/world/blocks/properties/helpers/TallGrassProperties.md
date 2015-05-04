@@ -11,7 +11,8 @@ Tall Grass properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyType__(block, value) <br> _Tall Grass type property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyType__(block, value) <br> _Applies type to the {@code Tall Grass}_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __type__ <br> _Tall Grass type property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,24 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applytype'></a>public static function __applyType__(block, value)
 
-_Tall Grass type property, Values: `Variant` /
-    public static final BlockEnumProperty type = getInstanceFor(TallGrass, "type");
-
-    /** Tall grass variants /
-    public enum Variant {
-        DEAD_BUSH,
-        GRASS,
-        FERN;
-
-        public static Variant valueOf(int ordinal) {
-            if (ordinal < 0 || ordinal >= values().length) {
-                throw new IllegalArgumentException();
-            }
-            return values()[ordinal];
-        }
-    }
-
-    /** Applies type to the {@code Tall Grass}_
+_Applies type to the {@code Tall Grass}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -54,6 +38,19 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

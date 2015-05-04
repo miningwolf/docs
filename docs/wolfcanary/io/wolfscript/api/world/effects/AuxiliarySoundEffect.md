@@ -10,8 +10,9 @@ Auxiliary Sound Effects
 
 Method | Type   
 --- | :--- 
-new __AuxiliarySoundEffect__(type, x, y, z) <br> _The Auxiliary Sound Effect Type_ | _constructor_
-new __AuxiliarySoundEffect__(type, x, y, z, extra) <br> _Constructs a new AuxiliarySoundEffect for a specified location_ | _constructor_
+new __AuxiliarySoundEffect__(type, x, y, z) <br> _Constructs a new AuxiliarySoundEffect for a specified location_ | _constructor_
+new __AuxiliarySoundEffect__(type, x, y, z, extra) <br> _AuxiliarySoundEffect constructor_ | _constructor_
+ readonly property __Digits__ <br> _Digits property_ | `int`
  var __x__ <br> _x field_ | `int`
 
 
@@ -22,7 +23,7 @@ new __AuxiliarySoundEffect__(type, x, y, z, extra) <br> _Constructs a new Auxili
 
 ##### <a id='auxiliarysoundeffect'></a>new __AuxiliarySoundEffect__(type, x, y, z) 
 
-_The Auxiliary Sound Effect Type_
+_Constructs a new AuxiliarySoundEffect for a specified location_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -33,15 +34,29 @@ z | `int` | the z coordinate to play at
 
 ##### <a id='auxiliarysoundeffect'></a>new __AuxiliarySoundEffect__(type, x, y, z, extra) 
 
-_Constructs a new AuxiliarySoundEffect for a specified location_
+_AuxiliarySoundEffect constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-type | `Type` | the type of effect to play
-x | `int` | the x coordinate to play at
-y | `int` | the y coordinate to play at
-z | `int` | the z coordinate to play at
-extra | `int` | extra bits like Potion ID or Direction for extra help see: http://wiki.vg/Protocol#Effects
+type | `Type` | type argument
+x | `int` | x argument
+y | `int` | y argument
+z | `int` | z argument
+extra | `int` | extra argument
+
+---
+
+### Public Properties for [`AuxiliarySoundEffect`](AuxiliarySoundEffect.md)
+
+##### <a id='digits'></a>public  readonly property __Digits__
+
+_Digits property_
+
+Get | 
+--- | 
+`int` |
+
+
 
 ---
 

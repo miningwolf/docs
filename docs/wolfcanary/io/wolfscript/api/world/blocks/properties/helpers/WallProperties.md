@@ -14,9 +14,10 @@ Method | Type
 static function __applyEast__(block, value) <br> _Applies whether the `Wall` extends from the center post east or not_ | [`Block`](../../Block.md)
 static function __applyNorth__(block, value) <br> _Applies whether the `Wall` extends from the center post north or not_ | [`Block`](../../Block.md)
 static function __applySouth__(block, value) <br> _Applies whether the `Wall` extends from the center post south or not_ | [`Block`](../../Block.md)
-static function __applyUp__(block, value) <br> _Wall up property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyUp__(block, value) <br> _Applies whether the `Wall` extends from the center post up or not_ | [`Block`](../../Block.md)
 static function __applyVariant__(block, value) <br> _Applies variant to the `Wall`_ | [`Block`](../../Block.md)
 static function __applyWest__(block, value) <br> _Applies whether the `Wall` extends from the center post west or not_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __up__ <br> _Wall up property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 static final var __north__ <br> _Wall north property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 static final var __east__ <br> _Wall east property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
@@ -79,25 +80,7 @@ Returns | Description
 
 ##### <a id='applyup'></a>public static function __applyUp__(block, value)
 
-_Wall up property, Values: true, false /
-    public static final BlockBooleanProperty up = getInstanceFor(CobblestoneWall, "up");
-
-    /** Wall north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(CobblestoneWall, "north");
-
-    /** Wall east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(CobblestoneWall, "east");
-
-    /** Wall south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(CobblestoneWall, "south");
-
-    /** Wall west property, Values: true, false /
-    public static final BlockBooleanProperty west = getInstanceFor(CobblestoneWall, "west");
-
-    /** Wall variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(CobblestoneWall, "variant");
-
-    /** Wall variants_
+_Applies whether the `Wall` extends from the center post up or not_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -135,6 +118,19 @@ value | `boolean` | the `boolean` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

@@ -474,7 +474,7 @@ static function __getMaterial__(String) <br> _Attempts to get the Material with 
 ##### <a id='id'></a>public  readonly property __Id__
 _Deprecated: Magic value_
 
-_Id property_
+_Get: Gets the item ID or block ID of this Material_
 
 Get | Description
 --- | --- 
@@ -558,7 +558,7 @@ Returns | Description
 ##### <a id='getnewdata'></a>public  function __getNewData__(byte)
 _Deprecated: Magic value_
 
-_Gets the MaterialData class associated with this Material_
+_Constructs a new MaterialData relevant for this Material, with the given initial data_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -566,12 +566,7 @@ byte | `final` | byte argument
 
 Returns | Description
 --- | --- 
-[`MaterialData`](material/MaterialData.md) | MaterialData associated with this Material /
-    public Class<? extends MaterialData> getData() {
-        return ctor.getDeclaringClass();
-    }
-
-    /** Constructs a new MaterialData relevant for this Material, with the given initial data
+[`MaterialData`](material/MaterialData.md) | New MaterialData with the given data
 
 
 ##### <a id='hasgravity'></a>public  function __hasGravity__()

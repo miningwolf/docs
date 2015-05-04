@@ -12,10 +12,10 @@ Method | Type
 --- | :--- 
 new __HandlerList__() <br> _Create a new handler list and initialize using EventPriority._ | _constructor_
 static readonly property __HandlerLists__ <br> _Get: Get a list of all handler lists for every event type_ | `ArrayList<HandlerList>`
- readonly property __RegisteredListeners__ <br> _Get: Remove a listener from a specific order slot_ | `RegisteredListener[]`
-static function __bakeAll__() <br> _Handler array. This field being an array is the key to this system's_ | `void`
+ readonly property __RegisteredListeners__ <br> _Get: Get the baked registered listeners associated with this handler list_ | `RegisteredListener[]`
+static function __bakeAll__() <br> _Bake all handler lists. Best used just after all normal event_ | `void`
 static function __getRegisteredListeners__(plugin) <br> _Get a specific plugin's registered listeners associated with this_ | `ArrayList<RegisteredListener>`
- function __registerAll__() <br> _Register a new listener in this handler list_ | `void`
+ function __registerAll__() <br> _Register a collection of new listeners in this handler list_ | `void`
 static function __unregisterAll__() <br> _Unregister all listeners from all handler lists._ | `void`
 static function __unregisterAll__(plugin) <br> _Unregister a specific plugin's listeners from all handler lists._ | `void`
 static function __unregisterAll__(listener) <br> _Unregister a specific listener from all handler lists._ | `void`
@@ -47,7 +47,7 @@ Get | Description
 
 ##### <a id='registeredlisteners'></a>public  readonly property __RegisteredListeners__
 
-_Get: Remove a listener from a specific order slot_
+_Get: Get the baked registered listeners associated with this handler list_
 
 Get | Description
 --- | --- 
@@ -61,16 +61,7 @@ Get | Description
 
 ##### <a id='bakeall'></a>public static function __bakeAll__()
 
-_Handler array. This field being an array is the key to this system's speed. /
-    private volatile RegisteredListener[] handlers = null;
-
-    /** Dynamic handler lists. These are changed using register() and unregister() and are automatically baked to the handlers array any time they have changed. /
-    private final EnumMap<EventPriority, ArrayList<RegisteredListener>> handlerslots;
-
-    /** List of all HandlerLists which have been created, for use in bakeAll() /
-    private static ArrayList<HandlerList> allLists = new ArrayList<HandlerList>();
-
-    /** Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded if you're using fevents in a plugin system._
+_Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded if you're using fevents in a plugin system._
 
 Returns | 
 --- | 
@@ -92,7 +83,7 @@ Returns | Description
 
 ##### <a id='registerall'></a>public  function __registerAll__()
 
-_Register a new listener in this handler list_
+_Register a collection of new listeners in this handler list_
 
 Returns | 
 --- | 

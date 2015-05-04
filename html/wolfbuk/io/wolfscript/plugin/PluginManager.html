@@ -92,7 +92,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/AuthorNagException.html'>AuthorNagException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/EventExecutor.html'>EventExecutor</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/plugin/Flags.html'>Flags</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidPluginException.html'>InvalidPluginException</a></li>
@@ -163,7 +162,7 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>getPlugin</strong>(name) <br> <em>Registers the specified plugin loader</em></td>
+<td> function <strong>getPlugin</strong>(name) <br> <em>Checks if the given plugin is loaded and returns it when applicable</em></td>
 <td style="text-align:left"><a href="Plugin.html"><code>Plugin</code></a></td>
 </tr>
 <tr>
@@ -215,7 +214,7 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>loadPlugins</strong>(directory) <br> <em>Loads the plugin in the specified file</em></td>
+<td> function <strong>loadPlugins</strong>(directory) <br> <em>Loads the plugins contained within the specified directory</em></td>
 <td style="text-align:left"><code>Plugin[]</code></td>
 </tr>
 <tr>
@@ -227,15 +226,15 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>registerEvents</strong>(listener, plugin) <br> <em>Calls an event with the given details</em></td>
+<td> function <strong>registerEvents</strong>(listener, plugin) <br> <em>Registers all the events in the given listener class</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>removePermission</strong>(name) <br> <em>Removes a <a href="../permissions/Permission.html"><code>Permission</code></a> registration from this plugin manager.</em></td>
+<td> function <strong>removePermission</strong>(name) <br> <em>removePermission method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>removePermission</strong>(perm) <br> <em>Removes a <a href="../permissions/Permission.html"><code>Permission</code></a> registration from this plugin manager.</em></td>
+<td> function <strong>removePermission</strong>(perm) <br> <em>removePermission method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -324,7 +323,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-getplugin-a-public-function-__getplugin__-name-"><a id='getplugin'></a>public  function <strong>getPlugin</strong>(name)</h5>
-<p><em>Registers the specified plugin loader</em></p>
+<p><em>Checks if the given plugin is loaded and returns it when applicable <p> Please note that the name of the plugin is case-sensitive</em></p>
 <table>
 <thead>
 <tr>
@@ -732,7 +731,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-loadplugins-a-public-function-__loadplugins__-directory-"><a id='loadplugins'></a>public  function <strong>loadPlugins</strong>(directory)</h5>
-<p><em>Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces</em></p>
+<p><em>Loads the plugins contained within the specified directory</em></p>
 <table>
 <thead>
 <tr>
@@ -759,7 +758,7 @@
 <tbody>
 <tr>
 <td><code>Plugin[]</code></td>
-<td>The Plugin loaded, or null if it was invalid</td>
+<td>A list of all plugins loaded</td>
 </tr>
 </tbody>
 </table>
@@ -846,7 +845,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-registerevents-a-public-function-__registerevents__-listener-plugin-"><a id='registerevents'></a>public  function <strong>registerEvents</strong>(listener, plugin)</h5>
-<p><em>Calls an event with the given details</em></p>
+<p><em>Registers all the events in the given listener class</em></p>
 <table>
 <thead>
 <tr>
@@ -882,7 +881,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-removepermission-a-public-function-__removepermission__-name-"><a id='removepermission'></a>public  function <strong>removePermission</strong>(name)</h5>
-<p><em>Removes a <a href="../permissions/Permission.html"><code>Permission</code></a> registration from this plugin manager. <p> If the specified permission does not exist in this plugin manager, nothing will happen. <p> Removing a permission registration will <b>not</b> remove the permission from any <a href="../permissions/Permissible.html"><code>Permissible</code></a>s that have it.</em></p>
+<p><em>removePermission method</em></p>
 <table>
 <thead>
 <tr>
@@ -895,7 +894,7 @@
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>Permission to remove</td>
+<td>name argument</td>
 </tr>
 </tbody>
 </table>
@@ -913,7 +912,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-removepermission-a-public-function-__removepermission__-perm-"><a id='removepermission'></a>public  function <strong>removePermission</strong>(perm)</h5>
-<p><em>Removes a <a href="../permissions/Permission.html"><code>Permission</code></a> registration from this plugin manager. <p> If the specified permission does not exist in this plugin manager, nothing will happen. <p> Removing a permission registration will <b>not</b> remove the permission from any <a href="../permissions/Permissible.html"><code>Permissible</code></a>s that have it.</em></p>
+<p><em>removePermission method</em></p>
 <table>
 <thead>
 <tr>
@@ -926,7 +925,7 @@
 <tr>
 <td>perm</td>
 <td><a href="../permissions/Permission.html"><code>Permission</code></a></td>
-<td>Permission to remove</td>
+<td>perm argument</td>
 </tr>
 </tbody>
 </table>

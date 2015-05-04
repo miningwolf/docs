@@ -12,12 +12,13 @@ Stores data for health-regain events
 
 Method | Type   
 --- | :--- 
-new __EntityRegainHealthEvent__(Entity, int, RegainReason) <br> _EntityRegainHealthEvent constructor_ | _constructor_
 new __EntityRegainHealthEvent__(Entity, double, RegainReason) <br> _EntityRegainHealthEvent constructor_ | _constructor_
-  property __Amount__ <br> _Get: Gets the amount of regained health<br>Set: This method exists for legacy reasons to provide backwards_ | `double`
+  property __Amount__ <br> _Get: Gets the amount of regained health<br>Set: Sets the amount of regained health_ | `double`
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
- readonly property __RegainReason__ <br> _Get: This method exists for legacy reasons to provide backwards_ | `RegainReason`
+ readonly property __RegainReason__ <br> _Get: Gets the reason for why the entity is regaining health_ | `RegainReason`
+ writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
+ function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
 __Inherited items from [`EntityEvent`](EntityEvent.md)__ |
 new __EntityEvent__(Entity) <br> _EntityEvent constructor_ | _constructor_
@@ -29,7 +30,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -42,6 +43,7 @@ final function __isAsynchronous__() <br> _Any custom event that should not by sy
 ### Public Constructors for [`EntityRegainHealthEvent`](EntityRegainHealthEvent.md)
 
 ##### <a id='entityregainhealthevent'></a>new __EntityRegainHealthEvent__(Entity, int, RegainReason) 
+_Deprecated_
 
 _EntityRegainHealthEvent constructor_
 
@@ -67,17 +69,11 @@ RegainReason | `final` | RegainReason argument
 
 ##### <a id='amount'></a>public   property __Amount__
 
-_Get: Gets the amount of regained health<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets the amount of regained health<br>Set: Sets the amount of regained health_
 
 Get | Description
 --- | --- 
-`double` | the (rounded) amount regained /
-    @Deprecated
-    public int _INVALID_getAmount() {
-        return NumberConversions.ceil(getAmount());
-    }
-
-    /** Sets the amount of regained health
+`double` | The amount of health regained
 
 Set | Type | Description  
 --- | --- | --- 
@@ -106,12 +102,38 @@ Get |
 
 ##### <a id='regainreason'></a>public  readonly property __RegainReason__
 
-_Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets the reason for why the entity is regaining health_
 
 Get | Description
 --- | --- 
 `RegainReason` | A RegainReason detailing the reason for the entity regaining health
 
+
+
+##### <a id='cancelled'></a>public  writeonly property __Cancelled__
+
+_Cancelled property_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+cancel | `boolean` | cancel argument
+
+
+---
+
+### Public Methods for [`EntityRegainHealthEvent`](EntityRegainHealthEvent.md)
+
+##### <a id='iscancelled'></a>public  function __isCancelled__()
+
+_isCancelled method_
+
+Returns | 
+--- | 
+`boolean` |
 
 
 ---
@@ -195,11 +217,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Json to/from NBT Utility <p/> Instance of this should be retrieved using `Wolf#jsonNBT()`
+interface JsonNBTUtility
 
 Method | Type   
 --- | :--- 

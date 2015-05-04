@@ -92,7 +92,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/AuthorNagException.html'>AuthorNagException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/EventExecutor.html'>EventExecutor</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/plugin/Flags.html'>Flags</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidPluginException.html'>InvalidPluginException</a></li>
@@ -164,7 +163,7 @@ Extends <a href="RegisteredListener.html"><code>RegisteredListener</code></a></p
 <td style="text-align:left"><code>long</code></td>
 </tr>
 <tr>
-<td> function <strong>hasMultiple</strong>() <br> <em>Gets the class of the events this listener handled. If it handled</em></td>
+<td> function <strong>hasMultiple</strong>() <br> <em>hasMultiple method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -196,7 +195,7 @@ Extends <a href="RegisteredListener.html"><code>RegisteredListener</code></a></p
 <td style="text-align:left"><code>EventPriority</code></td>
 </tr>
 <tr>
-<td> function <strong>isIgnoringCancelled</strong>() <br> <em>Calls the event executor</em></td>
+<td> function <strong>isIgnoringCancelled</strong>() <br> <em>Whether this listener accepts cancelled events</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -278,27 +277,21 @@ Extends <a href="RegisteredListener.html"><code>RegisteredListener</code></a></p
 <hr>
 <h3 id="public-methods-for-timedregisteredlistener-timedregisteredlistener-md-">Public Methods for <a href="TimedRegisteredListener.html"><code>TimedRegisteredListener</code></a></h3>
 <h5 id="-a-id-hasmultiple-a-public-function-__hasmultiple__-"><a id='hasmultiple'></a>public  function <strong>hasMultiple</strong>()</h5>
-<p><em>Gets the class of the events this listener handled. If it handled multiple classes of event, the closest shared superclass will be returned, such that for any event this listener has handled, <code>this.getEventClass().isAssignableFrom(event.getClass())</code> and no class <code>this.getEventClass().isAssignableFrom(clazz) {@literal &amp;&amp; this.getEventClass() != clazz &amp;&amp;} event.getClass().isAssignableFrom(clazz)</code> for all handled events.</em></p>
+<p><em>hasMultiple method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>the event class handled by this RegisteredListener /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;? <span class="hljs-keyword">extends</span> <span class="hljs-title">Event</span>&gt; <span class="hljs-title">getEventClass</span>() {</span>
-    <span class="hljs-keyword">return</span> eventClass;
-}
-
-/** Gets whether this listener has handled multiple events, such that <span class="hljs-keyword">for</span> some two events, &lt;code&gt;eventA.getClass() != eventB.getClass()&lt;/code&gt;.
-</code></pre><h5 id="-a-id-reset-a-public-function-__reset__-"><a id='reset'></a>public  function <strong>reset</strong>()</h5>
+<h5 id="-a-id-reset-a-public-function-__reset__-"><a id='reset'></a>public  function <strong>reset</strong>()</h5>
 <p><em>Resets the call count and total time for this listener</em></p>
 <table>
 <thead>
@@ -406,7 +399,7 @@ Extends <a href="RegisteredListener.html"><code>RegisteredListener</code></a></p
 <hr>
 <h3 id="public-methods-for-registeredlistener-registeredlistener-md-">Public Methods for <a href="RegisteredListener.html"><code>RegisteredListener</code></a></h3>
 <h5 id="-a-id-isignoringcancelled-a-public-function-__isignoringcancelled__-"><a id='isignoringcancelled'></a>public  function <strong>isIgnoringCancelled</strong>()</h5>
-<p><em>Calls the event executor</em></p>
+<p><em>Whether this listener accepts cancelled events</em></p>
 <table>
 <thead>
 <tr>

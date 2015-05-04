@@ -11,7 +11,7 @@ Stained Glass Pane properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyColor__(block, value) <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`Block`](../../Block.md)
+static function __applyColor__(block, value) <br> _Applies color to the {@code Stained Glass Pane}_ | [`Block`](../../Block.md)
 static final var __color__ <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applycolor'></a>public static function __applyColor__(block, value)
 
-_Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM) /
-    public static final BlockEnumProperty color = getInstanceFor(WhiteGlassPane, "color");
-
-    /** Applies color to the {@code Stained Glass Pane}_
+_Applies color to the {@code Stained Glass Pane}_
 
 Argument | Type | Description  
 --- | --- | --- 

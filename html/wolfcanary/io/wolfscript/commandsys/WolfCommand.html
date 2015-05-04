@@ -180,7 +180,7 @@ Implements <code>Comparable&lt;WolfCommand</code></p>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>WolfCommand</strong>(meta, owner, translator, tabComplete) <br> <em>Creates a new WolfScript command complete with localehelper for translating meta info,</em></td>
+<td>new <strong>WolfCommand</strong>(meta, owner, translator, tabComplete) <br> <em>WolfCommand constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -256,7 +256,7 @@ Implements <code>Comparable&lt;WolfCommand</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-wolfcommand-a-new-__wolfcommand__-meta-owner-translator-tabcomplete-"><a id='wolfcommand'></a>new <strong>WolfCommand</strong>(meta, owner, translator, tabComplete)</h5>
-<p><em>Creates a new WolfScript command complete with localehelper for translating meta info, command owner and the meta data from the Command annotation</em></p>
+<p><em>WolfCommand constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -269,22 +269,22 @@ Implements <code>Comparable&lt;WolfCommand</code></p>
 <tr>
 <td>meta</td>
 <td><code>Command</code></td>
-<td>the <code>Command</code></td>
+<td>meta argument</td>
 </tr>
 <tr>
 <td>owner</td>
 <td><a href="CommandOwner.html"><code>CommandOwner</code></a></td>
-<td>the <a href="CommandOwner.html"><code>CommandOwner</code></a></td>
+<td>owner argument</td>
 </tr>
 <tr>
 <td>translator</td>
 <td><code>LocaleHelper</code></td>
-<td>the <code>LocaleHelper</code> translator instance</td>
+<td>translator argument</td>
 </tr>
 <tr>
 <td>tabComplete</td>
 <td><a href="TabCompleteDispatch.html"><code>TabCompleteDispatch</code></a></td>
-<td>the <a href="TabCompleteDispatch.html"><code>TabCompleteDispatch</code></a> if one is specified and usable (can be null)<br/> If no TabCompleteDispatch is present, an implementation can override {@link #tabComplete(io.wolfscript.chat.MessageReceiver, String[])} instead</td>
+<td>tabComplete argument</td>
 </tr>
 </tbody>
 </table>

@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Entity Move Hook <p/> Called when an [`Entity`](../../api/entity/Entity.md) (other than a `Player`) moves.<br> Use [`PlayerMove`](../player/PlayerMove.md) for Player movements.
+class EntityMove
 
 Method | Type   
 --- | :--- 

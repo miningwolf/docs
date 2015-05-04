@@ -39,7 +39,7 @@ static function __fromString__(in) <br> _fromString method_ | [`Vector3D`](Vecto
  function __angle__(v) <br> _Calculates the angle between this vector and another_ | `double`
  function __add__(toAdd) <br> _Add the given Vector to this Vector and return the result as new Vector3D_ | [`Vector3D`](Vector3D.md)
 static function __getDistance__(v1, v2) <br> _Retrieve the distance between 2 given vectors_ | `double`
- function __getDistance__(v) <br> _This is the nullvector (0,0,0)_ | `double`
+ function __getDistance__(v) <br> _Get the distance between this and the given vector_ | `double`
 static function __getCenterPoint__(p1, p2) <br> _Calculates the center point between 2 points_ | [`Vector3D`](Vector3D.md)
 static function __getMinimum__(v1, v2) <br> _Gets the minimum components of two vectors._ | [`Vector3D`](Vector3D.md)
  function __isWithin__(min, max) <br> _Check if this vector is contained within the range of the given two._ | `boolean`
@@ -432,37 +432,7 @@ Returns | Description
 
 ##### <a id='getdistance'></a>public  function __getDistance__(v)
 
-_This is the nullvector (0,0,0) /
-    public static final Vector3D zero = new Vector3D(0, 0, 0);
-
-    /** Shortcut to Vector3D(0,0,1) /
-    public static final Vector3D forward = new Vector3D(0, 0, 1);
-
-    public Vector3D(double x, double y, double z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    public Vector3D(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    public Vector3D(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    public Vector3D() {
-        this.x = 0;
-        this.y = 0;
-        this.z = 0;
-    }
-
-    /** Copy constructor copies the primitives_
+_Get the distance between this and the given vector_
 
 Argument | Type | Description  
 --- | --- | --- 

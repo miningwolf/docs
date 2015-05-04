@@ -12,12 +12,13 @@ Bed properties helper
 Method | Type   
 --- | :--- 
 static function __applyOccupided__(block, value) <br> _Applies whether the `Bed` is occupied or not_ | [`Block`](../../Block.md)
-static function __applyPart__(block, value) <br> _Bed part property, Values: `Half`_ | [`Block`](../../Block.md)
+static function __applyPart__(block, value) <br> _Applies `Half` to the `Bed`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Half`
 static final var __part__ <br> _Bed part property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __occupied__ <br> _Bed occupied property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`DirectionalBlockProperties`](DirectionalBlockProperties.md)__ |
-static function __applyFacing__(block, value) <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -49,13 +50,7 @@ Returns | Description
 
 ##### <a id='applypart'></a>public static function __applyPart__(block, value)
 
-_Bed part property, Values: `Half` /
-    public static final BlockEnumProperty part = getInstanceFor(Bed, "part");
-
-    /** Bed occupied property, Values: true, false /
-    public static final BlockBooleanProperty occupied = getInstanceFor(Bed, "occupied");
-
-    /** Bed half_
+_Applies `Half` to the `Bed`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -65,6 +60,19 @@ value | `Half` | the `Half` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Half` |
 
 
 ---
@@ -91,10 +99,7 @@ _Bed occupied property, Values: true, false_
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Bed, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
 
 Argument | Type | Description  
 --- | --- | --- 

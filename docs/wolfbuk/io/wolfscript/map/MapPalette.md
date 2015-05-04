@@ -10,7 +10,7 @@ Represents the palette that map items use. <p> These fields are hee base color r
 
 Method | Type   
 --- | :--- 
-static function __resizeImage__(image) <br> _resizeImage method_ | `BufferedImage`
+static function __resizeImage__(image) <br> _Resize an image to 128x128._ | `BufferedImage`
 static final var __TRANSPARENT__ <br> _TRANSPARENT field_ | `byte`
 static final var __LIGHT__ <br> _LIGHT field_ | `byte`
 static final var __LIGHT__ <br> _LIGHT field_ | `byte`
@@ -93,7 +93,7 @@ Returns | Description
 
 ##### <a id='resizeimage'></a>public static function __resizeImage__(image)
 
-_resizeImage method_
+_Resize an image to 128x128._
 
 Argument | Type | Description  
 --- | --- | --- 

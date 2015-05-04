@@ -11,8 +11,8 @@ Thrown when an unhandled exception occurs during the execution of a Command
 
 Method | Type   
 --- | :--- 
-new __CommandException__() <br> _Creates a new instance of <code>CommandException</code> without detail_ | _constructor_
-new __CommandException__(msg) <br> _Constructs an instance of <code>CommandException</code> with the_ | _constructor_
+new __CommandException__() <br> _CommandException constructor_ | _constructor_
+new __CommandException__(msg) <br> _CommandException constructor_ | _constructor_
 new __CommandException__(msg, cause) <br> _CommandException constructor_ | _constructor_
 
 
@@ -23,16 +23,16 @@ new __CommandException__(msg, cause) <br> _CommandException constructor_ | _cons
 
 ##### <a id='commandexception'></a>new __CommandException__() 
 
-_Creates a new instance of <code>CommandException</code> without detail message._
+_CommandException constructor_
 
 
 ##### <a id='commandexception'></a>new __CommandException__(msg) 
 
-_Constructs an instance of <code>CommandException</code> with the specified detail message._
+_CommandException constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-msg | `String` | the detail message.
+msg | `String` | msg argument
 
 ##### <a id='commandexception'></a>new __CommandException__(msg, cause) 
 

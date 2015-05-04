@@ -15,7 +15,7 @@ new __Tree__() <br> _Tree constructor_ | _constructor_
 new __Tree__(species) <br> _Tree constructor_ | _constructor_
 new __Tree__(species, dir) <br> _Tree constructor_ | _constructor_
 new __Tree__(Material) <br> _Tree constructor_ | _constructor_
-  property __Direction__ <br> _Get: Get direction of the log<br>Set: Set direction of the log_ | [`BlockFace`](../block/BlockFace.md)
+  property __Direction__ <br> _Direction property<br>Set: Set direction of the log_ | [`BlockFace`](../block/BlockFace.md)
   property __Species__ <br> _Get: Gets the current species of this tree<br>Set: Sets the species of this tree_ | [`TreeSpecies`](../TreeSpecies.md)
  function __clone__() <br> _clone method_ | [`Tree`](Tree.md)
  function __toString__() <br> _toString method_ | `String`
@@ -103,11 +103,11 @@ byte | `final` | byte argument
 
 ##### <a id='direction'></a>public   property __Direction__
 
-_Get: Get direction of the log<br>Set: Set direction of the log_
+_Direction property<br>Set: Set direction of the log_
 
-Get | Description
---- | --- 
-[`BlockFace`](../block/BlockFace.md) | one of: <ul> <li>BlockFace.TOP for upright (default) <li>BlockFace.NORTH (east-west) <li>BlockFace.WEST (north-south) <li>BlockFace.SELF (directionless) </ul>
+Get | 
+--- | 
+[`BlockFace`](../block/BlockFace.md) |
 
 Set | Type | Description  
 --- | --- | --- 

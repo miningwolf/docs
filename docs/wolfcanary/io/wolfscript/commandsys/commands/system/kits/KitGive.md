@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-/kit give
+class KitGive
 
 Method | Type   
 --- | :--- 

@@ -11,7 +11,7 @@ Reed (Sugarcane) properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _Reed age property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyAge__(block, value) <br> _Applies age to the `Cake`_ | [`Block`](../../Block.md)
 static final var __age__ <br> _Reed age property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyage'></a>public static function __applyAge__(block, value)
 
-_Reed age property, Values: 0 - 15 /
-    public static final BlockIntegerProperty age = getInstanceFor(Reed, "age");
-
-    /** Applies age to the `Cake`_
+_Applies age to the `Cake`_
 
 Argument | Type | Description  
 --- | --- | --- 

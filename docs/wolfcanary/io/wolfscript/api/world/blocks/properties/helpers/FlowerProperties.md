@@ -11,7 +11,8 @@ Flower properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyType__(block, value) <br> _Flower type property, Values: `Type` (Excludes DANDELION)_ | [`Block`](../../Block.md)
+static function __applyType__(block, value) <br> _Applies type to the `Flower`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Type`
 static final var __type__ <br> _Flower type property, Values: `Type` (Excludes DANDELION)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applytype'></a>public static function __applyType__(block, value)
 
-_Flower type property, Values: `Type` (Excludes DANDELION) /
-    public static final BlockEnumProperty type = getInstanceFor(Poppy, "type");
-
-    /** Flower types_
+_Applies type to the `Flower`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -40,6 +38,19 @@ value | `Type` | the `Type` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Type` |
 
 
 ---

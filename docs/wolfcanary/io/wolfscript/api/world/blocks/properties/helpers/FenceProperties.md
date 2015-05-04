@@ -12,7 +12,7 @@ Fence properties helper
 Method | Type   
 --- | :--- 
 static function __applyEast__(block, value) <br> _Applies whether the `Fence` is connected east or not_ | [`Block`](../../Block.md)
-static function __applyNorth__(block, value) <br> _Fence north property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyNorth__(block, value) <br> _Applies whether the `Fence` is connected north or not_ | [`Block`](../../Block.md)
 static function __applySouth__(block, value) <br> _Applies whether the `Fence` is connected south or not_ | [`Block`](../../Block.md)
 static function __applyWest__(block, value) <br> _Applies whether the `Fence` is connected west or not_ | [`Block`](../../Block.md)
 static final var __north__ <br> _Fence north property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
@@ -47,19 +47,7 @@ Returns | Description
 
 ##### <a id='applynorth'></a>public static function __applyNorth__(block, value)
 
-_Fence north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(Fence, "north");
-
-    /** Fence east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(Fence, "east");
-
-    /** Fence south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(Fence, "south");
-
-    /** Fence west property, Values: true, false /
-    public static final BlockBooleanProperty west = getInstanceFor(Fence, "west");
-
-    /** Applies whether the `Fence` is connected north or not_
+_Applies whether the `Fence` is connected north or not_
 
 Argument | Type | Description  
 --- | --- | --- 

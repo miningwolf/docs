@@ -12,7 +12,7 @@ Called when a `Player` rotates an [`Item`](../../api/inventory/Item.md) in an [`
 Method | Type   
 --- | :--- 
 new __ItemFrameRotate__(player, itemFrame) <br> _ItemFrameRotate constructor_ | _constructor_
- readonly property __CurrentRotation__ <br> _Get: Gets the current rotation of the [`Item`](../../api/inventory/Item.md) in the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)_ | `int`
+ readonly property __CurrentRotation__ <br> _CurrentRotation property_ | `int`
 final readonly property __ItemFrame__ <br> _Get: Gets the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) being interacted with_ | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)
   property __NewRotation__ <br> _Get: Gets the new rotation that the [`Item`](../../api/inventory/Item.md) in the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) will be at.<br>Set: Sets the new rotation._ | `int`
 final readonly property __Player__ <br> _Get: Gets the `Player` interacting with the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)_ | `Player`
@@ -53,11 +53,11 @@ itemFrame | [`ItemFrame`](../../api/entity/hanging/ItemFrame.md) | itemFrame arg
 
 ##### <a id='currentrotation'></a>public  readonly property __CurrentRotation__
 
-_Get: Gets the current rotation of the [`Item`](../../api/inventory/Item.md) in the [`ItemFrame`](../../api/entity/hanging/ItemFrame.md)<br/> This is the same as calling `ItemFrame#getItemRotation`_
+_CurrentRotation property_
 
-Get | Description
---- | --- 
-`int` | item rotation
+Get | 
+--- | 
+`int` |
 
 
 

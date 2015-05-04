@@ -145,7 +145,7 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>cancelTask</strong>(taskId) <br> <em>Calls a method on the main thread and returns a Future object. This</em></td>
+<td> function <strong>cancelTask</strong>(taskId) <br> <em>Removes task from scheduler.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -207,8 +207,8 @@
 <hr>
 <h3 id="public-methods-for-wolfscriptscheduler-wolfscriptscheduler-md-">Public Methods for <a href="WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></h3>
 <h5 id="-a-id-scheduleasyncrepeatingtask-a-public-function-__scheduleasyncrepeatingtask__-plugin-task-delay-period-"><a id='scheduleasyncrepeatingtask'></a>public  function <strong>scheduleAsyncRepeatingTask</strong>(plugin, task, delay, period)</h5>
-<p><em>Deprecated: This name is misleading, as it does not schedule &quot;a sync&quot; task, but rather, &quot;an async&quot; task</em></p>
-<p><em><b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a repeating task. This task will be executed by a thread managed by the scheduler.</em></p>
+<p><em>Deprecated</em></p>
+<p><em>scheduleAsyncRepeatingTask method</em></p>
 <table>
 <thead>
 <tr>
@@ -221,22 +221,22 @@
 <tr>
 <td>plugin</td>
 <td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
-<td>Plugin that owns the task</td>
+<td>plugin argument</td>
 </tr>
 <tr>
 <td>task</td>
 <td><code>Runnable</code></td>
-<td>Task to be executed</td>
+<td>task argument</td>
 </tr>
 <tr>
 <td>delay</td>
 <td><code>long</code></td>
-<td>Delay in server ticks before executing first repeat</td>
+<td>delay argument</td>
 </tr>
 <tr>
 <td>period</td>
 <td><code>long</code></td>
-<td>Period in server ticks of the task</td>
+<td>period argument</td>
 </tr>
 </tbody>
 </table>
@@ -244,13 +244,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>Task id number (-1 if scheduling failed)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -301,7 +300,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-canceltask-a-public-function-__canceltask__-taskid-"><a id='canceltask'></a>public  function <strong>cancelTask</strong>(taskId)</h5>
-<p><em>Calls a method on the main thread and returns a Future object. This task will be executed by the main server thread. <ul> <li>Note: The Future.get() methods must NOT be called from the main thread. <li>Note2: There is at least an average of 10ms latency until the isDone() method returns true. </ul></em></p>
+<p><em>Removes task from scheduler.</em></p>
 <table>
 <thead>
 <tr>
@@ -322,20 +321,16 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>Future Future object related to the task /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code>public <span class="hljs-variable">&lt;T&gt;</span> Future<span class="hljs-variable">&lt;T&gt;</span> callSyncMethod(Plugin plugin, Callable<span class="hljs-variable">&lt;T&gt;</span> task);
-
-/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> Removes task from scheduler.
-</code></pre><h5 id="-a-id-iscurrentlyrunning-a-public-function-__iscurrentlyrunning__-taskid-"><a id='iscurrentlyrunning'></a>public  function <strong>isCurrentlyRunning</strong>(taskId)</h5>
+<h5 id="-a-id-iscurrentlyrunning-a-public-function-__iscurrentlyrunning__-taskid-"><a id='iscurrentlyrunning'></a>public  function <strong>isCurrentlyRunning</strong>(taskId)</h5>
 <p><em>Check if the task currently running. <p> A repeating task might not be running currently, but will be running in the future. A task that has finished, and does not repeat, will not be running ever again. <p> Explicitly, a task is running if there exists a thread for it, and that thread is alive.</em></p>
 <table>
 <thead>
@@ -400,8 +395,8 @@
 </tbody>
 </table>
 <h5 id="-a-id-scheduleasyncdelayedtask-a-public-function-__scheduleasyncdelayedtask__-plugin-task-delay-"><a id='scheduleasyncdelayedtask'></a>public  function <strong>scheduleAsyncDelayedTask</strong>(plugin, task, delay)</h5>
-<p><em>Deprecated: This name is misleading, as it does not schedule &quot;a sync&quot; task, but rather, &quot;an async&quot; task</em></p>
-<p><em><b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a once off task to occur after a delay. This task will be executed by a thread managed by the scheduler.</em></p>
+<p><em>Deprecated</em></p>
+<p><em>scheduleAsyncDelayedTask method</em></p>
 <table>
 <thead>
 <tr>
@@ -414,17 +409,17 @@
 <tr>
 <td>plugin</td>
 <td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
-<td>Plugin that owns the task</td>
+<td>plugin argument</td>
 </tr>
 <tr>
 <td>task</td>
 <td><code>Runnable</code></td>
-<td>Task to be executed</td>
+<td>task argument</td>
 </tr>
 <tr>
 <td>delay</td>
 <td><code>long</code></td>
-<td>Delay in server ticks before executing task</td>
+<td>delay argument</td>
 </tr>
 </tbody>
 </table>
@@ -432,19 +427,18 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>Task id number (-1 if scheduling failed)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-scheduleasyncdelayedtask-a-public-function-__scheduleasyncdelayedtask__-plugin-task-"><a id='scheduleasyncdelayedtask'></a>public  function <strong>scheduleAsyncDelayedTask</strong>(plugin, task)</h5>
-<p><em>Deprecated: This name is misleading, as it does not schedule &quot;a sync&quot; task, but rather, &quot;an async&quot; task</em></p>
-<p><em><b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a once off task to occur as soon as possible. This task will be executed by a thread managed by the scheduler.</em></p>
+<p><em>Deprecated</em></p>
+<p><em>scheduleAsyncDelayedTask method</em></p>
 <table>
 <thead>
 <tr>
@@ -457,12 +451,12 @@
 <tr>
 <td>plugin</td>
 <td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
-<td>Plugin that owns the task</td>
+<td>plugin argument</td>
 </tr>
 <tr>
 <td>task</td>
 <td><code>Runnable</code></td>
-<td>Task to be executed</td>
+<td>task argument</td>
 </tr>
 </tbody>
 </table>
@@ -470,13 +464,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>int</code></td>
-<td>Task id number (-1 if scheduling failed)</td>
+<td></td>
 </tr>
 </tbody>
 </table>

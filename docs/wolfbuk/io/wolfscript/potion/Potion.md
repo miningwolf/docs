@@ -18,7 +18,7 @@ new __Potion__(name) <br> _Create a potion with a specific name._ | _constructor
   property __Level__ <br> _Get: Returns the level of this potion.<br>Set: Sets the level of this potion._ | `int`
 static readonly property __Brewer__ <br> _Get: Returns an instance of [`PotionBrewer`](PotionBrewer.md)._ | [`PotionBrewer`](PotionBrewer.md)
  readonly property __DamageBit__ <br> _DamageBit property_ | `int`
- writeonly property __HasExtendedDuration__ <br> _Set: Set whether this potion has extended duration. This will cause the_ | `void`
+ writeonly property __HasExtendedDuration__ <br> _HasExtendedDuration property_ | `void`
   property __Type__ <br> _Get: Returns the [`PotionType`](PotionType.md) of this potion.<br>Set: Sets the [`PotionType`](PotionType.md) of this potion._ | [`PotionType`](PotionType.md)
 static writeonly property __PotionBrewer__ <br> _Set: Sets the current instance of [`PotionBrewer`](PotionBrewer.md). Generally not to be_ | `void`
  function __apply__(to) <br> _Applies the effects of this potion to the given `ItemStack`. The_ | `void`
@@ -193,7 +193,7 @@ Get |
 
 ##### <a id='hasextendedduration'></a>public  writeonly property __HasExtendedDuration__
 
-_Set: Set whether this potion has extended duration. This will cause the potion to have roughly 8/3 more duration than a regular potion._
+_HasExtendedDuration property_
 
 Get | 
 --- | 
@@ -201,7 +201,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-isExtended | `boolean` | Whether the potion should have extended duration
+isExtended | `boolean` | isExtended argument
 
 
 ##### <a id='tier'></a>public   property __Tier__

@@ -217,7 +217,7 @@ Extends <code>ItemHelper</code></p>
 <td style="text-align:left"><code>SkullType</code></td>
 </tr>
 <tr>
-<td>static function <strong>hasOwner</strong>(skull) <br> <em>Skeleton Skull</em></td>
+<td>static function <strong>hasOwner</strong>(skull) <br> <em>Checks if the Skull has a owner</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -225,11 +225,11 @@ Extends <code>ItemHelper</code></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>setOwner</strong>(skull, ownerUUID, ownerName) <br> <em>Sets the owner of the skull.</em></td>
+<td>static function <strong>setOwner</strong>(skull, ownerUUID, ownerName) <br> <em>setOwner method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>setOwner</strong>(skull, owner) <br> <em>Sets the owner of the skull.</em></td>
+<td>static function <strong>setOwner</strong>(skull, owner) <br> <em>setOwner method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -333,25 +333,8 @@ Extends <code>ItemHelper</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-hasowner-a-public-static-function-__hasowner__-skull-"><a id='hasowner'></a>public static function <strong>hasOwner</strong>(skull)</h5>
-<p>_Skeleton Skull /
-        SKELETON,
-        //
-        /<strong> Wither Skull /
-        WITHER,
-        //
-        /</strong> Zombie Skull /
-        ZOMBIE,
-        //
-        /<strong> Player Skull /
-        PLAYER,
-        //
-        /</strong> Creeper Skull /
-        CREEPER,
-        //
-        ;
-    }</p>
-<pre><code><span class="hljs-comment">/** Checks if the Skull has a owner_</span>
-</code></pre><table>
+<p><em>Checks if the Skull has a owner</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -418,7 +401,7 @@ Extends <code>ItemHelper</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-setowner-a-public-static-function-__setowner__-skull-owneruuid-ownername-"><a id='setowner'></a>public static function <strong>setOwner</strong>(skull, ownerUUID, ownerName)</h5>
-<p><em>Sets the owner of the skull.<br/></em></p>
+<p><em>setOwner method</em></p>
 <table>
 <thead>
 <tr>
@@ -431,17 +414,17 @@ Extends <code>ItemHelper</code></p>
 <tr>
 <td>skull</td>
 <td><a href="../Item.html"><code>Item</code></a></td>
-<td>the skull <a href="../Item.html"><code>Item</code></a></td>
+<td>skull argument</td>
 </tr>
 <tr>
 <td>ownerUUID</td>
 <td><code>UUID</code></td>
-<td>the <code>UUID</code> of the Owner (can be null)</td>
+<td>ownerUUID argument</td>
 </tr>
 <tr>
 <td>ownerName</td>
 <td><code>String</code></td>
-<td>the name of the owner</td>
+<td>ownerName argument</td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +442,7 @@ Extends <code>ItemHelper</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-setowner-a-public-static-function-__setowner__-skull-owner-"><a id='setowner'></a>public static function <strong>setOwner</strong>(skull, owner)</h5>
-<p><em>Sets the owner of the skull.<br/></em></p>
+<p><em>setOwner method</em></p>
 <table>
 <thead>
 <tr>
@@ -472,12 +455,12 @@ Extends <code>ItemHelper</code></p>
 <tr>
 <td>skull</td>
 <td><a href="../Item.html"><code>Item</code></a></td>
-<td>the skull <a href="../Item.html"><code>Item</code></a></td>
+<td>skull argument</td>
 </tr>
 <tr>
 <td>owner</td>
 <td><code>GameProfile</code></td>
-<td>the <code>GameProfile</code> of the owner</td>
+<td>owner argument</td>
 </tr>
 </tbody>
 </table>

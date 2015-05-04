@@ -125,7 +125,7 @@ Implements <code>Logger</code></p>
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>WolfScript Log manager. <p/> You can get an appropriate logger for your plugin here.</p>
+<p>class Logman</p>
 <table>
 <thead>
 <tr>
@@ -1897,13 +1897,8 @@ Implements <code>Logger</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-fatal-a-public-function-__fatal__-marker-msg-"><a id='fatal'></a>public  function <strong>fatal</strong>(marker, msg)</h5>
-<p>_{@inheritDoc} /
-    @Override
-    public <R> R exit(R result) {
-        return logger.exit(result);
-    }</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> {<span class="hljs-comment">@inheritDoc}_</span>
-</code></pre><table>
+<p><em>{@inheritDoc}</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -4306,19 +4301,8 @@ Implements <code>Logger</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-trace-a-public-function-__trace__-marker-msg-"><a id='trace'></a>public  function <strong>trace</strong>(marker, msg)</h5>
-<p>_{@inheritDoc} /
-    @Override
-    public <T extends Throwable> T throwing(Level level, T t) {
-        return logger.throwing(level, t);
-    }</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> {<span class="hljs-comment">@inheritDoc} /</span>
-<span class="hljs-comment">@Override</span>
-public <span class="hljs-variable">&lt;T extends Throwable&gt;</span> T throwing(T t) {
-    return logger.throwing(t);
-}
-
-/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> {<span class="hljs-comment">@inheritDoc}_</span>
-</code></pre><table>
+<p><em>{@inheritDoc}</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

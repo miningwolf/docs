@@ -92,7 +92,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/AuthorNagException.html'>AuthorNagException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/EventExecutor.html'>EventExecutor</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/plugin/Flags.html'>Flags</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidPluginException.html'>InvalidPluginException</a></li>
@@ -151,7 +150,7 @@
 </thead>
 <tbody>
 <tr>
-<td> readonly property <strong>PluginFileFilters</strong> <br> <em>Get: Loads the plugin contained in the specified file</em></td>
+<td> readonly property <strong>PluginFileFilters</strong> <br> <em>Get: Returns a list of all filename filters expected by this PluginLoader</em></td>
 <td style="text-align:left"><code>Pattern[]</code></td>
 </tr>
 <tr>
@@ -159,7 +158,7 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>enablePlugin</strong>(plugin) <br> <em>Creates and returns registered listeners for the event classes used in</em></td>
+<td> function <strong>enablePlugin</strong>(plugin) <br> <em>Enables the specified plugin</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -167,7 +166,7 @@
 <hr>
 <h3 id="public-properties-for-pluginloader-pluginloader-md-">Public Properties for <a href="PluginLoader.html"><code>PluginLoader</code></a></h3>
 <h5 id="-a-id-pluginfilefilters-a-public-readonly-property-__pluginfilefilters__"><a id='pluginfilefilters'></a>public  readonly property <strong>PluginFileFilters</strong></h5>
-<p><em>Get: Loads the plugin contained in the specified file</em></p>
+<p><em>Get: Returns a list of all filename filters expected by this PluginLoader</em></p>
 <table>
 <thead>
 <tr>
@@ -178,7 +177,7 @@
 <tbody>
 <tr>
 <td><code>Pattern[]</code></td>
-<td>Plugin that was contained in the specified file, or null if unsuccessful</td>
+<td>The filters</td>
 </tr>
 </tbody>
 </table>
@@ -216,7 +215,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-enableplugin-a-public-function-__enableplugin__-plugin-"><a id='enableplugin'></a>public  function <strong>enablePlugin</strong>(plugin)</h5>
-<p><em>Creates and returns registered listeners for the event classes used in this listener</em></p>
+<p><em>Enables the specified plugin <p> Attempting to enable a plugin that is already enabled will have no effect</em></p>
 <table>
 <thead>
 <tr>
@@ -229,7 +228,7 @@
 <tr>
 <td>plugin</td>
 <td><a href="Plugin.html"><code>Plugin</code></a></td>
-<td>The plugin to use when creating registered listeners</td>
+<td>Plugin to enable</td>
 </tr>
 </tbody>
 </table>
@@ -237,20 +236,16 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>The registered listeners. /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> Map&lt;<span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;? <span class="hljs-keyword">extends</span> <span class="hljs-title">Event</span>&gt;, <span class="hljs-title">Set</span>&lt;<span class="hljs-title">RegisteredListener</span>&gt;&gt; <span class="hljs-title">createRegisteredListeners</span>(<span class="hljs-title">Listener</span> <span class="hljs-title">listener</span>, <span class="hljs-title">Plugin</span> <span class="hljs-title">plugin</span>);</span>
-
-/** Enables the specified plugin &lt;p&gt; Attempting <span class="hljs-keyword">to</span> enable a plugin that is already enabled will have no effect
-</code></pre><hr>
+<hr>
 <h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
 
 

@@ -139,8 +139,6 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnleashEntityEvent.html'>PlayerUnleashEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnregisterChannelEvent.html'>PlayerUnregisterChannelEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerVelocityEvent.html'>PlayerVelocityEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/Result.html'>Result</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/State.html'>State</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/server/0.html' class=''>event.server</a></li> 
 <li class='divider'></li>
@@ -192,7 +190,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>This event is called whenever a player runs a command (by placing a slash at the start of their message). It is called early in the command handling process, and modifications in this event (via <code>#setMessage(String)</code>) will be shown in the behavior. <p> Many plugins will have <b>no use for this event</b>, and you should attempt to avoid using it if it is not necessary. <p> Some examples of valid uses for this event are: <ul> <li>Logging executed commands to a separate file <li>Variable substitution. For example, replacing <code>${nearbyPlayer}</code> with the name of the nearest other player, or simulating the <code>@a</code> and <code>@p</code> decorators used by Command Blocks in plugins that do not handle it. <li>Conditionally blocking commands belonging to other plugins. For example, blocking the use of the <code>/home</code> command in a combat arena. <li>Per-sender command aliases. For example, after a player runs the command <code>/calias cr gamemode creative</code>, the next time they run <code>/cr</code>, it gets replaced into <code>/gamemode creative</code>. (Global command aliases should be done by registering the alias.) </ul> <p> Examples of incorrect uses are: <ul> <li>Using this event to run command logic </ul> <p> If the event is cancelled, processing of the command will halt. <p> The state of whether or not there is a slash (<code>/</code>) at the beginning of the message should be preserved. If a slash is added or removed, unexpected behavior may result.</p>
+<p>class PlayerCommandPreprocessEvent</p>
 <table>
 <thead>
 <tr>
@@ -270,7 +268,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -332,7 +330,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <h3 id="public-properties-for-playercommandpreprocessevent-playercommandpreprocessevent-md-">Public Properties for <a href="PlayerCommandPreprocessEvent.html"><code>PlayerCommandPreprocessEvent</code></a></h3>
 <h5 id="-a-id-format-a-public-property-__format__"><a id='format'></a>public   property <strong>Format</strong></h5>
 <p><em>Deprecated: This method is provided for backward compatibility with no guarantee to the effect of modifying the format.</em></p>
-<p><em>Get: Sets the command that the player will send. <p> All commands begin with a special character; implementations do not consider the first character when executing the content.<br>Set: Sets the format to use to display this chat message</em></p>
+<p><em>Get: Gets the format to use to display this chat message<br>Set: Sets the format to use to display this chat message</em></p>
 <table>
 <thead>
 <tr>
@@ -569,18 +567,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

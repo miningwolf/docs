@@ -216,11 +216,11 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>abstract function <strong>populate</strong>(x, z) <br> <em>Is called after the large-scale generation is done to populate the world with details.</em></td>
+<td>abstract function <strong>populate</strong>(x, z) <br> <em>populate method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>abstract function <strong>provideChunk</strong>(x, z) <br> <em>Will be called when a new chunk needs to be generated.</em></td>
+<td>abstract function <strong>provideChunk</strong>(x, z) <br> <em>provideChunk method</em></td>
 <td style="text-align:left"><a href="Chunk.html"><code>Chunk</code></a></td>
 </tr>
 </tbody>
@@ -297,7 +297,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-populate-a-public-abstract-function-__populate__-x-z-"><a id='populate'></a>public abstract function <strong>populate</strong>(x, z)</h5>
-<p><em>Is called after the large-scale generation is done to populate the world with details. For instance glowstone blocks The x/z are chunk coordinates, that means right-shifted by 4</em></p>
+<p><em>populate method</em></p>
 <table>
 <thead>
 <tr>
@@ -310,12 +310,12 @@
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>the X Chunk coordinate</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>the Z Chunk coordinate</td>
+<td>z argument</td>
 </tr>
 </tbody>
 </table>
@@ -333,7 +333,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-providechunk-a-public-abstract-function-__providechunk__-x-z-"><a id='providechunk'></a>public abstract function <strong>provideChunk</strong>(x, z)</h5>
-<p><em>Will be called when a new chunk needs to be generated. The x/z are Chunk coordinates. (right-shifted by 4)</em></p>
+<p><em>provideChunk method</em></p>
 <table>
 <thead>
 <tr>
@@ -346,12 +346,12 @@
 <tr>
 <td>x</td>
 <td><code>int</code></td>
-<td>the X Chunk coordinate</td>
+<td>x argument</td>
 </tr>
 <tr>
 <td>z</td>
 <td><code>int</code></td>
-<td>the Z Chunk coordinate</td>
+<td>z argument</td>
 </tr>
 </tbody>
 </table>
@@ -359,13 +359,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="Chunk.html"><code>Chunk</code></a></td>
-<td>the provided <a href="Chunk.html"><code>Chunk</code></a></td>
+<td></td>
 </tr>
 </tbody>
 </table>

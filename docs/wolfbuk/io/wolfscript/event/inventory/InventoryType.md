@@ -12,7 +12,9 @@ Item | Type
 --- | :--- 
 CHEST: 27,"Chest"<br> _A chest inventory, with 0, 9, 18, 27, 36, 45, or 54 slots of type_ | InventoryType
 DISPENSER: 9,"Dispenser"<br> _A dispenser inventory, with 9 slots of type CONTAINER._ | InventoryType
-FURNACE: 3,"Furnace"<br> _A dropper inventory, with 9 slots of type CONTAINER._ | InventoryType
+inventory: <br> _inventory InventoryType_ | InventoryType
+9: <br> _9 InventoryType_ | InventoryType
+FURNACE: 3,"Furnace"<br> _A furnace inventory, with a RESULT slot, a CRAFTING slot, and a FUEL_ | InventoryType
 WORKBENCH: 10,"Crafting"<br> _A workbench inventory, with 9 CRAFTING slots and a RESULT slot._ | InventoryType
 CRAFTING: 5,"Crafting"<br> _A player's crafting inventory, with 4 CRAFTING slots and a RESULT slot._ | InventoryType
 ENCHANTING: 2,"Enchanting"<br> _An enchantment table inventory, with two CRAFTING slots and three_ | InventoryType

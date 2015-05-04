@@ -11,7 +11,6 @@ Is called when a liquid is about to destroy something (crops, popping off torche
 
 Method | Type   
 --- | :--- 
-new __LiquidDestroy__(block) <br> _LiquidDestroy constructor_ | _constructor_
 new __LiquidDestroy__(liquidType, toDestroy) <br> _LiquidDestroy constructor_ | _constructor_
  readonly property __Block__ <br> _Get: Get the block that would be destroyed by the liquid flow_ | [`Block`](../../api/world/blocks/Block.md)
  readonly property __LiquidType__ <br> _Get: Returns the [`BlockType`](../../api/world/blocks/BlockType.md) of the liquid._ | [`BlockType`](../../api/world/blocks/BlockType.md)
@@ -40,6 +39,7 @@ final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `S
 ### Public Constructors for [`LiquidDestroy`](LiquidDestroy.md)
 
 ##### <a id='liquiddestroy'></a>new __LiquidDestroy__(block) 
+_Deprecated_
 
 _LiquidDestroy constructor_
 

@@ -52,38 +52,38 @@ Returns | Description
 
 
 ##### <a id='addcursor'></a>public  function __addCursor__(x, y, direction, type)
-_Deprecated: Magic value_
+_Deprecated_
 
-_Add a cursor to the collection._
+_addCursor method_
 
 Argument | Type | Description  
 --- | --- | --- 
-x | `int` | The x coordinate, from -128 to 127.
-y | `int` | The y coordinate, from -128 to 127.
-direction | `byte` | The facing of the cursor, from 0 to 15.
-type | `byte` | The type (color/style) of the map cursor.
+x | `int` | x argument
+y | `int` | y argument
+direction | `byte` | direction argument
+type | `byte` | type argument
 
-Returns | Description
---- | --- 
-[`MapCursor`](MapCursor.md) | The newly added MapCursor.
+Returns | 
+--- | 
+[`MapCursor`](MapCursor.md) |
 
 
 ##### <a id='addcursor'></a>public  function __addCursor__(x, y, direction, type, visible)
-_Deprecated: Magic value_
+_Deprecated_
 
-_Add a cursor to the collection._
+_addCursor method_
 
 Argument | Type | Description  
 --- | --- | --- 
-x | `int` | The x coordinate, from -128 to 127.
-y | `int` | The y coordinate, from -128 to 127.
-direction | `byte` | The facing of the cursor, from 0 to 15.
-type | `byte` | The type (color/style) of the map cursor.
-visible | `boolean` | Whether the cursor is visible.
+x | `int` | x argument
+y | `int` | y argument
+direction | `byte` | direction argument
+type | `byte` | type argument
+visible | `boolean` | visible argument
 
-Returns | Description
---- | --- 
-[`MapCursor`](MapCursor.md) | The newly added MapCursor.
+Returns | 
+--- | 
+[`MapCursor`](MapCursor.md) |
 
 
 ##### <a id='getcursor'></a>public  function __getCursor__(index)

@@ -21,7 +21,7 @@ static readonly property __HandlerList__ <br> _HandlerList property_ | [`Handler
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  writeonly property __Signing__ <br> _Set: Sets whether or not the book is being signed. If a book is signed the_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
- function __isSigning__() <br> _Sets the book meta that will actually be added to the book._ | `boolean`
+ function __isSigning__() <br> _Gets whether or not the book is being signed. If a book is signed the_ | `boolean`
  |
 __Inherited items from [`PlayerEvent`](PlayerEvent.md)__ |
 new __PlayerEvent__(Player) <br> _PlayerEvent constructor_ | _constructor_
@@ -32,7 +32,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -151,7 +151,7 @@ Returns |
 
 ##### <a id='issigning'></a>public  function __isSigning__()
 
-_Sets the book meta that will actually be added to the book._
+_Gets whether or not the book is being signed. If a book is signed the Material changes from BOOK_AND_QUILL to WRITTEN_BOOK._
 
 Returns | Description
 --- | --- 
@@ -229,11 +229,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

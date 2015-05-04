@@ -82,7 +82,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
-<li><a href='../../../../wolfbuk/io/wolfscript/map/CharacterSprite.html'>CharacterSprite</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCanvas.html'>MapCanvas</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursor.html'>MapCursor</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursorCollection.html'>MapCursorCollection</a></li>
@@ -91,8 +90,6 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapRenderer.html'>MapRenderer</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MapView.html'>MapView</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/map/MinecraftFont.html'>MinecraftFont</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/map/Scale.html'>Scale</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/map/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
 <li class='divider'></li>
@@ -136,6 +133,10 @@
 </thead>
 <tbody>
 <tr>
+<td>new <strong>CharacterSprite</strong>(width, height) <br> <em>CharacterSprite constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
 <td> readonly property <strong>Height</strong> <br> <em>Get: Get the height of this font.</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
@@ -148,7 +149,7 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td> function <strong>get</strong>(row, col) <br> <em>Represents the graphics for a single character in a MapFont.</em></td>
+<td> function <strong>get</strong>(row, col) <br> <em>Get the value of a pixel of the character.</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -166,6 +167,31 @@
 <tr>
 <td> function <strong>setChar</strong>(ch, sprite) <br> <em>Set the sprite for a given character.</em></td>
 <td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-mapfont-mapfont-md-">Public Constructors for <a href="MapFont.html"><code>MapFont</code></a></h3>
+<h5 id="-a-id-charactersprite-a-new-__charactersprite__-width-height-"><a id='charactersprite'></a>new <strong>CharacterSprite</strong>(width, height)</h5>
+<p><em>CharacterSprite constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td><code>int</code></td>
+<td>width argument</td>
+</tr>
+<tr>
+<td>height</td>
+<td><code>int</code></td>
+<td>height argument</td>
 </tr>
 </tbody>
 </table>
@@ -222,24 +248,8 @@
 <hr>
 <h3 id="public-methods-for-mapfont-mapfont-md-">Public Methods for <a href="MapFont.html"><code>MapFont</code></a></h3>
 <h5 id="-a-id-get-a-public-function-__get__-row-col-"><a id='get'></a>public  function <strong>get</strong>(row, col)</h5>
-<p>_Represents the graphics for a single character in a MapFont. /
-    public static class CharacterSprite {</p>
-<pre><code>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> <span class="hljs-variable">width</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> <span class="hljs-variable">height</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">boolean</span>[] data;
-
-    <span class="hljs-keyword">public</span> CharacterSprite(<span class="hljs-built_in">int</span> <span class="hljs-variable">width</span>, <span class="hljs-built_in">int</span> <span class="hljs-variable">height</span>, <span class="hljs-built_in">boolean</span>[] data) {
-        <span class="hljs-keyword">this</span>.<span class="hljs-variable">width</span> = <span class="hljs-variable">width</span>;
-        <span class="hljs-keyword">this</span>.<span class="hljs-variable">height</span> = <span class="hljs-variable">height</span>;
-        <span class="hljs-keyword">this</span>.data = data;
-
-        <span class="hljs-keyword">if</span> (data.length != <span class="hljs-variable">width</span> <span class="hljs-variable">height</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"size of data does not match dimensions"</span>);
-        }
-    }
-
-    <span class="hljs-comment">/** Get the value of a pixel of the character._</span>
-</code></pre><table>
+<p><em>Get the value of a pixel of the character.</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

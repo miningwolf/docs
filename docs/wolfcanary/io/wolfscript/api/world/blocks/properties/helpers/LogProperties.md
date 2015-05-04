@@ -8,18 +8,19 @@
 
 ### Class Overview
 
-Log properties helper<p/> NOTE: There are potentially 2 different axis properties for Log
+class LogProperties
 
 Method | Type   
 --- | :--- 
-static function __applyAxis__(block, value) <br> _Log axis property, Values: `Axis`_ | [`Block`](../../Block.md)
+static function __applyAxis__(block, value) <br> _Applies axis to the `Log`_ | [`Block`](../../Block.md)
 static function __applyVariant__(block, value) <br> _Applies variant to the `Log`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Axis`
 static final var __axis__ <br> _Log axis property, Values: `Axis`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
-static final var __variantOld__ <br> _(Old) Log variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
-static final var __variantNew__ <br> _(New) Log variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+static final var __variantOld__ <br> _variantOld field_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+static final var __variantNew__ <br> _variantNew field_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`RotatedPillarProperties`](RotatedPillarProperties.md)__ |
-static function __applyAxis__(block, value) <br> _Rotated Pillar axis property, Values: `Axis`_ | [`Block`](../../Block.md)
+static function __applyAxis__(block, value) <br> _Applies axis to the {@code Rotated Pillar}_ | [`Block`](../../Block.md)
 static final var __axis__ <br> _Rotated Pillar axis property, Values: `Axis`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -37,16 +38,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyaxis'></a>public static function __applyAxis__(block, value)
 
-_Log axis property, Values: `Axis` /
-    public static final BlockEnumProperty axis = getInstanceFor(OakLog, "axis");
-
-    /** (Old) Log variant property, Values: `Variant`<br/> Applies to:<br/> <ul>Oak</ul> <ul>Spruce</ul> <ul>Birch</ul> <ul>Jungle</ul> /
-    public static final BlockEnumProperty variantOld = getInstanceFor(OakLog, "variant");
-
-    /** (New) Log variant property, Values: `Variant`<br/> Applies to:<br/> <ul>Acacia</ul> <ul>Dark Oak</ul> /
-    public static final BlockEnumProperty variantNew = getInstanceFor(AcaciaLog, "variant");
-
-    /** Log Axis_
+_Applies axis to the `Log`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -72,6 +64,19 @@ Returns | Description
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Axis` |
+
+
 ---
 
 ### Public Fields for [`LogProperties`](LogProperties.md)
@@ -85,14 +90,14 @@ _Log axis property, Values: `Axis`_
 
 ##### <a id='variantold'></a>public static final var __variantOld__
 
-_(Old) Log variant property, Values: `Variant`<br/> Applies to:<br/> <ul>Oak</ul> <ul>Spruce</ul> <ul>Birch</ul> <ul>Jungle</ul>_
+_variantOld field_
 
 >Returns
 >  [`BlockEnumProperty`](../BlockEnumProperty.md)
 
 ##### <a id='variantnew'></a>public static final var __variantNew__
 
-_(New) Log variant property, Values: `Variant`<br/> Applies to:<br/> <ul>Acacia</ul> <ul>Dark Oak</ul>_
+_variantNew field_
 
 >Returns
 >  [`BlockEnumProperty`](../BlockEnumProperty.md)
@@ -103,10 +108,7 @@ _(New) Log variant property, Values: `Variant`<br/> Applies to:<br/> <ul>Acacia<
 
 ##### <a id='applyaxis'></a>public static function __applyAxis__(block, value)
 
-_Rotated Pillar axis property, Values: `Axis` /
-    public static final BlockEnumProperty axis = getInstanceFor(HayBale, "axis");
-
-    /** Applies axis to the {@code Rotated Pillar}_
+_Applies axis to the {@code Rotated Pillar}_
 
 Argument | Type | Description  
 --- | --- | --- 

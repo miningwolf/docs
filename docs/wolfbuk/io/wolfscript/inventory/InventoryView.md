@@ -10,17 +10,17 @@ Represents a view linking two inventories and a single player (whose inventory m
 
 Method | Type   
 --- | :--- 
-final writeonly property __Cursor__ <br> _Set: Sets the item on the cursor of one of the viewing players._ | `void`
-abstract readonly property __BottomInventory__ <br> _Get: Get the lower inventory involved in this transaction._ | [`Inventory`](Inventory.md)
-final readonly property __Cursor__ <br> _Get: Get the item on the cursor of one of the viewing players._ | `ItemStack`
-abstract readonly property __Player__ <br> _Get: Get the player viewing._ | `HumanEntity`
 final readonly property __Title__ <br> _Get: Get the title of this inventory window._ | `String`
+abstract readonly property __BottomInventory__ <br> _Get: Get the lower inventory involved in this transaction._ | [`Inventory`](Inventory.md)
+abstract readonly property __Player__ <br> _Get: Get the player viewing._ | `HumanEntity`
+final  property __Cursor__ <br> _Get: Get the item on the cursor of one of the viewing players.<br>Set: Sets the item on the cursor of one of the viewing players._ | `ItemStack`
 abstract readonly property __TopInventory__ <br> _Get: Get the upper inventory involved in this transaction._ | [`Inventory`](Inventory.md)
 abstract readonly property __Type__ <br> _Get: Determine the type of inventory involved in the transaction. This_ | [`InventoryType`](../event/inventory/InventoryType.md)
+ readonly property __Type__ <br> _Type property_ | [`InventoryType`](../event/inventory/InventoryType.md)
+ function __getItem__(slot) <br> _Gets one item in this inventory view by its raw slot ID._ | `ItemStack`
 final function __countSlots__() <br> _Check the total number of slots in this view, combining the upper and_ | `int`
 final function __close__() <br> _Closes the inventory view._ | `void`
 final function __convertSlot__(rawSlot) <br> _Converts a raw slot ID into its local slot ID into whichever of the two_ | `int`
- function __getItem__(slot) <br> _Gets one item in this inventory view by its raw slot ID._ | `ItemStack`
  function __setItem__(slot, item) <br> _Sets one item in this inventory view by its raw slot ID._ | `void`
 final function __setProperty__(prop, value) <br> _Sets an extra property of this inventory if supported by that_ | `boolean`
 final static var __OUTSIDE__ <br> _OUTSIDE field_ | `int`
@@ -32,54 +32,13 @@ final static var __OUTSIDE__ <br> _OUTSIDE field_ | `int`
 
 ### Public Properties for [`InventoryView`](InventoryView.md)
 
-##### <a id='cursor'></a>public final writeonly property __Cursor__
+##### <a id='title'></a>public final readonly property __Title__
 
-_Set: Sets the item on the cursor of one of the viewing players._
-
-Get | 
---- | 
-`void` |
-
-Set | Type | Description  
---- | --- | --- 
-item | `ItemStack` | The item to put on the cursor, or null to remove the item on their cursor.
-
-
-##### <a id='id'></a>public  readonly property __Id__
-_Deprecated: Magic value_
-
-_Get: Represents various extra properties of certain inventory windows. /
-    public enum Property {
-        /** The progress of the down-pointing arrow in a brewing inventory. /
-        BREW_TIME(0, InventoryType.BREWING),
-        /** The progress of the right-pointing arrow in a furnace inventory. /
-        COOK_TIME(0, InventoryType.FURNACE),
-        /** The progress of the flame in a furnace inventory. /
-        BURN_TIME(1, InventoryType.FURNACE),
-        /** How many total ticks the current fuel should last. /
-        TICKS_FOR_CURRENT_FUEL(2, InventoryType.FURNACE),
-        /** In an enchanting inventory, the top button's experience level value. /
-        ENCHANT_BUTTON1(0, InventoryType.ENCHANTING),
-        /** In an enchanting inventory, the middle button's experience level value. /
-        ENCHANT_BUTTON2(1, InventoryType.ENCHANTING),
-        /** In an enchanting inventory, the bottom button's experience level value. /
-        ENCHANT_BUTTON3(2, InventoryType.ENCHANTING);
-        int id;
-        InventoryType style;
-        private Property(int id, InventoryType appliesTo) {
-            this.id = id;
-            style = appliesTo;
-        }
-
-        public InventoryType getType() {
-            return style;
-        }
-
-        /**_
+_Get: Get the title of this inventory window._
 
 Get | Description
 --- | --- 
-`int` | the id of this view
+`String` | The title.
 
 
 
@@ -93,16 +52,6 @@ Get | Description
 
 
 
-##### <a id='cursor'></a>public final readonly property __Cursor__
-
-_Get: Get the item on the cursor of one of the viewing players._
-
-Get | Description
---- | --- 
-`ItemStack` | The item on the player's cursor, or null if they aren't holding one.
-
-
-
 ##### <a id='player'></a>public abstract readonly property __Player__
 
 _Get: Get the player viewing._
@@ -113,14 +62,28 @@ Get | Description
 
 
 
-##### <a id='title'></a>public final readonly property __Title__
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
 
-_Get: Get the title of this inventory window._
+_Id property_
 
 Get | Description
 --- | --- 
-`String` | The title.
+`int` | the id of this view
 
+
+
+##### <a id='cursor'></a>public final  property __Cursor__
+
+_Get: Get the item on the cursor of one of the viewing players.<br>Set: Sets the item on the cursor of one of the viewing players._
+
+Get | Description
+--- | --- 
+`ItemStack` | The item on the player's cursor, or null if they aren't holding one.
+
+Set | Type | Description  
+--- | --- | --- 
+item | `ItemStack` | The item to put on the cursor, or null to remove the item on their cursor.
 
 
 ##### <a id='topinventory'></a>public abstract readonly property __TopInventory__
@@ -143,9 +106,32 @@ Get | Description
 
 
 
+##### <a id='type'></a>public  readonly property __Type__
+
+_Type property_
+
+Get | 
+--- | 
+[`InventoryType`](../event/inventory/InventoryType.md) |
+
+
+
 ---
 
 ### Public Methods for [`InventoryView`](InventoryView.md)
+
+##### <a id='getitem'></a>public  function __getItem__(slot)
+
+_Gets one item in this inventory view by its raw slot ID._
+
+Argument | Type | Description  
+--- | --- | --- 
+slot | `int` | The ID as returned by InventoryClickEvent.getRawSlot()
+
+Returns | Description
+--- | --- 
+`ItemStack` | The item currently in the slot.
+
 
 ##### <a id='countslots'></a>public final function __countSlots__()
 
@@ -176,19 +162,6 @@ rawSlot | `int` | The raw slot ID.
 Returns | Description
 --- | --- 
 `int` | The converted slot ID.
-
-
-##### <a id='getitem'></a>public  function __getItem__(slot)
-
-_Gets one item in this inventory view by its raw slot ID._
-
-Argument | Type | Description  
---- | --- | --- 
-slot | `int` | The ID as returned by InventoryClickEvent.getRawSlot()
-
-Returns | Description
---- | --- 
-`ItemStack` | The item currently in the slot.
 
 
 ##### <a id='setitem'></a>public  function __setItem__(slot, item)

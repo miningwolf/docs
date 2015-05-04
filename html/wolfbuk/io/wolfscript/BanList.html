@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li class='active'><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -175,7 +171,7 @@
 <td style="text-align:left"><a href="BanEntry.html"><code>BanEntry</code></a></td>
 </tr>
 <tr>
-<td> function <strong>getBanEntry</strong>(target) <br> <em>Represents a ban-type that a <a href="BanList.html"><code>BanList</code></a> may track.</em></td>
+<td> function <strong>getBanEntry</strong>(target) <br> <em>Gets a <a href="BanEntry.html"><code>BanEntry</code></a> by target.</em></td>
 <td style="text-align:left"><a href="BanEntry.html"><code>BanEntry</code></a></td>
 </tr>
 <tr>
@@ -256,16 +252,8 @@
 </tbody>
 </table>
 <h5 id="-a-id-getbanentry-a-public-function-__getbanentry__-target-"><a id='getbanentry'></a>public  function <strong>getBanEntry</strong>(target)</h5>
-<p>_Represents a ban-type that a <a href="BanList.html"><code>BanList</code></a> may track. /
-    public enum Type {
-        /<strong> Banned player names /
-        NAME,
-        /</strong> Banned player IP addresses /
-        IP,
-        ;
-    }</p>
-<pre><code>/** Gets a [<span class="hljs-link_label">`BanEntry`</span>](<span class="hljs-link_url">BanEntry.md</span>) by target._
-</code></pre><table>
+<p><em>Gets a <a href="BanEntry.html"><code>BanEntry</code></a> by target.</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

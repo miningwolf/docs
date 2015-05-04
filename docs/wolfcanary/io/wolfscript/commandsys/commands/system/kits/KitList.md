@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-/kit list
+class KitList
 
 Method | Type   
 --- | :--- 

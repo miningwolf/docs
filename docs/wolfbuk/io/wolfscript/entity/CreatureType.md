@@ -65,7 +65,6 @@ Villager.class: <br> _Villager.class CreatureType_ | CreatureType
  readonly property __Name__ <br> _Name property_ | `String`
 static function __fromEntityType__(creatureType) <br> _fromEntityType method_ | [`CreatureType`](CreatureType.md)
 static function __fromName__(name) <br> _fromName method_ | [`CreatureType`](CreatureType.md)
- function __toEntityType__() <br> _toEntityType method_ | [`EntityType`](EntityType.md)
 
 
 
@@ -140,6 +139,7 @@ Returns |
 
 
 ##### <a id='toentitytype'></a>public  function __toEntityType__()
+_Deprecated_
 
 _toEntityType method_
 

@@ -13,7 +13,7 @@ Method | Type
 new __HelpManager__() <br> _HelpManager constructor_ | _constructor_
  readonly property __EntriesPerPage__ <br> _Get: Get the maximum number of entries in one page_ | `int`
  function __getRawHelp__(caller) <br> _Returns all help nodes that the player has access too._ | `List<HelpNode>`
- function __getRawHelp__(command) <br> _Get the HelpNode for the given command._ | [`HelpNode`](HelpNode.md)
+ function __getRawHelp__(command) <br> _getRawHelp method_ | [`HelpNode`](HelpNode.md)
  function __getHelp__(caller, commandName) <br> _Displays the given commands description and toolTip,_ | `void`
  function __getHelp__(player, page) <br> _Searches through available help nodes for the given array of words_ | `List<String>`
  function __getHelp__(player, page) <br> _Returns a formatted list (each entry is one line) of commands_ | `List<String>`
@@ -67,15 +67,15 @@ Returns |
 
 ##### <a id='getrawhelp'></a>public  function __getRawHelp__(command)
 
-_Get the HelpNode for the given command. Will return <code>null</code> if command is not registered_
+_getRawHelp method_
 
 Argument | Type | Description  
 --- | --- | --- 
 command | `String` | command argument
 
-Returns | Description
---- | --- 
-[`HelpNode`](HelpNode.md) | HelpNode || null
+Returns | 
+--- | 
+[`HelpNode`](HelpNode.md) |
 
 
 ##### <a id='gethelp'></a>public  function __getHelp__(caller, commandName)

@@ -83,7 +83,6 @@
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreatureSpawnEvent.html'>CreatureSpawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreeperPowerEvent.html'>CreeperPowerEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/DamageCause.html'>DamageCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityBreakDoorEvent.html'>EntityBreakDoorEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityChangeBlockEvent.html'>EntityChangeBlockEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCombustByBlockEvent.html'>EntityCombustByBlockEvent</a></li>
@@ -116,15 +115,11 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerDeathEvent.html'>PlayerDeathEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerLeashEntityEvent.html'>PlayerLeashEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PotionSplashEvent.html'>PotionSplashEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PowerCause.html'>PowerCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileHitEvent.html'>ProjectileHitEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileLaunchEvent.html'>ProjectileLaunchEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/RegainReason.html'>RegainReason</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepDyeWoolEvent.html'>SheepDyeWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepRegrowWoolEvent.html'>SheepRegrowWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SlimeSplitEvent.html'>SlimeSplitEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SpawnReason.html'>SpawnReason</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/TargetReason.html'>TargetReason</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/hanging/0.html' class=''>event.hanging</a></li> 
 <li class='divider'></li>
@@ -194,15 +189,11 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>new <strong>EntityRegainHealthEvent</strong>(Entity, int, RegainReason) <br> <em>EntityRegainHealthEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
 <td>new <strong>EntityRegainHealthEvent</strong>(Entity, double, RegainReason) <br> <em>EntityRegainHealthEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>  property <strong>Amount</strong> <br> <em>Get: Gets the amount of regained health<br>Set: This method exists for legacy reasons to provide backwards</em></td>
+<td>  property <strong>Amount</strong> <br> <em>Get: Gets the amount of regained health<br>Set: Sets the amount of regained health</em></td>
 <td style="text-align:left"><code>double</code></td>
 </tr>
 <tr>
@@ -214,8 +205,16 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>RegainReason</strong> <br> <em>Get: This method exists for legacy reasons to provide backwards</em></td>
+<td> readonly property <strong>RegainReason</strong> <br> <em>Get: Gets the reason for why the entity is regaining health</em></td>
 <td style="text-align:left"><code>RegainReason</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Cancelled</strong> <br> <em>Cancelled property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>isCancelled</strong>() <br> <em>isCancelled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td></td>
@@ -262,7 +261,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -270,6 +269,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-constructors-for-entityregainhealthevent-entityregainhealthevent-md-">Public Constructors for <a href="EntityRegainHealthEvent.html"><code>EntityRegainHealthEvent</code></a></h3>
 <h5 id="-a-id-entityregainhealthevent-a-new-__entityregainhealthevent__-entity-int-regainreason-"><a id='entityregainhealthevent'></a>new <strong>EntityRegainHealthEvent</strong>(Entity, int, RegainReason)</h5>
+<p><em>Deprecated</em></p>
 <p><em>EntityRegainHealthEvent constructor</em></p>
 <table>
 <thead>
@@ -328,7 +328,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-properties-for-entityregainhealthevent-entityregainhealthevent-md-">Public Properties for <a href="EntityRegainHealthEvent.html"><code>EntityRegainHealthEvent</code></a></h3>
 <h5 id="-a-id-amount-a-public-property-__amount__"><a id='amount'></a>public   property <strong>Amount</strong></h5>
-<p><em>Get: Gets the amount of regained health<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.</em></p>
+<p><em>Get: Gets the amount of regained health<br>Set: Sets the amount of regained health</em></p>
 <table>
 <thead>
 <tr>
@@ -339,17 +339,11 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tbody>
 <tr>
 <td><code>double</code></td>
-<td>the (rounded) amount regained /</td>
+<td>The amount of health regained</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-annotation">@Deprecated</span>
-<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">_INVALID_getAmount</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">return</span> NumberConversions.ceil(getAmount());
-}
-
-<span class="hljs-javadoc">/** Sets the amount of regained health</span>
-</code></pre><table>
+<table>
 <thead>
 <tr>
 <th>Set</th>
@@ -396,7 +390,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-regainreason-a-public-readonly-property-__regainreason__"><a id='regainreason'></a>public  readonly property <strong>RegainReason</strong></h5>
-<p><em>Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.</em></p>
+<p><em>Get: Gets the reason for why the entity is regaining health</em></p>
 <table>
 <thead>
 <tr>
@@ -408,6 +402,54 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td><code>RegainReason</code></td>
 <td>A RegainReason detailing the reason for the entity regaining health</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-cancelled-a-public-writeonly-property-__cancelled__"><a id='cancelled'></a>public  writeonly property <strong>Cancelled</strong></h5>
+<p><em>Cancelled property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancel</td>
+<td><code>boolean</code></td>
+<td>cancel argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-entityregainhealthevent-entityregainhealthevent-md-">Public Methods for <a href="EntityRegainHealthEvent.html"><code>EntityRegainHealthEvent</code></a></h3>
+<h5 id="-a-id-iscancelled-a-public-function-__iscancelled__-"><a id='iscancelled'></a>public  function <strong>isCancelled</strong>()</h5>
+<p><em>isCancelled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -523,18 +565,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

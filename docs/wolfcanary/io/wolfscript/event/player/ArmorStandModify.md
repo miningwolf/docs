@@ -7,14 +7,14 @@
 
 ### Class Overview
 
-Called when a @{link Player} places/replaces armor in an [`ArmorStand`](../../api/entity/ArmorStand.md)
+class ArmorStandModify
 
 Method | Type   
 --- | :--- 
 new __ArmorStandModify__(armorStand, player, slotId, current, setting) <br> _ArmorStandModify constructor_ | _constructor_
  readonly property __CurrentItem__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) currently in the ArmorStand_ | [`Item`](../../api/inventory/Item.md)
  readonly property __Player__ <br> _Get: Gets the `Player` modifying the ArmorStand_ | `Player`
- readonly property __SettingItem__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) being set in the ArmorStand_ | [`Item`](../../api/inventory/Item.md)
+ readonly property __SettingItem__ <br> _SettingItem property_ | [`Item`](../../api/inventory/Item.md)
  readonly property __SlotId__ <br> _SlotId property_ | `int`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -76,11 +76,11 @@ Get | Description
 
 ##### <a id='settingitem'></a>public  readonly property __SettingItem__
 
-_Get: Gets the [`Item`](../../api/inventory/Item.md) being set in the ArmorStand_
+_SettingItem property_
 
-Get | Description
---- | --- 
-[`Item`](../../api/inventory/Item.md) | the placing/replacing [`Item`](../../api/inventory/Item.md) or `null` if removing armor from the stand
+Get | 
+--- | 
+[`Item`](../../api/inventory/Item.md) |
 
 
 

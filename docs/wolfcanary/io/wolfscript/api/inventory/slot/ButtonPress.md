@@ -31,7 +31,7 @@ RIGHT_PAINT_START: <br> _Starting Painting with Right Click_ | ButtonPress
 RIGHT_PAINT_PROGRESS: <br> _Slot passed with Right Click Paint_ | ButtonPress
 RIGHT_PAINT_END: <br> _Right Click Paint end_ | ButtonPress
 UNKNOWN: <br> _Unknown button pressed_ | ButtonPress
-static function __matchButton__(mode, pressed, slot) <br> _Left Mouse Button_ | [`ButtonPress`](ButtonPress.md)
+static function __matchButton__(mode, pressed, slot) <br> _Gets the ButtonPress as defined with [`GrabMode`](GrabMode.md), the button id, and the slot id_ | [`ButtonPress`](ButtonPress.md)
 
 
 
@@ -42,72 +42,7 @@ static function __matchButton__(mode, pressed, slot) <br> _Left Mouse Button_ | 
 
 ##### <a id='matchbutton'></a>public static function __matchButton__(mode, pressed, slot)
 
-_Left Mouse Button /
-    LEFT,
-    //
-    /** Right Mouse Button /
-    RIGHT,
-    //
-    /** Middle Mouse Button /
-    MIDDLE,
-    //
-    /** Hotbar 1 /
-    KEY_1,
-    //
-    /** Hotbar 2 /
-    KEY_2,
-    //
-    /** Hotbar 3 /
-    KEY_3,
-    //
-    /** Hotbar 4 /
-    KEY_4,
-    //
-    /** Hotbar 5 /
-    KEY_5,
-    //
-    /** Hotbar 6 /
-    KEY_6,
-    //
-    /** Hotbar 7 /
-    KEY_7,
-    //
-    /** Hotbar 8 /
-    KEY_8,
-    //
-    /** Hotbar 9 /
-    KEY_9,
-    //
-    /** Drop Key /
-    KEY_DROP,
-    //
-    /** Control + Drop key /
-    CTRL_DROP,
-    //
-    /** Starting Painting with Left Click (or Middle Click) /
-    LEFT_PAINT_START,
-    //
-    /** Slot passed with Left Click Paint (or Middle Click) /
-    LEFT_PAINT_PROGRESS,
-    //
-    /** Left Click Paint end (or Middle Click) /
-    LEFT_PAINT_END,
-    //
-    /** Starting Painting with Right Click /
-    RIGHT_PAINT_START,
-    //
-    /** Slot passed with Right Click Paint /
-    RIGHT_PAINT_PROGRESS,
-    //
-    /** Right Click Paint end /
-    RIGHT_PAINT_END,
-    //
-    /** Unknown button pressed /
-    UNKNOWN,
-    //
-    ;
-
-    /** Gets the ButtonPress as defined with [`GrabMode`](GrabMode.md), the button id, and the slot id_
+_Gets the ButtonPress as defined with [`GrabMode`](GrabMode.md), the button id, and the slot id_
 
 Argument | Type | Description  
 --- | --- | --- 

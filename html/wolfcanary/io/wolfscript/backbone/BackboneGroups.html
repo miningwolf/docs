@@ -161,7 +161,7 @@ Extends <a href="Backbone.html"><code>Backbone</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>createDefaults</strong>() <br> <em>Load and return all recorded groups</em></td>
+<td>static function <strong>createDefaults</strong>() <br> <em>Creates a set of default groups and puts them into the database</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -232,54 +232,21 @@ Extends <a href="Backbone.html"><code>Backbone</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-createdefaults-a-public-static-function-__createdefaults__-"><a id='createdefaults'></a>public static function <strong>createDefaults</strong>()</h5>
-<p><em>Load and return all recorded groups</em></p>
+<p><em>Creates a set of default groups and puts them into the database</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>An ArrayList containing all recorded groups. /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> BiMap<span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, <span class="hljs-keyword">Group</span><span class="hljs-subst">&gt;</span> loadGroups() {
-    <span class="hljs-built_in">List</span><span class="hljs-subst">&lt;</span>DataAccess<span class="hljs-subst">&gt;</span> dataList <span class="hljs-subst">=</span> <span class="hljs-literal">new</span> ArrayList<span class="hljs-subst">&lt;</span>DataAccess<span class="hljs-subst">&gt;</span>();
-    BiMap<span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, <span class="hljs-keyword">Group</span><span class="hljs-subst">&gt;</span> groups <span class="hljs-subst">=</span> HashBiMap<span class="hljs-built_in">.</span>create();
-
-    try {
-        Database<span class="hljs-built_in">.</span>get()<span class="hljs-built_in">.</span>loadAll(schema, dataList, <span class="hljs-literal">new</span> HashMap<span class="hljs-subst">&lt;</span><span class="hljs-built_in">String</span>, Object<span class="hljs-subst">&gt;</span>());
-        for (DataAccess da : dataList) {
-            GroupDataAccess <span class="hljs-built_in">data</span> <span class="hljs-subst">=</span> (GroupDataAccess)da;
-            <span class="hljs-keyword">if</span> (groups<span class="hljs-built_in">.</span>containsKey(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>name)) {
-                continue;
-            }
-            <span class="hljs-keyword">Group</span> g <span class="hljs-subst">=</span> <span class="hljs-literal">new</span> <span class="hljs-keyword">Group</span>();
-
-            g<span class="hljs-built_in">.</span>setDefaultGroup(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>isDefault);
-            g<span class="hljs-built_in">.</span>setId(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>id);
-            g<span class="hljs-built_in">.</span>setName(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>name);
-            g<span class="hljs-built_in">.</span>setWorldName(ToolBox<span class="hljs-built_in">.</span>stringToNull(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>worldName));
-            g<span class="hljs-built_in">.</span>setPrefix(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>prefix);
-            <span class="hljs-keyword">if</span> (<span class="hljs-subst">!</span><span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>isDefault <span class="hljs-subst">||</span> <span class="hljs-subst">!</span><span class="hljs-built_in">data</span><span class="hljs-built_in">.</span>name<span class="hljs-built_in">.</span><span class="hljs-keyword">equals</span>(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span><span class="hljs-keyword">parent</span>)) {
-                g<span class="hljs-built_in">.</span>setParent(loadParents(<span class="hljs-built_in">data</span><span class="hljs-built_in">.</span><span class="hljs-keyword">parent</span>, groups));
-            }
-            groups<span class="hljs-built_in">.</span>put(g<span class="hljs-built_in">.</span>getName(), g);
-        }
-    }
-    catch (DatabaseReadException e) {
-        <span class="hljs-keyword">log</span><span class="hljs-built_in">.</span>error(e<span class="hljs-built_in">.</span>getMessage(), e);
-    }
-
-    <span class="hljs-keyword">return</span> groups;
-}
-
-<span class="hljs-comment">/** Creates a set of default groups and puts them into the database</span>
-</code></pre><h5 id="-a-id-removegroup-a-public-function-__removegroup__-group-"><a id='removegroup'></a>public  function <strong>removeGroup</strong>(group)</h5>
+<h5 id="-a-id-removegroup-a-public-function-__removegroup__-group-"><a id='removegroup'></a>public  function <strong>removeGroup</strong>(group)</h5>
 <p><em>Remove a group from the data source</em></p>
 <table>
 <thead>

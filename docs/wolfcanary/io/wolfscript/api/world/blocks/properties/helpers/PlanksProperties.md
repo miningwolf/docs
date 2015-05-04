@@ -12,7 +12,7 @@ Planks properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyVariant__(block, value) <br> _Planks variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies variant to the `Planks`_ | [`Block`](../../Block.md)
 static final var __variant__ <br> _Planks variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -28,10 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_Planks variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(OakPlanks, "variant");
-
-    /** Applies variant to the `Planks`_
+_Applies variant to the `Planks`_
 
 Argument | Type | Description  
 --- | --- | --- 

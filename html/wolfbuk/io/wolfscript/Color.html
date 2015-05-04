@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -168,7 +164,7 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 </thead>
 <tbody>
 <tr>
-<td>  property <strong>Red</strong> <br> <em>Get: White, or (0xFF,0xFF,0xFF) in (R,G,B)<br>Set: Creates a new Color object with specified component</em></td>
+<td>  property <strong>Red</strong> <br> <em>Get: Gets the red component<br>Set: Creates a new Color object with specified component</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -284,62 +280,8 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 <hr>
 <h3 id="public-properties-for-color-color-md-">Public Properties for <a href="Color.html"><code>Color</code></a></h3>
 <h5 id="-a-id-red-a-public-property-__red__"><a id='red'></a>public   property <strong>Red</strong></h5>
-<p>_Get: White, or (0xFF,0xFF,0xFF) in (R,G,B) /
-    public static final Color WHITE = fromRGB(0xFFFFFF);</p>
-<pre><code>/** Silver, <span class="hljs-keyword">or</span> (<span class="hljs-number">0xC0</span>,<span class="hljs-number">0xC0</span>,<span class="hljs-number">0xC0</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color SILVER = fromRGB(<span class="hljs-number">0xC0C0C0</span>);
-
-/** Gray, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x80</span>,<span class="hljs-number">0x80</span>,<span class="hljs-number">0x80</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color GRAY = fromRGB(<span class="hljs-number">0x808080</span>);
-
-/** Black, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color BLACK = fromRGB(<span class="hljs-number">0x000000</span>);
-
-/** Red, <span class="hljs-keyword">or</span> (<span class="hljs-number">0xFF</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color RED = fromRGB(<span class="hljs-number">0xFF0000</span>);
-
-/** Maroon, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x80</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color MAROON = fromRGB(<span class="hljs-number">0x800000</span>);
-
-/** Yellow, <span class="hljs-keyword">or</span> (<span class="hljs-number">0xFF</span>,<span class="hljs-number">0xFF</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color YELLOW = fromRGB(<span class="hljs-number">0xFFFF00</span>);
-
-/** Olive, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x80</span>,<span class="hljs-number">0x80</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color OLIVE = fromRGB(<span class="hljs-number">0x808000</span>);
-
-/** Lime, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0xFF</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color LIME = fromRGB(<span class="hljs-number">0x00FF00</span>);
-
-/** Green, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0x80</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color GREEN = fromRGB(<span class="hljs-number">0x008000</span>);
-
-/** Aqua, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0xFF</span>,<span class="hljs-number">0xFF</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color AQUA = fromRGB(<span class="hljs-number">0x00FFFF</span>);
-
-/** Teal, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0x80</span>,<span class="hljs-number">0x80</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color TEAL = fromRGB(<span class="hljs-number">0x008080</span>);
-
-/** Blue, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0xFF</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color BLUE = fromRGB(<span class="hljs-number">0x0000FF</span>);
-
-/** Navy, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0x80</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color NAVY = fromRGB(<span class="hljs-number">0x000080</span>);
-
-/** Fuchsia, <span class="hljs-keyword">or</span> (<span class="hljs-number">0xFF</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0xFF</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color FUCHSIA = fromRGB(<span class="hljs-number">0xFF00FF</span>);
-
-/** Purple, <span class="hljs-keyword">or</span> (<span class="hljs-number">0x80</span>,<span class="hljs-number">0x00</span>,<span class="hljs-number">0x80</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color PURPLE = fromRGB(<span class="hljs-number">0x800080</span>);
-
-/** Orange, <span class="hljs-keyword">or</span> (<span class="hljs-number">0xFF</span>,<span class="hljs-number">0xA5</span>,<span class="hljs-number">0x00</span>) <span class="hljs-keyword">in</span> (R,G,B) /
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> final Color ORANGE = fromRGB(<span class="hljs-number">0xFFA500</span>);
-
-<span class="hljs-keyword">private</span> final <span class="hljs-built_in">byte</span> red;
-<span class="hljs-keyword">private</span> final <span class="hljs-built_in">byte</span> green;
-<span class="hljs-keyword">private</span> final <span class="hljs-built_in">byte</span> blue;
-
-/** Creates a <span class="hljs-keyword">new</span> Color <span class="hljs-built_in">object</span> <span class="hljs-keyword">from</span> a red, green, <span class="hljs-keyword">and</span> blue&lt;br&gt;<span class="hljs-keyword">Set</span>: Creates a <span class="hljs-keyword">new</span> Color <span class="hljs-built_in">object</span> <span class="hljs-keyword">with</span> specified component_
-</code></pre><table>
+<p><em>Get: Gets the red component<br>Set: Creates a new Color object with specified component</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

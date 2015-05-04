@@ -161,7 +161,7 @@ Extends <a href="../PluginBase.html"><code>PluginBase</code></a></p>
 <td style="text-align:left"><code>List&lt;Class&lt;?&gt;&gt;</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>ProvidingPlugin</strong> <br> <em>Get: This method provides fast access to the plugin that has {@link</em></td>
+<td>static readonly property <strong>ProvidingPlugin</strong> <br> <em>Get: This method provides fast access to the plugin that has provided the</em></td>
 <td style="text-align:left"><a href="JavaPlugin.html"><code>JavaPlugin</code></a></td>
 </tr>
 <tr>
@@ -359,7 +359,7 @@ Extends <a href="../PluginBase.html"><code>PluginBase</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-providingplugin-a-public-static-readonly-property-__providingplugin__"><a id='providingplugin'></a>public static readonly property <strong>ProvidingPlugin</strong></h5>
-<p><em>Get: This method provides fast access to the plugin that has {@link #getProvidingPlugin(Class) provided} the given plugin class, which is usually the plugin that implemented it. <p> An exception to this would be if plugin&#39;s jar that contained the class does not extend the class, where the intended plugin would have resided in a different jar / classloader.</em></p>
+<p><em>Get: This method provides fast access to the plugin that has provided the given class.</em></p>
 <table>
 <thead>
 <tr>
@@ -370,7 +370,7 @@ Extends <a href="../PluginBase.html"><code>PluginBase</code></a></p>
 <tbody>
 <tr>
 <td><a href="JavaPlugin.html"><code>JavaPlugin</code></a></td>
-<td>the plugin that provides and implements said class</td>
+<td>the plugin that provided the class</td>
 </tr>
 </tbody>
 </table>

@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -171,7 +167,7 @@
 <td style="text-align:left">EntityEffect</td>
 </tr>
 <tr>
-<td>DEATH: 3<br> <em>When a mob dies.</em></td>
+<td>DEATH: 3<br> <em>DEATH EntityEffect</em></td>
 <td style="text-align:left">EntityEffect</td>
 </tr>
 <tr>
@@ -224,53 +220,8 @@
 <h3 id="public-properties-for-entityeffect-entityeffect-md-">Public Properties for <a href="EntityEffect.html"><code>EntityEffect</code></a></h3>
 <h5 id="-a-id-data-a-public-readonly-property-__data__"><a id='data'></a>public  readonly property <strong>Data</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p>_Get: When mobs get hurt. /
-    HURT(2),</p>
-<pre><code>/** When <span class="hljs-literal">a</span> mob dies. &lt;p&gt; &lt;b&gt;This will cause client-glitches!&lt;/b&gt; /
-DEATH(<span class="hljs-number">3</span>),
-
-/** The smoke when taming <span class="hljs-literal">a</span> wolf fails. &lt;p&gt; Without client-mods this will be ignored <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> wolf. /
-WOLF_SMOKE(<span class="hljs-number">6</span>),
-
-/** The hearts when taming <span class="hljs-literal">a</span> wolf succeeds. &lt;p&gt; Without client-mods this will be ignored <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> wolf. /
-WOLF_HEARTS(<span class="hljs-number">7</span>),
-
-/** When <span class="hljs-literal">a</span> wolf shakes (after being wet). &lt;p&gt; Without client-mods this will be ignored <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> wolf. /
-WOLF_SHAKE(<span class="hljs-number">8</span>),
-
-/** When <span class="hljs-literal">a</span> sheep eats <span class="hljs-literal">a</span> LONG_GRASS block. /
-SHEEP_EAT(<span class="hljs-number">10</span>),
-
-/** When an Iron Golem gives <span class="hljs-literal">a</span> rose. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> an iron golem. /
-IRON_GOLEM_ROSE(<span class="hljs-number">11</span>),
-
-/** Hearts from <span class="hljs-literal">a</span> villager. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> villager. /
-VILLAGER_HEART(<span class="hljs-number">12</span>),
-
-/** When <span class="hljs-literal">a</span> villager is angry. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> villager. /
-VILLAGER_ANGRY(<span class="hljs-number">13</span>),
-
-/** Happy particles from <span class="hljs-literal">a</span> villager. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> villager. /
-VILLAGER_HAPPY(<span class="hljs-number">14</span>),
-
-/** Magic particles from <span class="hljs-literal">a</span> witch. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> witch. /
-WITCH_MAGIC(<span class="hljs-number">15</span>),
-
-/** When <span class="hljs-literal">a</span> zombie transforms into <span class="hljs-literal">a</span> villager by shaking violently. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> zombie. /
-ZOMBIE_TRANSFORM(<span class="hljs-number">16</span>),
-
-/** When <span class="hljs-literal">a</span> firework explodes. &lt;p&gt; This will <span class="hljs-literal">not</span> play an effect <span class="hljs-keyword">if</span> the entity is <span class="hljs-literal">not</span> <span class="hljs-literal">a</span> firework. /
-FIREWORK_EXPLODE(<span class="hljs-number">17</span>)<span class="hljs-comment">;</span>
-
-private final byte data<span class="hljs-comment">;</span>
-private final static Map&lt;Byte, EntityEffect&gt; BY_DATA = Maps.newHashMap()<span class="hljs-comment">;</span>
-
-EntityEffect(final int data) {
-    this.data = (byte) data<span class="hljs-comment">;</span>
-}
-
-/** Gets the data value of this EntityEffect_
-</code></pre><table>
+<p><em>Get: Gets the data value of this EntityEffect</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

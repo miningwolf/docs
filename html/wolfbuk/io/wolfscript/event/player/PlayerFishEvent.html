@@ -139,8 +139,6 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnleashEntityEvent.html'>PlayerUnleashEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnregisterChannelEvent.html'>PlayerUnregisterChannelEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerVelocityEvent.html'>PlayerVelocityEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/Result.html'>Result</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/State.html'>State</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/server/0.html' class=''>event.server</a></li> 
 <li class='divider'></li>
@@ -222,7 +220,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Hook</strong> <br> <em>Get: Gets the fishing hook.</em></td>
+<td> readonly property <strong>Hook</strong> <br> <em>Hook property</em></td>
 <td style="text-align:left"><a href="../../entity/Fish.html"><code>Fish</code></a></td>
 </tr>
 <tr>
@@ -278,7 +276,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -428,18 +426,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-hook-a-public-readonly-property-__hook__"><a id='hook'></a>public  readonly property <strong>Hook</strong></h5>
-<p><em>Get: Gets the fishing hook.</em></p>
+<p><em>Hook property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../../entity/Fish.html"><code>Fish</code></a></td>
-<td>Fish the entity representing the fishing hook/bobber.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -603,18 +600,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

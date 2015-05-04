@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li class='active'><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -275,7 +271,7 @@
 <td style="text-align:left">ChatColor</td>
 </tr>
 <tr>
-<td> readonly property <strong>Char</strong> <br> <em>Get: The special character which prefixes all chat colour codes. Use this if</em></td>
+<td> readonly property <strong>Char</strong> <br> <em>Get: Gets the char value associated with this color</em></td>
 <td style="text-align:left"><code>char</code></td>
 </tr>
 <tr>
@@ -311,7 +307,7 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>static final var <strong>COLOR</strong> <br> <em>Represents black</em></td>
+<td>static final var <strong>COLOR</strong> <br> <em>The special character which prefixes all chat colour codes. Use this if</em></td>
 <td style="text-align:left"><code>char</code></td>
 </tr>
 </tbody>
@@ -319,29 +315,8 @@
 <hr>
 <h3 id="public-properties-for-chatcolor-chatcolor-md-">Public Properties for <a href="ChatColor.html"><code>ChatColor</code></a></h3>
 <h5 id="-a-id-char-a-public-readonly-property-__char__"><a id='char'></a>public  readonly property <strong>Char</strong></h5>
-<p>_Get: The special character which prefixes all chat colour codes. Use this if you need to dynamically convert colour codes from your custom format. /
-    public static final char COLOR_CHAR = &#39;\u00A7&#39;;
-    private static final Pattern STRIP_COLOR_PATTERN = Pattern.compile(&quot;(?i)&quot; + String.valueOf(COLOR_CHAR) + &quot;[0-9A-FK-OR]&quot;);</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> intCode;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">char</span> code;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">boolean</span> isFormat;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">String</span> toString;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Integer, ChatColor&gt; BY_ID = Maps.newHashMap();
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Character, ChatColor&gt; BY_CHAR = Maps.newHashMap();
-
-<span class="hljs-keyword">private</span> ChatColor(<span class="hljs-built_in">char</span> code, <span class="hljs-built_in">int</span> intCode) {
-    <span class="hljs-keyword">this</span>(code, intCode, <span class="hljs-keyword">false</span>);
-}
-
-<span class="hljs-keyword">private</span> ChatColor(<span class="hljs-built_in">char</span> code, <span class="hljs-built_in">int</span> intCode, <span class="hljs-built_in">boolean</span> isFormat) {
-    <span class="hljs-keyword">this</span>.code = code;
-    <span class="hljs-keyword">this</span>.intCode = intCode;
-    <span class="hljs-keyword">this</span>.isFormat = isFormat;
-    <span class="hljs-keyword">this</span>.toString = <span class="hljs-keyword">new</span> <span class="hljs-keyword">String</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">char</span>[] {COLOR_CHAR, code});
-}
-
-<span class="hljs-comment">/** Gets the char value associated with this color_</span>
-</code></pre><table>
+<p><em>Get: Gets the char value associated with this color</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>
@@ -572,52 +547,8 @@
 <hr>
 <h3 id="public-fields-for-chatcolor-chatcolor-md-">Public Fields for <a href="ChatColor.html"><code>ChatColor</code></a></h3>
 <h5 id="-a-id-color-a-public-static-final-var-__color__"><a id='color'></a>public static final var <strong>COLOR</strong></h5>
-<p>_Represents black /
-    BLACK(&#39;0&#39;, 0x00),
-    /<strong> Represents dark blue /
-    DARK_BLUE(&#39;1&#39;, 0x1),
-    /</strong> Represents dark green /
-    DARK_GREEN(&#39;2&#39;, 0x2),
-    /<strong> Represents dark blue (aqua) /
-    DARK_AQUA(&#39;3&#39;, 0x3),
-    /</strong> Represents dark red /
-    DARK_RED(&#39;4&#39;, 0x4),
-    /<strong> Represents dark purple /
-    DARK_PURPLE(&#39;5&#39;, 0x5),
-    /</strong> Represents gold /
-    GOLD(&#39;6&#39;, 0x6),
-    /<strong> Represents gray /
-    GRAY(&#39;7&#39;, 0x7),
-    /</strong> Represents dark gray /
-    DARK_GRAY(&#39;8&#39;, 0x8),
-    /<strong> Represents blue /
-    BLUE(&#39;9&#39;, 0x9),
-    /</strong> Represents green /
-    GREEN(&#39;a&#39;, 0xA),
-    /<strong> Represents aqua /
-    AQUA(&#39;b&#39;, 0xB),
-    /</strong> Represents red /
-    RED(&#39;c&#39;, 0xC),
-    /<strong> Represents light purple /
-    LIGHT_PURPLE(&#39;d&#39;, 0xD),
-    /</strong> Represents yellow /
-    YELLOW(&#39;e&#39;, 0xE),
-    /<strong> Represents white /
-    WHITE(&#39;f&#39;, 0xF),
-    /</strong> Represents magical characters that change around randomly /
-    MAGIC(&#39;k&#39;, 0x10, true),
-    /<strong> Makes the text bold. /
-    BOLD(&#39;l&#39;, 0x11, true),
-    /</strong> Makes a line appear through the text. /
-    STRIKETHROUGH(&#39;m&#39;, 0x12, true),
-    /<strong> Makes the text appear underlined. /
-    UNDERLINE(&#39;n&#39;, 0x13, true),
-    /</strong> Makes the text italic. /
-    ITALIC(&#39;o&#39;, 0x14, true),
-    /** Resets all previous chat colors or formats. /
-    RESET(&#39;r&#39;, 0x15);</p>
-<pre><code>/** The special <span class="hljs-type">character</span> which prefixes <span class="hljs-built_in">all</span> chat colour codes. <span class="hljs-keyword">Use</span> this <span class="hljs-keyword">if</span> you need to dynamically convert colour codes from your custom <span class="hljs-keyword">format</span>._
-</code></pre><blockquote>
+<p><em>The special character which prefixes all chat colour codes. Use this if you need to dynamically convert colour codes from your custom format.</em></p>
+<blockquote>
 <p>Returns
  <code>char</code></p>
 </blockquote>

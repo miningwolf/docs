@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -184,11 +180,11 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td>static function <strong>builder</strong>() <br> <em>The type or shape of the effect.</em></td>
+<td>static function <strong>builder</strong>() <br> <em>Construct a firework effect.</em></td>
 <td style="text-align:left"><code>Builder</code></td>
 </tr>
 <tr>
-<td> function <strong>build</strong>() <br> <em>Add a primary color to the firework effect.</em></td>
+<td> function <strong>build</strong>() <br> <em>Create a <a href="FireworkEffect.html"><code>FireworkEffect</code></a> from the current contents of this</em></td>
 <td style="text-align:left"><a href="FireworkEffect.html"><code>FireworkEffect</code></a></td>
 </tr>
 <tr>
@@ -220,7 +216,7 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 <td style="text-align:left"><code>Builder</code></td>
 </tr>
 <tr>
-<td> function <strong>withFlicker</strong>() <br> <em>This is a builder for FireworkEffects.</em></td>
+<td> function <strong>withFlicker</strong>() <br> <em>Add a flicker to the firework effect.</em></td>
 <td style="text-align:left"><code>Builder</code></td>
 </tr>
 <tr>
@@ -298,22 +294,8 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 </tbody>
 </table>
 <h5 id="-a-id-builder-a-public-static-function-__builder__-"><a id='builder'></a>public static function <strong>builder</strong>()</h5>
-<p>_The type or shape of the effect. /
-    public enum Type {
-        /<strong> A small ball effect. /
-        BALL,
-        /</strong> A large ball effect. /
-        BALL_LARGE,
-        /<strong> A star-shaped effect. /
-        STAR,
-        /</strong> A burst effect. /
-        BURST,
-        /** A creeper-face effect. /
-        CREEPER,
-        ;
-    }</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> Construct a firework effect._
-</code></pre><table>
+<p><em>Construct a firework effect.</em></p>
+<table>
 <thead>
 <tr>
 <th>Returns</th>
@@ -328,7 +310,7 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 </tbody>
 </table>
 <h5 id="-a-id-build-a-public-function-__build__-"><a id='build'></a>public  function <strong>build</strong>()</h5>
-<p><em>Add a primary color to the firework effect.</em></p>
+<p><em>Create a <a href="FireworkEffect.html"><code>FireworkEffect</code></a> from the current contents of this builder. <p> To successfully build, you must have specified at least one color.</em></p>
 <table>
 <thead>
 <tr>
@@ -339,7 +321,7 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 <tbody>
 <tr>
 <td><a href="FireworkEffect.html"><code>FireworkEffect</code></a></td>
-<td>This object, for chaining</td>
+<td>The representative firework effect</td>
 </tr>
 </tbody>
 </table>
@@ -501,7 +483,7 @@ Implements <a href="configuration/serialization/ConfigurationSerializable.html">
 </tbody>
 </table>
 <h5 id="-a-id-withflicker-a-public-function-__withflicker__-"><a id='withflicker'></a>public  function <strong>withFlicker</strong>()</h5>
-<p><em>This is a builder for FireworkEffects.</em></p>
+<p><em>Add a flicker to the firework effect.</em></p>
 <table>
 <thead>
 <tr>

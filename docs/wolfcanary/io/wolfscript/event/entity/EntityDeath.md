@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-EntityDeath <p/> Called when a Entity (other than a `Player`) dies.<br> For `Player` death, use [`PlayerDeath`](../player/PlayerDeath.md)
+class EntityDeath
 
 Method | Type   
 --- | :--- 

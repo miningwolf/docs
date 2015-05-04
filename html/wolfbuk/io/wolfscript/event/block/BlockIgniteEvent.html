@@ -100,7 +100,6 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockRedstoneEvent.html'>BlockRedstoneEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockSpreadEvent.html'>BlockSpreadEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/EntityBlockFormEvent.html'>EntityBlockFormEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/block/IgniteCause.html'>IgniteCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/LeavesDecayEvent.html'>LeavesDecayEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/NotePlayEvent.html'>NotePlayEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/SignChangeEvent.html'>SignChangeEvent</a></li>
@@ -177,10 +176,6 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>new <strong>BlockIgniteEvent</strong>(Block, IgniteCause, Player) <br> <em>BlockIgniteEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
 <td>new <strong>BlockIgniteEvent</strong>(Block, IgniteCause, Entity) <br> <em>BlockIgniteEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
@@ -205,15 +200,15 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>IgnitingBlock</strong> <br> <em>Get: Gets the block who ignited this block</em></td>
+<td> readonly property <strong>IgnitingBlock</strong> <br> <em>IgnitingBlock property</em></td>
 <td style="text-align:left"><a href="../../block/Block.html"><code>Block</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>IgnitingEntity</strong> <br> <em>Get: Gets the entity who ignited this block</em></td>
+<td> readonly property <strong>IgnitingEntity</strong> <br> <em>IgnitingEntity property</em></td>
 <td style="text-align:left"><code>Entity</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Player</strong> <br> <em>Get: Gets the player who ignited this block</em></td>
+<td> readonly property <strong>Player</strong> <br> <em>Player property</em></td>
 <td style="text-align:left"><code>Player</code></td>
 </tr>
 <tr>
@@ -265,7 +260,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -273,6 +268,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-constructors-for-blockigniteevent-blockigniteevent-md-">Public Constructors for <a href="BlockIgniteEvent.html"><code>BlockIgniteEvent</code></a></h3>
 <h5 id="-a-id-blockigniteevent-a-new-__blockigniteevent__-block-ignitecause-player-"><a id='blockigniteevent'></a>new <strong>BlockIgniteEvent</strong>(Block, IgniteCause, Player)</h5>
+<p><em>Deprecated</em></p>
 <p><em>BlockIgniteEvent constructor</em></p>
 <table>
 <thead>
@@ -438,50 +434,47 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-ignitingblock-a-public-readonly-property-__ignitingblock__"><a id='ignitingblock'></a>public  readonly property <strong>IgnitingBlock</strong></h5>
-<p><em>Get: Gets the block who ignited this block</em></p>
+<p><em>IgnitingBlock property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../../block/Block.html"><code>Block</code></a></td>
-<td>The Block that placed/ignited the fire block, or null if not ignited by a Block.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-ignitingentity-a-public-readonly-property-__ignitingentity__"><a id='ignitingentity'></a>public  readonly property <strong>IgnitingEntity</strong></h5>
-<p><em>Get: Gets the entity who ignited this block</em></p>
+<p><em>IgnitingEntity property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Entity</code></td>
-<td>The Entity that placed/ignited the fire block, or null if not ignited by a Entity.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-player-a-public-readonly-property-__player__"><a id='player'></a>public  readonly property <strong>Player</strong></h5>
-<p><em>Get: Gets the player who ignited this block</em></p>
+<p><em>Player property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Player</code></td>
-<td>The Player that placed/ignited the fire block, or null if not ignited by a Player.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -629,18 +622,17 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

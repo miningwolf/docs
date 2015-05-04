@@ -145,11 +145,11 @@ Implements <code>Iterator&lt;Block</code></p>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>player, doAir) <br> _Constructor requiring player, uses default values</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>player, doAir) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>location) <br> _Constructor requiring location, uses default values</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>location) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -157,23 +157,23 @@ Implements <code>Iterator&lt;Block</code></p>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>player, in_range, in_step) <br> _Constructor requiring player, max range, and a stepping value</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>player, in_range, in_step) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>player, in_range, in_step, doAir) <br> _Constructor requiring player, max range, and a stepping value</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>player, in_range, in_step, doAir) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>location, in_range, in_step) <br> _Constructor requiring location, max range, and a stepping value</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>location, in_range, in_step) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(in<em>location, in_range, in_step, doAir) <br> _Constructor requiring location, max range, and a stepping value</em></td>
+<td>new <strong>BlockIterator</strong>(in<em>location, in_range, in_step, doAir) <br> _BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>BlockIterator</strong>(tracer) <br> <em>Creats a BlockIterator from a <a href="LineTracer.html"><code>LineTracer</code></a></em></td>
+<td>new <strong>BlockIterator</strong>(tracer) <br> <em>BlockIterator constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -227,7 +227,7 @@ Implements <code>Iterator&lt;Block</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_player-doair-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_player, doAir)</h5>
-<p><em>Constructor requiring player, uses default values<br /> Skips air blocks</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -240,17 +240,17 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_player</td>
 <td><code>Player</code></td>
-<td>the <code>Player</code> to check Line of Sight for</td>
+<td>in_player argument</td>
 </tr>
 <tr>
 <td>doAir</td>
 <td><code>boolean</code></td>
-<td>set to <code>true</code> to include Air blocks</td>
+<td>doAir argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_location-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_location)</h5>
-<p><em>Constructor requiring location, uses default values<br /> Skips air blocks</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -263,7 +263,7 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_location</td>
 <td><a href="api/world/position/Location.html"><code>Location</code></a></td>
-<td>the <a href="api/world/position/Location.html"><code>Location</code></a> to check Line of Sight for</td>
+<td>in_location argument</td>
 </tr>
 </tbody>
 </table>
@@ -291,7 +291,7 @@ Implements <code>Iterator&lt;Block</code></p>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_player-in_range-in_step-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_player, in_range, in_step)</h5>
-<p><em>Constructor requiring player, max range, and a stepping value<br /> Skips air blocks</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -304,22 +304,22 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_player</td>
 <td><code>Player</code></td>
-<td>the <code>Player</code> to check Line of Sight for</td>
+<td>in_player argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_player-in_range-in_step-doair-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_player, in_range, in_step, doAir)</h5>
-<p><em>Constructor requiring player, max range, and a stepping value</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -332,27 +332,27 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_player</td>
 <td><code>Player</code></td>
-<td>the <code>Player</code> to check Line of Sight for</td>
+<td>in_player argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 <tr>
 <td>doAir</td>
 <td><code>boolean</code></td>
-<td>set to <code>true</code> to include Air blocks</td>
+<td>doAir argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_location-in_range-in_step-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_location, in_range, in_step)</h5>
-<p><em>Constructor requiring location, max range, and a stepping value<br /> Skips air blocks</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -365,22 +365,22 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_location</td>
 <td><a href="api/world/position/Location.html"><code>Location</code></a></td>
-<td>the <a href="api/world/position/Location.html"><code>Location</code></a> to check Line of Sight for</td>
+<td>in_location argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-in_location-in_range-in_step-doair-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(in_location, in_range, in_step, doAir)</h5>
-<p><em>Constructor requiring location, max range, and a stepping value</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -393,27 +393,27 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>in_location</td>
 <td><a href="api/world/position/Location.html"><code>Location</code></a></td>
-<td>the <a href="api/world/position/Location.html"><code>Location</code></a> to check Line of Sight for</td>
+<td>in_location argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 <tr>
 <td>doAir</td>
 <td><code>boolean</code></td>
-<td>set to <code>true</code> to include Air blocks</td>
+<td>doAir argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-blockiterator-a-new-__blockiterator__-tracer-"><a id='blockiterator'></a>new <strong>BlockIterator</strong>(tracer)</h5>
-<p><em>Creats a BlockIterator from a <a href="LineTracer.html"><code>LineTracer</code></a><br /> Skips air blocks</em></p>
+<p><em>BlockIterator constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -426,7 +426,7 @@ Implements <code>Iterator&lt;Block</code></p>
 <tr>
 <td>tracer</td>
 <td><a href="LineTracer.html"><code>LineTracer</code></a></td>
-<td>the LineTracer to use with this BlockIterator</td>
+<td>tracer argument</td>
 </tr>
 </tbody>
 </table>

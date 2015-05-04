@@ -7,13 +7,13 @@
 
 ### Class Overview
 
-Called when a tool/sword runs out of uses and is destroyed
+class ToolBroken
 
 Method | Type   
 --- | :--- 
 new __ToolBroken__(player, tool) <br> _ToolBroken constructor_ | _constructor_
  readonly property __Player__ <br> _Get: Gets the `Player` who's tool has broken_ | `Player`
- readonly property __Tool__ <br> _Get: Gets the tool that was broken<p/>_ | [`Item`](../../api/inventory/Item.md)
+ readonly property __Tool__ <br> _Tool property_ | [`Item`](../../api/inventory/Item.md)
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`Hook`](../../hook/Hook.md)__ |
@@ -54,11 +54,11 @@ Get | Description
 
 ##### <a id='tool'></a>public  readonly property __Tool__
 
-_Get: Gets the tool that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1<br/> Also note the damage value will be 0_
+_Tool property_
 
-Get | Description
---- | --- 
-[`Item`](../../api/inventory/Item.md) | the tool that was broken
+Get | 
+--- | 
+[`Item`](../../api/inventory/Item.md) |
 
 
 

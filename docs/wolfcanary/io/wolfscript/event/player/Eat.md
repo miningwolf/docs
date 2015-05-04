@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Eat <p/> Contains information about a `Player` having finished eating Food
+class Eat
 
 Method | Type   
 --- | :--- 

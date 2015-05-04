@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-EntityLightningStruck <p/> Called when an [`Entity`](../../api/entity/Entity.md) should be struck by a [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
+class EntityLightningStruck
 
 Method | Type   
 --- | :--- 

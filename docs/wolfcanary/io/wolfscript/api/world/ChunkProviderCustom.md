@@ -12,8 +12,8 @@ Method | Type
 --- | :--- 
  writeonly property __World__ <br> _Set: Set the world used for this generator._ | `void`
 abstract function __createStructures__(x, z) <br> _Is called after populate(), in order to create or re-create structures._ | `void`
-abstract function __populate__(x, z) <br> _Is called after the large-scale generation is done to populate the world with details._ | `void`
-abstract function __provideChunk__(x, z) <br> _Will be called when a new chunk needs to be generated._ | [`Chunk`](Chunk.md)
+abstract function __populate__(x, z) <br> _populate method_ | `void`
+abstract function __provideChunk__(x, z) <br> _provideChunk method_ | [`Chunk`](Chunk.md)
 
 
 
@@ -55,12 +55,12 @@ Returns |
 
 ##### <a id='populate'></a>public abstract function __populate__(x, z)
 
-_Is called after the large-scale generation is done to populate the world with details. For instance glowstone blocks The x/z are chunk coordinates, that means right-shifted by 4_
+_populate method_
 
 Argument | Type | Description  
 --- | --- | --- 
-x | `int` | the X Chunk coordinate
-z | `int` | the Z Chunk coordinate
+x | `int` | x argument
+z | `int` | z argument
 
 Returns | 
 --- | 
@@ -69,16 +69,16 @@ Returns |
 
 ##### <a id='providechunk'></a>public abstract function __provideChunk__(x, z)
 
-_Will be called when a new chunk needs to be generated. The x/z are Chunk coordinates. (right-shifted by 4)_
+_provideChunk method_
 
 Argument | Type | Description  
 --- | --- | --- 
-x | `int` | the X Chunk coordinate
-z | `int` | the Z Chunk coordinate
+x | `int` | x argument
+z | `int` | z argument
 
-Returns | Description
---- | --- 
-[`Chunk`](Chunk.md) | the provided [`Chunk`](Chunk.md)
+Returns | 
+--- | 
+[`Chunk`](Chunk.md) |
 
 
 ---

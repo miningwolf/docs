@@ -15,8 +15,8 @@ Method | Type
  readonly property __Colors__ <br> _Get: Get the primary colors of the firework effect._ | `List<Color>`
  readonly property __Type__ <br> _Get: Get the type of the firework effect._ | `Type`
  function __hasTrail__() <br> _Get whether the firework effect has a trail._ | `boolean`
-static function __builder__() <br> _The type or shape of the effect._ | `Builder`
- function __build__() <br> _Add a primary color to the firework effect._ | [`FireworkEffect`](FireworkEffect.md)
+static function __builder__() <br> _Construct a firework effect._ | `Builder`
+ function __build__() <br> _Create a [`FireworkEffect`](FireworkEffect.md) from the current contents of this_ | [`FireworkEffect`](FireworkEffect.md)
  function __equals__(obj) <br> _equals method_ | `boolean`
 static function __deserialize__() <br> _deserialize method_ | [`ConfigurationSerializable`](configuration/serialization/ConfigurationSerializable.md)
  function __flicker__(flicker) <br> _Set whether the firework effect should flicker._ | `Builder`
@@ -24,7 +24,7 @@ static function __deserialize__() <br> _deserialize method_ | [`ConfigurationSer
  function __hashCode__() <br> _hashCode method_ | `int`
  function __toString__() <br> _toString method_ | `String`
  function __trail__(trail) <br> _Set whether the firework effect should have a trail._ | `Builder`
- function __withFlicker__() <br> _This is a builder for FireworkEffects._ | `Builder`
+ function __withFlicker__() <br> _Add a flicker to the firework effect._ | `Builder`
  function __withTrail__() <br> _Add a trail to the firework effect._ | `Builder`
 
 
@@ -79,22 +79,7 @@ Returns | Description
 
 ##### <a id='builder'></a>public static function __builder__()
 
-_The type or shape of the effect. /
-    public enum Type {
-        /** A small ball effect. /
-        BALL,
-        /** A large ball effect. /
-        BALL_LARGE,
-        /** A star-shaped effect. /
-        STAR,
-        /** A burst effect. /
-        BURST,
-        /** A creeper-face effect. /
-        CREEPER,
-        ;
-    }
-
-    /** Construct a firework effect._
+_Construct a firework effect._
 
 Returns | Description
 --- | --- 
@@ -103,11 +88,11 @@ Returns | Description
 
 ##### <a id='build'></a>public  function __build__()
 
-_Add a primary color to the firework effect._
+_Create a [`FireworkEffect`](FireworkEffect.md) from the current contents of this builder. <p> To successfully build, you must have specified at least one color._
 
 Returns | Description
 --- | --- 
-[`FireworkEffect`](FireworkEffect.md) | This object, for chaining
+[`FireworkEffect`](FireworkEffect.md) | The representative firework effect
 
 
 ##### <a id='equals'></a>public  function __equals__(obj)
@@ -187,7 +172,7 @@ Returns | Description
 
 ##### <a id='withflicker'></a>public  function __withFlicker__()
 
-_This is a builder for FireworkEffects._
+_Add a flicker to the firework effect._
 
 Returns | Description
 --- | --- 

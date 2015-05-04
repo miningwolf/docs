@@ -10,7 +10,7 @@ Enchantment interface
 
 Method | Type   
 --- | :--- 
- readonly property __Id__ <br> _Get: Type - used to identify enchantments_ | `int`
+ readonly property __Id__ <br> _Get: Gets the Data Value of this Enchantment._ | `int`
 static function __fromId__(int) <br> _Gets the Type of enchantment from this Data Value._ | `Type`
 
 
@@ -22,7 +22,7 @@ static function __fromId__(int) <br> _Gets the Type of enchantment from this Dat
 
 ##### <a id='id'></a>public  readonly property __Id__
 
-_Get: Type - used to identify enchantments_
+_Get: Gets the Data Value of this Enchantment._
 
 Get | Description
 --- | --- 

@@ -11,7 +11,7 @@ A FixedMetadataValue is a special case metadata item that contains the same valu
 
 Method | Type   
 --- | :--- 
-new __FixedMetadataValue__(owningPlugin, Object) <br> _Store the internal value that is represented by this fixed value._ | _constructor_
+new __FixedMetadataValue__(owningPlugin, Object) <br> _Initializes a FixedMetadataValue with an Object_ | _constructor_
  function __invalidate__() <br> _invalidate method_ | `void`
  function __value__() <br> _value method_ | `Object`
  |
@@ -43,10 +43,7 @@ __Inherited items from [`MetadataValueAdapter`](MetadataValueAdapter.md)__ |
 
 ##### <a id='fixedmetadatavalue'></a>new __FixedMetadataValue__(owningPlugin, Object) 
 
-_Store the internal value that is represented by this fixed value. /
-    private final Object internalValue;
-
-    /** Initializes a FixedMetadataValue with an Object_
+_Initializes a FixedMetadataValue with an Object_
 
 Argument | Type | Description  
 --- | --- | --- 

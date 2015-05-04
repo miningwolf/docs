@@ -164,7 +164,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <td style="text-align:left"><code>InetAddress</code></td>
 </tr>
 <tr>
-<td>  property <strong>Favicon</strong> <br> <em>Get: Returns the Favicon encoded string to be sent<br>Set: Sets the favicon encoded string.</em></td>
+<td>  property <strong>Favicon</strong> <br> <em>Favicon property</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -180,7 +180,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <td style="text-align:left"><a href="../../api/chat/ChatComponent.html"><code>ChatComponent</code></a></td>
 </tr>
 <tr>
-<td>  property <strong>MaxPlayers</strong> <br> <em>Get: Retrieve the maximum amount of players the server allows that will be sent to the client.<br>Set: Set the maximum amount of player the server allows that will be sent to the client. <b>Please note that this only fakes the value. It doesn&#39;t modify the real value.</b></em></td>
+<td>  property <strong>MaxPlayers</strong> <br> <em>MaxPlayers property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -350,17 +350,18 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tbody>
 </table>
 <h5 id="-a-id-favicon-a-public-property-__favicon__"><a id='favicon'></a>public   property <strong>Favicon</strong></h5>
-<p><em>Get: Returns the Favicon encoded string to be sent<br>Set: Sets the favicon encoded string.<br/> The string should be formatted as data:image/png;base64,[base64encodedImage].<br/></em></p>
+<p><em>Favicon property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td></td>
+<td>the favicon string</td>
 </tr>
 </tbody>
 </table>
@@ -376,7 +377,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td>favicon</td>
 <td><code>String</code></td>
-<td>the base64 encoded PNG file</td>
+<td>favicon argument</td>
 </tr>
 </tbody>
 </table>
@@ -445,7 +446,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tbody>
 </table>
 <h5 id="-a-id-maxplayers-a-public-property-__maxplayers__"><a id='maxplayers'></a>public   property <strong>MaxPlayers</strong></h5>
-<p><em>Get: Retrieve the maximum amount of players the server allows that will be sent to the client.<br>Set: Set the maximum amount of player the server allows that will be sent to the client. <b>Please note that this only fakes the value. It doesn&#39;t modify the real value.</b></em></p>
+<p><em>MaxPlayers property</em></p>
 <table>
 <thead>
 <tr>
@@ -472,7 +473,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <tr>
 <td>maxPlayers</td>
 <td><code>int</code></td>
-<td>The maximum amount of player the server allows</td>
+<td>maxPlayers argument</td>
 </tr>
 </tbody>
 </table>

@@ -13,7 +13,7 @@ Method | Type
  function __deserialize__() <br> _deserialize method_ | [`ConfigurationSerializable`](ConfigurationSerializable.md)
 static function __deserializeObject__(ConfigurationSerializable) <br> _Attempts to deserialize the given arguments into a new instance of the_ | [`ConfigurationSerializable`](ConfigurationSerializable.md)
 static function __deserializeObject__() <br> _Attempts to deserialize the given arguments into a new instance of the_ | [`ConfigurationSerializable`](ConfigurationSerializable.md)
-static function __getAlias__(ConfigurationSerializable) <br> _Attempts to get a registered [`ConfigurationSerializable`](ConfigurationSerializable.md) class by_ | `String`
+static function __getAlias__(ConfigurationSerializable) <br> _Gets the correct alias for the given [`ConfigurationSerializable`](ConfigurationSerializable.md)_ | `String`
 static function __registerClass__(ConfigurationSerializable) <br> _Registers the given [`ConfigurationSerializable`](ConfigurationSerializable.md) class by its_ | `void`
 static function __registerClass__(ConfigurationSerializable, alias) <br> _Registers the given alias to the specified {@link_ | `void`
 static function __unregisterClass__(alias) <br> _Unregisters the specified alias to a [`ConfigurationSerializable`](ConfigurationSerializable.md)_ | `void`
@@ -60,7 +60,7 @@ Returns | Description
 
 ##### <a id='getalias'></a>public static function __getAlias__(ConfigurationSerializable)
 
-_Attempts to get a registered [`ConfigurationSerializable`](ConfigurationSerializable.md) class by its alias_
+_Gets the correct alias for the given [`ConfigurationSerializable`](ConfigurationSerializable.md) class_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -68,12 +68,7 @@ ConfigurationSerializable | `extends` | ConfigurationSerializable argument
 
 Returns | Description
 --- | --- 
-`String` | Registered class, or null if not found /
-    public static Class<? extends ConfigurationSerializable> getClassByAlias(String alias) {
-        return aliases.get(alias);
-    }
-
-    /** Gets the correct alias for the given [`ConfigurationSerializable`](ConfigurationSerializable.md) class
+`String` | Alias to use for the class
 
 
 ##### <a id='registerclass'></a>public static function __registerClass__(ConfigurationSerializable)

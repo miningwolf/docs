@@ -11,9 +11,9 @@ This class contains James' color list and additionally formatting options for un
 
 Method | Type   
 --- | :--- 
-final function __consoleFormat__(text) <br> _Replaces all Color formatting with an & symbol_ | `String`
+static final function __consoleFormat__(text) <br> _Replaces all Color formatting with an & symbol_ | `String`
 static function __getLastColor__(input) <br> _Gets the last Color of a String_ | `String`
-final function __removeFormatting__(text) <br> _The character sequence to make the following text bold._ | `String`
+static final function __removeFormatting__(text) <br> _removeFormatting method_ | `String`
 static final var __BOLD__ <br> _The character sequence to make the following text bold._ | `String`
 static final var __STRIKE__ <br> _The character seqence to make the following text striked._ | `String`
 static final var __UNDERLINED__ <br> _The characted sequence to make the following text underlined._ | `String`
@@ -50,7 +50,7 @@ static final var __MARKER__ <br> _MARKER field_ | `String`
 
 ### Public Methods for [`TextFormat`](TextFormat.md)
 
-##### <a id='consoleformat'></a>public final function __consoleFormat__(text)
+##### <a id='consoleformat'></a>public static final function __consoleFormat__(text)
 
 _Replaces all Color formatting with an & symbol_
 
@@ -76,37 +76,17 @@ Returns | Description
 `String` | the last Color
 
 
-##### <a id='removeformatting'></a>public final function __removeFormatting__(text)
+##### <a id='removeformatting'></a>public static final function __removeFormatting__(text)
 
-_The character sequence to make the following text bold. /
-    public static final String BOLD = "\u00A7l";
-
-    /** The character seqence to make the following text striked. /
-    public static final String STRIKE = "\u00A7m";
-
-    /** The characted sequence to make the following text underlined. /
-    public static final String UNDERLINED = "\u00A7n";
-
-    /** The character sequence to make the following text italic. /
-    public static final String ITALICS = "\u00A7o";
-
-    /** The character sequence to display everything as completely random /
-    public static final String RANDOM = "\u00A7k";
-    /** The character sequence to create a new line of text /
-    public static final String NEW_LINE = "\n";
-
-    /** The character sequence to reset all text formatting. /
-    public static final String RESET = "\u00A7r";
-
-    /** Removes all minecraft-style formatting from <tt>text</tt>._
+_removeFormatting method_
 
 Argument | Type | Description  
 --- | --- | --- 
-text | `String` | The text to be stripped of formatting.
+text | `String` | text argument
 
-Returns | Description
---- | --- 
-`String` | <tt>text</tt> with all color/style tags stripped.
+Returns | 
+--- | 
+`String` |
 
 
 ---

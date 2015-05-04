@@ -11,7 +11,7 @@ Banner properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Banner rotation property, Value: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing to the {@code Banner (Wall Banner)}_ | [`Block`](../../Block.md)
 static function __applyRotation__(block, value) <br> _Applies rotation to the {@code Banner (Standing Banner)}_ | [`Block`](../../Block.md)
 static function __applyRotation__(block, value) <br> _Applies rotation to the {@code Banner (Standing Banner)}_ | [`Block`](../../Block.md)
 static final var __rotation__ <br> _rotation field_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
@@ -30,13 +30,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Banner rotation property, Value: 0 - 15 /
-    public static final BlockIntegerProperty rotation = getInstanceFor(StandingBanner, "rotation");
-
-    /** Anvil facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(WallBanner, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing to the {@code Banner (Wall Banner)}_
+_Applies a [`BlockFace`](../../BlockFace.md) facing to the {@code Banner (Wall Banner)}_
 
 Argument | Type | Description  
 --- | --- | --- 

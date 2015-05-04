@@ -11,7 +11,8 @@ Sand properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyVariant__(block, value) <br> _Sand variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies variant to the `Sand`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __variant__ <br> _Sand variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_Sand variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(Sand, "variant");
-
-    /** Sand variants_
+_Applies variant to the `Sand`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -40,6 +38,19 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

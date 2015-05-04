@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Smelt <p/> Called when a [`Furnace`](../../api/world/blocks/Furnace.md) smelts an Item
+class Smelt
 
 Method | Type   
 --- | :--- 

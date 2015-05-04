@@ -12,14 +12,14 @@ Method | Type
 --- | :--- 
 new __LineTracer__(in_player) <br> _Constructor requiring player, uses default values_ | _constructor_
 new __LineTracer__(in_location) <br> _Constructor requiring location, uses default values_ | _constructor_
-new __LineTracer__(in_player, in_range, in_step) <br> _Constructor requiring player, max range, and a stepping value_ | _constructor_
-new __LineTracer__(in_location, in_range, in_step) <br> _Constructor requiring location, max range, and a stepping value_ | _constructor_
+new __LineTracer__(in_player, in_range, in_step) <br> _LineTracer constructor_ | _constructor_
+new __LineTracer__(in_location, in_range, in_step) <br> _LineTracer constructor_ | _constructor_
   property __CurBlock__ <br> _Get: Returns the current [`Block`](api/world/blocks/Block.md) along the line of vision<br>Set: Sets current block type id_ | [`Block`](api/world/blocks/Block.md)
   property __LastBlock__ <br> _Get: Returns the previous block along the line of vision<br>Set: Sets previous block type id_ | [`Block`](api/world/blocks/Block.md)
  readonly property __NextBlock__ <br> _Get: Returns STEPS forward along line of vision and returns block._ | [`Block`](api/world/blocks/Block.md)
   property __TargetBlock__ <br> _Get: Returns the block at the cursor, or null if out of range<br>Set: Sets the type of the block at the cursor_ | [`Block`](api/world/blocks/Block.md)
  function __getNextBlock__(doAir) <br> _Returns STEPS forward along line of vision and returns block._ | [`Block`](api/world/blocks/Block.md)
- function __init__(in_location, in_range, in_step, in_view_height) <br> _Initialization method_ | `void`
+ function __init__(in_location, in_range, in_step, in_view_height) <br> _init method_ | `void`
 
 
 
@@ -45,23 +45,23 @@ in_location | [`Location`](api/world/position/Location.md) | the [`Location`](ap
 
 ##### <a id='linetracer'></a>new __LineTracer__(in_player, in_range, in_step) 
 
-_Constructor requiring player, max range, and a stepping value_
+_LineTracer constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_player | `Player` | the `Player` to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+in_player | `Player` | in_player argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
 
 ##### <a id='linetracer'></a>new __LineTracer__(in_location, in_range, in_step) 
 
-_Constructor requiring location, max range, and a stepping value_
+_LineTracer constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+in_location | [`Location`](api/world/position/Location.md) | in_location argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
 
 ---
 
@@ -135,14 +135,14 @@ Returns | Description
 
 ##### <a id='init'></a>public  function __init__(in_location, in_range, in_step, in_view_height)
 
-_Initialization method_
+_init method_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
-in_view_height | `double` | the View Height to use, a `Player`'s view height is typically 1.62
+in_location | [`Location`](api/world/position/Location.md) | in_location argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
+in_view_height | `double` | in_view_height argument
 
 Returns | 
 --- | 

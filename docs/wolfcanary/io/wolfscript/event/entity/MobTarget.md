@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Mob target hook <p/> Contains information about a [`LivingBase`](../../api/entity/living/LivingBase.md) targeting another [`LivingBase`](../../api/entity/living/LivingBase.md) either for attack or following
+class MobTarget
 
 Method | Type   
 --- | :--- 

@@ -12,7 +12,7 @@ Ban hook. Contains information about an issued Ban
 Method | Type   
 --- | :--- 
 new __Ban__(banned, ip, moderator, reason, bantime) <br> _Ban constructor_ | _constructor_
- readonly property __BannedPlayer__ <br> _Get: Get the [`PlayerReference`](../../api/PlayerReference.md) that has been banned._ | [`PlayerReference`](../../api/PlayerReference.md)
+ readonly property __BannedPlayer__ <br> _BannedPlayer property_ | [`PlayerReference`](../../api/PlayerReference.md)
  readonly property __Bantime__ <br> _Get: Return the ban time as unix timestamp._ | `long`
  readonly property __Ip__ <br> _Get: Gets the banned IP address_ | `String`
  readonly property __Moderator__ <br> _Get: Get the [`MessageReceiver`](../../chat/MessageReceiver.md) that has issued the ban._ | [`MessageReceiver`](../../chat/MessageReceiver.md)
@@ -51,11 +51,11 @@ bantime | `long` | bantime argument
 
 ##### <a id='bannedplayer'></a>public  readonly property __BannedPlayer__
 
-_Get: Get the [`PlayerReference`](../../api/PlayerReference.md) that has been banned. This might be null if the banned player is offline/not currently on the server_
+_BannedPlayer property_
 
-Get | Description
---- | --- 
-[`PlayerReference`](../../api/PlayerReference.md) | banned if not ipban, null otherwise
+Get | 
+--- | 
+[`PlayerReference`](../../api/PlayerReference.md) |
 
 
 

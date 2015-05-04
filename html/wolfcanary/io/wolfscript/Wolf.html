@@ -189,7 +189,7 @@ Implements <a href="tasks/TaskOwner.html"><code>TaskOwner</code></a></p>
 <td style="text-align:left"><a href="bansystem/BanManager.html"><code>BanManager</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>addSerializer</strong>() <br> <em>Serialize an object of the given Type T into a String.</em></td>
+<td>static function <strong>addSerializer</strong>() <br> <em>Add a serializer to the system</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -509,33 +509,21 @@ Implements <a href="tasks/TaskOwner.html"><code>TaskOwner</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-addserializer-a-public-static-function-__addserializer__-"><a id='addserializer'></a>public static function <strong>addSerializer</strong>()</h5>
-<p><em>Serialize an object of the given Type T into a String.</em></p>
+<p><em>Add a serializer to the system</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>void</code></td>
-<td>serialized <code>String</code> of the object or null if there is no suitable serializer registered /</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<pre><code>@SuppressWarnings(<span class="hljs-string">"unchecked"</span>)
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function">String <span class="hljs-title">serialize</span><span class="hljs-params">(T <span class="hljs-keyword">object</span>)</span> </span>{
-    Serializer&lt;T&gt; ser = (Serializer&lt;T&gt;)instance.serializers.<span class="hljs-keyword">get</span>(<span class="hljs-keyword">object</span>.getClass());
-
-    <span class="hljs-keyword">if</span> (ser != <span class="hljs-keyword">null</span>) {
-        <span class="hljs-keyword">return</span> ser.serialize(<span class="hljs-keyword">object</span>);
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-}
-
-<span class="hljs-comment">/** Accepts a String with data and the type it should deserialize into.</span>
-</code></pre><h5 id="-a-id-instance-a-public-static-function-__instance__-"><a id='instance'></a>public static function <strong>instance</strong>()</h5>
+<h5 id="-a-id-instance-a-public-static-function-__instance__-"><a id='instance'></a>public static function <strong>instance</strong>()</h5>
 <p><em>Get the wolf instance</em></p>
 <table>
 <thead>

@@ -40,7 +40,7 @@ Method | Type
  function __getDoubleList__(path) <br> _Gets the requested List of Double by path._ | `List<Double>`
  function __getBooleanList__(path) <br> _Gets the requested List of Boolean by path._ | `List<Boolean>`
  function __getIntegerList__(path) <br> _Gets the requested List of Integer by path._ | `List<Integer>`
- function __contains__(path) <br> _Gets a Map containing all keys and their values for this section._ | `boolean`
+ function __contains__(path) <br> _Checks if this [`ConfigurationSection`](ConfigurationSection.md) contains the given path._ | `boolean`
  function __isVector__(path) <br> _Checks if the specified path is a Vector._ | `boolean`
  function __isLong__(path) <br> _Checks if the specified path is a long._ | `boolean`
  function __getStringList__(path) <br> _Gets the requested List of String by path._ | `List<String>`
@@ -51,7 +51,7 @@ Method | Type
  function __getLongList__(path) <br> _Gets the requested List of Long by path._ | `List<Long>`
  function __isInt__(path) <br> _Checks if the specified path is an int._ | `boolean`
  function __getShortList__(path) <br> _Gets the requested List of Short by path._ | `List<Short>`
- function __getVector__(path) <br> _Gets the requested List of Maps by path._ | `Vector`
+ function __getVector__(path) <br> _Gets the requested Vector by path._ | `Vector`
  function __getVector__(path, def) <br> _Gets the requested `Vector` by path, returning a default value if_ | `Vector`
  function __isList__(path) <br> _Checks if the specified path is a List._ | `boolean`
  function __getOfflinePlayer__(path) <br> _Gets the requested OfflinePlayer by path._ | `OfflinePlayer`
@@ -461,7 +461,7 @@ Returns | Description
 
 ##### <a id='contains'></a>public  function __contains__(path)
 
-_Gets a Map containing all keys and their values for this section. <p> If deep is set to true, then this will contain all the keys and values within any child [`ConfigurationSection`](ConfigurationSection.md)s (and their children, etc). These keys will be in a valid path notation for you to use. <p> If deep is set to false, then this will contain only the keys and values of any direct children, and not their own children._
+_Checks if this [`ConfigurationSection`](ConfigurationSection.md) contains the given path. <p> If the value for the requested path does not exist but a default value has been specified, this will return true._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -469,10 +469,7 @@ path | `String` | Path to check for existence.
 
 Returns | Description
 --- | --- 
-`boolean` | Map of keys and values of this section. /
-    public Map<String, Object> getValues(boolean deep);
-
-    /** Checks if this [`ConfigurationSection`](ConfigurationSection.md) contains the given path. <p> If the value for the requested path does not exist but a default value has been specified, this will return true.
+`boolean` | True if this section contains the requested path, either via default or being set.
 
 
 ##### <a id='isvector'></a>public  function __isVector__(path)
@@ -608,19 +605,15 @@ Returns | Description
 
 ##### <a id='getvector'></a>public  function __getVector__(path)
 
-_Gets the requested List of Maps by path. <p> If the List does not exist but a default value has been specified, this will return the default value. If the List does not exist and no default value was specified, this will return an empty List. <p> This method will attempt to cast any values into a Map if possible, but may miss any values out if they are not compatible._
+_Gets the requested Vector by path. <p> If the Vector does not exist but a default value has been specified, this will return the default value. If the Vector does not exist and no default value was specified, this will return null._
 
 Argument | Type | Description  
 --- | --- | --- 
-path | `String` | Path of the List to get.
+path | `String` | Path of the Vector to get.
 
 Returns | Description
 --- | --- 
-`Vector` | Requested List of Maps. /
-    public List<Map<?, ?>> getMapList(String path);
-
-    // WolfScript
-    /** Gets the requested Vector by path. <p> If the Vector does not exist but a default value has been specified, this will return the default value. If the Vector does not exist and no default value was specified, this will return null.
+`Vector` | Requested Vector.
 
 
 ##### <a id='getvector'></a>public  function __getVector__(path, def)

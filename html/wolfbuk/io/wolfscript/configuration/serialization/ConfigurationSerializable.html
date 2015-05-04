@@ -122,7 +122,7 @@
 </blockquote>
 <hr>
 <h3 id="interface-overview">Interface Overview</h3>
-<p>Represents an object that may be serialized. <p> These objects MUST implement one of the following, in addition to the methods as defined by this interface: <ul> <li>A static method &quot;deserialize&quot; that accepts a single <code>Map</code>&lt; <code>String</code>, <code>Object</code>&gt; and returns the class.</li> <li>A static method &quot;valueOf&quot; that accepts a single <code>Map</code>&lt;<code>String</code>, <code>Object</code>&gt; and returns the class.</li> <li>A constructor that accepts a single <code>Map</code>&lt;<code>String</code>, <code>Object</code>&gt;.</li> </ul> In addition to implementing this interface, you must register the class with <code>ConfigurationSerialization#registerClass(Class)</code>.</p>
+<p>interface ConfigurationSerializable</p>
 <table>
 <thead>
 <tr>

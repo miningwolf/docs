@@ -13,7 +13,7 @@ Method | Type
 abstract readonly property __DurationModifier__ <br> _Get: Returns the duration modifier applied to effects of this type._ | `double`
 abstract readonly property __Name__ <br> _Get: Returns the name of this effect type._ | `String`
  function __hashCode__() <br> _hashCode method_ | `int`
- function __createEffect__(duration, amplifier) <br> _Increases movement speed._ | [`PotionEffect`](PotionEffect.md)
+ function __createEffect__(duration, amplifier) <br> _Creates a PotionEffect from this PotionEffectType, applying duration_ | [`PotionEffect`](PotionEffect.md)
  function __toString__() <br> _toString method_ | `String`
 static function __getByName__(name) <br> _Gets the effect type specified by the given name._ | [`PotionEffectType`](PotionEffectType.md)
  function __equals__(obj) <br> _equals method_ | `boolean`
@@ -98,82 +98,7 @@ Returns |
 
 ##### <a id='createeffect'></a>public  function __createEffect__(duration, amplifier)
 
-_Increases movement speed. /
-    public static final PotionEffectType SPEED = new PotionEffectTypeWrapper(1);
-
-    /** Decreases movement speed. /
-    public static final PotionEffectType SLOW = new PotionEffectTypeWrapper(2);
-
-    /** Increases dig speed. /
-    public static final PotionEffectType FAST_DIGGING = new PotionEffectTypeWrapper(3);
-
-    /** Decreases dig speed. /
-    public static final PotionEffectType SLOW_DIGGING = new PotionEffectTypeWrapper(4);
-
-    /** Increases damage dealt. /
-    public static final PotionEffectType INCREASE_DAMAGE = new PotionEffectTypeWrapper(5);
-
-    /** Heals an entity. /
-    public static final PotionEffectType HEAL = new PotionEffectTypeWrapper(6);
-
-    /** Hurts an entity. /
-    public static final PotionEffectType HARM = new PotionEffectTypeWrapper(7);
-
-    /** Increases jump height. /
-    public static final PotionEffectType JUMP = new PotionEffectTypeWrapper(8);
-
-    /** Warps vision on the client. /
-    public static final PotionEffectType CONFUSION = new PotionEffectTypeWrapper(9);
-
-    /** Regenerates health. /
-    public static final PotionEffectType REGENERATION = new PotionEffectTypeWrapper(10);
-
-    /** Decreases damage dealt to an entity. /
-    public static final PotionEffectType DAMAGE_RESISTANCE = new PotionEffectTypeWrapper(11);
-
-    /** Stops fire damage. /
-    public static final PotionEffectType FIRE_RESISTANCE = new PotionEffectTypeWrapper(12);
-
-    /** Allows breathing underwater. /
-    public static final PotionEffectType WATER_BREATHING = new PotionEffectTypeWrapper(13);
-
-    /** Grants invisibility. /
-    public static final PotionEffectType INVISIBILITY = new PotionEffectTypeWrapper(14);
-
-    /** Blinds an entity. /
-    public static final PotionEffectType BLINDNESS = new PotionEffectTypeWrapper(15);
-
-    /** Allows an entity to see in the dark. /
-    public static final PotionEffectType NIGHT_VISION = new PotionEffectTypeWrapper(16);
-
-    /** Increases hunger. /
-    public static final PotionEffectType HUNGER = new PotionEffectTypeWrapper(17);
-
-    /** Decreases damage dealt by an entity. /
-    public static final PotionEffectType WEAKNESS = new PotionEffectTypeWrapper(18);
-
-    /** Deals damage to an entity over time. /
-    public static final PotionEffectType POISON = new PotionEffectTypeWrapper(19);
-
-    /** Deals damage to an entity over time and gives the health to the shooter. /
-    public static final PotionEffectType WITHER = new PotionEffectTypeWrapper(20);
-
-    /** Increases the maximum health of an entity. /
-    public static final PotionEffectType HEALTH_BOOST = new PotionEffectTypeWrapper(21);
-
-    /** Increases the maximum health of an entity with health that cannot be regenerated, but is refilled every 30 seconds. /
-    public static final PotionEffectType ABSORPTION = new PotionEffectTypeWrapper(22);
-
-    /** Increases the food level of an entity each tick. /
-    public static final PotionEffectType SATURATION = new PotionEffectTypeWrapper(23);
-
-    private final int id;
-
-    protected PotionEffectType(int id) {
-        this.id = id;
-    }
-
-    /** Creates a PotionEffect from this PotionEffectType, applying duration modifiers and checks._
+_Creates a PotionEffect from this PotionEffectType, applying duration modifiers and checks._
 
 Argument | Type | Description  
 --- | --- | --- 

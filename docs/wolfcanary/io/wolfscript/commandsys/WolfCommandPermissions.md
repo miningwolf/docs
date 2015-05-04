@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-An list of all Wolf Command permissions<br/> to help track what permissions are what
+enum WolfCommandPermissions
 
 Item | Type   
 --- | :--- 

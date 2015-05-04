@@ -19,9 +19,9 @@ static function __isBook__(book) <br> _Checks if the give book can take Meta dat
 static function __addEnchantments__(book) <br> _Adds enchantments to the book_ | `boolean`
 static function __hasPages__(book) <br> _Checks if the given Book has pages_ | `boolean`
 static function __getPage__(book, page) <br> _Gets the specified page number of the Book_ | `String`
-static function __getPages__(book) <br> _Gets a String array of pages from the book_ | `String[]`
-static function __addPages__(book) <br> _Adds pages to a writable/written book_ | `boolean`
-static function __addPages__(book) <br> _Adds pages to a writable/written book_ | `boolean`
+static function __getPages__(book) <br> _getPages method_ | `String[]`
+static function __addPages__(book) <br> _addPages method_ | `boolean`
+static function __addPages__(book) <br> _addPages method_ | `boolean`
 static function __getEnchantments__(book) <br> _Gets the enchantments of the Book_ | `Enchantment[]`
 static function __containsEnchantments__(book) <br> _Checks the book for stored enchantments_ | `boolean`
 static function __getTitle__(book) <br> _Gets the title of a book_ | `String`
@@ -172,41 +172,41 @@ Returns | Description
 
 ##### <a id='getpages'></a>public static function __getPages__(book)
 
-_Gets a String array of pages from the book_
+_getPages method_
 
 Argument | Type | Description  
 --- | --- | --- 
-book | [`Item`](../Item.md) | the book to get pages of
+book | [`Item`](../Item.md) | book argument
 
-Returns | Description
---- | --- 
-`String[]` | String array of pages or null if no pages/not a book
+Returns | 
+--- | 
+`String[]` |
 
 
 ##### <a id='addpages'></a>public static function __addPages__(book)
 
-_Adds pages to a writable/written book_
+_addPages method_
 
 Argument | Type | Description  
 --- | --- | --- 
-book | [`Item`](../Item.md) | the Book to add pages too
+book | [`Item`](../Item.md) | book argument
 
-Returns | Description
---- | --- 
-`boolean` | `true` if all pages successfully added; `false` if all or some pages could not be added
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='addpages'></a>public static function __addPages__(book)
 
-_Adds pages to a writable/written book_
+_addPages method_
 
 Argument | Type | Description  
 --- | --- | --- 
-book | [`Item`](../Item.md) | the Book to add pages too
+book | [`Item`](../Item.md) | book argument
 
-Returns | Description
---- | --- 
-`boolean` | `true` if all pages successfully added; `false` if all or some pages could not be added
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='getenchantments'></a>public static function __getEnchantments__(book)

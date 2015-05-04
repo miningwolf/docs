@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Direction Block properties helper<br/> Applies to<br/> <ul>Bed</ul> <ul>Cocoa</ul> <ul>FenceGate</ul> <ul>Pumpkin</ul> <ul>Jack-o-Lantern</ul> <ul>Redstone Comparator</ul> <ul>Redstone Repeater</ul>
+class DirectionalBlockProperties
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Bed, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
 
 Argument | Type | Description  
 --- | --- | --- 

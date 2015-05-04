@@ -12,7 +12,7 @@ Tripwire Hook properties helper
 Method | Type   
 --- | :--- 
 static function __applyAttached__(block, value) <br> _Applies whether the {@code Tripwire Hook} is attached or not_ | [`Block`](../../Block.md)
-static function __applyFacing__(block, value) <br> _Tripwire Hook facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Tripwire`_ | [`Block`](../../Block.md)
 static function __applyPowered__(block, value) <br> _Applies whether the {@code Tripwire Hook} is powered or not_ | [`Block`](../../Block.md)
 static function __applySuspended__(block, value) <br> _Applies whether the {@code Tripwire Hook} is suspended or not_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Tripwire Hook facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
@@ -47,19 +47,7 @@ Returns | Description
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Tripwire Hook facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(TripwireHook, "facing");
-
-    /** Tripwire Hook powered property, Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(TripwireHook, "powered");
-
-    /** Tripwire Hook attached property, Values: true, false /
-    public static final BlockBooleanProperty attached = getInstanceFor(TripwireHook, "attached");
-
-    /** Tripwire Hook suspended property, Values: true, false /
-    public static final BlockBooleanProperty suspended = getInstanceFor(TripwireHook, "suspended");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Tripwire`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Tripwire`_
 
 Argument | Type | Description  
 --- | --- | --- 

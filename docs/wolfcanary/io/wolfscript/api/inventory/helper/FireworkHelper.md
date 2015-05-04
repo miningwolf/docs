@@ -12,17 +12,17 @@ class FireworkHelper
 Method | Type   
 --- | :--- 
 static writeonly property __StarColors__ <br> _Set: Sets the colors of the FireworkStar based on the given [`DyeColor`](../../DyeColor.md)s_ | `void`
-static writeonly property __StarColorsRaw__ <br> _Set: Sets the colors of the FireworkStar based on raw integers_ | `void`
+static writeonly property __StarColorsRaw__ <br> _StarColorsRaw property_ | `void`
 static writeonly property __StarFadeColors__ <br> _Set: Sets the fade color(s) of the FireworkStar based on the given [`DyeColor`](../../DyeColor.md)s_ | `void`
-static writeonly property __StarFadeColorsRaw__ <br> _Set: Sets the colors of the FireworkStar based on raw integers_ | `void`
+static writeonly property __StarFadeColorsRaw__ <br> _StarFadeColorsRaw property_ | `void`
 static function __removeAllColors__(fireworkStar) <br> _Removes all the colors from the FireworkStar_ | `void`
- function __explosionId__() <br> _The FireworkStar Explosion Types_ | `byte`
+ function __explosionId__() <br> _Gets the Explosion ID_ | `byte`
 static function __attachFireworkStars__(fireworkRocket) <br> _Attaches the Explosion tag from the FireworkStar [`Item`](../Item.md)(s)_ | `void`
-static function __addStarFadeColorsRaw__(fireworkStar) <br> _Adds fade color(s) to the FireworkStar based on raw integers_ | `void`
+static function __addStarFadeColorsRaw__(fireworkStar) <br> _addStarFadeColorsRaw method_ | `void`
 static function __doesTrail__(fireworkStar) <br> _Gets whether the FireworkStar leaves a trail_ | `boolean`
 static function __addStarFadeColors__(fireworkStar) <br> _Adds a color to the FireworkStar based on [`DyeColor`](../../DyeColor.md)_ | `void`
 static function __doesFlicker__(fireworkStar) <br> _Gets whether the FireworkStar does flicker_ | `boolean`
-static function __addStarColorsRaw__(fireworkStar) <br> _Adds color(s) to the FireworkStar based on raw integers_ | `void`
+static function __addStarColorsRaw__(fireworkStar) <br> _addStarColorsRaw method_ | `void`
 static function __addStarColors__(fireworkStar) <br> _Adds a color to the FireworkStar based on [`DyeColor`](../../DyeColor.md)_ | `void`
 static function __setDoesTrail__(fireworkStar, trail) <br> _Sets whether the FireworkStar leaves a trail_ | `void`
 static function __getExplosionTag__(fireworkStar) <br> _Gets the Explosion tag of a Firework Star_ | [`CompoundTag`](../../nbt/CompoundTag.md)
@@ -67,7 +67,7 @@ fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
 
 ##### <a id='starcolorsraw'></a>public static writeonly property __StarColorsRaw__
 
-_Set: Sets the colors of the FireworkStar based on raw integers_
+_StarColorsRaw property_
 
 Get | 
 --- | 
@@ -75,7 +75,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
+fireworkStar | [`Item`](../Item.md) | fireworkStar argument
 
 
 ##### <a id='starfadecolors'></a>public static writeonly property __StarFadeColors__
@@ -93,7 +93,7 @@ fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
 
 ##### <a id='starfadecolorsraw'></a>public static writeonly property __StarFadeColorsRaw__
 
-_Set: Sets the colors of the FireworkStar based on raw integers_
+_StarFadeColorsRaw property_
 
 Get | 
 --- | 
@@ -101,7 +101,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
+fireworkStar | [`Item`](../Item.md) | fireworkStar argument
 
 
 ---
@@ -123,7 +123,7 @@ Returns |
 
 ##### <a id='explosionid'></a>public  function __explosionId__()
 
-_The FireworkStar Explosion Types_
+_Gets the Explosion ID_
 
 Returns | Description
 --- | --- 
@@ -145,11 +145,11 @@ Returns |
 
 ##### <a id='addstarfadecolorsraw'></a>public static function __addStarFadeColorsRaw__(fireworkStar)
 
-_Adds fade color(s) to the FireworkStar based on raw integers_
+_addStarFadeColorsRaw method_
 
 Argument | Type | Description  
 --- | --- | --- 
-fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
+fireworkStar | [`Item`](../Item.md) | fireworkStar argument
 
 Returns | 
 --- | 
@@ -197,11 +197,11 @@ Returns | Description
 
 ##### <a id='addstarcolorsraw'></a>public static function __addStarColorsRaw__(fireworkStar)
 
-_Adds color(s) to the FireworkStar based on raw integers_
+_addStarColorsRaw method_
 
 Argument | Type | Description  
 --- | --- | --- 
-fireworkStar | [`Item`](../Item.md) | the FireworkStar [`Item`](../Item.md)
+fireworkStar | [`Item`](../Item.md) | fireworkStar argument
 
 Returns | 
 --- | 

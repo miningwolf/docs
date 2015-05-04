@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Weighted Pressure Plate properties helper<br/> Applies to<br/> <ul>Light (Gold) Pressure Plate</ul> <ul>Heavy (Iron) Pressure Plate</ul>
+class WeightedPressurePlateProperties
 
 Method | Type   
 --- | :--- 
-static function __applyPower__(block, value) <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyPower__(block, value) <br> _Applies power to the {@code Weighted Pressure Plate}_ | [`Block`](../../Block.md)
 static final var __power__ <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applypower'></a>public static function __applyPower__(block, value)
 
-_Weighted Pressure Plate power property, Values: 0 - 15 /
-    public static final BlockIntegerProperty power = getInstanceFor(LightWeightedPressurePlate, "power");
-
-    /** Applies power to the {@code Weighted Pressure Plate}_
+_Applies power to the {@code Weighted Pressure Plate}_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -98,7 +98,6 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/inventory/Property.html'>Property</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapelessRecipe.html'>ShapelessRecipe</a></li>
@@ -158,7 +157,7 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 <td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Shape</strong> <br> <em>Get: Get a copy of the ingredients map.</em></td>
+<td> readonly property <strong>Shape</strong> <br> <em>Get: Get the shape.</em></td>
 <td style="text-align:left"><code>String[]</code></td>
 </tr>
 <tr>
@@ -214,7 +213,7 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-shape-a-public-readonly-property-__shape__"><a id='shape'></a>public  readonly property <strong>Shape</strong></h5>
-<p><em>Get: Get a copy of the ingredients map.</em></p>
+<p><em>Get: Get the shape.</em></p>
 <table>
 <thead>
 <tr>
@@ -225,24 +224,11 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 <tbody>
 <tr>
 <td><code>String[]</code></td>
-<td>The mapping of character to ingredients. /</td>
+<td>The recipe&#39;s shape.</td>
 </tr>
 </tbody>
 </table>
-<pre><code>public <span class="hljs-type">Map</span>&lt;<span class="hljs-type">Character</span>, <span class="hljs-type">ItemStack</span>&gt; getIngredientMap() {
-    <span class="hljs-type">HashMap</span>&lt;<span class="hljs-type">Character</span>, <span class="hljs-type">ItemStack</span>&gt; <span class="hljs-literal">result</span> = new <span class="hljs-type">HashMap</span>&lt;<span class="hljs-type">Character</span>, <span class="hljs-type">ItemStack</span>&gt;();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">Map</span>.<span class="hljs-type">Entry</span>&lt;<span class="hljs-type">Character</span>, <span class="hljs-type">ItemStack</span>&gt; ingredient : ingredients.entrySet()) {
-        <span class="hljs-keyword">if</span> (ingredient.getValue() == null) {
-            <span class="hljs-literal">result</span>.put(ingredient.getKey(), null);
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-literal">result</span>.put(ingredient.getKey(), ingredient.getValue().clone());
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">result</span>;
-}
-
-/** <span class="hljs-type">Get</span> the shape.
-</code></pre><hr>
+<hr>
 <h3 id="public-methods-for-shapedrecipe-shapedrecipe-md-">Public Methods for <a href="ShapedRecipe.html"><code>ShapedRecipe</code></a></h3>
 <h5 id="-a-id-setingredient-a-public-function-__setingredient__-key-ingredient-"><a id='setingredient'></a>public  function <strong>setIngredient</strong>(key, ingredient)</h5>
 <p><em>Sets the material that a character in the recipe shape refers to.</em></p>

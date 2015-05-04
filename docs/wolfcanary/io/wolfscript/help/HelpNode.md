@@ -10,10 +10,11 @@ Contains relevant information about a piece of help. One help node contains the 
 
 Method | Type   
 --- | :--- 
+new __HelpNode__(owner, command) <br> _HelpNode constructor_ | _constructor_
  readonly property __Keywords__ <br> _Get: get some keywords for this command._ | `String[]`
  readonly property __Command__ <br> _Get: Gets the first alias (or name) for this command_ | `String`
  readonly property __Description__ <br> _Get: Gets the description for this command_ | `String`
- readonly property __Owner__ <br> _Get: The Plugin (or Server) that has registered this command_ | [`CommandOwner`](../commandsys/CommandOwner.md)
+ readonly property __Owner__ <br> _Get: get the Plugin (or WolfScript instance) that has registered this help_ | [`CommandOwner`](../commandsys/CommandOwner.md)
  readonly property __Parent__ <br> _Get: Get the name of this commands parent command._ | `String`
  readonly property __PrintableAliases__ <br> _Get: Returns an uncoloured string that displays all command aliases in the specified color_ | `String`
  readonly property __SubCommands__ <br> _Get: Returns an array of all subcommands for this_ | `String[]`
@@ -28,6 +29,18 @@ Method | Type
 
 ---
 
+### Public Constructors for [`HelpNode`](HelpNode.md)
+
+##### <a id='helpnode'></a>new __HelpNode__(owner, command) 
+
+_HelpNode constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+owner | [`CommandOwner`](../commandsys/CommandOwner.md) | owner argument
+command | [`WolfCommand`](../commandsys/WolfCommand.md) | command argument
+
+---
 
 ### Public Properties for [`HelpNode`](HelpNode.md)
 
@@ -63,20 +76,7 @@ Get |
 
 ##### <a id='owner'></a>public  readonly property __Owner__
 
-_Get: The Plugin (or Server) that has registered this command /
-    private CommandOwner plugin;
-    /** A list of names of sub commands /
-    public String[] subCommands;
-
-    private WolfCommand command;
-
-    public HelpNode(CommandOwner owner, WolfCommand command) {
-        this.command = command;
-        this.plugin = owner;
-        this.subCommands = HelpManager.subCommandsToStringArray(command.getSubCommands());
-    }
-
-    /** get the Plugin (or WolfScript instance) that has registered this help_
+_Get: get the Plugin (or WolfScript instance) that has registered this help_
 
 Get | 
 --- | 

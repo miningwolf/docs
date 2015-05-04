@@ -221,7 +221,15 @@
 </thead>
 <tbody>
 <tr>
-<td>new <strong>BlockType</strong>(id, data, machineName) <br> <em>BlockType constructor</em></td>
+<td>new <strong>BlockType</strong>(id, machineName) <br> <em>BlockType constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>BlockType</strong>(id, machineName, mod) <br> <em>BlockType constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>BlockType</strong>(id, data, machineName) <br> <em>This will create this blockType and also add it to the BlockTypes cache,</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -1840,8 +1848,59 @@
 </table>
 <hr>
 <h3 id="public-constructors-for-blocktype-blocktype-md-">Public Constructors for <a href="BlockType.html"><code>BlockType</code></a></h3>
-<h5 id="-a-id-blocktype-a-new-__blocktype__-id-data-machinename-"><a id='blocktype'></a>new <strong>BlockType</strong>(id, data, machineName)</h5>
+<h5 id="-a-id-blocktype-a-new-__blocktype__-id-machinename-"><a id='blocktype'></a>new <strong>BlockType</strong>(id, machineName)</h5>
 <p><em>BlockType constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>int</code></td>
+<td>id argument</td>
+</tr>
+<tr>
+<td>machineName</td>
+<td><code>String</code></td>
+<td>machineName argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-blocktype-a-new-__blocktype__-id-machinename-mod-"><a id='blocktype'></a>new <strong>BlockType</strong>(id, machineName, mod)</h5>
+<p><em>BlockType constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>int</code></td>
+<td>id argument</td>
+</tr>
+<tr>
+<td>machineName</td>
+<td><code>String</code></td>
+<td>machineName argument</td>
+</tr>
+<tr>
+<td>mod</td>
+<td><code>String</code></td>
+<td>mod argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-blocktype-a-new-__blocktype__-id-data-machinename-"><a id='blocktype'></a>new <strong>BlockType</strong>(id, data, machineName)</h5>
+<p><em>This will create this blockType and also add it to the BlockTypes cache, if a BlockType with the same name doesn&#39;t already exist. IF a BlockType with the given name already exists, nothing will happen to the BlockType list, you can still use this BlockType if you need to</em></p>
 <table>
 <thead>
 <tr>

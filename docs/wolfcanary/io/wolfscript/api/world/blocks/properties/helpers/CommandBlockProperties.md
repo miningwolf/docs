@@ -11,7 +11,7 @@ Command Block properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyTriggered__(block, value) <br> _Command Block triggered property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyTriggered__(block, value) <br> _Applies whether the `CommandBlock` has triggered or not_ | [`Block`](../../Block.md)
 static final var __triggered__ <br> _Command Block triggered property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applytriggered'></a>public static function __applyTriggered__(block, value)
 
-_Command Block triggered property, Values: true, false /
-    public static final BlockBooleanProperty triggered = getInstanceFor(CommandBlock, "triggered");
-
-    /** Applies whether the `CommandBlock` has triggered or not_
+_Applies whether the `CommandBlock` has triggered or not_
 
 Argument | Type | Description  
 --- | --- | --- 

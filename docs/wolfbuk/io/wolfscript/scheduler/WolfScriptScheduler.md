@@ -14,7 +14,7 @@ Method | Type
  readonly property __ActiveWorkers__ <br> _Get: Returns a list of all active workers._ | `List<WolfScriptWorker>`
  function __cancelAllTasks__() <br> _Removes all tasks from the scheduler._ | `void`
  function __cancelTasks__(plugin) <br> _Removes all tasks associated with a particular plugin from the_ | `void`
- function __cancelTask__(taskId) <br> _Calls a method on the main thread and returns a Future object. This_ | `void`
+ function __cancelTask__(taskId) <br> _Removes task from scheduler._ | `void`
  function __isCurrentlyRunning__(taskId) <br> _Check if the task currently running._ | `boolean`
  function __isQueued__(taskId) <br> _Check if the task queued to be run later._ | `boolean`
  function __scheduleSyncDelayedTask__(plugin, task) <br> _Schedules a once off task to occur as soon as possible._ | `int`
@@ -53,20 +53,20 @@ Get | Description
 ### Public Methods for [`WolfScriptScheduler`](WolfScriptScheduler.md)
 
 ##### <a id='scheduleasyncrepeatingtask'></a>public  function __scheduleAsyncRepeatingTask__(plugin, task, delay, period)
-_Deprecated: This name is misleading, as it does not schedule "a sync" task, but rather, "an async" task_
+_Deprecated_
 
-_<b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a repeating task. This task will be executed by a thread managed by the scheduler._
+_scheduleAsyncRepeatingTask method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](../plugin/Plugin.md) | Plugin that owns the task
-task | `Runnable` | Task to be executed
-delay | `long` | Delay in server ticks before executing first repeat
-period | `long` | Period in server ticks of the task
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
+task | `Runnable` | task argument
+delay | `long` | delay argument
+period | `long` | period argument
 
-Returns | Description
---- | --- 
-`int` | Task id number (-1 if scheduling failed)
+Returns | 
+--- | 
+`int` |
 
 
 ##### <a id='cancelalltasks'></a>public  function __cancelAllTasks__()
@@ -93,18 +93,15 @@ Returns |
 
 ##### <a id='canceltask'></a>public  function __cancelTask__(taskId)
 
-_Calls a method on the main thread and returns a Future object. This task will be executed by the main server thread. <ul> <li>Note: The Future.get() methods must NOT be called from the main thread. <li>Note2: There is at least an average of 10ms latency until the isDone() method returns true. </ul>_
+_Removes task from scheduler._
 
 Argument | Type | Description  
 --- | --- | --- 
 taskId | `int` | Id number of task to be removed
 
-Returns | Description
---- | --- 
-`void` | Future Future object related to the task /
-    public <T> Future<T> callSyncMethod(Plugin plugin, Callable<T> task);
-
-    /** Removes task from scheduler.
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='iscurrentlyrunning'></a>public  function __isCurrentlyRunning__(taskId)
@@ -134,34 +131,34 @@ Returns | Description
 
 
 ##### <a id='scheduleasyncdelayedtask'></a>public  function __scheduleAsyncDelayedTask__(plugin, task, delay)
-_Deprecated: This name is misleading, as it does not schedule "a sync" task, but rather, "an async" task_
+_Deprecated_
 
-_<b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a once off task to occur after a delay. This task will be executed by a thread managed by the scheduler._
+_scheduleAsyncDelayedTask method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](../plugin/Plugin.md) | Plugin that owns the task
-task | `Runnable` | Task to be executed
-delay | `long` | Delay in server ticks before executing task
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
+task | `Runnable` | task argument
+delay | `long` | delay argument
 
-Returns | Description
---- | --- 
-`int` | Task id number (-1 if scheduling failed)
+Returns | 
+--- | 
+`int` |
 
 
 ##### <a id='scheduleasyncdelayedtask'></a>public  function __scheduleAsyncDelayedTask__(plugin, task)
-_Deprecated: This name is misleading, as it does not schedule "a sync" task, but rather, "an async" task_
+_Deprecated_
 
-_<b>Asynchronous tasks should never access any API in WolfScript. Great care should be taken to assure the thread-safety of asynchronous tasks.</b> <p> Schedules a once off task to occur as soon as possible. This task will be executed by a thread managed by the scheduler._
+_scheduleAsyncDelayedTask method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](../plugin/Plugin.md) | Plugin that owns the task
-task | `Runnable` | Task to be executed
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
+task | `Runnable` | task argument
 
-Returns | Description
---- | --- 
-`int` | Task id number (-1 if scheduling failed)
+Returns | 
+--- | 
+`int` |
 
 
 ##### <a id='schedulesyncdelayedtask'></a>public  function __scheduleSyncDelayedTask__(plugin, task, delay)

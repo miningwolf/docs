@@ -210,7 +210,7 @@ Extends <a href="living/LivingBase.html"><code>LivingBase</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>final var <strong>bitOffset</strong> <br> <em>The Equipment slots</em></td>
+<td>final var <strong>bitOffset</strong> <br> <em>Overall bitwise offsets</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -238,30 +238,8 @@ Extends <a href="living/LivingBase.html"><code>LivingBase</code></a></p>
 <hr>
 <h3 id="public-fields-for-armorstand-armorstand-md-">Public Fields for <a href="ArmorStand.html"><code>ArmorStand</code></a></h3>
 <h5 id="-a-id-bitoffset-a-public-final-var-__bitoffset__"><a id='bitoffset'></a>public final var <strong>bitOffset</strong></h5>
-<p>_The Equipment slots /
-    enum Slot {
-        /<strong> Held Item slot /
-        HOLDING,
-        /</strong> Feet (Boots) slot /
-        FEET,
-        /<strong> Legs (Leggings) slot /
-        LEGS,
-        /</strong> Body (Chestplate) slot /
-        BODY,
-        /** Head (Helmet/Skull) slot /
-        HEAD
-    }</p>
-<pre><code>/** <span class="hljs-type">Disablitity</span> flags <span class="hljs-keyword">for</span> the <span class="hljs-type">Slots</span> /
-enum <span class="hljs-type">Disability</span> {
-    /** <span class="hljs-type">Flags</span> <span class="hljs-keyword">for</span> removing equipment /
-    <span class="hljs-type">REMOVE</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span><span class="hljs-literal">[]</span>{ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">16</span> }),
-    /** <span class="hljs-type">Flags</span> <span class="hljs-keyword">for</span> replacing equipment /
-    <span class="hljs-type">REPLACE</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span><span class="hljs-literal">[]</span>{ <span class="hljs-number">256</span>, <span class="hljs-number">512</span>, <span class="hljs-number">1024</span>, <span class="hljs-number">2048</span>, <span class="hljs-number">4096</span> }),
-    /** <span class="hljs-type">Flags</span> <span class="hljs-keyword">for</span> placing equipment /
-    <span class="hljs-type">PLACE</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span><span class="hljs-literal">[]</span>{ <span class="hljs-number">65536</span>, <span class="hljs-number">131072</span>, <span class="hljs-number">262144</span>, <span class="hljs-number">524288</span>, <span class="hljs-number">1048576</span> });
-
-    /** <span class="hljs-type">Overall</span> bitwise offsets_
-</code></pre><blockquote>
+<p><em>Overall bitwise offsets</em></p>
+<blockquote>
 <p>Returns
  <code>int</code></p>
 </blockquote>

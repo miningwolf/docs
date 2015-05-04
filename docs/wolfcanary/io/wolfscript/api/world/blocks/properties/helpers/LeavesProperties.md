@@ -13,12 +13,12 @@ Leaves properties helper
 Method | Type   
 --- | :--- 
 static function __applyCheckDecay__(block, value) <br> _Applies whether the `Leaves` should check decay or not_ | [`Block`](../../Block.md)
-static function __applyDecayable__(block, value) <br> _Leaves decayable property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyDecayable__(block, value) <br> _Applies whether the `Leaves` is decayable or not_ | [`Block`](../../Block.md)
 static function __applyVariant__(block, value) <br> _Applies variant to the `Leaves`_ | [`Block`](../../Block.md)
 static final var __decayable__ <br> _Leaves decayable property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 static final var __checkDecay__ <br> _Leaves check_decay property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
-static final var __variantOld__ <br> _(Old) Leaves variant property, Values `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
-static final var __variantNew__ <br> _(New) Leaves variant property, Values `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+static final var __variantOld__ <br> _variantOld field_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+static final var __variantNew__ <br> _variantNew field_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
@@ -47,19 +47,7 @@ Returns | Description
 
 ##### <a id='applydecayable'></a>public static function __applyDecayable__(block, value)
 
-_Leaves decayable property, Values: true, false /
-    public static final BlockBooleanProperty decayable = getInstanceFor(OakLeaves, "decayable");
-
-    /** Leaves check_decay property, Values: true, false /
-    public static final BlockBooleanProperty checkDecay = getInstanceFor(OakLeaves, "check_decay");
-
-    /** (Old) Leaves variant property, Values `Variant`<br/> Applies to:<br/> <ul>Oak</ul> <ul>Spruce</ul> <ul>Birch</ul> <ul>Jungle</ul> /
-    public static final BlockEnumProperty variantOld = getInstanceFor(OakLeaves, "variant");
-
-    /** (New) Leaves variant property, Values `Variant`<br/> Applies to:<br/> <ul>Acacia</ul> <ul>Dark Oak</ul> /
-    public static final BlockEnumProperty variantNew = getInstanceFor(AcaciaLeaves, "variant");
-
-    /** Applies whether the `Leaves` is decayable or not_
+_Applies whether the `Leaves` is decayable or not_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -105,14 +93,14 @@ _Leaves check_decay property, Values: true, false_
 
 ##### <a id='variantold'></a>public static final var __variantOld__
 
-_(Old) Leaves variant property, Values `Variant`<br/> Applies to:<br/> <ul>Oak</ul> <ul>Spruce</ul> <ul>Birch</ul> <ul>Jungle</ul>_
+_variantOld field_
 
 >Returns
 >  [`BlockEnumProperty`](../BlockEnumProperty.md)
 
 ##### <a id='variantnew'></a>public static final var __variantNew__
 
-_(New) Leaves variant property, Values `Variant`<br/> Applies to:<br/> <ul>Acacia</ul> <ul>Dark Oak</ul>_
+_variantNew field_
 
 >Returns
 >  [`BlockEnumProperty`](../BlockEnumProperty.md)

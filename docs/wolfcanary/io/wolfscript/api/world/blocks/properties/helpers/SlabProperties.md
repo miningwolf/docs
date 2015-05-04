@@ -11,7 +11,8 @@ Slab properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyHalf__(block, value) <br> _Slab half property, Values: `Half`_ | [`Block`](../../Block.md)
+static function __applyHalf__(block, value) <br> _Applies half to the `Slab`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Half`
 static final var __half__ <br> _Slab half property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyhalf'></a>public static function __applyHalf__(block, value)
 
-_Slab half property, Values: `Half` /
-    public static final BlockEnumProperty half = getInstanceFor(StoneSlab, "half");
-
-    /** Slab halves_
+_Applies half to the `Slab`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -40,6 +38,19 @@ value | `Half` | the `Half` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Half` |
 
 
 ---

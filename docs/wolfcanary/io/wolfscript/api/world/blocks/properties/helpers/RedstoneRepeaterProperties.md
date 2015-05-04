@@ -12,12 +12,12 @@ Redstone Repeater properties helper
 Method | Type   
 --- | :--- 
 static function __applyDelay__(block, value) <br> _Applies delay to the {@code Redstone Repeater}_ | [`Block`](../../Block.md)
-static function __applyLocked__(block, value) <br> _Redstone Repeater locked property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyLocked__(block, value) <br> _Applies whether the {@code Redstone Repeater} is locked or not_ | [`Block`](../../Block.md)
 static final var __locked__ <br> _Redstone Repeater locked property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 static final var __delay__ <br> _Redstone Repeater delay property, Values: 1 - 4_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`DirectionalBlockProperties`](DirectionalBlockProperties.md)__ |
-static function __applyFacing__(block, value) <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -49,13 +49,7 @@ Returns | Description
 
 ##### <a id='applylocked'></a>public static function __applyLocked__(block, value)
 
-_Redstone Repeater locked property, Values: true, false /
-    public static final BlockBooleanProperty locked = getInstanceFor(RedstoneRepeaterOff, "locked");
-
-    /** Redstone Repeater delay property, Values: 1 - 4 /
-    public static final BlockIntegerProperty delay = getInstanceFor(RedstoneRepeaterOff, "delay");
-
-    /** Applies whether the {@code Redstone Repeater} is locked or not_
+_Applies whether the {@code Redstone Repeater} is locked or not_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -91,10 +85,7 @@ _Redstone Repeater delay property, Values: 1 - 4_
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Bed, "facing");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
 
 Argument | Type | Description  
 --- | --- | --- 

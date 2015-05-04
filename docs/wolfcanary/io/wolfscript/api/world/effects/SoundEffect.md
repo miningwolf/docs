@@ -10,7 +10,8 @@ Sound Effects!
 
 Method | Type   
 --- | :--- 
-new __SoundEffect__(type, x, y, z, volume, pitch) <br> _The Sounds!_ | _constructor_
+new __SoundEffect__(type, x, y, z, volume, pitch) <br> _Constructs a new SoundEffect_ | _constructor_
+ readonly property __McName__ <br> _McName property_ | `String`
  var __volume__ <br> _volume field_ | `float`
 
 
@@ -21,7 +22,7 @@ new __SoundEffect__(type, x, y, z, volume, pitch) <br> _The Sounds!_ | _construc
 
 ##### <a id='soundeffect'></a>new __SoundEffect__(type, x, y, z, volume, pitch) 
 
-_The Sounds!_
+_Constructs a new SoundEffect_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -31,6 +32,20 @@ y | `double` | the y coordinate
 z | `double` | the z coordinate
 volume | `float` | the volume of the sound (between 0.0 and 1.0)
 pitch | `float` | the frequency of the sound (between 0.0 and 1.0)
+
+---
+
+### Public Properties for [`SoundEffect`](SoundEffect.md)
+
+##### <a id='mcname'></a>public  readonly property __McName__
+
+_McName property_
+
+Get | 
+--- | 
+`String` |
+
+
 
 ---
 

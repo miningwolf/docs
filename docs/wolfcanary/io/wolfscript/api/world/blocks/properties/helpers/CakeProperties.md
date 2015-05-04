@@ -11,7 +11,7 @@ Cake properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyBites__(block, value) <br> _Cake bites property, Values: 0 - 6_ | [`Block`](../../Block.md)
+static function __applyBites__(block, value) <br> _Applies bites to the `Cake`_ | [`Block`](../../Block.md)
 static final var __bites__ <br> _Cake bites property, Values: 0 - 6_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applybites'></a>public static function __applyBites__(block, value)
 
-_Cake bites property, Values: 0 - 6 /
-    public static final BlockIntegerProperty bites = getInstanceFor(Cake, "bites");
-
-    /** Applies bites to the `Cake`_
+_Applies bites to the `Cake`_
 
 Argument | Type | Description  
 --- | --- | --- 

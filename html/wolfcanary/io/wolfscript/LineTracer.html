@@ -148,11 +148,11 @@
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>LineTracer</strong>(in<em>player, in_range, in_step) <br> _Constructor requiring player, max range, and a stepping value</em></td>
+<td>new <strong>LineTracer</strong>(in<em>player, in_range, in_step) <br> _LineTracer constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>LineTracer</strong>(in<em>location, in_range, in_step) <br> _Constructor requiring location, max range, and a stepping value</em></td>
+<td>new <strong>LineTracer</strong>(in<em>location, in_range, in_step) <br> _LineTracer constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -176,7 +176,7 @@
 <td style="text-align:left"><a href="api/world/blocks/Block.html"><code>Block</code></a></td>
 </tr>
 <tr>
-<td> function <strong>init</strong>(in<em>location, in_range, in_step, in_view_height) <br> _Initialization method</em></td>
+<td> function <strong>init</strong>(in<em>location, in_range, in_step, in_view_height) <br> _init method</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -220,7 +220,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-linetracer-a-new-__linetracer__-in_player-in_range-in_step-"><a id='linetracer'></a>new <strong>LineTracer</strong>(in_player, in_range, in_step)</h5>
-<p><em>Constructor requiring player, max range, and a stepping value</em></p>
+<p><em>LineTracer constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -233,22 +233,22 @@
 <tr>
 <td>in_player</td>
 <td><code>Player</code></td>
-<td>the <code>Player</code> to check Line of Sight for</td>
+<td>in_player argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-linetracer-a-new-__linetracer__-in_location-in_range-in_step-"><a id='linetracer'></a>new <strong>LineTracer</strong>(in_location, in_range, in_step)</h5>
-<p><em>Constructor requiring location, max range, and a stepping value</em></p>
+<p><em>LineTracer constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -261,17 +261,17 @@
 <tr>
 <td>in_location</td>
 <td><a href="api/world/position/Location.html"><code>Location</code></a></td>
-<td>the <a href="api/world/position/Location.html"><code>Location</code></a> to check Line of Sight for</td>
+<td>in_location argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 </tbody>
 </table>
@@ -424,7 +424,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-init-a-public-function-__init__-in_location-in_range-in_step-in_view_height-"><a id='init'></a>public  function <strong>init</strong>(in_location, in_range, in_step, in_view_height)</h5>
-<p><em>Initialization method</em></p>
+<p><em>init method</em></p>
 <table>
 <thead>
 <tr>
@@ -437,22 +437,22 @@
 <tr>
 <td>in_location</td>
 <td><a href="api/world/position/Location.html"><code>Location</code></a></td>
-<td>the <a href="api/world/position/Location.html"><code>Location</code></a> to check Line of Sight for</td>
+<td>in_location argument</td>
 </tr>
 <tr>
 <td>in_range</td>
 <td><code>int</code></td>
-<td>the maximum range to check</td>
+<td>in_range argument</td>
 </tr>
 <tr>
 <td>in_step</td>
 <td><code>double</code></td>
-<td>the stepping value, the amount Y to increase/decrease the further away the checks get</td>
+<td>in_step argument</td>
 </tr>
 <tr>
 <td>in_view_height</td>
 <td><code>double</code></td>
-<td>the View Height to use, a <code>Player</code>&#39;s view height is typically 1.62</td>
+<td>in_view_height argument</td>
 </tr>
 </tbody>
 </table>

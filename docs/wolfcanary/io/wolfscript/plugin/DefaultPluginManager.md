@@ -134,60 +134,7 @@ Returns |
 
 ##### <a id='enablelateplugins'></a>public  function __enableLatePlugins__()
 
-_{@inheritDoc} /
-    @Override
-    public boolean enablePlugin(String name) throws PluginLoadFailedException {
-        PluginDescriptor descriptor = getPluginDescriptor(name);
-        if (descriptor == null) {
-            return false;
-        }
-        if (descriptor.getCurrentState() == PluginState.ENABLED) {
-            return true;
-        }
-        Set<String> deps = dependencies.getDependencies(descriptor.getName());
-        for (String s : deps) {
-            PluginDescriptor dep = getPluginDescriptor(s);
-            if (dep == null) {
-                log.warn("Dependency " + s + " of " + descriptor.getName() + " is unsatisfied; cannot enable.");
-                return false;
-            }
-            if (dep.getCurrentState() == PluginState.ENABLED) {
-                continue;
-            }
-            if (!enablePlugin(s)) {
-                log.warn("Dependency " + s + " of " + descriptor.getName() + " cannot be enabled; cannot enable.");
-                return false;
-            }
-        }
-        if (descriptor.getCurrentState() == PluginState.KNOWN) {
-            descriptor.getPluginLifecycle().load();
-        }
-        log.info("Enabling plugin " + name);
-        boolean enabled = descriptor.getPluginLifecycle().enable();
-        if (!enabled) {
-            log.warn("Unable to enable plugin " + descriptor.getName() + ". Will disable it.");
-            disablePlugin(name);
-            return false;
-        }
-        Wolf.hooks().callHook(new PluginEnable(descriptor.getPlugin()));
-        Set<String> rdeps = dependencies.getDependants(descriptor.getName());
-        for (String s : rdeps) {
-            PluginDescriptor dep = getPluginDescriptor(s);
-            if (dep == null) {
-                //Don't really care... although, shouldn't be possible
-                continue;
-            }
-            if (dep.getCurrentState() == PluginState.ENABLED) {
-                continue;
-            }
-            if (!enablePlugin(s)) {
-                log.warn(s + " (dependent on " + descriptor.getName() + ") could not be enabled");
-            }
-        }
-        return true;
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Returns | 
 --- | 
@@ -196,45 +143,7 @@ Returns |
 
 ##### <a id='getplugin'></a>public  function __getPlugin__(name)
 
-_{@inheritDoc} /
-    @Override
-    public boolean reloadPlugin(String name) throws PluginLoadFailedException, InvalidPluginException {
-        PluginDescriptor descriptor = getPluginDescriptor(name);
-        if (descriptor != null) {
-            disablePlugin(name);
-            log.info("Unloading plugin " + name);
-            descriptor.getPluginLifecycle().unload();
-            descriptor.reloadInf();
-            updateDependencies(descriptor);
-            //Call enable directly instead of enable() to avoid recursing
-            log.info("Loading plugin " + name);
-            descriptor.getPluginLifecycle().load();
-            log.info("Enabling plugin " + name);
-            boolean enabled = descriptor.getPluginLifecycle().enable();
-            if (!enabled) {
-                log.warn("Failed to enable " + name + " after reloading");
-                return false;
-            }
-            Set<String> rdeps = dependencies.getDependants(descriptor.getName());
-            for (String s : rdeps) {
-                PluginDescriptor dep = getPluginDescriptor(s);
-                if (dep == null) {
-                    //Don't really care... although, shouldn't be possible
-                    continue;
-                }
-                if (dep.getCurrentState() == PluginState.KNOWN) {
-                    continue;
-                }
-                if (!reloadPlugin(s)) {
-                    log.warn(s + " (dependent on " + descriptor.getName() + ") could not be reloaded...");
-                }
-            }
-            return true;
-        }
-        return false;
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 

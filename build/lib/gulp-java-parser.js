@@ -35,23 +35,28 @@ module.exports = function (options) {
 };
 
 
+var annotationRegex = '(@.+\\s+)*';
+var docRegex = '(?:\/\\*\\*((?:[^\\/]+)\\*)\\/\\s*)?' + annotationRegex;
+
+var scopeRegex = '(?:(public|private|protected) )?';
+var describeRegex = '((?:(?:static|abstract|final) ?)*)';
+var returnRegex = '(?:([a-zA-Z0-9<>\\.\\?\$\\[\\]]+) )?';
+var methodNameRegex = '(?:([a-zA-Z]+)\\s*)';
+var argRegex = '\\(([^\\)]*)\\)';
+var blockRegex = '[\\s]*(?:;|{([^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*[^{}]*)})';
+
 var typeRegex = '[a-zA-Z0-9<>\\.\\?\\$\\[\\]]+';
 var blockRegex = '[\\s]*(?:;|{([^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*(?:{[^{}]*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*}[^{}]*)*[^{}]*)})';
 
-var docRegex = '(?:\\/\\*\\s?\\*([\\S\\s]*?)\\*\\/[\\r\\n]*(?:\\s*)((?:@.+[\\s]*)*)*)*';
-
 var packageRegex = new RegExp(docRegex + '(?:\\s*package\\s*)([\\w|.]+)', 'm');
 var importRegex = new RegExp(/(?:\s*import )(?:static +)?([\w|.|*]+)/g);
-
-var classRegex = new RegExp(docRegex + '(?:(public|private|protected) )?((?:(?:static|abstract|final) ?)*)(class|interface|enum) (' + typeRegex + ') (?:extends ((?:' + typeRegex + '),?)+ )?(?:implements ((?:[a-zA-Z0-9\\.<>\\?\\$])+,?)+ )?' + blockRegex, 'gm');
-//                             access modifier              return value             name
-var methodRegex = new RegExp(docRegex + '(?:(public|private|protected) )?((?:static|abstract|final) ?)*(?:(' + typeRegex + ') )?([a-zA-Z]+)\\(([^\\)]*)\\)' + blockRegex, 'gm');
-
-var fieldRegex = new RegExp(docRegex + '^(?:[^s]*(public|private|protected) )?((?:(?:static|abstract|final) ?)*)(' + typeRegex + ') ([a-zA-Z0-9]+)(?:[^(){}=;]*)?[;=]', 'gm');
+var classRegex = new RegExp(docRegex  + '(?:(public|private|protected) )?((?:(?:static|abstract|final) ?)*)(class|interface|enum) (' + typeRegex + ') (?:extends ((?:' + typeRegex + '),?)+ )?(?:implements ((?:[a-zA-Z0-9\\.<>\\?\\$])+,?)+ )?' + blockRegex, 'gm');
+var methodRegex = new RegExp(docRegex  + scopeRegex + describeRegex + returnRegex + methodNameRegex + argRegex + blockRegex, 'gm');
+var fieldRegex = new RegExp(docRegex  + '^(?:[^s]*(public|private|protected) )?((?:(?:static|abstract|final) ?)*)(' + typeRegex + ') ([a-zA-Z0-9]+)(?:[^(){}=;]*)?[;=]', 'gm');
 var enumRegex = new RegExp(docRegex + '([^\\s\(\\)]*)(?:\\s*\\((\\S*)\\))?,', 'gm');
 //console.log("package: " + packageRegex);
 //console.log("class: " + classRegex);
-//console.log("method: " + methodRegex);
+console.log("method: " + methodRegex);
 //console.log("field: " + fieldRegex);
 //console.log("enum: " + enumRegex);
 function javaParser(sourcecode) {

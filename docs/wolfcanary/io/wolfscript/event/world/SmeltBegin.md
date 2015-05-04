@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-SmeltBegin <p/> Called when a [`Furnace`](../../api/world/blocks/Furnace.md) begins to smelts an Item
+class SmeltBegin
 
 Method | Type   
 --- | :--- 

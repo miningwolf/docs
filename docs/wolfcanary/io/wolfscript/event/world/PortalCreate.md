@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-PortalCreate<br/> Contains information about a portal being created
+class PortalCreate
 
 Method | Type   
 --- | :--- 

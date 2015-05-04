@@ -11,7 +11,7 @@ Standing Sign properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyRotation__(block, value) <br> _Standing Sign rotation property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyRotation__(block, value) <br> _Applies rotation to the {@code Standing Sign}_ | [`Block`](../../Block.md)
 static function __applyRotation__(block, value) <br> _Applies rotation to the {@code Standing Sign}_ | [`Block`](../../Block.md)
 static final var __rotation__ <br> _Standing Sign rotation property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
@@ -28,10 +28,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyrotation'></a>public static function __applyRotation__(block, value)
 
-_Standing Sign rotation property, Values: 0 - 15 /
-    public static final BlockIntegerProperty rotation = getInstanceFor(StandingSign, "rotation");
-
-    /** Applies rotation to the {@code Standing Sign}_
+_Applies rotation to the {@code Standing Sign}_
 
 Argument | Type | Description  
 --- | --- | --- 

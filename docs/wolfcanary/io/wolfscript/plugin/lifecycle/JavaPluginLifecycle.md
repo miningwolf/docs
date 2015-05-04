@@ -17,7 +17,7 @@ __Inherited items from [`PluginLifecycleBase`](PluginLifecycleBase.md)__ |
 new __PluginLifecycleBase__(desc) <br> _PluginLifecycleBase constructor_ | _constructor_
  function __disable__() <br> _{@inheritDoc}_ | `boolean`
  function __enable__() <br> _{@inheritDoc}_ | `boolean`
- function __unload__() <br> _Implement this method in order to do actual loading. Be sure to set the plugin object in_ | `void`
+ function __unload__() <br> _{@inheritDoc}_ | `void`
 
 
 
@@ -70,21 +70,7 @@ Returns |
 
 ##### <a id='unload'></a>public  function __unload__()
 
-_Implement this method in order to do actual loading. Be sure to set the plugin object in `PluginLifecycleBase#desc` /
-    protected abstract void _load() throws PluginLoadFailedException;
-
-    /** {@inheritDoc} /
-    public Plugin load() throws PluginLoadFailedException {
-        unload();
-        _load();
-        desc.setCurrentState(PluginState.DISABLED);
-        return desc.getPlugin();
-    }
-
-    /** Implement this method in order to do specific unloading code /
-    protected abstract void _unload();
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Returns | 
 --- | 

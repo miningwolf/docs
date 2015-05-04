@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Load World Hook <p/> Called when a [`World`](../../api/world/World.md) is loaded and initialized
+class LoadWorld
 
 Method | Type   
 --- | :--- 

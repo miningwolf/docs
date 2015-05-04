@@ -161,7 +161,7 @@ Extends <a href="FileConfiguration.html"><code>FileConfiguration</code></a></p>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>new <strong>FileConfiguration</strong>() <br> <em>This value specified that the system default encoding should be</em></td>
+<td>new <strong>FileConfiguration</strong>() <br> <em>Creates an empty <a href="FileConfiguration.html"><code>FileConfiguration</code></a> with no default values.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@ Extends <a href="FileConfiguration.html"><code>FileConfiguration</code></a></p>
 <td style="text-align:left"><a href="FileConfigurationOptions.html"><code>FileConfigurationOptions</code></a></td>
 </tr>
 <tr>
-<td>abstract function <strong>saveToString</strong>() <br> <em>Saves this <a href="FileConfiguration.html"><code>FileConfiguration</code></a> to the specified location.</em></td>
+<td>abstract function <strong>saveToString</strong>() <br> <em>Saves this <a href="FileConfiguration.html"><code>FileConfiguration</code></a> to a string, and returns it.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -590,7 +590,7 @@ Extends <a href="FileConfiguration.html"><code>FileConfiguration</code></a></p>
 <hr>
 <h3 id="public-constructors-for-fileconfiguration-fileconfiguration-md-">Public Constructors for <a href="FileConfiguration.html"><code>FileConfiguration</code></a></h3>
 <h5 id="-a-id-fileconfiguration-a-new-__fileconfiguration__-"><a id='fileconfiguration'></a>new <strong>FileConfiguration</strong>()</h5>
-<p><em>This value specified that the system default encoding should be completely ignored, as it cannot handle the ASCII character set, or it is a strict-subset of UTF8 already (plain ASCII).</em></p>
+<p><em>Creates an empty <a href="FileConfiguration.html"><code>FileConfiguration</code></a> with no default values.</em></p>
 <h5 id="-a-id-fileconfiguration-a-new-__fileconfiguration__-defaults-"><a id='fileconfiguration'></a>new <strong>FileConfiguration</strong>(defaults)</h5>
 <p><em>Creates an empty <a href="FileConfiguration.html"><code>FileConfiguration</code></a> using the specified <a href="../Configuration.html"><code>Configuration</code></a> as a source for all default values.</em></p>
 <table>
@@ -627,7 +627,7 @@ Extends <a href="FileConfiguration.html"><code>FileConfiguration</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-savetostring-a-public-abstract-function-__savetostring__-"><a id='savetostring'></a>public abstract function <strong>saveToString</strong>()</h5>
-<p><em>Saves this <a href="FileConfiguration.html"><code>FileConfiguration</code></a> to the specified location. <p> If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown. <p> This method will save using the system default encoding, or possibly using UTF8.</em></p>
+<p><em>Saves this <a href="FileConfiguration.html"><code>FileConfiguration</code></a> to a string, and returns it.</em></p>
 <table>
 <thead>
 <tr>

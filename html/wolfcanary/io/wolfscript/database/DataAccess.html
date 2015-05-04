@@ -78,14 +78,15 @@
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/converter/0.html' class=''>converter</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
+<li><a href='../../../../wolfcanary/io/wolfscript/database/ColumnType.html'>ColumnType</a></li>
 <li class='active'><a href='../../../../wolfcanary/io/wolfscript/database/DataAccess.html'>DataAccess</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/database/DataType.html'>DataType</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/Database.html'>Database</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/DatabaseLoader.html'>DatabaseLoader</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/JdbcConnectionManager.html'>JdbcConnectionManager</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/LocationDataAccess.html'>LocationDataAccess</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/PositionDataAccess.html'>PositionDataAccess</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/SQLType.html'>SQLType</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/database/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/exceptions/0.html' class=''>database.exceptions</a></li> 
 <li class='divider'></li>
@@ -161,7 +162,7 @@
 <td style="text-align:left"><a href="DataAccess.html"><code>DataAccess</code></a></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Name</strong> <br> <em>Get: Load a Data set into this DataAccess object</em></td>
+<td>final readonly property <strong>Name</strong> <br> <em>Get: This shall return the name of the Table this DataAccess belongs to</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -256,7 +257,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-final-readonly-property-__name__"><a id='name'></a>public final readonly property <strong>Name</strong></h5>
-<p><em>Get: Load a Data set into this DataAccess object</em></p>
+<p><em>Get: This shall return the name of the Table this DataAccess belongs to</em></p>
 <table>
 <thead>
 <tr>
@@ -267,7 +268,7 @@
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>HashMap that maps the Column meta data to the data present in database.</td>
+<td>the table name</td>
 </tr>
 </tbody>
 </table>

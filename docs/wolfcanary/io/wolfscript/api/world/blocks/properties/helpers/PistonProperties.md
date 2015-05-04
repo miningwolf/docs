@@ -7,12 +7,12 @@
 
 ### Class Overview
 
-Piston properties helper<br/> Sticky Pistons and normal Pistons are 2 different Block ID (not a property change)
+class PistonProperties
 
 Method | Type   
 --- | :--- 
 static function __applyExtended__(block, value) <br> _Applies whether the `Piston` is extended or not_ | [`Block`](../../Block.md)
-static function __applyFacing__(block, value) <br> _Piston facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Piston`_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Piston facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 static final var __extended__ <br> _Piston extended property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
@@ -43,13 +43,7 @@ Returns | Description
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Piston facing property, Values: [`BlockFace`](../../BlockFace.md) /
-    public static final BlockDirectionProperty facing = getInstanceFor(Piston, "facing");
-
-    /** Piston extended property, Values: true, false /
-    public static final BlockBooleanProperty extended = getInstanceFor(Piston, "extended");
-
-    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Piston`_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Piston`_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -165,7 +165,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> var <strong>player</strong> <br> <em>Playername for this</em></td>
+<td> var <strong>player</strong> <br> <em>Playername for this whitelist entry</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <td style="text-align:left"><a href="../database/DataAccess.html"><code>DataAccess</code></a></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Name</strong> <br> <em>Get: Load a Data set into this DataAccess object</em></td>
+<td>final readonly property <strong>Name</strong> <br> <em>Get: This shall return the name of the Table this DataAccess belongs to</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -252,7 +252,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
  <code>String</code></p>
 </blockquote>
 <h5 id="-a-id-player-a-public-var-__player__"><a id='player'></a>public  var <strong>player</strong></h5>
-<p><em>Playername for this <p/> /** Playername for this whitelist entry</em></p>
+<p><em>Playername for this whitelist entry</em></p>
 <blockquote>
 <p>Returns
  <code>String</code></p>
@@ -319,7 +319,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-final-readonly-property-__name__"><a id='name'></a>public final readonly property <strong>Name</strong></h5>
-<p><em>Get: Load a Data set into this DataAccess object</em></p>
+<p><em>Get: This shall return the name of the Table this DataAccess belongs to</em></p>
 <table>
 <thead>
 <tr>
@@ -330,7 +330,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>HashMap that maps the Column meta data to the data present in database.</td>
+<td>the table name</td>
 </tr>
 </tbody>
 </table>

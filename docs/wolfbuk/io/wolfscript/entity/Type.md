@@ -6,10 +6,7 @@
 
 ### Enum Overview
 
-A wild tameable cat /
-public interface Ocelot extends Animals, Tameable {
-
-    /** Gets the current type of this cat.
+Represents the various different cat types there are.
 
 Item | Type   
 --- | :--- 

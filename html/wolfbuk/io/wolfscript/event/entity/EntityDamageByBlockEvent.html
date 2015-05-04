@@ -83,7 +83,6 @@
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreatureSpawnEvent.html'>CreatureSpawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreeperPowerEvent.html'>CreeperPowerEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/DamageCause.html'>DamageCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityBreakDoorEvent.html'>EntityBreakDoorEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityChangeBlockEvent.html'>EntityChangeBlockEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCombustByBlockEvent.html'>EntityCombustByBlockEvent</a></li>
@@ -116,15 +115,11 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerDeathEvent.html'>PlayerDeathEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerLeashEntityEvent.html'>PlayerLeashEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PotionSplashEvent.html'>PotionSplashEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PowerCause.html'>PowerCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileHitEvent.html'>ProjectileHitEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileLaunchEvent.html'>ProjectileLaunchEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/RegainReason.html'>RegainReason</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepDyeWoolEvent.html'>SheepDyeWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepRegrowWoolEvent.html'>SheepRegrowWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SlimeSplitEvent.html'>SlimeSplitEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SpawnReason.html'>SpawnReason</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/TargetReason.html'>TargetReason</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/hanging/0.html' class=''>event.hanging</a></li> 
 <li class='divider'></li>
@@ -193,14 +188,6 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>new <strong>EntityDamageByBlockEvent</strong>(Block, Entity, DamageCause, int) <br> <em>EntityDamageByBlockEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
-<td>new <strong>EntityDamageByBlockEvent</strong>(Block, Entity, DamageCause, double) <br> <em>EntityDamageByBlockEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
 <td>new <strong>EntityDamageByBlockEvent</strong>(Block, Entity, DamageCause, Map, Map, Function) <br> <em>EntityDamageByBlockEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
@@ -217,23 +204,15 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>new <strong>EntityDamageEvent</strong>(Entity, DamageCause, int) <br> <em>EntityDamageEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
-<td>new <strong>EntityDamageEvent</strong>(Entity, DamageCause, double) <br> <em>EntityDamageEvent constructor</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
 <td>new <strong>EntityDamageEvent</strong>(Entity, DamageCause, Map, Map, Function) <br> <em>EntityDamageEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td> readonly property <strong>Cause</strong> <br> <em>Get: This method exists for legacy reasons to provide backwards</em></td>
+<td> readonly property <strong>Cause</strong> <br> <em>Get: Gets the cause of the damage.</em></td>
 <td style="text-align:left"><code>DamageCause</code></td>
 </tr>
 <tr>
-<td>  property <strong>Damage</strong> <br> <em>Get: Gets the original damage for the specified modifier, as defined at this<br>Set: This method exists for legacy reasons to provide backwards</em></td>
+<td>  property <strong>Damage</strong> <br> <em>Get: Gets the raw amount of damage caused by the event<br>Set: Sets the raw amount of damage caused by the event.</em></td>
 <td style="text-align:left"><code>double</code></td>
 </tr>
 <tr>
@@ -301,7 +280,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -309,6 +288,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <hr>
 <h3 id="public-constructors-for-entitydamagebyblockevent-entitydamagebyblockevent-md-">Public Constructors for <a href="EntityDamageByBlockEvent.html"><code>EntityDamageByBlockEvent</code></a></h3>
 <h5 id="-a-id-entitydamagebyblockevent-a-new-__entitydamagebyblockevent__-block-entity-damagecause-int-"><a id='entitydamagebyblockevent'></a>new <strong>EntityDamageByBlockEvent</strong>(Block, Entity, DamageCause, int)</h5>
+<p><em>Deprecated</em></p>
 <p><em>EntityDamageByBlockEvent constructor</em></p>
 <table>
 <thead>
@@ -342,6 +322,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-entitydamagebyblockevent-a-new-__entitydamagebyblockevent__-block-entity-damagecause-double-"><a id='entitydamagebyblockevent'></a>new <strong>EntityDamageByBlockEvent</strong>(Block, Entity, DamageCause, double)</h5>
+<p><em>Deprecated</em></p>
 <p><em>EntityDamageByBlockEvent constructor</em></p>
 <table>
 <thead>
@@ -438,6 +419,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <hr>
 <h3 id="public-constructors-for-entitydamageevent-entitydamageevent-md-">Public Constructors for <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></h3>
 <h5 id="-a-id-entitydamageevent-a-new-__entitydamageevent__-entity-damagecause-int-"><a id='entitydamageevent'></a>new <strong>EntityDamageEvent</strong>(Entity, DamageCause, int)</h5>
+<p><em>Deprecated</em></p>
 <p><em>EntityDamageEvent constructor</em></p>
 <table>
 <thead>
@@ -466,6 +448,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-entitydamageevent-a-new-__entitydamageevent__-entity-damagecause-double-"><a id='entitydamageevent'></a>new <strong>EntityDamageEvent</strong>(Entity, DamageCause, double)</h5>
+<p><em>Deprecated</em></p>
 <p><em>EntityDamageEvent constructor</em></p>
 <table>
 <thead>
@@ -534,7 +517,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <hr>
 <h3 id="public-properties-for-entitydamageevent-entitydamageevent-md-">Public Properties for <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></h3>
 <h5 id="-a-id-cause-a-public-readonly-property-__cause__"><a id='cause'></a>public  readonly property <strong>Cause</strong></h5>
-<p><em>Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.</em></p>
+<p><em>Get: Gets the cause of the damage.</em></p>
 <table>
 <thead>
 <tr>
@@ -550,7 +533,7 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-damage-a-public-property-__damage__"><a id='damage'></a>public   property <strong>Damage</strong></h5>
-<p><em>Get: Gets the original damage for the specified modifier, as defined at this event&#39;s construction.<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.</em></p>
+<p><em>Get: Gets the raw amount of damage caused by the event<br>Set: Sets the raw amount of damage caused by the event. <p> For compatibility this also recalculates the modifiers and scales them by the difference between the modifier for the previous damage value and the new one.</em></p>
 <table>
 <thead>
 <tr>
@@ -561,17 +544,11 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <tbody>
 <tr>
 <td><code>double</code></td>
-<td>the (rounded) damage /</td>
+<td>The raw amount of damage caused by the event</td>
 </tr>
 </tbody>
 </table>
-<pre><code>@Deprecated
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> _INVALID_getDamage() {
-    <span class="hljs-keyword">return</span> NumberConversions.<span class="hljs-built_in">ceil</span>(getDamage());
-}
-
-<span class="hljs-comment">/** Sets the raw amount of damage caused by the event. &lt;p&gt; For compatibility this also recalculates the modifiers and scales them by the difference between the modifier for the previous damage value and the new one.</span>
-</code></pre><table>
+<table>
 <thead>
 <tr>
 <th>Set</th>
@@ -793,18 +770,17 @@ Extends <a href="EntityDamageEvent.html"><code>EntityDamageEvent</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

@@ -12,7 +12,8 @@ Method | Type
 --- | :--- 
 new __MapRenderer__() <br> _Initialize the map renderer base to be non-contextual. See {@link_ | _constructor_
 new __MapRenderer__(contextual) <br> _Initialize the map renderer base with the given contextual status._ | _constructor_
- function __initialize__(map) <br> _Get whether the renderer is contextual, i.e. has different canvases for_ | `void`
+ function __initialize__(map) <br> _Initialize this MapRenderer for the given map._ | `void`
+ function __isContextual__() <br> _isContextual method_ | `boolean`
  function __render__(map, canvas, player) <br> _render method_ | `void`
 
 
@@ -40,20 +41,24 @@ contextual | `boolean` | Whether the renderer is contextual. See `#isContextual(
 
 ##### <a id='initialize'></a>public  function __initialize__(map)
 
-_Get whether the renderer is contextual, i.e. has different canvases for different players._
+_Initialize this MapRenderer for the given map._
 
 Argument | Type | Description  
 --- | --- | --- 
 map | [`MapView`](MapView.md) | The MapView being initialized.
 
-Returns | Description
---- | --- 
-`void` | True if contextual, false otherwise. /
-    final public boolean isContextual() {
-        return contextual;
-    }
+Returns | 
+--- | 
+`void` |
 
-    /** Initialize this MapRenderer for the given map.
+
+##### <a id='iscontextual'></a>public  function __isContextual__()
+
+_isContextual method_
+
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='render'></a>public  function __render__(map, canvas, player)

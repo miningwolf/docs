@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Tree Grow Hook <p/> Called with a sapling attempts to become a Tree<br> This does not signal that a tree can grow or how it would grow.
+class TreeGrow
 
 Method | Type   
 --- | :--- 

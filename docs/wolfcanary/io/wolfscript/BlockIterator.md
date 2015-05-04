@@ -12,14 +12,14 @@ Iterator wrapper for a LineTracer
 Method | Type   
 --- | :--- 
 new __BlockIterator__(in_player) <br> _Constructor requiring player, uses default values_ | _constructor_
-new __BlockIterator__(in_player, doAir) <br> _Constructor requiring player, uses default values_ | _constructor_
-new __BlockIterator__(in_location) <br> _Constructor requiring location, uses default values_ | _constructor_
+new __BlockIterator__(in_player, doAir) <br> _BlockIterator constructor_ | _constructor_
+new __BlockIterator__(in_location) <br> _BlockIterator constructor_ | _constructor_
 new __BlockIterator__(in_location, doAir) <br> _Constructor requiring location, uses default values_ | _constructor_
-new __BlockIterator__(in_player, in_range, in_step) <br> _Constructor requiring player, max range, and a stepping value_ | _constructor_
-new __BlockIterator__(in_player, in_range, in_step, doAir) <br> _Constructor requiring player, max range, and a stepping value_ | _constructor_
-new __BlockIterator__(in_location, in_range, in_step) <br> _Constructor requiring location, max range, and a stepping value_ | _constructor_
-new __BlockIterator__(in_location, in_range, in_step, doAir) <br> _Constructor requiring location, max range, and a stepping value_ | _constructor_
-new __BlockIterator__(tracer) <br> _Creats a BlockIterator from a [`LineTracer`](LineTracer.md)_ | _constructor_
+new __BlockIterator__(in_player, in_range, in_step) <br> _BlockIterator constructor_ | _constructor_
+new __BlockIterator__(in_player, in_range, in_step, doAir) <br> _BlockIterator constructor_ | _constructor_
+new __BlockIterator__(in_location, in_range, in_step) <br> _BlockIterator constructor_ | _constructor_
+new __BlockIterator__(in_location, in_range, in_step, doAir) <br> _BlockIterator constructor_ | _constructor_
+new __BlockIterator__(tracer) <br> _BlockIterator constructor_ | _constructor_
 new __BlockIterator__(tracer, doAir) <br> _Creats a BlockIterator from a [`LineTracer`](LineTracer.md)_ | _constructor_
  function __hasNext__() <br> _Checks if there are more [`Block`](api/world/blocks/Block.md)s in line_ | `boolean`
  function __next__() <br> _Gets the next [`Block`](api/world/blocks/Block.md) in line_ | [`Block`](api/world/blocks/Block.md)
@@ -44,20 +44,20 @@ in_player | `Player` | the `Player` to check Line of Sight for
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_player, doAir) 
 
-_Constructor requiring player, uses default values<br /> Skips air blocks_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_player | `Player` | the `Player` to check Line of Sight for
-doAir | `boolean` | set to `true` to include Air blocks
+in_player | `Player` | in_player argument
+doAir | `boolean` | doAir argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_location) 
 
-_Constructor requiring location, uses default values<br /> Skips air blocks_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
+in_location | [`Location`](api/world/position/Location.md) | in_location argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_location, doAir) 
 
@@ -70,53 +70,53 @@ doAir | `boolean` | set to `true` to include Air blocks
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_player, in_range, in_step) 
 
-_Constructor requiring player, max range, and a stepping value<br /> Skips air blocks_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_player | `Player` | the `Player` to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+in_player | `Player` | in_player argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_player, in_range, in_step, doAir) 
 
-_Constructor requiring player, max range, and a stepping value_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_player | `Player` | the `Player` to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
-doAir | `boolean` | set to `true` to include Air blocks
+in_player | `Player` | in_player argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
+doAir | `boolean` | doAir argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_location, in_range, in_step) 
 
-_Constructor requiring location, max range, and a stepping value<br /> Skips air blocks_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+in_location | [`Location`](api/world/position/Location.md) | in_location argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(in_location, in_range, in_step, doAir) 
 
-_Constructor requiring location, max range, and a stepping value_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
-in_range | `int` | the maximum range to check
-in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
-doAir | `boolean` | set to `true` to include Air blocks
+in_location | [`Location`](api/world/position/Location.md) | in_location argument
+in_range | `int` | in_range argument
+in_step | `double` | in_step argument
+doAir | `boolean` | doAir argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(tracer) 
 
-_Creats a BlockIterator from a [`LineTracer`](LineTracer.md)<br /> Skips air blocks_
+_BlockIterator constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-tracer | [`LineTracer`](LineTracer.md) | the LineTracer to use with this BlockIterator
+tracer | [`LineTracer`](LineTracer.md) | tracer argument
 
 ##### <a id='blockiterator'></a>new __BlockIterator__(tracer, doAir) 
 

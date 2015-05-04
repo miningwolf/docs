@@ -11,7 +11,7 @@ A container for a color palette. This class is immutable; the set methods return
 
 Method | Type   
 --- | :--- 
-  property __Red__ <br> _Get: White, or (0xFF,0xFF,0xFF) in (R,G,B)<br>Set: Creates a new Color object with specified component_ | `int`
+  property __Red__ <br> _Get: Gets the red component<br>Set: Creates a new Color object with specified component_ | `int`
   property __Green__ <br> _Get: Gets the green component<br>Set: Creates a new Color object with specified component_ | `int`
   property __Blue__ <br> _Get: Gets the blue component<br>Set: Creates a new Color object with specified component_ | `int`
  function __asBGR__() <br> _asBGR method_ | `int`
@@ -49,62 +49,7 @@ static final var __ORANGE__ <br> _ORANGE field_ | [`Color`](Color.md)
 
 ##### <a id='red'></a>public   property __Red__
 
-_Get: White, or (0xFF,0xFF,0xFF) in (R,G,B) /
-    public static final Color WHITE = fromRGB(0xFFFFFF);
-
-    /** Silver, or (0xC0,0xC0,0xC0) in (R,G,B) /
-    public static final Color SILVER = fromRGB(0xC0C0C0);
-
-    /** Gray, or (0x80,0x80,0x80) in (R,G,B) /
-    public static final Color GRAY = fromRGB(0x808080);
-
-    /** Black, or (0x00,0x00,0x00) in (R,G,B) /
-    public static final Color BLACK = fromRGB(0x000000);
-
-    /** Red, or (0xFF,0x00,0x00) in (R,G,B) /
-    public static final Color RED = fromRGB(0xFF0000);
-
-    /** Maroon, or (0x80,0x00,0x00) in (R,G,B) /
-    public static final Color MAROON = fromRGB(0x800000);
-
-    /** Yellow, or (0xFF,0xFF,0x00) in (R,G,B) /
-    public static final Color YELLOW = fromRGB(0xFFFF00);
-
-    /** Olive, or (0x80,0x80,0x00) in (R,G,B) /
-    public static final Color OLIVE = fromRGB(0x808000);
-
-    /** Lime, or (0x00,0xFF,0x00) in (R,G,B) /
-    public static final Color LIME = fromRGB(0x00FF00);
-
-    /** Green, or (0x00,0x80,0x00) in (R,G,B) /
-    public static final Color GREEN = fromRGB(0x008000);
-
-    /** Aqua, or (0x00,0xFF,0xFF) in (R,G,B) /
-    public static final Color AQUA = fromRGB(0x00FFFF);
-
-    /** Teal, or (0x00,0x80,0x80) in (R,G,B) /
-    public static final Color TEAL = fromRGB(0x008080);
-
-    /** Blue, or (0x00,0x00,0xFF) in (R,G,B) /
-    public static final Color BLUE = fromRGB(0x0000FF);
-
-    /** Navy, or (0x00,0x00,0x80) in (R,G,B) /
-    public static final Color NAVY = fromRGB(0x000080);
-
-    /** Fuchsia, or (0xFF,0x00,0xFF) in (R,G,B) /
-    public static final Color FUCHSIA = fromRGB(0xFF00FF);
-
-    /** Purple, or (0x80,0x00,0x80) in (R,G,B) /
-    public static final Color PURPLE = fromRGB(0x800080);
-
-    /** Orange, or (0xFF,0xA5,0x00) in (R,G,B) /
-    public static final Color ORANGE = fromRGB(0xFFA500);
-
-    private final byte red;
-    private final byte green;
-    private final byte blue;
-
-    /** Creates a new Color object from a red, green, and blue<br>Set: Creates a new Color object with specified component_
+_Get: Gets the red component<br>Set: Creates a new Color object with specified component_
 
 Get | Description
 --- | --- 

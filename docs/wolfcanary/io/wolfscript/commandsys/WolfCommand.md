@@ -12,7 +12,7 @@ Contains methods common to all types of chat commands.
 Method | Type   
 --- | :--- 
 new __WolfCommand__(meta, owner, translator) <br> _Creates a new WolfScript command complete with localehelper for translating meta info,_ | _constructor_
-new __WolfCommand__(meta, owner, translator, tabComplete) <br> _Creates a new WolfScript command complete with localehelper for translating meta info,_ | _constructor_
+new __WolfCommand__(meta, owner, translator, tabComplete) <br> _WolfCommand constructor_ | _constructor_
  readonly property __LocaleDescription__ <br> _LocaleDescription property_ | `String`
  readonly property __SubCommands__ <br> _Get: Creates a recursively created list of all subcommands and their subcommands etc etc_ | `List<WolfCommand>`
  readonly property __SubCommands__ <br> _Get: Returns the list of subcommands._ | `List<WolfCommand>`
@@ -42,14 +42,14 @@ translator | `LocaleHelper` | the `LocaleHelper` translator instance
 
 ##### <a id='wolfcommand'></a>new __WolfCommand__(meta, owner, translator, tabComplete) 
 
-_Creates a new WolfScript command complete with localehelper for translating meta info, command owner and the meta data from the Command annotation_
+_WolfCommand constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-meta | `Command` | the `Command`
-owner | [`CommandOwner`](CommandOwner.md) | the [`CommandOwner`](CommandOwner.md)
-translator | `LocaleHelper` | the `LocaleHelper` translator instance
-tabComplete | [`TabCompleteDispatch`](TabCompleteDispatch.md) | the [`TabCompleteDispatch`](TabCompleteDispatch.md) if one is specified and usable (can be null)<br/> If no TabCompleteDispatch is present, an implementation can override {@link #tabComplete(io.wolfscript.chat.MessageReceiver, String[])} instead
+meta | `Command` | meta argument
+owner | [`CommandOwner`](CommandOwner.md) | owner argument
+translator | `LocaleHelper` | translator argument
+tabComplete | [`TabCompleteDispatch`](TabCompleteDispatch.md) | tabComplete argument
 
 ---
 

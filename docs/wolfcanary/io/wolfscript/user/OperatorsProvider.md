@@ -13,11 +13,11 @@ Method | Type
 new __OperatorsProvider__() <br> _OperatorsProvider constructor_ | _constructor_
  readonly property __Ops__ <br> _Get: Gets an array of all Operators_ | `String[]`
  readonly property __Size__ <br> _Get: gets the current size of the ops list_ | `int`
- function __addPlayer__(entry) <br> _Adds a new operators entry_ | `void`
- function __isOpped__(nameOrUUID) <br> _Check if a given Player name or UUID is opped._ | `boolean`
+ function __addPlayer__(entry) <br> _addPlayer method_ | `void`
+ function __isOpped__(nameOrUUID) <br> _isOpped method_ | `boolean`
  function __isOpped__(playerReference) <br> _isOpped method_ | `boolean`
  function __reload__() <br> _Reload the ops from database_ | `void`
- function __removePlayer__(entry) <br> _Removes the given player from the ops list_ | `void`
+ function __removePlayer__(entry) <br> _removePlayer method_ | `void`
 
 
 
@@ -60,11 +60,11 @@ Get | Description
 
 ##### <a id='addplayer'></a>public  function __addPlayer__(entry)
 
-_Adds a new operators entry_
+_addPlayer method_
 
 Argument | Type | Description  
 --- | --- | --- 
-entry | `String` | the player uuid/name you want to add
+entry | `String` | entry argument
 
 Returns | 
 --- | 
@@ -73,15 +73,15 @@ Returns |
 
 ##### <a id='isopped'></a>public  function __isOpped__(nameOrUUID)
 
-_Check if a given Player name or UUID is opped._
+_isOpped method_
 
 Argument | Type | Description  
 --- | --- | --- 
-nameOrUUID | `String` | the uuid/name of a player
+nameOrUUID | `String` | nameOrUUID argument
 
-Returns | Description
---- | --- 
-`boolean` | true if player is opped, false otherwise
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='isopped'></a>public  function __isOpped__(playerReference)
@@ -108,11 +108,11 @@ Returns |
 
 ##### <a id='removeplayer'></a>public  function __removePlayer__(entry)
 
-_Removes the given player from the ops list_
+_removePlayer method_
 
 Argument | Type | Description  
 --- | --- | --- 
-entry | `String` | the player uuid/name you want to remove
+entry | `String` | entry argument
 
 Returns | 
 --- | 

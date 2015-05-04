@@ -161,7 +161,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <td style="text-align:left"><a href="../database/DataAccess.html"><code>DataAccess</code></a></td>
 </tr>
 <tr>
-<td> var <strong>path</strong> <br> <em>Create this data access with an additional suffix</em></td>
+<td> var <strong>path</strong> <br> <em>Node for this Permission.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -197,7 +197,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <td style="text-align:left"><a href="../database/DataAccess.html"><code>DataAccess</code></a></td>
 </tr>
 <tr>
-<td>final readonly property <strong>Name</strong> <br> <em>Get: Load a Data set into this DataAccess object</em></td>
+<td>final readonly property <strong>Name</strong> <br> <em>Get: This shall return the name of the Table this DataAccess belongs to</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <hr>
 <h3 id="public-fields-for-permissiondataaccess-permissiondataaccess-md-">Public Fields for <a href="PermissionDataAccess.html"><code>PermissionDataAccess</code></a></h3>
 <h5 id="-a-id-path-a-public-var-__path__"><a id='path'></a>public  var <strong>path</strong></h5>
-<p><em>Create this data access with an additional suffix</em></p>
+<p><em>Node for this Permission.</em></p>
 <blockquote>
 <p>Returns
  <code>String</code></p>
@@ -355,7 +355,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-final-readonly-property-__name__"><a id='name'></a>public final readonly property <strong>Name</strong></h5>
-<p><em>Get: Load a Data set into this DataAccess object</em></p>
+<p><em>Get: This shall return the name of the Table this DataAccess belongs to</em></p>
 <table>
 <thead>
 <tr>
@@ -366,7 +366,7 @@ Extends <a href="../database/DataAccess.html"><code>DataAccess</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>HashMap that maps the Column meta data to the data present in database.</td>
+<td>the table name</td>
 </tr>
 </tbody>
 </table>

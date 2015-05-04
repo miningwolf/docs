@@ -13,7 +13,7 @@ Item | Type
 PLAYER_LIST: 0<br> _Shows next to the players name in the player list when pressing the TAB key._ | ScorePosition
 SIDEBAR: 1<br> _shows in a sidebar that pops up on the side of the players screen._ | ScorePosition
 BELOW_NAME: 2<br> _Shows below the name above a players head._ | ScorePosition
- readonly property __Id__ <br> _Get: Shows next to the players name in the player list when pressing the TAB key._ | `int`
+ readonly property __Id__ <br> _Get: Get the id for this Position._ | `int`
 static function __fromId__(id) <br> _Gets a [`ScorePosition`](ScorePosition.md) for the given id value._ | [`ScorePosition`](ScorePosition.md)
 
 
@@ -25,21 +25,7 @@ static function __fromId__(id) <br> _Gets a [`ScorePosition`](ScorePosition.md) 
 
 ##### <a id='id'></a>public  readonly property __Id__
 
-_Get: Shows next to the players name in the player list when pressing the TAB key. /
-    PLAYER_LIST(0),
-    /** shows in a sidebar that pops up on the side of the players screen. /
-    SIDEBAR(1),
-    /** Shows below the name above a players head. /
-    BELOW_NAME(2);
-
-    /** Minecraft protocol ID value for the scoreboard position. /
-    private int id;
-
-    ScorePosition(int id) {
-        this.id = id;
-    }
-
-    /** Get the id for this Position._
+_Get: Get the id for this Position._
 
 Get | Description
 --- | --- 

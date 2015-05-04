@@ -10,8 +10,8 @@ A permission node. This represents a permission. Who would have thought
 
 Method | Type   
 --- | :--- 
-new __PermissionNode__(name, value) <br> _ID in the database_ | _constructor_
-  property __Id__ <br> _Get: Get the database ID for this node<br>Set: Set the database ID for this Node._ | `int`
+new __PermissionNode__(name, value) <br> _Create a new PermissionNode._ | _constructor_
+  property __Id__ <br> _Id property_ | `int`
  readonly property __FullPath__ <br> _Get: Returns the full path name for this node starting here,_ | `String`
  readonly property __Name__ <br> _Get: Get the name of this node_ | `String`
   property __Value__ <br> _Get: Get the value of this node<br>Set: Override the initially given value for this node_ | `boolean`
@@ -21,7 +21,7 @@ new __PermissionNode__(name, value) <br> _ID in the database_ | _constructor_
 static function __fromString__(in) <br> _Returns a permission node from a well formatted string._ | [`PermissionNode`](PermissionNode.md)
  function __addChildNode__(child) <br> _Put the given PermissionNode into the child list of this PermissionNode_ | `void`
  function __getChildNode__(child) <br> _Get a child node of this node with the given name_ | [`PermissionNode`](PermissionNode.md)
- function __hasChilds__() <br> _Get all childs for this node_ | `boolean`
+ function __hasChilds__() <br> _Check if this node has childs_ | `boolean`
  function __isWildcard__() <br> _Check if this is an asterisk permission, granting access to all_ | `boolean`
  function __resolvePath__(index) <br> _Purely resolves a path._ | `boolean`
  function __resolveToValue__(index) <br> _Resolves a given path of permission names into the resulting value._ | `boolean`
@@ -35,14 +35,7 @@ static function __fromString__(in) <br> _Returns a permission node from a well f
 
 ##### <a id='permissionnode'></a>new __PermissionNode__(name, value) 
 
-_ID in the database /
-    private int id;
-
-    private Map<String, PermissionNode> childs = new HashMap<String, PermissionNode>();
-
-    private PermissionNode parent = null;
-
-    /** Create a new PermissionNode._
+_Create a new PermissionNode._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -55,7 +48,7 @@ value | `boolean` | the value
 
 ##### <a id='id'></a>public   property __Id__
 
-_Get: Get the database ID for this node<br>Set: Set the database ID for this Node. <b style="color:red">Do not use this unless you're dead sure what you're doing! it is HIGHLY unlikely that you will need this</b>_
+_Id property_
 
 Get | Description
 --- | --- 
@@ -63,7 +56,7 @@ Get | Description
 
 Set | Type | Description  
 --- | --- | --- 
-id | `int` | the id to set
+id | `int` | id argument
 
 
 ##### <a id='fullpath'></a>public  readonly property __FullPath__
@@ -184,16 +177,11 @@ Returns | Description
 
 ##### <a id='haschilds'></a>public  function __hasChilds__()
 
-_Get all childs for this node_
+_Check if this node has childs_
 
 Returns | Description
 --- | --- 
-`boolean` | a map of name=>permissionNode pairs representing this nodes children /
-    public Map<String, PermissionNode> getChilds() {
-        return childs;
-    }
-
-    /** Check if this node has childs
+`boolean` | true if this node has children, false otherwise
 
 
 ##### <a id='iswildcard'></a>public  function __isWildcard__()

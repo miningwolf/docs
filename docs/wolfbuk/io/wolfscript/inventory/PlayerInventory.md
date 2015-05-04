@@ -27,22 +27,22 @@ __Inherited items from [`Inventory`](Inventory.md)__ |
  readonly property __Size__ <br> _Get: Returns the size of the inventory_ | `int`
  readonly property __Holder__ <br> _Get: Gets the block or entity belonging to the open inventory_ | [`InventoryHolder`](InventoryHolder.md)
  readonly property __Name__ <br> _Get: Returns the name of the inventory_ | `String`
- readonly property __Contents__ <br> _Get: Stores the given ItemStacks in the inventory. This will try to fill_ | `ItemStack[]`
-  property __MaxStackSize__ <br> _Get: Returns the maximum stack size for an ItemStack in this inventory.<br>Set: This method allows you to change the maximum stack size for an_ | `int`
+ readonly property __Contents__ <br> _Get: Returns all ItemStacks from the inventory_ | `ItemStack[]`
+  property __MaxStackSize__ <br> _MaxStackSize property_ | `int`
  readonly property __Title__ <br> _Get: Returns the title of this inventory._ | `String`
  readonly property __Type__ <br> _Get: Returns what type of inventory this is._ | [`InventoryType`](../event/inventory/InventoryType.md)
  readonly property __Viewers__ <br> _Get: Gets a list of players viewing the inventory. Note that a player is_ | `List<HumanEntity>`
  function __getItem__(index) <br> _Returns the ItemStack found in the slot at the given index_ | `ItemStack`
  function __clear__() <br> _Clears out the whole Inventory._ | `void`
- function __contains__(item) <br> _Checks if the inventory contains any ItemStacks with the given_ | `boolean`
- function __contains__(item, amount) <br> _Checks if the inventory contains any ItemStacks with the given_ | `boolean`
+ function __contains__(item) <br> _Checks if the inventory contains any ItemStacks matching the given_ | `boolean`
+ function __contains__(item, amount) <br> _Checks if the inventory contains at least the minimum amount specified_ | `boolean`
  function __containsAtLeast__(item, amount) <br> _Checks if the inventory contains ItemStacks matching the given_ | `boolean`
- function __first__(item) <br> _Finds the first slot in the inventory containing an ItemStack with the_ | `int`
+ function __first__(item) <br> _Returns the first slot in the inventory containing an ItemStack with_ | `int`
  function __firstEmpty__() <br> _Returns the first empty Slot._ | `int`
  function __clear__(index) <br> _Clears out a particular slot in the index._ | `void`
  function __iterator__() <br> _iterator method_ | `ListIterator<ItemStack>`
  function __iterator__(index) <br> _Returns an iterator starting at the given index. If the index is_ | `ListIterator<ItemStack>`
- function __remove__(item) <br> _Removes all stacks in the inventory matching the given material._ | `void`
+ function __remove__(item) <br> _Removes all stacks in the inventory matching the given stack._ | `void`
  function __setItem__(index, item) <br> _Stores the ItemStack at the given index of the inventory._ | `void`
 
 
@@ -236,17 +236,17 @@ Get | Description
 
 ##### <a id='contents'></a>public  readonly property __Contents__
 
-_Get: Stores the given ItemStacks in the inventory. This will try to fill existing stacks and empty slots as well as it can. <p> The returned HashMap contains what it couldn't store, where the key is the index of the parameter, and the value is the ItemStack at that index of the varargs parameter. If all items are stored, it will return an empty HashMap. <p> If you pass in ItemStacks which exceed the maximum stack size for the Material, first they will be added to partial stacks where Material.getMaxStackSize() is not exceeded, up to Material.getMaxStackSize(). When there are no partial stacks left stacks will be split on Inventory.getMaxStackSize() allowing you to exceed the maximum stack size for that material._
+_Get: Returns all ItemStacks from the inventory_
 
 Get | Description
 --- | --- 
-`ItemStack[]` | A HashMap containing items that didn't fit.
+`ItemStack[]` | An array of ItemStacks from the inventory.
 
 
 
 ##### <a id='maxstacksize'></a>public   property __MaxStackSize__
 
-_Get: Returns the maximum stack size for an ItemStack in this inventory.<br>Set: This method allows you to change the maximum stack size for an inventory. <p> <b>Caveats:</b> <ul> <li>Not all inventories respect this value. <li>Stacks larger than 127 may be clipped when the world is saved. <li>This value is not guaranteed to be preserved; be sure to set it before every time you want to set a slot over the max stack size. <li>Stacks larger than the default max size for this type of inventory may not display correctly in the client. </ul>_
+_MaxStackSize property_
 
 Get | Description
 --- | --- 
@@ -254,7 +254,7 @@ Get | Description
 
 Set | Type | Description  
 --- | --- | --- 
-size | `int` | The new maximum stack size for items in this inventory.
+size | `int` | size argument
 
 
 ##### <a id='title'></a>public  readonly property __Title__
@@ -292,13 +292,9 @@ Get | Description
 ### Public Methods for [`Inventory`](Inventory.md)
 
 ##### <a id='first'></a>public  function __first__(materialId)
-_Deprecated: Magic value /
-    @Deprecated
-    public HashMap<Integer, ? extends ItemStack> all(int materialId);
+_Deprecated: Magic value_
 
-    /** Returns a HashMap with all slots and ItemStacks in the inventory with the given Material. <p> The HashMap contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack with the given Material is found, an empty map is returned. Magic value_
-
-_Returns a HashMap with all slots and ItemStacks in the inventory with given materialId. <p> The HashMap contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack with the given materialId is found, an empty map is returned._
+_Finds the first slot in the inventory containing an ItemStack with the given materialId._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -306,7 +302,7 @@ materialId | `int` | The materialId to look for
 
 Returns | Description
 --- | --- 
-`int` | A HashMap containing the slot index, ItemStack pairs
+`int` | The slot index of the given materialId or -1 if not found
 
 
 ##### <a id='getitem'></a>public  function __getItem__(index)
@@ -334,7 +330,7 @@ Returns |
 ##### <a id='contains'></a>public  function __contains__(materialId)
 _Deprecated: Magic value_
 
-_Completely replaces the inventory's contents. Removes all existing contents and replaces it with the ItemStacks given in the array._
+_Checks if the inventory contains any ItemStacks with the given materialId_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -347,7 +343,7 @@ Returns | Description
 
 ##### <a id='contains'></a>public  function __contains__(item)
 
-_Checks if the inventory contains any ItemStacks with the given material._
+_Checks if the inventory contains any ItemStacks matching the given ItemStack. <p> This will only return true if both the type and the amount of the stack match._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -355,7 +351,7 @@ item | `ItemStack` | The ItemStack to match against
 
 Returns | Description
 --- | --- 
-`boolean` | true if an ItemStack is found with the given Material
+`boolean` | false if item is null, true if any exactly matching ItemStacks were found
 
 
 ##### <a id='contains'></a>public  function __contains__(materialId, amount)
@@ -375,16 +371,16 @@ Returns | Description
 
 ##### <a id='contains'></a>public  function __contains__(item, amount)
 
-_Checks if the inventory contains any ItemStacks with the given material, adding to at least the minimum amount specified._
+_Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks. <p> An ItemStack only counts if both the type and the amount of the stack match._
 
 Argument | Type | Description  
 --- | --- | --- 
 item | `ItemStack` | the ItemStack to match against
-amount | `int` | The minimum amount
+amount | `int` | how many identical stacks to check for
 
 Returns | Description
 --- | --- 
-`boolean` | true if amount is less than 1, true if enough ItemStacks were found to add to the given amount
+`boolean` | false if item is null, true if amount less than 1, true if amount of exactly matching ItemStacks were found
 
 
 ##### <a id='containsatleast'></a>public  function __containsAtLeast__(item, amount)
@@ -403,7 +399,7 @@ Returns | Description
 
 ##### <a id='first'></a>public  function __first__(item)
 
-_Finds the first slot in the inventory containing an ItemStack with the given material_
+_Returns the first slot in the inventory containing an ItemStack with the given stack. This will only match a slot if both the type and the amount of the stack match_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -411,7 +407,7 @@ item | `ItemStack` | The ItemStack to match against
 
 Returns | Description
 --- | --- 
-`int` | The slot index of the given Material or -1 if not found
+`int` | The slot index of the given ItemStack or -1 if not found
 
 
 ##### <a id='firstempty'></a>public  function __firstEmpty__()
@@ -460,7 +456,7 @@ Returns | Description
 
 ##### <a id='remove'></a>public  function __remove__(item)
 
-_Removes all stacks in the inventory matching the given material._
+_Removes all stacks in the inventory matching the given stack. <p> This will only match a slot if both the type and the amount of the stack match_
 
 Argument | Type | Description  
 --- | --- | --- 

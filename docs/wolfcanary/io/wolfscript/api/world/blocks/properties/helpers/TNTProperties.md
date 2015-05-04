@@ -11,7 +11,7 @@ TNT properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyExplode__(block, value) <br> _TNT explode property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyExplode__(block, value) <br> _Applies whether the `TNT` is to explode or not_ | [`Block`](../../Block.md)
 static final var __explode__ <br> _TNT explode property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyexplode'></a>public static function __applyExplode__(block, value)
 
-_TNT explode property, Values: true, false /
-    public static final BlockBooleanProperty explode = getInstanceFor(TNT, "explode");
-
-    /** Applies whether the `TNT` is to explode or not_
+_Applies whether the `TNT` is to explode or not_
 
 Argument | Type | Description  
 --- | --- | --- 

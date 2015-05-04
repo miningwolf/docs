@@ -11,7 +11,7 @@ Cactus properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _Cactus age property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyAge__(block, value) <br> _Applies age to the `Cactus`_ | [`Block`](../../Block.md)
 static final var __age__ <br> _Cactus age property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyage'></a>public static function __applyAge__(block, value)
 
-_Cactus age property, Values: 0 - 15 /
-    public static final BlockIntegerProperty age = getInstanceFor(Cactus, "age");
-
-    /** Applies age to the `Cactus`_
+_Applies age to the `Cactus`_
 
 Argument | Type | Description  
 --- | --- | --- 

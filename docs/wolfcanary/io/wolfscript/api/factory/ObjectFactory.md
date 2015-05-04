@@ -6,7 +6,7 @@
 
 ### Interface Overview
 
-Object Manufacturing Factory <p/> For the odds and ends that don't fit else where
+interface ObjectFactory
 
 Method | Type   
 --- | :--- 

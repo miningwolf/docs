@@ -14,7 +14,7 @@ Method | Type
  readonly property __OutgoingChannels__ <br> _Get: Gets a set containing all the outgoing plugin channels._ | `Set<String>`
  function __getOutgoingChannels__(plugin) <br> _Gets a set containing all the outgoing plugin channels that the_ | `Set<String>`
  function __dispatchIncomingMessage__(source, channel) <br> _Dispatches the specified incoming message to any registered listeners._ | `void`
- function __isReservedChannel__(channel) <br> _Represents the largest size that an individual Plugin Message may be._ | `boolean`
+ function __isReservedChannel__(channel) <br> _Checks if the specified channel is a reserved name._ | `boolean`
  function __isOutgoingChannelRegistered__(plugin, channel) <br> _Checks if the specified plugin has registered to send outgoing messages_ | `boolean`
  function __isIncomingChannelRegistered__(plugin, channel) <br> _Checks if the specified plugin has registered to receive incoming_ | `boolean`
  function __isRegistrationValid__(registration) <br> _Checks if the specified plugin message listener registration is valid._ | `boolean`
@@ -92,13 +92,7 @@ Returns |
 
 ##### <a id='isreservedchannel'></a>public  function __isReservedChannel__(channel)
 
-_Represents the largest size that an individual Plugin Message may be. /
-    public static final int MAX_MESSAGE_SIZE = 32766;
-
-    /** Represents the largest size that a Plugin Channel may be. /
-    public static final int MAX_CHANNEL_SIZE = 20;
-
-    /** Checks if the specified channel is a reserved name._
+_Checks if the specified channel is a reserved name._
 
 Argument | Type | Description  
 --- | --- | --- 

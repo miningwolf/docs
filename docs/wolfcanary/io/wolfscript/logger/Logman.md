@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-WolfScript Log manager. <p/> You can get an appropriate logger for your plugin here.
+class Logman
 
 Method | Type   
 --- | :--- 
@@ -658,13 +658,7 @@ Returns |
 
 ##### <a id='fatal'></a>public  function __fatal__(marker, msg)
 
-_{@inheritDoc} /
-    @Override
-    public <R> R exit(R result) {
-        return logger.exit(result);
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -1616,19 +1610,7 @@ Returns |
 
 ##### <a id='trace'></a>public  function __trace__(marker, msg)
 
-_{@inheritDoc} /
-    @Override
-    public <T extends Throwable> T throwing(Level level, T t) {
-        return logger.throwing(level, t);
-    }
-
-    /** {@inheritDoc} /
-    @Override
-    public <T extends Throwable> T throwing(T t) {
-        return logger.throwing(t);
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -143,7 +143,7 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td> function <strong>createEffect</strong>(duration, amplifier) <br> <em>Increases movement speed.</em></td>
+<td> function <strong>createEffect</strong>(duration, amplifier) <br> <em>Creates a PotionEffect from this PotionEffectType, applying duration</em></td>
 <td style="text-align:left"><a href="PotionEffect.html"><code>PotionEffect</code></a></td>
 </tr>
 <tr>
@@ -337,82 +337,8 @@
 </tbody>
 </table>
 <h5 id="-a-id-createeffect-a-public-function-__createeffect__-duration-amplifier-"><a id='createeffect'></a>public  function <strong>createEffect</strong>(duration, amplifier)</h5>
-<p>_Increases movement speed. /
-    public static final PotionEffectType SPEED = new PotionEffectTypeWrapper(1);</p>
-<pre><code>/** Decreases movement speed. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType SLOW =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(2<span class="hljs-function">)</span>;
-
-/** Increases dig speed. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType FAST_DIGGING =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(3<span class="hljs-function">)</span>;
-
-/** Decreases dig speed. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType SLOW_DIGGING =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(4<span class="hljs-function">)</span>;
-
-/** Increases damage dealt. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType INCREASE_DAMAGE =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(5<span class="hljs-function">)</span>;
-
-/** Heals an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType HEAL =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(6<span class="hljs-function">)</span>;
-
-/** Hurts an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType HARM =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(7<span class="hljs-function">)</span>;
-
-/** Increases jump height. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType JUMP =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(8<span class="hljs-function">)</span>;
-
-/** Warps vision on the client. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType CONFUSION =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(9<span class="hljs-function">)</span>;
-
-/** Regenerates health. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType REGENERATION =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(10<span class="hljs-function">)</span>;
-
-/** Decreases damage dealt to an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType DAMAGE_RESISTANCE =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(11<span class="hljs-function">)</span>;
-
-/** Stops fire damage. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType FIRE_RESISTANCE =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(12<span class="hljs-function">)</span>;
-
-/** Allows breathing underwater. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType WATER_BREATHING =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(13<span class="hljs-function">)</span>;
-
-/** Grants invisibility. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType INVISIBILITY =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(14<span class="hljs-function">)</span>;
-
-/** Blinds an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType BLINDNESS =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(15<span class="hljs-function">)</span>;
-
-/** Allows an entity to see in the dark. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType NIGHT_VISION =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(16<span class="hljs-function">)</span>;
-
-/** Increases hunger. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType HUNGER =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(17<span class="hljs-function">)</span>;
-
-/** Decreases damage dealt by an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType WEAKNESS =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(18<span class="hljs-function">)</span>;
-
-/** Deals damage to an entity over time. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType POISON =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(19<span class="hljs-function">)</span>;
-
-/** Deals damage to an entity over time<span class="hljs-instruction"> and </span>gives the health to the shooter. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType WITHER =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(20<span class="hljs-function">)</span>;
-
-/** Increases the maximum health of an entity. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType HEALTH_BOOST =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(21<span class="hljs-function">)</span>;
-
-/** Increases the maximum health of an entity with health that cannot be regenerated, but is refilled every 30 seconds. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType ABSORPTION =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(22<span class="hljs-function">)</span>;
-
-/** Increases the food level of an entity each tick. /<span class="hljs-keyword">
-public</span><span class="hljs-keyword"> static</span><span class="hljs-keyword"> final</span> PotionEffectType SATURATION =<span class="hljs-instruction"> new </span>PotionEffectTypeWrapper(23<span class="hljs-function">)</span>;
-<span class="hljs-keyword">
-private</span><span class="hljs-keyword"> final</span><span class="hljs-instruction"> int </span>id;
-<span class="hljs-keyword">
-protected</span><span class="hljs-function"> PotionEffectType(</span>int id<span class="hljs-function">)</span> {
-    this.id = id;
-}
-
-/** Creates a PotionEffect from this PotionEffectType, applying duration modifiers<span class="hljs-instruction"> and </span>checks._
-</code></pre><table>
+<p><em>Creates a PotionEffect from this PotionEffectType, applying duration modifiers and checks.</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>

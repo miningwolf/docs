@@ -15,8 +15,8 @@ new __Disconnection__(player, reason, leave) <br> _Disconnection constructor_ | 
   property __LeaveMessage__ <br> _Get: Gets the LeaveMessage<br>Set: Sets the LeaveMessage_ | `String`
  readonly property __Player__ <br> _Get: Gets the `Player` disconnected_ | `Player`
   property __Reason__ <br> _Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed_ | `String`
- writeonly property __Hidden__ <br> _Set: Sets whether this should be a hidden connect/disconnect_ | `void`
- function __isHidden__() <br> _Gets whether this should be a hidden connect/disconnect_ | `boolean`
+ writeonly property __Hidden__ <br> _Hidden property_ | `void`
+ function __isHidden__() <br> _isHidden method_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`Hook`](../../hook/Hook.md)__ |
@@ -84,7 +84,7 @@ reason | `String` | the reason for disconnection
 
 ##### <a id='hidden'></a>public  writeonly property __Hidden__
 
-_Set: Sets whether this should be a hidden connect/disconnect_
+_Hidden property_
 
 Get | 
 --- | 
@@ -92,7 +92,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-hidden | `boolean` | `true` for hiding message; `false` for not
+hidden | `boolean` | hidden argument
 
 
 ---
@@ -101,11 +101,11 @@ hidden | `boolean` | `true` for hiding message; `false` for not
 
 ##### <a id='ishidden'></a>public  function __isHidden__()
 
-_Gets whether this should be a hidden connect/disconnect_
+_isHidden method_
 
-Returns | Description
---- | --- 
-`boolean` | `true` for hidden; `false` for not
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='tostring'></a>public final function __toString__()

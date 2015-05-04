@@ -13,7 +13,7 @@ Method | Type
  readonly property __Permissions__ <br> _Get: Gets a set of all registered permissions._ | `Set<Permission>`
  readonly property __Plugins__ <br> _Get: Gets a list of all currently loaded plugins_ | `Plugin[]`
  function __addPermission__(perm) <br> _Adds a [`Permission`](../permissions/Permission.md) to this plugin manager._ | `void`
- function __getPlugin__(name) <br> _Registers the specified plugin loader_ | [`Plugin`](Plugin.md)
+ function __getPlugin__(name) <br> _Checks if the given plugin is loaded and returns it when applicable_ | [`Plugin`](Plugin.md)
  function __getDefaultPermSubscriptions__(op) <br> _Gets a set containing all subscribed [`Permissible`](../permissions/Permissible.md)s to the given_ | `Set<Permissible>`
  function __getPermissionSubscriptions__(permission) <br> _Gets a set containing all subscribed [`Permissible`](../permissions/Permissible.md)s to the given_ | `Set<Permissible>`
  function __disablePlugins__() <br> _Disables all the loaded plugins_ | `void`
@@ -26,12 +26,12 @@ Method | Type
  function __registerEvent__(Event, listener, priority, executor, plugin, ignoreCancelled) <br> _Registers the specified executor to the given event class_ | `void`
  function __isPluginEnabled__(name) <br> _Checks if the given plugin is enabled or not_ | `boolean`
  function __isPluginEnabled__(plugin) <br> _Checks if the given plugin is enabled or not_ | `boolean`
- function __loadPlugins__(directory) <br> _Loads the plugin in the specified file_ | `Plugin[]`
+ function __loadPlugins__(directory) <br> _Loads the plugins contained within the specified directory_ | `Plugin[]`
  function __recalculatePermissionDefaults__(perm) <br> _Recalculates the defaults for the given [`Permission`](../permissions/Permission.md)._ | `void`
  function __registerEvent__(Event, listener, priority, executor, plugin) <br> _Registers the specified executor to the given event class_ | `void`
- function __registerEvents__(listener, plugin) <br> _Calls an event with the given details_ | `void`
- function __removePermission__(name) <br> _Removes a [`Permission`](../permissions/Permission.md) registration from this plugin manager._ | `void`
- function __removePermission__(perm) <br> _Removes a [`Permission`](../permissions/Permission.md) registration from this plugin manager._ | `void`
+ function __registerEvents__(listener, plugin) <br> _Registers all the events in the given listener class_ | `void`
+ function __removePermission__(name) <br> _removePermission method_ | `void`
+ function __removePermission__(perm) <br> _removePermission method_ | `void`
  function __subscribeToDefaultPerms__(op, permissible) <br> _Subscribes to the given Default permissions by operator status_ | `void`
  function __unsubscribeFromDefaultPerms__(op, permissible) <br> _Unsubscribes from the given Default permissions by operator status_ | `void`
  function __unsubscribeFromPermission__(permission, permissible) <br> _Unsubscribes the given Permissible for information about the requested_ | `void`
@@ -83,7 +83,7 @@ Returns |
 
 ##### <a id='getplugin'></a>public  function __getPlugin__(name)
 
-_Registers the specified plugin loader_
+_Checks if the given plugin is loaded and returns it when applicable <p> Please note that the name of the plugin is case-sensitive_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -250,7 +250,7 @@ Returns | Description
 
 ##### <a id='loadplugins'></a>public  function __loadPlugins__(directory)
 
-_Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces_
+_Loads the plugins contained within the specified directory_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -258,7 +258,7 @@ directory | `File` | Directory to check for plugins
 
 Returns | Description
 --- | --- 
-`Plugin[]` | The Plugin loaded, or null if it was invalid
+`Plugin[]` | A list of all plugins loaded
 
 
 ##### <a id='recalculatepermissiondefaults'></a>public  function __recalculatePermissionDefaults__(perm)
@@ -293,7 +293,7 @@ Returns |
 
 ##### <a id='registerevents'></a>public  function __registerEvents__(listener, plugin)
 
-_Calls an event with the given details_
+_Registers all the events in the given listener class_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -307,11 +307,11 @@ Returns |
 
 ##### <a id='removepermission'></a>public  function __removePermission__(name)
 
-_Removes a [`Permission`](../permissions/Permission.md) registration from this plugin manager. <p> If the specified permission does not exist in this plugin manager, nothing will happen. <p> Removing a permission registration will <b>not</b> remove the permission from any [`Permissible`](../permissions/Permissible.md)s that have it._
+_removePermission method_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `String` | Permission to remove
+name | `String` | name argument
 
 Returns | 
 --- | 
@@ -320,11 +320,11 @@ Returns |
 
 ##### <a id='removepermission'></a>public  function __removePermission__(perm)
 
-_Removes a [`Permission`](../permissions/Permission.md) registration from this plugin manager. <p> If the specified permission does not exist in this plugin manager, nothing will happen. <p> Removing a permission registration will <b>not</b> remove the permission from any [`Permissible`](../permissions/Permissible.md)s that have it._
+_removePermission method_
 
 Argument | Type | Description  
 --- | --- | --- 
-perm | [`Permission`](../permissions/Permission.md) | Permission to remove
+perm | [`Permission`](../permissions/Permission.md) | perm argument
 
 Returns | 
 --- | 

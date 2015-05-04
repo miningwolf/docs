@@ -169,7 +169,7 @@ Extends <a href="Backbone.html"><code>Backbone</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>getModularGroups</strong>(uuid) <br> <em>Load and return String array sets.</em></td>
+<td> function <strong>getModularGroups</strong>(uuid) <br> <em>Returns the additional groups for the given player</em></td>
 <td style="text-align:left"><code>Group[]</code></td>
 </tr>
 <tr>
@@ -291,7 +291,7 @@ Extends <a href="Backbone.html"><code>Backbone</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-getmodulargroups-a-public-function-__getmodulargroups__-uuid-"><a id='getmodulargroups'></a>public  function <strong>getModularGroups</strong>(uuid)</h5>
-<p><em>Load and return String array sets. Each Array in the hashMap value has prefix, group and isMuted for a player, in that order.</em></p>
+<p><em>Returns the additional groups for the given player</em></p>
 <table>
 <thead>
 <tr>
@@ -318,36 +318,11 @@ Extends <a href="Backbone.html"><code>Backbone</code></a></p>
 <tbody>
 <tr>
 <td><code>Group[]</code></td>
-<td>A hashmap with a key of player name, and string array value with a prefix and group for a player, in that order. /</td>
+<td>Group array</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> Map&lt;<span class="hljs-keyword">String</span>, <span class="hljs-keyword">String</span>[]&gt; loadUsers() {
-    Map&lt;<span class="hljs-keyword">String</span>, <span class="hljs-keyword">String</span>[]&gt; players = <span class="hljs-keyword">new</span> <span class="hljs-keyword">HashMap</span>&lt;<span class="hljs-keyword">String</span>, <span class="hljs-keyword">String</span>[]&gt;();
-    List&lt;DataAccess&gt; daos = <span class="hljs-keyword">new</span> ArrayList&lt;DataAccess&gt;();
-
-    <span class="hljs-keyword">try</span> {
-        Database.<span class="hljs-built_in">get</span>().loadAll(schema, daos, <span class="hljs-keyword">new</span> <span class="hljs-keyword">HashMap</span>&lt;<span class="hljs-keyword">String</span>, <span class="hljs-keyword">Object</span>&gt;());
-        <span class="hljs-keyword">for</span> (DataAccess dao : daos) {
-            PlayerDataAccess data = (PlayerDataAccess)dao;
-            <span class="hljs-keyword">String</span>[] row = <span class="hljs-keyword">new</span> <span class="hljs-keyword">String</span>[<span class="hljs-number">3</span>];
-
-            row[<span class="hljs-number">0</span>] = data.prefix;
-            row[<span class="hljs-number">1</span>] = data.group;
-            row[<span class="hljs-number">2</span>] = Boolean.toString(data.isMuted);
-            players.put(data.uuid == <span class="hljs-keyword">null</span> ? <span class="hljs-string">""</span> : data.uuid, row);
-        }
-        <span class="hljs-keyword">return</span> players;
-    }
-    <span class="hljs-keyword">catch</span> (DatabaseReadException e) {
-        <span class="hljs-built_in">log</span>.error(e.getMessage(), e);
-    }
-
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-}
-
-<span class="hljs-comment">/** Returns the additional groups for the given player</span>
-</code></pre><h5 id="-a-id-removeuser-a-public-function-__removeuser__-uuid-"><a id='removeuser'></a>public  function <strong>removeUser</strong>(uuid)</h5>
+<h5 id="-a-id-removeuser-a-public-function-__removeuser__-uuid-"><a id='removeuser'></a>public  function <strong>removeUser</strong>(uuid)</h5>
 <p><em>Remove a player from the data source</em></p>
 <table>
 <thead>

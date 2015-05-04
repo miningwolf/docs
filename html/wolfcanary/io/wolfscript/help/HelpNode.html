@@ -135,6 +135,10 @@
 </thead>
 <tbody>
 <tr>
+<td>new <strong>HelpNode</strong>(owner, command) <br> <em>HelpNode constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
 <td> readonly property <strong>Keywords</strong> <br> <em>Get: get some keywords for this command.</em></td>
 <td style="text-align:left"><code>String[]</code></td>
 </tr>
@@ -147,7 +151,7 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Owner</strong> <br> <em>Get: The Plugin (or Server) that has registered this command</em></td>
+<td> readonly property <strong>Owner</strong> <br> <em>Get: get the Plugin (or WolfScript instance) that has registered this help</em></td>
 <td style="text-align:left"><a href="../commandsys/CommandOwner.html"><code>CommandOwner</code></a></td>
 </tr>
 <tr>
@@ -185,6 +189,31 @@
 <tr>
 <td> var <strong>subCommands</strong> <br> <em>A list of names of sub commands</em></td>
 <td style="text-align:left"><code>String[]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-helpnode-helpnode-md-">Public Constructors for <a href="HelpNode.html"><code>HelpNode</code></a></h3>
+<h5 id="-a-id-helpnode-a-new-__helpnode__-owner-command-"><a id='helpnode'></a>new <strong>HelpNode</strong>(owner, command)</h5>
+<p><em>HelpNode constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td><a href="../commandsys/CommandOwner.html"><code>CommandOwner</code></a></td>
+<td>owner argument</td>
+</tr>
+<tr>
+<td>command</td>
+<td><a href="../commandsys/WolfCommand.html"><code>WolfCommand</code></a></td>
+<td>command argument</td>
 </tr>
 </tbody>
 </table>
@@ -236,20 +265,8 @@
 </tbody>
 </table>
 <h5 id="-a-id-owner-a-public-readonly-property-__owner__"><a id='owner'></a>public  readonly property <strong>Owner</strong></h5>
-<p>_Get: The Plugin (or Server) that has registered this command /
-    private CommandOwner plugin;
-    /** A list of names of sub commands /
-    public String[] subCommands;</p>
-<pre><code>private <span class="hljs-constant">Wolf</span>Command <span class="hljs-literal">command</span>;
-
-public <span class="hljs-constant">Help</span>Node(<span class="hljs-constant">Command</span>Owner <span class="hljs-literal">owner</span>, <span class="hljs-constant">Wolf</span>Command <span class="hljs-keyword">command) {</span>
-    this.<span class="hljs-literal">command</span> = <span class="hljs-literal">command</span>;
-    this.plugin = <span class="hljs-literal">owner</span>;
-    this.subCommands = <span class="hljs-constant">Help</span>Manager.subCommandsToStringArray(<span class="hljs-literal">command</span>.getSubCommands());
-<span class="hljs-keyword">}</span>
-
-/** get the <span class="hljs-constant">Plugin</span> (<span class="hljs-keyword">or</span> <span class="hljs-constant">Wolf</span>Script <span class="hljs-literal">instance</span>) that has registered this help<span class="hljs-number">_</span>
-</code></pre><table>
+<p><em>Get: get the Plugin (or WolfScript instance) that has registered this help</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

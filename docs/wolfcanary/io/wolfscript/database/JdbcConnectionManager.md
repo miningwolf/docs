@@ -10,8 +10,8 @@ Represents a connection (pool) manager for all sorts of JDBC connections. In our
 
 Method | Type   
 --- | :--- 
-static readonly property __Connection__ <br> _Get: Create a new instance of this connection manager._ | `Connection`
- readonly property __Type__ <br> _Get: Instantiates the connection manager_ | [`SQLType`](SQLType.md)
+static readonly property __Connection__ <br> _Get: Get a connection form the connection pool._ | `Connection`
+ readonly property __Type__ <br> _Get: Get the SQL Database type._ | [`SQLType`](SQLType.md)
 static function __shutdown__() <br> _Shut down the connection pool._ | `void`
 
 
@@ -23,17 +23,17 @@ static function __shutdown__() <br> _Shut down the connection pool._ | `void`
 
 ##### <a id='connection'></a>public static readonly property __Connection__
 
-_Get: Create a new instance of this connection manager._
+_Get: Get a connection form the connection pool._
 
 Get | Description
 --- | --- 
-`Connection` | an instance of the manager
+`Connection` | connection from the pool
 
 
 
 ##### <a id='type'></a>public  readonly property __Type__
 
-_Get: Instantiates the connection manager_
+_Get: Get the SQL Database type._
 
 Get | Description
 --- | --- 

@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-This event is called when the player drags an item in their cursor across the inventory. The ItemStack is distributed across the slots the HumanEntity dragged over. The method of distribution is described by the DragType returned by `#getType()`. <p> Canceling this event will result in none of the changes described in `#getNewItems()` being applied to the Inventory. <p> Because InventoryDragEvent occurs within a modification of the Inventory, not all Inventory related methods are safe to use. <p> The following should never be invoked by an EventHandler for InventoryDragEvent using the HumanEntity or InventoryView associated with this event. <ul> <li>`HumanEntity#closeInventory()` <li>`HumanEntity#openInventory(Inventory)` <li>{@link HumanEntity#openWorkbench(Location, boolean)} <li>{@link HumanEntity#openEnchanting(Location, boolean)} <li>`InventoryView#close()` </ul> To invoke one of these methods, schedule a task using {@link WolfScriptScheduler#runTask(Plugin, Runnable)}, which will run the task on the next tick.  Also be aware that this is not an exhaustive list, and other methods could potentially create issues as well. <p> Assuming the EntityHuman associated with this event is an instance of a Player, manipulating the MaxStackSize or contents of an Inventory will require an Invocation of `Player#updateInventory()`. <p> Any modifications to slots that are modified by the results of this InventoryDragEvent will be overwritten. To change these slots, this event should be cancelled and the changes applied. Alternatively, scheduling a task using {@link WolfScriptScheduler#runTask(Plugin, Runnable)}, which would execute the task on the next tick, would work as well.
+class InventoryDragEvent
 
 Method | Type   
 --- | :--- 
@@ -17,7 +17,7 @@ static readonly property __HandlerList__ <br> _HandlerList property_ | [`Handler
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  readonly property __InventorySlots__ <br> _Get: Gets the slots to be changed in this drag._ | `Set<Integer>`
  readonly property __OldCursor__ <br> _Get: Gets an ItemStack representing the cursor prior to any modifications_ | `ItemStack`
- readonly property __RawSlots__ <br> _Get: Gets all items to be added to the inventory in this drag._ | `Set<Integer>`
+ readonly property __RawSlots__ <br> _Get: Gets the raw slot ids to be changed in this drag._ | `Set<Integer>`
  readonly property __Type__ <br> _Get: Gets the DragType that describes the behavior of ItemStacks placed_ | [`DragType`](DragType.md)
  |
 __Inherited items from [`InventoryInteractEvent`](InventoryInteractEvent.md)__ |
@@ -40,7 +40,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -124,16 +124,11 @@ Get | Description
 
 ##### <a id='rawslots'></a>public  readonly property __RawSlots__
 
-_Get: Gets all items to be added to the inventory in this drag._
+_Get: Gets the raw slot ids to be changed in this drag._
 
 Get | Description
 --- | --- 
-`Set<Integer>` | map from raw slot id to new ItemStack /
-    public Map<Integer, ItemStack> getNewItems() {
-        return Collections.unmodifiableMap(addedItems);
-    }
-
-    /** Gets the raw slot ids to be changed in this drag.
+`Set<Integer>` | list of raw slot ids, suitable for getView().getItem(int)
 
 
 
@@ -322,11 +317,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

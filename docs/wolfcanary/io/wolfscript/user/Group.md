@@ -18,7 +18,7 @@ Method | Type
   property __PermissionProvider__ <br> _PermissionProvider property_ | [`PermissionProvider`](../permissionsystem/PermissionProvider.md)
   property __Parent__ <br> _Parent property<br>Set: Set a new parent._ | [`Group`](Group.md)
  writeonly property __DefaultGroup__ <br> _DefaultGroup property_ | `void`
- function __canIgnorerestrictions__() <br> _ID for retrieving permissions from the database_ | `boolean`
+ function __canIgnorerestrictions__() <br> _Check if this group can ignore restrictions_ | `boolean`
  function __canBuild__() <br> _Checks if this group can build_ | `boolean`
  function __addChild__(g) <br> _addChild method_ | `void`
  function __hasPermission__(permission) <br> _Checks in this group and its's parent (and the parent of the parent etc etc) if it has permission_ | `boolean`
@@ -146,31 +146,7 @@ defaultGroup | `boolean` | defaultGroup argument
 
 ##### <a id='canignorerestrictions'></a>public  function __canIgnorerestrictions__()
 
-_ID for retrieving permissions from the database /
-    private int id;
-
-    /** Group Name /
-    private String name;
-
-    /** Group Prefix/Color /
-    private String prefix = null;
-
-    /** The fully qualified world name valid for this group. If this group is valid for all worlds, this may be null /
-    private String worldName = null;
-
-    /** The permission provider for querying permissions etc. /
-    private PermissionProvider permissions;
-
-    /** List of groups this group inherits/has control over /
-    private List<Group> childGroups = new ArrayList<Group>();
-
-    /** The parent group (the group this group is a child of). Parents have control over their childs /
-    private Group parent = null;
-
-    /** Is true if it's the default group /
-    private boolean defaultGroup = false;
-
-    /** Check if this group can ignore restrictions_
+_Check if this group can ignore restrictions_
 
 Returns | Description
 --- | --- 

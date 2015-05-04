@@ -13,7 +13,7 @@ Sapling properties helper
 Method | Type   
 --- | :--- 
 static function __applyStage__(block, value) <br> _Applies stage to the `Sapling`_ | [`Block`](../../Block.md)
-static function __applyType__(block, value) <br> _Sapling type property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyType__(block, value) <br> _Applies type to the `Sapling`_ | [`Block`](../../Block.md)
 static final var __type__ <br> _Sapling type property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __stage__ <br> _Sapling stage property, Values: 0, 1_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
@@ -44,13 +44,7 @@ Returns | Description
 
 ##### <a id='applytype'></a>public static function __applyType__(block, value)
 
-_Sapling type property, Values: `Variant` /
-    public static final BlockEnumProperty type = getInstanceFor(OakSapling, "type");
-
-    /** Sapling stage property, Values: 0, 1 /
-    public static final BlockIntegerProperty stage = getInstanceFor(OakSapling, "stage");
-
-    /** Applies type to the `Sapling`_
+_Applies type to the `Sapling`_
 
 Argument | Type | Description  
 --- | --- | --- 

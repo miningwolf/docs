@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -1984,7 +1980,7 @@
 <h3 id="public-properties-for-material-material-md-">Public Properties for <a href="Material.html"><code>Material</code></a></h3>
 <h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
 <p><em>Deprecated: Magic value</em></p>
-<p><em>Id property</em></p>
+<p><em>Get: Gets the item ID or block ID of this Material</em></p>
 <table>
 <thead>
 <tr>
@@ -2148,7 +2144,7 @@
 </table>
 <h5 id="-a-id-getnewdata-a-public-function-__getnewdata__-byte-"><a id='getnewdata'></a>public  function <strong>getNewData</strong>(byte)</h5>
 <p><em>Deprecated: Magic value</em></p>
-<p><em>Gets the MaterialData class associated with this Material</em></p>
+<p><em>Constructs a new MaterialData relevant for this Material, with the given initial data</em></p>
 <table>
 <thead>
 <tr>
@@ -2175,16 +2171,11 @@
 <tbody>
 <tr>
 <td><a href="material/MaterialData.html"><code>MaterialData</code></a></td>
-<td>MaterialData associated with this Material /</td>
+<td>New MaterialData with the given data</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;? <span class="hljs-keyword">extends</span> <span class="hljs-title">MaterialData</span>&gt; <span class="hljs-title">getData</span>() {</span>
-    <span class="hljs-keyword">return</span> ctor.getDeclaringClass();
-}
-
-/** Constructs a <span class="hljs-keyword">new</span> MaterialData relevant <span class="hljs-keyword">for</span> this Material, with the given initial data
-</code></pre><h5 id="-a-id-hasgravity-a-public-function-__hasgravity__-"><a id='hasgravity'></a>public  function <strong>hasGravity</strong>()</h5>
+<h5 id="-a-id-hasgravity-a-public-function-__hasgravity__-"><a id='hasgravity'></a>public  function <strong>hasGravity</strong>()</h5>
 <p><em>hasGravity method</em></p>
 <table>
 <thead>

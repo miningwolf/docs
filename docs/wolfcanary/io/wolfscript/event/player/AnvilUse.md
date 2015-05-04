@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-AnvilUse Hook <p/> Called when a `Player` uses an Anvil<br> Get the `Anvil` and modify it's values directly
+class AnvilUse
 
 Method | Type   
 --- | :--- 

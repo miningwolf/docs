@@ -26,25 +26,7 @@ BASS_GUITAR: 0x4<br> _Bass guitar is normally played when a note block is on top
 ##### <a id='type'></a>public  readonly property __Type__
 _Deprecated: Magic value_
 
-_Get: Piano is the standard instrument for a note block. /
-    PIANO(0x0),
-    /** Bass drum is normally played when a note block is on top of a stone-like block /
-    BASS_DRUM(0x1),
-    /** Snare drum is normally played when a note block is on top of a sandy block. /
-    SNARE_DRUM(0x2),
-    /** Sticks are normally played when a note block is on top of a glass block. /
-    STICKS(0x3),
-    /** Bass guitar is normally played when a note block is on top of a wooden block. /
-    BASS_GUITAR(0x4);
-
-    private final byte type;
-    private final static Map<Byte, Instrument> BY_DATA = Maps.newHashMap();
-
-    private Instrument(final int type) {
-        this.type = (byte) type;
-    }
-
-    /**_
+_Type property_
 
 Get | Description
 --- | --- 

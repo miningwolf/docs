@@ -78,14 +78,15 @@
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/converter/0.html' class=''>converter</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
+<li><a href='../../../../wolfcanary/io/wolfscript/database/ColumnType.html'>ColumnType</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/DataAccess.html'>DataAccess</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/database/DataType.html'>DataType</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/Database.html'>Database</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/DatabaseLoader.html'>DatabaseLoader</a></li>
 <li class='active'><a href='../../../../wolfcanary/io/wolfscript/database/JdbcConnectionManager.html'>JdbcConnectionManager</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/LocationDataAccess.html'>LocationDataAccess</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/PositionDataAccess.html'>PositionDataAccess</a></li>
 <li><a href='../../../../wolfcanary/io/wolfscript/database/SQLType.html'>SQLType</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/database/Type.html'>Type</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/exceptions/0.html' class=''>database.exceptions</a></li> 
 <li class='divider'></li>
@@ -149,11 +150,11 @@
 </thead>
 <tbody>
 <tr>
-<td>static readonly property <strong>Connection</strong> <br> <em>Get: Create a new instance of this connection manager.</em></td>
+<td>static readonly property <strong>Connection</strong> <br> <em>Get: Get a connection form the connection pool.</em></td>
 <td style="text-align:left"><code>Connection</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Type</strong> <br> <em>Get: Instantiates the connection manager</em></td>
+<td> readonly property <strong>Type</strong> <br> <em>Get: Get the SQL Database type.</em></td>
 <td style="text-align:left"><a href="SQLType.html"><code>SQLType</code></a></td>
 </tr>
 <tr>
@@ -165,7 +166,7 @@
 <hr>
 <h3 id="public-properties-for-jdbcconnectionmanager-jdbcconnectionmanager-md-">Public Properties for <a href="JdbcConnectionManager.html"><code>JdbcConnectionManager</code></a></h3>
 <h5 id="-a-id-connection-a-public-static-readonly-property-__connection__"><a id='connection'></a>public static readonly property <strong>Connection</strong></h5>
-<p><em>Get: Create a new instance of this connection manager.</em></p>
+<p><em>Get: Get a connection form the connection pool.</em></p>
 <table>
 <thead>
 <tr>
@@ -176,12 +177,12 @@
 <tbody>
 <tr>
 <td><code>Connection</code></td>
-<td>an instance of the manager</td>
+<td>connection from the pool</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
-<p><em>Get: Instantiates the connection manager</em></p>
+<p><em>Get: Get the SQL Database type.</em></p>
 <table>
 <thead>
 <tr>

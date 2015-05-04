@@ -23,7 +23,7 @@ static  property __Server__ <br> _Get: Get the Server for managing server relate
 static writeonly property __Wolf__ <br> _Set: Set the wolf instance_ | `void`
 static function __playerSelector__() <br> _Gets the [`PlayerSelector`](commandsys/PlayerSelector.md)_ | [`PlayerSelector`](commandsys/PlayerSelector.md)
 static function __bans__() <br> _Get the ban System to manage bans_ | [`BanManager`](bansystem/BanManager.md)
-static function __addSerializer__() <br> _Serialize an object of the given Type T into a String._ | `void`
+static function __addSerializer__() <br> _Add a serializer to the system_ | `void`
 static function __instance__() <br> _Get the wolf instance_ | [`Wolf`](Wolf.md)
 static function __jsonNBT__() <br> _Retrieves the JsonNBT Utility_ | [`JsonNBTUtility`](util/JsonNBTUtility.md)
 static function __hooks__() <br> _Get the Hook executor to fire hooks_ | [`HookExecutor`](hook/HookExecutor.md)
@@ -184,22 +184,11 @@ Returns | Description
 
 ##### <a id='addserializer'></a>public static function __addSerializer__()
 
-_Serialize an object of the given Type T into a String._
+_Add a serializer to the system_
 
-Returns | Description
---- | --- 
-`void` | serialized `String` of the object or null if there is no suitable serializer registered /
-    @SuppressWarnings("unchecked")
-    public static <T> String serialize(T object) {
-        Serializer<T> ser = (Serializer<T>)instance.serializers.get(object.getClass());
-
-        if (ser != null) {
-            return ser.serialize(object);
-        }
-        return null;
-    }
-
-    /** Accepts a String with data and the type it should deserialize into.
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='instance'></a>public static function __instance__()

@@ -11,7 +11,7 @@ A chunk generator is responsible for the initial shaping of an entire chunk. For
 Method | Type   
 --- | :--- 
  function __canSpawn__(world, x, z) <br> _Tests if the specified location is valid for a natural spawn position_ | `boolean`
- function __generate__(world, random, x, z) <br> _Shapes the chunk for the given coordinates._ | `byte[]`
+ function __generate__(world, random, x, z) <br> _generate method_ | `byte[]`
  function __getDefaultPopulators__(world) <br> _Gets a list of default [`BlockPopulator`](BlockPopulator.md)s to apply to a given_ | `List<BlockPopulator>`
  function __getFixedSpawnLocation__(world, random) <br> _Gets a fixed spawn location to use for a given world._ | `Location`
 
@@ -39,54 +39,54 @@ Returns | Description
 
 ##### <a id='generate'></a>public  function __generate__(world, random, x, z)
 
-_Shapes the chunk for the given coordinates. <p> This method should return a byte[32768] in the following format: <pre> for (int x = 0; x &lt; 16; x++) { for (int z = 0; z &lt; 16; z++) { for (int y = 0; y &lt; 128; y++) { // result[(x 16 + z) 128 + y] = ??; } } } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note this deprecated method will only be called when both generateExtBlockSections() and generateBlockSections() are unimplemented and return null._
+_generate method_
 
 Argument | Type | Description  
 --- | --- | --- 
-world | `World` | The world this chunk will be used for
-random | `Random` | The random generator to use
-x | `int` | The X-coordinate of the chunk
-z | `int` | The Z-coordinate of the chunk
+world | `World` | world argument
+random | `Random` | random argument
+x | `int` | x argument
+z | `int` | z argument
 
-Returns | Description
---- | --- 
-`byte[]` | byte[] containing the types for each block created by this generator
+Returns | 
+--- | 
+`byte[]` |
 
 
 ##### <a id='generateblocksections'></a>public  function __generateBlockSections__(world, random, x, z, biomes)
-_Deprecated: Magic value_
+_Deprecated_
 
-_Shapes the chunk for the given coordinates. <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks.  If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a byte[][] array in the following format: <pre> byte[][] result = new byte[world-height / 16][]; </pre> Each section {@code (sectionID = (Y>>4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new byte[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(byte[][] result, int x, int y, int z, byte blkid) { {@code if (result[y >> 4) == null) {} {@code result[y >> 4] = new byte[4096];} } {@code result[y >> 4][((y & 0xF) << 8) | (z << 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> byte getBlock(byte[][] result, int x, int y, int z) { {@code if (result[y >> 4) == null) {} return (byte)0; } {@code return result[y >> 4][((y & 0xF) << 8) | (z << 4) | x];} } </pre> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop_
+_generateBlockSections method_
 
 Argument | Type | Description  
 --- | --- | --- 
-world | `World` | The world this chunk will be used for
-random | `Random` | The random generator to use
-x | `int` | The X-coordinate of the chunk
-z | `int` | The Z-coordinate of the chunk
-biomes | `BiomeGrid` | Proposed biome values for chunk - can be updated by generator
+world | `World` | world argument
+random | `Random` | random argument
+x | `int` | x argument
+z | `int` | z argument
+biomes | `BiomeGrid` | biomes argument
 
-Returns | Description
---- | --- 
-`byte[][]` | short[][] containing the types for each block created by this generator
+Returns | 
+--- | 
+`byte[][]` |
 
 
 ##### <a id='generateextblocksections'></a>public  function __generateExtBlockSections__(world, random, x, z, biomes)
-_Deprecated: Magic value_
+_Deprecated_
 
-_Shapes the chunk for the given coordinates, with extended block IDs supported (0-4095). <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks. If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a short[][] array in the following format: <pre> short[][] result = new short[world-height / 16][]; </pre> Each section {@code (sectionID = (Y>>4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new short[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y >> 4] == null) {} {@code result[y >> 4] = new short[4096];} } {@code result[y >> 4][((y & 0xF) << 8) | (z << 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y >> 4] == null) {} return (short)0; } {@code return result[y >> 4][((y & 0xF) << 8) | (z << 4) | x];} } </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y >> 4) == null) {} {@code result[y >> 4] = new short[4096];} } {@code result[y >> 4][((y & 0xF) << 8) | (z << 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y >> 4) == null) {} return (short)0; } {@code return result[y >> 4][((y & 0xF) << 8) | (z << 4) | x];} } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note generators that do not return block IDs above 255 should not implement this method, or should have it return null (which will result in the generateBlockSections() method being called)._
+_generateExtBlockSections method_
 
 Argument | Type | Description  
 --- | --- | --- 
-world | `World` | The world this chunk will be used for
-random | `Random` | The random generator to use
-x | `int` | The X-coordinate of the chunk
-z | `int` | The Z-coordinate of the chunk
-biomes | `BiomeGrid` | Proposed biome values for chunk - can be updated by generator
+world | `World` | world argument
+random | `Random` | random argument
+x | `int` | x argument
+z | `int` | z argument
+biomes | `BiomeGrid` | biomes argument
 
-Returns | Description
---- | --- 
-`short[][]` | short[][] containing the types for each block created by this generator
+Returns | 
+--- | 
+`short[][]` |
 
 
 ##### <a id='getdefaultpopulators'></a>public  function __getDefaultPopulators__(world)

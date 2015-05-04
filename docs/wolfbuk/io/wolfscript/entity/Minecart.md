@@ -15,7 +15,7 @@ Method | Type
   property __DisplayBlockOffset__ <br> _Get: Gets the offset of the display block.<br>Set: Sets the offset of the display block._ | `int`
   property __DisplayBlock__ <br> _Get: Gets the display block for this minecart.<br>Set: Sets the display block for this minecart._ | [`MaterialData`](../material/MaterialData.md)
   property __DerailedVelocityMod__ <br> _Get: Gets the derailed velocity modifier. Used for minecarts that are on the<br>Set: Sets the derailed velocity modifier. Used for minecarts that are on the_ | `Vector`
-  property __Damage__ <br> _Get: This method exists for legacy reasons to provide backwards<br>Set: This method exists for legacy reasons to provide backwards_ | `double`
+  property __Damage__ <br> _Get: Gets a minecart's damage.<br>Set: Sets a minecart's damage._ | `double`
  readonly property __FlyingVelocityMod__ <br> _Get: Gets the flying velocity modifier. Used for minecarts that are in_ | `Vector`
   property __MaxSpeed__ <br> _Get: Gets the maximum speed of a minecart. The speed is unrelated to the<br>Set: Sets the maximum speed of a minecart. Must be nonnegative. Default is_ | `double`
  writeonly property __SlowWhenEmpty__ <br> _Set: Sets whether this minecart will slow down faster without a passenger_ | `void`
@@ -87,23 +87,15 @@ derailed | `Vector` | visible speed
 
 ##### <a id='damage'></a>public   property __Damage__
 
-_Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets a minecart's damage.<br>Set: Sets a minecart's damage._
 
 Get | Description
 --- | --- 
-`double` | The damage /
-    @Deprecated
-    public int _INVALID_getDamage();
-
-    /** Gets a minecart's damage.
+`double` | The damage
 
 Set | Type | Description  
 --- | --- | --- 
-damage | `double` | over 40 to "kill" a minecart /
-    @Deprecated
-    public void _INVALID_setDamage(int damage);
-
-    /** Sets a minecart's damage.
+damage | `double` | over 40 to "kill" a minecart
 
 
 ##### <a id='flyingvelocitymod'></a>public  readonly property __FlyingVelocityMod__

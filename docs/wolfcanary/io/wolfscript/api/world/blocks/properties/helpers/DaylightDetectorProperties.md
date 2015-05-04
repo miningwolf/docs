@@ -11,7 +11,7 @@ Daylight Detector properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyPower__(block, value) <br> _Daylight Detector power property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static function __applyPower__(block, value) <br> _Applies whether the `CommandBlock` has triggered or not_ | [`Block`](../../Block.md)
 static final var __power__ <br> _Daylight Detector power property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applypower'></a>public static function __applyPower__(block, value)
 
-_Daylight Detector power property, Values: 0 - 15 /
-    public static final BlockIntegerProperty power = getInstanceFor(DaylightSensor, "power");
-
-    /** Applies whether the `CommandBlock` has triggered or not_
+_Applies whether the `CommandBlock` has triggered or not_
 
 Argument | Type | Description  
 --- | --- | --- 

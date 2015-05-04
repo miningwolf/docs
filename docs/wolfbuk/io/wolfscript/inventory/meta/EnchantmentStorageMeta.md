@@ -7,7 +7,7 @@
 
 ### Interface Overview
 
-EnchantmentMeta is specific to items that can <i>store</i> enchantments, as opposed to being enchanted. `Material#ENCHANTED_BOOK` is an example of an item with enchantment storage.
+interface EnchantmentStorageMeta
 
 Method | Type   
 --- | :--- 

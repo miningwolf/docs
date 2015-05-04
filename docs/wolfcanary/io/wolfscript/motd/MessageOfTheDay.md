@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-Message of the Day container <p/> Loads and sends the Message of the Day to a player just joining.
+class MessageOfTheDay
 
 Method | Type   
 --- | :--- 

@@ -11,11 +11,13 @@ Door properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Door facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Door`_ | [`Block`](../../Block.md)
 static function __applyHalf__(block, value) <br> _Applies open to the `Door`_ | [`Block`](../../Block.md)
 static function __applyHinge__(block, value) <br> _Applies hinge to the `Door`_ | [`Block`](../../Block.md)
 static function __applyOpen__(block, value) <br> _Applies open to the `Door`_ | [`Block`](../../Block.md)
 static function __applyPowered__(block, value) <br> _Applies powered to the `Door`_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Half`
+static function __valueOf__(ordinal) <br> _valueOf method_ | `HingePosition`
 static final var __facing__ <br> _Door facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 static final var __hinge__ <br> _Door hinge position property, Values: `HingePosition`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __half__ <br> _Door half property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
@@ -35,22 +37,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Door facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
-    public static final BlockDirectionProperty facing = getInstanceFor(WoodenDoor, "facing");
-
-    /** Door hinge position property, Values: `HingePosition` /
-    public static final BlockEnumProperty hinge = getInstanceFor(WoodenDoor, "hinge");
-
-    /** Door half property, Values: `Half` /
-    public static final BlockEnumProperty half = getInstanceFor(WoodenDoor, "half");
-
-    /** Door open property, Values: true, false /
-    public static final BlockBooleanProperty open = getInstanceFor(WoodenDoor, "open");
-
-    /** Door powered property, Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(WoodenDoor, "powered");
-
-    /** Door halves_
+_Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Door`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -116,6 +103,32 @@ value | `boolean` | the `boolean` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Half` |
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`HingePosition` |
 
 
 ---

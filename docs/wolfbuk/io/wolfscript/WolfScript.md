@@ -12,9 +12,9 @@ Method | Type
 --- | :--- 
 static  property __Server__ <br> _Get: Gets the current [`Server`](Server.md) singleton<br>Set: Attempts to set the [`Server`](Server.md) singleton._ | [`Server`](Server.md)
 static readonly property __Name__ <br> _Get: Gets the name of this server implementation._ | `String`
-static  property __IdleTimeout__ <br> _Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific_ | `int`
+static  property __IdleTimeout__ <br> _Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of_ | `int`
 static readonly property __ScoreboardManager__ <br> _Get: Gets the instance of the scoreboard manager._ | [`ScoreboardManager`](scoreboard/ScoreboardManager.md)
-static readonly property __MaxPlayers__ <br> _Get: Gets an array copy of all currently logged in players._ | `int`
+static readonly property __MaxPlayers__ <br> _Get: Get the maximum amount of players which can login to this server._ | `int`
 static readonly property __Port__ <br> _Get: Get the game port that the server runs on._ | `int`
 static readonly property __ItemFactory__ <br> _Get: Gets the instance of the item factory (for `ItemMeta`)._ | [`ItemFactory`](inventory/ItemFactory.md)
 static readonly property __Ip__ <br> _Get: Get the IP that this server is bound to, or empty string if not_ | `String`
@@ -24,7 +24,7 @@ static readonly property __AnimalSpawnLimit__ <br> _Get: Gets user-specified lim
 static readonly property __GenerateStructures__ <br> _Get: Get generate-structures setting._ | `boolean`
 static readonly property __AllowEnd__ <br> _Get: Gets whether this server allows the End or not._ | `boolean`
 static readonly property __AllowNether__ <br> _Get: Gets whether this server allows the Nether or not._ | `boolean`
-static readonly property __MonsterSpawnLimit__ <br> _Get: Creates an empty inventory of type `InventoryType#CHEST` with the_ | `int`
+static readonly property __MonsterSpawnLimit__ <br> _Get: Gets user-specified limit for number of monsters that can spawn in a_ | `int`
 static readonly property __HelpMap__ <br> _Get: Gets the [`HelpMap`](help/HelpMap.md) providing help topics for this server._ | [`HelpMap`](help/HelpMap.md)
 static readonly property __Messenger__ <br> _Get: Gets the [`Messenger`](plugin/messaging/Messenger.md) responsible for this server._ | [`Messenger`](plugin/messaging/Messenger.md)
 static readonly property __OfflinePlayers__ <br> _Get: Gets every player that has ever played on this server._ | `OfflinePlayer[]`
@@ -39,13 +39,13 @@ static readonly property __IPBans__ <br> _Get: Gets a set containing all current
 static readonly property __Logger__ <br> _Get: Returns the primary logger associated with this server instance._ | `Logger`
 static readonly property __AllowFlight__ <br> _Get: Gets whether this server allows flying or not._ | `boolean`
 static readonly property __OnlineMode__ <br> _Get: Gets whether the Server is in online mode or not._ | `boolean`
-static readonly property __TicksPerAnimalSpawns__ <br> _Get: Gets default ticks per animal spawns value._ | `int`
-static  property __SpawnRadius__ <br> _Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._ | `int`
+static readonly property __TicksPerAnimalSpawns__ <br> _TicksPerAnimalSpawns property_ | `int`
+static  property __SpawnRadius__ <br> _Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._ | `int`
 static readonly property __ServerIcon__ <br> _Get: Gets an instance of the server's default server-icon._ | [`CachedServerIcon`](util/CachedServerIcon.md)
 static readonly property __ShutdownMessage__ <br> _Get: Gets the default message that is displayed when the server is stopped._ | `String`
 static readonly property __ServerName__ <br> _Get: Get the name of this server._ | `String`
 static readonly property __ServerId__ <br> _Get: Get an ID of this server. The ID is a simple generally alphanumeric ID_ | `String`
-static readonly property __TicksPerMonsterSpawns__ <br> _Get: Gets the default ticks per monster spawns value._ | `int`
+static readonly property __TicksPerMonsterSpawns__ <br> _TicksPerMonsterSpawns property_ | `int`
 static readonly property __ServicesManager__ <br> _Get: Gets a services manager._ | [`ServicesManager`](plugin/ServicesManager.md)
 static readonly property __WhitelistedPlayers__ <br> _Get: Gets a list of whitelisted players._ | `Set<OfflinePlayer>`
 static readonly property __Version__ <br> _Get: Gets the version string of this server implementation._ | `String`
@@ -59,7 +59,7 @@ static readonly property __UpdateFolderFile__ <br> _Get: Gets the update folder.
 static readonly property __UpdateFolder__ <br> _Get: Gets the name of the update folder. The update folder is used to safely_ | `String`
 static readonly property __WorldType__ <br> _Get: Get world type (level-type setting) for default world._ | `String`
 static writeonly property __Whitelist__ <br> _Set: Sets if the server is whitelisted._ | `void`
-static function __configureDbConfig__(config) <br> _Dispatches a command on this server, and executes it if found._ | `void`
+static function __configureDbConfig__(config) <br> _Populates a given `ServerConfig` with values attributes to this_ | `void`
 static function __createInventory__(owner, type, title) <br> _Creates an empty inventory with the specified type and title. If the type_ | [`Inventory`](inventory/Inventory.md)
 static function __createInventory__(owner, type) <br> _Creates an empty inventory of the specified type. If the type is {@link_ | [`Inventory`](inventory/Inventory.md)
 static function __broadcastMessage__(message) <br> _Broadcast a message to all players._ | `int`
@@ -76,7 +76,7 @@ static function __getRecipesFor__(result) <br> _Get a list of all recipes for a 
 static function __clearRecipes__() <br> _Clears the list of crafting recipes._ | `void`
 static function __recipeIterator__() <br> _Get an iterator through the list of crafting recipes._ | `Iterator<Recipe>`
 static function __getWorld__(name) <br> _Gets the world with the given name._ | `World`
-static function __isPrimaryThread__() <br> _Checks the current thread against the expected primary thread for the_ | `boolean`
+static function __isPrimaryThread__() <br> _isPrimaryThread method_ | `boolean`
 static function __isHardcore__() <br> _Gets whether the server is in hardcore mode or not._ | `boolean`
 static function __getWorld__(uid) <br> _Gets the world from the given Unique ID._ | `World`
 static function __hasWhitelist__() <br> _Gets whether this server has a whitelist or not._ | `boolean`
@@ -88,7 +88,7 @@ static function __reloadWhitelist__() <br> _Reloads the whitelist from disk._ | 
 static function __savePlayers__() <br> _Writes loaded players to disk._ | `void`
 static function __unloadWorld__(name, save) <br> _Unloads a world with the given name._ | `boolean`
 static function __unloadWorld__(world, save) <br> _Unloads the given world._ | `boolean`
-static function __useExactLoginLocation__() <br> _Gets whether to use vanilla (false) or exact behaviour (true)._ | `boolean`
+static function __useExactLoginLocation__() <br> _useExactLoginLocation method_ | `boolean`
 
 
 
@@ -122,16 +122,11 @@ Get | Description
 
 ##### <a id='idletimeout'></a>public static  property __IdleTimeout__
 
-_Get: Gets the idle kick timeout.<br>Set: Loads an image from a file, and returns a cached image for the specific server-icon. <p> Size and type are implementation defined. An incompatible file is guaranteed to throw an implementation-defined `Exception`._
+_Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout._
 
 Get | Description
 --- | --- 
-`int` | a cached server-icon that can be used for a `ServerListPingEvent#setServerIcon(CachedServerIcon)` /
-    public static CachedServerIcon loadServerIcon(File file) throws IllegalArgumentException, Exception {
-        return server.loadServerIcon(file);
-    }
-
-    /** Creates a cached server-icon for the specific image. <p> Size and type are implementation defined. An incompatible file is guaranteed to throw an implementation-defined `Exception`.
+`int` | the idle timeout in minutes
 
 Set | Type | Description  
 --- | --- | --- 
@@ -150,17 +145,11 @@ Get | Description
 
 ##### <a id='maxplayers'></a>public static readonly property __MaxPlayers__
 
-_Get: Gets an array copy of all currently logged in players. <p> This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Get the maximum amount of players which can login to this server._
 
 Get | Description
 --- | --- 
-`int` | an array of Players that are currently online /
-    @Deprecated
-    public static Player[] _INVALID_getOnlinePlayers() {
-        return server._INVALID_getOnlinePlayers();
-    }
-
-    /** Gets a view of all currently logged in players. This {@linkplain Collections#unmodifiableCollection(Collection) view} is a reused object, making some operations like `Collection#size()` zero-allocation. <p> The collection is a view backed by the internal representation, such that, changes to the internal state of the server will be reflected immediately. However, the reuse of the returned collection (identity) is not strictly guaranteed for future or all implementations. Casting the collection, or relying on interface implementations (like `Serializable` or `List`), is deprecated. <p> Iteration behavior is undefined outside of self-contained main-thread uses. Normal and immediate iterator use without consequences that affect the collection are fully supported. The effects following (non-exhaustive) {@link Entity#teleport(Location) teleportation}, {@link Player#setHealth(double) death}, and {@link Player#kickPlayer( String) kicking} are undefined. Any use of this collection from asynchronous threads is unsafe. <p> For safe consequential iteration or mimicking the old array behavior, using `Collection#toArray(Object[])` is recommended. For making snapshots, `ImmutableList#copyOf(Collection)` is recommended.
+`int` | the amount of players this server allows
 
 
 
@@ -256,11 +245,11 @@ Get | Description
 
 ##### <a id='monsterspawnlimit'></a>public static readonly property __MonsterSpawnLimit__
 
-_Get: Creates an empty inventory of type `InventoryType#CHEST` with the specified size._
+_Get: Gets user-specified limit for number of monsters that can spawn in a chunk._
 
 Get | Description
 --- | --- 
-`int` | a new inventory
+`int` | the monster spawn limit
 
 
 
@@ -409,11 +398,11 @@ Get | Description
 
 ##### <a id='ticksperanimalspawns'></a>public static readonly property __TicksPerAnimalSpawns__
 
-_Get: Gets default ticks per animal spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft's default. </ul> <p> <b>Note:</b> If set to 0, animal spawning will be disabled. We recommend using spawn-animals to control this instead. <p> Minecraft default: 400._
+_TicksPerAnimalSpawns property_
 
-Get | Description
---- | --- 
-`int` | the default ticks per animal spawns value
+Get | 
+--- | 
+`int` |
 
 
 
@@ -430,16 +419,11 @@ Get | Description
 
 ##### <a id='spawnradius'></a>public static  property __SpawnRadius__
 
-_Get: Gets a list of command aliases defined in the server properties.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._
+_Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect._
 
 Get | Description
 --- | --- 
-`int` | a map of aliases to command names /
-    public static Map<String, String[]> getCommandAliases() {
-        return server.getCommandAliases();
-    }
-
-    /** Gets the radius, in blocks, around each worlds spawn point to protect.
+`int` | spawn radius, or 0 if none
 
 Set | Type | Description  
 --- | --- | --- 
@@ -488,11 +472,11 @@ Get | Description
 
 ##### <a id='tickspermonsterspawns'></a>public static readonly property __TicksPerMonsterSpawns__
 
-_Get: Gets the default ticks per monster spawns value. <p> <b>Example Usage:</b> <ul> <li>A value of 1 will mean the server will attempt to spawn monsters every tick. <li>A value of 400 will mean the server will attempt to spawn monsters every 400th tick. <li>A value below 0 will be reset back to Minecraft's default. </ul> <p> <b>Note:</b> If set to 0, monsters spawning will be disabled. We recommend using spawn-monsters to control this instead. <p> Minecraft default: 1._
+_TicksPerMonsterSpawns property_
 
-Get | Description
---- | --- 
-`int` | the default ticks per monsters spawn value
+Get | 
+--- | 
+`int` |
 
 
 
@@ -635,15 +619,15 @@ value | `boolean` | true for whitelist on, false for off
 
 ##### <a id='configuredbconfig'></a>public static function __configureDbConfig__(config)
 
-_Dispatches a command on this server, and executes it if found._
+_Populates a given `ServerConfig` with values attributes to this server._
 
 Argument | Type | Description  
 --- | --- | --- 
 config | `ServerConfig` | the server config to populate
 
-Returns | Description
---- | --- 
-`void` | returns false if no target is found
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='createinventory'></a>public static function __createInventory__(owner, type, title)
@@ -922,11 +906,11 @@ Returns | Description
 
 ##### <a id='isprimarythread'></a>public static function __isPrimaryThread__()
 
-_Checks the current thread against the expected primary thread for the server. <p> <b>Note:</b> this method should not be used to indicate the current synchronized state of the runtime. A current thread matching the main thread indicates that it is synchronized, but a mismatch <b>does not preclude</b> the same assumption._
+_isPrimaryThread method_
 
-Returns | Description
---- | --- 
-`boolean` | true if the current thread matches the expected primary thread, false otherwise
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='ishardcore'></a>public static function __isHardcore__()
@@ -1048,11 +1032,11 @@ Returns | Description
 
 ##### <a id='useexactloginlocation'></a>public static function __useExactLoginLocation__()
 
-_Gets whether to use vanilla (false) or exact behaviour (true). <ul> <li>Vanilla behaviour: check for collisions and move the player if needed. <li>Exact behaviour: spawn players exactly where they should be. </ul>_
+_useExactLoginLocation method_
 
-Returns | Description
---- | --- 
-`boolean` | true if exact location locations are used for spawning, false for vanilla collision detection or otherwise
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

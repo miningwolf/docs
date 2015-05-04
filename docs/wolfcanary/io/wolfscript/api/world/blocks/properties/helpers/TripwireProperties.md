@@ -15,7 +15,7 @@ static function __applyAttached__(block, value) <br> _Applies whether the `Tripw
 static function __applyDisarmed__(block, value) <br> _Applies whether the `Tripwire` is disarmed or not_ | [`Block`](../../Block.md)
 static function __applyEast__(block, value) <br> _Applies whether the `Tripwire` is connected east or not_ | [`Block`](../../Block.md)
 static function __applyNorth__(block, value) <br> _Applies whether the `Tripwire` is connected north or not_ | [`Block`](../../Block.md)
-static function __applyPowered__(block, value) <br> _Tripwire powered property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyPowered__(block, value) <br> _Applies whether the `Tripwire` is powered or not_ | [`Block`](../../Block.md)
 static function __applySouth__(block, value) <br> _Applies whether the `Tripwire` is connected south or not_ | [`Block`](../../Block.md)
 static function __applySuspended__(block, value) <br> _Applies whether the `Tripwire` is suspended or not_ | [`Block`](../../Block.md)
 static function __applyWest__(block, value) <br> _Applies whether the `Tripwire` is connected west or not_ | [`Block`](../../Block.md)
@@ -97,31 +97,7 @@ Returns | Description
 
 ##### <a id='applypowered'></a>public static function __applyPowered__(block, value)
 
-_Tripwire powered property, Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(Tripwire, "powered");
-
-    /** Tripwire suspended property, Values: true, false /
-    public static final BlockBooleanProperty suspended = getInstanceFor(Tripwire, "suspended");
-
-    /** Tripwire attached property, Values: true, false /
-    public static final BlockBooleanProperty attached = getInstanceFor(Tripwire, "attached");
-
-    /** Tripwire disarmed property, Values: true, false /
-    public static final BlockBooleanProperty disarmed = getInstanceFor(Tripwire, "disarmed");
-
-    /** Tripwire north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(Tripwire, "north");
-
-    /** Tripwire east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(Tripwire, "east");
-
-    /** Tripwire south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(Tripwire, "south");
-
-    /** Tripwire west property, Values: true, false /
-    public static final BlockBooleanProperty west = getInstanceFor(Tripwire, "west");
-
-    /** Applies whether the `Tripwire` is powered or not_
+_Applies whether the `Tripwire` is powered or not_
 
 Argument | Type | Description  
 --- | --- | --- 

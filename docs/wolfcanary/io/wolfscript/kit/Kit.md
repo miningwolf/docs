@@ -10,12 +10,20 @@ Contains information about a kit
 
 Method | Type   
 --- | :--- 
-  property __Id__ <br> _Get: get the ID of this kit<br>Set: Only set this if you're 110% sure what you're doing._ | `int`
- readonly property __ItemsAsStringList__ <br> _Get: Mostly used for adding the items into the database_ | `List<String>`
+  property __Delay__ <br> _Delay property_ | `int`
+ readonly property __Content__ <br> _Content property_ | `List<Item>`
+ writeonly property __Id__ <br> _Set: Only set this if you're 110% sure what you're doing._ | `void`
+ readonly property __Owner__ <br> _Owner property_ | `String[]`
+ readonly property __Groups__ <br> _Groups property_ | `String[]`
+ readonly property __Id__ <br> _Get: get the ID of this kit_ | `int`
   property __Name__ <br> _Name property_ | `String`
- function __canBeGiven__(player) <br> _Time between uses as unix timestamp applicable number_ | `boolean`
+ readonly property __ItemsAsStringList__ <br> _Get: Mostly used for adding the items into the database_ | `List<String>`
+ function __canBeGiven__(player) <br> _Tests if a given `Player` can receive this kit_ | `boolean`
  function __giveKit__(player, override) <br> _Give this kit to player, if possible_ | `boolean`
+ function __setGroups__() <br> _setGroups method_ | `void`
+ function __setContent__() <br> _setContent method_ | `void`
  function __setContentFromStrings__() <br> _Used to create a new item list from data coming from the database_ | `void`
+ function __setOwner__() <br> _setOwner method_ | `void`
 
 
 
@@ -24,9 +32,9 @@ Method | Type
 
 ### Public Properties for [`Kit`](Kit.md)
 
-##### <a id='id'></a>public   property __Id__
+##### <a id='delay'></a>public   property __Delay__
 
-_Get: get the ID of this kit<br>Set: Only set this if you're 110% sure what you're doing. Changing the ID will not always have an effect. If you want to copy a kit and create a new one, change this kit to your likings, then add it as new to the BackboneKits. A new ID will be auto-assigned then._
+_Delay property_
 
 Get | 
 --- | 
@@ -34,16 +42,59 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-id | `int` | id argument
+delay | `int` | delay argument
 
 
-##### <a id='itemsasstringlist'></a>public  readonly property __ItemsAsStringList__
+##### <a id='content'></a>public  readonly property __Content__
 
-_Get: Mostly used for adding the items into the database_
+_Content property_
 
 Get | 
 --- | 
-`List<String>` |
+`List<Item>` |
+
+
+
+##### <a id='id'></a>public  writeonly property __Id__
+
+_Set: Only set this if you're 110% sure what you're doing. Changing the ID will not always have an effect. If you want to copy a kit and create a new one, change this kit to your likings, then add it as new to the BackboneKits. A new ID will be auto-assigned then._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+id | `int` | id argument
+
+
+##### <a id='owner'></a>public  readonly property __Owner__
+
+_Owner property_
+
+Get | 
+--- | 
+`String[]` |
+
+
+
+##### <a id='groups'></a>public  readonly property __Groups__
+
+_Groups property_
+
+Get | 
+--- | 
+`String[]` |
+
+
+
+##### <a id='id'></a>public  readonly property __Id__
+
+_Get: get the ID of this kit_
+
+Get | 
+--- | 
+`int` |
 
 
 
@@ -60,62 +111,23 @@ Set | Type | Description
 name | `String` | name argument
 
 
+##### <a id='itemsasstringlist'></a>public  readonly property __ItemsAsStringList__
+
+_Get: Mostly used for adding the items into the database_
+
+Get | 
+--- | 
+`List<String>` |
+
+
+
 ---
 
 ### Public Methods for [`Kit`](Kit.md)
 
 ##### <a id='canbegiven'></a>public  function __canBeGiven__(player)
 
-_Time between uses as unix timestamp applicable number /
-    private int delay;
-
-    /** Owner if applicable /
-    private String[] owners = null;
-
-    /** Groups if applicable /
-    private String[] groups = null;
-
-    /** List of last usages per player /
-    private Map<String, Long> lastUsages = new HashMap<String, Long>();
-
-    private String name;
-
-    /** The content of this kit as IItems Each list entry shall be a different Item /
-    private List<Item> content = new ArrayList<Item>();
-
-    public int getDelay() {
-        return delay;
-    }
-
-    public void setDelay(int delay) {
-        this.delay = delay;
-    }
-
-    public String[] getOwner() {
-        return owners;
-    }
-
-    public void setOwner(String[] owner) {
-        this.owners = owner;
-    }
-
-    public String[] getGroups() {
-        return groups;
-    }
-
-    public void setGroups(String[] groups) {
-        this.groups = groups;
-    }
-
-    public List<Item> getContent() {
-        return content;
-    }
-
-    public void setContent(ArrayList<Item> content) {
-        this.content = content;
-    }
-
-    /** Tests if a given `Player` can receive this kit_
+_Tests if a given `Player` can receive this kit_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -140,9 +152,36 @@ Returns | Description
 `boolean` | `true` if successful; `false` if not
 
 
+##### <a id='setgroups'></a>public  function __setGroups__()
+
+_setGroups method_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='setcontent'></a>public  function __setContent__()
+
+_setContent method_
+
+Returns | 
+--- | 
+`void` |
+
+
 ##### <a id='setcontentfromstrings'></a>public  function __setContentFromStrings__()
 
 _Used to create a new item list from data coming from the database_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='setowner'></a>public  function __setOwner__()
+
+_setOwner method_
 
 Returns | 
 --- | 

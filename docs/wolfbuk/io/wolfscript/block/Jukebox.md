@@ -11,7 +11,7 @@ Represents a Jukebox
 
 Method | Type   
 --- | :--- 
-  property __Playing__ <br> _Get: Get the record currently playing<br>Set: Set the record currently playing_ | [`Material`](../Material.md)
+  property __Playing__ <br> _Playing property_ | [`Material`](../Material.md)
  function __eject__() <br> _Stop the jukebox playing and eject the current record_ | `boolean`
  function __isPlaying__() <br> _Check if the jukebox is currently playing a record_ | `boolean`
  |
@@ -36,7 +36,7 @@ __Inherited items from [`Metadatable`](../metadata/Metadatable.md)__ |
 
 ##### <a id='playing'></a>public   property __Playing__
 
-_Get: Get the record currently playing<br>Set: Set the record currently playing_
+_Playing property_
 
 Get | Description
 --- | --- 
@@ -44,7 +44,7 @@ Get | Description
 
 Set | Type | Description  
 --- | --- | --- 
-record | [`Material`](../Material.md) | The record Material, or null/AIR to stop playing
+record | [`Material`](../Material.md) | record argument
 
 
 ---

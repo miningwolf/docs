@@ -10,10 +10,11 @@ Represents a bitmap font drawable to a map.
 
 Method | Type   
 --- | :--- 
+new __CharacterSprite__(width, height) <br> _CharacterSprite constructor_ | _constructor_
  readonly property __Height__ <br> _Get: Get the height of this font._ | `int`
  readonly property __Height__ <br> _Get: Get the height of the character sprite._ | `int`
  readonly property __Width__ <br> _Get: Get the width of the character sprite._ | `int`
- function __get__(row, col) <br> _Represents the graphics for a single character in a MapFont._ | `boolean`
+ function __get__(row, col) <br> _Get the value of a pixel of the character._ | `boolean`
  function __getChar__(ch) <br> _Get the sprite for a given character._ | `CharacterSprite`
  function __getWidth__(text) <br> _Get the width of the given text as it would be rendered using this_ | `int`
  function __isValid__(text) <br> _Check whether the given text is valid._ | `boolean`
@@ -23,6 +24,18 @@ Method | Type
 
 ---
 
+### Public Constructors for [`MapFont`](MapFont.md)
+
+##### <a id='charactersprite'></a>new __CharacterSprite__(width, height) 
+
+_CharacterSprite constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+width | `int` | width argument
+height | `int` | height argument
+
+---
 
 ### Public Properties for [`MapFont`](MapFont.md)
 
@@ -62,24 +75,7 @@ Get | Description
 
 ##### <a id='get'></a>public  function __get__(row, col)
 
-_Represents the graphics for a single character in a MapFont. /
-    public static class CharacterSprite {
-
-        private final int width;
-        private final int height;
-        private final boolean[] data;
-
-        public CharacterSprite(int width, int height, boolean[] data) {
-            this.width = width;
-            this.height = height;
-            this.data = data;
-
-            if (data.length != width height) {
-                throw new IllegalArgumentException("size of data does not match dimensions");
-            }
-        }
-
-        /** Get the value of a pixel of the character._
+_Get the value of a pixel of the character._
 
 Argument | Type | Description  
 --- | --- | --- 

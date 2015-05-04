@@ -11,12 +11,12 @@ Manages all commands. Add commands using one of the methods below.
 Method | Type   
 --- | :--- 
  function __canUseCommand__(user, command) <br> _canUseCommand method_ | `boolean`
- function __hasCommand__(command) <br> _Checks whether this manager has <tt>command</tt>._ | `boolean`
- function __matchCommand__(caller, command, onlySubcommands) <br> _Register an already implemented WolfCommand to the help system._ | `StringBuilder`
+ function __hasCommand__(command) <br> _hasCommand method_ | `boolean`
+ function __matchCommand__(caller, command, onlySubcommands) <br> _Build a list of commands matching the given string._ | `StringBuilder`
  function __matchCommandNames__(caller, partial, includeSubs) <br> _Gets a list of matching [`WolfCommand`](WolfCommand.md) names a [`MessageReceiver`](../chat/MessageReceiver.md) can use_ | `List<String>`
  function __parseCommand__(caller, command) <br> _Performs a lookup for a command of the given name and executes it if_ | `boolean`
  function __tabComplete__(msgrec, command) <br> _Gets the tabComplete for a specified Command name_ | `List<String>`
- function __unregisterCommand__(name) <br> _Remove a command from the command list._ | `boolean`
+ function __unregisterCommand__(name) <br> _unregisterCommand method_ | `boolean`
  function __unregisterCommands__(owner) <br> _Remove all commands that belong to the specified command owner._ | `void`
 
 
@@ -42,20 +42,20 @@ Returns |
 
 ##### <a id='hascommand'></a>public  function __hasCommand__(command)
 
-_Checks whether this manager has <tt>command</tt>._
+_hasCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-command | `String` | The command to search for.
+command | `String` | command argument
 
-Returns | Description
---- | --- 
-`boolean` | <tt>true</tt> if this manager has <tt>command</tt>, <tt>false</tt> otherwise.
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='matchcommand'></a>public  function __matchCommand__(caller, command, onlySubcommands)
 
-_Register an already implemented WolfCommand to the help system. This will automatically update the help system as well._
+_Build a list of commands matching the given string._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -113,15 +113,15 @@ Returns | Description
 
 ##### <a id='unregistercommand'></a>public  function __unregisterCommand__(name)
 
-_Remove a command from the command list._
+_unregisterCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `String` | the name of the command
+name | `String` | name argument
 
-Returns | Description
---- | --- 
-`boolean` | <tt>true</tt> if the command was removed, <tt>false</tt> otherwise.
+Returns | 
+--- | 
+`boolean` |
 
 
 ##### <a id='unregistercommands'></a>public  function __unregisterCommands__(owner)

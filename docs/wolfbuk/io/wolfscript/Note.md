@@ -24,7 +24,7 @@ static function __flat__(octave, tone) <br> _Creates a new note for a flat tone,
 static function __natural__(octave, tone) <br> _Creates a new note for a natural tone, such as A-natural._ | [`Note`](Note.md)
 static function __sharp__(octave, tone) <br> _Creates a new note for a sharp tone, such as A-sharp._ | [`Note`](Note.md)
  function __toString__() <br> _toString method_ | `String`
-static final var __TONES__ <br> _An enum holding tones._ | `byte`
+static final var __TONES__ <br> _The number of tones including sharped tones._ | `byte`
 
 
 
@@ -57,29 +57,7 @@ sharped | `boolean` | Set if the tone is sharped (e.g. for F#).
 ##### <a id='id'></a>public  readonly property __Id__
 _Deprecated: Magic value_
 
-_Get: An enum holding tones. /
-    public enum Tone {
-        G(0x1, true),
-        A(0x3, true),
-        B(0x5, false),
-        C(0x6, true),
-        D(0x8, true),
-        E(0xA, false),
-        F(0xB, true);
-
-        private final boolean sharpable;
-        private final byte id;
-
-        private static final Map<Byte, Note.Tone> BY_DATA = Maps.newHashMap();
-        /** The number of tones including sharped tones. /
-        public static final byte TONES_COUNT = 12;
-
-        private Tone(int id, boolean sharpable) {
-            this.id = (byte) (id % TONES_COUNT);
-            this.sharpable = sharpable;
-        }
-
-        /** Returns the not sharped id of this tone._
+_Get: Returns the not sharped id of this tone._
 
 Get | Description
 --- | --- 
@@ -279,21 +257,7 @@ Returns |
 
 ##### <a id='tones'></a>public static final var __TONES__
 
-_An enum holding tones. /
-    public enum Tone {
-        G(0x1, true),
-        A(0x3, true),
-        B(0x5, false),
-        C(0x6, true),
-        D(0x8, true),
-        E(0xA, false),
-        F(0xB, true);
-
-        private final boolean sharpable;
-        private final byte id;
-
-        private static final Map<Byte, Note.Tone> BY_DATA = Maps.newHashMap();
-        /** The number of tones including sharped tones._
+_The number of tones including sharped tones._
 
 >Returns
 >  `byte`

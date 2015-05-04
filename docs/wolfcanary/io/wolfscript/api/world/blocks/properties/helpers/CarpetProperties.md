@@ -11,7 +11,7 @@ Carpet properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyColor__(block, value) <br> _Carpet color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM)_ | [`Block`](../../Block.md)
+static function __applyColor__(block, value) <br> _Applies color to the `Carpet`_ | [`Block`](../../Block.md)
 static final var __color__ <br> _Carpet color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applycolor'></a>public static function __applyColor__(block, value)
 
-_Carpet color property, Values: [`DyeColor`](../../../../DyeColor.md) (excluding CUSTOM) /
-    public static final BlockEnumProperty color = getInstanceFor(WhiteCarpet, "color");
-
-    /** Applies color to the `Carpet`_
+_Applies color to the `Carpet`_
 
 Argument | Type | Description  
 --- | --- | --- 

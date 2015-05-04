@@ -212,11 +212,11 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Name</strong> <br> <em>Get: Executed on tab completion for this command, returning a list of</em></td>
+<td> readonly property <strong>Name</strong> <br> <em>Get: Returns the name of this command</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>  property <strong>Label</strong> <br> <em>Get: Returns the current label for this command<br>Set: Sets the label of this command.</em></td>
+<td>  property <strong>Label</strong> <br> <em>Label property</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
@@ -224,7 +224,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> writeonly property <strong>Description</strong> <br> <em>Set: Sets a brief description of this command. Defining a description in the</em></td>
+<td> writeonly property <strong>Description</strong> <br> <em>Description property</em></td>
 <td style="text-align:left"><a href="../Command.html"><code>Command</code></a></td>
 </tr>
 <tr>
@@ -260,7 +260,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>setAliases</strong>() <br> <em>Sets the list of aliases to request on registration for this command.</em></td>
+<td> function <strong>setAliases</strong>() <br> <em>setAliases method</em></td>
 <td style="text-align:left"><a href="../Command.html"><code>Command</code></a></td>
 </tr>
 <tr>
@@ -441,7 +441,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
-<p><em>Get: Executed on tab completion for this command, returning a list of options the player can tab through.</em></p>
+<p><em>Get: Returns the name of this command</em></p>
 <table>
 <thead>
 <tr>
@@ -452,12 +452,12 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>a list of tab-completions for the specified arguments. This will never be null. List may be immutable.</td>
+<td>Name of this command</td>
 </tr>
 </tbody>
 </table>
 <h5 id="-a-id-label-a-public-property-__label__"><a id='label'></a>public   property <strong>Label</strong></h5>
-<p><em>Get: Returns the current label for this command<br>Set: Sets the label of this command. <p> If the command is currently registered the label change will only take effect after its been re-registered e.g. after a /reload</em></p>
+<p><em>Label property</em></p>
 <table>
 <thead>
 <tr>
@@ -468,7 +468,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>returns true if the name change happened instantly or false if it was scheduled for re-registration</td>
+<td>Label of this command or null if not registered</td>
 </tr>
 </tbody>
 </table>
@@ -484,7 +484,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>The command&#39;s name</td>
+<td>name argument</td>
 </tr>
 </tbody>
 </table>
@@ -505,18 +505,17 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-description-a-public-writeonly-property-__description__"><a id='description'></a>public  writeonly property <strong>Description</strong></h5>
-<p><em>Set: Sets a brief description of this command. Defining a description in the <code>PluginDescriptionFile#getCommands()</code> (under the `<code>description</code>&#39; node) is equivalent to this method.</em></p>
+<p><em>Description property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../Command.html"><code>Command</code></a></td>
-<td>this command object, for chaining</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -532,7 +531,7 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 <tr>
 <td>description</td>
 <td><code>String</code></td>
-<td>new command description</td>
+<td>description argument</td>
 </tr>
 </tbody>
 </table>
@@ -765,18 +764,17 @@ Extends <a href="WolfScriptCommand.html"><code>WolfScriptCommand</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-setaliases-a-public-function-__setaliases__-"><a id='setaliases'></a>public  function <strong>setAliases</strong>()</h5>
-<p><em>Sets the list of aliases to request on registration for this command. This is not effective outside of defining aliases in the <code>PluginDescriptionFile#getCommands()</code> (under the `<code>aliases</code>&#39; node) is equivalent to this method.</em></p>
+<p><em>setAliases method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../Command.html"><code>Command</code></a></td>
-<td>this command object, for chaining</td>
+<td></td>
 </tr>
 </tbody>
 </table>

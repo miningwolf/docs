@@ -24,21 +24,7 @@ FERN_LIKE: 0x2<br> _Represents the fern-looking grass species._ | GrassSpecies
 ##### <a id='data'></a>public  readonly property __Data__
 _Deprecated: Magic value_
 
-_Get: Represents the dead looking grass. /
-    DEAD(0x0),
-    /** Represents the normal grass species. /
-    NORMAL(0x1),
-    /** Represents the fern-looking grass species. /
-    FERN_LIKE(0x2);
-
-    private final byte data;
-    private final static Map<Byte, GrassSpecies> BY_DATA = Maps.newHashMap();
-
-    private GrassSpecies(final int data) {
-        this.data = (byte) data;
-    }
-
-    /** Gets the associated data value representing this species_
+_Get: Gets the associated data value representing this species_
 
 Get | Description
 --- | --- 

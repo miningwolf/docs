@@ -14,10 +14,10 @@ Method | Type
 static function __getOwner__(skull) <br> _Gets the name of the owner if present_ | `String`
 static function __getOwnerProfile__(skull) <br> _Gets the profile of the owner if present_ | `GameProfile`
 static function __getSkullType__(skull) <br> _Gets the SkullType for the Skull_ | `SkullType`
-static function __hasOwner__(skull) <br> _Skeleton Skull_ | `boolean`
+static function __hasOwner__(skull) <br> _Checks if the Skull has a owner_ | `boolean`
 static function __setOwner__(skull, owner) <br> _Sets the owner of the skull._ | `void`
-static function __setOwner__(skull, ownerUUID, ownerName) <br> _Sets the owner of the skull._ | `void`
-static function __setOwner__(skull, owner) <br> _Sets the owner of the skull._ | `void`
+static function __setOwner__(skull, ownerUUID, ownerName) <br> _setOwner method_ | `void`
+static function __setOwner__(skull, owner) <br> _setOwner method_ | `void`
 
 
 
@@ -67,25 +67,7 @@ Returns | Description
 
 ##### <a id='hasowner'></a>public static function __hasOwner__(skull)
 
-_Skeleton Skull /
-        SKELETON,
-        //
-        /** Wither Skull /
-        WITHER,
-        //
-        /** Zombie Skull /
-        ZOMBIE,
-        //
-        /** Player Skull /
-        PLAYER,
-        //
-        /** Creeper Skull /
-        CREEPER,
-        //
-        ;
-    }
-
-    /** Checks if the Skull has a owner_
+_Checks if the Skull has a owner_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -112,13 +94,13 @@ Returns |
 
 ##### <a id='setowner'></a>public static function __setOwner__(skull, ownerUUID, ownerName)
 
-_Sets the owner of the skull.<br/>_
+_setOwner method_
 
 Argument | Type | Description  
 --- | --- | --- 
-skull | [`Item`](../Item.md) | the skull [`Item`](../Item.md)
-ownerUUID | `UUID` | the `UUID` of the Owner (can be null)
-ownerName | `String` | the name of the owner
+skull | [`Item`](../Item.md) | skull argument
+ownerUUID | `UUID` | ownerUUID argument
+ownerName | `String` | ownerName argument
 
 Returns | 
 --- | 
@@ -127,12 +109,12 @@ Returns |
 
 ##### <a id='setowner'></a>public static function __setOwner__(skull, owner)
 
-_Sets the owner of the skull.<br/>_
+_setOwner method_
 
 Argument | Type | Description  
 --- | --- | --- 
-skull | [`Item`](../Item.md) | the skull [`Item`](../Item.md)
-owner | `GameProfile` | the `GameProfile` of the owner
+skull | [`Item`](../Item.md) | skull argument
+owner | `GameProfile` | owner argument
 
 Returns | 
 --- | 

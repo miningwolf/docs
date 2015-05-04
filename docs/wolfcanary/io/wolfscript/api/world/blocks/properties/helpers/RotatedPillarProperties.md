@@ -7,11 +7,11 @@
 
 ### Class Overview
 
-Rotated Pillar properties helper<br/> Applies to<br/> <ul>Hay</ul> <ul>Log</ul>
+class RotatedPillarProperties
 
 Method | Type   
 --- | :--- 
-static function __applyAxis__(block, value) <br> _Rotated Pillar axis property, Values: `Axis`_ | [`Block`](../../Block.md)
+static function __applyAxis__(block, value) <br> _Applies axis to the {@code Rotated Pillar}_ | [`Block`](../../Block.md)
 static final var __axis__ <br> _Rotated Pillar axis property, Values: `Axis`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyaxis'></a>public static function __applyAxis__(block, value)
 
-_Rotated Pillar axis property, Values: `Axis` /
-    public static final BlockEnumProperty axis = getInstanceFor(HayBale, "axis");
-
-    /** Applies axis to the {@code Rotated Pillar}_
+_Applies axis to the {@code Rotated Pillar}_
 
 Argument | Type | Description  
 --- | --- | --- 

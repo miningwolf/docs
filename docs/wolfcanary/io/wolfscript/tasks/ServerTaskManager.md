@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-Server Task Manager <p/> The Manager for [`ServerTask`](ServerTask.md)<br> If an exception occurs while running a task, it gets removed from the queue, regardless of continuous status
+class ServerTaskManager
 
 Method | Type   
 --- | :--- 

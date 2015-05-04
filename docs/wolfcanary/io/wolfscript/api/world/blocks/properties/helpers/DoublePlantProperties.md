@@ -7,12 +7,14 @@
 
 ### Class Overview
 
-Double Plant properties helper<br/> Applies to<br/> <ul>SUNFLOWER</ul> <ul>SYRINGA</ul> <ul>GRASS</ul> <ul>FERN</ul> <ul>ROSE</ul> <ul>PAEONIA</ul>
+class DoublePlantProperties
 
 Method | Type   
 --- | :--- 
 static function __applyHalf__(block, value) <br> _Applies half to the {@code Double Plant}_ | [`Block`](../../Block.md)
-static function __applyVariant__(block, value) <br> _Double Plant variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static function __applyVariant__(block, value) <br> _Applies variant to the {@code Double Plant}_ | [`Block`](../../Block.md)
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Half`
+static function __valueOf__(ordinal) <br> _valueOf method_ | `Variant`
 static final var __variant__ <br> _Double Plant variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
 static final var __half__ <br> _Double Plant half property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
  |
@@ -43,13 +45,7 @@ Returns | Description
 
 ##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
 
-_Double Plant variant property, Values: `Variant` /
-    public static final BlockEnumProperty variant = getInstanceFor(DoubleGrass, "variant");
-
-    /** Double Plant half property, Values: `Half` /
-    public static final BlockEnumProperty half = getInstanceFor(DoubleGrass, "half");
-
-    /** Double Plant halves_
+_Applies variant to the {@code Double Plant}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -59,6 +55,32 @@ value | `Variant` | the `Variant` value to apply
 Returns | Description
 --- | --- 
 [`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Half` |
+
+
+##### <a id='valueof'></a>public static function __valueOf__(ordinal)
+
+_valueOf method_
+
+Argument | Type | Description  
+--- | --- | --- 
+ordinal | `int` | ordinal argument
+
+Returns | 
+--- | 
+`Variant` |
 
 
 ---

@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-Secondary Slot Type <p/> A more specific typing for Slots
+enum SecondarySlotType
 
 Item | Type   
 --- | :--- 
@@ -14,7 +14,7 @@ NULL: <br> _Null Slot_ | SecondarySlotType
 OUTSIDE: <br> _Outside the Inventory Window_ | SecondarySlotType
 ARMOR: <br> _Armor Slot_ | SecondarySlotType
 CONTAINER: <br> _Container slot_ | SecondarySlotType
-CRAFT: <br> _Crafting slot (ie: Workbench/Player crafting matrix)_ | SecondarySlotType
+CRAFT: <br> _CRAFT SecondarySlotType_ | SecondarySlotType
 ENCHANT: <br> _Enchantment slot_ | SecondarySlotType
 FUEL: <br> _Fuel slot_ | SecondarySlotType
 INVENTORY: <br> _Inventory slot_ | SecondarySlotType

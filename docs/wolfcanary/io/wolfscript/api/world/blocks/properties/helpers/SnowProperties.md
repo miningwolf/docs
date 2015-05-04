@@ -11,7 +11,7 @@ Snow properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyLayers__(block, value) <br> _Snow layers property, Values: 1 - 8_ | [`Block`](../../Block.md)
+static function __applyLayers__(block, value) <br> _Applies layer to the `Snow`_ | [`Block`](../../Block.md)
 static final var __layers__ <br> _Snow layers property, Values: 1 - 8_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
@@ -27,10 +27,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applylayers'></a>public static function __applyLayers__(block, value)
 
-_Snow layers property, Values: 1 - 8 /
-    public static final BlockIntegerProperty layers = getInstanceFor(Snow, "layers");
-
-    /** Applies layer to the `Snow`_
+_Applies layer to the `Snow`_
 
 Argument | Type | Description  
 --- | --- | --- 

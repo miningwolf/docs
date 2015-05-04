@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-PortalDestroy<br/> Contains information about a portal being destroyed
+class PortalDestroy
 
 Method | Type   
 --- | :--- 

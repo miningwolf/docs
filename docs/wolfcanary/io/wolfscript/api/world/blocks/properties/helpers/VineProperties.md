@@ -14,7 +14,7 @@ Method | Type
 static function __applyEast__(block, value) <br> _Applies whether the `Vine` texture is applied east or not_ | [`Block`](../../Block.md)
 static function __applyNorth__(block, value) <br> _Applies whether the `Vine` texture is applied north or not_ | [`Block`](../../Block.md)
 static function __applySouth__(block, value) <br> _Applies whether the `Vine` texture is applied south or not_ | [`Block`](../../Block.md)
-static function __applyUp__(block, value) <br> _Vine up property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applyUp__(block, value) <br> _Applies whether the `Vine` texture is applied up or not_ | [`Block`](../../Block.md)
 static function __applyWest__(block, value) <br> _Applies whether the `Vine` texture is applied west or not_ | [`Block`](../../Block.md)
 static final var __up__ <br> _Vine up property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 static final var __north__ <br> _Vine north property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
@@ -77,22 +77,7 @@ Returns | Description
 
 ##### <a id='applyup'></a>public static function __applyUp__(block, value)
 
-_Vine up property, Values: true, false /
-    public static final BlockBooleanProperty up = getInstanceFor(Vines, "up");
-
-    /** Vine north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(Vines, "north");
-
-    /** Vine east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(Vines, "east");
-
-    /** Vine south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(Vines, "south");
-
-    /** Vine west property, Values: true, false /
-    public static final BlockBooleanProperty west = getInstanceFor(Vines, "west");
-
-    /** Applies whether the `Vine` texture is applied up or not_
+_Applies whether the `Vine` texture is applied up or not_
 
 Argument | Type | Description  
 --- | --- | --- 

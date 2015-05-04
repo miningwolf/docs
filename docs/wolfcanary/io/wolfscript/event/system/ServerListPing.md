@@ -14,11 +14,11 @@ Method | Type
 new __ServerListPing__(remoteSocket, requesterProtocol, hostNamePinged, portPinged, motd, currentPlayers, maxPlayers, favicon) <br> _ServerListPing constructor_ | _constructor_
  writeonly property __Motd__ <br> _Set: Set the MOTD that will be sent to the client_ | `void`
  readonly property __RequesterAddress__ <br> _Get: Gets the `InetAddress` (IP) of the requesting party_ | `InetAddress`
-  property __Favicon__ <br> _Get: Returns the Favicon encoded string to be sent<br>Set: Sets the favicon encoded string._ | `String`
+  property __Favicon__ <br> _Favicon property_ | `String`
  readonly property __HostNamePinged__ <br> _Get: Gets the HostName (or IP) used by the requester to connect to the server_ | `String`
  readonly property __PortPinged__ <br> _Get: Gets the port the Requester has stated it has pinged_ | `int`
   property __Motd__ <br> _Get: Retrieve the MOTD that will be sent to the client<br>Set: Set the MOTD that will be sent to the client_ | [`ChatComponent`](../../api/chat/ChatComponent.md)
-  property __MaxPlayers__ <br> _Get: Retrieve the maximum amount of players the server allows that will be sent to the client.<br>Set: Set the maximum amount of player the server allows that will be sent to the client. <b>Please note that this only fakes the value. It doesn't modify the real value.</b>_ | `int`
+  property __MaxPlayers__ <br> _MaxPlayers property_ | `int`
   property __CurrentPlayers__ <br> _Get: Retrieve the current amount of players connected to the server that will be sent to the client.<br>Set: Set the current amount of players connected to the server that will be sent to the client_ | `int`
  readonly property __Profiles__ <br> _Get: Gets the `GameProfile`s to be sent_ | `List<GameProfile>`
  readonly property __RequesterPort__ <br> _Get: Gets the port used by the requesting party_ | `int`
@@ -89,15 +89,15 @@ Get | Description
 
 ##### <a id='favicon'></a>public   property __Favicon__
 
-_Get: Returns the Favicon encoded string to be sent<br>Set: Sets the favicon encoded string.<br/> The string should be formatted as data:image/png;base64,[base64encodedImage].<br/>_
+_Favicon property_
 
-Get | 
---- | 
-`String` |
+Get | Description
+--- | --- 
+`String` | the favicon string
 
 Set | Type | Description  
 --- | --- | --- 
-favicon | `String` | the base64 encoded PNG file
+favicon | `String` | favicon argument
 
 
 ##### <a id='hostnamepinged'></a>public  readonly property __HostNamePinged__
@@ -135,7 +135,7 @@ motd | [`ChatComponent`](../../api/chat/ChatComponent.md) | The new MOTD
 
 ##### <a id='maxplayers'></a>public   property __MaxPlayers__
 
-_Get: Retrieve the maximum amount of players the server allows that will be sent to the client.<br>Set: Set the maximum amount of player the server allows that will be sent to the client. <b>Please note that this only fakes the value. It doesn't modify the real value.</b>_
+_MaxPlayers property_
 
 Get | Description
 --- | --- 
@@ -143,7 +143,7 @@ Get | Description
 
 Set | Type | Description  
 --- | --- | --- 
-maxPlayers | `int` | The maximum amount of player the server allows
+maxPlayers | `int` | maxPlayers argument
 
 
 ##### <a id='currentplayers'></a>public   property __CurrentPlayers__

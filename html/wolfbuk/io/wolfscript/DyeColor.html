@@ -64,7 +64,6 @@
 <li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
@@ -90,13 +89,10 @@
 <li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
-<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
@@ -460,56 +456,8 @@
 </table>
 <h5 id="-a-id-data-a-public-readonly-property-__data__"><a id='data'></a>public  readonly property <strong>Data</strong></h5>
 <p><em>Deprecated: The name is misleading. It would imply {@link Material#INK_SACK} but uses {@link Material#WOOL}</em></p>
-<p>_Get: Represents white dye. /
-    WHITE(0x0, 0xF, Color.WHITE, Color.fromRGB(0xF0F0F0)),
-    /<strong> Represents orange dye. /
-    ORANGE(0x1, 0xE, Color.fromRGB(0xD87F33), Color.fromRGB(0xEB8844)),
-    /</strong> Represents magenta dye. /
-    MAGENTA(0x2, 0xD, Color.fromRGB(0xB24CD8), Color.fromRGB(0xC354CD)),
-    /<strong> Represents light blue dye. /
-    LIGHT_BLUE(0x3, 0xC, Color.fromRGB(0x6699D8), Color.fromRGB(0x6689D3)),
-    /</strong> Represents yellow dye. /
-    YELLOW(0x4, 0xB, Color.fromRGB(0xE5E533), Color.fromRGB(0xDECF2A)),
-    /<strong> Represents lime dye. /
-    LIME(0x5, 0xA, Color.fromRGB(0x7FCC19), Color.fromRGB(0x41CD34)),
-    /</strong> Represents pink dye. /
-    PINK(0x6, 0x9, Color.fromRGB(0xF27FA5), Color.fromRGB(0xD88198)),
-    /<strong> Represents gray dye. /
-    GRAY(0x7, 0x8, Color.fromRGB(0x4C4C4C), Color.fromRGB(0x434343)),
-    /</strong> Represents silver dye. /
-    SILVER(0x8, 0x7, Color.fromRGB(0x999999), Color.fromRGB(0xABABAB)),
-    /<strong> Represents cyan dye. /
-    CYAN(0x9, 0x6, Color.fromRGB(0x4C7F99), Color.fromRGB(0x287697)),
-    /</strong> Represents purple dye. /
-    PURPLE(0xA, 0x5, Color.fromRGB(0x7F3FB2), Color.fromRGB(0x7B2FBE)),
-    /<strong> Represents blue dye. /
-    BLUE(0xB, 0x4, Color.fromRGB(0x334CB2), Color.fromRGB(0x253192)),
-    /</strong> Represents brown dye. /
-    BROWN(0xC, 0x3, Color.fromRGB(0x664C33), Color.fromRGB(0x51301A)),
-    /<strong> Represents green dye. /
-    GREEN(0xD, 0x2, Color.fromRGB(0x667F33), Color.fromRGB(0x3B511A)),
-    /</strong> Represents red dye. /
-    RED(0xE, 0x1, Color.fromRGB(0x993333), Color.fromRGB(0xB3312C)),
-    /** Represents black dye. /
-    BLACK(0xF, 0x0, Color.fromRGB(0x191919), Color.fromRGB(0x1E1B1B));</p>
-<pre><code><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">byte</span> woolData;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-built_in">byte</span> dyeData;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Color <span class="hljs-built_in">color</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Color firework;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> DyeColor[] BY_WOOL_DATA;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> DyeColor[] BY_DYE_DATA;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Color, DyeColor&gt; BY_COLOR;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> Map&lt;Color, DyeColor&gt; BY_FIREWORK;
-
-<span class="hljs-keyword">private</span> DyeColor(<span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> woolData, <span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> dyeData, Color <span class="hljs-built_in">color</span>, Color firework) {
-    <span class="hljs-keyword">this</span>.woolData = (<span class="hljs-built_in">byte</span>) woolData;
-    <span class="hljs-keyword">this</span>.dyeData = (<span class="hljs-built_in">byte</span>) dyeData;
-    <span class="hljs-keyword">this</span>.<span class="hljs-built_in">color</span> = <span class="hljs-built_in">color</span>;
-    <span class="hljs-keyword">this</span>.firework = firework;
-}
-
-<span class="hljs-comment">/** Gets the associated (wool) data value representing this color._</span>
-</code></pre><table>
+<p><em>Get: Gets the associated (wool) data value representing this color.</em></p>
+<table>
 <thead>
 <tr>
 <th>Get</th>

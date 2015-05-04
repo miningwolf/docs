@@ -11,7 +11,7 @@ Button properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyFacing__(block, value) <br> _Button facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP)_ | [`Block`](../../Block.md)
+static function __applyFacing__(block, value) <br> _Applies [`BlockFace`](../../BlockFace.md) facing to the `Button`_ | [`Block`](../../Block.md)
 static function __applyPowered__(block, value) <br> _Applies whether the `Button` is supplying power_ | [`Block`](../../Block.md)
 static final var __facing__ <br> _Button facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 static final var __powered__ <br> _Button powered property (which could mean pressed in), Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
@@ -29,13 +29,7 @@ __Inherited items from [`BlockProperties`](BlockProperties.md)__ |
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Button facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP) /
-    public static final BlockDirectionProperty facing = getInstanceFor(WoodenButton, "facing");
-
-    /** Button powered property (which could mean pressed in), Values: true, false /
-    public static final BlockBooleanProperty powered = getInstanceFor(WoodenButton, "powered");
-
-    /** Applies [`BlockFace`](../../BlockFace.md) facing to the `Button`_
+_Applies [`BlockFace`](../../BlockFace.md) facing to the `Button`_
 
 Argument | Type | Description  
 --- | --- | --- 

@@ -14,7 +14,7 @@ new __RegisteredListener__(Listener, EventExecutor, EventPriority, Plugin, boole
  readonly property __Listener__ <br> _Get: Gets the listener for this registration_ | `Listener`
  readonly property __Plugin__ <br> _Get: Gets the plugin for this registration_ | [`Plugin`](Plugin.md)
  readonly property __Priority__ <br> _Get: Gets the priority for this registration_ | `EventPriority`
- function __isIgnoringCancelled__() <br> _Calls the event executor_ | `boolean`
+ function __isIgnoringCancelled__() <br> _Whether this listener accepts cancelled events_ | `boolean`
 
 
 
@@ -74,7 +74,7 @@ Get | Description
 
 ##### <a id='isignoringcancelled'></a>public  function __isIgnoringCancelled__()
 
-_Calls the event executor_
+_Whether this listener accepts cancelled events_
 
 Returns | Description
 --- | --- 

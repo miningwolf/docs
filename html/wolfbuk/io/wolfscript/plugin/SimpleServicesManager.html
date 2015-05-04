@@ -92,7 +92,6 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/AuthorNagException.html'>AuthorNagException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/EventExecutor.html'>EventExecutor</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/plugin/Flags.html'>Flags</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/IllegalPluginAccessException.html'>IllegalPluginAccessException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidDescriptionException.html'>InvalidDescriptionException</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/plugin/InvalidPluginException.html'>InvalidPluginException</a></li>
@@ -152,11 +151,11 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td> readonly property <strong>KnownServices</strong> <br> <em>Get: Get registrations of providers for a service. The returned list is</em></td>
+<td> readonly property <strong>KnownServices</strong> <br> <em>Get: Get a list of known services. A service is known if it has registered</em></td>
 <td style="text-align:left"><code>Set&lt;Class&lt;?&gt;&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>getRegistrations</strong>(plugin) <br> <em>Queries for a provider. This may return if no provider has been</em></td>
+<td> function <strong>getRegistrations</strong>(plugin) <br> <em>Get registrations of providers for a plugin.</em></td>
 <td style="text-align:left"><code>List&lt;RegisteredServiceProvider&lt;?&gt;&gt;</code></td>
 </tr>
 <tr>
@@ -168,7 +167,7 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>unregisterAll</strong>(plugin) <br> <em>Map of providers.</em></td>
+<td> function <strong>unregisterAll</strong>(plugin) <br> <em>Unregister all the providers registered by a particular plugin.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 </tbody>
@@ -176,7 +175,7 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 <hr>
 <h3 id="public-properties-for-simpleservicesmanager-simpleservicesmanager-md-">Public Properties for <a href="SimpleServicesManager.html"><code>SimpleServicesManager</code></a></h3>
 <h5 id="-a-id-knownservices-a-public-readonly-property-__knownservices__"><a id='knownservices'></a>public  readonly property <strong>KnownServices</strong></h5>
-<p><em>Get: Get registrations of providers for a service. The returned list is an unmodifiable copy.</em></p>
+<p><em>Get: Get a list of known services. A service is known if it has registered providers for it.</em></p>
 <table>
 <thead>
 <tr>
@@ -187,35 +186,14 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 <tbody>
 <tr>
 <td><code>Set&lt;Class&lt;?&gt;&gt;</code></td>
-<td>a copy of the list of registrations /</td>
+<td>a copy of the set of known services</td>
 </tr>
 </tbody>
 </table>
-<pre><code>@SuppressWarnings(<span class="hljs-string">"unchecked"</span>)
-<span class="hljs-keyword">public</span> &lt;T&gt; <span class="hljs-keyword">List</span>&lt;RegisteredServiceProvider&lt;T&gt;&gt; getRegistrations(<span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-title">service</span>) </span>{
-    ImmutableList.Builder&lt;RegisteredServiceProvider&lt;T&gt;&gt; ret;
-    synchronized (providers) {
-        <span class="hljs-keyword">List</span>&lt;RegisteredServiceProvider<span class="hljs-preprocessor">&lt;?</span>&gt;&gt; registered = providers.get(service);
-
-        <span class="hljs-keyword">if</span> (registered == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">return</span> ImmutableList.&lt;RegisteredServiceProvider&lt;T&gt;&gt;of();
-        }
-
-        ret = ImmutableList.&lt;RegisteredServiceProvider&lt;T&gt;&gt;builder();
-
-        <span class="hljs-keyword">for</span> (RegisteredServiceProvider<span class="hljs-preprocessor">&lt;?</span>&gt; provider : registered) {
-            ret.add((RegisteredServiceProvider&lt;T&gt;) provider);
-        }
-
-    }
-    <span class="hljs-keyword">return</span> ret.build();
-}
-
-<span class="hljs-comment">/** Get a list of known services. A service is known if it has registered providers for it.</span>
-</code></pre><hr>
+<hr>
 <h3 id="public-methods-for-simpleservicesmanager-simpleservicesmanager-md-">Public Methods for <a href="SimpleServicesManager.html"><code>SimpleServicesManager</code></a></h3>
 <h5 id="-a-id-getregistrations-a-public-function-__getregistrations__-plugin-"><a id='getregistrations'></a>public  function <strong>getRegistrations</strong>(plugin)</h5>
-<p><em>Queries for a provider. This may return if no provider has been registered for a service. The highest priority provider is returned.</em></p>
+<p><em>Get registrations of providers for a plugin.</em></p>
 <table>
 <thead>
 <tr>
@@ -242,25 +220,11 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 <tbody>
 <tr>
 <td><code>List&lt;RegisteredServiceProvider&lt;?&gt;&gt;</code></td>
-<td>provider or null /</td>
+<td>provider registration or null</td>
 </tr>
 </tbody>
 </table>
-<pre><code><span class="hljs-keyword">public</span> &lt;T&gt; T load(<span class="hljs-class"><span class="hljs-keyword">Class</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-title">service</span>) {</span>
-    synchronized (providers) {
-        List&lt;RegisteredServiceProvider&lt;?&gt;&gt; registered = providers.get(service);
-
-        <span class="hljs-keyword">if</span> (registered == <span class="hljs-literal">null</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
-        }
-
-        // This should <span class="hljs-keyword">not</span> be <span class="hljs-literal">null</span>!
-        <span class="hljs-keyword">return</span> service.cast(registered.get(<span class="hljs-number">0</span>).getProvider());
-    }
-}
-
-/** Queries <span class="hljs-keyword">for</span> a provider registration. This may <span class="hljs-keyword">return</span> <span class="hljs-keyword">if</span> no provider has been registered <span class="hljs-keyword">for</span> a service.
-</code></pre><h5 id="-a-id-unregister-a-public-function-__unregister__-provider-"><a id='unregister'></a>public  function <strong>unregister</strong>(provider)</h5>
+<h5 id="-a-id-unregister-a-public-function-__unregister__-provider-"><a id='unregister'></a>public  function <strong>unregister</strong>(provider)</h5>
 <p><em>Unregister a particular provider for a particular service.</em></p>
 <table>
 <thead>
@@ -323,10 +287,8 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-unregisterall-a-public-function-__unregisterall__-plugin-"><a id='unregisterall'></a>public  function <strong>unregisterAll</strong>(plugin)</h5>
-<p>_Map of providers. /
-    private final Map<Class<?>, List<RegisteredServiceProvider<?>&gt;&gt; providers = new HashMap<Class<?>, List<RegisteredServiceProvider<?>&gt;&gt;();</p>
-<pre><code><span class="hljs-comment">/** Register a provider of a service._</span>
-</code></pre><table>
+<p><em>Unregister all the providers registered by a particular plugin.</em></p>
+<table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -338,7 +300,7 @@ Implements <a href="ServicesManager.html"><code>ServicesManager</code></a></p>
 <tr>
 <td>plugin</td>
 <td><a href="Plugin.html"><code>Plugin</code></a></td>
-<td>plugin with the provider</td>
+<td>The plugin</td>
 </tr>
 </tbody>
 </table>

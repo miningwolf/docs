@@ -161,11 +161,11 @@
 <td style="text-align:left"><code>ArrayList&lt;HandlerList&gt;</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>RegisteredListeners</strong> <br> <em>Get: Remove a listener from a specific order slot</em></td>
+<td> readonly property <strong>RegisteredListeners</strong> <br> <em>Get: Get the baked registered listeners associated with this handler list</em></td>
 <td style="text-align:left"><code>RegisteredListener[]</code></td>
 </tr>
 <tr>
-<td>static function <strong>bakeAll</strong>() <br> <em>Handler array. This field being an array is the key to this system&#39;s</em></td>
+<td>static function <strong>bakeAll</strong>() <br> <em>Bake all handler lists. Best used just after all normal event</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@
 <td style="text-align:left"><code>ArrayList&lt;RegisteredListener&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>registerAll</strong>() <br> <em>Register a new listener in this handler list</em></td>
+<td> function <strong>registerAll</strong>() <br> <em>Register a collection of new listeners in this handler list</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -213,7 +213,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-registeredlisteners-a-public-readonly-property-__registeredlisteners__"><a id='registeredlisteners'></a>public  readonly property <strong>RegisteredListeners</strong></h5>
-<p><em>Get: Remove a listener from a specific order slot</em></p>
+<p><em>Get: Get the baked registered listeners associated with this handler list</em></p>
 <table>
 <thead>
 <tr>
@@ -231,16 +231,8 @@
 <hr>
 <h3 id="public-methods-for-handlerlist-handlerlist-md-">Public Methods for <a href="HandlerList.html"><code>HandlerList</code></a></h3>
 <h5 id="-a-id-bakeall-a-public-static-function-__bakeall__-"><a id='bakeall'></a>public static function <strong>bakeAll</strong>()</h5>
-<p>_Handler array. This field being an array is the key to this system&#39;s speed. /
-    private volatile RegisteredListener[] handlers = null;</p>
-<pre><code>/** Dynamic handler lists. These are changed using<span class="hljs-function"> register(</span><span class="hljs-function">)</span><span class="hljs-instruction"> and </span>unregister(<span class="hljs-function">)</span><span class="hljs-instruction"> and </span>are automatically baked to the handlers<span class="hljs-instruction"> array </span>any time they have changed. /<span class="hljs-keyword">
-private</span><span class="hljs-keyword"> final</span> EnumMap&lt;EventPriority, Array<span class="hljs-class">List&lt;RegisteredListener&gt;&gt; handlerslots;</span>
-
-/** List of all HandlerLists which have been created, for use in<span class="hljs-function"> bakeAll(</span><span class="hljs-function">)</span> /<span class="hljs-keyword">
-private</span><span class="hljs-keyword"> static</span> ArrayList&lt;HandlerList&gt; allLists =<span class="hljs-instruction"> new </span>ArrayList&lt;HandlerList&gt;(<span class="hljs-function">)</span>;
-
-/** Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded<span class="hljs-instruction"> if </span>you're using fevents in a plugin<span class="hljs-keyword"> system</span>._
-</code></pre><table>
+<p><em>Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded if you&#39;re using fevents in a plugin system.</em></p>
+<table>
 <thead>
 <tr>
 <th>Returns</th>
@@ -286,7 +278,7 @@ private</span><span class="hljs-keyword"> static</span> ArrayList&lt;HandlerList
 </tbody>
 </table>
 <h5 id="-a-id-registerall-a-public-function-__registerall__-"><a id='registerall'></a>public  function <strong>registerAll</strong>()</h5>
-<p><em>Register a new listener in this handler list</em></p>
+<p><em>Register a collection of new listeners in this handler list</em></p>
 <table>
 <thead>
 <tr>

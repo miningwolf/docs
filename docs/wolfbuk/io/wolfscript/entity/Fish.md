@@ -16,7 +16,7 @@ __Inherited items from [`FishHook`](FishHook.md)__ |
  readonly property __BiteChance__ <br> _Get: Gets the chance of a fish biting._ | `double`
  |
 __Inherited items from [`Projectile`](Projectile.md)__ |
-  property __Shooter__ <br> _Get: This method exists for legacy reasons to provide backwards<br>Set: This method exists for legacy reasons to provide backwards_ | [`ProjectileSource`](../projectiles/ProjectileSource.md)
+  property __Shooter__ <br> _Get: Retrieve the shooter of this projectile.<br>Set: Set the shooter of this projectile._ | [`ProjectileSource`](../projectiles/ProjectileSource.md)
  writeonly property __Bounce__ <br> _Set: Set whether or not this projectile should bounce or not when it hits_ | `void`
  function __doesBounce__() <br> _Determine if this projectile should bounce or not when it hits._ | `boolean`
 
@@ -47,15 +47,11 @@ Get | Description
 
 ##### <a id='shooter'></a>public   property __Shooter__
 
-_Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances.<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Retrieve the shooter of this projectile.<br>Set: Set the shooter of this projectile._
 
 Get | Description
 --- | --- 
-[`ProjectileSource`](../projectiles/ProjectileSource.md) | the `LivingEntity` that shot this projectile /
-    @Deprecated
-    public LivingEntity _INVALID_getShooter();
-
-    /** Retrieve the shooter of this projectile.
+[`ProjectileSource`](../projectiles/ProjectileSource.md) | the [`ProjectileSource`](../projectiles/ProjectileSource.md) that shot this projectile
 
 Set | Type | Description  
 --- | --- | --- 

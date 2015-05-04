@@ -100,7 +100,6 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockRedstoneEvent.html'>BlockRedstoneEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockSpreadEvent.html'>BlockSpreadEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/EntityBlockFormEvent.html'>EntityBlockFormEvent</a></li>
-<li><a href='../../../../../wolfbuk/io/wolfscript/event/block/IgniteCause.html'>IgniteCause</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/LeavesDecayEvent.html'>LeavesDecayEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/NotePlayEvent.html'>NotePlayEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/SignChangeEvent.html'>SignChangeEvent</a></li>
@@ -166,7 +165,7 @@ Extends <a href="BlockEvent.html"><code>BlockEvent</code></a></p>
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Called when we try to place a block, to see if we can build it here or not. <p> Note: <ul> <li>The Block returned by getBlock() is the block we are trying to place on, not the block we are trying to place. <li>If you want to figure out what is being placed, use <code>#getMaterial()</code> or <code>#getMaterialId()</code> instead. </ul></p>
+<p>class BlockCanBuildEvent</p>
 <table>
 <thead>
 <tr>
@@ -236,7 +235,7 @@ Extends <a href="BlockEvent.html"><code>BlockEvent</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -244,11 +243,8 @@ Extends <a href="BlockEvent.html"><code>BlockEvent</code></a></p>
 <hr>
 <h3 id="public-constructors-for-blockcanbuildevent-blockcanbuildevent-md-">Public Constructors for <a href="BlockCanBuildEvent.html"><code>BlockCanBuildEvent</code></a></h3>
 <h5 id="-a-id-blockcanbuildevent-a-new-__blockcanbuildevent__-block-int-boolean-"><a id='blockcanbuildevent'></a>new <strong>BlockCanBuildEvent</strong>(Block, int, boolean)</h5>
-<p>_Deprecated: Magic value /
-    @Deprecated
-    protected int material;</p>
-<pre><code>/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span> Magic value_
-</code></pre><p><em>BlockCanBuildEvent constructor</em></p>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>BlockCanBuildEvent constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -485,18 +481,17 @@ Extends <a href="BlockEvent.html"><code>BlockEvent</code></a></p>
 <hr>
 <h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
 <h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
-<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<p><em>isAsynchronous method</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>boolean</code></td>
-<td>false by default, true if the event fires asynchronously</td>
+<td></td>
 </tr>
 </tbody>
 </table>

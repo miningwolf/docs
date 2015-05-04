@@ -11,17 +11,13 @@ Called when an entity is damaged by an entity
 
 Method | Type   
 --- | :--- 
-new __EntityDamageByEntityEvent__(Entity, Entity, DamageCause, int) <br> _EntityDamageByEntityEvent constructor_ | _constructor_
-new __EntityDamageByEntityEvent__(Entity, Entity, DamageCause, double) <br> _EntityDamageByEntityEvent constructor_ | _constructor_
 new __EntityDamageByEntityEvent__(Entity, Entity, DamageCause, Map, Map, Function) <br> _EntityDamageByEntityEvent constructor_ | _constructor_
  readonly property __Damager__ <br> _Get: Returns the entity that damaged the defender._ | `Entity`
  |
 __Inherited items from [`EntityDamageEvent`](EntityDamageEvent.md)__ |
-new __EntityDamageEvent__(Entity, DamageCause, int) <br> _EntityDamageEvent constructor_ | _constructor_
-new __EntityDamageEvent__(Entity, DamageCause, double) <br> _EntityDamageEvent constructor_ | _constructor_
 new __EntityDamageEvent__(Entity, DamageCause, Map, Map, Function) <br> _EntityDamageEvent constructor_ | _constructor_
- readonly property __Cause__ <br> _Get: This method exists for legacy reasons to provide backwards_ | `DamageCause`
-  property __Damage__ <br> _Get: Gets the original damage for the specified modifier, as defined at this<br>Set: This method exists for legacy reasons to provide backwards_ | `double`
+ readonly property __Cause__ <br> _Get: Gets the cause of the damage._ | `DamageCause`
+  property __Damage__ <br> _Get: Gets the raw amount of damage caused by the event<br>Set: Sets the raw amount of damage caused by the event._ | `double`
 final readonly property __FinalDamage__ <br> _Get: Gets the amount of damage caused by the event after all damage_ | `double`
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
@@ -38,7 +34,7 @@ new __Event__() <br> _The default constructor is defined for cleaner code. This 
 new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
  readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
 abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
-final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
+final function __isAsynchronous__() <br> _isAsynchronous method_ | `boolean`
 
 
 
@@ -53,6 +49,7 @@ final function __isAsynchronous__() <br> _Any custom event that should not by sy
 ### Public Constructors for [`EntityDamageByEntityEvent`](EntityDamageByEntityEvent.md)
 
 ##### <a id='entitydamagebyentityevent'></a>new __EntityDamageByEntityEvent__(Entity, Entity, DamageCause, int) 
+_Deprecated_
 
 _EntityDamageByEntityEvent constructor_
 
@@ -64,6 +61,7 @@ DamageCause | `final` | DamageCause argument
 int | `final` | int argument
 
 ##### <a id='entitydamagebyentityevent'></a>new __EntityDamageByEntityEvent__(Entity, Entity, DamageCause, double) 
+_Deprecated_
 
 _EntityDamageByEntityEvent constructor_
 
@@ -105,6 +103,7 @@ Get | Description
 ### Public Constructors for [`EntityDamageEvent`](EntityDamageEvent.md)
 
 ##### <a id='entitydamageevent'></a>new __EntityDamageEvent__(Entity, DamageCause, int) 
+_Deprecated_
 
 _EntityDamageEvent constructor_
 
@@ -115,6 +114,7 @@ DamageCause | `final` | DamageCause argument
 int | `final` | int argument
 
 ##### <a id='entitydamageevent'></a>new __EntityDamageEvent__(Entity, DamageCause, double) 
+_Deprecated_
 
 _EntityDamageEvent constructor_
 
@@ -142,7 +142,7 @@ Function | `extends` | Function argument
 
 ##### <a id='cause'></a>public  readonly property __Cause__
 
-_Get: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets the cause of the damage._
 
 Get | Description
 --- | --- 
@@ -152,17 +152,11 @@ Get | Description
 
 ##### <a id='damage'></a>public   property __Damage__
 
-_Get: Gets the original damage for the specified modifier, as defined at this event's construction.<br>Set: This method exists for legacy reasons to provide backwards compatibility. It will not exist at runtime and should not be used under any circumstances._
+_Get: Gets the raw amount of damage caused by the event<br>Set: Sets the raw amount of damage caused by the event. <p> For compatibility this also recalculates the modifiers and scales them by the difference between the modifier for the previous damage value and the new one._
 
 Get | Description
 --- | --- 
-`double` | the (rounded) damage /
-    @Deprecated
-    public int _INVALID_getDamage() {
-        return NumberConversions.ceil(getDamage());
-    }
-
-    /** Sets the raw amount of damage caused by the event. <p> For compatibility this also recalculates the modifiers and scales them by the difference between the modifier for the previous damage value and the new one.
+`double` | The raw amount of damage caused by the event
 
 Set | Type | Description  
 --- | --- | --- 
@@ -306,11 +300,11 @@ Get |
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
+_isAsynchronous method_
 
-Returns | Description
---- | --- 
-`boolean` | false by default, true if the event fires asynchronously
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

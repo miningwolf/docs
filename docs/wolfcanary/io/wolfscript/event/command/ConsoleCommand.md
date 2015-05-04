@@ -12,7 +12,7 @@ Server command hook. Contains the command issued by the server
 Method | Type   
 --- | :--- 
 new __ConsoleCommand__(receiver, textInput) <br> _Constructs a new ConsoleCommand_ | _constructor_
- readonly property __Caller__ <br> _Get: Get the object that has issued the command._ | [`MessageReceiver`](../../chat/MessageReceiver.md)
+ readonly property __Caller__ <br> _Caller property_ | [`MessageReceiver`](../../chat/MessageReceiver.md)
  readonly property __Command__ <br> _Get: Get command that was issued by the console_ | `String[]`
 final function __toString__() <br> _toString method_ | `String`
  |
@@ -51,11 +51,11 @@ textInput | `String` | the text input
 
 ##### <a id='caller'></a>public  readonly property __Caller__
 
-_Get: Get the object that has issued the command. This can be a player or the console (Server). Use <tt>instanceof</tt> to check types_
+_Caller property_
 
-Get | Description
---- | --- 
-[`MessageReceiver`](../../chat/MessageReceiver.md) | the message receiver (command caller)
+Get | 
+--- | 
+[`MessageReceiver`](../../chat/MessageReceiver.md) |
 
 
 
