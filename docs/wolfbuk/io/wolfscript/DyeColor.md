@@ -74,18 +74,32 @@ Color.fromRGB: 0xB3312C)<br> _Color.fromRGB DyeColor_ | DyeColor
 0x0: <br> _0x0 DyeColor_ | DyeColor
 Color.fromRGB: 0x191919<br> _Color.fromRGB DyeColor_ | DyeColor
 Color.fromRGB: 0x1E1B1B)<br> _Color.fromRGB DyeColor_ | DyeColor
-static function __getByFireworkColor__(Color) <br> _Represents white dye._ | [`DyeColor`](DyeColor.md)
+ readonly property __Color__ <br> _Get: Gets the color that this dye represents._ | [`Color`](Color.md)
+ readonly property __FireworkColor__ <br> _Get: Gets the firework color that this dye represents._ | [`Color`](Color.md)
+static function __getByColor__(Color) <br> _Gets the DyeColor with the given color value._ | [`DyeColor`](DyeColor.md)
+static function __getByFireworkColor__(Color) <br> _Gets the DyeColor with the given firework color value._ | [`DyeColor`](DyeColor.md)
 
 
 
 ---
 
 
-### Public Methods for [`DyeColor`](DyeColor.md)
+### Public Properties for [`DyeColor`](DyeColor.md)
 
-##### <a id='getbyfireworkcolor'></a>public static function __getByFireworkColor__(Color)
+##### <a id='color'></a>public  readonly property __Color__
 
-_Represents white dye. /
+_Get: Gets the color that this dye represents._
+
+Get | Description
+--- | --- 
+[`Color`](Color.md) | The [`Color`](Color.md) that this dye represents
+
+
+
+##### <a id='data'></a>public  readonly property __Data__
+_Deprecated: The name is misleading. It would imply {@link Material#INK_SACK} but uses {@link Material#WOOL}_
+
+_Get: Represents white dye. /
     WHITE(0x0, 0xF, Color.WHITE, Color.fromRGB(0xF0F0F0)),
     /** Represents orange dye. /
     ORANGE(0x1, 0xE, Color.fromRGB(0xD87F33), Color.fromRGB(0xEB8844)),
@@ -136,13 +150,114 @@ _Represents white dye. /
 
     /** Gets the associated (wool) data value representing this color._
 
+Get | Description
+--- | --- 
+`byte` | A byte containing the (wool) data value of this color
+
+
+
+##### <a id='dyedata'></a>public  readonly property __DyeData__
+_Deprecated: Magic value_
+
+_Get: Gets the associated dye data value representing this color._
+
+Get | Description
+--- | --- 
+`byte` | A byte containing the dye data value of this color
+
+
+
+##### <a id='fireworkcolor'></a>public  readonly property __FireworkColor__
+
+_Get: Gets the firework color that this dye represents._
+
+Get | Description
+--- | --- 
+[`Color`](Color.md) | The [`Color`](Color.md) that this dye represents
+
+
+
+##### <a id='wooldata'></a>public  readonly property __WoolData__
+_Deprecated: Magic value_
+
+_Get: Gets the associated wool data value representing this color._
+
+Get | Description
+--- | --- 
+`byte` | A byte containing the wool data value of this color
+
+
+
+---
+
+### Public Methods for [`DyeColor`](DyeColor.md)
+
+##### <a id='getbycolor'></a>public static function __getByColor__(Color)
+
+_Gets the DyeColor with the given color value._
+
 Argument | Type | Description  
 --- | --- | --- 
 Color | `final` | Color argument
 
 Returns | Description
 --- | --- 
-[`DyeColor`](DyeColor.md) | A byte containing the (wool) data value of this color
+[`DyeColor`](DyeColor.md) | The [`DyeColor`](DyeColor.md) representing the given value, or null if it doesn't exist
+
+
+##### <a id='getbydata'></a>public static function __getByData__(byte)
+_Deprecated: The name is misleading. It would imply {@link Material#INK_SACK} but uses {@link Material#WOOL}_
+
+_Gets the DyeColor with the given (wool) data value._
+
+Argument | Type | Description  
+--- | --- | --- 
+byte | `final` | byte argument
+
+Returns | Description
+--- | --- 
+[`DyeColor`](DyeColor.md) | The [`DyeColor`](DyeColor.md) representing the given value, or null if it doesn't exist
+
+
+##### <a id='getbydyedata'></a>public static function __getByDyeData__(byte)
+_Deprecated: Magic value_
+
+_Gets the DyeColor with the given dye data value._
+
+Argument | Type | Description  
+--- | --- | --- 
+byte | `final` | byte argument
+
+Returns | Description
+--- | --- 
+[`DyeColor`](DyeColor.md) | The [`DyeColor`](DyeColor.md) representing the given value, or null if it doesn't exist
+
+
+##### <a id='getbyfireworkcolor'></a>public static function __getByFireworkColor__(Color)
+
+_Gets the DyeColor with the given firework color value._
+
+Argument | Type | Description  
+--- | --- | --- 
+Color | `final` | Color argument
+
+Returns | Description
+--- | --- 
+[`DyeColor`](DyeColor.md) | The [`DyeColor`](DyeColor.md) representing the given value, or null if it doesn't exist
+
+
+##### <a id='getbywooldata'></a>public static function __getByWoolData__(byte)
+_Deprecated: Magic value_
+
+_Gets the DyeColor with the given wool data value._
+
+Argument | Type | Description  
+--- | --- | --- 
+byte | `final` | byte argument
+
+Returns | Description
+--- | --- 
+[`DyeColor`](DyeColor.md) | The [`DyeColor`](DyeColor.md) representing the given value, or null if it doesn't exist
 
 
 ---

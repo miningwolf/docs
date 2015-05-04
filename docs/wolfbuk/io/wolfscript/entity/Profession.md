@@ -24,18 +24,27 @@ BUTCHER: 4<br> _BUTCHER Profession_ | Profession
 ---
 
 
+### Public Properties for [`Profession`](Profession.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
+
+_Get: Gets the ID of this profession._
+
+Get | Description
+--- | --- 
+`int` | Profession ID.
+
+
+
+---
+
 ### Public Methods for [`Profession`](Profession.md)
 
 ##### <a id='getprofession'></a>public static function __getProfession__(id)
-_Deprecated: Magic value /
-        @Deprecated
-        public int getId() {
-            return id;
-        }
+_Deprecated: Magic value_
 
-        /** Gets a profession by its ID. Magic value_
-
-_Gets the ID of this profession._
+_Gets a profession by its ID._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -43,7 +52,7 @@ id | `int` | ID of the profession to get.
 
 Returns | Description
 --- | --- 
-[`Profession`](Profession.md) | Profession ID.
+[`Profession`](Profession.md) | Resulting profession, or null if not found.
 
 
 ---

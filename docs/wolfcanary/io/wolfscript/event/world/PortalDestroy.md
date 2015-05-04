@@ -1,7 +1,7 @@
 ## PortalDestroy __class__
 
 >io.wolfscript.event.world.PortalDestroy
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,21 @@ PortalDestroy<br/> Contains information about a portal being destroyed
 
 Method | Type   
 --- | :--- 
- readonly property __World__ <br> _Get: Constructs a new PortalDestroy_ | [`World`](..\..\api\world\World.md)
+new __PortalDestroy__(pos, world) <br> _Constructs a new PortalDestroy_ | _constructor_
+ readonly property __BlockSet__ <br> _Get: Get the set of blocks that make up the Portal_ | `Block[][]`
+ readonly property __Position__ <br> _Get: Gets the [`Position`](../../api/world/position/Position.md) where the portal is being destroyed_ | [`Position`](../../api/world/position/Position.md)
+ readonly property __World__ <br> _Get: Gets the world the portal was_ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +35,48 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`PortalDestroy`](PortalDestroy.md)
+
+##### <a id='portaldestroy'></a>new __PortalDestroy__(pos, world) 
+
+_Constructs a new PortalDestroy_
+
+Argument | Type | Description  
+--- | --- | --- 
+pos | [`Position`](../../api/world/position/Position.md) | pos argument
+world | [`World`](../../api/world/World.md) | world argument
+
+---
 
 ### Public Properties for [`PortalDestroy`](PortalDestroy.md)
 
-##### <a id='world'></a>public  readonly property __World__
+##### <a id='blockset'></a>public  readonly property __BlockSet__
 
-_Get: Constructs a new PortalDestroy_
+_Get: Get the set of blocks that make up the Portal_
 
 Get | Description
 --- | --- 
-[`World`](..\..\api\world\World.md) | block /
-    public Block[][] getBlockSet() {
-        return blocks;
-    }
+`Block[][]` | block
 
-    /** Gets the [`Position`](..\..\api\world\position\Position.md) where the portal is being destroyed
+
+
+##### <a id='position'></a>public  readonly property __Position__
+
+_Get: Gets the [`Position`](../../api/world/position/Position.md) where the portal is being destroyed_
+
+Get | Description
+--- | --- 
+[`Position`](../../api/world/position/Position.md) | position
+
+
+
+##### <a id='world'></a>public  readonly property __World__
+
+_Get: Gets the world the portal was_
+
+Get | Description
+--- | --- 
+[`World`](../../api/world/World.md) | the world
 
 
 
@@ -63,7 +95,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +103,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +126,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

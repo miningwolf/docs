@@ -1,7 +1,7 @@
 ## ArmorBroken __class__
 
 >io.wolfscript.event.player.ArmorBroken
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,14 @@ Called when a piece of Armor has been destroyed
 Method | Type   
 --- | :--- 
 new __ArmorBroken__(player, armor) <br> _ArmorBroken constructor_ | _constructor_
- readonly property __Armor__ <br> _Get: Gets the `Player` who's armor has broken_ | [`Item`](..\..\api\inventory\Item.md)
+ readonly property __Armor__ <br> _Get: Gets the armor that was broken<p/>_ | [`Item`](../../api/inventory/Item.md)
+ readonly property __Player__ <br> _Get: Gets the `Player` who's armor has broken_ | `Player`
  function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -33,7 +36,7 @@ _ArmorBroken constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-armor | [`Item`](..\..\api\inventory\Item.md) | armor argument
+armor | [`Item`](../../api/inventory/Item.md) | armor argument
 
 ---
 
@@ -41,16 +44,21 @@ armor | [`Item`](..\..\api\inventory\Item.md) | armor argument
 
 ##### <a id='armor'></a>public  readonly property __Armor__
 
+_Get: Gets the armor that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the tool that was broken
+
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
 _Get: Gets the `Player` who's armor has broken_
 
 Get | Description
 --- | --- 
-[`Item`](..\..\api\inventory\Item.md) | player who's armor has broken /
-    public Player getPlayer() {
-        return player;
-    }
-
-    /** Gets the armor that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1
+`Player` | player who's armor has broken
 
 
 
@@ -69,27 +77,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

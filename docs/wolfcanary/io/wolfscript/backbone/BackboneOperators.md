@@ -12,8 +12,10 @@ Backbone to the ops system. This contains NO logic, it is only the data source a
 Method | Type   
 --- | :--- 
 new __BackboneOperators__() <br> _BackboneOperators constructor_ | _constructor_
+ function __addOpEntry__(player) <br> _Add a new ops entry_ | `void`
  function __isOpped__(player) <br> _isOpped method_ | `boolean`
- function __loadOps__() <br> _Add a new ops entry_ | `List<String>`
+ function __loadOps__() <br> _Load and return all recorded bans_ | `List<String>`
+ function __removeOpEntry__(subject) <br> _Removes a player from the op list_ | `void`
 static var __schema__ <br> _schema field_ | [`OperatorsDataAccess`](OperatorsDataAccess.md)
  |
 __Inherited items from [`Backbone`](Backbone.md)__ |
@@ -37,6 +39,19 @@ _BackboneOperators constructor_
 
 ### Public Methods for [`BackboneOperators`](BackboneOperators.md)
 
+##### <a id='addopentry'></a>public  function __addOpEntry__(player)
+
+_Add a new ops entry_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `String` | the name of the player to op
+
+Returns | 
+--- | 
+`void` |
+
+
 ##### <a id='isopped'></a>public  function __isOpped__(player)
 
 _isOpped method_
@@ -52,11 +67,24 @@ Returns |
 
 ##### <a id='loadops'></a>public  function __loadOps__()
 
-_Add a new ops entry_
+_Load and return all recorded bans_
 
 Returns | Description
 --- | --- 
 `List<String>` | An array list of all recorded ban instances.
+
+
+##### <a id='removeopentry'></a>public  function __removeOpEntry__(subject)
+
+_Removes a player from the op list_
+
+Argument | Type | Description  
+--- | --- | --- 
+subject | `String` | the name of the player to de-op
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

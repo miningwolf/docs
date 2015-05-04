@@ -12,22 +12,27 @@ Called when a piston retracts
 Method | Type   
 --- | :--- 
 new __BlockPistonRetractEvent__(Block, List, BlockFace) <br> _BlockPistonRetractEvent constructor_ | _constructor_
- readonly property __Blocks__ <br> _Get: Gets the location where the possible moving block might be if the_ | `List<Block>`
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
+ readonly property __Blocks__ <br> _Get: Get an immutable list of the blocks which will be moved by the_ | `List<Block>`
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  |
 __Inherited items from [`BlockPistonEvent`](BlockPistonEvent.md)__ |
 new __BlockPistonEvent__(Block, BlockFace) <br> _BlockPistonEvent constructor_ | _constructor_
- readonly property __Direction__ <br> _Get: Returns true if the Piston in the event is sticky._ | [`BlockFace`](..\..\block\BlockFace.md)
+ readonly property __Direction__ <br> _Get: Return the direction in which the piston will operate._ | [`BlockFace`](../../block/BlockFace.md)
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
+ function __isSticky__() <br> _Returns true if the Piston in the event is sticky._ | `boolean`
  |
 __Inherited items from [`BlockEvent`](BlockEvent.md)__ |
 new __BlockEvent__(Block) <br> _BlockEvent constructor_ | _constructor_
-final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](..\..\block\Block.md)
+final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](../../block/Block.md)
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -57,17 +62,11 @@ BlockFace | `final` | BlockFace argument
 
 ##### <a id='blocks'></a>public  readonly property __Blocks__
 
-_Get: Gets the location where the possible moving block might be if the retracting piston is sticky._
+_Get: Get an immutable list of the blocks which will be moved by the extending._
 
 Get | Description
 --- | --- 
-`List<Block>` | The possible location of the possibly moving block. /
-    @Deprecated
-    public Location getRetractLocation() {
-        return getBlock().getRelative(getDirection(), 2).getLocation();
-    }
-    
-    /** Get an immutable list of the blocks which will be moved by the extending.
+`List<Block>` | Immutable list of the moved blocks.
 
 
 
@@ -77,7 +76,7 @@ _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -87,7 +86,18 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
+
+
+
+##### <a id='retractlocation'></a>public  readonly property __RetractLocation__
+_Deprecated_
+
+_Get: Gets the location where the possible moving block might be if the retracting piston is sticky._
+
+Get | Description
+--- | --- 
+`Location` | The possible location of the possibly moving block.
 
 
 
@@ -109,16 +119,11 @@ BlockFace | `final` | BlockFace argument
 
 ##### <a id='direction'></a>public  readonly property __Direction__
 
-_Get: Returns true if the Piston in the event is sticky._
+_Get: Return the direction in which the piston will operate._
 
 Get | Description
 --- | --- 
-[`BlockFace`](..\..\block\BlockFace.md) | stickiness of the piston /
-    public boolean isSticky() {
-        return block.getType() == Material.PISTON_STICKY_BASE || block.getType() == Material.PISTON_MOVING_PIECE;
-    }
-
-    /** Return the direction in which the piston will operate.
+[`BlockFace`](../../block/BlockFace.md) | direction of the piston
 
 
 
@@ -148,6 +153,15 @@ Returns |
 `boolean` |
 
 
+##### <a id='issticky'></a>public  function __isSticky__()
+
+_Returns true if the Piston in the event is sticky._
+
+Returns | Description
+--- | --- 
+`boolean` | stickiness of the piston
+
+
 ---
 ### Public Constructors for [`BlockEvent`](BlockEvent.md)
 
@@ -169,36 +183,61 @@ _Get: Gets the block involved in this event._
 
 Get | Description
 --- | --- 
-[`Block`](..\..\block\Block.md) | The Block which block is involved in this event
+[`Block`](../../block/Block.md) | The Block which block is involved in this event
+
+
+
+---
+### Public Constructors for [`Event`](../Event.md)
+
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
 
 
 
 ---
 
-### Public Methods for [`Event`](..\Event.md)
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

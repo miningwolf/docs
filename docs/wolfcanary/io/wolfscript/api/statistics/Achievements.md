@@ -44,18 +44,44 @@ THEBEGINNING2: "killWither"<br> _THEBEGINNING2 Achievements_ | Achievements
 BEACONATOR: "fullBeacon"<br> _BEACONATOR Achievements_ | Achievements
 ADVENTURINGTIME: "exploreAllBiomes"<br> _ADVENTURINGTIME Achievements_ | Achievements
 OVERPOWERED: "overpowered"<br> _OVERPOWERED Achievements_ | Achievements
-static function __forNMSName__(String) <br> _Gets the full native name of the `Achievements`_ | [`Achievements`](Achievements.md)
+final readonly property __Instance__ <br> _Get: Gets the [`Achievement`](Achievement.md) instance for the given `Achievements`_ | [`Achievement`](Achievement.md)
+final readonly property __NativeName__ <br> _Get: Gets the full native name of the `Achievements`_ | `String`
+static function __forNMSName__(String) <br> _Gets an `Achievements` for the native name_ | [`Achievements`](Achievements.md)
 
 
 
 ---
 
 
+### Public Properties for [`Achievements`](Achievements.md)
+
+##### <a id='instance'></a>public final readonly property __Instance__
+
+_Get: Gets the [`Achievement`](Achievement.md) instance for the given `Achievements`_
+
+Get | Description
+--- | --- 
+[`Achievement`](Achievement.md) | [`Achievement`](Achievement.md) instance
+
+
+
+##### <a id='nativename'></a>public final readonly property __NativeName__
+
+_Get: Gets the full native name of the `Achievements`_
+
+Get | Description
+--- | --- 
+`String` | full native name
+
+
+
+---
+
 ### Public Methods for [`Achievements`](Achievements.md)
 
 ##### <a id='fornmsname'></a>public static function __forNMSName__(String)
 
-_Gets the full native name of the `Achievements`_
+_Gets an `Achievements` for the native name_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -63,12 +89,7 @@ String | `final` | String argument
 
 Returns | Description
 --- | --- 
-[`Achievements`](Achievements.md) | full native name /
-    public final String getNativeName() {
-        return nmsName;
-    }
-
-    /** Gets the [`Achievement`](Achievement.md) instance for the given `Achievements`
+[`Achievements`](Achievements.md) | `Achievements` matching the name or `null` if not match found
 
 
 ---

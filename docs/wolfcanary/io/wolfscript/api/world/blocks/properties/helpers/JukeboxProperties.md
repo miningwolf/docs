@@ -1,7 +1,7 @@
 ## JukeboxProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.JukeboxProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Jukebox properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyRecord__(block, value) <br> _Jukebox has_record property, Values: true, false_ | [`Block`](..\..\Block.md)
-final static var __hasRecord__ <br> _Jukebox has_record property, Values: true, false_ | [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+static function __applyRecord__(block, value) <br> _Jukebox has_record property, Values: true, false_ | [`Block`](../../Block.md)
+final static var __hasRecord__ <br> _Jukebox has_record property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Jukebox has_record property, Values: true, false /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `boolean` | the `boolean` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Jukebox has_record property, Values: true, false_
 
 >Returns
->  [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 
 ---
+
+
 ---
 
 

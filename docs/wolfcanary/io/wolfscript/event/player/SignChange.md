@@ -1,7 +1,7 @@
 ## SignChange __class__
 
 >io.wolfscript.event.player.SignChange
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -12,16 +12,19 @@ Sign Change hook. Contains information about a sign either being changed by a pl
 Method | Type   
 --- | :--- 
 new __SignChange__(player, sign) <br> _SignChange constructor_ | _constructor_
- readonly property __Sign__ <br> _Get: Gets the `Player`_ | [`Sign`](..\..\api\world\blocks\Sign.md)
+ readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
+ readonly property __Sign__ <br> _Get: Gets the [`Sign`](../../api/world/blocks/Sign.md)_ | [`Sign`](../../api/world/blocks/Sign.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,24 +43,29 @@ _SignChange constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-sign | [`Sign`](..\..\api\world\blocks\Sign.md) | sign argument
+sign | [`Sign`](../../api/world/blocks/Sign.md) | sign argument
 
 ---
 
 ### Public Properties for [`SignChange`](SignChange.md)
 
-##### <a id='sign'></a>public  readonly property __Sign__
+##### <a id='player'></a>public  readonly property __Player__
 
 _Get: Gets the `Player`_
 
 Get | Description
 --- | --- 
-[`Sign`](..\..\api\world\blocks\Sign.md) | player /
-    public Player getPlayer() {
-        return player;
-    }
+`Player` | player
 
-    /** Gets the [`Sign`](..\..\api\world\blocks\Sign.md)
+
+
+##### <a id='sign'></a>public  readonly property __Sign__
+
+_Get: Gets the [`Sign`](../../api/world/blocks/Sign.md)_
+
+Get | Description
+--- | --- 
+[`Sign`](../../api/world/blocks/Sign.md) | sign
 
 
 
@@ -76,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -84,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -107,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

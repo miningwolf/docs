@@ -22,7 +22,8 @@ FALSE: "false"<br> _FALSE PermissionDefault_ | PermissionDefault
 "!operator": <br> _"!operator" PermissionDefault_ | PermissionDefault
 "notoperator": <br> _"notoperator" PermissionDefault_ | PermissionDefault
 "!admin": <br> _"!admin" PermissionDefault_ | PermissionDefault
-static function __getByName__(name) <br> _Calculates the value of this PermissionDefault for the given operator_ | [`PermissionDefault`](PermissionDefault.md)
+static function __getByName__(name) <br> _Looks up a PermissionDefault by name_ | [`PermissionDefault`](PermissionDefault.md)
+ function __getValue__(op) <br> _Calculates the value of this PermissionDefault for the given operator_ | `boolean`
  function __toString__() <br> _toString method_ | `String`
 
 
@@ -34,7 +35,7 @@ static function __getByName__(name) <br> _Calculates the value of this Permissio
 
 ##### <a id='getbyname'></a>public static function __getByName__(name)
 
-_Calculates the value of this PermissionDefault for the given operator value_
+_Looks up a PermissionDefault by name_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -42,23 +43,20 @@ name | `String` | Name of the default
 
 Returns | Description
 --- | --- 
-[`PermissionDefault`](PermissionDefault.md) | True if the default should be true, or false /
-    public boolean getValue(boolean op) {
-        switch (this) {
-        case TRUE:
-            return true;
-        case FALSE:
-            return false;
-        case OP:
-            return op;
-        case NOT_OP:
-            return !op;
-        default:
-            return false;
-        }
-    }
+[`PermissionDefault`](PermissionDefault.md) | Specified value, or null if not found
 
-    /** Looks up a PermissionDefault by name
+
+##### <a id='getvalue'></a>public  function __getValue__(op)
+
+_Calculates the value of this PermissionDefault for the given operator value_
+
+Argument | Type | Description  
+--- | --- | --- 
+op | `boolean` | If the target is op
+
+Returns | Description
+--- | --- 
+`boolean` | True if the default should be true, or false
 
 
 ##### <a id='tostring'></a>public  function __toString__()

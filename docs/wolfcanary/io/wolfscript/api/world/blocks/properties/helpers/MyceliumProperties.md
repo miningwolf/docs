@@ -1,7 +1,7 @@
 ## MyceliumProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.MyceliumProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Mycelium properties helper
 
 Method | Type   
 --- | :--- 
-static function __applySnowy__(block, value) <br> _Mycelium snowy property, Values: true, false_ | [`Block`](..\..\Block.md)
-static final var __snowy__ <br> _Mycelium snowy property, Values: true, false_ | [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+static function __applySnowy__(block, value) <br> _Mycelium snowy property, Values: true, false_ | [`Block`](../../Block.md)
+static final var __snowy__ <br> _Mycelium snowy property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Mycelium snowy property, Values: true, false /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `boolean` | the `boolean` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Mycelium snowy property, Values: true, false_
 
 >Returns
->  [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 
 ---
+
+
 ---
 
 

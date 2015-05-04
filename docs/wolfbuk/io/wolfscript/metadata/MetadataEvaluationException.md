@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-A MetadataEvaluationException is thrown any time a `LazyMetadataValue` fails to evaluate its value due to an exception. The originating exception will be included as this exception's cause.
+A MetadataEvaluationException is thrown any time a [`LazyMetadataValue`](LazyMetadataValue.md) fails to evaluate its value due to an exception. The originating exception will be included as this exception's cause.
 
 Method | Type   
 --- | :--- 

@@ -1,7 +1,7 @@
 ## BlockUpdate __class__
 
 >io.wolfscript.event.world.BlockUpdate
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,21 @@ Block update hook. Contains information about a block updating.
 
 Method | Type   
 --- | :--- 
- readonly property __NewBlockType__ <br> _NewBlockType property_ | [`BlockType`](..\..\api\world\blocks\BlockType.md)
+new __BlockUpdate__(block, newBlockType) <br> _BlockUpdate constructor_ | _constructor_
+ readonly property __Block__ <br> _Get: Gets [`Block`](../../api/world/blocks/Block.md) updating_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __NewBlockId__ <br> _Get: Gets the block id of the new [`Block`](../../api/world/blocks/Block.md)_ | `int`
+ readonly property __NewBlockType__ <br> _Get: Gets the block type of the new [`Block`](../../api/world/blocks/Block.md)_ | [`BlockType`](../../api/world/blocks/BlockType.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +35,58 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`BlockUpdate`](BlockUpdate.md)
+
+##### <a id='blockupdate'></a>new __BlockUpdate__(block, newBlockId) 
+_Deprecated: Use the other constructor instead_
+
+_BlockUpdate constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../api/world/blocks/Block.md) | block argument
+newBlockId | `int` | newBlockId argument
+
+##### <a id='blockupdate'></a>new __BlockUpdate__(block, newBlockType) 
+
+_BlockUpdate constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../api/world/blocks/Block.md) | block argument
+newBlockType | [`BlockType`](../../api/world/blocks/BlockType.md) | newBlockType argument
+
+---
 
 ### Public Properties for [`BlockUpdate`](BlockUpdate.md)
 
-##### <a id='newblocktype'></a>public  readonly property __NewBlockType__
+##### <a id='block'></a>public  readonly property __Block__
 
-_NewBlockType property_
+_Get: Gets [`Block`](../../api/world/blocks/Block.md) updating_
 
 Get | Description
 --- | --- 
-[`BlockType`](..\..\api\world\blocks\BlockType.md) | The [`Block`](..\..\api\world\blocks\Block.md) updated. /
-    public Block getBlock() {
-        return block;
-    }
+[`Block`](../../api/world/blocks/Block.md) | The [`Block`](../../api/world/blocks/Block.md) updated.
 
-    /** Gets the block id of the new [`Block`](..\..\api\world\blocks\Block.md)
+
+
+##### <a id='newblockid'></a>public  readonly property __NewBlockId__
+
+_Get: Gets the block id of the new [`Block`](../../api/world/blocks/Block.md)_
+
+Get | Description
+--- | --- 
+`int` | [`Block`](../../api/world/blocks/Block.md) ID value.
+
+
+
+##### <a id='newblocktype'></a>public  readonly property __NewBlockType__
+
+_Get: Gets the block type of the new [`Block`](../../api/world/blocks/Block.md)_
+
+Get | Description
+--- | --- 
+[`BlockType`](../../api/world/blocks/BlockType.md) | [`BlockType`](../../api/world/blocks/BlockType.md) type
 
 
 
@@ -63,7 +105,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +113,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +136,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

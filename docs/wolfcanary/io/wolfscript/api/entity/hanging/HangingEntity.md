@@ -1,7 +1,7 @@
 ## HangingEntity __interface__
 
 >io.wolfscript.api.entity.hanging.HangingEntity
->Extends [`Entity`](..\Entity.md)
+>Extends [`Entity`](../Entity.md)
 
 ---
 
@@ -12,7 +12,7 @@ HangingEntity wrapper
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

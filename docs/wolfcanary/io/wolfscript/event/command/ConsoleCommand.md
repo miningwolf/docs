@@ -1,7 +1,7 @@
 ## ConsoleCommand __class__
 
 >io.wolfscript.event.command.ConsoleCommand
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Server command hook. Contains the command issued by the server
 
 Method | Type   
 --- | :--- 
- readonly property __Caller__ <br> _Get: Constructs a new ConsoleCommand_ | [`MessageReceiver`](..\..\chat\MessageReceiver.md)
+new __ConsoleCommand__(receiver, textInput) <br> _Constructs a new ConsoleCommand_ | _constructor_
+ readonly property __Caller__ <br> _Get: Get the object that has issued the command._ | [`MessageReceiver`](../../chat/MessageReceiver.md)
+ readonly property __Command__ <br> _Get: Get command that was issued by the console_ | `String[]`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`ConsoleCommand`](ConsoleCommand.md)
+
+##### <a id='consolecommand'></a>new __ConsoleCommand__(receiver, textInput) 
+
+_Constructs a new ConsoleCommand_
+
+Argument | Type | Description  
+--- | --- | --- 
+receiver | [`MessageReceiver`](../../chat/MessageReceiver.md) | the [`MessageReceiver`](../../chat/MessageReceiver.md) executing the command
+textInput | `String` | the text input
+
+---
 
 ### Public Properties for [`ConsoleCommand`](ConsoleCommand.md)
 
 ##### <a id='caller'></a>public  readonly property __Caller__
 
-_Get: Constructs a new ConsoleCommand_
+_Get: Get the object that has issued the command. This can be a player or the console (Server). Use <tt>instanceof</tt> to check types_
 
 Get | Description
 --- | --- 
-[`MessageReceiver`](..\..\chat\MessageReceiver.md) | String array of the arguments /
-    public String[] getCommand() {
-        return command;
-    }
+[`MessageReceiver`](../../chat/MessageReceiver.md) | the message receiver (command caller)
 
-    /** Get the object that has issued the command. This can be a player or the console (Server). Use <tt>instanceof</tt> to check types
+
+
+##### <a id='command'></a>public  readonly property __Command__
+
+_Get: Get command that was issued by the console_
+
+Get | Description
+--- | --- 
+`String[]` | String array of the arguments
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

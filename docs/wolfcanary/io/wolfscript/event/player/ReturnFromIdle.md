@@ -1,7 +1,7 @@
 ## ReturnFromIdle __class__
 
 >io.wolfscript.event.player.ReturnFromIdle
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,10 +12,14 @@ Called when the Player is no longer idle
 Method | Type   
 --- | :--- 
 new __ReturnFromIdle__(player, idle) <br> _ReturnFromIdle constructor_ | _constructor_
- function __toString__() <br> _Get the `Player` that was Idle_ | `String`
+ readonly property __Player__ <br> _Get: Get the `Player` that was Idle_ | `Player`
+ readonly property __TimeIdle__ <br> _Get: Gets the amount of time the `Player` was idle_ | `long`
+ function __toString__() <br> _{@inheritDoc}_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -36,45 +40,75 @@ idle | `long` | idle argument
 
 ---
 
-### Public Methods for [`ReturnFromIdle`](ReturnFromIdle.md)
+### Public Properties for [`ReturnFromIdle`](ReturnFromIdle.md)
 
-##### <a id='tostring'></a>public  function __toString__()
+##### <a id='player'></a>public  readonly property __Player__
 
-_Get the `Player` that was Idle_
+_Get: Get the `Player` that was Idle_
 
-Returns | Description
+Get | Description
 --- | --- 
-`String` | the idle player /
-    public Player getPlayer() {
-        return this.player;
-    }
+`Player` | the idle player
 
-    /** Gets the amount of time the `Player` was idle
+
+
+##### <a id='timeidle'></a>public  readonly property __TimeIdle__
+
+_Get: Gets the amount of time the `Player` was idle_
+
+Get | Description
+--- | --- 
+`long` | time idle
+
 
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Methods for [`ReturnFromIdle`](ReturnFromIdle.md)
+
+##### <a id='tostring'></a>public  function __toString__()
+
+_{@inheritDoc}_
+
+Returns | 
+--- | 
+`String` |
+
+
+---
+
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

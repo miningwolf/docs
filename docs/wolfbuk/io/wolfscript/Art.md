@@ -62,18 +62,69 @@ Item | Type
 4: <br> _4 Art_ | Art
 25: <br> _25 Art_ | Art
 4: <br> _4 Art_ | Art
-static function __getByName__(name) <br> _Gets the width of the painting, in blocks_ | [`Art`](Art.md)
+ readonly property __BlockHeight__ <br> _Get: Gets the height of the painting, in blocks_ | `int`
+ readonly property __BlockWidth__ <br> _Get: Gets the width of the painting, in blocks_ | `int`
+static function __getByName__(name) <br> _Get a painting by its unique name_ | [`Art`](Art.md)
 
 
 
 ---
 
 
+### Public Properties for [`Art`](Art.md)
+
+##### <a id='blockheight'></a>public  readonly property __BlockHeight__
+
+_Get: Gets the height of the painting, in blocks_
+
+Get | Description
+--- | --- 
+`int` | The height of the painting, in blocks
+
+
+
+##### <a id='blockwidth'></a>public  readonly property __BlockWidth__
+
+_Get: Gets the width of the painting, in blocks_
+
+Get | Description
+--- | --- 
+`int` | The width of the painting, in blocks
+
+
+
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
+
+_Get: Get the ID of this painting._
+
+Get | Description
+--- | --- 
+`int` | The ID of this painting
+
+
+
+---
+
 ### Public Methods for [`Art`](Art.md)
+
+##### <a id='getbyid'></a>public static function __getById__(id)
+_Deprecated: Magic value_
+
+_Get a painting by its numeric ID_
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `int` | The ID
+
+Returns | Description
+--- | --- 
+[`Art`](Art.md) | The painting
+
 
 ##### <a id='getbyname'></a>public static function __getByName__(name)
 
-_Gets the width of the painting, in blocks_
+_Get a painting by its unique name <p> This ignores underscores and capitalization_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -81,12 +132,7 @@ name | `String` | The name
 
 Returns | Description
 --- | --- 
-[`Art`](Art.md) | The width of the painting, in blocks /
-    public int getBlockWidth() {
-        return width;
-    }
-
-    /** Gets the height of the painting, in blocks
+[`Art`](Art.md) | The painting
 
 
 ---

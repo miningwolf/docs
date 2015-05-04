@@ -1,7 +1,7 @@
 ## FenceProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.FenceProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,18 @@ Fence properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyWest__(block, value) <br> _Fence north property, Values: true, false_ | [`Block`](..\..\Block.md)
-static final var __west__ <br> _Fence north property, Values: true, false_ | [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+static function __applyEast__(block, value) <br> _Applies whether the `Fence` is connected east or not_ | [`Block`](../../Block.md)
+static function __applyNorth__(block, value) <br> _Fence north property, Values: true, false_ | [`Block`](../../Block.md)
+static function __applySouth__(block, value) <br> _Applies whether the `Fence` is connected south or not_ | [`Block`](../../Block.md)
+static function __applyWest__(block, value) <br> _Applies whether the `Fence` is connected west or not_ | [`Block`](../../Block.md)
+static final var __north__ <br> _Fence north property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+static final var __east__ <br> _Fence east property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+static final var __south__ <br> _Fence south property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+static final var __west__ <br> _Fence west property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -21,7 +31,21 @@ static final var __west__ <br> _Fence north property, Values: true, false_ | [`B
 
 ### Public Methods for [`FenceProperties`](FenceProperties.md)
 
-##### <a id='applywest'></a>public static function __applyWest__(block, value)
+##### <a id='applyeast'></a>public static function __applyEast__(block, value)
+
+_Applies whether the `Fence` is connected east or not_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `boolean` | the `boolean` value to apply
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='applynorth'></a>public static function __applyNorth__(block, value)
 
 _Fence north property, Values: true, false /
     public static final BlockBooleanProperty north = getInstanceFor(Fence, "north");
@@ -39,35 +63,77 @@ _Fence north property, Values: true, false /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `boolean` | the `boolean` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='applysouth'></a>public static function __applySouth__(block, value)
+
+_Applies whether the `Fence` is connected south or not_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `boolean` | the `boolean` value to apply
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='applywest'></a>public static function __applyWest__(block, value)
+
+_Applies whether the `Fence` is connected west or not_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `boolean` | the `boolean` value to apply
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
 
 ### Public Fields for [`FenceProperties`](FenceProperties.md)
 
-##### <a id='west'></a>public static final var __west__
+##### <a id='north'></a>public static final var __north__
 
-_Fence north property, Values: true, false /
-    public static final BlockBooleanProperty north = getInstanceFor(Fence, "north");
-
-    /** Fence east property, Values: true, false /
-    public static final BlockBooleanProperty east = getInstanceFor(Fence, "east");
-
-    /** Fence south property, Values: true, false /
-    public static final BlockBooleanProperty south = getInstanceFor(Fence, "south");
-
-    /** Fence west property, Values: true, false_
+_Fence north property, Values: true, false_
 
 >Returns
->  [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+
+##### <a id='east'></a>public static final var __east__
+
+_Fence east property, Values: true, false_
+
+>Returns
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+
+##### <a id='south'></a>public static final var __south__
+
+_Fence south property, Values: true, false_
+
+>Returns
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+
+##### <a id='west'></a>public static final var __west__
+
+_Fence west property, Values: true, false_
+
+>Returns
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 
 ---
+
+
 ---
 
 

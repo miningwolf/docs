@@ -11,14 +11,18 @@ A PermissionProvider implementation based on PermissionNode objects, with multiw
 
 Method | Type   
 --- | :--- 
+new __MultiworldPermissionProvider__(world, isPlayer, owner) <br> _Constructs a new PermissionProvider that's valid for the given world_ | _constructor_
+new __MultiworldPermissionProvider__() <br> _Testing constructor. Use only for testing changes to this provider_ | _constructor_
+new __MultiworldPermissionProvider__(parent) <br> _Testing constructor. Use only for testing changes to this provider_ | _constructor_
  writeonly property __Owner__ <br> _Owner property_ | `void`
  readonly property __Parent__ <br> _Parent property_ | [`PermissionProvider`](PermissionProvider.md)
  readonly property __PermissionMap__ <br> _PermissionMap property_ | `List<PermissionNode>`
  readonly property __PermissionsAsStringList__ <br> _PermissionsAsStringList property_ | `List<String>`
  readonly property __World__ <br> _World property_ | `String`
  writeonly property __Type__ <br> _Type property_ | `void`
- function __addPermission__(path, value, id) <br> _addPermission method_ | `void`
+ function __getChildNodes__(node) <br> _getChildNodes method_ | `List<PermissionNode>`
  function __addPermission__(path, value) <br> _addPermission method_ | `void`
+ function __addPermission__(path, value, id) <br> _addPermission method_ | `void`
  function __flushCache__() <br> _flushCache method_ | `void`
  function __pathExists__(permission) <br> _pathExists method_ | `boolean`
  function __printPermissionsToCaller__(caller) <br> _printPermissionsToCaller method_ | `void`
@@ -29,6 +33,32 @@ Method | Type
 
 ---
 
+### Public Constructors for [`MultiworldPermissionProvider`](MultiworldPermissionProvider.md)
+
+##### <a id='multiworldpermissionprovider'></a>new __MultiworldPermissionProvider__(world, isPlayer, owner) 
+
+_Constructs a new PermissionProvider that's valid for the given world_
+
+Argument | Type | Description  
+--- | --- | --- 
+world | `String` | the world
+isPlayer | `boolean` | isPlayer argument
+owner | `String` | owner argument
+
+##### <a id='multiworldpermissionprovider'></a>new __MultiworldPermissionProvider__() 
+
+_Testing constructor. Use only for testing changes to this provider_
+
+
+##### <a id='multiworldpermissionprovider'></a>new __MultiworldPermissionProvider__(parent) 
+
+_Testing constructor. Use only for testing changes to this provider_
+
+Argument | Type | Description  
+--- | --- | --- 
+parent | [`MultiworldPermissionProvider`](MultiworldPermissionProvider.md) | parent argument
+
+---
 
 ### Public Properties for [`MultiworldPermissionProvider`](MultiworldPermissionProvider.md)
 
@@ -102,19 +132,17 @@ isPlayerProvider | `boolean` | isPlayerProvider argument
 
 ### Public Methods for [`MultiworldPermissionProvider`](MultiworldPermissionProvider.md)
 
-##### <a id='addpermission'></a>public  function __addPermission__(path, value, id)
+##### <a id='getchildnodes'></a>public  function __getChildNodes__(node)
 
-_addPermission method_
+_getChildNodes method_
 
 Argument | Type | Description  
 --- | --- | --- 
-path | `String` | path argument
-value | `boolean` | value argument
-id | `int` | id argument
+node | [`PermissionNode`](PermissionNode.md) | node argument
 
 Returns | 
 --- | 
-`void` |
+`List<PermissionNode>` |
 
 
 ##### <a id='addpermission'></a>public  function __addPermission__(path, value)
@@ -125,6 +153,21 @@ Argument | Type | Description
 --- | --- | --- 
 path | `String` | path argument
 value | `boolean` | value argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='addpermission'></a>public  function __addPermission__(path, value, id)
+
+_addPermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+path | `String` | path argument
+value | `boolean` | value argument
+id | `int` | id argument
 
 Returns | 
 --- | 
@@ -159,7 +202,7 @@ _printPermissionsToCaller method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 

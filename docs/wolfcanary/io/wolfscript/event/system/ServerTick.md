@@ -1,7 +1,7 @@
 ## ServerTick __class__
 
 >io.wolfscript.event.system.ServerTick
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,13 @@ Called in the servers tick loop, before world processing. For informational use
 Method | Type   
 --- | :--- 
 new __ServerTick__(deltaTime) <br> _ServerTick constructor_ | _constructor_
- writeonly property __DeltaTime__ <br> _DeltaTime property_ | `void`
+  property __DeltaTime__ <br> _DeltaTime property_ | `long`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -38,18 +40,13 @@ deltaTime | `long` | deltaTime argument
 
 ### Public Properties for [`ServerTick`](ServerTick.md)
 
-##### <a id='deltatime'></a>public  writeonly property __DeltaTime__
+##### <a id='deltatime'></a>public   property __DeltaTime__
 
 _DeltaTime property_
 
 Get | Description
 --- | --- 
-`void` | the deltaTime /
-    public long getDeltaTime() {
-        return deltaTime;
-    }
-
-    /**
+`long` | the deltaTime
 
 Set | Type | Description  
 --- | --- | --- 
@@ -71,27 +68,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

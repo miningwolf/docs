@@ -450,14 +450,129 @@ DARK_OAK_DOOR_ITEM: 431<br> _DARK_OAK_DOOR_ITEM Material_ | Material
 2265: <br> _2265 Material_ | Material
 2266: <br> _2266 Material_ | Material
 2267: <br> _2267 Material_ | Material
+ readonly property __MaxDurability__ <br> _Get: Gets the maximum durability of this material_ | `short`
+ readonly property __MaxStackSize__ <br> _Get: Gets the maximum amount of this material that can be held in a stack_ | `int`
+static function __matchMaterial__(String) <br> _Attempts to match the Material with the given name._ | [`Material`](Material.md)
+ function __isRecord__() <br> _isRecord method_ | `boolean`
+static function __getMaterial__(String) <br> _Attempts to get the Material with the given name._ | [`Material`](Material.md)
  function __hasGravity__() <br> _hasGravity method_ | `boolean`
+ function __isBlock__() <br> _Checks if this Material is a placable block_ | `boolean`
+ function __isBurnable__() <br> _Check if the material is a block and can burn away_ | `boolean`
+ function __isEdible__() <br> _Checks if this Material is edible._ | `boolean`
+ function __isFlammable__() <br> _Check if the material is a block and can catch fire_ | `boolean`
+ function __isOccluding__() <br> _Check if the material is a block and completely blocks vision_ | `boolean`
+ function __isSolid__() <br> _Check if the material is a block and solid (cannot be passed through by_ | `boolean`
+ function __isTransparent__() <br> _Check if the material is a block and does not block any light_ | `boolean`
 
 
 
 ---
 
 
+### Public Properties for [`Material`](Material.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
+
+_Id property_
+
+Get | Description
+--- | --- 
+`int` | ID of this material
+
+
+
+##### <a id='maxdurability'></a>public  readonly property __MaxDurability__
+
+_Get: Gets the maximum durability of this material_
+
+Get | Description
+--- | --- 
+`short` | Maximum durability for this material
+
+
+
+##### <a id='maxstacksize'></a>public  readonly property __MaxStackSize__
+
+_Get: Gets the maximum amount of this material that can be held in a stack_
+
+Get | Description
+--- | --- 
+`int` | Maximum stack size for this material
+
+
+
+---
+
 ### Public Methods for [`Material`](Material.md)
+
+##### <a id='matchmaterial'></a>public static function __matchMaterial__(String)
+
+_Attempts to match the Material with the given name. <p> This is a match lookup; names will be converted to uppercase, then stripped of special characters in an attempt to format it like the enum. <p> Using this for match by ID is deprecated._
+
+Argument | Type | Description  
+--- | --- | --- 
+String | `final` | String argument
+
+Returns | Description
+--- | --- 
+[`Material`](Material.md) | Material if found, or null
+
+
+##### <a id='isrecord'></a>public  function __isRecord__()
+
+_isRecord method_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material represents a playable music disk.
+
+
+##### <a id='getmaterial'></a>public static function __getMaterial__(String)
+
+_Attempts to get the Material with the given name. <p> This is a normal lookup, names must be the precise name they are given in the enum._
+
+Argument | Type | Description  
+--- | --- | --- 
+String | `final` | String argument
+
+Returns | Description
+--- | --- 
+[`Material`](Material.md) | Material if found, or null
+
+
+##### <a id='getmaterial'></a>public static function __getMaterial__(int)
+_Deprecated: Magic value_
+
+_Attempts to get the Material with the given ID_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+Returns | Description
+--- | --- 
+[`Material`](Material.md) | Material if found, or null
+
+
+##### <a id='getnewdata'></a>public  function __getNewData__(byte)
+_Deprecated: Magic value_
+
+_Gets the MaterialData class associated with this Material_
+
+Argument | Type | Description  
+--- | --- | --- 
+byte | `final` | byte argument
+
+Returns | Description
+--- | --- 
+[`MaterialData`](material/MaterialData.md) | MaterialData associated with this Material /
+    public Class<? extends MaterialData> getData() {
+        return ctor.getDeclaringClass();
+    }
+
+    /** Constructs a new MaterialData relevant for this Material, with the given initial data
+
 
 ##### <a id='hasgravity'></a>public  function __hasGravity__()
 
@@ -465,7 +580,70 @@ _hasGravity method_
 
 Returns | Description
 --- | --- 
-`boolean` | ID of this material
+`boolean` | True if this material is affected by gravity.
+
+
+##### <a id='isblock'></a>public  function __isBlock__()
+
+_Checks if this Material is a placable block_
+
+Returns | Description
+--- | --- 
+`boolean` | true if this material is a block
+
+
+##### <a id='isburnable'></a>public  function __isBurnable__()
+
+_Check if the material is a block and can burn away_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material is a block and can burn away
+
+
+##### <a id='isedible'></a>public  function __isEdible__()
+
+_Checks if this Material is edible._
+
+Returns | Description
+--- | --- 
+`boolean` | true if this Material is edible.
+
+
+##### <a id='isflammable'></a>public  function __isFlammable__()
+
+_Check if the material is a block and can catch fire_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material is a block and can catch fire
+
+
+##### <a id='isoccluding'></a>public  function __isOccluding__()
+
+_Check if the material is a block and completely blocks vision_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material is a block and completely blocks vision
+
+
+##### <a id='issolid'></a>public  function __isSolid__()
+
+_Check if the material is a block and solid (cannot be passed through by a player)_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material is a block and solid
+
+
+##### <a id='istransparent'></a>public  function __isTransparent__()
+
+_Check if the material is a block and does not block any light_
+
+Returns | Description
+--- | --- 
+`boolean` | True if this material is a block and does not block any light
 
 
 ---

@@ -11,7 +11,10 @@ Exception thrown when attempting to load an invalid [`Configuration`](Configurat
 
 Method | Type   
 --- | :--- 
-new __InvalidConfigurationException__(msg, cause) <br> _Creates a new instance of InvalidConfigurationException without a_ | _constructor_
+new __InvalidConfigurationException__() <br> _Creates a new instance of InvalidConfigurationException without a_ | _constructor_
+new __InvalidConfigurationException__(msg) <br> _Constructs an instance of InvalidConfigurationException with the_ | _constructor_
+new __InvalidConfigurationException__(cause) <br> _Constructs an instance of InvalidConfigurationException with the_ | _constructor_
+new __InvalidConfigurationException__(msg, cause) <br> _Constructs an instance of InvalidConfigurationException with the_ | _constructor_
 
 
 
@@ -19,27 +22,35 @@ new __InvalidConfigurationException__(msg, cause) <br> _Creates a new instance o
 
 ### Public Constructors for [`InvalidConfigurationException`](InvalidConfigurationException.md)
 
-##### <a id='invalidconfigurationexception'></a>new __InvalidConfigurationException__(msg, cause) 
+##### <a id='invalidconfigurationexception'></a>new __InvalidConfigurationException__() 
 
-_Creates a new instance of InvalidConfigurationException without a message or cause. /
-    public InvalidConfigurationException() {}
+_Creates a new instance of InvalidConfigurationException without a message or cause._
 
-    /** Constructs an instance of InvalidConfigurationException with the specified message._
+
+##### <a id='invalidconfigurationexception'></a>new __InvalidConfigurationException__(msg) 
+
+_Constructs an instance of InvalidConfigurationException with the specified message._
 
 Argument | Type | Description  
 --- | --- | --- 
-msg | `String` | The details of the exception. /
-    public InvalidConfigurationException(String msg) {
-        super(msg);
-    }
+msg | `String` | The details of the exception.
 
-    /** Constructs an instance of InvalidConfigurationException with the specified cause.
-cause | `Throwable` | The cause of the exception. /
-    public InvalidConfigurationException(Throwable cause) {
-        super(cause);
-    }
+##### <a id='invalidconfigurationexception'></a>new __InvalidConfigurationException__(cause) 
 
-    /** Constructs an instance of InvalidConfigurationException with the specified message and cause.
+_Constructs an instance of InvalidConfigurationException with the specified cause._
+
+Argument | Type | Description  
+--- | --- | --- 
+cause | `Throwable` | The cause of the exception.
+
+##### <a id='invalidconfigurationexception'></a>new __InvalidConfigurationException__(msg, cause) 
+
+_Constructs an instance of InvalidConfigurationException with the specified message and cause._
+
+Argument | Type | Description  
+--- | --- | --- 
+msg | `String` | The details of the exception.
+cause | `Throwable` | The cause of the exception.
 
 ---
 ---

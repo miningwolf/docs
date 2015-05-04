@@ -10,7 +10,8 @@ Represents the effect of a drag that will be applied to an Inventory in an Inven
 
 Item | Type   
 --- | :--- 
-EVEN: <br> _One item from the cursor is placed in each selected slot._ | DragType
+SINGLE: <br> _One item from the cursor is placed in each selected slot._ | DragType
+EVEN: <br> _The cursor is split evenly across all selected slots, not to exceed the_ | DragType
 
 
 

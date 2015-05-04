@@ -11,7 +11,7 @@ Optional base class for facilitating MetadataValue implementations. <p> This pro
 
 Method | Type   
 --- | :--- 
- readonly property __OwningPlugin__ <br> _OwningPlugin property_ | [`Plugin`](..\plugin\Plugin.md)
+ readonly property __OwningPlugin__ <br> _OwningPlugin property_ | [`Plugin`](../plugin/Plugin.md)
  function __asBoolean__() <br> _asBoolean method_ | `boolean`
  function __asByte__() <br> _asByte method_ | `byte`
  function __asDouble__() <br> _asDouble method_ | `double`
@@ -34,7 +34,7 @@ _OwningPlugin property_
 
 Get | 
 --- | 
-[`Plugin`](..\plugin\Plugin.md) |
+[`Plugin`](../plugin/Plugin.md) |
 
 
 

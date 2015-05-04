@@ -1,7 +1,7 @@
 ## BrewingStandProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.BrewingStandProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -12,6 +12,10 @@ Brewing Stand properties helper
 Method | Type   
 --- | :--- 
 static var __BlockBooleanProperty__ <br> _Brewing Stand bottle properties, Values: true, false_ | `final`
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -28,6 +32,8 @@ _Brewing Stand bottle properties, Values: true, false_
 >  `final`
 
 ---
+
+
 ---
 
 

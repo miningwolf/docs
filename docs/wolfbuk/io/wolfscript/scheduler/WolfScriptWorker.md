@@ -10,7 +10,9 @@ Represents a worker thread for the scheduler. This gives information about the T
 
 Method | Type   
 --- | :--- 
- readonly property __Thread__ <br> _Get: Returns the taskId for the task being executed by this worker._ | `Thread`
+ readonly property __Owner__ <br> _Get: Returns the Plugin that owns this task._ | [`Plugin`](../plugin/Plugin.md)
+ readonly property __TaskId__ <br> _Get: Returns the taskId for the task being executed by this worker._ | `int`
+ readonly property __Thread__ <br> _Get: Returns the thread for the worker._ | `Thread`
 
 
 
@@ -19,16 +21,33 @@ Method | Type
 
 ### Public Properties for [`WolfScriptWorker`](WolfScriptWorker.md)
 
-##### <a id='thread'></a>public  readonly property __Thread__
+##### <a id='owner'></a>public  readonly property __Owner__
+
+_Get: Returns the Plugin that owns this task._
+
+Get | Description
+--- | --- 
+[`Plugin`](../plugin/Plugin.md) | The Plugin that owns the task
+
+
+
+##### <a id='taskid'></a>public  readonly property __TaskId__
 
 _Get: Returns the taskId for the task being executed by this worker._
 
 Get | Description
 --- | --- 
-`Thread` | Task id number /
-    public int getTaskId();
+`int` | Task id number
 
-    /** Returns the Plugin that owns this task.
+
+
+##### <a id='thread'></a>public  readonly property __Thread__
+
+_Get: Returns the thread for the worker._
+
+Get | Description
+--- | --- 
+`Thread` | The Thread object for the worker
 
 
 

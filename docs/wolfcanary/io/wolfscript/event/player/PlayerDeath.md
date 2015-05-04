@@ -1,7 +1,7 @@
 ## PlayerDeath __class__
 
 >io.wolfscript.event.player.PlayerDeath
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -11,11 +11,15 @@ Player Death hook
 
 Method | Type   
 --- | :--- 
- readonly property __DamageSource__ <br> _Get: Constructs a new PlayerDeath_ | [`DamageSource`](..\..\api\DamageSource.md)
+new __PlayerDeath__(player, source, msg) <br> _Constructs a new PlayerDeath_ | _constructor_
+ readonly property __DamageSource__ <br> _Get: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_ | [`DamageSource`](../../api/DamageSource.md)
+ readonly property __Player__ <br> _Get: Gets the `Player` who died_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -23,21 +27,58 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`PlayerDeath`](PlayerDeath.md)
+
+##### <a id='playerdeath'></a>new __PlayerDeath__(player, source, msg) 
+
+_Constructs a new PlayerDeath_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` that died
+source | [`DamageSource`](../../api/DamageSource.md) | the [`DamageSource`](../../api/DamageSource.md) that killed the `Player`
+msg | [`ChatComponent`](../../api/chat/ChatComponent.md) | the Death message to send all if DeathMessages aren't disabled
+
+---
 
 ### Public Properties for [`PlayerDeath`](PlayerDeath.md)
 
 ##### <a id='damagesource'></a>public  readonly property __DamageSource__
 
-_Get: Constructs a new PlayerDeath_
+_Get: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_
 
 Get | Description
 --- | --- 
-[`DamageSource`](..\..\api\DamageSource.md) | the dead `Player` /
-    public Player getPlayer() {
-        return player;
+[`DamageSource`](../../api/DamageSource.md) | the death dealing [`DamageSource`](../../api/DamageSource.md)
+
+
+
+##### <a id='deathmessage'></a>public   property __DeathMessage__
+_Deprecated: Replaced by #setDeathMessage1_
+
+_Get: Gets the message to send on Death<br>Set: Gets the [`ChatComponent`](../../api/chat/ChatComponent.md) containing the death message_
+
+Get | Description
+--- | --- 
+`String` | the ChatComponent containing the death message /
+    public ChatComponent getDeathMessage1() {
+        return msg;
     }
 
-    /** Gets the message to send on Death
+    /** Sets the message to send, if death message are enabled
+
+Set | Type | Description  
+--- | --- | --- 
+msg | `String` | the death message
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player` who died_
+
+Get | Description
+--- | --- 
+`Player` | the dead `Player`
 
 
 
@@ -56,27 +97,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

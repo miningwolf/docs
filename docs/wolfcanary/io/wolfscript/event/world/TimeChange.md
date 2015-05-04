@@ -1,7 +1,7 @@
 ## TimeChange __class__
 
 >io.wolfscript.event.world.TimeChange
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Time Change hook
 
 Method | Type   
 --- | :--- 
- readonly property __Time__ <br> _Get: Constructs a new TimeChange_ | `long`
+new __TimeChange__(world, time) <br> _Constructs a new TimeChange_ | _constructor_
+ readonly property __Time__ <br> _Get: Gets the time the [`World`](../../api/world/World.md) is being set to_ | `long`
+ readonly property __World__ <br> _Get: Gets the [`World`](../../api/world/World.md) the time is changing in_ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`TimeChange`](TimeChange.md)
+
+##### <a id='timechange'></a>new __TimeChange__(world, time) 
+
+_Constructs a new TimeChange_
+
+Argument | Type | Description  
+--- | --- | --- 
+world | [`World`](../../api/world/World.md) | the [`World`](../../api/world/World.md) the time is changing in
+time | `long` | the time being set to
+
+---
 
 ### Public Properties for [`TimeChange`](TimeChange.md)
 
 ##### <a id='time'></a>public  readonly property __Time__
 
-_Get: Constructs a new TimeChange_
+_Get: Gets the time the [`World`](../../api/world/World.md) is being set to_
 
 Get | Description
 --- | --- 
-`long` | the [`World`](..\..\api\world\World.md) of the time change /
-    public World getWorld() {
-        return world;
-    }
+`long` | time to be set
 
-    /** Gets the time the [`World`](..\..\api\world\World.md) is being set to
+
+
+##### <a id='world'></a>public  readonly property __World__
+
+_Get: Gets the [`World`](../../api/world/World.md) the time is changing in_
+
+Get | Description
+--- | --- 
+[`World`](../../api/world/World.md) | the [`World`](../../api/world/World.md) of the time change
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

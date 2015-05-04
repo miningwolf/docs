@@ -1,7 +1,7 @@
 ## WeatherEffect __interface__
 
 >io.wolfscript.api.entity.effect.WeatherEffect
->Extends [`Entity`](..\Entity.md)
+>Extends [`Entity`](../Entity.md)
 
 ---
 
@@ -12,7 +12,7 @@ Weather Effect Wrapper Interface
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-Represents a base [`Plugin`](Plugin.md) <p> Extend this class if your plugin is not a [`JavaPlugin`](java\JavaPlugin.md)
+Represents a base [`Plugin`](Plugin.md) <p> Extend this class if your plugin is not a [`JavaPlugin`](java/JavaPlugin.md)
 
 Method | Type   
 --- | :--- 

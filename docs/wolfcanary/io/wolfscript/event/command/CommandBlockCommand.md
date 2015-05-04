@@ -1,7 +1,7 @@
 ## CommandBlockCommand __class__
 
 >io.wolfscript.event.command.CommandBlockCommand
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,22 @@ CommandBlockCommand<br> Called when a CommandBlock executes a command.
 
 Method | Type   
 --- | :--- 
- readonly property __Arguments__ <br> _Get: Constructs a new CommandBlockCommand_ | `String[]`
+new __CommandBlockCommand__(reference) <br> _Constructs a new CommandBlockCommand_ | _constructor_
+ readonly property __Arguments__ <br> _Get: Gets the command and arguments_ | `String[]`
+ readonly property __CommandBlock__ <br> _Get: Gets the CommandBlock if actually a CommandBlock_ | `CommandBlock`
+ readonly property __CommandBlockMinecart__ <br> _Get: Gets the CommandBlockMinecart if actually a CommandBlockMinecart_ | `CommandBlockMinecart`
+ readonly property __Reference__ <br> _Reference property_ | [`CommandBlockLogic`](../../api/CommandBlockLogic.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +36,57 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`CommandBlockCommand`](CommandBlockCommand.md)
+
+##### <a id='commandblockcommand'></a>new __CommandBlockCommand__(reference) 
+
+_Constructs a new CommandBlockCommand_
+
+Argument | Type | Description  
+--- | --- | --- 
+reference | [`CommandBlockLogic`](../../api/CommandBlockLogic.md) | the [`CommandBlockLogic`](../../api/CommandBlockLogic.md) used (either CommandBlock or CommandBlockMinecart)
+
+---
 
 ### Public Properties for [`CommandBlockCommand`](CommandBlockCommand.md)
 
 ##### <a id='arguments'></a>public  readonly property __Arguments__
 
-_Get: Constructs a new CommandBlockCommand_
+_Get: Gets the command and arguments_
 
 Get | Description
 --- | --- 
-`String[]` | the `CommandBlock` if it is one; `null` if its a `CommandBlockMinecart` instead /
-    public CommandBlock getCommandBlock() {
-        return reference instanceof CommandBlock ? (CommandBlock)reference : null;
-    }
+`String[]` | the command and arguments
 
-    /** Gets the CommandBlockMinecart if actually a CommandBlockMinecart
+
+
+##### <a id='commandblock'></a>public  readonly property __CommandBlock__
+
+_Get: Gets the CommandBlock if actually a CommandBlock_
+
+Get | Description
+--- | --- 
+`CommandBlock` | the `CommandBlock` if it is one; `null` if its a `CommandBlockMinecart` instead
+
+
+
+##### <a id='commandblockminecart'></a>public  readonly property __CommandBlockMinecart__
+
+_Get: Gets the CommandBlockMinecart if actually a CommandBlockMinecart_
+
+Get | Description
+--- | --- 
+`CommandBlockMinecart` | the `CommandBlockMinecart` if it is one; `null` if its a `CommandBlock` instead
+
+
+
+##### <a id='reference'></a>public  readonly property __Reference__
+
+_Reference property_
+
+Get | 
+--- | 
+[`CommandBlockLogic`](../../api/CommandBlockLogic.md) |
 
 
 
@@ -63,7 +105,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +113,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +136,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

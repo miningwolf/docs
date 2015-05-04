@@ -1,7 +1,7 @@
 ## Eat __class__
 
 >io.wolfscript.event.player.Eat
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,24 @@ Eat <p/> Contains information about a `Player` having finished eating Food
 
 Method | Type   
 --- | :--- 
- function __setPotionEffects__() <br> _Constructs a new Eat_ | `void`
+new __Eat__(player, item, levelGain, saturationGain) <br> _Constructs a new Eat_ | _constructor_
+ readonly property __Item__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) that is being consumed_ | [`Item`](../../api/inventory/Item.md)
+  property __LevelGain__ <br> _Get: Gets the amount of Food Level the `Player` will gain from consuming<br>Set: Sets the Food Level the `Player` will gain from consuming_ | `int`
+ readonly property __Player__ <br> _Get: Gets the `Player` eating_ | `Player`
+ readonly property __PotionEffects__ <br> _Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md)s that could be applied on consumption_ | `PotionEffect[]`
+  property __SaturationGain__ <br> _Get: Gets the Food Saturation the `Player` will gain from consuming<br>Set: Sets the Food Saturation the `Player` will gain from consuming_ | `float`
+ function __setPotionEffects__() <br> _Sets the [`PotionEffect`](../../api/potion/PotionEffect.md)s to applied on consumption._ | `void`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +38,90 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`Eat`](Eat.md)
+
+##### <a id='eat'></a>new __Eat__(player, item, levelGain, saturationGain) 
+
+_Constructs a new Eat_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` eating
+item | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) being eaten
+levelGain | `int` | the amount of food level the `Player` will gain
+saturationGain | `float` | the amount of food saturation the `Player` will gain
+
+---
+
+### Public Properties for [`Eat`](Eat.md)
+
+##### <a id='item'></a>public  readonly property __Item__
+
+_Get: Gets the [`Item`](../../api/inventory/Item.md) that is being consumed_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md)
+
+
+
+##### <a id='levelgain'></a>public   property __LevelGain__
+
+_Get: Gets the amount of Food Level the `Player` will gain from consuming<br>Set: Sets the Food Level the `Player` will gain from consuming_
+
+Get | Description
+--- | --- 
+`int` | food level gain
+
+Set | Type | Description  
+--- | --- | --- 
+levelGain | `int` | level gain
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player` eating_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
+
+
+
+##### <a id='potioneffects'></a>public  readonly property __PotionEffects__
+
+_Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md)s that could be applied on consumption<br> May be null if no effects apply to the food eaten._
+
+Get | Description
+--- | --- 
+`PotionEffect[]` | PotionEffects
+
+
+
+##### <a id='saturationgain'></a>public   property __SaturationGain__
+
+_Get: Gets the Food Saturation the `Player` will gain from consuming<br>Set: Sets the Food Saturation the `Player` will gain from consuming_
+
+Get | Description
+--- | --- 
+`float` | food saturation gain
+
+Set | Type | Description  
+--- | --- | --- 
+saturationGain | `float` | the food saturation to gain
+
+
+---
 
 ### Public Methods for [`Eat`](Eat.md)
 
 ##### <a id='setpotioneffects'></a>public  function __setPotionEffects__()
 
-_Constructs a new Eat_
+_Sets the [`PotionEffect`](../../api/potion/PotionEffect.md)s to applied on consumption._
 
-Returns | Description
---- | --- 
-`void` | the `Player` /
-    public Player getPlayer() {
-        return player;
-    }
-
-    /** Gets the [`Item`](..\..\api\inventory\Item.md) that is being consumed
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='tostring'></a>public final function __toString__()
@@ -58,7 +135,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -66,7 +143,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -89,27 +166,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

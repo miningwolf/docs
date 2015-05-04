@@ -1,7 +1,7 @@
 ## EntityMob __interface__
 
 >io.wolfscript.api.entity.living.monster.EntityMob
->Extends [`EntityLiving`](..\EntityLiving.md)
+>Extends [`EntityLiving`](../EntityLiving.md)
 
 ---
 
@@ -12,11 +12,11 @@ A Mob base-entity that all mobs inherit from. Declares some methods useful for m
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`EntityLiving`](..\EntityLiving.md)__ |
+__Inherited items from [`EntityLiving`](../EntityLiving.md)__ |
  |
-__Inherited items from [`LivingBase`](..\LivingBase.md)__ |
+__Inherited items from [`LivingBase`](../LivingBase.md)__ |
  |
-__Inherited items from [`Entity`](..\..\Entity.md)__ |
+__Inherited items from [`Entity`](../../Entity.md)__ |
 
 
 

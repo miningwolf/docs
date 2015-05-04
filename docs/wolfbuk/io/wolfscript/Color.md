@@ -1,7 +1,7 @@
 ## Color __class__
 
 >io.wolfscript.Color
->Implements [`ConfigurationSerializable`](configuration\serialization\ConfigurationSerializable.md)
+>Implements [`ConfigurationSerializable`](configuration/serialization/ConfigurationSerializable.md)
 
 ---
 
@@ -11,9 +11,13 @@ A container for a color palette. This class is immutable; the set methods return
 
 Method | Type   
 --- | :--- 
- function __asBGR__() <br> _White, or (0xFF,0xFF,0xFF) in (R,G,B)_ | `int`
+  property __Red__ <br> _Get: White, or (0xFF,0xFF,0xFF) in (R,G,B)<br>Set: Creates a new Color object with specified component_ | `int`
+  property __Green__ <br> _Get: Gets the green component<br>Set: Creates a new Color object with specified component_ | `int`
+  property __Blue__ <br> _Get: Gets the blue component<br>Set: Creates a new Color object with specified component_ | `int`
+ function __asBGR__() <br> _asBGR method_ | `int`
 static function __deserialize__() <br> _deserialize method_ | [`Color`](Color.md)
  function __equals__(o) <br> _equals method_ | `boolean`
+ function __asRGB__() <br> _asRGB method_ | `int`
  function __hashCode__() <br> _hashCode method_ | `int`
  function __mixColors__() <br> _mixColors method_ | [`Color`](Color.md)
  function __mixDyes__() <br> _mixDyes method_ | [`Color`](Color.md)
@@ -32,18 +36,20 @@ static final var __AQUA__ <br> _AQUA field_ | [`Color`](Color.md)
 static final var __TEAL__ <br> _TEAL field_ | [`Color`](Color.md)
 static final var __BLUE__ <br> _BLUE field_ | [`Color`](Color.md)
 static final var __NAVY__ <br> _NAVY field_ | [`Color`](Color.md)
-static final var __ORANGE__ <br> _Fuchsia, or (0xFF,0x00,0xFF) in (R,G,B)_ | [`Color`](Color.md)
+static final var __FUCHSIA__ <br> _Fuchsia, or (0xFF,0x00,0xFF) in (R,G,B)_ | [`Color`](Color.md)
+static final var __PURPLE__ <br> _PURPLE field_ | [`Color`](Color.md)
+static final var __ORANGE__ <br> _ORANGE field_ | [`Color`](Color.md)
 
 
 
 ---
 
 
-### Public Methods for [`Color`](Color.md)
+### Public Properties for [`Color`](Color.md)
 
-##### <a id='asbgr'></a>public  function __asBGR__()
+##### <a id='red'></a>public   property __Red__
 
-_White, or (0xFF,0xFF,0xFF) in (R,G,B) /
+_Get: White, or (0xFF,0xFF,0xFF) in (R,G,B) /
     public static final Color WHITE = fromRGB(0xFFFFFF);
 
     /** Silver, or (0xC0,0xC0,0xC0) in (R,G,B) /
@@ -98,11 +104,54 @@ _White, or (0xFF,0xFF,0xFF) in (R,G,B) /
     private final byte green;
     private final byte blue;
 
-    /** Creates a new Color object from a red, green, and blue_
+    /** Creates a new Color object from a red, green, and blue<br>Set: Creates a new Color object with specified component_
+
+Get | Description
+--- | --- 
+`int` | a new color object with the red component
+
+Set | Type | Description  
+--- | --- | --- 
+red | `int` | the red component, from 0 to 255
+
+
+##### <a id='green'></a>public   property __Green__
+
+_Get: Gets the green component<br>Set: Creates a new Color object with specified component_
+
+Get | Description
+--- | --- 
+`int` | a new color object with the red component
+
+Set | Type | Description  
+--- | --- | --- 
+green | `int` | the red component, from 0 to 255
+
+
+##### <a id='blue'></a>public   property __Blue__
+
+_Get: Gets the blue component<br>Set: Creates a new Color object with specified component_
+
+Get | Description
+--- | --- 
+`int` | a new color object with the red component
+
+Set | Type | Description  
+--- | --- | --- 
+blue | `int` | the red component, from 0 to 255
+
+
+---
+
+### Public Methods for [`Color`](Color.md)
+
+##### <a id='asbgr'></a>public  function __asBGR__()
+
+_asBGR method_
 
 Returns | Description
 --- | --- 
-`int` | a new Color object for the red, green, blue
+`int` | An integer representation of this color, as 0xBBGGRR
 
 
 ##### <a id='deserialize'></a>public static function __deserialize__()
@@ -125,6 +174,15 @@ o | `Object` | o argument
 Returns | 
 --- | 
 `boolean` |
+
+
+##### <a id='asrgb'></a>public  function __asRGB__()
+
+_asRGB method_
+
+Returns | Description
+--- | --- 
+`int` | An integer representation of this color, as 0xRRGGBB
 
 
 ##### <a id='hashcode'></a>public  function __hashCode__()
@@ -265,15 +323,23 @@ _NAVY field_
 >Returns
 >  [`Color`](Color.md)
 
+##### <a id='fuchsia'></a>public static final var __FUCHSIA__
+
+_Fuchsia, or (0xFF,0x00,0xFF) in (R,G,B)_
+
+>Returns
+>  [`Color`](Color.md)
+
+##### <a id='purple'></a>public static final var __PURPLE__
+
+_PURPLE field_
+
+>Returns
+>  [`Color`](Color.md)
+
 ##### <a id='orange'></a>public static final var __ORANGE__
 
-_Fuchsia, or (0xFF,0x00,0xFF) in (R,G,B) /
-    public static final Color FUCHSIA = fromRGB(0xFF00FF);
-
-    /** Purple, or (0x80,0x00,0x80) in (R,G,B) /
-    public static final Color PURPLE = fromRGB(0x800080);
-
-    /** Orange, or (0xFF,0xA5,0x00) in (R,G,B)_
+_ORANGE field_
 
 >Returns
 >  [`Color`](Color.md)

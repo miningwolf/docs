@@ -11,18 +11,36 @@ Represents a wither skull `Fireball`.
 
 Method | Type   
 --- | :--- 
- function __isCharged__() <br> _Sets the charged status of the wither skull._ | `boolean`
+ writeonly property __Charged__ <br> _Set: Sets the charged status of the wither skull._ | `void`
+ function __isCharged__() <br> _Gets whether or not the wither skull is charged._ | `boolean`
 
 
 
 ---
 
 
+### Public Properties for [`WitherSkull`](WitherSkull.md)
+
+##### <a id='charged'></a>public  writeonly property __Charged__
+
+_Set: Sets the charged status of the wither skull._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+charged | `boolean` | whether it should be charged
+
+
+---
+
 ### Public Methods for [`WitherSkull`](WitherSkull.md)
 
 ##### <a id='ischarged'></a>public  function __isCharged__()
 
-_Sets the charged status of the wither skull._
+_Gets whether or not the wither skull is charged._
 
 Returns | Description
 --- | --- 

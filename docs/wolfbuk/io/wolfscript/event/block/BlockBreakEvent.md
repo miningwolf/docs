@@ -2,7 +2,7 @@
 
 >io.wolfscript.event.block.BlockBreakEvent
 >Extends [`BlockExpEvent`](BlockExpEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -19,16 +19,20 @@ new __BlockBreakEvent__(Block, Player) <br> _BlockBreakEvent constructor_ | _con
  |
 __Inherited items from [`BlockExpEvent`](BlockExpEvent.md)__ |
 new __BlockExpEvent__(block, exp) <br> _BlockExpEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
- writeonly property __ExpToDrop__ <br> _Set: Get the experience dropped by the block after the event has processed_ | `void`
+  property __ExpToDrop__ <br> _Get: Get the experience dropped by the block after the event has processed<br>Set: Set the amount of experience dropped by the block after the event has_ | `int`
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  |
 __Inherited items from [`BlockEvent`](BlockEvent.md)__ |
 new __BlockEvent__(Block) <br> _BlockEvent constructor_ | _constructor_
-final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](..\..\block\Block.md)
+final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](../../block/Block.md)
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -100,12 +104,25 @@ _BlockExpEvent constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\block\Block.md) | block argument
+block | [`Block`](../../block/Block.md) | block argument
 exp | `int` | exp argument
 
 ---
 
 ### Public Properties for [`BlockExpEvent`](BlockExpEvent.md)
+
+##### <a id='exptodrop'></a>public   property __ExpToDrop__
+
+_Get: Get the experience dropped by the block after the event has processed<br>Set: Set the amount of experience dropped by the block after the event has processed_
+
+Get | Description
+--- | --- 
+`int` | The experience to drop
+
+Set | Type | Description  
+--- | --- | --- 
+exp | `int` | 1 or higher to drop experience, else nothing will drop
+
 
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
@@ -113,7 +130,7 @@ _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -123,26 +140,8 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
-
-
-##### <a id='exptodrop'></a>public  writeonly property __ExpToDrop__
-
-_Set: Get the experience dropped by the block after the event has processed_
-
-Get | Description
---- | --- 
-`void` | The experience to drop /
-    public int getExpToDrop() {
-        return exp;
-    }
-
-    /** Set the amount of experience dropped by the block after the event has processed
-
-Set | Type | Description  
---- | --- | --- 
-exp | `int` | 1 or higher to drop experience, else nothing will drop
 
 
 ---
@@ -166,36 +165,61 @@ _Get: Gets the block involved in this event._
 
 Get | Description
 --- | --- 
-[`Block`](..\..\block\Block.md) | The Block which block is involved in this event
+[`Block`](../../block/Block.md) | The Block which block is involved in this event
+
+
+
+---
+### Public Constructors for [`Event`](../Event.md)
+
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
 
 
 
 ---
 
-### Public Methods for [`Event`](..\Event.md)
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

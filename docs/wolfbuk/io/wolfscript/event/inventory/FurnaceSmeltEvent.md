@@ -1,8 +1,8 @@
 ## FurnaceSmeltEvent __class__
 
 >io.wolfscript.event.inventory.FurnaceSmeltEvent
->Extends [`BlockEvent`](..\block\BlockEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Extends [`BlockEvent`](../block/BlockEvent.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -13,18 +13,23 @@ Called when an ItemStack is successfully smelted in a furnace.
 Method | Type   
 --- | :--- 
 new __FurnaceSmeltEvent__(Block, ItemStack, ItemStack) <br> _FurnaceSmeltEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+  property __Result__ <br> _Get: Gets the resultant ItemStack for this event<br>Set: Sets the resultant ItemStack for this event_ | `ItemStack`
+ readonly property __Source__ <br> _Get: Gets the smelted ItemStack for this event_ | `ItemStack`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
- writeonly property __Result__ <br> _Set: Gets the block for the furnace involved in this event_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
-__Inherited items from [`BlockEvent`](..\block\BlockEvent.md)__ |
+__Inherited items from [`BlockEvent`](../block/BlockEvent.md)__ |
 new __BlockEvent__(Block) <br> _BlockEvent constructor_ | _constructor_
-final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](..\..\block\Block.md)
+final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](../../block/Block.md)
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -50,13 +55,24 @@ ItemStack | `final` | ItemStack argument
 
 ### Public Properties for [`FurnaceSmeltEvent`](FurnaceSmeltEvent.md)
 
+##### <a id='furnace'></a>public  readonly property __Furnace__
+_Deprecated: In favour of {@link #getBlock()}._
+
+_Get: Gets the block for the furnace involved in this event_
+
+Get | Description
+--- | --- 
+[`Block`](../../block/Block.md) | the block of the furnace
+
+
+
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
 _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -66,7 +82,30 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
+
+
+
+##### <a id='result'></a>public   property __Result__
+
+_Get: Gets the resultant ItemStack for this event<br>Set: Sets the resultant ItemStack for this event_
+
+Get | Description
+--- | --- 
+`ItemStack` | smelting result ItemStack
+
+Set | Type | Description  
+--- | --- | --- 
+result | `ItemStack` | new result ItemStack
+
+
+##### <a id='source'></a>public  readonly property __Source__
+
+_Get: Gets the smelted ItemStack for this event_
+
+Get | Description
+--- | --- 
+`ItemStack` | smelting source ItemStack
 
 
 
@@ -83,19 +122,6 @@ Set | Type | Description
 cancel | `boolean` | cancel argument
 
 
-##### <a id='result'></a>public  writeonly property __Result__
-
-_Set: Gets the block for the furnace involved in this event_
-
-Get | Description
---- | --- 
-`void` | the block of the furnace
-
-Set | Type | Description  
---- | --- | --- 
-result | `ItemStack` | new result ItemStack
-
-
 ---
 
 ### Public Methods for [`FurnaceSmeltEvent`](FurnaceSmeltEvent.md)
@@ -110,7 +136,7 @@ Returns |
 
 
 ---
-### Public Constructors for [`BlockEvent`](..\block\BlockEvent.md)
+### Public Constructors for [`BlockEvent`](../block/BlockEvent.md)
 
 ##### <a id='blockevent'></a>new __BlockEvent__(Block) 
 
@@ -122,7 +148,7 @@ Block | `final` | Block argument
 
 ---
 
-### Public Properties for [`BlockEvent`](..\block\BlockEvent.md)
+### Public Properties for [`BlockEvent`](../block/BlockEvent.md)
 
 ##### <a id='block'></a>public final readonly property __Block__
 
@@ -130,36 +156,61 @@ _Get: Gets the block involved in this event._
 
 Get | Description
 --- | --- 
-[`Block`](..\..\block\Block.md) | The Block which block is involved in this event
+[`Block`](../../block/Block.md) | The Block which block is involved in this event
+
+
+
+---
+### Public Constructors for [`Event`](../Event.md)
+
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
 
 
 
 ---
 
-### Public Methods for [`Event`](..\Event.md)
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

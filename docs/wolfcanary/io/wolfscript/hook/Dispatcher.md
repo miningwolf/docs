@@ -26,7 +26,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-listener | [`PluginListener`](..\plugin\PluginListener.md) | listener argument
+listener | [`PluginListener`](../plugin/PluginListener.md) | listener argument
 hook | [`Hook`](Hook.md) | hook argument
 
 Returns | 

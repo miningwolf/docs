@@ -43,7 +43,8 @@ KILL_WITHER: SPAWN_WITHER<br> _KILL_WITHER Achievement_ | Achievement
 FULL_BEACON: KILL_WITHER<br> _FULL_BEACON Achievement_ | Achievement
 BREED_COW: KILL_COW<br> _BREED_COW Achievement_ | Achievement
 DIAMONDS_TO_YOU: GET_DIAMONDS<br> _DIAMONDS_TO_YOU Achievement_ | Achievement
- readonly property __Parent__ <br> _Get: Returns whether or not this achievement has a parent achievement._ | [`Achievement`](Achievement.md)
+ readonly property __Parent__ <br> _Get: Returns the parent achievement of this achievement, or null if none._ | [`Achievement`](Achievement.md)
+ function __hasParent__() <br> _Returns whether or not this achievement has a parent achievement._ | `boolean`
 
 
 
@@ -54,17 +55,25 @@ DIAMONDS_TO_YOU: GET_DIAMONDS<br> _DIAMONDS_TO_YOU Achievement_ | Achievement
 
 ##### <a id='parent'></a>public  readonly property __Parent__
 
-_Get: Returns whether or not this achievement has a parent achievement._
+_Get: Returns the parent achievement of this achievement, or null if none._
 
 Get | Description
 --- | --- 
-[`Achievement`](Achievement.md) | whether the achievement has a parent achievement /
-    public boolean hasParent() {
-        return parent != null;
-    }
+[`Achievement`](Achievement.md) | the parent achievement or null
 
-    /** Returns the parent achievement of this achievement, or null if none.
 
+
+---
+
+### Public Methods for [`Achievement`](Achievement.md)
+
+##### <a id='hasparent'></a>public  function __hasParent__()
+
+_Returns whether or not this achievement has a parent achievement._
+
+Returns | Description
+--- | --- 
+`boolean` | whether the achievement has a parent achievement
 
 
 ---

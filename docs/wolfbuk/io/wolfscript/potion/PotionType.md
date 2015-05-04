@@ -39,7 +39,9 @@ PotionEffectType.WATER_BREATHING: <br> _PotionEffectType.WATER_BREATHING PotionT
 14: <br> _14 PotionType_ | PotionType
 PotionEffectType.INVISIBILITY: <br> _PotionEffectType.INVISIBILITY PotionType_ | PotionType
  readonly property __EffectType__ <br> _EffectType property_ | [`PotionEffectType`](PotionEffectType.md)
+ readonly property __MaxLevel__ <br> _MaxLevel property_ | `int`
 static function __getByEffect__(effectType) <br> _getByEffect method_ | [`PotionType`](PotionType.md)
+ function __isInstant__() <br> _isInstant method_ | `boolean`
 
 
 
@@ -47,6 +49,17 @@ static function __getByEffect__(effectType) <br> _getByEffect method_ | [`Potion
 
 
 ### Public Properties for [`PotionType`](PotionType.md)
+
+##### <a id='damagevalue'></a>public  readonly property __DamageValue__
+_Deprecated: Magic value_
+
+_DamageValue property_
+
+Get | Description
+--- | --- 
+`int` | the damage value
+
+
 
 ##### <a id='effecttype'></a>public  readonly property __EffectType__
 
@@ -58,26 +71,22 @@ Get |
 
 
 
+##### <a id='maxlevel'></a>public  readonly property __MaxLevel__
+
+_MaxLevel property_
+
+Get | 
+--- | 
+`int` |
+
+
+
 ---
 
 ### Public Methods for [`PotionType`](PotionType.md)
 
 ##### <a id='getbydamagevalue'></a>public static function __getByDamageValue__(damage)
-_Deprecated: Magic value /
-    @Deprecated
-    public int getDamageValue() {
-        return damageValue;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
-    public boolean isInstant() {
-        return effect == null ? true : effect.isInstant();
-    }
-
-    /** Magic value_
+_Deprecated: Magic value_
 
 _getByDamageValue method_
 
@@ -87,7 +96,7 @@ damage | `int` | the damage value
 
 Returns | Description
 --- | --- 
-[`PotionType`](PotionType.md) | the damage value
+[`PotionType`](PotionType.md) | the matching potion type or null
 
 
 ##### <a id='getbyeffect'></a>public static function __getByEffect__(effectType)
@@ -101,6 +110,15 @@ effectType | [`PotionEffectType`](PotionEffectType.md) | effectType argument
 Returns | 
 --- | 
 [`PotionType`](PotionType.md) |
+
+
+##### <a id='isinstant'></a>public  function __isInstant__()
+
+_isInstant method_
+
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

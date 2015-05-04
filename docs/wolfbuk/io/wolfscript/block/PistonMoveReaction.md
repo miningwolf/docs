@@ -10,44 +10,36 @@ enum PistonMoveReaction
 
 Item | Type   
 --- | :--- 
-BLOCK: 2<br> _Indicates that the block can be pushed or pulled._ | PistonMoveReaction
+MOVE: 0<br> _Indicates that the block can be pushed or pulled._ | PistonMoveReaction
+BREAK: 1<br> _Indicates the block is fragile and will break if pushed on._ | PistonMoveReaction
+BLOCK: 2<br> _Indicates that the block will resist being pushed or pulled._ | PistonMoveReaction
 
 
 
 ---
 
 
+### Public Properties for [`PistonMoveReaction`](PistonMoveReaction.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
+
+_Id property_
+
+Get | Description
+--- | --- 
+`int` | The ID of the move reaction
+
+
+
+---
+
 ### Public Methods for [`PistonMoveReaction`](PistonMoveReaction.md)
 
 ##### <a id='getbyid'></a>public static function __getById__(id)
-_Deprecated: Magic value /
-    @Deprecated
-    public int getId() {
-        return this.id;
-    }
+_Deprecated: Magic value_
 
-    /** Magic value_
-
-_Indicates that the block can be pushed or pulled. /
-    MOVE(0),
-    /** Indicates the block is fragile and will break if pushed on. /
-    BREAK(1),
-    /** Indicates that the block will resist being pushed or pulled. /
-    BLOCK(2);
-
-    private int id;
-    private static Map<Integer, PistonMoveReaction> byId = new HashMap<Integer, PistonMoveReaction>();
-    static {
-        for (PistonMoveReaction reaction : PistonMoveReaction.values()) {
-            byId.put(reaction.id, reaction);
-        }
-    }
-
-    private PistonMoveReaction(int id) {
-        this.id = id;
-    }
-
-    /**_
+_getById method_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -55,7 +47,7 @@ id | `int` | An ID
 
 Returns | Description
 --- | --- 
-[`PistonMoveReaction`](PistonMoveReaction.md) | The ID of the move reaction
+[`PistonMoveReaction`](PistonMoveReaction.md) | The move reaction with that ID
 
 
 ---

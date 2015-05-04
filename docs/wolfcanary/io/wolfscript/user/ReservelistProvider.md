@@ -11,7 +11,13 @@ Reserve List Provider
 Method | Type   
 --- | :--- 
 new __ReservelistProvider__() <br> _ReservelistProvider constructor_ | _constructor_
- readonly property __Reservations__ <br> _Get: Reload the reservelist from database_ | `String[]`
+ readonly property __Reservations__ <br> _Get: Gets all reservations_ | `String[]`
+ readonly property __Size__ <br> _Get: gets the current size of the reservelist_ | `int`
+ function __addPlayer__(name) <br> _Adds a new whitelist entry_ | `void`
+ function __isSlotReserved__(nameOrUUID) <br> _Check if a given player is reservelist._ | `boolean`
+ function __isSlotReserved__(playerReference) <br> _isSlotReserved method_ | `boolean`
+ function __reload__() <br> _Reload the reservelist from database_ | `void`
+ function __removePlayer__(name) <br> _Removes the given player from the reservelist_ | `void`
 
 
 
@@ -30,48 +36,87 @@ _ReservelistProvider constructor_
 
 ##### <a id='reservations'></a>public  readonly property __Reservations__
 
-_Get: Reload the reservelist from database /
-    public void reload() {
-        reservelist = backbonereservelist.loadReservelist();
-    }
+_Get: Gets all reservations_
 
-    /** Check if a given player is reservelist._
+Get | 
+--- | 
+`String[]` |
 
-Get | Description
+
+
+##### <a id='size'></a>public  readonly property __Size__
+
+_Get: gets the current size of the reservelist_
+
+Get | 
+--- | 
+`int` |
+
+
+
+---
+
+### Public Methods for [`ReservelistProvider`](ReservelistProvider.md)
+
+##### <a id='addplayer'></a>public  function __addPlayer__(name)
+
+_Adds a new whitelist entry_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='isslotreserved'></a>public  function __isSlotReserved__(nameOrUUID)
+
+_Check if a given player is reservelist._
+
+Argument | Type | Description  
+--- | --- | --- 
+nameOrUUID | `String` | the player's name or UUID to check
+
+Returns | Description
 --- | --- 
-`String[]` | `true` /
-    public boolean isSlotReserved(String nameOrUUID) {
-        // Did UUID get passed?
-        if (ToolBox.isUUID(nameOrUUID)) {
-            return reservelist.contains(nameOrUUID);
-        }
-        else if (Wolf.getServer() != null) { // Like at start up...
-            // Try to get a UUID reference from a known player
-            return isSlotReserved(Wolf.getServer().matchKnownPlayer(nameOrUUID));
-        }
-        else {
-            return false;
-        }
-    }
+`boolean` | `true`
 
-    public boolean isSlotReserved(PlayerReference playerReference) {
-        if (playerReference != null) {
-            // Lets update to UUID if we can get a UUID
-            if (reservelist.contains(playerReference.getName())) {
-                if (playerReference.getUUIDString() != null) {
-                    removePlayer(playerReference.getName());
-                    addPlayer(playerReference.getUUIDString());
-                }
-                return true;
-            }
-            // UUID test it is
-            return reservelist.contains(playerReference.getUUIDString());
-        }
-        return false;
-    }
 
-    /** Adds a new whitelist entry
+##### <a id='isslotreserved'></a>public  function __isSlotReserved__(playerReference)
 
+_isSlotReserved method_
+
+Argument | Type | Description  
+--- | --- | --- 
+playerReference | [`PlayerReference`](../api/PlayerReference.md) | playerReference argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='reload'></a>public  function __reload__()
+
+_Reload the reservelist from database_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='removeplayer'></a>public  function __removePlayer__(name)
+
+_Removes the given player from the reservelist_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

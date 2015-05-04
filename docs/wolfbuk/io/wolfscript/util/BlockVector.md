@@ -11,42 +11,76 @@ A vector with a hash function that floors the X, Y, Z components, a la BlockVect
 
 Method | Type   
 --- | :--- 
- function __clone__() <br> _Construct the vector with all components as 0._ | [`BlockVector`](BlockVector.md)
+new __BlockVector__() <br> _Construct the vector with all components as 0._ | _constructor_
+new __BlockVector__(vec) <br> _Construct the vector with another vector._ | _constructor_
+new __BlockVector__(x, y, z) <br> _Construct the vector with provided integer components._ | _constructor_
+new __BlockVector__(x, y, z) <br> _Construct the vector with provided double components._ | _constructor_
+new __BlockVector__(x, y, z) <br> _Construct the vector with provided float components._ | _constructor_
+ function __clone__() <br> _Get a new block vector._ | [`BlockVector`](BlockVector.md)
 static function __deserialize__() <br> _deserialize method_ | [`BlockVector`](BlockVector.md)
+ function __equals__(obj) <br> _Checks if another object is equivalent._ | `boolean`
+ function __hashCode__() <br> _Returns a hash code for this vector._ | `int`
 
 
 
 ---
 
+### Public Constructors for [`BlockVector`](BlockVector.md)
+
+##### <a id='blockvector'></a>new __BlockVector__() 
+
+_Construct the vector with all components as 0._
+
+
+##### <a id='blockvector'></a>new __BlockVector__(vec) 
+
+_Construct the vector with another vector._
+
+Argument | Type | Description  
+--- | --- | --- 
+vec | `Vector` | The other vector.
+
+##### <a id='blockvector'></a>new __BlockVector__(x, y, z) 
+
+_Construct the vector with provided integer components._
+
+Argument | Type | Description  
+--- | --- | --- 
+x | `int` | X component
+y | `int` | Y component
+z | `int` | Z component
+
+##### <a id='blockvector'></a>new __BlockVector__(x, y, z) 
+
+_Construct the vector with provided double components._
+
+Argument | Type | Description  
+--- | --- | --- 
+x | `double` | X component
+y | `double` | Y component
+z | `double` | Z component
+
+##### <a id='blockvector'></a>new __BlockVector__(x, y, z) 
+
+_Construct the vector with provided float components._
+
+Argument | Type | Description  
+--- | --- | --- 
+x | `float` | X component
+y | `float` | Y component
+z | `float` | Z component
+
+---
 
 ### Public Methods for [`BlockVector`](BlockVector.md)
 
 ##### <a id='clone'></a>public  function __clone__()
 
-_Construct the vector with all components as 0. /
-    public BlockVector() {
-        this.x = 0;
-        this.y = 0;
-        this.z = 0;
-    }
-
-    /** Construct the vector with another vector._
+_Get a new block vector._
 
 Returns | Description
 --- | --- 
-[`BlockVector`](BlockVector.md) | whether the other object is equivalent /
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof BlockVector)) {
-            return false;
-        }
-        BlockVector other = (BlockVector) obj;
-
-        return (int) other.getX() == (int) this.x && (int) other.getY() == (int) this.y && (int) other.getZ() == (int) this.z;
-
-    }
-
-    /** Returns a hash code for this vector.
+[`BlockVector`](BlockVector.md) | vector
 
 
 ##### <a id='deserialize'></a>public static function __deserialize__()
@@ -56,6 +90,28 @@ _deserialize method_
 Returns | 
 --- | 
 [`BlockVector`](BlockVector.md) |
+
+
+##### <a id='equals'></a>public  function __equals__(obj)
+
+_Checks if another object is equivalent._
+
+Argument | Type | Description  
+--- | --- | --- 
+obj | `Object` | The other object
+
+Returns | Description
+--- | --- 
+`boolean` | whether the other object is equivalent
+
+
+##### <a id='hashcode'></a>public  function __hashCode__()
+
+_Returns a hash code for this vector._
+
+Returns | Description
+--- | --- 
+`int` | hash code
 
 
 ---

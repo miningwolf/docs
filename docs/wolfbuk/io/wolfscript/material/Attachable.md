@@ -11,10 +11,11 @@ Indicates that a block can be attached to another block
 
 Method | Type   
 --- | :--- 
- readonly property __AttachedFace__ <br> _Get: Gets the face that this block is attached on_ | [`BlockFace`](..\block\BlockFace.md)
+ readonly property __AttachedFace__ <br> _Get: Gets the face that this block is attached on_ | [`BlockFace`](../block/BlockFace.md)
  |
 __Inherited items from [`Directional`](Directional.md)__ |
- readonly property __Facing__ <br> _Get: Sets the direction that this block is facing in_ | [`BlockFace`](..\block\BlockFace.md)
+ readonly property __Facing__ <br> _Get: Gets the direction this block is facing_ | [`BlockFace`](../block/BlockFace.md)
+ writeonly property __FacingDirection__ <br> _Set: Sets the direction that this block is facing in_ | `void`
 
 
 
@@ -31,7 +32,7 @@ _Get: Gets the face that this block is attached on_
 
 Get | Description
 --- | --- 
-[`BlockFace`](..\block\BlockFace.md) | BlockFace attached to
+[`BlockFace`](../block/BlockFace.md) | BlockFace attached to
 
 
 
@@ -41,12 +42,25 @@ Get | Description
 
 ##### <a id='facing'></a>public  readonly property __Facing__
 
-_Get: Sets the direction that this block is facing in_
+_Get: Gets the direction this block is facing_
 
 Get | Description
 --- | --- 
-[`BlockFace`](..\block\BlockFace.md) | the direction this block is facing
+[`BlockFace`](../block/BlockFace.md) | the direction this block is facing
 
+
+
+##### <a id='facingdirection'></a>public  writeonly property __FacingDirection__
+
+_Set: Sets the direction that this block is facing in_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+face | [`BlockFace`](../block/BlockFace.md) | The facing direction
 
 
 ---

@@ -369,27 +369,33 @@ JUNGLEDOOR: "jungle_door"<br> _JUNGLEDOOR VanillaBlock_ | VanillaBlock
 ACACIADOOR: "acacia_door"<br> _ACACIADOOR VanillaBlock_ | VanillaBlock
 DARKOAKDOOR: "dark_oak_door"<br> _DARKOAKDOOR VanillaBlock_ | VanillaBlock
 NULL: "NULL"<br> _All NON-VANILLA blocks safety translation_ | VanillaBlock
-static function __enumerate__(type) <br> _All NON-VANILLA blocks safety translation_ | [`VanillaBlock`](VanillaBlock.md)
+ readonly property __Type__ <br> _Get: Gets the matching [`BlockType`](BlockType.md) for the `VanillaBlock`_ | [`BlockType`](BlockType.md)
+static function __enumerate__(type) <br> _Converts a [`BlockType`](BlockType.md) to a `VanillaBlocks`_ | [`VanillaBlock`](VanillaBlock.md)
 
 
 
 ---
 
 
+### Public Properties for [`VanillaBlock`](VanillaBlock.md)
+
+##### <a id='type'></a>public  readonly property __Type__
+
+_Get: Gets the matching [`BlockType`](BlockType.md) for the `VanillaBlock`_
+
+Get | Description
+--- | --- 
+[`BlockType`](BlockType.md) | matching `VanillaBlock` or `null` if not match is found
+
+
+
+---
+
 ### Public Methods for [`VanillaBlock`](VanillaBlock.md)
 
 ##### <a id='enumerate'></a>public static function __enumerate__(type)
 
-_All NON-VANILLA blocks safety translation /
-    NULL("NULL");
-
-    private final String mapping;
-
-    VanillaBlock(String mapping) {
-        this.mapping = "minecraft:".concat(mapping);
-    }
-
-    /** Gets the matching [`BlockType`](BlockType.md) for the `VanillaBlock`_
+_Converts a [`BlockType`](BlockType.md) to a `VanillaBlocks`_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -397,15 +403,7 @@ type | [`BlockType`](BlockType.md) | the [`BlockType`](BlockType.md) to convert
 
 Returns | Description
 --- | --- 
-[`VanillaBlock`](VanillaBlock.md) | matching `VanillaBlock` or `null` if not match is found /
-    public BlockType getType() {
-        if (this.equals(NULL)) {
-            return null;
-        }
-        return mappings.inverse().get(this);
-    }
-
-    /** Converts a [`BlockType`](BlockType.md) to a `VanillaBlocks`
+[`VanillaBlock`](VanillaBlock.md) | the matching `VanillaBlock`
 
 
 ---

@@ -1,7 +1,7 @@
 ## WhitelistShow __class__
 
 >io.wolfscript.commandsys.commands.system.whitelist.WhitelistShow
->Implements [`NativeCommand`](..\..\..\NativeCommand.md)
+>Implements [`NativeCommand`](../../../NativeCommand.md)
 
 ---
 
@@ -26,7 +26,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-receiver | [`MessageReceiver`](..\..\..\..\chat\MessageReceiver.md) | receiver argument
+receiver | [`MessageReceiver`](../../../../chat/MessageReceiver.md) | receiver argument
 
 Returns | 
 --- | 

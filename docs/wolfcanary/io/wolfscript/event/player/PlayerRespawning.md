@@ -1,7 +1,7 @@
 ## PlayerRespawning __class__
 
 >io.wolfscript.event.player.PlayerRespawning
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,15 @@ Player pre-respawn hook. This hook is called before the new location and repsawn
 Method | Type   
 --- | :--- 
 new __PlayerRespawning__(player, respawn, bedSpawn) <br> _PlayerRespawning constructor_ | _constructor_
- function __isBedSpawn__() <br> _Gets the `Player`_ | `boolean`
+ readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
+  property __RespawnLocation__ <br> _Get: Gets the respawn [`Location`](../../api/world/position/Location.md)<br>Set: Sets the respawn [`Location`](../../api/world/position/Location.md)_ | [`Location`](../../api/world/position/Location.md)
+ function __isBedSpawn__() <br> _Returns true if the player is supposed to respawn at his bed_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -33,8 +37,35 @@ _PlayerRespawning constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-respawn | `Location` | respawn argument
+respawn | [`Location`](../../api/world/position/Location.md) | respawn argument
 bedSpawn | `boolean` | bedSpawn argument
+
+---
+
+### Public Properties for [`PlayerRespawning`](PlayerRespawning.md)
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player`_
+
+Get | Description
+--- | --- 
+`Player` | `Player`
+
+
+
+##### <a id='respawnlocation'></a>public   property __RespawnLocation__
+
+_Get: Gets the respawn [`Location`](../../api/world/position/Location.md)<br>Set: Sets the respawn [`Location`](../../api/world/position/Location.md)_
+
+Get | Description
+--- | --- 
+[`Location`](../../api/world/position/Location.md) | respawn location
+
+Set | Type | Description  
+--- | --- | --- 
+respawn | [`Location`](../../api/world/position/Location.md) | the respawn location
+
 
 ---
 
@@ -42,16 +73,11 @@ bedSpawn | `boolean` | bedSpawn argument
 
 ##### <a id='isbedspawn'></a>public  function __isBedSpawn__()
 
-_Gets the `Player`_
+_Returns true if the player is supposed to respawn at his bed_
 
 Returns | Description
 --- | --- 
-`boolean` | `Player` /
-    public Player getPlayer() {
-        return player;
-    }
-
-    /** Gets the respawn `Location`
+`boolean` | `true` if bed spawn
 
 
 ##### <a id='tostring'></a>public final function __toString__()
@@ -65,27 +91,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

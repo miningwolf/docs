@@ -11,6 +11,7 @@ class NpcAiListenerMethodConsistancyException
 
 Method | Type   
 --- | :--- 
+new __NpcAiListenerMethodConsistancyException__(message) <br> _{@inheritDoc}_ | _constructor_
 new __NpcAiListenerMethodConsistancyException__(msg, t) <br> _{@inheritDoc}_ | _constructor_
 
 
@@ -19,14 +20,17 @@ new __NpcAiListenerMethodConsistancyException__(msg, t) <br> _{@inheritDoc}_ | _
 
 ### Public Constructors for [`NpcAiListenerMethodConsistancyException`](NpcAiListenerMethodConsistancyException.md)
 
+##### <a id='npcailistenermethodconsistancyexception'></a>new __NpcAiListenerMethodConsistancyException__(message) 
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+message | `String` | message argument
+
 ##### <a id='npcailistenermethodconsistancyexception'></a>new __NpcAiListenerMethodConsistancyException__(msg, t) 
 
-_{@inheritDoc} /
-    public NpcAiListenerMethodConsistancyException(String message) {
-        super(message);
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 

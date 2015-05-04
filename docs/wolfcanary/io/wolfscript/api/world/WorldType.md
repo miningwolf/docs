@@ -10,7 +10,10 @@ Static class of WorldTypes
 
 Method | Type   
 --- | :--- 
-static readonly property __TypeNames__ <br> _Get: Register a new WorldType._ | `String[]`
+static readonly property __TypeNames__ <br> _Get: Gets an array of WorldType names_ | `String[]`
+static function __fromString__(string) <br> _get a worldType from string._ | [`WorldType`](WorldType.md)
+static function __registerWorldType__(name) <br> _Register a new WorldType._ | `boolean`
+ function __toString__() <br> _toString method_ | `String`
 static final var __DEFAULT__ <br> _DEFAULT field_ | [`WorldType`](WorldType.md)
 static final var __SUPERFLAT__ <br> _SUPERFLAT field_ | [`WorldType`](WorldType.md)
 static final var __DEFAULT__ <br> _DEFAULT field_ | [`WorldType`](WorldType.md)
@@ -28,12 +31,51 @@ static final var __DEBUG__ <br> _DEBUG field_ | [`WorldType`](WorldType.md)
 
 ##### <a id='typenames'></a>public static readonly property __TypeNames__
 
-_Get: Register a new WorldType._
+_Get: Gets an array of WorldType names_
 
 Get | Description
 --- | --- 
 `String[]` | WorldType names
 
+
+
+---
+
+### Public Methods for [`WorldType`](WorldType.md)
+
+##### <a id='fromstring'></a>public static function __fromString__(string)
+
+_get a worldType from string. This may return null if the requested WorldType does not exist!_
+
+Argument | Type | Description  
+--- | --- | --- 
+string | `String` | string argument
+
+Returns | 
+--- | 
+[`WorldType`](WorldType.md) |
+
+
+##### <a id='registerworldtype'></a>public static function __registerWorldType__(name)
+
+_Register a new WorldType._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='tostring'></a>public  function __toString__()
+
+_toString method_
+
+Returns | 
+--- | 
+`String` |
 
 
 ---

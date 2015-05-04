@@ -2,7 +2,7 @@
 
 >io.wolfscript.event.player.PlayerChatEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -14,18 +14,25 @@ Method | Type
 --- | :--- 
 new __PlayerChatEvent__(Player, String) <br> _PlayerChatEvent constructor_ | _constructor_
 new __PlayerChatEvent__(Player, String, String, Set) <br> _PlayerChatEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Recipients__ <br> _Get: Gets the message that the player is attempting to send_ | `Set<Player>`
+  property __Format__ <br> _Get: Gets the format to use to display this chat message<br>Set: Sets the format to use to display this chat message_ | `String`
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+  property __Message__ <br> _Get: Gets the message that the player is attempting to send<br>Set: Sets the message that the player will send_ | `String`
+ readonly property __Recipients__ <br> _Get: Gets a set of recipients that this chat message will be displayed to_ | `Set<Player>`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
+ writeonly property __Player__ <br> _Set: Sets the player that this message will display as, or command will be_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
 __Inherited items from [`PlayerEvent`](PlayerEvent.md)__ |
 new __PlayerEvent__(Player) <br> _PlayerEvent constructor_ | _constructor_
 final readonly property __Player__ <br> _Get: Returns the player involved in this event_ | `Player`
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -61,13 +68,26 @@ Set | `final` | Set argument
 
 ### Public Properties for [`PlayerChatEvent`](PlayerChatEvent.md)
 
+##### <a id='format'></a>public   property __Format__
+
+_Get: Gets the format to use to display this chat message<br>Set: Sets the format to use to display this chat message_
+
+Get | Description
+--- | --- 
+`String` | String.Format compatible format string
+
+Set | Type | Description  
+--- | --- | --- 
+String | `final` | String argument
+
+
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
 _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -77,22 +97,30 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
+
+
+##### <a id='message'></a>public   property __Message__
+
+_Get: Gets the message that the player is attempting to send<br>Set: Sets the message that the player will send_
+
+Get | Description
+--- | --- 
+`String` | Message the player is attempting to send
+
+Set | Type | Description  
+--- | --- | --- 
+message | `String` | New message that the player will send
 
 
 ##### <a id='recipients'></a>public  readonly property __Recipients__
 
-_Get: Gets the message that the player is attempting to send_
+_Get: Gets a set of recipients that this chat message will be displayed to_
 
 Get | Description
 --- | --- 
-`Set<Player>` | Message the player is attempting to send /
-    public String getMessage() {
-        return message;
-    }
-
-    /** Sets the message that the player will send
+`Set<Player>` | All Players who will see this chat message
 
 
 
@@ -107,6 +135,19 @@ Get |
 Set | Type | Description  
 --- | --- | --- 
 cancel | `boolean` | cancel argument
+
+
+##### <a id='player'></a>public  writeonly property __Player__
+
+_Set: Sets the player that this message will display as, or command will be executed as_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+Player | `final` | Player argument
 
 
 ---
@@ -148,31 +189,56 @@ Get | Description
 
 
 ---
+### Public Constructors for [`Event`](../Event.md)
 
-### Public Methods for [`Event`](..\Event.md)
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
+
+
+
+---
+
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

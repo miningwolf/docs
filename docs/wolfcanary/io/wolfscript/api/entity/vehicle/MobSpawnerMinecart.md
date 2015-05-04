@@ -16,7 +16,7 @@ __Inherited items from [`Minecart`](Minecart.md)__ |
  |
 __Inherited items from [`Vehicle`](Vehicle.md)__ |
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

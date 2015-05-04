@@ -11,7 +11,7 @@ Represents a Slime.
 
 Method | Type   
 --- | :--- 
- writeonly property __Size__ <br> _Size property_ | `void`
+  property __Size__ <br> _Size property_ | `int`
 
 
 
@@ -20,16 +20,13 @@ Method | Type
 
 ### Public Properties for [`Slime`](Slime.md)
 
-##### <a id='size'></a>public  writeonly property __Size__
+##### <a id='size'></a>public   property __Size__
 
 _Size property_
 
 Get | Description
 --- | --- 
-`void` | The size of the slime /
-    public int getSize();
-
-    /**
+`int` | The size of the slime
 
 Set | Type | Description  
 --- | --- | --- 

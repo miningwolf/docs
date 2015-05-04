@@ -10,44 +10,37 @@ Represents the various difficulty levels that are available.
 
 Item | Type   
 --- | :--- 
-HARD: 3<br> _Players regain health over time, hostile mobs don't spawn, the hunger_ | Difficulty
+PEACEFUL: 0<br> _Players regain health over time, hostile mobs don't spawn, the hunger_ | Difficulty
+EASY: 1<br> _Hostile mobs spawn, enemies deal less damage than on normal difficulty,_ | Difficulty
+NORMAL: 2<br> _Hostile mobs spawn, enemies deal normal amounts of damage, the hunger_ | Difficulty
+HARD: 3<br> _Hostile mobs spawn, enemies deal greater damage than on normal_ | Difficulty
 
 
 
 ---
 
 
+### Public Properties for [`Difficulty`](Difficulty.md)
+
+##### <a id='value'></a>public  readonly property __Value__
+_Deprecated: Magic value_
+
+_Get: Gets the difficulty value associated with this Difficulty._
+
+Get | Description
+--- | --- 
+`int` | An integer value of this difficulty
+
+
+
+---
+
 ### Public Methods for [`Difficulty`](Difficulty.md)
 
 ##### <a id='getbyvalue'></a>public static function __getByValue__(int)
-_Deprecated: Magic value /
-    @Deprecated
-    public int getValue() {
-        return value;
-    }
+_Deprecated: Magic value_
 
-    /** Gets the Difficulty represented by the specified value Magic value_
-
-_Players regain health over time, hostile mobs don't spawn, the hunger bar does not deplete. /
-    PEACEFUL(0),
-
-    /** Hostile mobs spawn, enemies deal less damage than on normal difficulty, the hunger bar does deplete and starving deals up to 5 hearts of damage. (Default value) /
-    EASY(1),
-
-    /** Hostile mobs spawn, enemies deal normal amounts of damage, the hunger bar does deplete and starving deals up to 9.5 hearts of damage. /
-    NORMAL(2),
-
-    /** Hostile mobs spawn, enemies deal greater damage than on normal difficulty, the hunger bar does deplete and starving can kill players. /
-    HARD(3);
-
-    private final int value;
-    private final static Map<Integer, Difficulty> BY_ID = Maps.newHashMap();
-
-    private Difficulty(final int value) {
-        this.value = value;
-    }
-
-    /** Gets the difficulty value associated with this Difficulty._
+_Gets the Difficulty represented by the specified value_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -55,7 +48,7 @@ int | `final` | int argument
 
 Returns | Description
 --- | --- 
-[`Difficulty`](Difficulty.md) | An integer value of this difficulty
+[`Difficulty`](Difficulty.md) | Associative [`Difficulty`](Difficulty.md) with the given value, or null if it doesn't exist
 
 
 ---

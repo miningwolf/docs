@@ -11,49 +11,123 @@ Represents a shaped (ie normal) crafting recipe.
 
 Method | Type   
 --- | :--- 
- readonly property __Result__ <br> _Get: Create a shaped recipe to craft the specified ItemStack. The_ | `ItemStack`
+new __ShapedRecipe__(result) <br> _Create a shaped recipe to craft the specified ItemStack. The_ | _constructor_
+ readonly property __Result__ <br> _Get: Get the result._ | `ItemStack`
+ readonly property __Shape__ <br> _Get: Get a copy of the ingredients map._ | `String[]`
+ function __setIngredient__(key, ingredient) <br> _Sets the material that a character in the recipe shape refers to._ | [`ShapedRecipe`](ShapedRecipe.md)
+ function __setIngredient__(key, ingredient) <br> _Sets the material that a character in the recipe shape refers to._ | [`ShapedRecipe`](ShapedRecipe.md)
+ function __shape__(String) <br> _Set the shape of this recipe to the specified rows. Each character_ | [`ShapedRecipe`](ShapedRecipe.md)
 
 
 
 ---
 
+### Public Constructors for [`ShapedRecipe`](ShapedRecipe.md)
+
+##### <a id='shapedrecipe'></a>new __ShapedRecipe__(result) 
+
+_Create a shaped recipe to craft the specified ItemStack. The constructor merely determines the result and type; to set the actual recipe, you'll need to call the appropriate methods._
+
+Argument | Type | Description  
+--- | --- | --- 
+result | `ItemStack` | The item you want the recipe to create.
+
+---
 
 ### Public Properties for [`ShapedRecipe`](ShapedRecipe.md)
 
 ##### <a id='result'></a>public  readonly property __Result__
 
-_Get: Create a shaped recipe to craft the specified ItemStack. The constructor merely determines the result and type; to set the actual recipe, you'll need to call the appropriate methods._
+_Get: Get the result._
 
 Get | Description
 --- | --- 
-`ItemStack` | The changed recipe, so you can chain calls. /
-    public ShapedRecipe shape(final String... shape) {
-        Validate.notNull(shape, "Must provide a shape");
-        Validate.isTrue(shape.length > 0 && shape.length < 4, "Crafting recipes should be 1, 2, 3 rows, not ", shape.length);
+`ItemStack` | The result stack.
 
-        for (String row : shape) {
-            Validate.notNull(row, "Shape cannot have null rows");
-            Validate.isTrue(row.length() > 0 && row.length() < 4, "Crafting rows should be 1, 2, or 3 characters, not ", row.length());
-        }
-        this.rows = new String[shape.length];
-        for (int i = 0; i < shape.length; i++) {
-            this.rows[i] = shape[i];
-        }
 
-        // Remove character mappings for characters that no longer exist in the shape
-        HashMap<Character, ItemStack> newIngredients = new HashMap<Character, ItemStack>();
-        for (String row : shape) {
-            for (Character c : row.toCharArray()) {
-                newIngredients.put(c, ingredients.get(c));
+
+##### <a id='shape'></a>public  readonly property __Shape__
+
+_Get: Get a copy of the ingredients map._
+
+Get | Description
+--- | --- 
+`String[]` | The mapping of character to ingredients. /
+    public Map<Character, ItemStack> getIngredientMap() {
+        HashMap<Character, ItemStack> result = new HashMap<Character, ItemStack>();
+        for (Map.Entry<Character, ItemStack> ingredient : ingredients.entrySet()) {
+            if (ingredient.getValue() == null) {
+                result.put(ingredient.getKey(), null);
+            } else {
+                result.put(ingredient.getKey(), ingredient.getValue().clone());
             }
         }
-        this.ingredients = newIngredients;
-
-        return this;
+        return result;
     }
 
-    /** Sets the material that a character in the recipe shape refers to.
+    /** Get the shape.
 
+
+
+---
+
+### Public Methods for [`ShapedRecipe`](ShapedRecipe.md)
+
+##### <a id='setingredient'></a>public  function __setIngredient__(key, ingredient)
+
+_Sets the material that a character in the recipe shape refers to._
+
+Argument | Type | Description  
+--- | --- | --- 
+key | `char` | The character that represents the ingredient in the shape.
+ingredient | [`MaterialData`](../material/MaterialData.md) | The ingredient.
+
+Returns | Description
+--- | --- 
+[`ShapedRecipe`](ShapedRecipe.md) | The changed recipe, so you can chain calls.
+
+
+##### <a id='setingredient'></a>public  function __setIngredient__(key, ingredient)
+
+_Sets the material that a character in the recipe shape refers to._
+
+Argument | Type | Description  
+--- | --- | --- 
+key | `char` | The character that represents the ingredient in the shape.
+ingredient | [`Material`](../Material.md) | The ingredient.
+
+Returns | Description
+--- | --- 
+[`ShapedRecipe`](ShapedRecipe.md) | The changed recipe, so you can chain calls.
+
+
+##### <a id='setingredient'></a>public  function __setIngredient__(key, ingredient, raw)
+_Deprecated: Magic value_
+
+_Sets the material that a character in the recipe shape refers to._
+
+Argument | Type | Description  
+--- | --- | --- 
+key | `char` | The character that represents the ingredient in the shape.
+ingredient | [`Material`](../Material.md) | The ingredient.
+raw | `int` | The raw material data as an integer.
+
+Returns | Description
+--- | --- 
+[`ShapedRecipe`](ShapedRecipe.md) | The changed recipe, so you can chain calls.
+
+
+##### <a id='shape'></a>public  function __shape__(String)
+
+_Set the shape of this recipe to the specified rows. Each character represents a different ingredient; exactly what each character represents is set separately. The first row supplied corresponds with the upper most part of the recipe on the workbench e.g. if all three rows are supplies the first string represents the top row on the workbench._
+
+Argument | Type | Description  
+--- | --- | --- 
+String | `final` | String argument
+
+Returns | Description
+--- | --- 
+[`ShapedRecipe`](ShapedRecipe.md) | The changed recipe, so you can chain calls.
 
 
 ---

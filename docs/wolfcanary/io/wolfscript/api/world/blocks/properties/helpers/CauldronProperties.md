@@ -1,7 +1,7 @@
 ## CauldronProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.CauldronProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Cauldron properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyLevel__(block, value) <br> _Cauldron [water] level property, Values: 0 - 3_ | [`Block`](..\..\Block.md)
-static final var __level__ <br> _Cauldron [water] level property, Values: 0 - 3_ | [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+static function __applyLevel__(block, value) <br> _Cauldron [water] level property, Values: 0 - 3_ | [`Block`](../../Block.md)
+static final var __level__ <br> _Cauldron [water] level property, Values: 0 - 3_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Cauldron [water] level property, Values: 0 - 3 /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `int` | the `int` value to apply (0 - 3)
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Cauldron [water] level property, Values: 0 - 3_
 
 >Returns
->  [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+>  [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 
 ---
+
+
 ---
 
 

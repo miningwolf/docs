@@ -10,7 +10,11 @@ The Plugin Priority or "Execution order"
 
 Item | Type   
 --- | :--- 
-CRITICAL: 900<br> _For Plugins that monitor actions but do not interfere_ | Priority
+PASSIVE: 100<br> _For Plugins that monitor actions but do not interfere_ | Priority
+LOW: 300<br> _Low level stuff like process player walking etc._ | Priority
+NORMAL: 500<br> _Preferred Priority. This is the usual thing for blocking/altering actions_ | Priority
+HIGH: 700<br> _Executed after critical._ | Priority
+CRITICAL: 900<br> _Extremely critical. Will be executed as the very first Plugin._ | Priority
  readonly property __PriorityValue__ <br> _PriorityValue property_ | `int`
 
 

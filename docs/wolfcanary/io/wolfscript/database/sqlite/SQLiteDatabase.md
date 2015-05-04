@@ -1,7 +1,7 @@
 ## SQLiteDatabase __class__
 
 >io.wolfscript.database.sqlite.SQLiteDatabase
->Extends `Database`
+>Extends [`Database`](../Database.md)
 
 ---
 
@@ -12,7 +12,13 @@ SQLite Database
 Method | Type   
 --- | :--- 
 static readonly property __Instance__ <br> _Instance property_ | [`SQLiteDatabase`](SQLiteDatabase.md)
- readonly property __String__ <br> _Get: Close a set of working data._ | `String`
+ readonly property __String__ <br> _Get: Get the database entry for a Java List._ | `String`
+ |
+__Inherited items from [`Database`](../Database.md)__ |
+static readonly property ____ <br> _ property_ | [`Database`](../Database.md)
+static function __getDatabaseFromType__(name) <br> _getDatabaseFromType method_ | [`Database`](../Database.md)
+
+
 
 
 
@@ -33,7 +39,7 @@ Get |
 
 ##### <a id='string'></a>public  readonly property __String__
 
-_Get: Close a set of working data. This will return all the data to the connection pool. You can pass null for objects that are not relevant in your given context_
+_Get: Get the database entry for a Java List._
 
 Get | Description
 --- | --- 
@@ -42,6 +48,39 @@ Get | Description
 
 
 ---
+
+### Public Properties for [`Database`](../Database.md)
+
+##### <a id=''></a>public static readonly property ____
+
+_ property_
+
+Get | 
+--- | 
+[`Database`](../Database.md) |
+
+
+
+---
+
+### Public Methods for [`Database`](../Database.md)
+
+##### <a id='getdatabasefromtype'></a>public static function __getDatabaseFromType__(name)
+
+_getDatabaseFromType method_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+[`Database`](../Database.md) |
+
+
+---
+
+
 ---
 
 

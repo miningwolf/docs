@@ -64,6 +64,7 @@ Rabbit.class: <br> _Rabbit.class CreatureType_ | CreatureType
 Villager.class: <br> _Villager.class CreatureType_ | CreatureType
  readonly property __Name__ <br> _Name property_ | `String`
 static function __fromEntityType__(creatureType) <br> _fromEntityType method_ | [`CreatureType`](CreatureType.md)
+static function __fromName__(name) <br> _fromName method_ | [`CreatureType`](CreatureType.md)
  function __toEntityType__() <br> _toEntityType method_ | [`EntityType`](EntityType.md)
 
 
@@ -80,6 +81,17 @@ _Name property_
 Get | 
 --- | 
 `String` |
+
+
+
+##### <a id='typeid'></a>public  readonly property __TypeId__
+_Deprecated: Magic value_
+
+_TypeId property_
+
+Get | Description
+--- | --- 
+`short` | the raw type id
 
 
 
@@ -101,17 +113,7 @@ Returns |
 
 
 ##### <a id='fromid'></a>public static function __fromId__(id)
-_Deprecated: Magic value /
-    @Deprecated
-    public short getTypeId() {
-        return typeId;
-    }
-
-    public static CreatureType fromName(String name) {
-        return NAME_MAP.get(name);
-    }
-
-    /** Magic value_
+_Deprecated: Magic value_
 
 _fromId method_
 
@@ -121,7 +123,20 @@ id | `int` | the raw type id
 
 Returns | Description
 --- | --- 
-[`CreatureType`](CreatureType.md) | the raw type id
+[`CreatureType`](CreatureType.md) | the matching CreatureType or null
+
+
+##### <a id='fromname'></a>public static function __fromName__(name)
+
+_fromName method_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+[`CreatureType`](CreatureType.md) |
 
 
 ##### <a id='toentitytype'></a>public  function __toEntityType__()

@@ -1,7 +1,7 @@
 ## DoubleChest __class__
 
 >io.wolfscript.block.DoubleChest
->Implements [`InventoryHolder`](..\inventory\InventoryHolder.md)
+>Implements [`InventoryHolder`](../inventory/InventoryHolder.md)
 
 ---
 
@@ -12,10 +12,10 @@ Represents a double chest.
 Method | Type   
 --- | :--- 
 new __DoubleChest__(chest) <br> _DoubleChest constructor_ | _constructor_
- readonly property __Inventory__ <br> _Inventory property_ | [`Inventory`](..\inventory\Inventory.md)
- readonly property __LeftSide__ <br> _LeftSide property_ | [`InventoryHolder`](..\inventory\InventoryHolder.md)
+ readonly property __Inventory__ <br> _Inventory property_ | [`Inventory`](../inventory/Inventory.md)
+ readonly property __LeftSide__ <br> _LeftSide property_ | [`InventoryHolder`](../inventory/InventoryHolder.md)
  readonly property __Location__ <br> _Location property_ | `Location`
- readonly property __RightSide__ <br> _RightSide property_ | [`InventoryHolder`](..\inventory\InventoryHolder.md)
+ readonly property __RightSide__ <br> _RightSide property_ | [`InventoryHolder`](../inventory/InventoryHolder.md)
  readonly property __World__ <br> _World property_ | `World`
  readonly property __X__ <br> _X property_ | `double`
  readonly property __Y__ <br> _Y property_ | `double`
@@ -33,7 +33,7 @@ _DoubleChest constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-chest | [`DoubleChestInventory`](..\inventory\DoubleChestInventory.md) | chest argument
+chest | [`DoubleChestInventory`](../inventory/DoubleChestInventory.md) | chest argument
 
 ---
 
@@ -45,7 +45,7 @@ _Inventory property_
 
 Get | 
 --- | 
-[`Inventory`](..\inventory\Inventory.md) |
+[`Inventory`](../inventory/Inventory.md) |
 
 
 
@@ -55,7 +55,7 @@ _LeftSide property_
 
 Get | 
 --- | 
-[`InventoryHolder`](..\inventory\InventoryHolder.md) |
+[`InventoryHolder`](../inventory/InventoryHolder.md) |
 
 
 
@@ -75,7 +75,7 @@ _RightSide property_
 
 Get | 
 --- | 
-[`InventoryHolder`](..\inventory\InventoryHolder.md) |
+[`InventoryHolder`](../inventory/InventoryHolder.md) |
 
 
 

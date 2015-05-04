@@ -96,7 +96,14 @@ ID: <br> _ID EntityType_ | EntityType
 54: <br> _54 EntityType_ | EntityType
 100: <br> _100 EntityType_ | EntityType
  readonly property __EntityID__ <br> _EntityID property_ | `short`
- function __isOf__(type) <br> _Checks if the EntityType is that of a Throwable_ | `boolean`
+ function __isAnimal__() <br> _Checks if the EntityType is that of an Animal_ | `boolean`
+ function __isEffect__() <br> _Checks if the EntityType is that of a Effect (ie: LightningBolt)_ | `boolean`
+ function __isHanging__() <br> _Checks if the EntityType is that of a HangingEntity_ | `boolean`
+ function __isLiving__() <br> _Checks if the EntityType is that of a EntityLiving_ | `boolean`
+ function __isMob__() <br> _Checks if the EntityType is that of a Mob_ | `boolean`
+ function __isOf__(type) <br> _Checks if the EntityType is of a given type_ | `boolean`
+ function __isThrowable__() <br> _Checks if the EntityType is that of a Throwable_ | `boolean`
+ function __isVehicle__() <br> _Checks if the EntityType is that of a Vehicle_ | `boolean`
 
 
 
@@ -119,9 +126,54 @@ Get |
 
 ### Public Methods for [`EntityType`](EntityType.md)
 
+##### <a id='isanimal'></a>public  function __isAnimal__()
+
+_Checks if the EntityType is that of an Animal_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if animal; `false` if not
+
+
+##### <a id='iseffect'></a>public  function __isEffect__()
+
+_Checks if the EntityType is that of a Effect (ie: LightningBolt)_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if effect; `false` if not
+
+
+##### <a id='ishanging'></a>public  function __isHanging__()
+
+_Checks if the EntityType is that of a HangingEntity_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if hanging; `false` if not
+
+
+##### <a id='isliving'></a>public  function __isLiving__()
+
+_Checks if the EntityType is that of a EntityLiving_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if living; `false` if not
+
+
+##### <a id='ismob'></a>public  function __isMob__()
+
+_Checks if the EntityType is that of a Mob_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if mob; `false` if not
+
+
 ##### <a id='isof'></a>public  function __isOf__(type)
 
-_Checks if the EntityType is that of a Throwable_
+_Checks if the EntityType is of a given type_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -129,12 +181,25 @@ type | [`EntityType`](EntityType.md) | the type to check for
 
 Returns | Description
 --- | --- 
-`boolean` | `true` if throwable; `false` if not /
-    public boolean isThrowable() {
-        return this == GENERIC_THROWABLE || this.isOf(GENERIC_THROWABLE);
-    }
+`boolean` | `true` if equal to or a subtype of; `false` if no relation
 
-    /** Checks if the EntityType is that of a Vehicle
+
+##### <a id='isthrowable'></a>public  function __isThrowable__()
+
+_Checks if the EntityType is that of a Throwable_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if throwable; `false` if not
+
+
+##### <a id='isvehicle'></a>public  function __isVehicle__()
+
+_Checks if the EntityType is that of a Vehicle_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if vehicle; `false` if not
 
 
 ---

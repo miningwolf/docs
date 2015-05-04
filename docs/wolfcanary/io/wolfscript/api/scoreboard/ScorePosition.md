@@ -10,19 +10,22 @@ Convenience enum for handle minecraft id protocol values for scoreboard position
 
 Item | Type   
 --- | :--- 
-BELOW_NAME: 2<br> _Shows next to the players name in the player list when pressing the TAB key._ | ScorePosition
-static function __fromId__(id) <br> _Shows next to the players name in the player list when pressing the TAB key._ | [`ScorePosition`](ScorePosition.md)
+PLAYER_LIST: 0<br> _Shows next to the players name in the player list when pressing the TAB key._ | ScorePosition
+SIDEBAR: 1<br> _shows in a sidebar that pops up on the side of the players screen._ | ScorePosition
+BELOW_NAME: 2<br> _Shows below the name above a players head._ | ScorePosition
+ readonly property __Id__ <br> _Get: Shows next to the players name in the player list when pressing the TAB key._ | `int`
+static function __fromId__(id) <br> _Gets a [`ScorePosition`](ScorePosition.md) for the given id value._ | [`ScorePosition`](ScorePosition.md)
 
 
 
 ---
 
 
-### Public Methods for [`ScorePosition`](ScorePosition.md)
+### Public Properties for [`ScorePosition`](ScorePosition.md)
 
-##### <a id='fromid'></a>public static function __fromId__(id)
+##### <a id='id'></a>public  readonly property __Id__
 
-_Shows next to the players name in the player list when pressing the TAB key. /
+_Get: Shows next to the players name in the player list when pressing the TAB key. /
     PLAYER_LIST(0),
     /** shows in a sidebar that pops up on the side of the players screen. /
     SIDEBAR(1),
@@ -38,18 +41,27 @@ _Shows next to the players name in the player list when pressing the TAB key. /
 
     /** Get the id for this Position._
 
+Get | Description
+--- | --- 
+`int` | id value
+
+
+
+---
+
+### Public Methods for [`ScorePosition`](ScorePosition.md)
+
+##### <a id='fromid'></a>public static function __fromId__(id)
+
+_Gets a [`ScorePosition`](ScorePosition.md) for the given id value._
+
 Argument | Type | Description  
 --- | --- | --- 
 id | `int` | id value to get the [`ScorePosition`](ScorePosition.md) for.
 
 Returns | Description
 --- | --- 
-[`ScorePosition`](ScorePosition.md) | id value /
-    public int getId() {
-        return this.id;
-    }
-
-    /** Gets a [`ScorePosition`](ScorePosition.md) for the given id value.
+[`ScorePosition`](ScorePosition.md) | the [`ScorePosition`](ScorePosition.md) or null if it doesn't exist.
 
 
 ---

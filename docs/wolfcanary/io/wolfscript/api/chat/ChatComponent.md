@@ -11,7 +11,7 @@ Wrapper interface for IChatComponent
 
 Method | Type   
 --- | :--- 
- function __clone__() <br> _Sets the [`ChatStyle`](ChatStyle.md) of this `ChatComponent`_ | [`ChatComponent`](ChatComponent.md)
+ function __clone__() <br> _Clones this `ChatComponent`_ | [`ChatComponent`](ChatComponent.md)
 
 
 
@@ -22,14 +22,11 @@ Method | Type
 
 ##### <a id='clone'></a>public  function __clone__()
 
-_Sets the [`ChatStyle`](ChatStyle.md) of this `ChatComponent`_
+_Clones this `ChatComponent`_
 
 Returns | Description
 --- | --- 
-[`ChatComponent`](ChatComponent.md) | `this` with the {@linke ChatStyle} applied /
-    ChatComponent setChatStyle(ChatStyle style);
-
-    /** Gets the [`ChatStyle`](ChatStyle.md) of this `ChatComponent`
+[`ChatComponent`](ChatComponent.md) | clone of `this`
 
 
 ---

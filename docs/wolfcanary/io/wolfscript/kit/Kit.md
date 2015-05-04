@@ -10,7 +10,12 @@ Contains information about a kit
 
 Method | Type   
 --- | :--- 
- writeonly property __Id__ <br> _Set: Time between uses as unix timestamp applicable number_ | `void`
+  property __Id__ <br> _Get: get the ID of this kit<br>Set: Only set this if you're 110% sure what you're doing._ | `int`
+ readonly property __ItemsAsStringList__ <br> _Get: Mostly used for adding the items into the database_ | `List<String>`
+  property __Name__ <br> _Name property_ | `String`
+ function __canBeGiven__(player) <br> _Time between uses as unix timestamp applicable number_ | `boolean`
+ function __giveKit__(player, override) <br> _Give this kit to player, if possible_ | `boolean`
+ function __setContentFromStrings__() <br> _Used to create a new item list from data coming from the database_ | `void`
 
 
 
@@ -19,9 +24,49 @@ Method | Type
 
 ### Public Properties for [`Kit`](Kit.md)
 
-##### <a id='id'></a>public  writeonly property __Id__
+##### <a id='id'></a>public   property __Id__
 
-_Set: Time between uses as unix timestamp applicable number /
+_Get: get the ID of this kit<br>Set: Only set this if you're 110% sure what you're doing. Changing the ID will not always have an effect. If you want to copy a kit and create a new one, change this kit to your likings, then add it as new to the BackboneKits. A new ID will be auto-assigned then._
+
+Get | 
+--- | 
+`int` |
+
+Set | Type | Description  
+--- | --- | --- 
+id | `int` | id argument
+
+
+##### <a id='itemsasstringlist'></a>public  readonly property __ItemsAsStringList__
+
+_Get: Mostly used for adding the items into the database_
+
+Get | 
+--- | 
+`List<String>` |
+
+
+
+##### <a id='name'></a>public   property __Name__
+
+_Name property_
+
+Get | 
+--- | 
+`String` |
+
+Set | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+
+---
+
+### Public Methods for [`Kit`](Kit.md)
+
+##### <a id='canbegiven'></a>public  function __canBeGiven__(player)
+
+_Time between uses as unix timestamp applicable number /
     private int delay;
 
     /** Owner if applicable /
@@ -72,37 +117,36 @@ _Set: Time between uses as unix timestamp applicable number /
 
     /** Tests if a given `Player` can receive this kit_
 
-Get | Description
---- | --- 
-`void` | `true` if can be given; `false` if not /
-    public boolean canBeGiven(Player player) {
-        if (owners != null && owners.length > 0) {
-            for (String owner : owners) {
-                if (owner.equals(player.getName())) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        if (groups != null && groups.length > 0) {
-            for (String g : groups) {
-                if (player.getGroup().hasControlOver(Wolf.usersAndGroups().getGroup(g))) {
-                    return true;
-                }
-                else if (player.isInGroup(g, false)) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        return true;
-    }
-
-    /** Give this kit to player, if possible
-
-Set | Type | Description  
+Argument | Type | Description  
 --- | --- | --- 
-id | `int` | id argument
+player | `Player` | the `Player` to check
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if can be given; `false` if not
+
+
+##### <a id='givekit'></a>public  function __giveKit__(player, override)
+
+_Give this kit to player, if possible_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` to give a kit too
+override | `boolean` | set to true to override delay, group, and owner checks
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if successful; `false` if not
+
+
+##### <a id='setcontentfromstrings'></a>public  function __setContentFromStrings__()
+
+_Used to create a new item list from data coming from the database_
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

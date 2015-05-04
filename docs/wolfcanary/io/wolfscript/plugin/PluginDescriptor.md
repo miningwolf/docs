@@ -10,17 +10,17 @@ Describes information about a plugin, including meta information and start/stop/
 
 Method | Type   
 --- | :--- 
+ readonly property __PluginLifecycle__ <br> _PluginLifecycle property_ | [`PluginLifecycle`](PluginLifecycle.md)
  readonly property __WolfInf__ <br> _WolfInf property_ | `PropertiesFile`
  readonly property __Author__ <br> _Author property_ | `String`
  readonly property __Version__ <br> _Version property_ | `String`
  readonly property __Path__ <br> _Path property_ | `String`
  readonly property __Language__ <br> _Language property_ | `String`
  readonly property __Name__ <br> _Name property_ | `String`
- readonly property __PluginLifecycle__ <br> _PluginLifecycle property_ | [`PluginLifecycle`](PluginLifecycle.md)
- readonly property __Plugin__ <br> _Plugin property_ | `Plugin`
+  property __Plugin__ <br> _Plugin property<br>Set: DO NOT CALL THIS METHOD. It is for internal use only._ | `Plugin`
   property __Priority__ <br> _Priority property_ | `int`
+  property __CurrentState__ <br> _CurrentState property<br>Set: DO NOT CALL THIS METHOD. It is for internal use only._ | [`PluginState`](PluginState.md)
  readonly property __Dependencies__ <br> _Dependencies property_ | `String[]`
- writeonly property __CurrentState__ <br> _Set: DO NOT CALL THIS METHOD. It is for internal use only._ | `void`
  function __enableEarly__() <br> _enableEarly method_ | `boolean`
 
 
@@ -29,6 +29,16 @@ Method | Type
 
 
 ### Public Properties for [`PluginDescriptor`](PluginDescriptor.md)
+
+##### <a id='pluginlifecycle'></a>public  readonly property __PluginLifecycle__
+
+_PluginLifecycle property_
+
+Get | 
+--- | 
+[`PluginLifecycle`](PluginLifecycle.md) |
+
+
 
 ##### <a id='wolfinf'></a>public  readonly property __WolfInf__
 
@@ -90,24 +100,17 @@ Get |
 
 
 
-##### <a id='pluginlifecycle'></a>public  readonly property __PluginLifecycle__
+##### <a id='plugin'></a>public   property __Plugin__
 
-_PluginLifecycle property_
-
-Get | 
---- | 
-[`PluginLifecycle`](PluginLifecycle.md) |
-
-
-
-##### <a id='plugin'></a>public  readonly property __Plugin__
-
-_Plugin property_
+_Plugin property<br>Set: DO NOT CALL THIS METHOD. It is for internal use only._
 
 Get | 
 --- | 
 `Plugin` |
 
+Set | Type | Description  
+--- | --- | --- 
+plugin | `Plugin` | Current plugin object
 
 
 ##### <a id='priority'></a>public   property __Priority__
@@ -123,6 +126,19 @@ Set | Type | Description
 priority | `int` | priority argument
 
 
+##### <a id='currentstate'></a>public   property __CurrentState__
+
+_CurrentState property<br>Set: DO NOT CALL THIS METHOD. It is for internal use only._
+
+Get | 
+--- | 
+[`PluginState`](PluginState.md) |
+
+Set | Type | Description  
+--- | --- | --- 
+state | [`PluginState`](PluginState.md) | New plugin state
+
+
 ##### <a id='dependencies'></a>public  readonly property __Dependencies__
 
 _Dependencies property_
@@ -131,19 +147,6 @@ Get |
 --- | 
 `String[]` |
 
-
-
-##### <a id='currentstate'></a>public  writeonly property __CurrentState__
-
-_Set: DO NOT CALL THIS METHOD. It is for internal use only._
-
-Get | 
---- | 
-`void` |
-
-Set | Type | Description  
---- | --- | --- 
-state | [`PluginState`](PluginState.md) | New plugin state
 
 
 ---

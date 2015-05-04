@@ -19,18 +19,27 @@ SMOOTH: 0x2<br> _SMOOTH SandstoneType_ | SandstoneType
 ---
 
 
+### Public Properties for [`SandstoneType`](SandstoneType.md)
+
+##### <a id='data'></a>public  readonly property __Data__
+_Deprecated: Magic value_
+
+_Get: Gets the associated data value representing this type of sandstone_
+
+Get | Description
+--- | --- 
+`byte` | A byte containing the data value of this sandstone type
+
+
+
+---
+
 ### Public Methods for [`SandstoneType`](SandstoneType.md)
 
 ##### <a id='getbydata'></a>public static function __getByData__(byte)
-_Deprecated: Magic value /
-    @Deprecated
-    public byte getData() {
-        return data;
-    }
+_Deprecated: Magic value_
 
-    /** Gets the type of sandstone with the given data value Magic value_
-
-_Gets the associated data value representing this type of sandstone_
+_Gets the type of sandstone with the given data value_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -38,7 +47,7 @@ byte | `final` | byte argument
 
 Returns | Description
 --- | --- 
-[`SandstoneType`](SandstoneType.md) | A byte containing the data value of this sandstone type
+[`SandstoneType`](SandstoneType.md) | The [`SandstoneType`](SandstoneType.md) representing the given value, or null if it doesn't exist
 
 
 ---

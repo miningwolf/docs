@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-A MetadataConversionException is thrown any time a `LazyMetadataValue` attempts to convert a metadata value to an inappropriate data type.
+A MetadataConversionException is thrown any time a [`LazyMetadataValue`](LazyMetadataValue.md) attempts to convert a metadata value to an inappropriate data type.
 
 Method | Type   
 --- | :--- 

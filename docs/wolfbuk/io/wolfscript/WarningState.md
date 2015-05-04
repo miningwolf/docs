@@ -15,8 +15,11 @@ public @interface Warning {
 
 Item | Type   
 --- | :--- 
-DEFAULT: <br> _Indicates all warnings should be printed for deprecated items._ | WarningState
-static function __value__(String) <br> _Indicates all warnings should be printed for deprecated items._ | [`WarningState`](WarningState.md)
+ON: <br> _Indicates all warnings should be printed for deprecated items._ | WarningState
+OFF: <br> _Indicates no warnings should be printed for deprecated items._ | WarningState
+DEFAULT: <br> _Indicates each warning would default to the configured {@link_ | WarningState
+ function __printFor__(warning) <br> _Indicates all warnings should be printed for deprecated items._ | `boolean`
+static function __value__(String) <br> _This method returns the corresponding warning state for the given_ | [`WarningState`](WarningState.md)
 
 
 
@@ -25,7 +28,7 @@ static function __value__(String) <br> _Indicates all warnings should be printed
 
 ### Public Methods for [`WarningState`](WarningState.md)
 
-##### <a id='value'></a>public static function __value__(String)
+##### <a id='printfor'></a>public  function __printFor__(warning)
 
 _Indicates all warnings should be printed for deprecated items. /
         ON,
@@ -54,19 +57,24 @@ _Indicates all warnings should be printed for deprecated items. /
 
 Argument | Type | Description  
 --- | --- | --- 
+warning | `Warning` | The warning annotation added to a deprecated item
+
+Returns | Description
+--- | --- 
+`boolean` | <ul> <li>ON is always True <li>OFF is always false <li>DEFAULT is false if and only if annotation is not null and specifies false for `Warning#value()`, true otherwise. </ul>
+
+
+##### <a id='value'></a>public static function __value__(String)
+
+_This method returns the corresponding warning state for the given string value._
+
+Argument | Type | Description  
+--- | --- | --- 
 String | `final` | String argument
 
 Returns | Description
 --- | --- 
-[`WarningState`](WarningState.md) | <ul> <li>ON is always True <li>OFF is always false <li>DEFAULT is false if and only if annotation is not null and specifies false for `Warning#value()`, true otherwise. </ul> /
-        public boolean printFor(Warning warning) {
-            if (this == DEFAULT) {
-                return warning == null || warning.value();
-            }
-            return this == ON;
-        }
-
-        /** This method returns the corresponding warning state for the given string value.
+[`WarningState`](WarningState.md) | `#DEFAULT` if not found, or the respective WarningState
 
 
 ---

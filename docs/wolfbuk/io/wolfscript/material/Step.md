@@ -12,19 +12,28 @@ Represents the different types of steps.
 Method | Type   
 --- | :--- 
 new __Step__() <br> _Step constructor_ | _constructor_
+new __Step__(Material) <br> _Step constructor_ | _constructor_
+ readonly property __Textures__ <br> _Textures property_ | `List<Material>`
+ writeonly property __Inverted__ <br> _Set: Set step inverted state_ | `void`
  function __clone__() <br> _clone method_ | [`Step`](Step.md)
+ function __isInverted__() <br> _Test if step is inverted_ | `boolean`
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`TexturedMaterial`](TexturedMaterial.md)__ |
 new __TexturedMaterial__(m) <br> _TexturedMaterial constructor_ | _constructor_
+  property __Material__ <br> _Get: Gets the current Material this block is made of<br>Set: Sets the material this block is made of_ | [`Material`](../Material.md)
+abstract readonly property __Textures__ <br> _Get: Retrieve a list of possible textures. The first element of the list_ | `List<Material>`
  function __clone__() <br> _clone method_ | [`TexturedMaterial`](TexturedMaterial.md)
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`MaterialData`](MaterialData.md)__ |
+new __MaterialData__(Material) <br> _MaterialData constructor_ | _constructor_
+ readonly property __ItemType__ <br> _Get: Gets the Material that this MaterialData represents_ | [`Material`](../Material.md)
  function __clone__() <br> _clone method_ | [`MaterialData`](MaterialData.md)
  function __equals__(obj) <br> _equals method_ | `boolean`
  function __hashCode__() <br> _hashCode method_ | `int`
- function __toItemStack__(amount) <br> _toItemStack method_ | `ItemStack`
+ function __toItemStack__() <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
+ function __toItemStack__(amount) <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
  function __toString__() <br> _toString method_ | `String`
 
 
@@ -42,6 +51,70 @@ __Inherited items from [`MaterialData`](MaterialData.md)__ |
 _Step constructor_
 
 
+##### <a id='step'></a>new __Step__(int) 
+_Deprecated: Magic value_
+
+_Step constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='step'></a>new __Step__(Material) 
+
+_Step constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='step'></a>new __Step__(int, byte) 
+_Deprecated: Magic value_
+
+_Step constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='step'></a>new __Step__(Material, byte) 
+_Deprecated: Magic value_
+
+_Step constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`Step`](Step.md)
+
+##### <a id='textures'></a>public  readonly property __Textures__
+
+_Textures property_
+
+Get | 
+--- | 
+`List<Material>` |
+
+
+
+##### <a id='inverted'></a>public  writeonly property __Inverted__
+
+_Set: Set step inverted state_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+inv | `boolean` | - true if step is inverted (top half), false if step is normal (bottom half)
+
+
 ---
 
 ### Public Methods for [`Step`](Step.md)
@@ -53,6 +126,15 @@ _clone method_
 Returns | 
 --- | 
 [`Step`](Step.md) |
+
+
+##### <a id='isinverted'></a>public  function __isInverted__()
+
+_Test if step is inverted_
+
+Returns | Description
+--- | --- 
+`boolean` | true if inverted (top half), false if normal (bottom half)
 
 
 ##### <a id='tostring'></a>public  function __toString__()
@@ -73,7 +155,63 @@ _TexturedMaterial constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-m | [`Material`](..\Material.md) | m argument
+m | [`Material`](../Material.md) | m argument
+
+##### <a id='texturedmaterial'></a>new __TexturedMaterial__(type) 
+_Deprecated: Magic value_
+
+_TexturedMaterial constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `int` | the raw type id
+
+##### <a id='texturedmaterial'></a>new __TexturedMaterial__(int, byte) 
+_Deprecated: Magic value_
+
+_TexturedMaterial constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='texturedmaterial'></a>new __TexturedMaterial__(Material, byte) 
+_Deprecated: Magic value_
+
+_TexturedMaterial constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`TexturedMaterial`](TexturedMaterial.md)
+
+##### <a id='material'></a>public   property __Material__
+
+_Get: Gets the current Material this block is made of<br>Set: Sets the material this block is made of_
+
+Get | Description
+--- | --- 
+[`Material`](../Material.md) | Material of this block
+
+Set | Type | Description  
+--- | --- | --- 
+material | [`Material`](../Material.md) | New material of this block
+
+
+##### <a id='textures'></a>public abstract readonly property __Textures__
+
+_Get: Retrieve a list of possible textures. The first element of the list will be used as a default._
+
+Get | Description
+--- | --- 
+`List<Material>` | a list of possible textures for this block
+
+
 
 ---
 
@@ -95,6 +233,85 @@ _toString method_
 Returns | 
 --- | 
 `String` |
+
+
+---
+### Public Constructors for [`MaterialData`](MaterialData.md)
+
+##### <a id='materialdata'></a>new __MaterialData__(int) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material) 
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='materialdata'></a>new __MaterialData__(int, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`MaterialData`](MaterialData.md)
+
+##### <a id='data'></a>public   property __Data__
+_Deprecated: Magic value_
+
+_Get: Gets the raw data in this material<br>Set: Sets the raw data of this material_
+
+Get | 
+--- | 
+`byte` |
+
+Set | Type | Description  
+--- | --- | --- 
+data | `byte` | New raw data
+
+
+##### <a id='itemtype'></a>public  readonly property __ItemType__
+
+_Get: Gets the Material that this MaterialData represents_
+
+Get | Description
+--- | --- 
+[`Material`](../Material.md) | Material represented by this MaterialData
+
+
+
+##### <a id='itemtypeid'></a>public  readonly property __ItemTypeId__
+_Deprecated: Magic value_
+
+_Get: Gets the Material Id that this MaterialData represents_
+
+Get | Description
+--- | --- 
+`int` | Material Id represented by this MaterialData
+
 
 
 ---
@@ -132,9 +349,18 @@ Returns |
 `int` |
 
 
+##### <a id='toitemstack'></a>public  function __toItemStack__()
+
+_Creates a new ItemStack based on this MaterialData_
+
+Returns | Description
+--- | --- 
+`ItemStack` | New ItemStack containing a copy of this MaterialData
+
+
 ##### <a id='toitemstack'></a>public  function __toItemStack__(amount)
 
-_toItemStack method_
+_Creates a new ItemStack based on this MaterialData_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -142,7 +368,7 @@ amount | `int` | The stack size of the new stack
 
 Returns | Description
 --- | --- 
-`ItemStack` | Raw data
+`ItemStack` | New ItemStack containing a copy of this MaterialData
 
 
 ##### <a id='tostring'></a>public  function __toString__()

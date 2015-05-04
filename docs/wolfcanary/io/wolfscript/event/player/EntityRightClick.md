@@ -1,7 +1,7 @@
 ## EntityRightClick __class__
 
 >io.wolfscript.event.player.EntityRightClick
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Is called when a player right-clicks an entity, for instance a villager for trad
 
 Method | Type   
 --- | :--- 
- readonly property __Entity__ <br> _Get: Construct a new EntityRightClick_ | [`Entity`](..\..\api\entity\Entity.md)
+new __EntityRightClick__(clicked, player) <br> _Construct a new EntityRightClick_ | _constructor_
+ readonly property __Entity__ <br> _Get: Returns the entity that was clicked_ | [`Entity`](../../api/entity/Entity.md)
+ readonly property __Player__ <br> _Get: Get the player who clicked_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`EntityRightClick`](EntityRightClick.md)
+
+##### <a id='entityrightclick'></a>new __EntityRightClick__(clicked, player) 
+
+_Construct a new EntityRightClick_
+
+Argument | Type | Description  
+--- | --- | --- 
+clicked | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) clicked
+player | `Player` | the `Player` clicking
+
+---
 
 ### Public Properties for [`EntityRightClick`](EntityRightClick.md)
 
 ##### <a id='entity'></a>public  readonly property __Entity__
 
-_Get: Construct a new EntityRightClick_
+_Get: Returns the entity that was clicked_
 
 Get | Description
 --- | --- 
-[`Entity`](..\..\api\entity\Entity.md) | the `Player` /
-    public Player getPlayer() {
-        return player;
-    }
+[`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md)
 
-    /** Returns the entity that was clicked
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Get the player who clicked_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

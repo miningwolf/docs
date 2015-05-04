@@ -1,7 +1,7 @@
 ## Disconnection __class__
 
 >io.wolfscript.event.player.Disconnection
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,17 @@ Disconnection hook. Contains information about a `Player` disconnecting.
 Method | Type   
 --- | :--- 
 new __Disconnection__(player, reason, leave) <br> _Disconnection constructor_ | _constructor_
- writeonly property __Hidden__ <br> _Set: Gets the `Player` disconnected_ | `void`
+  property __LeaveMessage__ <br> _Get: Gets the LeaveMessage<br>Set: Sets the LeaveMessage_ | `String`
+ readonly property __Player__ <br> _Get: Gets the `Player` disconnected_ | `Player`
+  property __Reason__ <br> _Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed_ | `String`
+ writeonly property __Hidden__ <br> _Set: Sets whether this should be a hidden connect/disconnect_ | `void`
+ function __isHidden__() <br> _Gets whether this should be a hidden connect/disconnect_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,18 +46,49 @@ leave | `String` | leave argument
 
 ### Public Properties for [`Disconnection`](Disconnection.md)
 
-##### <a id='hidden'></a>public  writeonly property __Hidden__
+##### <a id='leavemessage'></a>public   property __LeaveMessage__
 
-_Set: Gets the `Player` disconnected_
+_Get: Gets the LeaveMessage<br>Set: Sets the LeaveMessage_
 
 Get | Description
 --- | --- 
-`void` | the `Player` /
-    public Player getPlayer() {
-        return player;
-    }
+`String` | leaveMessage
 
-    /** Get the reason for disconnect (if applicable)
+Set | Type | Description  
+--- | --- | --- 
+leave | `String` | the leave message to set
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player` disconnected_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
+
+
+
+##### <a id='reason'></a>public   property __Reason__
+
+_Get: Get the reason for disconnect (if applicable)<br>Set: Set the reason for disconnection that will be displayed_
+
+Get | Description
+--- | --- 
+`String` | reason if disconnecting, null otherwise
+
+Set | Type | Description  
+--- | --- | --- 
+reason | `String` | the reason for disconnection
+
+
+##### <a id='hidden'></a>public  writeonly property __Hidden__
+
+_Set: Sets whether this should be a hidden connect/disconnect_
+
+Get | 
+--- | 
+`void` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -61,6 +98,15 @@ hidden | `boolean` | `true` for hiding message; `false` for not
 ---
 
 ### Public Methods for [`Disconnection`](Disconnection.md)
+
+##### <a id='ishidden'></a>public  function __isHidden__()
+
+_Gets whether this should be a hidden connect/disconnect_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` for hidden; `false` for not
+
 
 ##### <a id='tostring'></a>public final function __toString__()
 
@@ -73,27 +119,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API LazyMetadataValue</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../index.html'>Home </a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html'>metadata</a></li>
+<li class='current'><a href='#'>LazyMetadataValue</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/CacheStrategy.html'>CacheStrategy</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/FixedMetadataValue.html'>FixedMetadataValue</a></li>
+<li class='active'><a href='../../../../wolfbuk/io/wolfscript/metadata/LazyMetadataValue.html'>LazyMetadataValue</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataConversionException.html'>MetadataConversionException</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataEvaluationException.html'>MetadataEvaluationException</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataStore.html'>MetadataStore</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataStoreBase.html'>MetadataStoreBase</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataValue.html'>MetadataValue</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/MetadataValueAdapter.html'>MetadataValueAdapter</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/metadata/Metadatable.html'>Metadatable</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="lazymetadatavalue-__class__">LazyMetadataValue <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.metadata.LazyMetadataValue
+Extends <a href="MetadataValueAdapter.html"><code>MetadataValueAdapter</code></a>
+Implements <a href="MetadataValue.html"><code>MetadataValue</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>The LazyMetadataValue class implements a type of metadata that is not computed until another plugin asks for it. <p> By making metadata values lazy, no computation is done by the providing plugin until absolutely necessary (if ever). Additionally, LazyMetadataValue objects cache their values internally unless overridden by a <code>CacheStrategy</code> or invalidated at the individual or plugin level. Once invalidated, the LazyMetadataValue will recompute its value when asked.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>LazyMetadataValue</strong>(owningPlugin) <br> <em>Initialized a LazyMetadataValue object with the default</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>LazyMetadataValue</strong>(owningPlugin, cacheStrategy) <br> <em>Initializes a LazyMetadataValue object with a specific cache strategy.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> function <strong>value</strong>() <br> <em>value method</em></td>
+<td style="text-align:left"><code>Object</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="MetadataValueAdapter.html"><code>MetadataValueAdapter</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> readonly property <strong>OwningPlugin</strong> <br> <em>OwningPlugin property</em></td>
+<td style="text-align:left"><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
+</tr>
+<tr>
+<td> function <strong>asBoolean</strong>() <br> <em>asBoolean method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>asByte</strong>() <br> <em>asByte method</em></td>
+<td style="text-align:left"><code>byte</code></td>
+</tr>
+<tr>
+<td> function <strong>asDouble</strong>() <br> <em>asDouble method</em></td>
+<td style="text-align:left"><code>double</code></td>
+</tr>
+<tr>
+<td> function <strong>asFloat</strong>() <br> <em>asFloat method</em></td>
+<td style="text-align:left"><code>float</code></td>
+</tr>
+<tr>
+<td> function <strong>asInt</strong>() <br> <em>asInt method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>asLong</strong>() <br> <em>asLong method</em></td>
+<td style="text-align:left"><code>long</code></td>
+</tr>
+<tr>
+<td> function <strong>asShort</strong>() <br> <em>asShort method</em></td>
+<td style="text-align:left"><code>short</code></td>
+</tr>
+<tr>
+<td> function <strong>asString</strong>() <br> <em>asString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-lazymetadatavalue-lazymetadatavalue-md-">Public Constructors for <a href="LazyMetadataValue.html"><code>LazyMetadataValue</code></a></h3>
+<h5 id="-a-id-lazymetadatavalue-a-new-__lazymetadatavalue__-owningplugin-"><a id='lazymetadatavalue'></a>new <strong>LazyMetadataValue</strong>(owningPlugin)</h5>
+<p><em>Initialized a LazyMetadataValue object with the default CACHE_AFTER_FIRST_EVAL cache strategy.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owningPlugin</td>
+<td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
+<td>the <a href="../plugin/Plugin.html"><code>Plugin</code></a> that created this metadata value.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-lazymetadatavalue-a-new-__lazymetadatavalue__-owningplugin-cachestrategy-"><a id='lazymetadatavalue'></a>new <strong>LazyMetadataValue</strong>(owningPlugin, cacheStrategy)</h5>
+<p><em>Initializes a LazyMetadataValue object with a specific cache strategy.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owningPlugin</td>
+<td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
+<td>the <a href="../plugin/Plugin.html"><code>Plugin</code></a> that created this metadata value.</td>
+</tr>
+<tr>
+<td>cacheStrategy</td>
+<td><code>CacheStrategy</code></td>
+<td>determines the rules for caching this metadata value.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-lazymetadatavalue-lazymetadatavalue-md-">Public Methods for <a href="LazyMetadataValue.html"><code>LazyMetadataValue</code></a></h3>
+<h5 id="-a-id-value-a-public-function-__value__-"><a id='value'></a>public  function <strong>value</strong>()</h5>
+<p><em>value method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Object</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-metadatavalueadapter-metadatavalueadapter-md-">Public Properties for <a href="MetadataValueAdapter.html"><code>MetadataValueAdapter</code></a></h3>
+<h5 id="-a-id-owningplugin-a-public-readonly-property-__owningplugin__"><a id='owningplugin'></a>public  readonly property <strong>OwningPlugin</strong></h5>
+<p><em>OwningPlugin property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../plugin/Plugin.html"><code>Plugin</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-metadatavalueadapter-metadatavalueadapter-md-">Public Methods for <a href="MetadataValueAdapter.html"><code>MetadataValueAdapter</code></a></h3>
+<h5 id="-a-id-asboolean-a-public-function-__asboolean__-"><a id='asboolean'></a>public  function <strong>asBoolean</strong>()</h5>
+<p><em>asBoolean method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asbyte-a-public-function-__asbyte__-"><a id='asbyte'></a>public  function <strong>asByte</strong>()</h5>
+<p><em>asByte method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asdouble-a-public-function-__asdouble__-"><a id='asdouble'></a>public  function <strong>asDouble</strong>()</h5>
+<p><em>asDouble method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>double</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asfloat-a-public-function-__asfloat__-"><a id='asfloat'></a>public  function <strong>asFloat</strong>()</h5>
+<p><em>asFloat method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asint-a-public-function-__asint__-"><a id='asint'></a>public  function <strong>asInt</strong>()</h5>
+<p><em>asInt method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-aslong-a-public-function-__aslong__-"><a id='aslong'></a>public  function <strong>asLong</strong>()</h5>
+<p><em>asLong method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asshort-a-public-function-__asshort__-"><a id='asshort'></a>public  function <strong>asShort</strong>()</h5>
+<p><em>asShort method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-asstring-a-public-function-__asstring__-"><a id='asstring'></a>public  function <strong>asString</strong>()</h5>
+<p><em>asString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

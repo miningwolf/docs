@@ -49,18 +49,33 @@ BRICKS: "bri"<br> _BRICKS PatternType_ | PatternType
 SKULL: "sku"<br> _SKULL PatternType_ | PatternType
 FLOWER: "flo"<br> _FLOWER PatternType_ | PatternType
 MOJANG: "moj"<br> _MOJANG PatternType_ | PatternType
-static function __getByIdentifier__(identifier) <br> _Returns the identifier used to represent_ | [`PatternType`](PatternType.md)
+ readonly property __Identifier__ <br> _Get: Returns the identifier used to represent_ | `String`
+static function __getByIdentifier__(identifier) <br> _Returns the pattern type which matches the passed_ | [`PatternType`](PatternType.md)
 
 
 
 ---
 
 
+### Public Properties for [`PatternType`](PatternType.md)
+
+##### <a id='identifier'></a>public  readonly property __Identifier__
+
+_Get: Returns the identifier used to represent this pattern type_
+
+Get | Description
+--- | --- 
+`String` | the pattern's identifier
+
+
+
+---
+
 ### Public Methods for [`PatternType`](PatternType.md)
 
 ##### <a id='getbyidentifier'></a>public static function __getByIdentifier__(identifier)
 
-_Returns the identifier used to represent this pattern type_
+_Returns the pattern type which matches the passed identifier or null if no matches are found_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -68,12 +83,7 @@ identifier | `String` | the identifier
 
 Returns | Description
 --- | --- 
-[`PatternType`](PatternType.md) | the pattern's identifier /
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    /** Returns the pattern type which matches the passed identifier or null if no matches are found
+[`PatternType`](PatternType.md) | the matched pattern type or null
 
 
 ---

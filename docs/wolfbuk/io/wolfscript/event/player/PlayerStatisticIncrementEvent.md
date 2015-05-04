@@ -2,7 +2,7 @@
 
 >io.wolfscript.event.player.PlayerStatisticIncrementEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -15,9 +15,13 @@ Method | Type
 new __PlayerStatisticIncrementEvent__(player, statistic, initialValue, newValue) <br> _PlayerStatisticIncrementEvent constructor_ | _constructor_
 new __PlayerStatisticIncrementEvent__(player, statistic, initialValue, newValue, entityType) <br> _PlayerStatisticIncrementEvent constructor_ | _constructor_
 new __PlayerStatisticIncrementEvent__(player, statistic, initialValue, newValue, material) <br> _PlayerStatisticIncrementEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Material__ <br> _Get: Gets the statistic that is being incremented._ | [`Material`](..\..\Material.md)
+ readonly property __EntityType__ <br> _Get: Gets the EntityType if {@link #getStatistic() getStatistic()} is an_ | [`EntityType`](../../entity/EntityType.md)
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Material__ <br> _Get: Gets the Material if {@link #getStatistic() getStatistic()} is a block_ | [`Material`](../../Material.md)
+ readonly property __NewValue__ <br> _Get: Gets the new value of the statistic._ | `int`
+ readonly property __PreviousValue__ <br> _Get: Gets the previous value of the statistic._ | `int`
+ readonly property __Statistic__ <br> _Get: Gets the statistic that is being incremented._ | [`Statistic`](../../Statistic.md)
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
@@ -25,8 +29,12 @@ __Inherited items from [`PlayerEvent`](PlayerEvent.md)__ |
 new __PlayerEvent__(Player) <br> _PlayerEvent constructor_ | _constructor_
 final readonly property __Player__ <br> _Get: Returns the player involved in this event_ | `Player`
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -45,7 +53,7 @@ _PlayerStatisticIncrementEvent constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-statistic | `Statistic` | statistic argument
+statistic | [`Statistic`](../../Statistic.md) | statistic argument
 initialValue | `int` | initialValue argument
 newValue | `int` | newValue argument
 
@@ -56,10 +64,10 @@ _PlayerStatisticIncrementEvent constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-statistic | `Statistic` | statistic argument
+statistic | [`Statistic`](../../Statistic.md) | statistic argument
 initialValue | `int` | initialValue argument
 newValue | `int` | newValue argument
-entityType | [`EntityType`](..\..\entity\EntityType.md) | entityType argument
+entityType | [`EntityType`](../../entity/EntityType.md) | entityType argument
 
 ##### <a id='playerstatisticincrementevent'></a>new __PlayerStatisticIncrementEvent__(player, statistic, initialValue, newValue, material) 
 
@@ -68,14 +76,24 @@ _PlayerStatisticIncrementEvent constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-statistic | `Statistic` | statistic argument
+statistic | [`Statistic`](../../Statistic.md) | statistic argument
 initialValue | `int` | initialValue argument
 newValue | `int` | newValue argument
-material | [`Material`](..\..\Material.md) | material argument
+material | [`Material`](../../Material.md) | material argument
 
 ---
 
 ### Public Properties for [`PlayerStatisticIncrementEvent`](PlayerStatisticIncrementEvent.md)
+
+##### <a id='entitytype'></a>public  readonly property __EntityType__
+
+_Get: Gets the EntityType if {@link #getStatistic() getStatistic()} is an entity statistic otherwise returns null._
+
+Get | Description
+--- | --- 
+[`EntityType`](../../entity/EntityType.md) | the EntityType of the statistic
+
+
 
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
@@ -83,7 +101,7 @@ _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -93,22 +111,47 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
 ##### <a id='material'></a>public  readonly property __Material__
 
+_Get: Gets the Material if {@link #getStatistic() getStatistic()} is a block or item statistic otherwise returns null._
+
+Get | Description
+--- | --- 
+[`Material`](../../Material.md) | the Material of the statistic
+
+
+
+##### <a id='newvalue'></a>public  readonly property __NewValue__
+
+_Get: Gets the new value of the statistic._
+
+Get | Description
+--- | --- 
+`int` | the new value of the statistic
+
+
+
+##### <a id='previousvalue'></a>public  readonly property __PreviousValue__
+
+_Get: Gets the previous value of the statistic._
+
+Get | Description
+--- | --- 
+`int` | the previous value of the statistic
+
+
+
+##### <a id='statistic'></a>public  readonly property __Statistic__
+
 _Get: Gets the statistic that is being incremented._
 
 Get | Description
 --- | --- 
-[`Material`](..\..\Material.md) | the incremented statistic /
-    public Statistic getStatistic() {
-        return statistic;
-    }
-
-    /** Gets the previous value of the statistic.
+[`Statistic`](../../Statistic.md) | the incremented statistic
 
 
 
@@ -164,31 +207,56 @@ Get | Description
 
 
 ---
+### Public Constructors for [`Event`](../Event.md)
 
-### Public Methods for [`Event`](..\Event.md)
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
+
+
+
+---
+
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

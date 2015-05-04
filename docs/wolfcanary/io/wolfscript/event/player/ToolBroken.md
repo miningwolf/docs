@@ -1,7 +1,7 @@
 ## ToolBroken __class__
 
 >io.wolfscript.event.player.ToolBroken
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,14 @@ Called when a tool/sword runs out of uses and is destroyed
 Method | Type   
 --- | :--- 
 new __ToolBroken__(player, tool) <br> _ToolBroken constructor_ | _constructor_
- readonly property __Tool__ <br> _Get: Gets the `Player` who's tool has broken_ | [`Item`](..\..\api\inventory\Item.md)
+ readonly property __Player__ <br> _Get: Gets the `Player` who's tool has broken_ | `Player`
+ readonly property __Tool__ <br> _Get: Gets the tool that was broken<p/>_ | [`Item`](../../api/inventory/Item.md)
  function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -33,24 +36,29 @@ _ToolBroken constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-tool | [`Item`](..\..\api\inventory\Item.md) | tool argument
+tool | [`Item`](../../api/inventory/Item.md) | tool argument
 
 ---
 
 ### Public Properties for [`ToolBroken`](ToolBroken.md)
 
-##### <a id='tool'></a>public  readonly property __Tool__
+##### <a id='player'></a>public  readonly property __Player__
 
 _Get: Gets the `Player` who's tool has broken_
 
 Get | Description
 --- | --- 
-[`Item`](..\..\api\inventory\Item.md) | player who's tool has broken /
-    public Player getPlayer() {
-        return player;
-    }
+`Player` | player who's tool has broken
 
-    /** Gets the tool that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1<br/> Also note the damage value will be 0
+
+
+##### <a id='tool'></a>public  readonly property __Tool__
+
+_Get: Gets the tool that was broken<p/> NOTE: Amount will be 0; to restore the item set amount back to 1<br/> Also note the damage value will be 0_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the tool that was broken
 
 
 
@@ -69,27 +77,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

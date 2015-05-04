@@ -11,7 +11,8 @@ Represents an Item Frame
 
 Method | Type   
 --- | :--- 
- readonly property __Rotation__ <br> _Get: Get the item in this frame_ | [`Rotation`](..\Rotation.md)
+  property __Item__ <br> _Get: Get the item in this frame<br>Set: Set the item in this frame_ | `ItemStack`
+ readonly property __Rotation__ <br> _Get: Get the rotation of the frame's item_ | [`Rotation`](../Rotation.md)
 
 
 
@@ -20,16 +21,26 @@ Method | Type
 
 ### Public Properties for [`ItemFrame`](ItemFrame.md)
 
-##### <a id='rotation'></a>public  readonly property __Rotation__
+##### <a id='item'></a>public   property __Item__
 
-_Get: Get the item in this frame_
+_Get: Get the item in this frame<br>Set: Set the item in this frame_
 
 Get | Description
 --- | --- 
-[`Rotation`](..\Rotation.md) | a defensive copy the item in this item frame /
-    public ItemStack getItem();
+`ItemStack` | a defensive copy the item in this item frame
 
-    /** Set the item in this frame
+Set | Type | Description  
+--- | --- | --- 
+item | `ItemStack` | the new item
+
+
+##### <a id='rotation'></a>public  readonly property __Rotation__
+
+_Get: Get the rotation of the frame's item_
+
+Get | Description
+--- | --- 
+[`Rotation`](../Rotation.md) | the direction
 
 
 

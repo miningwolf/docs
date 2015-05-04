@@ -38,18 +38,44 @@ JUNKFISHED: "junkFished"<br> _JUNKFISHED Statistics_ | Statistics
 TREASUREFISHED: "treasureFished"<br> _TREASUREFISHED Statistics_ | Statistics
 TALKEDTOVILLAGER: "talkedToVillager"<br> _TALKEDTOVILLAGER Statistics_ | Statistics
 TRADEDWITHVILLAGER: "tradedWithVillager"<br> _TRADEDWITHVILLAGER Statistics_ | Statistics
-static function __forNMSName__(String) <br> _Gets the full native name of the `Statistics`_ | [`Statistics`](Statistics.md)
+final readonly property __Instance__ <br> _Get: Gets the [`Stat`](Stat.md) instance for the given `Statistics`_ | [`Stat`](Stat.md)
+final readonly property __NativeName__ <br> _Get: Gets the full native name of the `Statistics`_ | `String`
+static function __forNMSName__(String) <br> _Gets an `Statistics` for the native name_ | [`Statistics`](Statistics.md)
 
 
 
 ---
 
 
+### Public Properties for [`Statistics`](Statistics.md)
+
+##### <a id='instance'></a>public final readonly property __Instance__
+
+_Get: Gets the [`Stat`](Stat.md) instance for the given `Statistics`_
+
+Get | Description
+--- | --- 
+[`Stat`](Stat.md) | [`Stat`](Stat.md) instance
+
+
+
+##### <a id='nativename'></a>public final readonly property __NativeName__
+
+_Get: Gets the full native name of the `Statistics`_
+
+Get | Description
+--- | --- 
+`String` | full native name
+
+
+
+---
+
 ### Public Methods for [`Statistics`](Statistics.md)
 
 ##### <a id='fornmsname'></a>public static function __forNMSName__(String)
 
-_Gets the full native name of the `Statistics`_
+_Gets an `Statistics` for the native name_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -57,12 +83,7 @@ String | `final` | String argument
 
 Returns | Description
 --- | --- 
-[`Statistics`](Statistics.md) | full native name /
-    public final String getNativeName() {
-        return nmsName;
-    }
-
-    /** Gets the [`Stat`](Stat.md) instance for the given `Statistics`
+[`Statistics`](Statistics.md) | `Statistics` matching the name or `null` if not match found
 
 
 ---

@@ -12,7 +12,12 @@ Backbone to the ban System. This contains NO logic, it is only the data source a
 Method | Type   
 --- | :--- 
 new __BackboneBans__() <br> _BackboneBans constructor_ | _constructor_
- function __loadBans__() <br> _Add a new Ban to the list of bans._ | `List<Ban>`
+ function __addBan__(ban) <br> _Add a new Ban to the list of bans._ | `void`
+ function __getBan__(uuid) <br> _Get a ban for this player uuid._ | [`Ban`](../bansystem/Ban.md)
+ function __liftBan__(uuid) <br> _Lift a ban that was issued for the player with the given uuid_ | `void`
+ function __liftIpBan__(subject) <br> _Lift an IP ban._ | `void`
+ function __loadBans__() <br> _Load and return all recorded bans_ | `List<Ban>`
+ function __updateBan__(ban) <br> _Update a ban._ | `void`
  |
 __Inherited items from [`Backbone`](Backbone.md)__ |
 new __Backbone__(system) <br> _Backbone constructor_ | _constructor_
@@ -35,40 +40,78 @@ _BackboneBans constructor_
 
 ### Public Methods for [`BackboneBans`](BackboneBans.md)
 
-##### <a id='loadbans'></a>public  function __loadBans__()
+##### <a id='addban'></a>public  function __addBan__(ban)
 
 _Add a new Ban to the list of bans._
 
+Argument | Type | Description  
+--- | --- | --- 
+ban | [`Ban`](../bansystem/Ban.md) | The ban to add.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='getban'></a>public  function __getBan__(uuid)
+
+_Get a ban for this player uuid. This may return null if the ban does not exist_
+
+Argument | Type | Description  
+--- | --- | --- 
+uuid | `String` | Ban for the player with the given uuid or null if none.
+
 Returns | Description
 --- | --- 
-`List<Ban>` | Returns a ban object if that ban was found, null otherwise /
-    public Ban getBan(String uuid) {
-        BanDataAccess data = new BanDataAccess();
+[`Ban`](../bansystem/Ban.md) | Returns a ban object if that ban was found, null otherwise
 
-        try {
-            HashMap<String, Object> filter = new HashMap<String, Object>();
-            filter.put("uuid", uuid);
-            Database.get().load(data, filter);
-        }
-        catch (DatabaseReadException e) {
-            log.error(e.getMessage(), e);
-        }
-        if (!data.hasData()) {
-            return null;
-        }
-        Ban newBan = new Ban();
-        newBan.setUUID(data.uuid);
-        newBan.setIp(data.ip);
-        newBan.setIsIpBan(!data.ip.contains("xxx"));
-        newBan.setReason(data.reason);
-        newBan.setSubject(data.player);
-        newBan.setExpiration(data.unbanDate);
-        newBan.setIssuedDate(data.issuedDate);
-        newBan.setBanningPlayer(data.banningPlayer);
-        return newBan;
-    }
 
-    /** Update a ban.
+##### <a id='liftban'></a>public  function __liftBan__(uuid)
+
+_Lift a ban that was issued for the player with the given uuid_
+
+Argument | Type | Description  
+--- | --- | --- 
+uuid | `String` | Player uuid to unban.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='liftipban'></a>public  function __liftIpBan__(subject)
+
+_Lift an IP ban._
+
+Argument | Type | Description  
+--- | --- | --- 
+subject | `String` | IP Address to unban.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='loadbans'></a>public  function __loadBans__()
+
+_Load and return all recorded bans_
+
+Returns | Description
+--- | --- 
+`List<Ban>` | An array list of all recorded ban instances.
+
+
+##### <a id='updateban'></a>public  function __updateBan__(ban)
+
+_Update a ban._
+
+Argument | Type | Description  
+--- | --- | --- 
+ban | [`Ban`](../bansystem/Ban.md) | Ban instance to update.
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

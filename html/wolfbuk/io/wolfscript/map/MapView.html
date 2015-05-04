@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API MapView</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../index.html'>Home </a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/map/0.html'>map</a></li>
+<li class='current'><a href='#'>MapView</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li><a href='../../../../wolfbuk/io/wolfscript/map/CharacterSprite.html'>CharacterSprite</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapCanvas.html'>MapCanvas</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursor.html'>MapCursor</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapCursorCollection.html'>MapCursorCollection</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapFont.html'>MapFont</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapPalette.html'>MapPalette</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MapRenderer.html'>MapRenderer</a></li>
+<li class='active'><a href='../../../../wolfbuk/io/wolfscript/map/MapView.html'>MapView</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/MinecraftFont.html'>MinecraftFont</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/Scale.html'>Scale</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/map/Type.html'>Type</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="mapview-__interface__">MapView <strong>interface</strong></h2>
+<blockquote>
+<p>io.wolfscript.map.MapView</p>
+</blockquote>
+<hr>
+<h3 id="interface-overview">Interface Overview</h3>
+<p>Represents a map item.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  property <strong>CenterZ</strong> <br> <em>Get: Get the center Z position of this map.<br>Set: Set the center Z position of this map.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>  property <strong>Scale</strong> <br> <em>Get: Get the scale of this map.<br>Set: Set the scale of this map.</em></td>
+<td style="text-align:left"><code>Scale</code></td>
+</tr>
+<tr>
+<td>  property <strong>CenterX</strong> <br> <em>Get: Get the center X position of this map.<br>Set: Set the center X position of this map.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Renderers</strong> <br> <em>Get: Get a list of MapRenderers currently in effect.</em></td>
+<td style="text-align:left"><code>List&lt;MapRenderer&gt;</code></td>
+</tr>
+<tr>
+<td>  property <strong>World</strong> <br> <em>Get: Get the world that this map is associated with. Primarily used by the<br>Set: Set the world that this map is associated with. The world is used by</em></td>
+<td style="text-align:left"><code>World</code></td>
+</tr>
+<tr>
+<td> function <strong>removeRenderer</strong>(renderer) <br> <em>Remove a renderer from this map.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>isVirtual</strong>() <br> <em>Check whether this map is virtual. A map is virtual if its lowermost</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>addRenderer</strong>(renderer) <br> <em>Add a renderer to this map.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-mapview-mapview-md-">Public Properties for <a href="MapView.html"><code>MapView</code></a></h3>
+<h5 id="-a-id-centerz-a-public-property-__centerz__"><a id='centerz'></a>public   property <strong>CenterZ</strong></h5>
+<p><em>Get: Get the center Z position of this map.<br>Set: Set the center Z position of this map.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The center Z position.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>The center Z position.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-id-a-public-readonly-property-__id__"><a id='id'></a>public  readonly property <strong>Id</strong></h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Get: Get the ID of this map item. Corresponds to the damage value of a map in an inventory.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short</code></td>
+<td>The ID of the map.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-scale-a-public-property-__scale__"><a id='scale'></a>public   property <strong>Scale</strong></h5>
+<p><em>Get: Get the scale of this map.<br>Set: Set the scale of this map.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Scale</code></td>
+<td>The scale of the map.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scale</td>
+<td><code>Scale</code></td>
+<td>The scale to set.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-centerx-a-public-property-__centerx__"><a id='centerx'></a>public   property <strong>CenterX</strong></h5>
+<p><em>Get: Get the center X position of this map.<br>Set: Set the center X position of this map.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The center X position.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>The center X position.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-value-a-public-readonly-property-__value__"><a id='value'></a>public  readonly property <strong>Value</strong></h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Get: Get the raw value of this scale level.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>The scale value</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-renderers-a-public-readonly-property-__renderers__"><a id='renderers'></a>public  readonly property <strong>Renderers</strong></h5>
+<p><em>Get: Get a list of MapRenderers currently in effect.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;MapRenderer&gt;</code></td>
+<td>A <code>List&lt;MapRenderer&gt;</code> containing each map renderer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-world-a-public-property-__world__"><a id='world'></a>public   property <strong>World</strong></h5>
+<p><em>Get: Get the world that this map is associated with. Primarily used by the internal renderer, but may be used by external renderers. May return null if the world the map is associated with is not loaded.<br>Set: Set the world that this map is associated with. The world is used by the internal renderer, and may also be used by external renderers.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>World</code></td>
+<td>The World this map is associated with.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The World to associate this map with.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-mapview-mapview-md-">Public Methods for <a href="MapView.html"><code>MapView</code></a></h3>
+<h5 id="-a-id-removerenderer-a-public-function-__removerenderer__-renderer-"><a id='removerenderer'></a>public  function <strong>removeRenderer</strong>(renderer)</h5>
+<p><em>Remove a renderer from this map.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>renderer</td>
+<td><a href="MapRenderer.html"><code>MapRenderer</code></a></td>
+<td>The MapRenderer to remove.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>True if the renderer was successfully removed.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isvirtual-a-public-function-__isvirtual__-"><a id='isvirtual'></a>public  function <strong>isVirtual</strong>()</h5>
+<p><em>Check whether this map is virtual. A map is virtual if its lowermost MapRenderer is plugin-provided.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>Whether the map is virtual.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-addrenderer-a-public-function-__addrenderer__-renderer-"><a id='addrenderer'></a>public  function <strong>addRenderer</strong>(renderer)</h5>
+<p><em>Add a renderer to this map.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>renderer</td>
+<td><a href="MapRenderer.html"><code>MapRenderer</code></a></td>
+<td>The MapRenderer to add.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-valueof-a-public-static-function-__valueof__-value-"><a id='valueof'></a>public static function <strong>valueOf</strong>(value)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p>_An enum representing all possible scales a map can be set to. /
+    public static enum Scale {
+        CLOSEST(0),
+        CLOSE(1),
+        NORMAL(2),
+        FAR(3),
+        FARTHEST(4);</p>
+<pre><code>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">byte</span> <span class="hljs-keyword">value</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Scale</span><span class="hljs-params">(<span class="hljs-keyword">int</span> <span class="hljs-keyword">value</span>)</span> </span>{
+        <span class="hljs-keyword">this</span>.<span class="hljs-keyword">value</span> = (<span class="hljs-keyword">byte</span>) <span class="hljs-keyword">value</span>;
+    }
+
+    <span class="hljs-comment">/** Get the scale given the raw value._</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>byte</code></td>
+<td>The raw scale</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Scale</code></td>
+<td>The enum scale, or null for an invalid input</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

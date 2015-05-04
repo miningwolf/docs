@@ -18,7 +18,7 @@ __Inherited items from [`EntityLiving`](EntityLiving.md)__ |
  |
 __Inherited items from [`LivingBase`](LivingBase.md)__ |
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

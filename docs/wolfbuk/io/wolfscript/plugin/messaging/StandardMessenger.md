@@ -30,7 +30,8 @@ Method | Type
  function __unregisterIncomingPluginChannel__(plugin, channel, listener) <br> _unregisterIncomingPluginChannel method_ | `void`
  function __unregisterOutgoingPluginChannel__(plugin) <br> _unregisterOutgoingPluginChannel method_ | `void`
  function __unregisterOutgoingPluginChannel__(plugin, channel) <br> _unregisterOutgoingPluginChannel method_ | `void`
-static function __validatePluginMessage__(messenger, source, channel) <br> _Validates a Plugin Channel name._ | `void`
+static function __validateChannel__(channel) <br> _Validates a Plugin Channel name._ | `void`
+static function __validatePluginMessage__(messenger, source, channel) <br> _Validates the input of a Plugin Message, ensuring the arguments are all_ | `void`
 
 
 
@@ -96,7 +97,7 @@ _isOutgoingChannelRegistered method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 
 Returns | 
@@ -110,7 +111,7 @@ _isIncomingChannelRegistered method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 
 Returns | 
@@ -137,7 +138,7 @@ _getIncomingChannelRegistrations method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 
 Returns | 
@@ -164,7 +165,7 @@ _getOutgoingChannels method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -177,7 +178,7 @@ _getIncomingChannelRegistrations method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -190,7 +191,7 @@ _getIncomingChannels method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -203,7 +204,7 @@ _registerIncomingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 listener | [`PluginMessageListener`](PluginMessageListener.md) | listener argument
 
@@ -218,7 +219,7 @@ _registerOutgoingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 
 Returns | 
@@ -232,7 +233,7 @@ _unregisterIncomingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -245,7 +246,7 @@ _unregisterIncomingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 
 Returns | 
@@ -259,7 +260,7 @@ _unregisterIncomingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
 listener | [`PluginMessageListener`](PluginMessageListener.md) | listener argument
 
@@ -274,7 +275,7 @@ _unregisterOutgoingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -287,8 +288,21 @@ _unregisterOutgoingPluginChannel method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 channel | `String` | channel argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='validatechannel'></a>public static function __validateChannel__(channel)
+
+_Validates a Plugin Channel name._
+
+Argument | Type | Description  
+--- | --- | --- 
+channel | `String` | Channel name to validate.
 
 Returns | 
 --- | 
@@ -297,23 +311,13 @@ Returns |
 
 ##### <a id='validatepluginmessage'></a>public static function __validatePluginMessage__(messenger, source, channel)
 
-_Validates a Plugin Channel name._
+_Validates the input of a Plugin Message, ensuring the arguments are all valid._
 
 Argument | Type | Description  
 --- | --- | --- 
 messenger | [`Messenger`](Messenger.md) | Messenger to use for validation.
-source | [`Plugin`](..\Plugin.md) | Source plugin of the Message.
-channel | `String` | Channel name to validate. /
-    public static void validateChannel(String channel) {
-        if (channel == null) {
-            throw new IllegalArgumentException("Channel cannot be null");
-        }
-        if (channel.length() > Messenger.MAX_CHANNEL_SIZE) {
-            throw new ChannelNameTooLongException(channel);
-        }
-    }
-
-    /** Validates the input of a Plugin Message, ensuring the arguments are all valid.
+source | [`Plugin`](../Plugin.md) | Source plugin of the Message.
+channel | `String` | Plugin Channel to send the message by.
 
 Returns | 
 --- | 

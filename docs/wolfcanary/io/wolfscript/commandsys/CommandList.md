@@ -194,7 +194,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 
 ##### <a id='block'></a>public  writeonly property __block__
@@ -207,7 +207,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 
 ##### <a id='warpcommand'></a>public  writeonly property __WarpCommand__
@@ -220,7 +220,7 @@ Get |
 
 Set | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 
 ---
@@ -233,7 +233,7 @@ _whitelistAddCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -246,7 +246,7 @@ _groupBase method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -259,7 +259,7 @@ _groupAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -272,7 +272,7 @@ _deleteworldTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -285,7 +285,7 @@ _deleteworld method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -298,7 +298,7 @@ _createWorldTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -311,7 +311,7 @@ _createWorld method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -324,7 +324,7 @@ _delWarpCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -337,7 +337,7 @@ _give method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -350,7 +350,7 @@ _gamerule method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -363,7 +363,7 @@ _gamemode method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -376,7 +376,7 @@ _fill method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -389,7 +389,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -402,7 +402,7 @@ _entitydata method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -415,7 +415,7 @@ _enchant method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -428,7 +428,7 @@ _emote method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -441,7 +441,7 @@ _effect method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -454,7 +454,7 @@ _difficulty method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -467,7 +467,7 @@ _defaultspawnpoint method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -480,7 +480,7 @@ _defaultgamemode method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -493,7 +493,7 @@ _compassCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -506,7 +506,7 @@ _getPosCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -519,7 +519,7 @@ _godCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -532,7 +532,7 @@ _debug method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -545,7 +545,7 @@ _clone method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -558,7 +558,7 @@ _clear method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -571,7 +571,7 @@ _broadcast method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -584,7 +584,7 @@ _blockdata method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -597,7 +597,7 @@ _achievement method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -610,7 +610,7 @@ _disablePluginCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -623,7 +623,7 @@ _enablePluginCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -636,7 +636,7 @@ _deopTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -649,7 +649,7 @@ _deop method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -662,7 +662,7 @@ _createVanillaCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -675,7 +675,7 @@ _banTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -688,7 +688,7 @@ _banCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -701,7 +701,7 @@ _groupCheck method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -714,7 +714,7 @@ _matchOnlinePlayer method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -727,7 +727,7 @@ _matchKnownPlayer method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -740,7 +740,7 @@ _loadWorld method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -753,7 +753,7 @@ _groupmodAddTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -766,7 +766,7 @@ _groupPerms method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -779,7 +779,7 @@ _groupmodPermissionTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -792,7 +792,7 @@ _groupPermissionsAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -805,7 +805,7 @@ _groupPermissionsRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -818,7 +818,7 @@ _listWarpsCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -831,7 +831,7 @@ _homeCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -844,7 +844,7 @@ _groupPermissionsCheck method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -857,7 +857,7 @@ _groupmodPermissionAddRemoveCheckTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -870,7 +870,7 @@ _groupPermissionsList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -883,7 +883,7 @@ _helpCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -896,7 +896,7 @@ _ipBanCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -909,7 +909,7 @@ _kickCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -922,7 +922,7 @@ _kitCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -935,7 +935,7 @@ _kitCreateCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -948,7 +948,7 @@ _kitGiveCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -961,7 +961,7 @@ _kitListCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -974,7 +974,7 @@ _kitDeleteCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -987,7 +987,7 @@ _kitTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1000,7 +1000,7 @@ _listPluginsCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1013,7 +1013,7 @@ _groupFlush method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1026,7 +1026,7 @@ _groupList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1039,7 +1039,7 @@ _groupRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1052,7 +1052,7 @@ _groupRename method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1065,7 +1065,7 @@ _groupPrefix method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1078,7 +1078,7 @@ _groupParent method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1091,7 +1091,7 @@ _groupmodParentTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1104,7 +1104,7 @@ _killCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1117,7 +1117,7 @@ _groupBaseTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1130,7 +1130,7 @@ _spawnpoint method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1143,7 +1143,7 @@ _matchPluginName method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1156,7 +1156,7 @@ _spreadplayers method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1169,7 +1169,7 @@ _playerRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1182,7 +1182,7 @@ _playerGroupSet method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1195,7 +1195,7 @@ _mobspawnerTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1208,7 +1208,7 @@ _mobspawnercheck method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1221,7 +1221,7 @@ _mobspawnerset method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1234,7 +1234,7 @@ _mobspawner method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1247,7 +1247,7 @@ _mobTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1260,7 +1260,7 @@ _mobcount method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1273,7 +1273,7 @@ _mobclear method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1286,7 +1286,7 @@ _mob method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1299,7 +1299,7 @@ _matchWorldNameDimension method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1312,7 +1312,7 @@ _playerGroupAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1325,7 +1325,7 @@ _playerGroupList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1338,7 +1338,7 @@ _playerGroupCheck method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1351,7 +1351,7 @@ _playerGroupRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1364,7 +1364,7 @@ _matchWarpNames method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1377,7 +1377,7 @@ _playerPrefix method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1390,7 +1390,7 @@ _playerPermissions method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1403,7 +1403,7 @@ _playerAddTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1416,7 +1416,7 @@ _playerAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1429,7 +1429,7 @@ _playerBaseTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1442,7 +1442,7 @@ _playerBase method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1455,7 +1455,7 @@ _playerPermissionsAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1468,7 +1468,7 @@ _matchToGroupTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1481,7 +1481,7 @@ _playerPermissionsRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1494,7 +1494,7 @@ _playerListCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1507,7 +1507,7 @@ _playerGroupTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1520,7 +1520,7 @@ _oplist method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1533,7 +1533,7 @@ _playerGroup method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1546,7 +1546,7 @@ _op method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1559,7 +1559,7 @@ _muteCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1572,7 +1572,7 @@ _motdCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1585,7 +1585,7 @@ _matchWorldNamePlayerName method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1598,7 +1598,7 @@ _playerPermissionsCheck method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1611,7 +1611,7 @@ _playerPermissionsList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1624,7 +1624,7 @@ _message method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1637,7 +1637,7 @@ _messageraw method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1650,7 +1650,7 @@ _particle method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1663,7 +1663,7 @@ _whitelistTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1676,7 +1676,7 @@ _playsound method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1689,7 +1689,7 @@ _playermodGroupAddRemoveSet method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1702,7 +1702,7 @@ _playerinfo method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1715,7 +1715,7 @@ _playermodPermissionRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1728,7 +1728,7 @@ _whitelistReloadCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1741,7 +1741,7 @@ _reservelistCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1754,7 +1754,7 @@ _reloadCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1767,7 +1767,7 @@ _reservelistAdd method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1780,7 +1780,7 @@ _reloadPluginCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1793,7 +1793,7 @@ _replaceitem method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1806,7 +1806,7 @@ _worldCreate method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1819,7 +1819,7 @@ _scoreboard method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1832,7 +1832,7 @@ _reservelistRemove method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1845,7 +1845,7 @@ _reservelistShow method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1858,7 +1858,7 @@ _reservelistTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1871,7 +1871,7 @@ _saveall method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1884,7 +1884,7 @@ _saveoff method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1897,7 +1897,7 @@ _saveon method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1910,7 +1910,7 @@ _whitelistShowCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1923,7 +1923,7 @@ _teleport method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1936,7 +1936,7 @@ _stopCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1949,7 +1949,7 @@ _sysinfo method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1962,7 +1962,7 @@ _spawnCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1975,7 +1975,7 @@ _stats method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -1988,7 +1988,7 @@ _summon method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2001,7 +2001,7 @@ _unloadWorld method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2014,7 +2014,7 @@ _warpUse method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2027,7 +2027,7 @@ _testforblock method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2040,7 +2040,7 @@ _title method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2053,7 +2053,7 @@ _testfor method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2066,7 +2066,7 @@ _testforblocks method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2079,7 +2079,7 @@ _time method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2092,7 +2092,7 @@ _unbanCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2105,7 +2105,7 @@ _unbanTabComplete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2118,7 +2118,7 @@ _uptime method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2131,7 +2131,7 @@ _trigger method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2144,7 +2144,7 @@ _toggledownfall method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2157,7 +2157,7 @@ _worldDelete method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2170,7 +2170,7 @@ _weather method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2183,7 +2183,7 @@ _wolfscriptInfoCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2196,7 +2196,7 @@ _worldLoad method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2209,7 +2209,7 @@ _whitelistCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2222,7 +2222,7 @@ _worldInfo method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2235,7 +2235,7 @@ _world method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2248,7 +2248,7 @@ _whitelistRemoveCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2261,7 +2261,7 @@ _worldList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2274,7 +2274,7 @@ _whitelistDisableCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2287,7 +2287,7 @@ _whitelistEnableCommand method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2300,7 +2300,7 @@ _worldUnload method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2313,7 +2313,7 @@ _worldborder method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -2326,7 +2326,7 @@ _xp method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 

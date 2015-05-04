@@ -11,10 +11,13 @@ AI Container for NPC item pickup
 
 Method | Type   
 --- | :--- 
-final function __toString__() <br> _Constructs a new PickupItem AI Container_ | `String`
+new __PickupItem__(pickedUp) <br> _Constructs a new PickupItem AI Container_ | _constructor_
+final readonly property __ItemPickedUp__ <br> _Get: Gets the [`Item`](../../../../../inventory/Item.md) being picked up_ | [`Item`](../../../../../inventory/Item.md)
+final function __toString__() <br> _{@inheritDoc}_ | `String`
  |
 __Inherited items from [`NPCAI`](NPCAI.md)__ |
-final function __call__(npc) <br> _Gets the name of the NPC AI class_ | `void`
+final readonly property __Name__ <br> _Get: Gets the name of the NPC AI class_ | `String`
+final function __call__(npc) <br> _Short cut to calling this AI event_ | `void`
 
 
 
@@ -22,21 +25,55 @@ final function __call__(npc) <br> _Gets the name of the NPC AI class_ | `void`
 
 ---
 
+### Public Constructors for [`PickupItem`](PickupItem.md)
+
+##### <a id='pickupitem'></a>new __PickupItem__(pickedUp) 
+
+_Constructs a new PickupItem AI Container_
+
+Argument | Type | Description  
+--- | --- | --- 
+pickedUp | [`Item`](../../../../../inventory/Item.md) | the [`Item`](../../../../../inventory/Item.md) being picked up
+
+---
+
+### Public Properties for [`PickupItem`](PickupItem.md)
+
+##### <a id='itempickedup'></a>public final readonly property __ItemPickedUp__
+
+_Get: Gets the [`Item`](../../../../../inventory/Item.md) being picked up_
+
+Get | Description
+--- | --- 
+[`Item`](../../../../../inventory/Item.md) | picked up item
+
+
+
+---
 
 ### Public Methods for [`PickupItem`](PickupItem.md)
 
 ##### <a id='tostring'></a>public final function __toString__()
 
-_Constructs a new PickupItem AI Container_
+_{@inheritDoc}_
 
-Returns | Description
+Returns | 
+--- | 
+`String` |
+
+
+---
+
+### Public Properties for [`NPCAI`](NPCAI.md)
+
+##### <a id='name'></a>public final readonly property __Name__
+
+_Get: Gets the name of the NPC AI class_
+
+Get | Description
 --- | --- 
-`String` | picked up item /
-    public final Item getItemPickedUp() {
-        return pickedUp;
-    }
+`String` | NPCAI subclass name
 
-    /** {@inheritDoc}
 
 
 ---
@@ -45,20 +82,15 @@ Returns | Description
 
 ##### <a id='call'></a>public final function __call__(npc)
 
-_Gets the name of the NPC AI class_
+_Short cut to calling this AI event_
 
 Argument | Type | Description  
 --- | --- | --- 
-npc | [`NonPlayableCharacter`](..\..\NonPlayableCharacter.md) | the NPC the event is taking place for
+npc | [`NonPlayableCharacter`](../../NonPlayableCharacter.md) | the NPC the event is taking place for
 
-Returns | Description
---- | --- 
-`void` | NPCAI subclass name /
-    public final String getName() {
-        return "NPCAI." + this.getClass().getSimpleName();
-    }
-
-    /** Short cut to calling this AI event
+Returns | 
+--- | 
+`void` |
 
 
 ---

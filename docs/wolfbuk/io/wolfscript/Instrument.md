@@ -10,25 +10,23 @@ enum Instrument
 
 Item | Type   
 --- | :--- 
-BASS_GUITAR: 0x4<br> _Piano is the standard instrument for a note block._ | Instrument
+PIANO: 0x0<br> _Piano is the standard instrument for a note block._ | Instrument
+BASS_DRUM: 0x1<br> _Bass drum is normally played when a note block is on top of a_ | Instrument
+SNARE_DRUM: 0x2<br> _Snare drum is normally played when a note block is on top of a sandy_ | Instrument
+STICKS: 0x3<br> _Sticks are normally played when a note block is on top of a glass_ | Instrument
+BASS_GUITAR: 0x4<br> _Bass guitar is normally played when a note block is on top of a wooden_ | Instrument
 
 
 
 ---
 
 
-### Public Methods for [`Instrument`](Instrument.md)
+### Public Properties for [`Instrument`](Instrument.md)
 
-##### <a id='getbytype'></a>public static function __getByType__(byte)
-_Deprecated: Magic value /
-    @Deprecated
-    public byte getType() {
-        return this.type;
-    }
+##### <a id='type'></a>public  readonly property __Type__
+_Deprecated: Magic value_
 
-    /** Get an instrument by its type ID. Magic value_
-
-_Piano is the standard instrument for a note block. /
+_Get: Piano is the standard instrument for a note block. /
     PIANO(0x0),
     /** Bass drum is normally played when a note block is on top of a stone-like block /
     BASS_DRUM(0x1),
@@ -48,13 +46,28 @@ _Piano is the standard instrument for a note block. /
 
     /**_
 
+Get | Description
+--- | --- 
+`byte` | The type ID of this instrument.
+
+
+
+---
+
+### Public Methods for [`Instrument`](Instrument.md)
+
+##### <a id='getbytype'></a>public static function __getByType__(byte)
+_Deprecated: Magic value_
+
+_Get an instrument by its type ID._
+
 Argument | Type | Description  
 --- | --- | --- 
 byte | `final` | byte argument
 
 Returns | Description
 --- | --- 
-[`Instrument`](Instrument.md) | The type ID of this instrument.
+[`Instrument`](Instrument.md) | The instrument
 
 
 ---

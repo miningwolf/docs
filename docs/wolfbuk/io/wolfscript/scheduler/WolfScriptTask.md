@@ -10,25 +10,58 @@ Represents a task being executed by the scheduler
 
 Method | Type   
 --- | :--- 
- function __cancel__() <br> _Returns the taskId for the task._ | `void`
+ readonly property __Owner__ <br> _Get: Returns the Plugin that owns this task._ | [`Plugin`](../plugin/Plugin.md)
+ readonly property __TaskId__ <br> _Get: Returns the taskId for the task._ | `int`
+ function __cancel__() <br> _Will attempt to cancel this task._ | `void`
+ function __isSync__() <br> _Returns true if the Task is a sync task._ | `boolean`
 
 
 
 ---
 
 
+### Public Properties for [`WolfScriptTask`](WolfScriptTask.md)
+
+##### <a id='owner'></a>public  readonly property __Owner__
+
+_Get: Returns the Plugin that owns this task._
+
+Get | Description
+--- | --- 
+[`Plugin`](../plugin/Plugin.md) | The Plugin that owns the task
+
+
+
+##### <a id='taskid'></a>public  readonly property __TaskId__
+
+_Get: Returns the taskId for the task._
+
+Get | Description
+--- | --- 
+`int` | Task id number
+
+
+
+---
+
 ### Public Methods for [`WolfScriptTask`](WolfScriptTask.md)
 
 ##### <a id='cancel'></a>public  function __cancel__()
 
-_Returns the taskId for the task._
+_Will attempt to cancel this task._
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='issync'></a>public  function __isSync__()
+
+_Returns true if the Task is a sync task._
 
 Returns | Description
 --- | --- 
-`void` | Task id number /
-    public int getTaskId();
-
-    /** Returns the Plugin that owns this task.
+`boolean` | true if the task is run by main thread
 
 
 ---

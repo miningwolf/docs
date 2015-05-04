@@ -1,7 +1,7 @@
 ## CakeProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.CakeProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Cake properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyBites__(block, value) <br> _Cake bites property, Values: 0 - 6_ | [`Block`](..\..\Block.md)
-static final var __bites__ <br> _Cake bites property, Values: 0 - 6_ | [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+static function __applyBites__(block, value) <br> _Cake bites property, Values: 0 - 6_ | [`Block`](../../Block.md)
+static final var __bites__ <br> _Cake bites property, Values: 0 - 6_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Cake bites property, Values: 0 - 6 /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `int` | the `int` value to apply (0 - 6)
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Cake bites property, Values: 0 - 6_
 
 >Returns
->  [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+>  [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 
 ---
+
+
 ---
 
 

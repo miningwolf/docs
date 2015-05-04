@@ -40,7 +40,7 @@ _worldTimeTotal method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -53,7 +53,7 @@ _lastIP method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -66,7 +66,7 @@ _group method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -79,7 +79,7 @@ _uptime method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -92,7 +92,7 @@ _playerMax method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -105,7 +105,7 @@ _lastLogin method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -118,7 +118,7 @@ _playerFirstJoin method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -131,7 +131,7 @@ _playerList method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -144,7 +144,7 @@ _playerCount method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -157,7 +157,7 @@ _playerTimePlayed method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -170,7 +170,7 @@ _receiverName method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -183,7 +183,7 @@ _tps method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -196,7 +196,7 @@ _world method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -209,7 +209,7 @@ _worldTimeRaw method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 
@@ -222,7 +222,7 @@ _worldWeather method_
 
 Argument | Type | Description  
 --- | --- | --- 
-msgrec | [`MessageReceiver`](..\chat\MessageReceiver.md) | msgrec argument
+msgrec | [`MessageReceiver`](../chat/MessageReceiver.md) | msgrec argument
 
 Returns | 
 --- | 

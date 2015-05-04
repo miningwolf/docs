@@ -14,7 +14,7 @@ Method | Type
  |
 __Inherited items from [`HangingEntity`](HangingEntity.md)__ |
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

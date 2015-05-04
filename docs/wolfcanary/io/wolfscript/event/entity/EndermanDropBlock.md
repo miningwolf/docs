@@ -1,7 +1,7 @@
 ## EndermanDropBlock __class__
 
 >io.wolfscript.event.entity.EndermanDropBlock
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Enderman drop block hook. Contains information about an Enderman dropping a bloc
 
 Method | Type   
 --- | :--- 
- readonly property __Block__ <br> _Get: Constructs a new EndermanDropBlock_ | [`Block`](..\..\api\world\blocks\Block.md)
+new __EndermanDropBlock__(enderman, block) <br> _Constructs a new EndermanDropBlock_ | _constructor_
+ readonly property __Block__ <br> _Get: Gets the [`Block`](../../api/world/blocks/Block.md)_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Enderman__ <br> _Get: Gets the [`Enderman`](../../api/entity/living/monster/Enderman.md)_ | [`Enderman`](../../api/entity/living/monster/Enderman.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`EndermanDropBlock`](EndermanDropBlock.md)
+
+##### <a id='endermandropblock'></a>new __EndermanDropBlock__(enderman, block) 
+
+_Constructs a new EndermanDropBlock_
+
+Argument | Type | Description  
+--- | --- | --- 
+enderman | [`Enderman`](../../api/entity/living/monster/Enderman.md) | the [`Enderman`](../../api/entity/living/monster/Enderman.md) dropping a block
+block | [`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) being dropped on
+
+---
 
 ### Public Properties for [`EndermanDropBlock`](EndermanDropBlock.md)
 
 ##### <a id='block'></a>public  readonly property __Block__
 
-_Get: Constructs a new EndermanDropBlock_
+_Get: Gets the [`Block`](../../api/world/blocks/Block.md)_
 
 Get | Description
 --- | --- 
-[`Block`](..\..\api\world\blocks\Block.md) | the [`Enderman`](..\..\api\entity\living\monster\Enderman.md) /
-    public Enderman getEnderman() {
-        return enderman;
-    }
+[`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md)
 
-    /** Gets the [`Block`](..\..\api\world\blocks\Block.md)
+
+
+##### <a id='enderman'></a>public  readonly property __Enderman__
+
+_Get: Gets the [`Enderman`](../../api/entity/living/monster/Enderman.md)_
+
+Get | Description
+--- | --- 
+[`Enderman`](../../api/entity/living/monster/Enderman.md) | the [`Enderman`](../../api/entity/living/monster/Enderman.md)
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

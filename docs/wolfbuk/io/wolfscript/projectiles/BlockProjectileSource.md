@@ -11,7 +11,7 @@ interface BlockProjectileSource
 
 Method | Type   
 --- | :--- 
- readonly property __Block__ <br> _Get: Gets the block this projectile source belongs to._ | [`Block`](..\block\Block.md)
+ readonly property __Block__ <br> _Get: Gets the block this projectile source belongs to._ | [`Block`](../block/Block.md)
  |
 __Inherited items from [`ProjectileSource`](ProjectileSource.md)__ |
 
@@ -30,7 +30,7 @@ _Get: Gets the block this projectile source belongs to._
 
 Get | Description
 --- | --- 
-[`Block`](..\block\Block.md) | Block for the projectile source
+[`Block`](../block/Block.md) | Block for the projectile source
 
 
 

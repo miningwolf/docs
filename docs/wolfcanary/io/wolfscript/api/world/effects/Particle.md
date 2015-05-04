@@ -14,7 +14,7 @@ new __Particle__(x, y, z, type) <br> _Particle constructor_ | _constructor_
 new __Particle__(x, y, z, velocityX, velocityY, velocityZ, type) <br> _Particle constructor_ | _constructor_
 new __Particle__(x, y, z, velocityX, velocityY, velocityZ, speed, quantity, type) <br> _Particle constructor_ | _constructor_
  readonly property __McName__ <br> _McName property_ | `String`
-static function __fromName__(name) <br> _fromName method_ | [`Type`](Type.md)
+static function __fromName__(name) <br> _fromName method_ | `Type`
  var __speed__ <br> _speed field_ | `float`
  var __quantity__ <br> _quantity field_ | `int`
 
@@ -33,7 +33,7 @@ Argument | Type | Description
 x | `double` | x argument
 y | `double` | y argument
 z | `double` | z argument
-type | [`Type`](Type.md) | type argument
+type | `Type` | type argument
 
 ##### <a id='particle'></a>new __Particle__(x, y, z, velocityX, velocityY, velocityZ, type) 
 
@@ -47,7 +47,7 @@ z | `double` | z argument
 velocityX | `double` | velocityX argument
 velocityY | `double` | velocityY argument
 velocityZ | `double` | velocityZ argument
-type | [`Type`](Type.md) | type argument
+type | `Type` | type argument
 
 ##### <a id='particle'></a>new __Particle__(x, y, z, velocityX, velocityY, velocityZ, speed, quantity, type) 
 
@@ -63,7 +63,7 @@ velocityY | `double` | velocityY argument
 velocityZ | `double` | velocityZ argument
 speed | `float` | speed argument
 quantity | `int` | quantity argument
-type | [`Type`](Type.md) | type argument
+type | `Type` | type argument
 
 ---
 
@@ -93,7 +93,7 @@ name | `String` | name argument
 
 Returns | 
 --- | 
-[`Type`](Type.md) |
+`Type` |
 
 
 ---

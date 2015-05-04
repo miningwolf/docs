@@ -1,7 +1,7 @@
 ## BlockRightClick __class__
 
 >io.wolfscript.event.player.BlockRightClick
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Is called when a player right-clicks a block, eg. uses it.
 
 Method | Type   
 --- | :--- 
- readonly property __BlockClicked__ <br> _Get: Construct a new BlockRightClick_ | [`Block`](..\..\api\world\blocks\Block.md)
+new __BlockRightClick__(player, clicked) <br> _Construct a new BlockRightClick_ | _constructor_
+ readonly property __BlockClicked__ <br> _Get: Get the [`Block`](../../api/world/blocks/Block.md) that was clicked._ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Player__ <br> _Get: Get the `Player` who clicked the [`Block`](../../api/world/blocks/Block.md)_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`BlockRightClick`](BlockRightClick.md)
+
+##### <a id='blockrightclick'></a>new __BlockRightClick__(player, clicked) 
+
+_Construct a new BlockRightClick_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the Player doing the clicking
+clicked | [`Block`](../../api/world/blocks/Block.md) | the block being clicked
+
+---
 
 ### Public Properties for [`BlockRightClick`](BlockRightClick.md)
 
 ##### <a id='blockclicked'></a>public  readonly property __BlockClicked__
 
-_Get: Construct a new BlockRightClick_
+_Get: Get the [`Block`](../../api/world/blocks/Block.md) that was clicked._
 
 Get | Description
 --- | --- 
-[`Block`](..\..\api\world\blocks\Block.md) | the `Player` clicking /
-    public Player getPlayer() {
-        return player;
-    }
+[`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md) that was clicked
 
-    /** Get the [`Block`](..\..\api\world\blocks\Block.md) that was clicked.
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Get the `Player` who clicked the [`Block`](../../api/world/blocks/Block.md)_
+
+Get | Description
+--- | --- 
+`Player` | the `Player` clicking
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

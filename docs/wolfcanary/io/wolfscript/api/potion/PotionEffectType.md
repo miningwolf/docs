@@ -33,7 +33,9 @@ WITHER: 20<br> _WITHER PotionEffectType_ | PotionEffectType
 HEALTHBOOST: 21<br> _HEALTHBOOST PotionEffectType_ | PotionEffectType
 ABSORPTION: 22<br> _ABSORPTION PotionEffectType_ | PotionEffectType
 SATURATION: 23<br> _SATURATION PotionEffectType_ | PotionEffectType
- readonly property __ID__ <br> _Get: Get a [`PotionEffectType`](PotionEffectType.md) from a name_ | `int`
+ readonly property __ID__ <br> _Get: Gets the PotionEffect ID_ | `int`
+static function __fromId__(int) <br> _Gets a PotionEffectType from an ID_ | [`PotionEffectType`](PotionEffectType.md)
+static function __fromName__(name) <br> _Get a [`PotionEffectType`](PotionEffectType.md) from a name_ | [`PotionEffectType`](PotionEffectType.md)
 
 
 
@@ -44,27 +46,42 @@ SATURATION: 23<br> _SATURATION PotionEffectType_ | PotionEffectType
 
 ##### <a id='id'></a>public  readonly property __ID__
 
-_Get: Get a [`PotionEffectType`](PotionEffectType.md) from a name_
+_Get: Gets the PotionEffect ID_
 
 Get | Description
 --- | --- 
-`int` | PotionType or null if not valid name /
-    public static PotionEffectType fromName(String name) {
-        if (name.contains(".")) {
-            name = name.substring(name.indexOf(".") + 1);
-        }
-        name = name.toUpperCase();
+`int` | the id
 
-        try {
-            return valueOf(name);
-        }
-        catch (IllegalArgumentException iaex) {
-            return null;
-        }
-    }
 
-    /** Gets a PotionEffectType from an ID
 
+---
+
+### Public Methods for [`PotionEffectType`](PotionEffectType.md)
+
+##### <a id='fromid'></a>public static function __fromId__(int)
+
+_Gets a PotionEffectType from an ID_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+Returns | Description
+--- | --- 
+[`PotionEffectType`](PotionEffectType.md) | the PotionEffectType
+
+
+##### <a id='fromname'></a>public static function __fromName__(name)
+
+_Get a [`PotionEffectType`](PotionEffectType.md) from a name_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the name of the PotionEffect
+
+Returns | Description
+--- | --- 
+[`PotionEffectType`](PotionEffectType.md) | PotionType or null if not valid name
 
 
 ---

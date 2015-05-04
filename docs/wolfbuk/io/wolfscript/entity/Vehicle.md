@@ -11,7 +11,7 @@ Represents a vehicle entity.
 
 Method | Type   
 --- | :--- 
- writeonly property __Velocity__ <br> _Set: Gets the vehicle's velocity._ | `void`
+  property __Velocity__ <br> _Get: Gets the vehicle's velocity.<br>Set: Sets the vehicle's velocity._ | `Vector`
 
 
 
@@ -20,16 +20,13 @@ Method | Type
 
 ### Public Properties for [`Vehicle`](Vehicle.md)
 
-##### <a id='velocity'></a>public  writeonly property __Velocity__
+##### <a id='velocity'></a>public   property __Velocity__
 
-_Set: Gets the vehicle's velocity._
+_Get: Gets the vehicle's velocity.<br>Set: Sets the vehicle's velocity._
 
 Get | Description
 --- | --- 
-`void` | velocity vector /
-    public Vector getVelocity();
-
-    /** Sets the vehicle's velocity.
+`Vector` | velocity vector
 
 Set | Type | Description  
 --- | --- | --- 

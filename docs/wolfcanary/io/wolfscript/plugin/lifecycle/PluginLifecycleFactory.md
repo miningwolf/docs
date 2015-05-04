@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-Factory to create [`PluginLifecycle`](..\PluginLifecycle.md) instances based on Wolf.inf (inside a [`PluginDescriptor`](..\PluginDescriptor.md)
+Factory to create [`PluginLifecycle`](../PluginLifecycle.md) instances based on Wolf.inf (inside a [`PluginDescriptor`](../PluginDescriptor.md)
 
 Method | Type   
 --- | :--- 

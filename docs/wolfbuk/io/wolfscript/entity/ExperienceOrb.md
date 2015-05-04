@@ -11,7 +11,7 @@ Represents an Experience Orb.
 
 Method | Type   
 --- | :--- 
- writeonly property __Experience__ <br> _Set: Gets how much experience is contained within this orb_ | `void`
+  property __Experience__ <br> _Get: Gets how much experience is contained within this orb<br>Set: Sets how much experience is contained within this orb_ | `int`
 
 
 
@@ -20,16 +20,13 @@ Method | Type
 
 ### Public Properties for [`ExperienceOrb`](ExperienceOrb.md)
 
-##### <a id='experience'></a>public  writeonly property __Experience__
+##### <a id='experience'></a>public   property __Experience__
 
-_Set: Gets how much experience is contained within this orb_
+_Get: Gets how much experience is contained within this orb<br>Set: Sets how much experience is contained within this orb_
 
 Get | Description
 --- | --- 
-`void` | Amount of experience /
-    public int getExperience();
-
-    /** Sets how much experience is contained within this orb
+`int` | Amount of experience
 
 Set | Type | Description  
 --- | --- | --- 

@@ -1,7 +1,7 @@
 ## BlockGrow __class__
 
 >io.wolfscript.event.world.BlockGrow
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -12,17 +12,19 @@ Called when a block "grows"
 Method | Type   
 --- | :--- 
 new __BlockGrow__(original, growth) <br> _BlockGrow constructor_ | _constructor_
- readonly property __Growth__ <br> _Growth property_ | [`Block`](..\..\api\world\blocks\Block.md)
- readonly property __Original__ <br> _Original property_ | [`Block`](..\..\api\world\blocks\Block.md)
+ readonly property __Growth__ <br> _Growth property_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Original__ <br> _Original property_ | [`Block`](../../api/world/blocks/Block.md)
  function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,8 +42,8 @@ _BlockGrow constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-original | [`Block`](..\..\api\world\blocks\Block.md) | original argument
-growth | [`Block`](..\..\api\world\blocks\Block.md) | growth argument
+original | [`Block`](../../api/world/blocks/Block.md) | original argument
+growth | [`Block`](../../api/world/blocks/Block.md) | growth argument
 
 ---
 
@@ -53,7 +55,7 @@ _Growth property_
 
 Get | 
 --- | 
-[`Block`](..\..\api\world\blocks\Block.md) |
+[`Block`](../../api/world/blocks/Block.md) |
 
 
 
@@ -63,7 +65,7 @@ _Original property_
 
 Get | 
 --- | 
-[`Block`](..\..\api\world\blocks\Block.md) |
+[`Block`](../../api/world/blocks/Block.md) |
 
 
 
@@ -82,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -90,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -113,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

@@ -1,7 +1,7 @@
 ## FarmlandProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.FarmlandProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Farmland properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyMositure__(block, value) <br> _Farmland moisture property, Values: 0 - 7_ | [`Block`](..\..\Block.md)
-static final var __moisture__ <br> _Farmland moisture property, Values: 0 - 7_ | [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+static function __applyMositure__(block, value) <br> _Farmland moisture property, Values: 0 - 7_ | [`Block`](../../Block.md)
+static final var __moisture__ <br> _Farmland moisture property, Values: 0 - 7_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Farmland moisture property, Values: 0 - 7 /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `int` | the `int` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Farmland moisture property, Values: 0 - 7_
 
 >Returns
->  [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+>  [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 
 ---
+
+
 ---
 
 

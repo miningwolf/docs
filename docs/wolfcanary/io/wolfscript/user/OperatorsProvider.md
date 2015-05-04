@@ -11,7 +11,13 @@ Access to the backbone for operators
 Method | Type   
 --- | :--- 
 new __OperatorsProvider__() <br> _OperatorsProvider constructor_ | _constructor_
- readonly property __Ops__ <br> _Get: Reload the ops from database_ | `String[]`
+ readonly property __Ops__ <br> _Get: Gets an array of all Operators_ | `String[]`
+ readonly property __Size__ <br> _Get: gets the current size of the ops list_ | `int`
+ function __addPlayer__(entry) <br> _Adds a new operators entry_ | `void`
+ function __isOpped__(nameOrUUID) <br> _Check if a given Player name or UUID is opped._ | `boolean`
+ function __isOpped__(playerReference) <br> _isOpped method_ | `boolean`
+ function __reload__() <br> _Reload the ops from database_ | `void`
+ function __removePlayer__(entry) <br> _Removes the given player from the ops list_ | `void`
 
 
 
@@ -30,83 +36,87 @@ _OperatorsProvider constructor_
 
 ##### <a id='ops'></a>public  readonly property __Ops__
 
-_Get: Reload the ops from database /
-    public void reload() {
-        ops = backboneOps.loadOps();
-        readOpsCfg();
-    }
+_Get: Gets an array of all Operators_
 
-    /** Reads the config/ops.cfg file if it exists and updates the database with the names found in it. /
-    private void readOpsCfg() {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File("config/ops.cfg")));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.startsWith("#")) {
-                    continue;
-                }
-                if (!isOpped(line)) {
-                    addPlayer(line);
-                }
-            }
-        }
-        catch (FileNotFoundException e) {
-            log.info("Could not find config/ops.cfg. Creating one for you...");
-            File f = new File("config/ops.cfg");
-            try {
-                if (f.createNewFile()) {
-                    PrintWriter pwriter = new PrintWriter(new FileWriter(f));
-                    pwriter.println("# Note: This file is not guaranteed to be synchronous with the actual ops list in database.");
-                    pwriter.println("# However, you may use it to quickly add new operators as you please.");
-                    pwriter.println("# Any duplicate entries will be taken care of so don't worry.");
-                    pwriter.println("# Lines starting with # are comments ;)");
-                    pwriter.println("# Add one name to each line.");
-                    pwriter.close();
-                    log.info("You can now add ops to config/ops.cfg (one per line!). We left you a note.");
-                }
-            }
-            catch (IOException e1) {
-                log.error("Failed to write config/ops.cfg! (Probably no write-access!)", e);
-            }
-        }
-        catch (IOException e) {
-            log.error("Failed to read from config/ops.cfg!", e);
-        }
-    }
+Get | 
+--- | 
+`String[]` |
 
-    /** Check if a given Player name or UUID is opped._
+
+
+##### <a id='size'></a>public  readonly property __Size__
+
+_Get: gets the current size of the ops list_
 
 Get | Description
 --- | --- 
-`String[]` | true if player is opped, false otherwise /
-    public boolean isOpped(String nameOrUUID) {
-        // Did UUID get passed?
-        if (ToolBox.isUUID(nameOrUUID)) {
-            return ops.contains(nameOrUUID);
-        }
-        else {
-            return ops.contains(ToolBox.usernameToUUID(nameOrUUID));
-        }
-    }
+`int` | the size
 
-    public boolean isOpped(PlayerReference playerReference) {
-        if (playerReference != null) {
-            // Lets update to UUID if we can get a UUID
-            if (ops.contains(playerReference.getName())) {
-                if (playerReference.getUUIDString() != null) {
-                    removePlayer(playerReference.getName());
-                    addPlayer(playerReference.getUUIDString());
-                }
-                return true;
-            }
-            // UUID test it is
-            return ops.contains(playerReference.getUUIDString());
-        }
-        return false;
-    }
 
-    /** Adds a new operators entry
 
+---
+
+### Public Methods for [`OperatorsProvider`](OperatorsProvider.md)
+
+##### <a id='addplayer'></a>public  function __addPlayer__(entry)
+
+_Adds a new operators entry_
+
+Argument | Type | Description  
+--- | --- | --- 
+entry | `String` | the player uuid/name you want to add
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='isopped'></a>public  function __isOpped__(nameOrUUID)
+
+_Check if a given Player name or UUID is opped._
+
+Argument | Type | Description  
+--- | --- | --- 
+nameOrUUID | `String` | the uuid/name of a player
+
+Returns | Description
+--- | --- 
+`boolean` | true if player is opped, false otherwise
+
+
+##### <a id='isopped'></a>public  function __isOpped__(playerReference)
+
+_isOpped method_
+
+Argument | Type | Description  
+--- | --- | --- 
+playerReference | [`PlayerReference`](../api/PlayerReference.md) | playerReference argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='reload'></a>public  function __reload__()
+
+_Reload the ops from database_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='removeplayer'></a>public  function __removePlayer__(entry)
+
+_Removes the given player from the ops list_
+
+Argument | Type | Description  
+--- | --- | --- 
+entry | `String` | the player uuid/name you want to remove
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

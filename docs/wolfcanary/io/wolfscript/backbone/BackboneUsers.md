@@ -12,7 +12,13 @@ Backbone to the Player System. This contains NO logic, it is only the data sourc
 Method | Type   
 --- | :--- 
 new __BackboneUsers__() <br> _BackboneUsers constructor_ | _constructor_
- function __validateUsers__() <br> _Add a new Player to the data source._ | `void`
+ function __addUser__(player) <br> _Add a new Player to the data source._ | `void`
+ function __addUser__(nameOrUUID, group) <br> _Used to update a player. This can not override existing player entries._ | `void`
+static function __createDefaults__() <br> _createDefaults method_ | `void`
+ function __getModularGroups__(uuid) <br> _Load and return String array sets._ | `Group[]`
+ function __removeUser__(uuid) <br> _Remove a player from the data source_ | `void`
+ function __updatePlayer__(player) <br> _Update a Player._ | `void`
+ function __validateUsers__() <br> _Validate all user entries in the database._ | `void`
  |
 __Inherited items from [`Backbone`](Backbone.md)__ |
 new __Backbone__(system) <br> _Backbone constructor_ | _constructor_
@@ -35,29 +41,113 @@ _BackboneUsers constructor_
 
 ### Public Methods for [`BackboneUsers`](BackboneUsers.md)
 
-##### <a id='validateusers'></a>public  function __validateUsers__()
+##### <a id='adduser'></a>public  function __addUser__(player)
 
 _Add a new Player to the data source._
 
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | Player to add to the data source.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='adduser'></a>public  function __addUser__(nameOrUUID, group)
+
+_Used to update a player. This can not override existing player entries. If there is a player with the uuid name, nothing will happen_
+
+Argument | Type | Description  
+--- | --- | --- 
+nameOrUUID | `String` | the player's name or uuid
+group | `String` | the group's name
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='createdefaults'></a>public static function __createDefaults__()
+
+_createDefaults method_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='getmodulargroups'></a>public  function __getModularGroups__(uuid)
+
+_Load and return String array sets. Each Array in the hashMap value has prefix, group and isMuted for a player, in that order._
+
+Argument | Type | Description  
+--- | --- | --- 
+uuid | `String` | the player's name
+
 Returns | Description
 --- | --- 
-`void` | true if user exists, false otherwise /
-    private boolean userExists(String uuid) {
-        PlayerDataAccess data = new PlayerDataAccess();
+`Group[]` | A hashmap with a key of player name, and string array value with a prefix and group for a player, in that order. /
+    public Map<String, String[]> loadUsers() {
+        Map<String, String[]> players = new HashMap<String, String[]>();
+        List<DataAccess> daos = new ArrayList<DataAccess>();
 
         try {
-            HashMap<String, Object> filter = new HashMap<String, Object>();
-            filter.put("uuid", uuid);
-            Database.get().load(data, filter);
+            Database.get().loadAll(schema, daos, new HashMap<String, Object>());
+            for (DataAccess dao : daos) {
+                PlayerDataAccess data = (PlayerDataAccess)dao;
+                String[] row = new String[3];
+
+                row[0] = data.prefix;
+                row[1] = data.group;
+                row[2] = Boolean.toString(data.isMuted);
+                players.put(data.uuid == null ? "" : data.uuid, row);
+            }
+            return players;
         }
         catch (DatabaseReadException e) {
             log.error(e.getMessage(), e);
         }
 
-        return data.hasData();
+        return null;
     }
 
-    /** Remove a player from the data source
+    /** Returns the additional groups for the given player
+
+
+##### <a id='removeuser'></a>public  function __removeUser__(uuid)
+
+_Remove a player from the data source_
+
+Argument | Type | Description  
+--- | --- | --- 
+uuid | `String` | Player to remove from the data source.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='updateplayer'></a>public  function __updatePlayer__(player)
+
+_Update a Player._
+
+Argument | Type | Description  
+--- | --- | --- 
+player | [`PlayerReference`](../api/PlayerReference.md) | Player to update to the data source.
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='validateusers'></a>public  function __validateUsers__()
+
+_Validate all user entries in the database. At this time it merely checks that all entries have a valid UUID.  If an entry does not, it attempts to retrieve it from Mojang's web service and_
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

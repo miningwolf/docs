@@ -1,7 +1,7 @@
 ## BanDataAccess __class__
 
 >io.wolfscript.backbone.BanDataAccess
->Extends [`DataAccess`](..\database\DataAccess.md)
+>Extends [`DataAccess`](../database/DataAccess.md)
 
 ---
 
@@ -12,11 +12,25 @@ Ban Data Access
 Method | Type   
 --- | :--- 
 new __BanDataAccess__() <br> _BanDataAccess constructor_ | _constructor_
- readonly property __Instance__ <br> _Instance property_ | [`DataAccess`](..\database\DataAccess.md)
- var __issuedDate__ <br> _Player uuid for this ban._ | `long`
+ readonly property __Instance__ <br> _Instance property_ | [`DataAccess`](../database/DataAccess.md)
+ var __uuid__ <br> _Player uuid for this ban._ | `String`
+ var __player__ <br> _Player name for this ban._ | `String`
+ var __ip__ <br> _IP Address for this ban._ | `String`
+ var __reason__ <br> _Reason for this ban._ | `String`
+ var __unbanDate__ <br> _Player who banned this player._ | `long`
+ var __issuedDate__ <br> _Date ban issued._ | `long`
  |
-__Inherited items from [`DataAccess`](..\database\DataAccess.md)__ |
-abstract readonly property __Instance__ <br> _Get: Construct a new DataAccess object that represents a table_ | [`DataAccess`](..\database\DataAccess.md)
+__Inherited items from [`DataAccess`](../database/DataAccess.md)__ |
+new __DataAccess__(tableName) <br> _Construct a new DataAccess object that represents a table_ | _constructor_
+new __DataAccess__(tableName, tableSuffix) <br> _DataAccess constructor_ | _constructor_
+abstract readonly property __Instance__ <br> _Get: Returns an empty instance of this [`DataAccess`](../database/DataAccess.md) object_ | [`DataAccess`](../database/DataAccess.md)
+final readonly property __Name__ <br> _Get: Load a Data set into this DataAccess object_ | `String`
+final function __getColumnForName__(name) <br> _Retrieves a Column with the given name from this DataAccess._ | `Column`
+final function __hasColumn__(name) <br> _Checks if this [`DataAccess`](../database/DataAccess.md) has a Column with the given name._ | `boolean`
+final function __hasData__() <br> _Check if there is data in this DataAccess object._ | `boolean`
+final function __isInconsistent__() <br> _Returns true if this DataAccess object has been marked as inconsistent._ | `boolean`
+final function __isLoaded__() <br> _Check if this DataAccess has been loaded properly_ | `boolean`
+ function __toString__() <br> _Converts this DataAccess object into a string representation._ | `String`
  var __id__ <br> _id field_ | `Integer`
 
 
@@ -42,7 +56,7 @@ _Instance property_
 
 Get | 
 --- | 
-[`DataAccess`](..\database\DataAccess.md) |
+[`DataAccess`](../database/DataAccess.md) |
 
 
 
@@ -50,54 +64,161 @@ Get |
 
 ### Public Fields for [`BanDataAccess`](BanDataAccess.md)
 
+##### <a id='uuid'></a>public  var __uuid__
+
+_Player uuid for this ban._
+
+>Returns
+>  `String`
+
+##### <a id='player'></a>public  var __player__
+
+_Player name for this ban._
+
+>Returns
+>  `String`
+
+##### <a id='ip'></a>public  var __ip__
+
+_IP Address for this ban._
+
+>Returns
+>  `String`
+
+##### <a id='reason'></a>public  var __reason__
+
+_Reason for this ban._
+
+>Returns
+>  `String`
+
+##### <a id='unbandate'></a>public  var __unbanDate__
+
+_Player who banned this player._
+
+>Returns
+>  `long`
+
 ##### <a id='issueddate'></a>public  var __issuedDate__
 
-_Player uuid for this ban. /
-    @Column(columnName = "uuid", dataType = DataType.STRING)
-    public String uuid;
-
-    /** Player name for this ban. /
-    @Column(columnName = "player", dataType = DataType.STRING)
-    public String player;
-
-    /** IP Address for this ban. /
-    @Column(columnName = "ip", dataType = DataType.STRING)
-    public String ip;
-
-    /** Reason for this ban. /
-    @Column(columnName = "reason", dataType = DataType.STRING)
-    public String reason;
-
-    /** Player who banned this player. /
-    @Column(columnName = "banningPlayer", dataType = DataType.STRING)
-    public String banningPlayer;
-
-    /** Date to unban. /
-    @Column(columnName = "unbanDate", dataType = DataType.LONG)
-    public long unbanDate = -1;
-
-    /** Date ban issued._
+_Date ban issued._
 
 >Returns
 >  `long`
 
 ---
+### Public Constructors for [`DataAccess`](../database/DataAccess.md)
 
-### Public Properties for [`DataAccess`](..\database\DataAccess.md)
+##### <a id='dataaccess'></a>new __DataAccess__(tableName) 
+
+_Construct a new DataAccess object that represents a table in the database with the given name. This AccessObject is empty after it has been created. You need to get data from Database and load it. WolfScript will do this for you. For this simply call Wolf.db().load(yourDataAccess, String[]lookupFields, Object[]whereData); This will fill your AccessObject._
+
+Argument | Type | Description  
+--- | --- | --- 
+tableName | `String` | The table name
+
+##### <a id='dataaccess'></a>new __DataAccess__(tableName, tableSuffix) 
+
+_DataAccess constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+tableName | `String` | tableName argument
+tableSuffix | `String` | tableSuffix argument
+
+---
+
+### Public Properties for [`DataAccess`](../database/DataAccess.md)
 
 ##### <a id='instance'></a>public abstract readonly property __Instance__
 
-_Get: Construct a new DataAccess object that represents a table in the database with the given name. This AccessObject is empty after it has been created. You need to get data from Database and load it. WolfScript will do this for you. For this simply call Wolf.db().load(yourDataAccess, String[]lookupFields, Object[]whereData); This will fill your AccessObject._
+_Get: Returns an empty instance of this [`DataAccess`](../database/DataAccess.md) object_
 
 Get | Description
 --- | --- 
-[`DataAccess`](..\database\DataAccess.md) | HashMap that maps the Column meta data to the data present in database.
+[`DataAccess`](../database/DataAccess.md) | instance
+
+
+
+##### <a id='name'></a>public final readonly property __Name__
+
+_Get: Load a Data set into this DataAccess object_
+
+Get | Description
+--- | --- 
+`String` | HashMap that maps the Column meta data to the data present in database.
 
 
 
 ---
 
-### Public Fields for [`DataAccess`](..\database\DataAccess.md)
+### Public Methods for [`DataAccess`](../database/DataAccess.md)
+
+##### <a id='getcolumnforname'></a>public final function __getColumnForName__(name)
+
+_Retrieves a Column with the given name from this DataAccess._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the column name
+
+Returns | Description
+--- | --- 
+`Column` | a column or null if there is no column with the name given
+
+
+##### <a id='hascolumn'></a>public final function __hasColumn__(name)
+
+_Checks if this [`DataAccess`](../database/DataAccess.md) has a Column with the given name._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the name to check for
+
+Returns | Description
+--- | --- 
+`boolean` | true if DataAccess has this column, false otherwise
+
+
+##### <a id='hasdata'></a>public final function __hasData__()
+
+_Check if there is data in this DataAccess object. This will also return false if there was an exception while the data has been loaded_
+
+Returns | Description
+--- | --- 
+`boolean` | true if this [`DataAccess`](../database/DataAccess.md) contains data
+
+
+##### <a id='isinconsistent'></a>public final function __isInconsistent__()
+
+_Returns true if this DataAccess object has been marked as inconsistent. Inconsistent DataAccess objects will not be saved into the database. This is probably rarely going to be true but it's an extra security measure to keep the data safe and consistent_
+
+Returns | Description
+--- | --- 
+`boolean` | true if this object is inconsistent to the database schema, false otherwise
+
+
+##### <a id='isloaded'></a>public final function __isLoaded__()
+
+_Check if this DataAccess has been loaded properly_
+
+Returns | Description
+--- | --- 
+`boolean` | true if a load has been attempted for this [`DataAccess`](../database/DataAccess.md)
+
+
+##### <a id='tostring'></a>public  function __toString__()
+
+_Converts this DataAccess object into a string representation.<br> Format: Table : tableName { [`columnName`,'fieldName'] }_
+
+Returns | Description
+--- | --- 
+`String` | string representation
+
+
+---
+
+### Public Fields for [`DataAccess`](../database/DataAccess.md)
 
 ##### <a id='id'></a>public  var __id__
 

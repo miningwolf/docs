@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API TNTActivate</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../../index.html'>Home </a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>wolfcanary</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>event</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>world</a></li>
+<li class='current'><a href='#'>TNTActivate</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/api/0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/backbone/0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/bansystem/0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/channels/0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/chat/0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/commandsys/0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/config/0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/converter/0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/command/0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/system/0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ActivationCause.html'>ActivationCause</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockDropXp.html'>BlockDropXp</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockGrow.html'>BlockGrow</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockPhysics.html'>BlockPhysics</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockUpdate.html'>BlockUpdate</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkCreated.html'>ChunkCreated</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkCreation.html'>ChunkCreation</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkLoaded.html'>ChunkLoaded</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkUnload.html'>ChunkUnload</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Decorate.html'>Decorate</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Dispense.html'>Dispense</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Explosion.html'>Explosion</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/FireworkExplode.html'>FireworkExplode</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Flow.html'>Flow</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/HopperTransfer.html'>HopperTransfer</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Ignition.html'>Ignition</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/IgnitionCause.html'>IgnitionCause</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LeafDecay.html'>LeafDecay</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LightningStrike.html'>LightningStrike</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LiquidDestroy.html'>LiquidDestroy</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/NoteBlockPlay.html'>NoteBlockPlay</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PistonExtend.html'>PistonExtend</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PistonRetract.html'>PistonRetract</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PortalCreate.html'>PortalCreate</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PortalDestroy.html'>PortalDestroy</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/RedstoneChange.html'>RedstoneChange</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/Smelt.html'>Smelt</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/SmeltBegin.html'>SmeltBegin</a></li>
+<li class='active'><a href='../../../../../wolfcanary/io/wolfscript/event/world/TNTActivate.html'>TNTActivate</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/TimeChange.html'>TimeChange</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/TreeGrow.html'>TreeGrow</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/WeatherChange.html'>WeatherChange</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/exceptions/0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/hook/0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/kit/0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/logger/0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/metrics/0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/motd/0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/permissionsystem/0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/serialize/0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/tasks/0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/user/0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/warp/0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="tntactivate-__class__">TNTActivate <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.world.TNTActivate
+Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>TNT Activate Hook <p/> Called when a TNT block or TNTMinecart is activated</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>TNTActivate</strong>(tnt, activator, cause) <br> <em>Constructs a new TNTActivate for a TNT Block</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>TNTActivate</strong>(tntMinecart) <br> <em>Constucts a new TNTActivate for a <code>TNTMinecart</code></em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Activator</strong> <br> <em>Get: Gets the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> that is causing the TNT to activate (if applicable)</em></td>
+<td style="text-align:left"><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Cause</strong> <br> <em>Get: Gets the <code>ActivationCause</code> of the TNT Activation</em></td>
+<td style="text-align:left"><code>ActivationCause</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>TNT</strong> <br> <em>Get: Gets the <a href="../../api/world/blocks/Block.html"><code>Block</code></a> of TNT being activated if not a TNTMinecart call</em></td>
+<td style="text-align:left"><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>TNTCart</strong> <br> <em>Get: Gets the <code>TNTMinecart</code> being activated if not a TNT Block</em></td>
+<td style="text-align:left"><code>TNTMinecart</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>{@inheritDoc}</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
+<td style="text-align:left"><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isCanceled</strong>() <br> <em>isCanceled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>setCanceled</strong>() <br> <em>setCanceled method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../../hook/Hook.html"><code>Hook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>final readonly property <strong>HookName</strong> <br> <em>Get: Get the name of this hook.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
+<td style="text-align:left"><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+</tr>
+<tr>
+<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-tntactivate-tntactivate-md-">Public Constructors for <a href="TNTActivate.html"><code>TNTActivate</code></a></h3>
+<h5 id="-a-id-tntactivate-a-new-__tntactivate__-tnt-activator-cause-"><a id='tntactivate'></a>new <strong>TNTActivate</strong>(tnt, activator, cause)</h5>
+<p><em>Constructs a new TNTActivate for a TNT Block</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tnt</td>
+<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
+<td>the TNT being activated</td>
+</tr>
+<tr>
+<td>activator</td>
+<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
+<td>the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> activating the TNT if present</td>
+</tr>
+<tr>
+<td>cause</td>
+<td><code>ActivationCause</code></td>
+<td>the <code>ActivationCause</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tntactivate-a-new-__tntactivate__-tntminecart-"><a id='tntactivate'></a>new <strong>TNTActivate</strong>(tntMinecart)</h5>
+<p><em>Constucts a new TNTActivate for a <code>TNTMinecart</code></em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tntMinecart</td>
+<td><code>TNTMinecart</code></td>
+<td>the TNTMinecart being activated</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-tntactivate-tntactivate-md-">Public Properties for <a href="TNTActivate.html"><code>TNTActivate</code></a></h3>
+<h5 id="-a-id-activator-a-public-readonly-property-__activator__"><a id='activator'></a>public  readonly property <strong>Activator</strong></h5>
+<p><em>Get: Gets the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> that is causing the TNT to activate (if applicable)</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a></td>
+<td>the <a href="../../api/entity/living/LivingBase.html"><code>LivingBase</code></a> if present; <code>null</code> otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-cause-a-public-readonly-property-__cause__"><a id='cause'></a>public  readonly property <strong>Cause</strong></h5>
+<p><em>Get: Gets the <code>ActivationCause</code> of the TNT Activation</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActivationCause</code></td>
+<td>the <code>ActivationCause</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tnt-a-public-readonly-property-__tnt__"><a id='tnt'></a>public  readonly property <strong>TNT</strong></h5>
+<p><em>Get: Gets the <a href="../../api/world/blocks/Block.html"><code>Block</code></a> of TNT being activated if not a TNTMinecart call</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../api/world/blocks/Block.html"><code>Block</code></a></td>
+<td>the <a href="../../api/world/blocks/Block.html"><code>Block</code></a> of TNT; <code>null</code> if TNTMinecart</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tntcart-a-public-readonly-property-__tntcart__"><a id='tntcart'></a>public  readonly property <strong>TNTCart</strong></h5>
+<p><em>Get: Gets the <code>TNTMinecart</code> being activated if not a TNT Block</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TNTMinecart</code></td>
+<td>the <code>TNTMinecart</code>; <code>null</code> if TNT Block</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-tntactivate-tntactivate-md-">Public Methods for <a href="TNTActivate.html"><code>TNTActivate</code></a></h3>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>{@inheritDoc}</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-cancelablehook-hook-cancelablehook-md-">Public Methods for <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Calls a Hook if not already executed</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+<td>this</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-iscanceled-a-public-function-__iscanceled__-"><a id='iscanceled'></a>public  function <strong>isCanceled</strong>()</h5>
+<p><em>isCanceled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setcanceled-a-public-function-__setcanceled__-"><a id='setcanceled'></a>public  function <strong>setCanceled</strong>()</h5>
+<p><em>setCanceled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-hook-hook-hook-md-">Public Properties for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-hookname-a-public-final-readonly-property-__hookname__"><a id='hookname'></a>public final readonly property <strong>HookName</strong></h5>
+<p><em>Get: Get the name of this hook.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>simple class name</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-hook-hook-hook-md-">Public Methods for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Calls a Hook if not already executed</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+<td>this</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
+<p><em>hashCode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

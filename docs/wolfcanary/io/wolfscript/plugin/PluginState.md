@@ -10,7 +10,8 @@ Indicates a plugin's current state.
 
 Item | Type   
 --- | :--- 
-ENABLED: <br> _Indicates the plugin is known, but not yet loaded_ | PluginState
+KNOWN: <br> _Indicates the plugin is known, but not yet loaded_ | PluginState
+ENABLED: <br> _Indicates the plugin is loaded and enabled_ | PluginState
 
 
 

@@ -31,7 +31,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\..\..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../../../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 
@@ -48,7 +48,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\..\..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../../../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 

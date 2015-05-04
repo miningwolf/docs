@@ -1,7 +1,7 @@
 ## Connection __class__
 
 >io.wolfscript.event.player.Connection
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,17 @@ Connection hook. Contains information about a player connecting.
 Method | Type   
 --- | :--- 
 new __Connection__(player, message, firstTime) <br> _Connection constructor_ | _constructor_
- writeonly property __Hidden__ <br> _Set: Gets the `Player`_ | `void`
+  property __Message__ <br> _Get: Gets the message sent to all<br>Set: Sets the message set to all_ | `String`
+ readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
+ writeonly property __Hidden__ <br> _Set: Sets whether this should be a hidden connect/disconnect_ | `void`
+ function __isFirstConnection__() <br> _Returns true if this player has never connected before._ | `boolean`
+ function __isHidden__() <br> _Gets whether this should be a hidden connect/disconnect_ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,18 +46,36 @@ firstTime | `boolean` | firstTime argument
 
 ### Public Properties for [`Connection`](Connection.md)
 
-##### <a id='hidden'></a>public  writeonly property __Hidden__
+##### <a id='message'></a>public   property __Message__
 
-_Set: Gets the `Player`_
+_Get: Gets the message sent to all<br>Set: Sets the message set to all_
 
 Get | Description
 --- | --- 
-`void` | the `Player` /
-    public Player getPlayer() {
-        return player;
-    }
+`String` | the message sent to all
 
-    /** Gets the message sent to all
+Set | Type | Description  
+--- | --- | --- 
+message | `String` | the message to be sent
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player`_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
+
+
+
+##### <a id='hidden'></a>public  writeonly property __Hidden__
+
+_Set: Sets whether this should be a hidden connect/disconnect_
+
+Get | 
+--- | 
+`void` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -61,6 +85,24 @@ hidden | `boolean` | `true` to hide message; `false` for not
 ---
 
 ### Public Methods for [`Connection`](Connection.md)
+
+##### <a id='isfirstconnection'></a>public  function __isFirstConnection__()
+
+_Returns true if this player has never connected before._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if first connection; `false` if not
+
+
+##### <a id='ishidden'></a>public  function __isHidden__()
+
+_Gets whether this should be a hidden connect/disconnect_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` for hidden; `false` for not
+
 
 ##### <a id='tostring'></a>public final function __toString__()
 
@@ -73,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

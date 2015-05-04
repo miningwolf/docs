@@ -27,7 +27,7 @@ Argument | Type | Description
 --- | --- | --- 
 world | `World` | The world to generate in
 random | `Random` | The random generator to use
-source | [`Chunk`](..\Chunk.md) | The chunk to generate for
+source | [`Chunk`](../Chunk.md) | The chunk to generate for
 
 Returns | 
 --- | 

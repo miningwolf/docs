@@ -12,7 +12,32 @@ Handles all plugin management from the Server
 Method | Type   
 --- | :--- 
 new __SimplePluginManager__(instance, commandMap) <br> _SimplePluginManager constructor_ | _constructor_
- function __useTimings__(use) <br> _Registers the specified plugin loader_ | `void`
+ readonly property __Permissions__ <br> _Permissions property_ | `Set<Permission>`
+ function __getDefaultPermissions__(op) <br> _getDefaultPermissions method_ | `Set<Permission>`
+ function __loadPlugins__(directory) <br> _Registers the specified plugin loader_ | `Plugin[]`
+ function __isPluginEnabled__(plugin) <br> _Checks if the given plugin is enabled or not_ | `boolean`
+ function __enablePlugin__(Plugin) <br> _enablePlugin method_ | `void`
+ function __disablePlugins__() <br> _disablePlugins method_ | `void`
+ function __disablePlugin__(Plugin) <br> _disablePlugin method_ | `void`
+ function __clearPlugins__() <br> _clearPlugins method_ | `void`
+ function __callEvent__(event) <br> _Calls an event with the given details._ | `void`
+ function __getDefaultPermSubscriptions__(op) <br> _getDefaultPermSubscriptions method_ | `Set<Permissible>`
+ function __getPermissionSubscriptions__(permission) <br> _getPermissionSubscriptions method_ | `Set<Permissible>`
+ function __getPermission__(name) <br> _getPermission method_ | [`Permission`](../permissions/Permission.md)
+ function __addPermission__(perm) <br> _addPermission method_ | `void`
+ function __isPluginEnabled__(name) <br> _Loads the plugin in the specified file_ | `boolean`
+ function __subscribeToDefaultPerms__(op, permissible) <br> _subscribeToDefaultPerms method_ | `void`
+ function __removePermission__(perm) <br> _removePermission method_ | `void`
+ function __recalculatePermissionDefaults__(perm) <br> _recalculatePermissionDefaults method_ | `void`
+ function __registerEvents__(listener, plugin) <br> _registerEvents method_ | `void`
+ function __registerEvent__(Event, listener, priority, executor, plugin) <br> _registerEvent method_ | `void`
+ function __registerEvent__(Event, listener, priority, executor, plugin, ignoreCancelled) <br> _Registers the given event to the specified listener using a directly_ | `void`
+ function __removePermission__(name) <br> _removePermission method_ | `void`
+ function __subscribeToPermission__(permission, permissible) <br> _subscribeToPermission method_ | `void`
+ function __unsubscribeFromDefaultPerms__(op, permissible) <br> _unsubscribeFromDefaultPerms method_ | `void`
+ function __unsubscribeFromPermission__(permission, permissible) <br> _unsubscribeFromPermission method_ | `void`
+ function __useTimings__() <br> _useTimings method_ | `boolean`
+ function __useTimings__(use) <br> _Sets whether or not per event timing code should be used_ | `void`
 
 
 
@@ -26,223 +51,352 @@ _SimplePluginManager constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-instance | [`Server`](..\Server.md) | instance argument
-commandMap | [`SimpleCommandMap`](..\command\SimpleCommandMap.md) | commandMap argument
+instance | [`Server`](../Server.md) | instance argument
+commandMap | [`SimpleCommandMap`](../command/SimpleCommandMap.md) | commandMap argument
+
+---
+
+### Public Properties for [`SimplePluginManager`](SimplePluginManager.md)
+
+##### <a id='permissions'></a>public  readonly property __Permissions__
+
+_Permissions property_
+
+Get | 
+--- | 
+`Set<Permission>` |
+
+
 
 ---
 
 ### Public Methods for [`SimplePluginManager`](SimplePluginManager.md)
 
-##### <a id='usetimings'></a>public  function __useTimings__(use)
+##### <a id='getdefaultpermissions'></a>public  function __getDefaultPermissions__(op)
+
+_getDefaultPermissions method_
+
+Argument | Type | Description  
+--- | --- | --- 
+op | `boolean` | op argument
+
+Returns | 
+--- | 
+`Set<Permission>` |
+
+
+##### <a id='loadplugins'></a>public  function __loadPlugins__(directory)
 
 _Registers the specified plugin loader_
 
 Argument | Type | Description  
 --- | --- | --- 
-use | `boolean` | True if per event timing code should be used
+directory | `File` | Directory to check for plugins
 
 Returns | Description
 --- | --- 
-`void` | A list of all plugins loaded /
-    public Plugin[] loadPlugins(File directory) {
-        Validate.notNull(directory, "Directory cannot be null");
-        Validate.isTrue(directory.isDirectory(), "Directory must be a directory");
+`Plugin[]` | A list of all plugins loaded
 
-        List<Plugin> result = new ArrayList<Plugin>();
-        Set<Pattern> filters = fileAssociations.keySet();
 
-        if (!(server.getUpdateFolder().equals(""))) {
-            updateDirectory = new File(directory, server.getUpdateFolder());
-        }
+##### <a id='ispluginenabled'></a>public  function __isPluginEnabled__(plugin)
 
-        Map<String, File> plugins = new HashMap<String, File>();
-        Set<String> loadedPlugins = new HashSet<String>();
-        Map<String, Collection<String>> dependencies = new HashMap<String, Collection<String>>();
-        Map<String, Collection<String>> softDependencies = new HashMap<String, Collection<String>>();
+_Checks if the given plugin is enabled or not_
 
-        // This is where it figures out all possible plugins
-        for (File file : directory.listFiles()) {
-            PluginLoader loader = null;
-            for (Pattern filter : filters) {
-                Matcher match = filter.matcher(file.getName());
-                if (match.find()) {
-                    loader = fileAssociations.get(filter);
-                }
-            }
+Argument | Type | Description  
+--- | --- | --- 
+plugin | [`Plugin`](Plugin.md) | Plugin to check
 
-            if (loader == null) continue;
+Returns | Description
+--- | --- 
+`boolean` | true if the plugin is enabled, otherwise false
 
-            PluginDescriptionFile description = null;
-            try {
-                description = loader.getPluginDescription(file);
-                String name = description.getName();
-                if (name.equalsIgnoreCase("wolfscript") || name.equalsIgnoreCase("minecraft") || name.equalsIgnoreCase("mojang")) {
-                    server.getLogger().log(Level.SEVERE, "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "': Restricted Name");
-                    continue;
-                } else if (description.rawName.indexOf(' ') != -1) {
-                    server.getLogger().warning(String.format(
-                        "Plugin `%s' uses the space-character (0x20) in its name `%s' - this is discouraged",
-                        description.getFullName(),
-                        description.rawName
-                        ));
-                }
-            } catch (InvalidDescriptionException ex) {
-                server.getLogger().log(Level.SEVERE, "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "'", ex);
-                continue;
-            }
 
-            File replacedFile = plugins.put(description.getName(), file);
-            if (replacedFile != null) {
-                server.getLogger().severe(String.format(
-                    "Ambiguous plugin name `%s' for files `%s' and `%s' in `%s'",
-                    description.getName(),
-                    file.getPath(),
-                    replacedFile.getPath(),
-                    directory.getPath()
-                    ));
-            }
+##### <a id='enableplugin'></a>public  function __enablePlugin__(Plugin)
 
-            Collection<String> softDependencySet = description.getSoftDepend();
-            if (softDependencySet != null && !softDependencySet.isEmpty()) {
-                if (softDependencies.containsKey(description.getName())) {
-                    // Duplicates do not matter, they will be removed together if applicable
-                    softDependencies.get(description.getName()).addAll(softDependencySet);
-                } else {
-                    softDependencies.put(description.getName(), new LinkedList<String>(softDependencySet));
-                }
-            }
+_enablePlugin method_
 
-            Collection<String> dependencySet = description.getDepend();
-            if (dependencySet != null && !dependencySet.isEmpty()) {
-                dependencies.put(description.getName(), new LinkedList<String>(dependencySet));
-            }
+Argument | Type | Description  
+--- | --- | --- 
+Plugin | `final` | Plugin argument
 
-            Collection<String> loadBeforeSet = description.getLoadBefore();
-            if (loadBeforeSet != null && !loadBeforeSet.isEmpty()) {
-                for (String loadBeforeTarget : loadBeforeSet) {
-                    if (softDependencies.containsKey(loadBeforeTarget)) {
-                        softDependencies.get(loadBeforeTarget).add(description.getName());
-                    } else {
-                        // softDependencies is never iterated, so 'ghost' plugins aren't an issue
-                        Collection<String> shortSoftDependency = new LinkedList<String>();
-                        shortSoftDependency.add(description.getName());
-                        softDependencies.put(loadBeforeTarget, shortSoftDependency);
-                    }
-                }
-            }
-        }
+Returns | 
+--- | 
+`void` |
 
-        while (!plugins.isEmpty()) {
-            boolean missingDependency = true;
-            Iterator<String> pluginIterator = plugins.keySet().iterator();
 
-            while (pluginIterator.hasNext()) {
-                String plugin = pluginIterator.next();
+##### <a id='disableplugins'></a>public  function __disablePlugins__()
 
-                if (dependencies.containsKey(plugin)) {
-                    Iterator<String> dependencyIterator = dependencies.get(plugin).iterator();
+_disablePlugins method_
 
-                    while (dependencyIterator.hasNext()) {
-                        String dependency = dependencyIterator.next();
+Returns | 
+--- | 
+`void` |
 
-                        // Dependency loaded
-                        if (loadedPlugins.contains(dependency)) {
-                            dependencyIterator.remove();
 
-                        // We have a dependency not found
-                        } else if (!plugins.containsKey(dependency)) {
-                            missingDependency = false;
-                            File file = plugins.get(plugin);
-                            pluginIterator.remove();
-                            softDependencies.remove(plugin);
-                            dependencies.remove(plugin);
+##### <a id='disableplugin'></a>public  function __disablePlugin__(Plugin)
 
-                            server.getLogger().log(
-                                Level.SEVERE,
-                                "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "'",
-                                new UnknownDependencyException(dependency));
-                            break;
-                        }
-                    }
+_disablePlugin method_
 
-                    if (dependencies.containsKey(plugin) && dependencies.get(plugin).isEmpty()) {
-                        dependencies.remove(plugin);
-                    }
-                }
-                if (softDependencies.containsKey(plugin)) {
-                    Iterator<String> softDependencyIterator = softDependencies.get(plugin).iterator();
+Argument | Type | Description  
+--- | --- | --- 
+Plugin | `final` | Plugin argument
 
-                    while (softDependencyIterator.hasNext()) {
-                        String softDependency = softDependencyIterator.next();
+Returns | 
+--- | 
+`void` |
 
-                        // Soft depend is no longer around
-                        if (!plugins.containsKey(softDependency)) {
-                            softDependencyIterator.remove();
-                        }
-                    }
 
-                    if (softDependencies.get(plugin).isEmpty()) {
-                        softDependencies.remove(plugin);
-                    }
-                }
-                if (!(dependencies.containsKey(plugin) || softDependencies.containsKey(plugin)) && plugins.containsKey(plugin)) {
-                    // We're clear to load, no more soft or hard dependencies left
-                    File file = plugins.get(plugin);
-                    pluginIterator.remove();
-                    missingDependency = false;
+##### <a id='clearplugins'></a>public  function __clearPlugins__()
 
-                    try {
-                        result.add(loadPlugin(file));
-                        loadedPlugins.add(plugin);
-                        continue;
-                    } catch (InvalidPluginException ex) {
-                        server.getLogger().log(Level.SEVERE, "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "'", ex);
-                    }
-                }
-            }
+_clearPlugins method_
 
-            if (missingDependency) {
-                // We now iterate over plugins until something loads
-                // This loop will ignore soft dependencies
-                pluginIterator = plugins.keySet().iterator();
+Returns | 
+--- | 
+`void` |
 
-                while (pluginIterator.hasNext()) {
-                    String plugin = pluginIterator.next();
 
-                    if (!dependencies.containsKey(plugin)) {
-                        softDependencies.remove(plugin);
-                        missingDependency = false;
-                        File file = plugins.get(plugin);
-                        pluginIterator.remove();
+##### <a id='callevent'></a>public  function __callEvent__(event)
 
-                        try {
-                            result.add(loadPlugin(file));
-                            loadedPlugins.add(plugin);
-                            break;
-                        } catch (InvalidPluginException ex) {
-                            server.getLogger().log(Level.SEVERE, "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "'", ex);
-                        }
-                    }
-                }
-                // We have no plugins left without a depend
-                if (missingDependency) {
-                    softDependencies.clear();
-                    dependencies.clear();
-                    Iterator<File> failedPluginIterator = plugins.values().iterator();
+_Calls an event with the given details. <p> This method only synchronizes when the event is not asynchronous._
 
-                    while (failedPluginIterator.hasNext()) {
-                        File file = failedPluginIterator.next();
-                        failedPluginIterator.remove();
-                        server.getLogger().log(Level.SEVERE, "Could not load '" + file.getPath() + "' in folder '" + directory.getPath() + "': circular dependency detected");
-                    }
-                }
-            }
-        }
+Argument | Type | Description  
+--- | --- | --- 
+event | [`Event`](../event/Event.md) | Event details
 
-        return result.toArray(new Plugin[result.size()]);
-    }
+Returns | 
+--- | 
+`void` |
 
-    /** Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces
+
+##### <a id='getdefaultpermsubscriptions'></a>public  function __getDefaultPermSubscriptions__(op)
+
+_getDefaultPermSubscriptions method_
+
+Argument | Type | Description  
+--- | --- | --- 
+op | `boolean` | op argument
+
+Returns | 
+--- | 
+`Set<Permissible>` |
+
+
+##### <a id='getpermissionsubscriptions'></a>public  function __getPermissionSubscriptions__(permission)
+
+_getPermissionSubscriptions method_
+
+Argument | Type | Description  
+--- | --- | --- 
+permission | `String` | permission argument
+
+Returns | 
+--- | 
+`Set<Permissible>` |
+
+
+##### <a id='getpermission'></a>public  function __getPermission__(name)
+
+_getPermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+[`Permission`](../permissions/Permission.md) |
+
+
+##### <a id='addpermission'></a>public  function __addPermission__(perm)
+
+_addPermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+perm | [`Permission`](../permissions/Permission.md) | perm argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='ispluginenabled'></a>public  function __isPluginEnabled__(name)
+
+_Loads the plugin in the specified file <p> File must be valid according to the current enabled Plugin interfaces_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | Name of the plugin to check
+
+Returns | Description
+--- | --- 
+`boolean` | The Plugin loaded, or null if it was invalid
+
+
+##### <a id='subscribetodefaultperms'></a>public  function __subscribeToDefaultPerms__(op, permissible)
+
+_subscribeToDefaultPerms method_
+
+Argument | Type | Description  
+--- | --- | --- 
+op | `boolean` | op argument
+permissible | [`Permissible`](../permissions/Permissible.md) | permissible argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='removepermission'></a>public  function __removePermission__(perm)
+
+_removePermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+perm | [`Permission`](../permissions/Permission.md) | perm argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='recalculatepermissiondefaults'></a>public  function __recalculatePermissionDefaults__(perm)
+
+_recalculatePermissionDefaults method_
+
+Argument | Type | Description  
+--- | --- | --- 
+perm | [`Permission`](../permissions/Permission.md) | perm argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='registerevents'></a>public  function __registerEvents__(listener, plugin)
+
+_registerEvents method_
+
+Argument | Type | Description  
+--- | --- | --- 
+listener | [`Listener`](../event/Listener.md) | listener argument
+plugin | [`Plugin`](Plugin.md) | plugin argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='registerevent'></a>public  function __registerEvent__(Event, listener, priority, executor, plugin)
+
+_registerEvent method_
+
+Argument | Type | Description  
+--- | --- | --- 
+Event | `extends` | Event argument
+listener | [`Listener`](../event/Listener.md) | listener argument
+priority | [`EventPriority`](../event/EventPriority.md) | priority argument
+executor | [`EventExecutor`](EventExecutor.md) | executor argument
+plugin | [`Plugin`](Plugin.md) | plugin argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='registerevent'></a>public  function __registerEvent__(Event, listener, priority, executor, plugin, ignoreCancelled)
+
+_Registers the given event to the specified listener using a directly passed EventExecutor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Event | `extends` | Event argument
+listener | [`Listener`](../event/Listener.md) | PlayerListener to register
+priority | [`EventPriority`](../event/EventPriority.md) | Priority of this event
+executor | [`EventExecutor`](EventExecutor.md) | EventExecutor to register
+plugin | [`Plugin`](Plugin.md) | Plugin to register
+ignoreCancelled | `boolean` | Do not call executor if event was already cancelled
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='removepermission'></a>public  function __removePermission__(name)
+
+_removePermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='subscribetopermission'></a>public  function __subscribeToPermission__(permission, permissible)
+
+_subscribeToPermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+permission | `String` | permission argument
+permissible | [`Permissible`](../permissions/Permissible.md) | permissible argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='unsubscribefromdefaultperms'></a>public  function __unsubscribeFromDefaultPerms__(op, permissible)
+
+_unsubscribeFromDefaultPerms method_
+
+Argument | Type | Description  
+--- | --- | --- 
+op | `boolean` | op argument
+permissible | [`Permissible`](../permissions/Permissible.md) | permissible argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='unsubscribefrompermission'></a>public  function __unsubscribeFromPermission__(permission, permissible)
+
+_unsubscribeFromPermission method_
+
+Argument | Type | Description  
+--- | --- | --- 
+permission | `String` | permission argument
+permissible | [`Permissible`](../permissions/Permissible.md) | permissible argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='usetimings'></a>public  function __useTimings__()
+
+_useTimings method_
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='usetimings'></a>public  function __useTimings__(use)
+
+_Sets whether or not per event timing code should be used_
+
+Argument | Type | Description  
+--- | --- | --- 
+use | `boolean` | True if per event timing code should be used
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

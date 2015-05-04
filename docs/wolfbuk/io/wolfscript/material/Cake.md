@@ -12,15 +12,20 @@ class Cake
 Method | Type   
 --- | :--- 
 new __Cake__() <br> _Cake constructor_ | _constructor_
- writeonly property __SlicesRemaining__ <br> _SlicesRemaining property_ | `void`
+new __Cake__(type) <br> _Cake constructor_ | _constructor_
+  property __SlicesEaten__ <br> _Get: Gets the number of slices eaten from this cake<br>Set: Sets the number of slices eaten from this cake_ | `int`
+  property __SlicesRemaining__ <br> _Get: Gets the number of slices remaining on this cake<br>Set: Sets the number of slices remaining on this cake_ | `int`
  function __clone__() <br> _clone method_ | [`Cake`](Cake.md)
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`MaterialData`](MaterialData.md)__ |
+new __MaterialData__(Material) <br> _MaterialData constructor_ | _constructor_
+ readonly property __ItemType__ <br> _Get: Gets the Material that this MaterialData represents_ | [`Material`](../Material.md)
  function __clone__() <br> _clone method_ | [`MaterialData`](MaterialData.md)
  function __equals__(obj) <br> _equals method_ | `boolean`
  function __hashCode__() <br> _hashCode method_ | `int`
- function __toItemStack__(amount) <br> _toItemStack method_ | `ItemStack`
+ function __toItemStack__() <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
+ function __toItemStack__(amount) <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
  function __toString__() <br> _toString method_ | `String`
 
 
@@ -36,33 +41,71 @@ __Inherited items from [`MaterialData`](MaterialData.md)__ |
 _Cake constructor_
 
 
+##### <a id='cake'></a>new __Cake__(type) 
+_Deprecated: Magic value_
+
+_Cake constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `int` | the raw type id
+
+##### <a id='cake'></a>new __Cake__(type) 
+
+_Cake constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`Material`](../Material.md) | type argument
+
+##### <a id='cake'></a>new __Cake__(type, data) 
+_Deprecated: Magic value_
+
+_Cake constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `int` | the raw type id
+data | `byte` | the raw data value
+
+##### <a id='cake'></a>new __Cake__(type, data) 
+_Deprecated: Magic value_
+
+_Cake constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`Material`](../Material.md) | the type
+data | `byte` | the raw data value
+
 ---
 
 ### Public Properties for [`Cake`](Cake.md)
 
-##### <a id='slicesremaining'></a>public  writeonly property __SlicesRemaining__
+##### <a id='sliceseaten'></a>public   property __SlicesEaten__
 
-_SlicesRemaining property_
+_Get: Gets the number of slices eaten from this cake<br>Set: Sets the number of slices eaten from this cake_
 
 Get | Description
 --- | --- 
-`void` | The number of slices eaten /
-    public int getSlicesEaten() {
-        return getData();
-    }
-
-    /** Gets the number of slices remaining on this cake
+`int` | The number of slices eaten
 
 Set | Type | Description  
 --- | --- | --- 
-n | `int` | The number of slices eaten /
-    public void setSlicesEaten(int n) {
-        if (n < 6) {
-            setData((byte) n);
-        } // TODO: else destroy the block? Probably not possible though
-    }
+n | `int` | The number of slices eaten
 
-    /** Sets the number of slices remaining on this cake
+
+##### <a id='slicesremaining'></a>public   property __SlicesRemaining__
+
+_Get: Gets the number of slices remaining on this cake<br>Set: Sets the number of slices remaining on this cake_
+
+Get | Description
+--- | --- 
+`int` | The number of slices remaining
+
+Set | Type | Description  
+--- | --- | --- 
+n | `int` | The number of slices remaining
 
 
 ---
@@ -85,6 +128,85 @@ _toString method_
 Returns | 
 --- | 
 `String` |
+
+
+---
+### Public Constructors for [`MaterialData`](MaterialData.md)
+
+##### <a id='materialdata'></a>new __MaterialData__(int) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material) 
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='materialdata'></a>new __MaterialData__(int, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`MaterialData`](MaterialData.md)
+
+##### <a id='data'></a>public   property __Data__
+_Deprecated: Magic value_
+
+_Get: Gets the raw data in this material<br>Set: Sets the raw data of this material_
+
+Get | 
+--- | 
+`byte` |
+
+Set | Type | Description  
+--- | --- | --- 
+data | `byte` | New raw data
+
+
+##### <a id='itemtype'></a>public  readonly property __ItemType__
+
+_Get: Gets the Material that this MaterialData represents_
+
+Get | Description
+--- | --- 
+[`Material`](../Material.md) | Material represented by this MaterialData
+
+
+
+##### <a id='itemtypeid'></a>public  readonly property __ItemTypeId__
+_Deprecated: Magic value_
+
+_Get: Gets the Material Id that this MaterialData represents_
+
+Get | Description
+--- | --- 
+`int` | Material Id represented by this MaterialData
+
 
 
 ---
@@ -122,9 +244,18 @@ Returns |
 `int` |
 
 
+##### <a id='toitemstack'></a>public  function __toItemStack__()
+
+_Creates a new ItemStack based on this MaterialData_
+
+Returns | Description
+--- | --- 
+`ItemStack` | New ItemStack containing a copy of this MaterialData
+
+
 ##### <a id='toitemstack'></a>public  function __toItemStack__(amount)
 
-_toItemStack method_
+_Creates a new ItemStack based on this MaterialData_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -132,7 +263,7 @@ amount | `int` | The stack size of the new stack
 
 Returns | Description
 --- | --- 
-`ItemStack` | Raw data
+`ItemStack` | New ItemStack containing a copy of this MaterialData
 
 
 ##### <a id='tostring'></a>public  function __toString__()

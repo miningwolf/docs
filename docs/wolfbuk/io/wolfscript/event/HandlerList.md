@@ -10,18 +10,58 @@ A list of event handlers, stored per-event. Based on lahwran's fevents.
 
 Method | Type   
 --- | :--- 
-static readonly property __HandlerLists__ <br> _Get: Handler array. This field being an array is the key to this system's_ | `ArrayList<HandlerList>`
+new __HandlerList__() <br> _Create a new handler list and initialize using EventPriority._ | _constructor_
+static readonly property __HandlerLists__ <br> _Get: Get a list of all handler lists for every event type_ | `ArrayList<HandlerList>`
+ readonly property __RegisteredListeners__ <br> _Get: Remove a listener from a specific order slot_ | `RegisteredListener[]`
+static function __bakeAll__() <br> _Handler array. This field being an array is the key to this system's_ | `void`
+static function __getRegisteredListeners__(plugin) <br> _Get a specific plugin's registered listeners associated with this_ | `ArrayList<RegisteredListener>`
+ function __registerAll__() <br> _Register a new listener in this handler list_ | `void`
+static function __unregisterAll__() <br> _Unregister all listeners from all handler lists._ | `void`
+static function __unregisterAll__(plugin) <br> _Unregister a specific plugin's listeners from all handler lists._ | `void`
+static function __unregisterAll__(listener) <br> _Unregister a specific listener from all handler lists._ | `void`
 
 
 
 ---
 
+### Public Constructors for [`HandlerList`](HandlerList.md)
+
+##### <a id='handlerlist'></a>new __HandlerList__() 
+
+_Create a new handler list and initialize using EventPriority. <p> The HandlerList is then added to meta-list for use in bakeAll()_
+
+
+---
 
 ### Public Properties for [`HandlerList`](HandlerList.md)
 
 ##### <a id='handlerlists'></a>public static readonly property __HandlerLists__
 
-_Get: Handler array. This field being an array is the key to this system's speed. /
+_Get: Get a list of all handler lists for every event type_
+
+Get | Description
+--- | --- 
+`ArrayList<HandlerList>` | the list of all handler lists
+
+
+
+##### <a id='registeredlisteners'></a>public  readonly property __RegisteredListeners__
+
+_Get: Remove a listener from a specific order slot_
+
+Get | Description
+--- | --- 
+`RegisteredListener[]` | the array of registered listeners
+
+
+
+---
+
+### Public Methods for [`HandlerList`](HandlerList.md)
+
+##### <a id='bakeall'></a>public static function __bakeAll__()
+
+_Handler array. This field being an array is the key to this system's speed. /
     private volatile RegisteredListener[] handlers = null;
 
     /** Dynamic handler lists. These are changed using register() and unregister() and are automatically baked to the handlers array any time they have changed. /
@@ -30,42 +70,68 @@ _Get: Handler array. This field being an array is the key to this system's speed
     /** List of all HandlerLists which have been created, for use in bakeAll() /
     private static ArrayList<HandlerList> allLists = new ArrayList<HandlerList>();
 
-    /** Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded if you're using fevents in a plugin system. /
-    public static void bakeAll() {
-        synchronized (allLists) {
-            for (HandlerList h : allLists) {
-                h.bake();
-            }
-        }
-    }
+    /** Bake all handler lists. Best used just after all normal event registration is complete, ie just after all plugins are loaded if you're using fevents in a plugin system._
 
-    /** Unregister all listeners from all handler lists. /
-    public static void unregisterAll() {
-        synchronized (allLists) {
-            for (HandlerList h : allLists) {
-                synchronized (h) {
-                    for (List<RegisteredListener> list : h.handlerslots.values()) {
-                        list.clear();
-                    }
-                    h.handlers = null;
-                }
-            }
-        }
-    }
+Returns | 
+--- | 
+`void` |
 
-    /** Unregister a specific plugin's listeners from all handler lists._
 
-Get | Description
+##### <a id='getregisteredlisteners'></a>public static function __getRegisteredListeners__(plugin)
+
+_Get a specific plugin's registered listeners associated with this handler list_
+
+Argument | Type | Description  
+--- | --- | --- 
+plugin | [`Plugin`](../plugin/Plugin.md) | the plugin to get the listeners of
+
+Returns | Description
 --- | --- 
-`ArrayList<HandlerList>` | the array of registered listeners /
-    public RegisteredListener[] getRegisteredListeners() {
-        RegisteredListener[] handlers;
-        while ((handlers = this.handlers) == null) bake(); // This prevents fringe cases of returning null
-        return handlers;
-    }
+`ArrayList<RegisteredListener>` | the list of registered listeners
 
-    /** Get a specific plugin's registered listeners associated with this handler list
 
+##### <a id='registerall'></a>public  function __registerAll__()
+
+_Register a new listener in this handler list_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='unregisterall'></a>public static function __unregisterAll__()
+
+_Unregister all listeners from all handler lists._
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='unregisterall'></a>public static function __unregisterAll__(plugin)
+
+_Unregister a specific plugin's listeners from all handler lists._
+
+Argument | Type | Description  
+--- | --- | --- 
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin to unregister
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='unregisterall'></a>public static function __unregisterAll__(listener)
+
+_Unregister a specific listener from all handler lists._
+
+Argument | Type | Description  
+--- | --- | --- 
+listener | [`Listener`](Listener.md) | listener to unregister
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

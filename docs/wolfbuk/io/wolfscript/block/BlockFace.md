@@ -36,7 +36,9 @@ SOUTH: <br> _SOUTH BlockFace_ | BlockFace
 WEST: <br> _WEST BlockFace_ | BlockFace
 0: <br> _0 BlockFace_ | BlockFace
 0: <br> _0 BlockFace_ | BlockFace
- readonly property __ModZ__ <br> _Get: Get the amount of X-coordinates to modify to get the represented block_ | `int`
+ readonly property __ModX__ <br> _Get: Get the amount of X-coordinates to modify to get the represented block_ | `int`
+ readonly property __ModY__ <br> _Get: Get the amount of Y-coordinates to modify to get the represented block_ | `int`
+ readonly property __ModZ__ <br> _Get: Get the amount of Z-coordinates to modify to get the represented block_ | `int`
  readonly property __OppositeFace__ <br> _OppositeFace property_ | [`BlockFace`](BlockFace.md)
 
 
@@ -46,18 +48,33 @@ WEST: <br> _WEST BlockFace_ | BlockFace
 
 ### Public Properties for [`BlockFace`](BlockFace.md)
 
-##### <a id='modz'></a>public  readonly property __ModZ__
+##### <a id='modx'></a>public  readonly property __ModX__
 
 _Get: Get the amount of X-coordinates to modify to get the represented block_
 
 Get | Description
 --- | --- 
-`int` | Amount of X-coordinates to modify /
-    public int getModX() {
-        return modX;
-    }
+`int` | Amount of X-coordinates to modify
 
-    /** Get the amount of Y-coordinates to modify to get the represented block
+
+
+##### <a id='mody'></a>public  readonly property __ModY__
+
+_Get: Get the amount of Y-coordinates to modify to get the represented block_
+
+Get | Description
+--- | --- 
+`int` | Amount of Y-coordinates to modify
+
+
+
+##### <a id='modz'></a>public  readonly property __ModZ__
+
+_Get: Get the amount of Z-coordinates to modify to get the represented block_
+
+Get | Description
+--- | --- 
+`int` | Amount of Z-coordinates to modify
 
 
 

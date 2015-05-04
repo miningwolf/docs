@@ -1,7 +1,7 @@
 ## StainedGlassPaneProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.StainedGlassPaneProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Stained Glass Pane properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyColor__(block, value) <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`Block`](..\..\Block.md)
-static final var __color__ <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`BlockEnumProperty`](..\BlockEnumProperty.md)
+static function __applyColor__(block, value) <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`Block`](../../Block.md)
+static final var __color__ <br> _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM) /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
-value | [`DyeColor`](..\..\..\..\DyeColor.md) | the [`DyeColor`](..\..\..\..\DyeColor.md) value to apply
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | [`DyeColor`](../../../../DyeColor.md) | the [`DyeColor`](../../../../DyeColor.md) value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Stained Glass Pane color property, Values: DyeColor (excluding CUSTOM)_
 
 >Returns
->  [`BlockEnumProperty`](..\BlockEnumProperty.md)
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
 
 ---
+
+
 ---
 
 

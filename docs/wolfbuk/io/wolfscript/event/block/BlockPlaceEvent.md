@@ -2,7 +2,7 @@
 
 >io.wolfscript.event.block.BlockPlaceEvent
 >Extends [`BlockEvent`](BlockEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -13,18 +13,28 @@ Called when a block is placed by a player. <p> If a Block Place event is cancell
 Method | Type   
 --- | :--- 
 new __BlockPlaceEvent__(Block, BlockState, Block, ItemStack, Player, boolean) <br> _BlockPlaceEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
- writeonly property __Build__ <br> _Set: Gets the player who placed the block involved in this event._ | `void`
+ readonly property __BlockAgainst__ <br> _Get: Gets the block that this block was placed against_ | [`Block`](../../block/Block.md)
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __BlockPlaced__ <br> _Get: Clarity method for getting the placed block. Not really needed except_ | [`Block`](../../block/Block.md)
+ readonly property __BlockReplacedState__ <br> _Get: Gets the BlockState for the block which was replaced. Material type air_ | [`BlockState`](../../block/BlockState.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __ItemInHand__ <br> _Get: Gets the item in the player's hand when they placed the block._ | `ItemStack`
+ readonly property __Player__ <br> _Get: Gets the player who placed the block involved in this event._ | `Player`
+ writeonly property __Build__ <br> _Set: Sets the canBuild state of this event. Set to true if you want the_ | `void`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
+ function __canBuild__() <br> _Gets the value whether the player would be allowed to build here._ | `boolean`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
 __Inherited items from [`BlockEvent`](BlockEvent.md)__ |
 new __BlockEvent__(Block) <br> _BlockEvent constructor_ | _constructor_
-final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](..\..\block\Block.md)
+final readonly property __Block__ <br> _Get: Gets the block involved in this event._ | [`Block`](../../block/Block.md)
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -53,13 +63,43 @@ boolean | `final` | boolean argument
 
 ### Public Properties for [`BlockPlaceEvent`](BlockPlaceEvent.md)
 
+##### <a id='blockagainst'></a>public  readonly property __BlockAgainst__
+
+_Get: Gets the block that this block was placed against_
+
+Get | Description
+--- | --- 
+[`Block`](../../block/Block.md) | Block the block that the new block was placed against
+
+
+
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
 _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
+
+
+
+##### <a id='blockplaced'></a>public  readonly property __BlockPlaced__
+
+_Get: Clarity method for getting the placed block. Not really needed except for reasons of clarity._
+
+Get | Description
+--- | --- 
+[`Block`](../../block/Block.md) | The Block that was placed
+
+
+
+##### <a id='blockreplacedstate'></a>public  readonly property __BlockReplacedState__
+
+_Get: Gets the BlockState for the block which was replaced. Material type air mostly._
+
+Get | Description
+--- | --- 
+[`BlockState`](../../block/BlockState.md) | The BlockState for the block which was replaced.
 
 
 
@@ -69,22 +109,37 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
+
+
+
+##### <a id='iteminhand'></a>public  readonly property __ItemInHand__
+
+_Get: Gets the item in the player's hand when they placed the block._
+
+Get | Description
+--- | --- 
+`ItemStack` | The ItemStack for the item in the player's hand when they placed the block
+
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the player who placed the block involved in this event._
+
+Get | Description
+--- | --- 
+`Player` | The Player who placed the block involved in this event
 
 
 
 ##### <a id='build'></a>public  writeonly property __Build__
 
-_Set: Gets the player who placed the block involved in this event._
+_Set: Sets the canBuild state of this event. Set to true if you want the player to be able to build._
 
-Get | Description
---- | --- 
-`void` | The Player who placed the block involved in this event /
-    public Player getPlayer() {
-        return player;
-    }
-
-    /** Clarity method for getting the placed block. Not really needed except for reasons of clarity.
+Get | 
+--- | 
+`void` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -107,6 +162,15 @@ cancel | `boolean` | cancel argument
 ---
 
 ### Public Methods for [`BlockPlaceEvent`](BlockPlaceEvent.md)
+
+##### <a id='canbuild'></a>public  function __canBuild__()
+
+_Gets the value whether the player would be allowed to build here. Defaults to spawn if the server was going to stop them (such as, the player is in Spawn). Note that this is an entirely different check than BLOCK_CANBUILD, as this refers to a player, not universe-physics rule like cactus on dirt._
+
+Returns | Description
+--- | --- 
+`boolean` | boolean whether the server would allow a player to build here
+
 
 ##### <a id='iscancelled'></a>public  function __isCancelled__()
 
@@ -138,36 +202,61 @@ _Get: Gets the block involved in this event._
 
 Get | Description
 --- | --- 
-[`Block`](..\..\block\Block.md) | The Block which block is involved in this event
+[`Block`](../../block/Block.md) | The Block which block is involved in this event
+
+
+
+---
+### Public Constructors for [`Event`](../Event.md)
+
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
 
 
 
 ---
 
-### Public Methods for [`Event`](..\Event.md)
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

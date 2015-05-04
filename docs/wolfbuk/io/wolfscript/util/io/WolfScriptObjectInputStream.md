@@ -7,7 +7,7 @@
 
 ### Class Overview
 
-This class is designed to be used in conjunction with the [`ConfigurationSerializable`](..\..\configuration\serialization\ConfigurationSerializable.md) API. It translates objects back to their original implementation after being serialized by [`WolfScriptObjectInputStream`](WolfScriptObjectInputStream.md). <p> Behavior of implementations extending this class is not guaranteed across future versions.
+This class is designed to be used in conjunction with the [`ConfigurationSerializable`](../../configuration/serialization/ConfigurationSerializable.md) API. It translates objects back to their original implementation after being serialized by [`WolfScriptObjectInputStream`](WolfScriptObjectInputStream.md). <p> Behavior of implementations extending this class is not guaranteed across future versions.
 
 Method | Type   
 --- | :--- 

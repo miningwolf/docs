@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API ChunkGenerator</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../index.html'>Home </a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/generator/0.html'>generator</a></li>
+<li class='current'><a href='#'>ChunkGenerator</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li><a href='../../../../wolfbuk/io/wolfscript/generator/BiomeGrid.html'>BiomeGrid</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/generator/BlockPopulator.html'>BlockPopulator</a></li>
+<li class='active'><a href='../../../../wolfbuk/io/wolfscript/generator/ChunkGenerator.html'>ChunkGenerator</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="chunkgenerator-__class__">ChunkGenerator <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.generator.ChunkGenerator</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>A chunk generator is responsible for the initial shaping of an entire chunk. For example, the nether chunk generator should shape netherrack and soulsand</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> function <strong>canSpawn</strong>(world, x, z) <br> <em>Tests if the specified location is valid for a natural spawn position</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>generate</strong>(world, random, x, z) <br> <em>Shapes the chunk for the given coordinates.</em></td>
+<td style="text-align:left"><code>byte[]</code></td>
+</tr>
+<tr>
+<td> function <strong>getDefaultPopulators</strong>(world) <br> <em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given</em></td>
+<td style="text-align:left"><code>List&lt;BlockPopulator&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>getFixedSpawnLocation</strong>(world, random) <br> <em>Gets a fixed spawn location to use for a given world.</em></td>
+<td style="text-align:left"><code>Location</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-chunkgenerator-chunkgenerator-md-">Public Methods for <a href="ChunkGenerator.html"><code>ChunkGenerator</code></a></h3>
+<h5 id="-a-id-canspawn-a-public-function-__canspawn__-world-x-z-"><a id='canspawn'></a>public  function <strong>canSpawn</strong>(world, x, z)</h5>
+<p><em>Tests if the specified location is valid for a natural spawn position</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world we&#39;re testing on</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>X-coordinate of the block to test</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>Z-coordinate of the block to test</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the location is valid, otherwise false</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-generate-a-public-function-__generate__-world-random-x-z-"><a id='generate'></a>public  function <strong>generate</strong>(world, random, x, z)</h5>
+<p><em>Shapes the chunk for the given coordinates. <p> This method should return a byte[32768] in the following format: <pre> for (int x = 0; x &lt; 16; x++) { for (int z = 0; z &lt; 16; z++) { for (int y = 0; y &lt; 128; y++) { // result[(x 16 + z) 128 + y] = ??; } } } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note this deprecated method will only be called when both generateExtBlockSections() and generateBlockSections() are unimplemented and return null.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world this chunk will be used for</td>
+</tr>
+<tr>
+<td>random</td>
+<td><code>Random</code></td>
+<td>The random generator to use</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>The X-coordinate of the chunk</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>The Z-coordinate of the chunk</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte[]</code></td>
+<td>byte[] containing the types for each block created by this generator</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-generateblocksections-a-public-function-__generateblocksections__-world-random-x-z-biomes-"><a id='generateblocksections'></a>public  function <strong>generateBlockSections</strong>(world, random, x, z, biomes)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Shapes the chunk for the given coordinates. <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks.  If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a byte[][] array in the following format: <pre> byte[][] result = new byte[world-height / 16][]; </pre> Each section {@code (sectionID = (Y&gt;&gt;4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new byte[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(byte[][] result, int x, int y, int z, byte blkid) { {@code if (result[y &gt;&gt; 4) == null) {} {@code result[y &gt;&gt; 4] = new byte[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> byte getBlock(byte[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4) == null) {} return (byte)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world this chunk will be used for</td>
+</tr>
+<tr>
+<td>random</td>
+<td><code>Random</code></td>
+<td>The random generator to use</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>The X-coordinate of the chunk</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>The Z-coordinate of the chunk</td>
+</tr>
+<tr>
+<td>biomes</td>
+<td><code>BiomeGrid</code></td>
+<td>Proposed biome values for chunk - can be updated by generator</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte[][]</code></td>
+<td>short[][] containing the types for each block created by this generator</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-generateextblocksections-a-public-function-__generateextblocksections__-world-random-x-z-biomes-"><a id='generateextblocksections'></a>public  function <strong>generateExtBlockSections</strong>(world, random, x, z, biomes)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Shapes the chunk for the given coordinates, with extended block IDs supported (0-4095). <p> As of 1.2, chunks are represented by a vertical array of chunk sections, each of which is 16 x 16 x 16 blocks. If a section is empty (all zero), the section does not need to be supplied, reducing memory usage. <p> This method must return a short[][] array in the following format: <pre> short[][] result = new short[world-height / 16][]; </pre> Each section {@code (sectionID = (Y&gt;&gt;4))} that has blocks needs to be allocated space for the 4096 blocks in that section: <pre> result[sectionID] = new short[4096]; </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y &gt;&gt; 4] == null) {} {@code result[y &gt;&gt; 4] = new short[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4] == null) {} return (short)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> while sections that are not populated can be left null. <p> Setting a block at X, Y, Z within the chunk can be done with the following mapping function: <pre> void setBlock(short[][] result, int x, int y, int z, short blkid) { {@code if (result[y &gt;&gt; 4) == null) {} {@code result[y &gt;&gt; 4] = new short[4096];} } {@code result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x] = blkid;} } </pre> while reading a block ID can be done with the following mapping function: <pre> short getBlock(short[][] result, int x, int y, int z) { {@code if (result[y &gt;&gt; 4) == null) {} return (short)0; } {@code return result[y &gt;&gt; 4][((y &amp; 0xF) &lt;&lt; 8) | (z &lt;&lt; 4) | x];} } </pre> <p> Note that this method should <b>never</b> attempt to get the Chunk at the passed coordinates, as doing so may cause an infinite loop <p> Note generators that do not return block IDs above 255 should not implement this method, or should have it return null (which will result in the generateBlockSections() method being called).</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world this chunk will be used for</td>
+</tr>
+<tr>
+<td>random</td>
+<td><code>Random</code></td>
+<td>The random generator to use</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>The X-coordinate of the chunk</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>The Z-coordinate of the chunk</td>
+</tr>
+<tr>
+<td>biomes</td>
+<td><code>BiomeGrid</code></td>
+<td>Proposed biome values for chunk - can be updated by generator</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short[][]</code></td>
+<td>short[][] containing the types for each block created by this generator</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getdefaultpopulators-a-public-function-__getdefaultpopulators__-world-"><a id='getdefaultpopulators'></a>public  function <strong>getDefaultPopulators</strong>(world)</h5>
+<p><em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given world</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>World to apply to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;BlockPopulator&gt;</code></td>
+<td>List containing any amount of BlockPopulators</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getfixedspawnlocation-a-public-function-__getfixedspawnlocation__-world-random-"><a id='getfixedspawnlocation'></a>public  function <strong>getFixedSpawnLocation</strong>(world, random)</h5>
+<p><em>Gets a fixed spawn location to use for a given world. <p> A null value is returned if a world should not use a fixed spawn point, and will instead attempt to find one randomly.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world to locate a spawn point for</td>
+</tr>
+<tr>
+<td>random</td>
+<td><code>Random</code></td>
+<td>Random generator to use in the calculation</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Location</code></td>
+<td>Location containing a new spawn point, otherwise null</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

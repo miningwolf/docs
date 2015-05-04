@@ -1,26 +1,30 @@
 ## BookEdit __class__
 
 >io.wolfscript.event.player.BookEdit
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
 ### Class Overview
 
-Called when a `Player` edits a Book [`Item`](..\..\api\inventory\Item.md)
+Called when a `Player` edits a Book [`Item`](../../api/inventory/Item.md)
 
 Method | Type   
 --- | :--- 
 new __BookEdit__(book, player) <br> _BookEdit constructor_ | _constructor_
-final function __toString__() <br> _Gets the `Player` editting the Book_ | `String`
+final readonly property __Book__ <br> _Get: Gets the Book [`Item`](../../api/inventory/Item.md) being editted_ | [`Item`](../../api/inventory/Item.md)
+final readonly property __Player__ <br> _Get: Gets the `Player` editting the Book_ | `Player`
+final function __toString__() <br> _{@inheritDoc}_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -38,8 +42,32 @@ _BookEdit constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-book | [`Item`](..\..\api\inventory\Item.md) | book argument
+book | [`Item`](../../api/inventory/Item.md) | book argument
 player | `Player` | player argument
+
+---
+
+### Public Properties for [`BookEdit`](BookEdit.md)
+
+##### <a id='book'></a>public final readonly property __Book__
+
+_Get: Gets the Book [`Item`](../../api/inventory/Item.md) being editted_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the book being editted
+
+
+
+##### <a id='player'></a>public final readonly property __Player__
+
+_Get: Gets the `Player` editting the Book_
+
+Get | Description
+--- | --- 
+`Player` | the player doing the editting
+
+
 
 ---
 
@@ -47,21 +75,16 @@ player | `Player` | player argument
 
 ##### <a id='tostring'></a>public final function __toString__()
 
-_Gets the `Player` editting the Book_
+_{@inheritDoc}_
 
-Returns | Description
---- | --- 
-`String` | the player doing the editting /
-    public final Player getPlayer() {
-        return player;
-    }
-
-    /** Gets the Book [`Item`](..\..\api\inventory\Item.md) being editted
+Returns | 
+--- | 
+`String` |
 
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -69,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -92,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

@@ -1,21 +1,25 @@
 ## LightningStrike __class__
 
 >io.wolfscript.event.world.LightningStrike
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
 ### Class Overview
 
-LightningStrike <p/> Called when a [`LightningBolt`](..\..\api\entity\effect\LightningBolt.md) strikes
+LightningStrike <p/> Called when a [`LightningBolt`](../../api/entity/effect/LightningBolt.md) strikes
 
 Method | Type   
 --- | :--- 
-final function __toString__() <br> _Creates a new LightningStrike_ | `String`
- var __lightbolt__ <br> _lightbolt field_ | [`LightningBolt`](..\..\api\entity\effect\LightningBolt.md)
+new __LightningStrike__(lightbolt) <br> _Creates a new LightningStrike_ | _constructor_
+ readonly property __LightningBolt__ <br> _Get: Gets the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking_ | [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
+final function __toString__() <br> _{@inheritDoc}_ | `String`
+ var __lightbolt__ <br> _lightbolt field_ | [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -23,21 +27,41 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`LightningStrike`](LightningStrike.md)
+
+##### <a id='lightningstrike'></a>new __LightningStrike__(lightbolt) 
+
+_Creates a new LightningStrike_
+
+Argument | Type | Description  
+--- | --- | --- 
+lightbolt | [`LightningBolt`](../../api/entity/effect/LightningBolt.md) | the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking
+
+---
+
+### Public Properties for [`LightningStrike`](LightningStrike.md)
+
+##### <a id='lightningbolt'></a>public  readonly property __LightningBolt__
+
+_Get: Gets the [`LightningBolt`](../../api/entity/effect/LightningBolt.md) striking_
+
+Get | Description
+--- | --- 
+[`LightningBolt`](../../api/entity/effect/LightningBolt.md) | the striking [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
+
+
+
+---
 
 ### Public Methods for [`LightningStrike`](LightningStrike.md)
 
 ##### <a id='tostring'></a>public final function __toString__()
 
-_Creates a new LightningStrike_
+_{@inheritDoc}_
 
-Returns | Description
---- | --- 
-`String` | the striking [`LightningBolt`](..\..\api\entity\effect\LightningBolt.md) /
-    public LightningBolt getLightningBolt() {
-        return lightbolt;
-    }
-
-    /** {@inheritDoc}
+Returns | 
+--- | 
+`String` |
 
 
 ---
@@ -49,31 +73,42 @@ Returns | Description
 _lightbolt field_
 
 >Returns
->  [`LightningBolt`](..\..\api\entity\effect\LightningBolt.md)
+>  [`LightningBolt`](../../api/entity/effect/LightningBolt.md)
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

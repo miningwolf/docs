@@ -1,7 +1,7 @@
 ## BedExit __class__
 
 >io.wolfscript.event.player.BedExit
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -11,11 +11,15 @@ Bed exit hook, called when a player leaves a bed
 
 Method | Type   
 --- | :--- 
- readonly property __Bed__ <br> _Get: Create a new BedExit_ | [`Block`](..\..\api\world\blocks\Block.md)
+new __BedExit__(player, bed) <br> _Create a new BedExit_ | _constructor_
+ readonly property __Bed__ <br> _Get: Get the bed [`Block`](../../api/world/blocks/Block.md) the `Player` is leaving_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __Player__ <br> _Get: Gets the `Player` leaving the bed_ | `Player`
  function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -23,21 +27,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`BedExit`](BedExit.md)
+
+##### <a id='bedexit'></a>new __BedExit__(player, bed) 
+
+_Create a new BedExit_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the player that left the bed
+bed | [`Block`](../../api/world/blocks/Block.md) | the bed the player left
+
+---
 
 ### Public Properties for [`BedExit`](BedExit.md)
 
 ##### <a id='bed'></a>public  readonly property __Bed__
 
-_Get: Create a new BedExit_
+_Get: Get the bed [`Block`](../../api/world/blocks/Block.md) the `Player` is leaving_
 
 Get | Description
 --- | --- 
-[`Block`](..\..\api\world\blocks\Block.md) | player /
-    public Player getPlayer() {
-        return player;
-    }
+[`Block`](../../api/world/blocks/Block.md) | bed block player is leaving
 
-    /** Get the bed [`Block`](..\..\api\world\blocks\Block.md) the `Player` is leaving
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player` leaving the bed_
+
+Get | Description
+--- | --- 
+`Player` | player
 
 
 
@@ -56,27 +77,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

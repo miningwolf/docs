@@ -1,7 +1,7 @@
 ## RotatedPillarProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.RotatedPillarProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Rotated Pillar properties helper<br/> Applies to<br/> <ul>Hay</ul> <ul>Log</ul>
 
 Method | Type   
 --- | :--- 
-static function __applyAxis__(block, value) <br> _Rotated Pillar axis property, Values: `Axis`_ | [`Block`](..\..\Block.md)
-static final var __axis__ <br> _Rotated Pillar axis property, Values: `Axis`_ | [`BlockEnumProperty`](..\BlockEnumProperty.md)
+static function __applyAxis__(block, value) <br> _Rotated Pillar axis property, Values: `Axis`_ | [`Block`](../../Block.md)
+static final var __axis__ <br> _Rotated Pillar axis property, Values: `Axis`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Rotated Pillar axis property, Values: `Axis` /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
-value | [`Axis`](Axis.md) | the `Axis` value to apply
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `Axis` | the `Axis` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Rotated Pillar axis property, Values: `Axis`_
 
 >Returns
->  [`BlockEnumProperty`](..\BlockEnumProperty.md)
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
 
 ---
+
+
 ---
 
 

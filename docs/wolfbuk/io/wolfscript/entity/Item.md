@@ -11,7 +11,8 @@ Represents an Item.
 
 Method | Type   
 --- | :--- 
- writeonly property __PickupDelay__ <br> _Set: Gets the item stack associated with this item drop._ | `void`
+  property __ItemStack__ <br> _Get: Gets the item stack associated with this item drop.<br>Set: Sets the item stack associated with this item drop._ | `ItemStack`
+  property __PickupDelay__ <br> _Get: Gets the delay before this Item is available to be picked up by players<br>Set: Sets the delay before this Item is available to be picked up by players_ | `int`
 
 
 
@@ -20,16 +21,26 @@ Method | Type
 
 ### Public Properties for [`Item`](Item.md)
 
-##### <a id='pickupdelay'></a>public  writeonly property __PickupDelay__
+##### <a id='itemstack'></a>public   property __ItemStack__
 
-_Set: Gets the item stack associated with this item drop._
+_Get: Gets the item stack associated with this item drop.<br>Set: Sets the item stack associated with this item drop._
 
 Get | Description
 --- | --- 
-`void` | An item stack. /
-    public ItemStack getItemStack();
+`ItemStack` | An item stack.
 
-    /** Sets the item stack associated with this item drop.
+Set | Type | Description  
+--- | --- | --- 
+stack | `ItemStack` | An item stack.
+
+
+##### <a id='pickupdelay'></a>public   property __PickupDelay__
+
+_Get: Gets the delay before this Item is available to be picked up by players<br>Set: Sets the delay before this Item is available to be picked up by players_
+
+Get | Description
+--- | --- 
+`int` | Remaining delay
 
 Set | Type | Description  
 --- | --- | --- 

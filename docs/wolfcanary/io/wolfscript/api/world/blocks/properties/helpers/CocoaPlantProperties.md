@@ -11,12 +11,16 @@ CocoaPlant properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyAge__(block, value) <br> _CocoaPlant age property, Values: 0 - 2_ | [`Block`](..\..\Block.md)
-static final var __age__ <br> _CocoaPlant age property, Values: 0 - 2_ | [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+static function __applyAge__(block, value) <br> _CocoaPlant age property, Values: 0 - 2_ | [`Block`](../../Block.md)
+static final var __age__ <br> _CocoaPlant age property, Values: 0 - 2_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
  |
 __Inherited items from [`DirectionalBlockProperties`](DirectionalBlockProperties.md)__ |
-static function __applyFacing__(block, value) <br> _Directional facing property, Values: [`BlockFace`](..\..\BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](..\..\Block.md)
-static final var __facing__ <br> _Directional facing property, Values: [`BlockFace`](..\..\BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](..\BlockDirectionProperty.md)
+static function __applyFacing__(block, value) <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`Block`](../../Block.md)
+static final var __facing__ <br> _Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_ | [`BlockDirectionProperty`](../BlockDirectionProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -36,12 +40,12 @@ _CocoaPlant age property, Values: 0 - 2 /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `int` | the `int` value to apply (0 - 2)
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -53,7 +57,7 @@ Returns | Description
 _CocoaPlant age property, Values: 0 - 2_
 
 >Returns
->  [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+>  [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 
 ---
 
@@ -61,19 +65,19 @@ _CocoaPlant age property, Values: 0 - 2_
 
 ##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Directional facing property, Values: [`BlockFace`](..\..\BlockFace.md) (Excluding TOP & BOTTOM) /
+_Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM) /
     public static final BlockDirectionProperty facing = getInstanceFor(Bed, "facing");
 
-    /** Applies a [`BlockFace`](..\..\BlockFace.md) facing property to the `DirectionalBlock`_
+    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `DirectionalBlock`_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
-value | [`BlockFace`](..\..\BlockFace.md) | the [`BlockFace`](..\..\BlockFace.md) value to apply
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | [`BlockFace`](../../BlockFace.md) | the [`BlockFace`](../../BlockFace.md) value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -82,12 +86,14 @@ Returns | Description
 
 ##### <a id='facing'></a>public static final var __facing__
 
-_Directional facing property, Values: [`BlockFace`](..\..\BlockFace.md) (Excluding TOP & BOTTOM)_
+_Directional facing property, Values: [`BlockFace`](../../BlockFace.md) (Excluding TOP & BOTTOM)_
 
 >Returns
->  [`BlockDirectionProperty`](..\BlockDirectionProperty.md)
+>  [`BlockDirectionProperty`](../BlockDirectionProperty.md)
 
 ---
+
+
 ---
 
 

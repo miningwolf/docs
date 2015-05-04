@@ -10,27 +10,48 @@ Represents a connection (pool) manager for all sorts of JDBC connections. In our
 
 Method | Type   
 --- | :--- 
-static function __shutdown__() <br> _Instantiates the connection manager_ | `void`
+static readonly property __Connection__ <br> _Get: Create a new instance of this connection manager._ | `Connection`
+ readonly property __Type__ <br> _Get: Instantiates the connection manager_ | [`SQLType`](SQLType.md)
+static function __shutdown__() <br> _Shut down the connection pool._ | `void`
 
 
 
 ---
 
 
+### Public Properties for [`JdbcConnectionManager`](JdbcConnectionManager.md)
+
+##### <a id='connection'></a>public static readonly property __Connection__
+
+_Get: Create a new instance of this connection manager._
+
+Get | Description
+--- | --- 
+`Connection` | an instance of the manager
+
+
+
+##### <a id='type'></a>public  readonly property __Type__
+
+_Get: Instantiates the connection manager_
+
+Get | Description
+--- | --- 
+[`SQLType`](SQLType.md) | the type
+
+
+
+---
+
 ### Public Methods for [`JdbcConnectionManager`](JdbcConnectionManager.md)
 
 ##### <a id='shutdown'></a>public static function __shutdown__()
 
-_Instantiates the connection manager_
+_Shut down the connection pool. Should be called when the system is reloaded or goes down to prevent data loss._
 
-Returns | Description
---- | --- 
-`void` | the type /
-    public SQLType getType() {
-        return this.type;
-    }
-
-    /** Create a new instance of this connection manager.
+Returns | 
+--- | 
+`void` |
 
 
 ---

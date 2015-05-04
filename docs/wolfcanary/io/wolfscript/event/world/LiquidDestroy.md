@@ -1,7 +1,7 @@
 ## LiquidDestroy __class__
 
 >io.wolfscript.event.world.LiquidDestroy
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -13,16 +13,21 @@ Method | Type
 --- | :--- 
 new __LiquidDestroy__(block) <br> _LiquidDestroy constructor_ | _constructor_
 new __LiquidDestroy__(liquidType, toDestroy) <br> _LiquidDestroy constructor_ | _constructor_
- writeonly property __ForceDestroy__ <br> _Set: Get the block that would be destroyed by the liquid flow_ | `void`
+ readonly property __Block__ <br> _Get: Get the block that would be destroyed by the liquid flow_ | [`Block`](../../api/world/blocks/Block.md)
+ readonly property __LiquidType__ <br> _Get: Returns the [`BlockType`](../../api/world/blocks/BlockType.md) of the liquid._ | [`BlockType`](../../api/world/blocks/BlockType.md)
+ writeonly property __ForceDestroy__ <br> _Set: Set this to true to force the block to be destroyed._ | `void`
+ function __isForceDestroy__() <br> _Check if the block in question will be destroyed regardless of what it is._ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,7 +45,7 @@ _LiquidDestroy constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\api\world\blocks\Block.md) | block argument
+block | [`Block`](../../api/world/blocks/Block.md) | block argument
 
 ##### <a id='liquiddestroy'></a>new __LiquidDestroy__(liquidType, toDestroy) 
 
@@ -48,25 +53,40 @@ _LiquidDestroy constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-liquidType | [`BlockType`](..\..\api\world\blocks\BlockType.md) | liquidType argument
-toDestroy | [`Block`](..\..\api\world\blocks\Block.md) | toDestroy argument
+liquidType | [`BlockType`](../../api/world/blocks/BlockType.md) | liquidType argument
+toDestroy | [`Block`](../../api/world/blocks/Block.md) | toDestroy argument
 
 ---
 
 ### Public Properties for [`LiquidDestroy`](LiquidDestroy.md)
 
-##### <a id='forcedestroy'></a>public  writeonly property __ForceDestroy__
+##### <a id='block'></a>public  readonly property __Block__
 
-_Set: Get the block that would be destroyed by the liquid flow_
+_Get: Get the block that would be destroyed by the liquid flow_
 
 Get | Description
 --- | --- 
-`void` | the [`Block`](..\..\api\world\blocks\Block.md) /
-    public Block getBlock() {
-        return block;
-    }
+[`Block`](../../api/world/blocks/Block.md) | the [`Block`](../../api/world/blocks/Block.md)
 
-    /** Returns the [`BlockType`](..\..\api\world\blocks\BlockType.md) of the liquid. Always returns the Flowing variant.
+
+
+##### <a id='liquidtype'></a>public  readonly property __LiquidType__
+
+_Get: Returns the [`BlockType`](../../api/world/blocks/BlockType.md) of the liquid. Always returns the Flowing variant._
+
+Get | Description
+--- | --- 
+[`BlockType`](../../api/world/blocks/BlockType.md) | The liquid's [`BlockType`](../../api/world/blocks/BlockType.md)
+
+
+
+##### <a id='forcedestroy'></a>public  writeonly property __ForceDestroy__
+
+_Set: Set this to true to force the block to be destroyed. This will not work if the hook is canceled already!_
+
+Get | 
+--- | 
+`void` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -76,6 +96,15 @@ forceDestroy | `boolean` | `true` for force destroy
 ---
 
 ### Public Methods for [`LiquidDestroy`](LiquidDestroy.md)
+
+##### <a id='isforcedestroy'></a>public  function __isForceDestroy__()
+
+_Check if the block in question will be destroyed regardless of what it is._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if force destroy
+
 
 ##### <a id='tostring'></a>public final function __toString__()
 
@@ -88,7 +117,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -96,7 +125,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -119,27 +148,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

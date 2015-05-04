@@ -1,7 +1,7 @@
 ## JavaPluginLoader __class__
 
 >io.wolfscript.plugin.java.JavaPluginLoader
->Implements [`PluginLoader`](..\PluginLoader.md)
+>Implements [`PluginLoader`](../PluginLoader.md)
 
 ---
 
@@ -28,7 +28,7 @@ _This class was not meant to be constructed explicitly_
 
 Argument | Type | Description  
 --- | --- | --- 
-instance | [`Server`](..\..\Server.md) | the server instance
+instance | [`Server`](../../Server.md) | the server instance
 
 ---
 
@@ -54,7 +54,7 @@ _disablePlugin method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\Plugin.md) | plugin argument
+plugin | [`Plugin`](../Plugin.md) | plugin argument
 
 Returns | 
 --- | 

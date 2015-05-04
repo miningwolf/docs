@@ -16,18 +16,33 @@ VERSION_1_1: "DEFAULT_1_1"<br> _VERSION_1_1 WorldType_ | WorldType
 LARGE_BIOMES: "LARGEBIOMES"<br> _LARGE_BIOMES WorldType_ | WorldType
 AMPLIFIED: "AMPLIFIED"<br> _AMPLIFIED WorldType_ | WorldType
 CUSTOMIZED: "CUSTOMIZED"<br> _CUSTOMIZED WorldType_ | WorldType
-static function __getByName__(name) <br> _Gets the name of this WorldType_ | [`WorldType`](WorldType.md)
+ readonly property __Name__ <br> _Get: Gets the name of this WorldType_ | `String`
+static function __getByName__(name) <br> _Gets a Worldtype by its name_ | [`WorldType`](WorldType.md)
 
 
 
 ---
 
 
+### Public Properties for [`WorldType`](WorldType.md)
+
+##### <a id='name'></a>public  readonly property __Name__
+
+_Get: Gets the name of this WorldType_
+
+Get | Description
+--- | --- 
+`String` | Name of this type
+
+
+
+---
+
 ### Public Methods for [`WorldType`](WorldType.md)
 
 ##### <a id='getbyname'></a>public static function __getByName__(name)
 
-_Gets the name of this WorldType_
+_Gets a Worldtype by its name_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -35,12 +50,7 @@ name | `String` | Name of the WorldType to get
 
 Returns | Description
 --- | --- 
-[`WorldType`](WorldType.md) | Name of this type /
-    public String getName() {
-        return name;
-    }
-
-    /** Gets a Worldtype by its name
+[`WorldType`](WorldType.md) | Requested WorldType, or null if not found
 
 
 ---

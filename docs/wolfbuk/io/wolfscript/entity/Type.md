@@ -23,18 +23,27 @@ SIAMESE_CAT: 3<br> _SIAMESE_CAT Type_ | Type
 ---
 
 
+### Public Properties for [`Type`](Type.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
+
+_Get: Gets the ID of this cat type._
+
+Get | Description
+--- | --- 
+`int` | Type ID.
+
+
+
+---
+
 ### Public Methods for [`Type`](Type.md)
 
 ##### <a id='gettype'></a>public static function __getType__(id)
-_Deprecated: Magic value /
-        @Deprecated
-        public int getId() {
-            return id;
-        }
+_Deprecated: Magic value_
 
-        /** Gets a cat type by its ID. Magic value_
-
-_Gets the ID of this cat type._
+_Gets a cat type by its ID._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -42,7 +51,7 @@ id | `int` | ID of the cat type to get.
 
 Returns | Description
 --- | --- 
-[`Type`](Type.md) | Type ID.
+[`Type`](Type.md) | Resulting type, or null if not found.
 
 
 ---

@@ -11,11 +11,11 @@ Container helper for Banner pattern shape and colors
 Method | Type   
 --- | :--- 
 new __BannerPattern__(color, pattern) <br> _BannerPattern constructor_ | _constructor_
- readonly property __Color__ <br> _Color property_ | [`DyeColor`](..\..\DyeColor.md)
+ readonly property __Color__ <br> _Color property_ | [`DyeColor`](../../DyeColor.md)
  readonly property __Pattern__ <br> _Pattern property_ | [`BannerPatterns`](BannerPatterns.md)
- function __asCompoundTag__() <br> _asCompoundTag method_ | [`CompoundTag`](..\..\nbt\CompoundTag.md)
+ function __asCompoundTag__() <br> _asCompoundTag method_ | [`CompoundTag`](../../nbt/CompoundTag.md)
 final function __equals__(obj) <br> _equals method_ | `boolean`
-static function __fromCompoundTag__(tag) <br> _Creates a BannerPattern from a [`CompoundTag`](..\..\nbt\CompoundTag.md)_ | [`BannerPattern`](BannerPattern.md)
+static function __fromCompoundTag__(tag) <br> _Creates a BannerPattern from a [`CompoundTag`](../../nbt/CompoundTag.md)_ | [`BannerPattern`](BannerPattern.md)
 
 
 
@@ -29,7 +29,7 @@ _BannerPattern constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-color | [`DyeColor`](..\..\DyeColor.md) | color argument
+color | [`DyeColor`](../../DyeColor.md) | color argument
 pattern | [`BannerPatterns`](BannerPatterns.md) | pattern argument
 
 ---
@@ -42,7 +42,7 @@ _Color property_
 
 Get | 
 --- | 
-[`DyeColor`](..\..\DyeColor.md) |
+[`DyeColor`](../../DyeColor.md) |
 
 
 
@@ -66,7 +66,7 @@ _asCompoundTag method_
 
 Returns | 
 --- | 
-[`CompoundTag`](..\..\nbt\CompoundTag.md) |
+[`CompoundTag`](../../nbt/CompoundTag.md) |
 
 
 ##### <a id='equals'></a>public final function __equals__(obj)
@@ -84,11 +84,11 @@ Returns |
 
 ##### <a id='fromcompoundtag'></a>public static function __fromCompoundTag__(tag)
 
-_Creates a BannerPattern from a [`CompoundTag`](..\..\nbt\CompoundTag.md)_
+_Creates a BannerPattern from a [`CompoundTag`](../../nbt/CompoundTag.md)_
 
 Argument | Type | Description  
 --- | --- | --- 
-tag | [`CompoundTag`](..\..\nbt\CompoundTag.md) | the tag to grab data from, the tag should be the one from within the Patterns list tag
+tag | [`CompoundTag`](../../nbt/CompoundTag.md) | the tag to grab data from, the tag should be the one from within the Patterns list tag
 
 Returns | Description
 --- | --- 

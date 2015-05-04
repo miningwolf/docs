@@ -1,7 +1,7 @@
 ## FoodExhaustion __class__
 
 >io.wolfscript.event.player.FoodExhaustion
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -11,11 +11,16 @@ Food exhaustion change hook. Contains information about a player's food exhausti
 
 Method | Type   
 --- | :--- 
- writeonly property __NewValue__ <br> _Set: Constructs a new FoodExhaustion_ | `void`
+new __FoodExhaustion__(player, oldval, newval) <br> _Constructs a new FoodExhaustion_ | _constructor_
+  property __NewValue__ <br> _Get: Gets the new exhaustion level<br>Set: Sets the new value to actually be set_ | `float`
+ readonly property __OldValue__ <br> _Get: Gets the old (current) exhaustion level_ | `float`
+ readonly property __Player__ <br> _Get: Gets the `Player` who's food exhaustion is changing_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -23,25 +28,53 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`FoodExhaustion`](FoodExhaustion.md)
+
+##### <a id='foodexhaustion'></a>new __FoodExhaustion__(player, oldval, newval) 
+
+_Constructs a new FoodExhaustion_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` who's Food Exhaustion is changing
+oldval | `float` | the old (current) value
+newval | `float` | the new value
+
+---
 
 ### Public Properties for [`FoodExhaustion`](FoodExhaustion.md)
 
-##### <a id='newvalue'></a>public  writeonly property __NewValue__
+##### <a id='newvalue'></a>public   property __NewValue__
 
-_Set: Constructs a new FoodExhaustion_
+_Get: Gets the new exhaustion level<br>Set: Sets the new value to actually be set_
 
 Get | Description
 --- | --- 
-`void` | the `Player` /
-    public Player getPlayer() {
-        return player;
-    }
-
-    /** Gets the old (current) exhaustion level
+`float` | the new exhaustion level
 
 Set | Type | Description  
 --- | --- | --- 
 value | `float` | the Exhaustion level to set
+
+
+##### <a id='oldvalue'></a>public  readonly property __OldValue__
+
+_Get: Gets the old (current) exhaustion level_
+
+Get | Description
+--- | --- 
+`float` | the old exhaustion level
+
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Gets the `Player` who's food exhaustion is changing_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
+
 
 
 ---
@@ -59,27 +92,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

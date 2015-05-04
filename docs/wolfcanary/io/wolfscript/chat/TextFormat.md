@@ -11,8 +11,16 @@ This class contains James' color list and additionally formatting options for un
 
 Method | Type   
 --- | :--- 
-static function __getLastColor__(input) <br> _The character sequence to make the following text bold._ | `String`
-static final var __RESET__ <br> _The character sequence to make the following text bold._ | `String`
+final function __consoleFormat__(text) <br> _Replaces all Color formatting with an & symbol_ | `String`
+static function __getLastColor__(input) <br> _Gets the last Color of a String_ | `String`
+final function __removeFormatting__(text) <br> _The character sequence to make the following text bold._ | `String`
+static final var __BOLD__ <br> _The character sequence to make the following text bold._ | `String`
+static final var __STRIKE__ <br> _The character seqence to make the following text striked._ | `String`
+static final var __UNDERLINED__ <br> _The characted sequence to make the following text underlined._ | `String`
+static final var __ITALICS__ <br> _The character sequence to make the following text italic._ | `String`
+static final var __RANDOM__ <br> _The character sequence to display everything as completely random_ | `String`
+static final var __NEW__ <br> _The character sequence to create a new line of text_ | `String`
+static final var __RESET__ <br> _The character sequence to reset all text formatting._ | `String`
  |
 __Inherited items from [`Colors`](Colors.md)__ |
 static final var __BLACK__ <br> _BLACK field_ | `String`
@@ -42,7 +50,33 @@ static final var __MARKER__ <br> _MARKER field_ | `String`
 
 ### Public Methods for [`TextFormat`](TextFormat.md)
 
+##### <a id='consoleformat'></a>public final function __consoleFormat__(text)
+
+_Replaces all Color formatting with an & symbol_
+
+Argument | Type | Description  
+--- | --- | --- 
+text | `String` | the text to be formatted
+
+Returns | Description
+--- | --- 
+`String` | the formatted text
+
+
 ##### <a id='getlastcolor'></a>public static function __getLastColor__(input)
+
+_Gets the last Color of a String_
+
+Argument | Type | Description  
+--- | --- | --- 
+input | `String` | the string to get the last color for
+
+Returns | Description
+--- | --- 
+`String` | the last Color
+
+
+##### <a id='removeformatting'></a>public final function __removeFormatting__(text)
 
 _The character sequence to make the following text bold. /
     public static final String BOLD = "\u00A7l";
@@ -68,42 +102,62 @@ _The character sequence to make the following text bold. /
 
 Argument | Type | Description  
 --- | --- | --- 
-input | `String` | the string to get the last color for
+text | `String` | The text to be stripped of formatting.
 
 Returns | Description
 --- | --- 
-`String` | <tt>text</tt> with all color/style tags stripped. /
-    public static final String removeFormatting(String text) {
-        return text.replaceAll("\u00A7[A-FK-NRa-fk-nr0-9]", "");
-    }
-
-    /** Replaces all Color formatting with an & symbol
+`String` | <tt>text</tt> with all color/style tags stripped.
 
 
 ---
 
 ### Public Fields for [`TextFormat`](TextFormat.md)
 
+##### <a id='bold'></a>public static final var __BOLD__
+
+_The character sequence to make the following text bold._
+
+>Returns
+>  `String`
+
+##### <a id='strike'></a>public static final var __STRIKE__
+
+_The character seqence to make the following text striked._
+
+>Returns
+>  `String`
+
+##### <a id='underlined'></a>public static final var __UNDERLINED__
+
+_The characted sequence to make the following text underlined._
+
+>Returns
+>  `String`
+
+##### <a id='italics'></a>public static final var __ITALICS__
+
+_The character sequence to make the following text italic._
+
+>Returns
+>  `String`
+
+##### <a id='random'></a>public static final var __RANDOM__
+
+_The character sequence to display everything as completely random_
+
+>Returns
+>  `String`
+
+##### <a id='new'></a>public static final var __NEW__
+
+_The character sequence to create a new line of text_
+
+>Returns
+>  `String`
+
 ##### <a id='reset'></a>public static final var __RESET__
 
-_The character sequence to make the following text bold. /
-    public static final String BOLD = "\u00A7l";
-
-    /** The character seqence to make the following text striked. /
-    public static final String STRIKE = "\u00A7m";
-
-    /** The characted sequence to make the following text underlined. /
-    public static final String UNDERLINED = "\u00A7n";
-
-    /** The character sequence to make the following text italic. /
-    public static final String ITALICS = "\u00A7o";
-
-    /** The character sequence to display everything as completely random /
-    public static final String RANDOM = "\u00A7k";
-    /** The character sequence to create a new line of text /
-    public static final String NEW_LINE = "\n";
-
-    /** The character sequence to reset all text formatting._
+_The character sequence to reset all text formatting._
 
 >Returns
 >  `String`

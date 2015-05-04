@@ -11,12 +11,12 @@ Represents an Enderman.
 
 Method | Type   
 --- | :--- 
- writeonly property __CarriedMaterial__ <br> _Set: Get the id and data of the block that the Enderman is carrying._ | `void`
+  property __CarriedMaterial__ <br> _Get: Get the id and data of the block that the Enderman is carrying.<br>Set: Set the id and data of the block that the Enderman is carring._ | [`MaterialData`](../material/MaterialData.md)
  |
 __Inherited items from [`Monster`](Monster.md)__ |
  |
 __Inherited items from [`Creature`](Creature.md)__ |
- readonly property __Target__ <br> _Get: Instructs this Creature to set the specified LivingEntity as its_ | `LivingEntity`
+  property __Target__ <br> _Get: Gets the current target of this Creature<br>Set: Instructs this Creature to set the specified LivingEntity as its_ | `LivingEntity`
 
 
 
@@ -29,34 +29,34 @@ __Inherited items from [`Creature`](Creature.md)__ |
 
 ### Public Properties for [`Enderman`](Enderman.md)
 
-##### <a id='carriedmaterial'></a>public  writeonly property __CarriedMaterial__
+##### <a id='carriedmaterial'></a>public   property __CarriedMaterial__
 
-_Set: Get the id and data of the block that the Enderman is carrying._
+_Get: Get the id and data of the block that the Enderman is carrying.<br>Set: Set the id and data of the block that the Enderman is carring._
 
 Get | Description
 --- | --- 
-`void` | MaterialData containing the id and data of the block /
-    public MaterialData getCarriedMaterial();
-
-    /** Set the id and data of the block that the Enderman is carring.
+[`MaterialData`](../material/MaterialData.md) | MaterialData containing the id and data of the block
 
 Set | Type | Description  
 --- | --- | --- 
-material | [`MaterialData`](..\material\MaterialData.md) | data to set the carried block to
+material | [`MaterialData`](../material/MaterialData.md) | data to set the carried block to
 
 
 ---
 
 ### Public Properties for [`Creature`](Creature.md)
 
-##### <a id='target'></a>public  readonly property __Target__
+##### <a id='target'></a>public   property __Target__
 
-_Get: Instructs this Creature to set the specified LivingEntity as its target. <p> Hostile creatures may attack their target, and friendly creatures may follow their target._
+_Get: Gets the current target of this Creature<br>Set: Instructs this Creature to set the specified LivingEntity as its target. <p> Hostile creatures may attack their target, and friendly creatures may follow their target._
 
 Get | Description
 --- | --- 
 `LivingEntity` | Current target of this creature, or null if none exists
 
+Set | Type | Description  
+--- | --- | --- 
+target | `LivingEntity` | New LivingEntity to target, or null to clear the target
 
 
 ---

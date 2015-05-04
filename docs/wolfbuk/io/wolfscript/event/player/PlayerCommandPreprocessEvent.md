@@ -2,7 +2,7 @@
 
 >io.wolfscript.event.player.PlayerCommandPreprocessEvent
 >Extends [`PlayerEvent`](PlayerEvent.md)
->Implements [`Cancellable`](..\Cancellable.md)
+>Implements [`Cancellable`](../Cancellable.md)
 
 ---
 
@@ -14,8 +14,9 @@ Method | Type
 --- | :--- 
 new __PlayerCommandPreprocessEvent__(Player, String) <br> _PlayerCommandPreprocessEvent constructor_ | _constructor_
 new __PlayerCommandPreprocessEvent__(Player, String, Set) <br> _PlayerCommandPreprocessEvent constructor_ | _constructor_
-static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](..\HandlerList.md)
- readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](..\HandlerList.md)
+static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Message__ <br> _Get: Gets the command that the player is attempting to send._ | `String`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
  function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
@@ -23,8 +24,12 @@ __Inherited items from [`PlayerEvent`](PlayerEvent.md)__ |
 new __PlayerEvent__(Player) <br> _PlayerEvent constructor_ | _constructor_
 final readonly property __Player__ <br> _Get: Returns the player involved in this event_ | `Player`
  |
-__Inherited items from [`Event`](..\Event.md)__ |
-final function __isAsynchronous__() <br> _The default constructor is defined for cleaner code. This constructor_ | `boolean`
+__Inherited items from [`Event`](../Event.md)__ |
+new __Event__() <br> _The default constructor is defined for cleaner code. This constructor_ | _constructor_
+new __Event__(isAsync) <br> _This constructor is used to explicitly declare an event as synchronous_ | _constructor_
+ readonly property __EventName__ <br> _Get: Convenience method for providing a user-friendly identifier. By_ | `String`
+abstract readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+final function __isAsynchronous__() <br> _Any custom event that should not by synchronized with other events must_ | `boolean`
 
 
 
@@ -59,13 +64,27 @@ Set | `final` | Set argument
 
 ### Public Properties for [`PlayerCommandPreprocessEvent`](PlayerCommandPreprocessEvent.md)
 
+##### <a id='format'></a>public   property __Format__
+_Deprecated: This method is provided for backward compatibility with no guarantee to the effect of modifying the format._
+
+_Get: Sets the command that the player will send. <p> All commands begin with a special character; implementations do not consider the first character when executing the content.<br>Set: Sets the format to use to display this chat message_
+
+Get | 
+--- | 
+`String` |
+
+Set | Type | Description  
+--- | --- | --- 
+String | `final` | String argument
+
+
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
 _HandlerList property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
@@ -75,23 +94,28 @@ _Handlers property_
 
 Get | 
 --- | 
-[`HandlerList`](..\HandlerList.md) |
+[`HandlerList`](../HandlerList.md) |
 
 
 
-##### <a id='recipients'></a>public  readonly property __Recipients__
-_Deprecated: This method is provided for backward compatibility with no guarantee to the use of the format. This method is provided for backward compatibility with no guarantee to the effect of modifying the format. This method is provided for backward compatibility with no guarantee to the effect of viewing or modifying the set._
+##### <a id='message'></a>public  readonly property __Message__
 
 _Get: Gets the command that the player is attempting to send. <p> All commands begin with a special character; implementations do not consider the first character when executing the content._
 
 Get | Description
 --- | --- 
-`Set<Player>` | Message the player is attempting to send /
-    public String getMessage() {
-        return message;
-    }
+`String` | Message the player is attempting to send
 
-    /** Sets the command that the player will send. <p> All commands begin with a special character; implementations do not consider the first character when executing the content.
+
+
+##### <a id='recipients'></a>public  readonly property __Recipients__
+_Deprecated: This method is provided for backward compatibility with no guarantee to the effect of viewing or modifying the set._
+
+_Get: Gets a set of recipients that this chat message will be displayed to. <p> The set returned is not guaranteed to be mutable and may auto-populate on access. Any listener accessing the returned set should be aware that it may reduce performance for a lazy set implementation. Listeners should be aware that modifying the list may throw `UnsupportedOperationException` if the event caller provides an unmodifiable set._
+
+Get | Description
+--- | --- 
+`Set<Player>` | All Players who will see this chat message
 
 
 
@@ -147,31 +171,56 @@ Get | Description
 
 
 ---
+### Public Constructors for [`Event`](../Event.md)
 
-### Public Methods for [`Event`](..\Event.md)
+##### <a id='event'></a>new __Event__() 
+
+_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous._
+
+
+##### <a id='event'></a>new __Event__(isAsync) 
+
+_This constructor is used to explicitly declare an event as synchronous or asynchronous._
+
+Argument | Type | Description  
+--- | --- | --- 
+isAsync | `boolean` | true indicates the event will fire asynchronously, false by default from default constructor
+
+---
+
+### Public Properties for [`Event`](../Event.md)
+
+##### <a id='eventname'></a>public  readonly property __EventName__
+
+_Get: Convenience method for providing a user-friendly identifier. By default, it is the event's class's {@linkplain Class#getSimpleName() simple name}._
+
+Get | Description
+--- | --- 
+`String` | name of this event
+
+
+
+##### <a id='handlers'></a>public abstract readonly property __Handlers__
+
+_Handlers property_
+
+Get | 
+--- | 
+[`HandlerList`](../HandlerList.md) |
+
+
+
+---
+
+### Public Methods for [`Event`](../Event.md)
 
 ##### <a id='isasynchronous'></a>public final function __isAsynchronous__()
 
-_The default constructor is defined for cleaner code. This constructor assumes the event is synchronous. /
-    public Event() {
-        this(false);
-    }
-
-    /** This constructor is used to explicitly declare an event as synchronous or asynchronous._
+_Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>_
 
 Returns | Description
 --- | --- 
-`boolean` | name of this event /
-    public String getEventName() {
-        if (name == null) {
-            name = getClass().getSimpleName();
-        }
-        return name;
-    }
-
-    public abstract HandlerList getHandlers();
-
-    /** Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an `IllegalStateException`. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul>
+`boolean` | false by default, true if the event fires asynchronously
 
 
 ---

@@ -1,7 +1,7 @@
 ## PreConnection __class__
 
 >io.wolfscript.event.player.PreConnection
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,13 +12,18 @@ Login checks hook. Comes with ip, name and a kickReason that is to be returned, 
 Method | Type   
 --- | :--- 
 new __PreConnection__(ip, name, id, dimType, world) <br> _PreConnection constructor_ | _constructor_
+ readonly property __Ip__ <br> _Get: Get the IP of the joining `Player`_ | `String`
+  property __KickReason__ <br> _Get: Get the currently set kick reason<br>Set: Set the kick reason. Make it null to not kick the `Player`_ | `String`
+ readonly property __Name__ <br> _Get: Get the name of the joining `Player`_ | `String`
+ readonly property __UUID__ <br> _UUID property_ | `UUID`
   property __World__ <br> _World property_ | `String`
-  property __WorldType__ <br> _WorldType property_ | [`DimensionType`](..\..\api\world\DimensionType.md)
- writeonly property __KickReason__ <br> _Set: Get the IP of the joining `Player`_ | `void`
+  property __WorldType__ <br> _WorldType property_ | [`DimensionType`](../../api/world/DimensionType.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -37,12 +42,55 @@ Argument | Type | Description
 ip | `String` | ip argument
 name | `String` | name argument
 id | `UUID` | id argument
-dimType | [`DimensionType`](..\..\api\world\DimensionType.md) | dimType argument
+dimType | [`DimensionType`](../../api/world/DimensionType.md) | dimType argument
 world | `String` | world argument
 
 ---
 
 ### Public Properties for [`PreConnection`](PreConnection.md)
+
+##### <a id='ip'></a>public  readonly property __Ip__
+
+_Get: Get the IP of the joining `Player`_
+
+Get | 
+--- | 
+`String` |
+
+
+
+##### <a id='kickreason'></a>public   property __KickReason__
+
+_Get: Get the currently set kick reason<br>Set: Set the kick reason. Make it null to not kick the `Player`_
+
+Get | 
+--- | 
+`String` |
+
+Set | Type | Description  
+--- | --- | --- 
+reason | `String` | reason argument
+
+
+##### <a id='name'></a>public  readonly property __Name__
+
+_Get: Get the name of the joining `Player`_
+
+Get | 
+--- | 
+`String` |
+
+
+
+##### <a id='uuid'></a>public  readonly property __UUID__
+
+_UUID property_
+
+Get | 
+--- | 
+`UUID` |
+
+
 
 ##### <a id='world'></a>public   property __World__
 
@@ -63,24 +111,11 @@ _WorldType property_
 
 Get | 
 --- | 
-[`DimensionType`](..\..\api\world\DimensionType.md) |
+[`DimensionType`](../../api/world/DimensionType.md) |
 
 Set | Type | Description  
 --- | --- | --- 
-dimensionType | [`DimensionType`](..\..\api\world\DimensionType.md) | dimensionType argument
-
-
-##### <a id='kickreason'></a>public  writeonly property __KickReason__
-
-_Set: Get the IP of the joining `Player`_
-
-Get | 
---- | 
-`void` |
-
-Set | Type | Description  
---- | --- | --- 
-reason | `String` | reason argument
+dimensionType | [`DimensionType`](../../api/world/DimensionType.md) | dimensionType argument
 
 
 ---
@@ -98,27 +133,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

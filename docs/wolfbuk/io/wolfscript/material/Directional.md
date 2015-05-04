@@ -10,7 +10,8 @@ interface Directional
 
 Method | Type   
 --- | :--- 
- readonly property __Facing__ <br> _Get: Sets the direction that this block is facing in_ | [`BlockFace`](..\block\BlockFace.md)
+ readonly property __Facing__ <br> _Get: Gets the direction this block is facing_ | [`BlockFace`](../block/BlockFace.md)
+ writeonly property __FacingDirection__ <br> _Set: Sets the direction that this block is facing in_ | `void`
 
 
 
@@ -21,12 +22,25 @@ Method | Type
 
 ##### <a id='facing'></a>public  readonly property __Facing__
 
-_Get: Sets the direction that this block is facing in_
+_Get: Gets the direction this block is facing_
 
 Get | Description
 --- | --- 
-[`BlockFace`](..\block\BlockFace.md) | the direction this block is facing
+[`BlockFace`](../block/BlockFace.md) | the direction this block is facing
 
+
+
+##### <a id='facingdirection'></a>public  writeonly property __FacingDirection__
+
+_Set: Sets the direction that this block is facing in_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+face | [`BlockFace`](../block/BlockFace.md) | The facing direction
 
 
 ---

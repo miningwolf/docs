@@ -1,7 +1,7 @@
 ## PlayerMove __class__
 
 >io.wolfscript.event.player.PlayerMove
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -12,16 +12,20 @@ Player move hook. Contains information about a player's movement
 Method | Type   
 --- | :--- 
 new __PlayerMove__(player, from, to) <br> _PlayerMove constructor_ | _constructor_
- readonly property __To__ <br> _Get: Gets the `Player`_ | `Location`
+ readonly property __From__ <br> _Get: Gets the from [`Location`](../../api/world/position/Location.md)_ | [`Location`](../../api/world/position/Location.md)
+ readonly property __Player__ <br> _Get: Gets the `Player`_ | `Player`
+ readonly property __To__ <br> _Get: Gets the to [`Location`](../../api/world/position/Location.md) (same as player's location)_ | [`Location`](../../api/world/position/Location.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -40,25 +44,40 @@ _PlayerMove constructor_
 Argument | Type | Description  
 --- | --- | --- 
 player | `Player` | player argument
-from | `Location` | from argument
-to | `Location` | to argument
+from | [`Location`](../../api/world/position/Location.md) | from argument
+to | [`Location`](../../api/world/position/Location.md) | to argument
 
 ---
 
 ### Public Properties for [`PlayerMove`](PlayerMove.md)
 
-##### <a id='to'></a>public  readonly property __To__
+##### <a id='from'></a>public  readonly property __From__
+
+_Get: Gets the from [`Location`](../../api/world/position/Location.md)_
+
+Get | Description
+--- | --- 
+[`Location`](../../api/world/position/Location.md) | from
+
+
+
+##### <a id='player'></a>public  readonly property __Player__
 
 _Get: Gets the `Player`_
 
 Get | Description
 --- | --- 
-`Location` | player /
-    public Player getPlayer() {
-        return player;
-    }
+`Player` | player
 
-    /** Gets the from `Location`
+
+
+##### <a id='to'></a>public  readonly property __To__
+
+_Get: Gets the to [`Location`](../../api/world/position/Location.md) (same as player's location)_
+
+Get | Description
+--- | --- 
+[`Location`](../../api/world/position/Location.md) | to
 
 
 
@@ -77,7 +96,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -85,7 +104,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -108,27 +127,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

@@ -1,20 +1,25 @@
 ## EntityDeath __class__
 
 >io.wolfscript.event.entity.EntityDeath
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
 ### Class Overview
 
-EntityDeath <p/> Called when a Entity (other than a `Player`) dies.<br> For `Player` death, use [`PlayerDeath`](..\player\PlayerDeath.md)
+EntityDeath <p/> Called when a Entity (other than a `Player`) dies.<br> For `Player` death, use [`PlayerDeath`](../player/PlayerDeath.md)
 
 Method | Type   
 --- | :--- 
-final function __toString__() <br> _Constructs a new EntityDeath_ | `String`
+new __EntityDeath__(entity, cause) <br> _Constructs a new EntityDeath_ | _constructor_
+ readonly property __DamageSource__ <br> _Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the [`Entity`](../../api/entity/Entity.md)_ | [`DamageSource`](../../api/DamageSource.md)
+ readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) that is dying_ | [`Entity`](../../api/entity/Entity.md)
+final function __toString__() <br> _{@inheritDoc}_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -22,46 +27,88 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`EntityDeath`](EntityDeath.md)
+
+##### <a id='entitydeath'></a>new __EntityDeath__(entity, cause) 
+
+_Constructs a new EntityDeath_
+
+Argument | Type | Description  
+--- | --- | --- 
+entity | [`Entity`](../../api/entity/Entity.md) | the [`Entity`](../../api/entity/Entity.md) that is dying
+cause | [`DamageSource`](../../api/DamageSource.md) | the [`DamageSource`](../../api/DamageSource.md) that killed the Entity
+
+---
+
+### Public Properties for [`EntityDeath`](EntityDeath.md)
+
+##### <a id='damagesource'></a>public  readonly property __DamageSource__
+
+_Get: Gets the [`DamageSource`](../../api/DamageSource.md) that killed the [`Entity`](../../api/entity/Entity.md)_
+
+Get | Description
+--- | --- 
+[`DamageSource`](../../api/DamageSource.md) | the death dealing [`DamageSource`](../../api/DamageSource.md)
+
+
+
+##### <a id='entity'></a>public  readonly property __Entity__
+
+_Get: Gets the [`Entity`](../../api/entity/Entity.md) that is dying_
+
+Get | Description
+--- | --- 
+[`Entity`](../../api/entity/Entity.md) | the dying entity
+
+
+
+---
 
 ### Public Methods for [`EntityDeath`](EntityDeath.md)
 
 ##### <a id='tostring'></a>public final function __toString__()
 
-_Constructs a new EntityDeath_
+_{@inheritDoc}_
 
-Returns | Description
---- | --- 
-`String` | the dying entity /
-    public Entity getEntity() {
-        return entity;
-    }
-
-    /** Gets the [`DamageSource`](..\..\api\DamageSource.md) that killed the [`Entity`](..\..\api\entity\Entity.md)
+Returns | 
+--- | 
+`String` |
 
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

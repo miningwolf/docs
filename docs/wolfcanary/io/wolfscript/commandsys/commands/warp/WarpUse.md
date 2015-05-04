@@ -1,7 +1,7 @@
 ## WarpUse __class__
 
 >io.wolfscript.commandsys.commands.warp.WarpUse
->Implements [`NativeCommand`](..\..\NativeCommand.md)
+>Implements [`NativeCommand`](../../NativeCommand.md)
 
 ---
 
@@ -26,7 +26,7 @@ _execute method_
 
 Argument | Type | Description  
 --- | --- | --- 
-caller | [`MessageReceiver`](..\..\..\chat\MessageReceiver.md) | caller argument
+caller | [`MessageReceiver`](../../../chat/MessageReceiver.md) | caller argument
 
 Returns | 
 --- | 

@@ -10,7 +10,10 @@ enum NetherWartsState
 
 Item | Type   
 --- | :--- 
-RIPE: <br> _State when first seeded_ | NetherWartsState
+SEEDED: <br> _State when first seeded_ | NetherWartsState
+STAGE_ONE: <br> _First growth stage_ | NetherWartsState
+STAGE_TWO: <br> _Second growth stage_ | NetherWartsState
+RIPE: <br> _Ready to harvest_ | NetherWartsState
 
 
 

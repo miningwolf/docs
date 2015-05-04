@@ -1,7 +1,7 @@
 ## SkullProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.SkullProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,14 @@ Skull properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyNoDrop__(block, value) <br> _Skull facing property, Values: [`BlockFace`](..\..\BlockFace.md)_ | [`Block`](..\..\Block.md)
-static final var __noDrop__ <br> _Skull facing property, Values: [`BlockFace`](..\..\BlockFace.md)_ | [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+static function __applyFacing__(block, value) <br> _Skull facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`Block`](../../Block.md)
+static function __applyNoDrop__(block, value) <br> _Applies whether the `Skull` can drop or not_ | [`Block`](../../Block.md)
+static final var __facing__ <br> _Skull facing property, Values: [`BlockFace`](../../BlockFace.md)_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+static final var __noDrop__ <br> _Skull nodrop property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -21,41 +27,61 @@ static final var __noDrop__ <br> _Skull facing property, Values: [`BlockFace`](.
 
 ### Public Methods for [`SkullProperties`](SkullProperties.md)
 
-##### <a id='applynodrop'></a>public static function __applyNoDrop__(block, value)
+##### <a id='applyfacing'></a>public static function __applyFacing__(block, value)
 
-_Skull facing property, Values: [`BlockFace`](..\..\BlockFace.md) /
+_Skull facing property, Values: [`BlockFace`](../../BlockFace.md) /
     public static final BlockEnumProperty facing = getInstanceFor(SkeletonHead, "facing");
 
     /** Skull nodrop property, Values: true, false /
     public static final BlockBooleanProperty noDrop = getInstanceFor(SkeletonHead, "nodrop");
 
-    /** Applies a [`BlockFace`](..\..\BlockFace.md) facing property to the `Skull`_
+    /** Applies a [`BlockFace`](../../BlockFace.md) facing property to the `Skull`_
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
-value | `boolean` | the [`BlockFace`](..\..\BlockFace.md) value to apply
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | [`BlockFace`](../../BlockFace.md) | the [`BlockFace`](../../BlockFace.md) value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+##### <a id='applynodrop'></a>public static function __applyNoDrop__(block, value)
+
+_Applies whether the `Skull` can drop or not_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `boolean` | the `boolean` value to apply (true for no drop)
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
 
 ### Public Fields for [`SkullProperties`](SkullProperties.md)
 
-##### <a id='nodrop'></a>public static final var __noDrop__
+##### <a id='facing'></a>public static final var __facing__
 
-_Skull facing property, Values: [`BlockFace`](..\..\BlockFace.md) /
-    public static final BlockEnumProperty facing = getInstanceFor(SkeletonHead, "facing");
-
-    /** Skull nodrop property, Values: true, false_
+_Skull facing property, Values: [`BlockFace`](../../BlockFace.md)_
 
 >Returns
->  [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
+
+##### <a id='nodrop'></a>public static final var __noDrop__
+
+_Skull nodrop property, Values: true, false_
+
+>Returns
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 
 ---
+
+
 ---
 
 

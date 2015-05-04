@@ -10,7 +10,7 @@ class BroadcastPermissions
 
 Method | Type   
 --- | :--- 
-static function __registerPermissions__(parent) <br> _registerPermissions method_ | [`Permission`](..\..\permissions\Permission.md)
+static function __registerPermissions__(parent) <br> _registerPermissions method_ | [`Permission`](../../permissions/Permission.md)
 
 
 
@@ -25,11 +25,11 @@ _registerPermissions method_
 
 Argument | Type | Description  
 --- | --- | --- 
-parent | [`Permission`](..\..\permissions\Permission.md) | parent argument
+parent | [`Permission`](../../permissions/Permission.md) | parent argument
 
 Returns | 
 --- | 
-[`Permission`](..\..\permissions\Permission.md) |
+[`Permission`](../../permissions/Permission.md) |
 
 
 ---

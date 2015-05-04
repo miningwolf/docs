@@ -1,7 +1,7 @@
 ## PlayerCommand __class__
 
 >io.wolfscript.event.command.PlayerCommand
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ Player command hook. Contains a player and a command String Array
 
 Method | Type   
 --- | :--- 
- readonly property __Player__ <br> _Get: Constructs a new PlayerCommand_ | `Player`
+new __PlayerCommand__(player) <br> _Constructs a new PlayerCommand_ | _constructor_
+ readonly property __Command__ <br> _Get: Get command that was issued by the `Player`_ | `String[]`
+ readonly property __Player__ <br> _Get: Get the `Player` who issued this command_ | `Player`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,37 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`PlayerCommand`](PlayerCommand.md)
+
+##### <a id='playercommand'></a>new __PlayerCommand__(player) 
+
+_Constructs a new PlayerCommand_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` executing the commmand
+
+---
 
 ### Public Properties for [`PlayerCommand`](PlayerCommand.md)
 
-##### <a id='player'></a>public  readonly property __Player__
+##### <a id='command'></a>public  readonly property __Command__
 
-_Get: Constructs a new PlayerCommand_
+_Get: Get command that was issued by the `Player`_
 
 Get | Description
 --- | --- 
-`Player` | String array of arguments /
-    public String[] getCommand() {
-        return command;
-    }
+`String[]` | String array of arguments
 
-    /** Get the `Player` who issued this command
+
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Get the `Player` who issued this command_
+
+Get | Description
+--- | --- 
+`Player` | the Player
 
 
 
@@ -63,7 +83,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +91,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +114,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

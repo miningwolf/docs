@@ -1,7 +1,7 @@
 ## DoubleStoneSlabNewProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.DoubleStoneSlabNewProperties
->Extends `StoneSlabNewProperties`
+>Extends [`StoneSlabNewProperties`](StoneSlabNewProperties.md)
 
 ---
 
@@ -11,8 +11,24 @@ New Double Stone Slab properties helper
 
 Method | Type   
 --- | :--- 
-static function __applySeamless__(block, value) <br> _New Double Stone Slab seamless property, Values: true, false_ | [`Block`](..\..\Block.md)
-static final var __seamless__ <br> _New Double Stone Slab seamless property, Values: true, false_ | [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+static function __applySeamless__(block, value) <br> _New Double Stone Slab seamless property, Values: true, false_ | [`Block`](../../Block.md)
+static final var __seamless__ <br> _New Double Stone Slab seamless property, Values: true, false_ | [`BlockBooleanProperty`](../BlockBooleanProperty.md)
+ |
+__Inherited items from [`StoneSlabNewProperties`](StoneSlabNewProperties.md)__ |
+static function __applyVariant__(block, value) <br> _New Stone Slab variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static final var __variant__ <br> _New Stone Slab variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+ |
+__Inherited items from [`SlabProperties`](SlabProperties.md)__ |
+static function __applyHalf__(block, value) <br> _Slab half property, Values: `Half`_ | [`Block`](../../Block.md)
+static final var __half__ <br> _Slab half property, Values: `Half`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
+
+
+
+
 
 
 
@@ -30,12 +46,12 @@ _New Double Stone Slab seamless property, Values: true, false /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `boolean` | the `boolean` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +63,81 @@ Returns | Description
 _New Double Stone Slab seamless property, Values: true, false_
 
 >Returns
->  [`BlockBooleanProperty`](..\BlockBooleanProperty.md)
+>  [`BlockBooleanProperty`](../BlockBooleanProperty.md)
 
 ---
+
+### Public Methods for [`StoneSlabNewProperties`](StoneSlabNewProperties.md)
+
+##### <a id='applyvariant'></a>public static function __applyVariant__(block, value)
+
+_New Stone Slab variant property, Values: `Variant` /
+    public static final BlockEnumProperty variant = getInstanceFor(RedSandstoneSlab, "variant");
+
+    /** New Stone slab variants_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `Variant` | the `Variant` value to apply
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+---
+
+### Public Fields for [`StoneSlabNewProperties`](StoneSlabNewProperties.md)
+
+##### <a id='variant'></a>public static final var __variant__
+
+_New Stone Slab variant property, Values: `Variant`_
+
+>Returns
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
+
+---
+
+### Public Methods for [`SlabProperties`](SlabProperties.md)
+
+##### <a id='applyhalf'></a>public static function __applyHalf__(block, value)
+
+_Slab half property, Values: `Half` /
+    public static final BlockEnumProperty half = getInstanceFor(StoneSlab, "half");
+
+    /** Slab halves_
+
+Argument | Type | Description  
+--- | --- | --- 
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `Half` | the `Half` value to apply
+
+Returns | Description
+--- | --- 
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+
+
+---
+
+### Public Fields for [`SlabProperties`](SlabProperties.md)
+
+##### <a id='half'></a>public static final var __half__
+
+_Slab half property, Values: `Half`_
+
+>Returns
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
+
+---
+
+
+---
+
+
+---
+
+
 ---
 
 

@@ -11,44 +11,191 @@ Iterator wrapper for a LineTracer
 
 Method | Type   
 --- | :--- 
- function __replace__(type, data) <br> _Constructor requiring player, uses default values_ | `void`
+new __BlockIterator__(in_player) <br> _Constructor requiring player, uses default values_ | _constructor_
+new __BlockIterator__(in_player, doAir) <br> _Constructor requiring player, uses default values_ | _constructor_
+new __BlockIterator__(in_location) <br> _Constructor requiring location, uses default values_ | _constructor_
+new __BlockIterator__(in_location, doAir) <br> _Constructor requiring location, uses default values_ | _constructor_
+new __BlockIterator__(in_player, in_range, in_step) <br> _Constructor requiring player, max range, and a stepping value_ | _constructor_
+new __BlockIterator__(in_player, in_range, in_step, doAir) <br> _Constructor requiring player, max range, and a stepping value_ | _constructor_
+new __BlockIterator__(in_location, in_range, in_step) <br> _Constructor requiring location, max range, and a stepping value_ | _constructor_
+new __BlockIterator__(in_location, in_range, in_step, doAir) <br> _Constructor requiring location, max range, and a stepping value_ | _constructor_
+new __BlockIterator__(tracer) <br> _Creats a BlockIterator from a [`LineTracer`](LineTracer.md)_ | _constructor_
+new __BlockIterator__(tracer, doAir) <br> _Creats a BlockIterator from a [`LineTracer`](LineTracer.md)_ | _constructor_
+ function __hasNext__() <br> _Checks if there are more [`Block`](api/world/blocks/Block.md)s in line_ | `boolean`
+ function __next__() <br> _Gets the next [`Block`](api/world/blocks/Block.md) in line_ | [`Block`](api/world/blocks/Block.md)
+ function __remove__() <br> _Sets the current block to Air, effectively removing it from the world_ | `void`
+ function __replace__(type) <br> _Replaces the current block with the given BlockType_ | `void`
+ function __replace__(type) <br> _Replaces the current block type to the given BlockType Id_ | `void`
+ function __replace__(type, data) <br> _Replaces the current block type to the given BlockType Id and data_ | `void`
 
 
 
 ---
 
+### Public Constructors for [`BlockIterator`](BlockIterator.md)
 
-### Public Methods for [`BlockIterator`](BlockIterator.md)
-
-##### <a id='replace'></a>public  function __replace__(type, data)
+##### <a id='blockiterator'></a>new __BlockIterator__(in_player) 
 
 _Constructor requiring player, uses default values_
 
 Argument | Type | Description  
 --- | --- | --- 
-type | `int` | the block type used to replace the current block /
-    public void replace(BlockType type) {
-        tracer.getCurBlock().setType(type);
-        tracer.getCurBlock().update();
-    }
+in_player | `Player` | the `Player` to check Line of Sight for
 
-    /** Replaces the current block type to the given BlockType Id
-data | `int` | the new block data
+##### <a id='blockiterator'></a>new __BlockIterator__(in_player, doAir) 
+
+_Constructor requiring player, uses default values<br /> Skips air blocks_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_player | `Player` | the `Player` to check Line of Sight for
+doAir | `boolean` | set to `true` to include Air blocks
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_location) 
+
+_Constructor requiring location, uses default values<br /> Skips air blocks_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_location, doAir) 
+
+_Constructor requiring location, uses default values_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
+doAir | `boolean` | set to `true` to include Air blocks
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_player, in_range, in_step) 
+
+_Constructor requiring player, max range, and a stepping value<br /> Skips air blocks_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_player | `Player` | the `Player` to check Line of Sight for
+in_range | `int` | the maximum range to check
+in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_player, in_range, in_step, doAir) 
+
+_Constructor requiring player, max range, and a stepping value_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_player | `Player` | the `Player` to check Line of Sight for
+in_range | `int` | the maximum range to check
+in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+doAir | `boolean` | set to `true` to include Air blocks
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_location, in_range, in_step) 
+
+_Constructor requiring location, max range, and a stepping value<br /> Skips air blocks_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
+in_range | `int` | the maximum range to check
+in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+
+##### <a id='blockiterator'></a>new __BlockIterator__(in_location, in_range, in_step, doAir) 
+
+_Constructor requiring location, max range, and a stepping value_
+
+Argument | Type | Description  
+--- | --- | --- 
+in_location | [`Location`](api/world/position/Location.md) | the [`Location`](api/world/position/Location.md) to check Line of Sight for
+in_range | `int` | the maximum range to check
+in_step | `double` | the stepping value, the amount Y to increase/decrease the further away the checks get
+doAir | `boolean` | set to `true` to include Air blocks
+
+##### <a id='blockiterator'></a>new __BlockIterator__(tracer) 
+
+_Creats a BlockIterator from a [`LineTracer`](LineTracer.md)<br /> Skips air blocks_
+
+Argument | Type | Description  
+--- | --- | --- 
+tracer | [`LineTracer`](LineTracer.md) | the LineTracer to use with this BlockIterator
+
+##### <a id='blockiterator'></a>new __BlockIterator__(tracer, doAir) 
+
+_Creats a BlockIterator from a [`LineTracer`](LineTracer.md)_
+
+Argument | Type | Description  
+--- | --- | --- 
+tracer | [`LineTracer`](LineTracer.md) | the LineTracer to use with this BlockIterator
+doAir | `boolean` | set to `true` to include Air blocks
+
+---
+
+### Public Methods for [`BlockIterator`](BlockIterator.md)
+
+##### <a id='hasnext'></a>public  function __hasNext__()
+
+_Checks if there are more [`Block`](api/world/blocks/Block.md)s in line_
 
 Returns | Description
 --- | --- 
-`void` | `true` if the is a next block /
-    @Override
-    public boolean hasNext() {
-        if (alreadyAdvanced) { 
-            /* we've already done this check, so check the curent LineTracer block /
-            return tracer.getCurBlock() != null;
-        }
-        alreadyAdvanced = true; // Need to track if we have advanced or not
-        return tracer.getNextBlock(doAir) != null;
-    }
+`boolean` | `true` if the is a next block
 
-    /** Gets the next [`Block`](api\world\blocks\Block.md) in line
+
+##### <a id='next'></a>public  function __next__()
+
+_Gets the next [`Block`](api/world/blocks/Block.md) in line_
+
+Returns | Description
+--- | --- 
+[`Block`](api/world/blocks/Block.md) | next block
+
+
+##### <a id='remove'></a>public  function __remove__()
+
+_Sets the current block to Air, effectively removing it from the world_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='replace'></a>public  function __replace__(type)
+
+_Replaces the current block with the given BlockType_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`BlockType`](api/world/blocks/BlockType.md) | the block type used to replace the current block
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='replace'></a>public  function __replace__(type)
+
+_Replaces the current block type to the given BlockType Id_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `int` | the new block id
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='replace'></a>public  function __replace__(type, data)
+
+_Replaces the current block type to the given BlockType Id and data_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | `int` | the new block id
+data | `int` | the new block data
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

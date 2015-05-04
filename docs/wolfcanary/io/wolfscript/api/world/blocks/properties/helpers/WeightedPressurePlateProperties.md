@@ -1,7 +1,7 @@
 ## WeightedPressurePlateProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.WeightedPressurePlateProperties
->Extends `BlockProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
 
 ---
 
@@ -11,8 +11,12 @@ Weighted Pressure Plate properties helper<br/> Applies to<br/> <ul>Light (Gold) 
 
 Method | Type   
 --- | :--- 
-static function __applyPower__(block, value) <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`Block`](..\..\Block.md)
-static final var __power__ <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+static function __applyPower__(block, value) <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`Block`](../../Block.md)
+static final var __power__ <br> _Weighted Pressure Plate power property, Values: 0 - 15_ | [`BlockIntegerProperty`](../BlockIntegerProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -30,12 +34,12 @@ _Weighted Pressure Plate power property, Values: 0 - 15 /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
 value | `int` | the `int` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -47,9 +51,11 @@ Returns | Description
 _Weighted Pressure Plate power property, Values: 0 - 15_
 
 >Returns
->  [`BlockIntegerProperty`](..\BlockIntegerProperty.md)
+>  [`BlockIntegerProperty`](../BlockIntegerProperty.md)
 
 ---
+
+
 ---
 
 

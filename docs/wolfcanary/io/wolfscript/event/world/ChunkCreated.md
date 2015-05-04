@@ -1,7 +1,7 @@
 ## ChunkCreated __class__
 
 >io.wolfscript.event.world.ChunkCreated
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,14 @@ Chunk created hook
 Method | Type   
 --- | :--- 
 new __ChunkCreated__(chunk, world) <br> _ChunkCreated constructor_ | _constructor_
- readonly property __World__ <br> _Get: Gets the [`Chunk`](..\..\api\world\Chunk.md)_ | [`World`](..\..\api\world\World.md)
+ readonly property __Chunk__ <br> _Get: Gets the [`Chunk`](../../api/world/Chunk.md)_ | [`Chunk`](../../api/world/Chunk.md)
+ readonly property __World__ <br> _Get: Gets the world that this chunk is a part of._ | [`World`](../../api/world/World.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -32,25 +35,30 @@ _ChunkCreated constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-chunk | [`Chunk`](..\..\api\world\Chunk.md) | chunk argument
-world | [`World`](..\..\api\world\World.md) | world argument
+chunk | [`Chunk`](../../api/world/Chunk.md) | chunk argument
+world | [`World`](../../api/world/World.md) | world argument
 
 ---
 
 ### Public Properties for [`ChunkCreated`](ChunkCreated.md)
 
-##### <a id='world'></a>public  readonly property __World__
+##### <a id='chunk'></a>public  readonly property __Chunk__
 
-_Get: Gets the [`Chunk`](..\..\api\world\Chunk.md)_
+_Get: Gets the [`Chunk`](../../api/world/Chunk.md)_
 
 Get | Description
 --- | --- 
-[`World`](..\..\api\world\World.md) | [`Chunk`](..\..\api\world\Chunk.md) created. /
-    public Chunk getChunk() {
-        return chunk;
-    }
+[`Chunk`](../../api/world/Chunk.md) | [`Chunk`](../../api/world/Chunk.md) created.
 
-    /** Gets the world that this chunk is a part of.
+
+
+##### <a id='world'></a>public  readonly property __World__
+
+_Get: Gets the world that this chunk is a part of._
+
+Get | Description
+--- | --- 
+[`World`](../../api/world/World.md) | the [`World`](../../api/world/World.md)
 
 
 
@@ -69,27 +77,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

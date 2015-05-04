@@ -14,7 +14,9 @@ Method | Type
 new __SimpleCommandMap__(Server) <br> _SimpleCommandMap constructor_ | _constructor_
  readonly property __Commands__ <br> _Commands property_ | `Collection<Command>`
  function __getCommand__(name) <br> _getCommand method_ | [`Command`](Command.md)
+ function __register__(fallbackPrefix, command) <br> _{@inheritDoc}_ | `boolean`
  function __register__(label, fallbackPrefix, command) <br> _{@inheritDoc}_ | `boolean`
+ function __registerAll__(fallbackPrefix) <br> _{@inheritDoc}_ | `void`
  function __registerServerAliases__() <br> _registerServerAliases method_ | `void`
  function __setFallbackCommands__() <br> _setFallbackCommands method_ | `void`
  function __tabComplete__(sender, cmdLine) <br> _tabComplete method_ | `List<String>`
@@ -64,23 +66,23 @@ Returns |
 [`Command`](Command.md) |
 
 
+##### <a id='register'></a>public  function __register__(fallbackPrefix, command)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+fallbackPrefix | `String` | fallbackPrefix argument
+command | [`Command`](Command.md) | command argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
 ##### <a id='register'></a>public  function __register__(label, fallbackPrefix, command)
 
-_{@inheritDoc} /
-    public void registerAll(String fallbackPrefix, List<Command> commands) {
-        if (commands != null) {
-            for (Command c : commands) {
-                register(fallbackPrefix, c);
-            }
-        }
-    }
-
-    /** {@inheritDoc} /
-    public boolean register(String fallbackPrefix, Command command) {
-        return register(command.getName(), fallbackPrefix, command);
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -91,6 +93,19 @@ command | [`Command`](Command.md) | command argument
 Returns | 
 --- | 
 `boolean` |
+
+
+##### <a id='registerall'></a>public  function __registerAll__(fallbackPrefix)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+fallbackPrefix | `String` | fallbackPrefix argument
+
+Returns | 
+--- | 
+`void` |
 
 
 ##### <a id='registerserveraliases'></a>public  function __registerServerAliases__()

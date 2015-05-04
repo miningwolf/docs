@@ -13,15 +13,19 @@ Method | Type
 --- | :--- 
 new __LongGrass__() <br> _LongGrass constructor_ | _constructor_
 new __LongGrass__(species) <br> _LongGrass constructor_ | _constructor_
- writeonly property __Species__ <br> _Species property_ | `void`
+new __LongGrass__(Material) <br> _LongGrass constructor_ | _constructor_
+  property __Species__ <br> _Get: Gets the current species of this grass<br>Set: Sets the species of this grass_ | [`GrassSpecies`](../GrassSpecies.md)
  function __clone__() <br> _clone method_ | [`LongGrass`](LongGrass.md)
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`MaterialData`](MaterialData.md)__ |
+new __MaterialData__(Material) <br> _MaterialData constructor_ | _constructor_
+ readonly property __ItemType__ <br> _Get: Gets the Material that this MaterialData represents_ | [`Material`](../Material.md)
  function __clone__() <br> _clone method_ | [`MaterialData`](MaterialData.md)
  function __equals__(obj) <br> _equals method_ | `boolean`
  function __hashCode__() <br> _hashCode method_ | `int`
- function __toItemStack__(amount) <br> _toItemStack method_ | `ItemStack`
+ function __toItemStack__() <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
+ function __toItemStack__(amount) <br> _Creates a new ItemStack based on this MaterialData_ | `ItemStack`
  function __toString__() <br> _toString method_ | `String`
 
 
@@ -43,28 +47,60 @@ _LongGrass constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-species | [`GrassSpecies`](..\GrassSpecies.md) | species argument
+species | [`GrassSpecies`](../GrassSpecies.md) | species argument
+
+##### <a id='longgrass'></a>new __LongGrass__(int) 
+_Deprecated: Magic value_
+
+_LongGrass constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='longgrass'></a>new __LongGrass__(Material) 
+
+_LongGrass constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='longgrass'></a>new __LongGrass__(int, byte) 
+_Deprecated: Magic value_
+
+_LongGrass constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='longgrass'></a>new __LongGrass__(Material, byte) 
+_Deprecated: Magic value_
+
+_LongGrass constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
 
 ---
 
 ### Public Properties for [`LongGrass`](LongGrass.md)
 
-##### <a id='species'></a>public  writeonly property __Species__
+##### <a id='species'></a>public   property __Species__
 
-_Species property_
+_Get: Gets the current species of this grass<br>Set: Sets the species of this grass_
 
 Get | Description
 --- | --- 
-`void` | GrassSpecies of this grass /
-    public GrassSpecies getSpecies() {
-        return GrassSpecies.getByData(getData());
-    }
-
-    /** Sets the species of this grass
+[`GrassSpecies`](../GrassSpecies.md) | GrassSpecies of this grass
 
 Set | Type | Description  
 --- | --- | --- 
-species | [`GrassSpecies`](..\GrassSpecies.md) | New species of this grass
+species | [`GrassSpecies`](../GrassSpecies.md) | New species of this grass
 
 
 ---
@@ -87,6 +123,85 @@ _toString method_
 Returns | 
 --- | 
 `String` |
+
+
+---
+### Public Constructors for [`MaterialData`](MaterialData.md)
+
+##### <a id='materialdata'></a>new __MaterialData__(int) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material) 
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='materialdata'></a>new __MaterialData__(int, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='materialdata'></a>new __MaterialData__(Material, byte) 
+_Deprecated: Magic value_
+
+_MaterialData constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`MaterialData`](MaterialData.md)
+
+##### <a id='data'></a>public   property __Data__
+_Deprecated: Magic value_
+
+_Get: Gets the raw data in this material<br>Set: Sets the raw data of this material_
+
+Get | 
+--- | 
+`byte` |
+
+Set | Type | Description  
+--- | --- | --- 
+data | `byte` | New raw data
+
+
+##### <a id='itemtype'></a>public  readonly property __ItemType__
+
+_Get: Gets the Material that this MaterialData represents_
+
+Get | Description
+--- | --- 
+[`Material`](../Material.md) | Material represented by this MaterialData
+
+
+
+##### <a id='itemtypeid'></a>public  readonly property __ItemTypeId__
+_Deprecated: Magic value_
+
+_Get: Gets the Material Id that this MaterialData represents_
+
+Get | Description
+--- | --- 
+`int` | Material Id represented by this MaterialData
+
 
 
 ---
@@ -124,9 +239,18 @@ Returns |
 `int` |
 
 
+##### <a id='toitemstack'></a>public  function __toItemStack__()
+
+_Creates a new ItemStack based on this MaterialData_
+
+Returns | Description
+--- | --- 
+`ItemStack` | New ItemStack containing a copy of this MaterialData
+
+
 ##### <a id='toitemstack'></a>public  function __toItemStack__(amount)
 
-_toItemStack method_
+_Creates a new ItemStack based on this MaterialData_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -134,7 +258,7 @@ amount | `int` | The stack size of the new stack
 
 Returns | Description
 --- | --- 
-`ItemStack` | Raw data
+`ItemStack` | New ItemStack containing a copy of this MaterialData
 
 
 ##### <a id='tostring'></a>public  function __toString__()

@@ -11,7 +11,7 @@ Plugin Language Library Loader
 Method | Type   
 --- | :--- 
  function __accept__(file) <br> _accept method_ | `boolean`
-static function __load__() <br> _Scans pluginlangs folder, loads all valid Plugin Language Libraries and registers with [`PluginLifecycleFactory`](lifecycle\PluginLifecycleFactory.md)_ | `void`
+static function __load__() <br> _Scans pluginlangs folder, loads all valid Plugin Language Libraries and registers with [`PluginLifecycleFactory`](lifecycle/PluginLifecycleFactory.md)_ | `void`
 
 
 
@@ -35,7 +35,7 @@ Returns |
 
 ##### <a id='load'></a>public static function __load__()
 
-_Scans pluginlangs folder, loads all valid Plugin Language Libraries and registers with [`PluginLifecycleFactory`](lifecycle\PluginLifecycleFactory.md)_
+_Scans pluginlangs folder, loads all valid Plugin Language Libraries and registers with [`PluginLifecycleFactory`](lifecycle/PluginLifecycleFactory.md)_
 
 Returns | 
 --- | 

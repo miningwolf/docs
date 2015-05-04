@@ -1,7 +1,7 @@
 ## PortalUse __class__
 
 >io.wolfscript.event.player.PortalUse
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -11,16 +11,20 @@ PortalUse Hook
 
 Method | Type   
 --- | :--- 
- readonly property __To__ <br> _Get: Constructs a new PortalUse_ | `Location`
+new __PortalUse__(player, to) <br> _Constructs a new PortalUse_ | _constructor_
+ readonly property __Player__ <br> _Get: Gets the `Player` using a portal_ | `Player`
+ readonly property __To__ <br> _Get: Gets the [`Location`](../../api/world/position/Location.md) the portal goes to_ | [`Location`](../../api/world/position/Location.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +34,38 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`PortalUse`](PortalUse.md)
+
+##### <a id='portaluse'></a>new __PortalUse__(player, to) 
+
+_Constructs a new PortalUse_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `Player` | the `Player` using the Portal
+to | [`Location`](../../api/world/position/Location.md) | the [`Location`](../../api/world/position/Location.md) the portal goes to
+
+---
 
 ### Public Properties for [`PortalUse`](PortalUse.md)
 
-##### <a id='to'></a>public  readonly property __To__
+##### <a id='player'></a>public  readonly property __Player__
 
-_Get: Constructs a new PortalUse_
+_Get: Gets the `Player` using a portal_
 
 Get | Description
 --- | --- 
-`Location` | the `Player` using a portal /
-    public Player getPlayer() {
-        return player;
-    }
+`Player` | the `Player` using a portal
 
-    /** Gets the `Location` the portal goes to
+
+
+##### <a id='to'></a>public  readonly property __To__
+
+_Get: Gets the [`Location`](../../api/world/position/Location.md) the portal goes to_
+
+Get | Description
+--- | --- 
+[`Location`](../../api/world/position/Location.md) | the [`Location`](../../api/world/position/Location.md) the portal goes to
 
 
 
@@ -63,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

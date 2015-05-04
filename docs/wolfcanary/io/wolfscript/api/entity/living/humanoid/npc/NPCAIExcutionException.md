@@ -11,6 +11,7 @@ NPC AI Excution Exception Thrown if an exception occurs while executing a NPC AI
 
 Method | Type   
 --- | :--- 
+new __NPCAIExcutionException__(message) <br> _{@inheritDoc}_ | _constructor_
 new __NPCAIExcutionException__(msg, t) <br> _{@inheritDoc}_ | _constructor_
 
 
@@ -19,14 +20,17 @@ new __NPCAIExcutionException__(msg, t) <br> _{@inheritDoc}_ | _constructor_
 
 ### Public Constructors for [`NPCAIExcutionException`](NPCAIExcutionException.md)
 
+##### <a id='npcaiexcutionexception'></a>new __NPCAIExcutionException__(message) 
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+message | `String` | message argument
+
 ##### <a id='npcaiexcutionexception'></a>new __NPCAIExcutionException__(msg, t) 
 
-_{@inheritDoc} /
-    public NPCAIExcutionException(String message) {
-        super(message);
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 

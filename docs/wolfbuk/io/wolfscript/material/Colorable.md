@@ -10,7 +10,7 @@ An object that can be colored.
 
 Method | Type   
 --- | :--- 
- writeonly property __Color__ <br> _Set: Gets the color of this object._ | `void`
+  property __Color__ <br> _Get: Gets the color of this object.<br>Set: Sets the color of this object to the specified DyeColor._ | [`DyeColor`](../DyeColor.md)
 
 
 
@@ -19,20 +19,17 @@ Method | Type
 
 ### Public Properties for [`Colorable`](Colorable.md)
 
-##### <a id='color'></a>public  writeonly property __Color__
+##### <a id='color'></a>public   property __Color__
 
-_Set: Gets the color of this object._
+_Get: Gets the color of this object.<br>Set: Sets the color of this object to the specified DyeColor._
 
 Get | Description
 --- | --- 
-`void` | The DyeColor of this object. /
-    public DyeColor getColor();
-
-    /** Sets the color of this object to the specified DyeColor.
+[`DyeColor`](../DyeColor.md) | The DyeColor of this object.
 
 Set | Type | Description  
 --- | --- | --- 
-color | [`DyeColor`](..\DyeColor.md) | The color of the object, as a DyeColor.
+color | [`DyeColor`](../DyeColor.md) | The color of the object, as a DyeColor.
 
 
 ---

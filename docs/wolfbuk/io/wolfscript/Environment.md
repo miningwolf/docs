@@ -9,29 +9,25 @@
 Represents a world, which may contain entities, chunks and blocks /
 public interface World extends PluginMessageRecipient, Metadatable {
 
-    /** Gets the [`Block`](block\Block.md) at the given coordinates
+    /** Gets the [`Block`](block/Block.md) at the given coordinates
 
 Item | Type   
 --- | :--- 
-THE_END: 1<br> _Represents the "normal"/"surface world" map_ | Environment
+NORMAL: 0<br> _Represents the "normal"/"surface world" map_ | Environment
+NETHER: -1<br> _Represents a nether based map ("hell")_ | Environment
+THE_END: 1<br> _Represents the "end" map_ | Environment
 
 
 
 ---
 
 
-### Public Methods for [`Environment`](Environment.md)
+### Public Properties for [`Environment`](Environment.md)
 
-##### <a id='getenvironment'></a>public static function __getEnvironment__(id)
-_Deprecated: Magic value /
-        @Deprecated
-        public int getId() {
-            return id;
-        }
+##### <a id='id'></a>public  readonly property __Id__
+_Deprecated: Magic value_
 
-        /** Get an environment by ID Magic value_
-
-_Represents the "normal"/"surface world" map /
+_Get: Represents the "normal"/"surface world" map /
         NORMAL(0),
         /** Represents a nether based map ("hell") /
         NETHER(-1),
@@ -47,13 +43,28 @@ _Represents the "normal"/"surface world" map /
 
         /** Gets the dimension ID of this environment_
 
+Get | Description
+--- | --- 
+`int` | dimension ID
+
+
+
+---
+
+### Public Methods for [`Environment`](Environment.md)
+
+##### <a id='getenvironment'></a>public static function __getEnvironment__(id)
+_Deprecated: Magic value_
+
+_Get an environment by ID_
+
 Argument | Type | Description  
 --- | --- | --- 
 id | `int` | The ID of the environment
 
 Returns | Description
 --- | --- 
-[`Environment`](Environment.md) | dimension ID
+[`Environment`](Environment.md) | The environment
 
 
 ---

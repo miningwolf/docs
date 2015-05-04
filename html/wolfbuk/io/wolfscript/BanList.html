@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API BanList</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../index.html'>Home </a></li>
+ <li><a href='../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+<li class='current'><a href='#'>BanList</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li><a href='../../../wolfbuk/io/wolfscript/Achievement.html'>Achievement</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Art.html'>Art</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
+<li class='active'><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Builder.html'>Builder</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/CoalType.html'>CoalType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Color.html'>Color</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/CropState.html'>CropState</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Difficulty.html'>Difficulty</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/DyeColor.html'>DyeColor</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Effect.html'>Effect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/EntityEffect.html'>EntityEffect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Environment.html'>Environment</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/FireworkEffect.html'>FireworkEffect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/GameMode.html'>GameMode</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/GrassSpecies.html'>GrassSpecies</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Instrument.html'>Instrument</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Material.html'>Material</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/NetherWartsState.html'>NetherWartsState</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Note.html'>Note</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/PortalType.html'>PortalType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Rotation.html'>Rotation</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/SandstoneType.html'>SandstoneType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Server.html'>Server</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Tone.html'>Tone</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Type.html'>Type</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WarningState.html'>WarningState</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldCreator.html'>WorldCreator</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldType.html'>WorldType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="banlist-__interface__">BanList <strong>interface</strong></h2>
+<blockquote>
+<p>io.wolfscript.BanList</p>
+</blockquote>
+<hr>
+<h3 id="interface-overview">Interface Overview</h3>
+<p>A ban list, containing bans of some <code>Type</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> readonly property <strong>BanEntries</strong> <br> <em>Get: Gets a set containing every <a href="BanEntry.html"><code>BanEntry</code></a> in this list.</em></td>
+<td style="text-align:left"><code>Set&lt;BanEntry&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>addBan</strong>(target, reason, expires, source) <br> <em>Adds a ban to the this list. If a previous ban exists, this will</em></td>
+<td style="text-align:left"><a href="BanEntry.html"><code>BanEntry</code></a></td>
+</tr>
+<tr>
+<td> function <strong>getBanEntry</strong>(target) <br> <em>Represents a ban-type that a <a href="BanList.html"><code>BanList</code></a> may track.</em></td>
+<td style="text-align:left"><a href="BanEntry.html"><code>BanEntry</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isBanned</strong>(target) <br> <em>Gets if a <a href="BanEntry.html"><code>BanEntry</code></a> exists for the target, indicating an active</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>pardon</strong>(target) <br> <em>Removes the specified target from this list, therefore indicating a</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-banlist-banlist-md-">Public Properties for <a href="BanList.html"><code>BanList</code></a></h3>
+<h5 id="-a-id-banentries-a-public-readonly-property-__banentries__"><a id='banentries'></a>public  readonly property <strong>BanEntries</strong></h5>
+<p><em>Get: Gets a set containing every <a href="BanEntry.html"><code>BanEntry</code></a> in this list.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Set&lt;BanEntry&gt;</code></td>
+<td>an immutable set containing every entry tracked by this list</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-banlist-banlist-md-">Public Methods for <a href="BanList.html"><code>BanList</code></a></h3>
+<h5 id="-a-id-addban-a-public-function-__addban__-target-reason-expires-source-"><a id='addban'></a>public  function <strong>addBan</strong>(target, reason, expires, source)</h5>
+<p><em>Adds a ban to the this list. If a previous ban exists, this will update the previous entry.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td><code>String</code></td>
+<td>the target of the ban</td>
+</tr>
+<tr>
+<td>reason</td>
+<td><code>String</code></td>
+<td>reason for the ban, null indicates implementation default</td>
+</tr>
+<tr>
+<td>expires</td>
+<td><code>Date</code></td>
+<td>date for the ban&#39;s expiration (unban), or null to imply forever</td>
+</tr>
+<tr>
+<td>source</td>
+<td><code>String</code></td>
+<td>source of the ban, null indicates implementation default</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BanEntry.html"><code>BanEntry</code></a></td>
+<td>the entry for the newly created ban, or the entry for the (updated) previous ban</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getbanentry-a-public-function-__getbanentry__-target-"><a id='getbanentry'></a>public  function <strong>getBanEntry</strong>(target)</h5>
+<p>_Represents a ban-type that a <a href="BanList.html"><code>BanList</code></a> may track. /
+    public enum Type {
+        /<strong> Banned player names /
+        NAME,
+        /</strong> Banned player IP addresses /
+        IP,
+        ;
+    }</p>
+<pre><code>/** Gets a [<span class="hljs-link_label">`BanEntry`</span>](<span class="hljs-link_url">BanEntry.md</span>) by target._
+</code></pre><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td><code>String</code></td>
+<td>entry parameter to search for</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BanEntry.html"><code>BanEntry</code></a></td>
+<td>the corresponding entry, or null if none found</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isbanned-a-public-function-__isbanned__-target-"><a id='isbanned'></a>public  function <strong>isBanned</strong>(target)</h5>
+<p><em>Gets if a <a href="BanEntry.html"><code>BanEntry</code></a> exists for the target, indicating an active ban status.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td><code>String</code></td>
+<td>the target to find</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if a <a href="BanEntry.html"><code>BanEntry</code></a> exists for the name, indicating an active ban status, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-pardon-a-public-function-__pardon__-target-"><a id='pardon'></a>public  function <strong>pardon</strong>(target)</h5>
+<p><em>Removes the specified target from this list, therefore indicating a &quot;not banned&quot; status.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td><code>String</code></td>
+<td>the target to remove from this list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

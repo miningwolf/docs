@@ -81,18 +81,47 @@ INVISIBILITY_EX: 8270<br> _INVISIBILITY_EX PotionType_ | PotionType
 INVISIBILITY_SP: 16398<br> _INVISIBILITY_SP PotionType_ | PotionType
 INVISIBILITY_SP_R: 16430<br> _INVISIBILITY_SP_R PotionType_ | PotionType
 INVISIBILITY_SP_EX: 16462<br> _INVISIBILITY_SP_EX PotionType_ | PotionType
-static function __fromTypeID__(typeId) <br> _Gets the TypeId_ | [`PotionType`](PotionType.md)
+ readonly property __TypeId__ <br> _Get: Gets the TypeId_ | `short`
+static function __fromName__(name) <br> _Gets the associated PotionType for the given name_ | [`PotionType`](PotionType.md)
+static function __fromTypeID__(typeId) <br> _Gets the associated PotionType for the given typeId_ | [`PotionType`](PotionType.md)
 
 
 
 ---
 
 
+### Public Properties for [`PotionType`](PotionType.md)
+
+##### <a id='typeid'></a>public  readonly property __TypeId__
+
+_Get: Gets the TypeId_
+
+Get | Description
+--- | --- 
+`short` | typeId
+
+
+
+---
+
 ### Public Methods for [`PotionType`](PotionType.md)
+
+##### <a id='fromname'></a>public static function __fromName__(name)
+
+_Gets the associated PotionType for the given name_
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the name of the PotionType to get
+
+Returns | Description
+--- | --- 
+[`PotionType`](PotionType.md) | the associated PotionType if found; WATER_BOTTLE otherwise
+
 
 ##### <a id='fromtypeid'></a>public static function __fromTypeID__(typeId)
 
-_Gets the TypeId_
+_Gets the associated PotionType for the given typeId_
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -100,12 +129,7 @@ typeId | `short` | the typeId of the PotionType to get. (Item damage value)
 
 Returns | Description
 --- | --- 
-[`PotionType`](PotionType.md) | typeId /
-    public short getTypeId() {
-        return typeId;
-    }
-
-    /** Gets the associated PotionType for the given name
+[`PotionType`](PotionType.md) | the associated PotionType if found; WATER_BOTTLE otherwise
 
 
 ---

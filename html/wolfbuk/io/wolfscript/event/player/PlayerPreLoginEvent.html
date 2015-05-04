@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PlayerPreLoginEvent</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../../index.html'>Home </a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/event/0.html'>event</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/0.html'>player</a></li>
+<li class='current'><a href='#'>PlayerPreLoginEvent</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/block/0.html' class=''>event.block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/enchantment/0.html' class=''>event.enchantment</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/hanging/0.html' class=''>event.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/0.html' class=''>event.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/painting/0.html' class=''>event.painting</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/AsyncPlayerChatEvent.html'>AsyncPlayerChatEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/AsyncPlayerPreLoginEvent.html'>AsyncPlayerPreLoginEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerAchievementAwardedEvent.html'>PlayerAchievementAwardedEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerAnimationEvent.html'>PlayerAnimationEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerAnimationType.html'>PlayerAnimationType</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerArmorStandManipulateEvent.html'>PlayerArmorStandManipulateEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerBedEnterEvent.html'>PlayerBedEnterEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerBedLeaveEvent.html'>PlayerBedLeaveEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerBucketEmptyEvent.html'>PlayerBucketEmptyEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerBucketEvent.html'>PlayerBucketEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerBucketFillEvent.html'>PlayerBucketFillEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerChangedWorldEvent.html'>PlayerChangedWorldEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerChannelEvent.html'>PlayerChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerChatEvent.html'>PlayerChatEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerChatTabCompleteEvent.html'>PlayerChatTabCompleteEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerCommandPreprocessEvent.html'>PlayerCommandPreprocessEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerDropItemEvent.html'>PlayerDropItemEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerEditBookEvent.html'>PlayerEditBookEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerEggThrowEvent.html'>PlayerEggThrowEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerEvent.html'>PlayerEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerExpChangeEvent.html'>PlayerExpChangeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerFishEvent.html'>PlayerFishEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerGameModeChangeEvent.html'>PlayerGameModeChangeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerInteractAtEntityEvent.html'>PlayerInteractAtEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerInteractEntityEvent.html'>PlayerInteractEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerInteractEvent.html'>PlayerInteractEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerInventoryEvent.html'>PlayerInventoryEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerItemBreakEvent.html'>PlayerItemBreakEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerItemConsumeEvent.html'>PlayerItemConsumeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerItemHeldEvent.html'>PlayerItemHeldEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerJoinEvent.html'>PlayerJoinEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerKickEvent.html'>PlayerKickEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerLevelChangeEvent.html'>PlayerLevelChangeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerLoginEvent.html'>PlayerLoginEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerMoveEvent.html'>PlayerMoveEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPickupItemEvent.html'>PlayerPickupItemEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPortalEvent.html'>PlayerPortalEvent</a></li>
+<li class='active'><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPreLoginEvent.html'>PlayerPreLoginEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleSprintEvent.html'>PlayerToggleSprintEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnleashEntityEvent.html'>PlayerUnleashEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerUnregisterChannelEvent.html'>PlayerUnregisterChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerVelocityEvent.html'>PlayerVelocityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/Result.html'>Result</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/State.html'>State</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/server/0.html' class=''>event.server</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/vehicle/0.html' class=''>event.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/weather/0.html' class=''>event.weather</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="playerpreloginevent-__class__">PlayerPreLoginEvent <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.player.PlayerPreLoginEvent
+Extends <a href="../Event.html"><code>Event</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Stores details for players attempting to log in</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>PlayerPreLoginEvent</strong>(String, InetAddress) <br> <em>PlayerPreLoginEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>PlayerPreLoginEvent</strong>(String, InetAddress, UUID) <br> <em>PlayerPreLoginEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>static readonly property <strong>HandlerList</strong> <br> <em>HandlerList property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Address</strong> <br> <em>Get: Gets the player IP address.</em></td>
+<td style="text-align:left"><code>InetAddress</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td>  property <strong>KickMessage</strong> <br> <em>Get: Gets the current kick message that will be used if getResult() !=<br>Set: Sets the kick message to display if getResult() != Result.ALLOWED</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Name</strong> <br> <em>Get: Gets the player&#39;s name.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>  property <strong>Result</strong> <br> <em>Get: Gets the current result of the login, as an enum<br>Set: Sets the new result of the login, as an enum</em></td>
+<td style="text-align:left"><code>Result</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>UniqueId</strong> <br> <em>Get: Gets the player&#39;s unique ID.</em></td>
+<td style="text-align:left"><code>UUID</code></td>
+</tr>
+<tr>
+<td> function <strong>disallow</strong>(Result, String) <br> <em>Disallows the player from logging in, with the given reason</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>allow</strong>() <br> <em>Allows the player to log in</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../Event.html"><code>Event</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>Event</strong>() <br> <em>The default constructor is defined for cleaner code. This constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Event</strong>(isAsync) <br> <em>This constructor is used to explicitly declare an event as synchronous</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>EventName</strong> <br> <em>Get: Convenience method for providing a user-friendly identifier. By</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>abstract readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>Any custom event that should not by synchronized with other events must</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-playerpreloginevent-playerpreloginevent-md-">Public Constructors for <a href="PlayerPreLoginEvent.html"><code>PlayerPreLoginEvent</code></a></h3>
+<h5 id="-a-id-playerpreloginevent-a-new-__playerpreloginevent__-string-inetaddress-"><a id='playerpreloginevent'></a>new <strong>PlayerPreLoginEvent</strong>(String, InetAddress)</h5>
+<p><em>PlayerPreLoginEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td><code>final</code></td>
+<td>String argument</td>
+</tr>
+<tr>
+<td>InetAddress</td>
+<td><code>final</code></td>
+<td>InetAddress argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-playerpreloginevent-a-new-__playerpreloginevent__-string-inetaddress-uuid-"><a id='playerpreloginevent'></a>new <strong>PlayerPreLoginEvent</strong>(String, InetAddress, UUID)</h5>
+<p><em>PlayerPreLoginEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td><code>final</code></td>
+<td>String argument</td>
+</tr>
+<tr>
+<td>InetAddress</td>
+<td><code>final</code></td>
+<td>InetAddress argument</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td><code>final</code></td>
+<td>UUID argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-playerpreloginevent-playerpreloginevent-md-">Public Properties for <a href="PlayerPreLoginEvent.html"><code>PlayerPreLoginEvent</code></a></h3>
+<h5 id="-a-id-handlerlist-a-public-static-readonly-property-__handlerlist__"><a id='handlerlist'></a>public static readonly property <strong>HandlerList</strong></h5>
+<p><em>HandlerList property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-address-a-public-readonly-property-__address__"><a id='address'></a>public  readonly property <strong>Address</strong></h5>
+<p><em>Get: Gets the player IP address.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InetAddress</code></td>
+<td>The IP address</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlers-a-public-readonly-property-__handlers__"><a id='handlers'></a>public  readonly property <strong>Handlers</strong></h5>
+<p><em>Handlers property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-kickmessage-a-public-property-__kickmessage__"><a id='kickmessage'></a>public   property <strong>KickMessage</strong></h5>
+<p><em>Get: Gets the current kick message that will be used if getResult() != Result.ALLOWED<br>Set: Sets the kick message to display if getResult() != Result.ALLOWED</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>Current kick message</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td><code>final</code></td>
+<td>String argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
+<p><em>Get: Gets the player&#39;s name.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>the player&#39;s name</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-result-a-public-property-__result__"><a id='result'></a>public   property <strong>Result</strong></h5>
+<p><em>Get: Gets the current result of the login, as an enum<br>Set: Sets the new result of the login, as an enum</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Result</code></td>
+<td>Current Result of the login</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Result</td>
+<td><code>final</code></td>
+<td>Result argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-uniqueid-a-public-readonly-property-__uniqueid__"><a id='uniqueid'></a>public  readonly property <strong>UniqueId</strong></h5>
+<p><em>Get: Gets the player&#39;s unique ID.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UUID</code></td>
+<td>The unique ID</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-playerpreloginevent-playerpreloginevent-md-">Public Methods for <a href="PlayerPreLoginEvent.html"><code>PlayerPreLoginEvent</code></a></h3>
+<h5 id="-a-id-disallow-a-public-function-__disallow__-result-string-"><a id='disallow'></a>public  function <strong>disallow</strong>(Result, String)</h5>
+<p><em>Disallows the player from logging in, with the given reason</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Result</td>
+<td><code>final</code></td>
+<td>Result argument</td>
+</tr>
+<tr>
+<td>String</td>
+<td><code>final</code></td>
+<td>String argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-allow-a-public-function-__allow__-"><a id='allow'></a>public  function <strong>allow</strong>()</h5>
+<p><em>Allows the player to log in</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-event-event-md-">Public Constructors for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-event-a-new-__event__-"><a id='event'></a>new <strong>Event</strong>()</h5>
+<p><em>The default constructor is defined for cleaner code. This constructor assumes the event is synchronous.</em></p>
+<h5 id="-a-id-event-a-new-__event__-isasync-"><a id='event'></a>new <strong>Event</strong>(isAsync)</h5>
+<p><em>This constructor is used to explicitly declare an event as synchronous or asynchronous.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isAsync</td>
+<td><code>boolean</code></td>
+<td>true indicates the event will fire asynchronously, false by default from default constructor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-event-event-md-">Public Properties for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-eventname-a-public-readonly-property-__eventname__"><a id='eventname'></a>public  readonly property <strong>EventName</strong></h5>
+<p><em>Get: Convenience method for providing a user-friendly identifier. By default, it is the event&#39;s class&#39;s {@linkplain Class#getSimpleName() simple name}.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>name of this event</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlers-a-public-abstract-readonly-property-__handlers__"><a id='handlers'></a>public abstract readonly property <strong>Handlers</strong></h5>
+<p><em>Handlers property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
+<p><em>Any custom event that should not by synchronized with other events must use the specific constructor. These are the caveats of using an asynchronous event: <ul> <li>The event is never fired from inside code triggered by a synchronous event. Attempting to do so results in an <code>IllegalStateException</code>. <li>However, asynchronous event handlers may fire synchronous or asynchronous events <li>The event may be fired multiple times simultaneously and in any order. <li>Any newly registered or unregistered handler is ignored after an event starts execution. <li>The handlers for this event may block for any length of time. <li>Some implementations may selectively declare a specific event use as asynchronous. This behavior should be clearly defined. <li>Asynchronous calls are not calculated in the plugin timing system. </ul></em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>false by default, true if the event fires asynchronously</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h6 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h6>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

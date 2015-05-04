@@ -10,6 +10,7 @@ Represents a brewer that can create [`PotionEffect`](PotionEffect.md)s.
 
 Method | Type   
 --- | :--- 
+ function __createEffect__(potion, duration, amplifier) <br> _Creates a [`PotionEffect`](PotionEffect.md) from the given [`PotionEffectType`](PotionEffectType.md),_ | [`PotionEffect`](PotionEffect.md)
 
 
 
@@ -18,10 +19,25 @@ Method | Type
 
 ### Public Methods for [`PotionBrewer`](PotionBrewer.md)
 
+##### <a id='createeffect'></a>public  function __createEffect__(potion, duration, amplifier)
+
+_Creates a [`PotionEffect`](PotionEffect.md) from the given [`PotionEffectType`](PotionEffectType.md), applying duration modifiers and checks._
+
+Argument | Type | Description  
+--- | --- | --- 
+potion | [`PotionEffectType`](PotionEffectType.md) | The type of potion
+duration | `int` | The duration in ticks
+amplifier | `int` | The amplifier of the effect
+
+Returns | Description
+--- | --- 
+[`PotionEffect`](PotionEffect.md) | The resulting potion effect
+
+
 ##### <a id='geteffectsfromdamage'></a>public  function __getEffectsFromDamage__(damage)
 _Deprecated: Magic value_
 
-_Creates a [`PotionEffect`](PotionEffect.md) from the given [`PotionEffectType`](PotionEffectType.md), applying duration modifiers and checks._
+_Returns a collection of [`PotionEffect`](PotionEffect.md) that would be applied from a potion with the given data value._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -29,10 +45,7 @@ damage | `int` | The data value of the potion
 
 Returns | Description
 --- | --- 
-`Collection<PotionEffect>` | The resulting potion effect /
-    public PotionEffect createEffect(PotionEffectType potion, int duration, int amplifier);
-
-    /** Returns a collection of [`PotionEffect`](PotionEffect.md) that would be applied from a potion with the given data value.
+`Collection<PotionEffect>` | The list of effects
 
 
 ---

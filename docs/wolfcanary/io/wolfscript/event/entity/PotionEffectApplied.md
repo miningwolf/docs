@@ -1,21 +1,25 @@
 ## PotionEffectApplied __class__
 
 >io.wolfscript.event.entity.PotionEffectApplied
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
 ### Class Overview
 
-PotionEffectApplied<br> Called when a [`PotionEffect`](..\..\api\potion\PotionEffect.md) is applied to a [`LivingBase`](..\..\api\entity\living\LivingBase.md)
+PotionEffectApplied<br> Called when a [`PotionEffect`](../../api/potion/PotionEffect.md) is applied to a [`LivingBase`](../../api/entity/living/LivingBase.md)
 
 Method | Type   
 --- | :--- 
- writeonly property __PotionEffect__ <br> _Set: Constructs a new PotionEffectApplied_ | `void`
+new __PotionEffectApplied__(entity, effect) <br> _Constructs a new PotionEffectApplied_ | _constructor_
+ readonly property __Entity__ <br> _Get: Gets the [`LivingBase`](../../api/entity/living/LivingBase.md) having a [`PotionEffect`](../../api/potion/PotionEffect.md) applied to_ | [`LivingBase`](../../api/entity/living/LivingBase.md)
+  property __PotionEffect__ <br> _Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md) being applied<br>Set: Sets the [`PotionEffect`](../../api/potion/PotionEffect.md) to apply_ | [`PotionEffect`](../../api/potion/PotionEffect.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -23,31 +27,42 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`PotionEffectApplied`](PotionEffectApplied.md)
+
+##### <a id='potioneffectapplied'></a>new __PotionEffectApplied__(entity, effect) 
+
+_Constructs a new PotionEffectApplied_
+
+Argument | Type | Description  
+--- | --- | --- 
+entity | [`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md) having the [`PotionEffect`](../../api/potion/PotionEffect.md) applied to
+effect | [`PotionEffect`](../../api/potion/PotionEffect.md) | the [`PotionEffect`](../../api/potion/PotionEffect.md) being applied
+
+---
 
 ### Public Properties for [`PotionEffectApplied`](PotionEffectApplied.md)
 
-##### <a id='potioneffect'></a>public  writeonly property __PotionEffect__
+##### <a id='entity'></a>public  readonly property __Entity__
 
-_Set: Constructs a new PotionEffectApplied_
+_Get: Gets the [`LivingBase`](../../api/entity/living/LivingBase.md) having a [`PotionEffect`](../../api/potion/PotionEffect.md) applied to_
 
 Get | Description
 --- | --- 
-`void` | the [`LivingBase`](..\..\api\entity\living\LivingBase.md) /
-    public LivingBase getEntity() {
-        return entity;
-    }
+[`LivingBase`](../../api/entity/living/LivingBase.md) | the [`LivingBase`](../../api/entity/living/LivingBase.md)
 
-    /** Gets the [`PotionEffect`](..\..\api\potion\PotionEffect.md) being applied
+
+
+##### <a id='potioneffect'></a>public   property __PotionEffect__
+
+_Get: Gets the [`PotionEffect`](../../api/potion/PotionEffect.md) being applied<br>Set: Sets the [`PotionEffect`](../../api/potion/PotionEffect.md) to apply_
+
+Get | Description
+--- | --- 
+[`PotionEffect`](../../api/potion/PotionEffect.md) | the [`PotionEffect`](../../api/potion/PotionEffect.md)
 
 Set | Type | Description  
 --- | --- | --- 
-effect | [`PotionEffect`](..\..\api\potion\PotionEffect.md) | the [`PotionEffect`](..\..\api\potion\PotionEffect.md) being applied /
-    public PotionEffectApplied(LivingBase entity, PotionEffect effect) {
-        this.entity = entity;
-        this.effect = effect;
-    }
-
-    /** Gets the [`LivingBase`](..\..\api\entity\living\LivingBase.md) having a [`PotionEffect`](..\..\api\potion\PotionEffect.md) applied to
+effect | [`PotionEffect`](../../api/potion/PotionEffect.md) | a new [`PotionEffect`](../../api/potion/PotionEffect.md) or null to cancel out any effects
 
 
 ---
@@ -65,27 +80,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

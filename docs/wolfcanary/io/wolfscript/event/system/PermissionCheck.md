@@ -1,7 +1,7 @@
 ## PermissionCheck __class__
 
 >io.wolfscript.event.system.PermissionCheck
->Extends [`Hook`](..\..\hook\Hook.md)
+>Extends [`Hook`](../../hook/Hook.md)
 
 ---
 
@@ -12,11 +12,15 @@ This hook is called after the PermissionProvider has resolved the permission, to
 Method | Type   
 --- | :--- 
 new __PermissionCheck__(permission, player, result) <br> _PermissionCheck constructor_ | _constructor_
- writeonly property __Result__ <br> _Set: Gets the permission that was checked_ | `void`
+ readonly property __Permission__ <br> _Get: Gets the permission that was checked_ | `String`
+  property __Result__ <br> _Get: Get the result of the check.<br>Set: Override the final result for the permission check_ | `boolean`
+ readonly property __Subject__ <br> _Get: Get the MessageReceiver for whom the permission check was issued_ | [`MessageReceiver`](../../chat/MessageReceiver.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -33,24 +37,44 @@ _PermissionCheck constructor_
 Argument | Type | Description  
 --- | --- | --- 
 permission | `String` | permission argument
-player | [`MessageReceiver`](..\..\chat\MessageReceiver.md) | player argument
+player | [`MessageReceiver`](../../chat/MessageReceiver.md) | player argument
 result | `boolean` | result argument
 
 ---
 
 ### Public Properties for [`PermissionCheck`](PermissionCheck.md)
 
-##### <a id='result'></a>public  writeonly property __Result__
+##### <a id='permission'></a>public  readonly property __Permission__
 
-_Set: Gets the permission that was checked_
+_Get: Gets the permission that was checked_
 
 Get | 
 --- | 
-`void` |
+`String` |
+
+
+
+##### <a id='result'></a>public   property __Result__
+
+_Get: Get the result of the check.<br>Set: Override the final result for the permission check_
+
+Get | 
+--- | 
+`boolean` |
 
 Set | Type | Description  
 --- | --- | --- 
 result | `boolean` | result argument
+
+
+##### <a id='subject'></a>public  readonly property __Subject__
+
+_Get: Get the MessageReceiver for whom the permission check was issued_
+
+Get | 
+--- | 
+[`MessageReceiver`](../../chat/MessageReceiver.md) |
+
 
 
 ---
@@ -68,27 +92,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

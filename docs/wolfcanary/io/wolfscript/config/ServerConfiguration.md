@@ -12,7 +12,61 @@ Server Configuration Container
 Method | Type   
 --- | :--- 
 new __ServerConfiguration__(path) <br> _ServerConfiguration constructor_ | _constructor_
- readonly property __PluginDevModeEnabled__ <br> _Get: Reloads the configuration file_ | `boolean`
+ readonly property __PluginDevModeEnabled__ <br> _Get: Gets the plugin dev mode state_ | `boolean`
+ readonly property __AnnounceAchievements__ <br> _AnnounceAchievements property_ | `boolean`
+ readonly property __DefaultBannedMessage__ <br> _Get: Gets the ban default message_ | `String`
+ readonly property __BanExpireDateMessage__ <br> _Get: Gets the ban expiration date message_ | `String`
+ readonly property __ChatFormat__ <br> _Get: Gets the chat format placeholder_ | `String`
+ readonly property __BungeecordSupport__ <br> _Get: Checks if bungeecord support is enabled_ | `boolean`
+ readonly property __CommandBlockGroupName__ <br> _Get: Gets the group name to apply to the Command Block for permissions_ | `String`
+ readonly property __MaxTickTime__ <br> _Get: Gets the max time a tick may take_ | `int`
+ readonly property __DefaultMaxWorldSize__ <br> _Get: Gets the default max world size_ | `int`
+ readonly property __DatasourceType__ <br> _Get: Get datasource type_ | `String`
+ readonly property __DateFormat__ <br> _Get: Gets the date format to use with timestamps_ | `String`
+ readonly property __DefaultWorldName__ <br> _Get: Get the default world name defined in the config_ | `String`
+ readonly property __NetworkCompressionThreshold__ <br> _Get: Gets the Network Compression Threshold_ | `int`
+ readonly property __BindIp__ <br> _Get: Get the IP address which to server binds to_ | `String`
+ readonly property __File__ <br> _Get: Get the configuration file_ | `PropertiesFile`
+ readonly property __FlightDetectTicks__ <br> _Get: Gets the number of ticks a Player is allowed to float before triggering the anti-flying_ | `int`
+ readonly property __LoggerLevel__ <br> _Get: Gets the Level of message to log_ | `Level`
+ readonly property __MaxPlayers__ <br> _Get: Get maximum amount of player allowed online_ | `int`
+ readonly property __Motd__ <br> _Get: Get the message of the day, the message shown in the server list._ | `String`
+ readonly property __PlayerlistTicks__ <br> _Get: Get the number of ticks between playerlist updates_ | `int`
+  property __PlayerIdleTimeout__ <br> _Get: Gets the time in minutes before a player is kicked for idling<br>Set: Sets the time in minutes before a player is kicked for idling_ | `int`
+ readonly property __PlayerlistAutoUpdate__ <br> _Get: Get whether the player list is auto-updated_ | `boolean`
+ readonly property __ShowUnknownCommand__ <br> _Get: Get whether 'Unknown Command' must be shown when an unknown command is used._ | `boolean`
+ readonly property __QueryPort__ <br> _Get: Get the port used for query_ | `int`
+ readonly property __RconPort__ <br> _Get: Get the port used for remote control_ | `int`
+ readonly property __RconPassword__ <br> _Get: Get the password used for remote control_ | `String`
+ readonly property __ReservelistMessage__ <br> _Get: Get the message to be displayed when someone is not on the reserve list._ | `String`
+ readonly property __ServerFullMessage__ <br> _Get: Gets the message to send to a connecting player when the Server is full_ | `String`
+ readonly property __Port__ <br> _Get: Get the port number used to receive player-connections_ | `int`
+ readonly property __ServerLocale__ <br> _Get: Gets the server's default locale_ | `String`
+ readonly property __WorldCacheTimeout__ <br> _Get: Gets the World Cache timeout_ | `long`
+ readonly property __WhitelistMessage__ <br> _Get: Get the message shown to players who are not whitelisted._ | `String`
+ readonly property __SpamProtectionLevel__ <br> _Get: Gets the spam protection level_ | `String`
+ readonly property __StrictSignCharacterChecks__ <br> _Get: Gets whether characters on signs are checked for validity or not_ | `boolean`
+ readonly property __TexturePack__ <br> _Get: Server Texture/Resource Pack name_ | `String`
+ readonly property __ViewDistance__ <br> _Get: Get the view distance of clients: maximum radius of loaded chunks around a player_ | `int`
+ function __isQueryEnabled__() <br> _Get whether server query-ing is enabled_ | `boolean`
+ function __allowEnchantmentStacking__() <br> _Checks if items are allowed to be stack with enchantments applied_ | `boolean`
+ function __isPlayerListEnabled__() <br> _Get whether the player list is enabled._ | `boolean`
+ function __isCommandBlockEnabled__() <br> _Checks if the Command Block is enabled or not_ | `boolean`
+ function __isOnlineMode__() <br> _Whether the server is in online mode._ | `boolean`
+ function __isFlightKickEnabled__() <br> _Checks if players will be kicked when floating too long._ | `boolean`
+ function __isCommandBlockOpped__() <br> _Gets whether the Command Block is considered Operator_ | `boolean`
+ function __isCommandBlockSilent__() <br> _Gets whether the Command Block is silent_ | `boolean`
+ function __isDeathMessageEnabled__() <br> _Get whether the death message is enabled_ | `boolean`
+ function __isDebugMode__() <br> _Whether this server is in debug mode._ | `boolean`
+ function __isPlayerlistColorsEnabled__() <br> _Get whether playerlist colors are enabled._ | `boolean`
+ function __isRconEnabled__() <br> _Whether Remote Control (RCON) is enabled._ | `boolean`
+ function __isReservelistEnabled__() <br> _Get whether the reservelist is enabled_ | `boolean`
+ function __isSaveHomesEnabled__() <br> _Get whether home-saving is enabled._ | `boolean`
+ function __isSnooperEnabled__() <br> _Gets whether the Mojang snooper is enabled or not_ | `boolean`
+ function __isWhitelistEnabled__() <br> _Get whether the whitelist is enabled._ | `boolean`
+ function __isWorldCacheTimerEnabled__() <br> _Checks if the World Cache Timer is enabled_ | `boolean`
+ function __reload__() <br> _Reloads the configuration file_ | `void`
+ function __updateLang__() <br> _Gets whether to update the Server Lang files or not_ | `boolean`
 
 
 
@@ -34,160 +88,540 @@ path | `String` | path argument
 
 ##### <a id='plugindevmodeenabled'></a>public  readonly property __PluginDevModeEnabled__
 
-_Get: Reloads the configuration file /
-    @Override
-    public void reload() {
-        cfg.reload();
-        verifyConfig();
-    }
-
-    /** Get the configuration file /
-    @Override
-    public PropertiesFile getFile() {
-        return cfg;
-    }
-
-    /** Creates the default configuration /
-    private void verifyConfig() {
-        cfg.getBoolean("announce-player-achievements", true);
-        cfg.setComments("announce-player-achievements", "Sets whether to inform all of a Player's Achievement");
-        cfg.getBoolean("allow-enchantment-stacking", false);
-        cfg.setComments("allow-enchantment-stacking", "Sets whether to allow items with enchantments to stack with non-enchanted items");
-        cfg.getString("ban-default-message", "You are banned from this server.");
-        cfg.setComments("ban-default-message", "The default message to use for user bans");
-        cfg.getString("ban-expiration-date-message", "Your Ban will be lifted at ");
-        cfg.setComments("ban-expiration-date-message", "The message to prefix to the timestamp of a tempban expiration");
-        cfg.getString("chat-format", "<%prefix%name&f> %message");
-        cfg.setComments("chat-format", "Valid default placeholders are:",
-                        "%prefix (player prefix), %name (player name), %group (main group)",
-                        "You can use standard color codes at all times. Use & as identifier if you miss a § key",
-                        "Plugins may extend the list of available placeholders"
-                       );
-        cfg.getBoolean("command-block-enabled", false);
-        cfg.setComments("command-block-enabled", "Sets whether the Command Block is allowed or not");
-        cfg.getString("command-block-group", "admins");
-        cfg.setComments("command-block-group", "This groups permissions will determine what Command Block can and can not do!");
-        cfg.getBoolean("command-block-op", false);
-        cfg.setComments("command-block-op", "Sets whether the Command Block is considered Operator or not (Vanilla command use)");
-        cfg.getBoolean("command-block-silent", false);
-        cfg.setComments("command-block-silent", "Sets whether the Command Block logs command output (set to true to 'silence' CommandBlocks)");
-        cfg.getString("data-source", "xml");
-        cfg.setComments("data-source", "The Datasource type to use (Default available: xml, mysql, sqlite");
-        cfg.getString("date-format", "yyyy.MM.dd, hh:mm:ss");
-        cfg.setComments("date-format", "A formatting to display timestamps");
-        cfg.getBoolean("death-messages", true);
-        cfg.setComments("death-messages", "Sets whether to send player death message or not");
-        //cfg.getBoolean("debug-enabled", false); //REMOVED
-        //cfg.setComments("debug-enabled", "Sets whether to enable debug logging or not"); // REMOVED
-        if (cfg.containsKey("debug-enabled")) { // Remove old key
-            cfg.removeKey("debug-enabled");
-        }
-        cfg.getString("default-world-name", "default");
-        cfg.setComments("default-world-name", "Name of the default loaded world");
-        cfg.getInt("default-world-size", 29999984);
-        cfg.setComments("default-world-size", "This sets the maximum possible size in blocks, expressed as a radius, that the world border can obtain.");
-        cfg.getBoolean("flight-kick", true);
-        cfg.setComments("flight-kick", "Enables kicking players who are floating too long.");
-        cfg.getInt("flight-detect-ticks", 80);
-        cfg.setComments("flight-detect-ticks", "The number of ticks a player may float before triggering flight-kick or flight-alert.");
-        //cfg.getBoolean("logging", false); //REMOVED
-        if (cfg.containsKey("logging")) { // Remove old key
-            cfg.removeKey("logging");
-        }
-        cfg.getString("logger-level", "INFO");
-        cfg.setComments("logger-level", "Sets the level of logging.", "Acceptable Values: OFF FATAL ERROR WARN INFO DEBUG TRACE ALL");
-
-        // RESERVED SPACE
-        cfg.getInt("max-players", 20);
-        cfg.setComments("max-players", "The maximum allowed players online (Does not count ReserveList users connecting after server is full)");
-        cfg.getInt("max-tick-time", 60000);
-        cfg.setComments("max-tick-time", "The maximum number of milliseconds a single tick may take before the server watchdog stops the server. Setting to -1 disables WatchDog.");
-        cfg.getString("motd", "WolfScript Minecraft Server");
-        cfg.setComments("motd", "The Server list Message of the Day");
-        cfg.getInt("network-compression-threshold", 256);
-        cfg.setComments("network-compression-threshold", "By default it allows packets that are n-1 bytes big to go normally, but a packet that n bytes or more will be compressed down.");
-        cfg.getBoolean("online-mode", true);
-        cfg.setComments("online-mode", "Sets whether to authenticate connecting users.",
-                        "WARNING: Setting to false is INSECURE and should not be done in a production environment."
-                       );
-        cfg.getInt("player-idle-timeout", 1);
-        cfg.setComments("player-idle-timeout", "Timeout in minutes before kicking an idle player");
-        cfg.getBoolean("playerlist-enabled", true);
-        cfg.setComments("playerlist-enabled", "Sets whether to send data to clients for the Player List");
-        cfg.getBoolean("playerlist-autoupdate", true);
-        cfg.setComments("playerlist-autoupdate", "Sets whether the Player List should automatically be refreshed for every player or not");
-        cfg.getBoolean("playerlist-usecolors", false);
-        cfg.setComments("playerlist-usecolors", "Sets whether the Player List should include colors and player prefixes");
-        cfg.getInt("playerlist-ticks", 500);
-        cfg.getBoolean("plugin-dev-mode", false);
-        cfg.setComments("plugin-dev-mode", "Setting this to true will enable loading plugins from folders; intended for Lua plugin developers");
-        // RESERVED SPACE
-        cfg.getBoolean("query-enabled", false);
-        cfg.setComments("query-enabled", "Enables GameSpy4 protocol server listener. Used to get information about server.");
-        cfg.getInt("query-port", 25565);
-        cfg.setComments("query-port", "Set the port for the query server");
-        cfg.getBoolean("rcon-enabled", false);
-        cfg.setComments("rcon-enabled", "Whether to allow remote access or not");
-        cfg.getInt("rcon-port", 25575);
-        cfg.setComments("rcon-port", "The port you want remote access to listen on (1-65534), DEFAULT: 25575");
-        cfg.getString("rcon-password", "");
-        cfg.setComments("rcon-password", "Password for remote access");
-        cfg.getBoolean("reservelist-enabled", false);
-        cfg.setComments("reservelist-enabled", "Sets whether the ReserveList (join after full) is enabled or not");
-        cfg.getString("reservelist-message", "Not on reserve list."); //This seems redundant
-        cfg.getBoolean("save-homes", true);
-        cfg.setComments("save-homes", "Sets whether to save homes or not");
-        cfg.getString("server-full-message", "The server is full.");
-        cfg.setComments("server-full-message", "Message to send if the server is full");
-        cfg.getString("server-ip", "");
-        cfg.setComments("server-ip", "Set to the IP address that you want your server to listen on, or leave blank for automatic detection.");
-        cfg.getInt("server-port", 25565);
-        cfg.setComments("server-port", "The Port you want your server to listen on (1-65534), DEFAULT: 25565");
-        cfg.getString("server-locale", "en_US");
-        cfg.setComments("server-locale", "Sets the default server language to use for messages. Default supported Languages can be found in the lang/languages.txt");
-        cfg.getBoolean("show-unknown-command", true);
-        cfg.setComments("show-unknown-command", "Sets whether to inform players of unknown commands");
-        cfg.getBoolean("snooper-enabled", true);
-        cfg.setComments("snooper-enabled", "Sets whether Mojang may snoop or not");
-        cfg.getString("spam-protection", "default");
-        cfg.setComments("spam-protection", "Level of protection against Spam. Options: default - on for all but ignorerestiction users; off - no protections; all - on for all");
-        cfg.getBoolean("strict-sign-characters", true);
-        cfg.setComments("strict-sign-characters", "Sets whether to strictly check characters on signs for invalid chat characters. Set to false to disable (and allow more characters)");
-        cfg.getString("texture-pack", "");
-        cfg.setComments("texture-pack", "The name of the Server's texture/resource pack");
-        cfg.getBoolean("update-lang-files", true);
-        cfg.setComments("Whether to verify and update lang files or not, disable if you intend to make changes to those files");
-        cfg.getInt("view-distance", 10);
-        cfg.setComments("view-distance", "Sets the maximum radius of loaded chunks around a player (3-15)");
-        cfg.getBoolean("whitelist-enabled", false);
-        cfg.setComments("whitelist-enabled", "Whether the whitelist is enabled or not");
-        cfg.getString("whitelist-message", "Not on whitelist.");
-        cfg.setComments("whitelist-message", "The message to send to non-whitelisted players");
-        cfg.getBoolean("world-cache-timer-enabled", true);
-        cfg.setComments("world-cache-timer-enabled", "Enable automatic unloading of unused worlds.");
-        cfg.getLong("world-cache-timeout", 60);
-        cfg.setComments("world-cache-timeout", "The number of minutes a world should be empty before it will be unloaded (if use-world-cache is enabled)");
-        cfg.getBoolean("bungeecord", false);
-        cfg.setComments("bungeecord", "If you want to enable Bungeecord support. REQUIRES THAT ONLINE MODE IS DISABLED (false)");
-
-        cfg.save();
-    }
-
-    public boolean getAnnounceAchievements() {
-        return cfg.getBoolean("announce-player-achievements", true);
-    }
-
-    /** Checks if items are allowed to be stack with enchantments applied_
+_Get: Gets the plugin dev mode state_
 
 Get | Description
 --- | --- 
-`boolean` | `true` if allowed; `false` if not /
-    public boolean allowEnchantmentStacking() {
-        return cfg.getBoolean("alllow-enchantment-stacking", false);
-    }
+`boolean` | `true` if enabled; `false` if not
 
-    /** Gets the ban default message
 
+
+##### <a id='announceachievements'></a>public  readonly property __AnnounceAchievements__
+
+_AnnounceAchievements property_
+
+Get | 
+--- | 
+`boolean` |
+
+
+
+##### <a id='defaultbannedmessage'></a>public  readonly property __DefaultBannedMessage__
+
+_Get: Gets the ban default message_
+
+Get | Description
+--- | --- 
+`String` | ban default message
+
+
+
+##### <a id='banexpiredatemessage'></a>public  readonly property __BanExpireDateMessage__
+
+_Get: Gets the ban expiration date message_
+
+Get | Description
+--- | --- 
+`String` | ban expiration date message
+
+
+
+##### <a id='chatformat'></a>public  readonly property __ChatFormat__
+
+_Get: Gets the chat format placeholder_
+
+Get | Description
+--- | --- 
+`String` | chat format
+
+
+
+##### <a id='bungeecordsupport'></a>public  readonly property __BungeecordSupport__
+
+_Get: Checks if bungeecord support is enabled_
+
+Get | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+
+##### <a id='commandblockgroupname'></a>public  readonly property __CommandBlockGroupName__
+
+_Get: Gets the group name to apply to the Command Block for permissions_
+
+Get | Description
+--- | --- 
+`String` | command block group name
+
+
+
+##### <a id='maxticktime'></a>public  readonly property __MaxTickTime__
+
+_Get: Gets the max time a tick may take_
+
+Get | Description
+--- | --- 
+`int` | max tick time
+
+
+
+##### <a id='defaultmaxworldsize'></a>public  readonly property __DefaultMaxWorldSize__
+
+_Get: Gets the default max world size_
+
+Get | Description
+--- | --- 
+`int` | default max world size
+
+
+
+##### <a id='datasourcetype'></a>public  readonly property __DatasourceType__
+
+_Get: Get datasource type_
+
+Get | Description
+--- | --- 
+`String` | datasource type
+
+
+
+##### <a id='dateformat'></a>public  readonly property __DateFormat__
+
+_Get: Gets the date format to use with timestamps_
+
+Get | Description
+--- | --- 
+`String` | timestamp date format
+
+
+
+##### <a id='defaultworldname'></a>public  readonly property __DefaultWorldName__
+
+_Get: Get the default world name defined in the config_
+
+Get | Description
+--- | --- 
+`String` | default world name
+
+
+
+##### <a id='networkcompressionthreshold'></a>public  readonly property __NetworkCompressionThreshold__
+
+_Get: Gets the Network Compression Threshold_
+
+Get | Description
+--- | --- 
+`int` | network compression threshold
+
+
+
+##### <a id='bindip'></a>public  readonly property __BindIp__
+
+_Get: Get the IP address which to server binds to_
+
+Get | Description
+--- | --- 
+`String` | server ip
+
+
+
+##### <a id='file'></a>public  readonly property __File__
+
+_Get: Get the configuration file_
+
+Get | 
+--- | 
+`PropertiesFile` |
+
+
+
+##### <a id='flightdetectticks'></a>public  readonly property __FlightDetectTicks__
+
+_Get: Gets the number of ticks a Player is allowed to float before triggering the anti-flying_
+
+Get | Description
+--- | --- 
+`int` | the number of ticks
+
+
+
+##### <a id='loggerlevel'></a>public  readonly property __LoggerLevel__
+
+_Get: Gets the Level of message to log_
+
+Get | Description
+--- | --- 
+`Level` | logger level
+
+
+
+##### <a id='maxplayers'></a>public  readonly property __MaxPlayers__
+
+_Get: Get maximum amount of player allowed online_
+
+Get | Description
+--- | --- 
+`int` | max players
+
+
+
+##### <a id='motd'></a>public  readonly property __Motd__
+
+_Get: Get the message of the day, the message shown in the server list._
+
+Get | Description
+--- | --- 
+`String` | A string containing the message
+
+
+
+##### <a id='playerlistticks'></a>public  readonly property __PlayerlistTicks__
+
+_Get: Get the number of ticks between playerlist updates_
+
+Get | Description
+--- | --- 
+`int` | playerlist ticks
+
+
+
+##### <a id='playeridletimeout'></a>public   property __PlayerIdleTimeout__
+
+_Get: Gets the time in minutes before a player is kicked for idling<br>Set: Sets the time in minutes before a player is kicked for idling_
+
+Get | Description
+--- | --- 
+`int` | player idle timeout
+
+Set | Type | Description  
+--- | --- | --- 
+timeout | `int` | the idle timeout
+
+
+##### <a id='playerlistautoupdate'></a>public  readonly property __PlayerlistAutoUpdate__
+
+_Get: Get whether the player list is auto-updated_
+
+Get | Description
+--- | --- 
+`boolean` | true if auto-updated, false otherwise. Default is false.
+
+
+
+##### <a id='showunknowncommand'></a>public  readonly property __ShowUnknownCommand__
+
+_Get: Get whether 'Unknown Command' must be shown when an unknown command is used._
+
+Get | Description
+--- | --- 
+`boolean` | True when enabled, false otherwise. Default is true.
+
+
+
+##### <a id='queryport'></a>public  readonly property __QueryPort__
+
+_Get: Get the port used for query_
+
+Get | Description
+--- | --- 
+`int` | query port
+
+
+
+##### <a id='rconport'></a>public  readonly property __RconPort__
+
+_Get: Get the port used for remote control_
+
+Get | Description
+--- | --- 
+`int` | RCON port
+
+
+
+##### <a id='rconpassword'></a>public  readonly property __RconPassword__
+
+_Get: Get the password used for remote control_
+
+Get | Description
+--- | --- 
+`String` | RCON password
+
+
+
+##### <a id='reservelistmessage'></a>public  readonly property __ReservelistMessage__
+
+_Get: Get the message to be displayed when someone is not on the reserve list._
+
+Get | Description
+--- | --- 
+`String` | A string containing the message.
+
+
+
+##### <a id='serverfullmessage'></a>public  readonly property __ServerFullMessage__
+
+_Get: Gets the message to send to a connecting player when the Server is full_
+
+Get | Description
+--- | --- 
+`String` | server full message
+
+
+
+##### <a id='port'></a>public  readonly property __Port__
+
+_Get: Get the port number used to receive player-connections_
+
+Get | Description
+--- | --- 
+`int` | port
+
+
+
+##### <a id='serverlocale'></a>public  readonly property __ServerLocale__
+
+_Get: Gets the server's default locale_
+
+Get | Description
+--- | --- 
+`String` | default server locale
+
+
+
+##### <a id='worldcachetimeout'></a>public  readonly property __WorldCacheTimeout__
+
+_Get: Gets the World Cache timeout_
+
+Get | Description
+--- | --- 
+`long` | world cache timeout
+
+
+
+##### <a id='whitelistmessage'></a>public  readonly property __WhitelistMessage__
+
+_Get: Get the message shown to players who are not whitelisted._
+
+Get | Description
+--- | --- 
+`String` | A string containing the message.
+
+
+
+##### <a id='spamprotectionlevel'></a>public  readonly property __SpamProtectionLevel__
+
+_Get: Gets the spam protection level<br/> default - on for restricted users; off - totally off; all - on for all users_
+
+Get | Description
+--- | --- 
+`String` | the spam protection level
+
+
+
+##### <a id='strictsigncharacterchecks'></a>public  readonly property __StrictSignCharacterChecks__
+
+_Get: Gets whether characters on signs are checked for validity or not_
+
+Get | Description
+--- | --- 
+`boolean` | `true` if strict checks are preformed; `false` if not
+
+
+
+##### <a id='texturepack'></a>public  readonly property __TexturePack__
+
+_Get: Server Texture/Resource Pack name_
+
+Get | Description
+--- | --- 
+`String` | the server texture/resource pack name
+
+
+
+##### <a id='viewdistance'></a>public  readonly property __ViewDistance__
+
+_Get: Get the view distance of clients: maximum radius of loaded chunks around a player_
+
+Get | Description
+--- | --- 
+`int` | view distance
+
+
+
+---
+
+### Public Methods for [`ServerConfiguration`](ServerConfiguration.md)
+
+##### <a id='isqueryenabled'></a>public  function __isQueryEnabled__()
+
+_Get whether server query-ing is enabled_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+##### <a id='allowenchantmentstacking'></a>public  function __allowEnchantmentStacking__()
+
+_Checks if items are allowed to be stack with enchantments applied_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if allowed; `false` if not
+
+
+##### <a id='isplayerlistenabled'></a>public  function __isPlayerListEnabled__()
+
+_Get whether the player list is enabled._
+
+Returns | Description
+--- | --- 
+`boolean` | true when enabled, false otherwise. Default is true.
+
+
+##### <a id='iscommandblockenabled'></a>public  function __isCommandBlockEnabled__()
+
+_Checks if the Command Block is enabled or not_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+##### <a id='isonlinemode'></a>public  function __isOnlineMode__()
+
+_Whether the server is in online mode. When a server is in online mode, all players are verificated against the servers of Mojang. This will ensure all players have paid. When allowing unpaid users, the server is vulnerable to griefing and attacks._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if online mode is enabled; `false` if not
+
+
+##### <a id='isflightkickenabled'></a>public  function __isFlightKickEnabled__()
+
+_Checks if players will be kicked when floating too long._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if kick enabled; `false` if not
+
+
+##### <a id='iscommandblockopped'></a>public  function __isCommandBlockOpped__()
+
+_Gets whether the Command Block is considered Operator_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if opped; `false` otherwise
+
+
+##### <a id='iscommandblocksilent'></a>public  function __isCommandBlockSilent__()
+
+_Gets whether the Command Block is silent_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if silent; `false` otherwise
+
+
+##### <a id='isdeathmessageenabled'></a>public  function __isDeathMessageEnabled__()
+
+_Get whether the death message is enabled_
+
+Returns | Description
+--- | --- 
+`boolean` | true when enabled; false otherwise
+
+
+##### <a id='isdebugmode'></a>public  function __isDebugMode__()
+
+_Whether this server is in debug mode. Use debug mode when developing plugins, WolfLib or WolfScript._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if debug mode enabled; `false` if not
+
+
+##### <a id='isplayerlistcolorsenabled'></a>public  function __isPlayerlistColorsEnabled__()
+
+_Get whether playerlist colors are enabled. Note that using colors in the playerlist breaks usage of playername-completion in chat._
+
+Returns | Description
+--- | --- 
+`boolean` | true when enabled, false otherwise. Default is true.
+
+
+##### <a id='isrconenabled'></a>public  function __isRconEnabled__()
+
+_Whether Remote Control (RCON) is enabled._
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+##### <a id='isreservelistenabled'></a>public  function __isReservelistEnabled__()
+
+_Get whether the reservelist is enabled_
+
+Returns | Description
+--- | --- 
+`boolean` | true when enabled, false otherwise. Default is false.
+
+
+##### <a id='issavehomesenabled'></a>public  function __isSaveHomesEnabled__()
+
+_Get whether home-saving is enabled._
+
+Returns | Description
+--- | --- 
+`boolean` | true when enabled, false otherwise. Default is true.
+
+
+##### <a id='issnooperenabled'></a>public  function __isSnooperEnabled__()
+
+_Gets whether the Mojang snooper is enabled or not_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+##### <a id='iswhitelistenabled'></a>public  function __isWhitelistEnabled__()
+
+_Get whether the whitelist is enabled._
+
+Returns | Description
+--- | --- 
+`boolean` | True when enabled, false otherwise. Default is false.
+
+
+##### <a id='isworldcachetimerenabled'></a>public  function __isWorldCacheTimerEnabled__()
+
+_Checks if the World Cache Timer is enabled_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if enabled; `false` if not
+
+
+##### <a id='reload'></a>public  function __reload__()
+
+_Reloads the configuration file_
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='updatelang'></a>public  function __updateLang__()
+
+_Gets whether to update the Server Lang files or not_
+
+Returns | Description
+--- | --- 
+`boolean` | `true` to update; `false` if not
 
 
 ---

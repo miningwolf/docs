@@ -87,7 +87,7 @@ _addAttachment method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 
 Returns | 
 --- | 
@@ -109,7 +109,7 @@ _addAttachment method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 ticks | `int` | ticks argument
 
 Returns | 
@@ -149,7 +149,7 @@ _addAttachment method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 name | `String` | name argument
 value | `boolean` | value argument
 
@@ -164,7 +164,7 @@ _addAttachment method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 name | `String` | name argument
 value | `boolean` | value argument
 ticks | `int` | ticks argument

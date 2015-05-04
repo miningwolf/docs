@@ -1,26 +1,31 @@
 ## Smelt __class__
 
 >io.wolfscript.event.world.Smelt
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
 ### Class Overview
 
-Smelt <p/> Called when a [`Furnace`](..\..\api\world\blocks\Furnace.md) smelts an Item
+Smelt <p/> Called when a [`Furnace`](../../api/world/blocks/Furnace.md) smelts an Item
 
 Method | Type   
 --- | :--- 
- readonly property __Result__ <br> _Get: Constructs a new Smelt_ | [`Item`](..\..\api\inventory\Item.md)
+new __Smelt__(furnace, smelted, result) <br> _Constructs a new Smelt_ | _constructor_
+ readonly property __Furnace__ <br> _Get: Gets the [`Furnace`](../../api/world/blocks/Furnace.md) doing the smelting_ | [`Furnace`](../../api/world/blocks/Furnace.md)
+ readonly property __Result__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) result_ | [`Item`](../../api/inventory/Item.md)
+ readonly property __Smelted__ <br> _Get: Gets the [`Item`](../../api/inventory/Item.md) that was smelted_ | [`Item`](../../api/inventory/Item.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -30,21 +35,49 @@ __Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
 
 ---
 
+### Public Constructors for [`Smelt`](Smelt.md)
+
+##### <a id='smelt'></a>new __Smelt__(furnace, smelted, result) 
+
+_Constructs a new Smelt_
+
+Argument | Type | Description  
+--- | --- | --- 
+furnace | [`Furnace`](../../api/world/blocks/Furnace.md) | the [`Furnace`](../../api/world/blocks/Furnace.md) doing the smelting
+smelted | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) that was smelted
+result | [`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) result
+
+---
 
 ### Public Properties for [`Smelt`](Smelt.md)
 
-##### <a id='result'></a>public  readonly property __Result__
+##### <a id='furnace'></a>public  readonly property __Furnace__
 
-_Get: Constructs a new Smelt_
+_Get: Gets the [`Furnace`](../../api/world/blocks/Furnace.md) doing the smelting_
 
 Get | Description
 --- | --- 
-[`Item`](..\..\api\inventory\Item.md) | the [`Furnace`](..\..\api\world\blocks\Furnace.md) /
-    public Furnace getFurnace() {
-        return furnace;
-    }
+[`Furnace`](../../api/world/blocks/Furnace.md) | the [`Furnace`](../../api/world/blocks/Furnace.md)
 
-    /** Gets the [`Item`](..\..\api\inventory\Item.md) that was smelted
+
+
+##### <a id='result'></a>public  readonly property __Result__
+
+_Get: Gets the [`Item`](../../api/inventory/Item.md) result_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md)
+
+
+
+##### <a id='smelted'></a>public  readonly property __Smelted__
+
+_Get: Gets the [`Item`](../../api/inventory/Item.md) that was smelted_
+
+Get | Description
+--- | --- 
+[`Item`](../../api/inventory/Item.md) | the [`Item`](../../api/inventory/Item.md) smelted
 
 
 
@@ -63,7 +96,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -71,7 +104,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -94,27 +127,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

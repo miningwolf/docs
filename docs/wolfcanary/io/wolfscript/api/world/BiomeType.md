@@ -51,13 +51,30 @@ PLATEAU_SAVANNA: 36<br> _PLATEAU_SAVANNA BiomeType_ | BiomeType
 MESA: 37<br> _MESA BiomeType_ | BiomeType
 PLATEAU_MESA_F: 38<br> _PLATEAU_MESA_F BiomeType_ | BiomeType
 PLATEAU_MESA: 39<br> _PLATEAU_MESA BiomeType_ | BiomeType
+ readonly property __Id__ <br> _Get: Gets the byte for the BiomeType_ | `byte`
 static function __count__() <br> _count method_ | `int`
-static function __fromTypeArray__() <br> _Gets the byte for the BiomeType_ | `byte[]`
+static function __fromId__(id) <br> _Gets the BiomeType from the byte id_ | [`BiomeType`](BiomeType.md)
+static function __fromIdArray__() <br> _Gets an array of BiomeTypes based on a byte array_ | `BiomeType[]`
+static function __fromTypeArray__() <br> _Gets an array of bytes based on a BiomeType array_ | `byte[]`
 
 
 
 ---
 
+
+### Public Properties for [`BiomeType`](BiomeType.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+
+_Get: Gets the byte for the BiomeType_
+
+Get | Description
+--- | --- 
+`byte` | id the BiomeType id
+
+
+
+---
 
 ### Public Methods for [`BiomeType`](BiomeType.md)
 
@@ -70,18 +87,35 @@ Returns |
 `int` |
 
 
-##### <a id='fromtypearray'></a>public static function __fromTypeArray__()
+##### <a id='fromid'></a>public static function __fromId__(id)
 
-_Gets the byte for the BiomeType_
+_Gets the BiomeType from the byte id_
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `byte` | the byte id
 
 Returns | Description
 --- | --- 
-`byte[]` | id the BiomeType id /
-    public byte getId() {
-        return id;
-    }
+[`BiomeType`](BiomeType.md) | the BiomeType
 
-    /** Gets the BiomeType from the byte id
+
+##### <a id='fromidarray'></a>public static function __fromIdArray__()
+
+_Gets an array of BiomeTypes based on a byte array_
+
+Returns | Description
+--- | --- 
+`BiomeType[]` | a BiomeType array
+
+
+##### <a id='fromtypearray'></a>public static function __fromTypeArray__()
+
+_Gets an array of bytes based on a BiomeType array_
+
+Returns | Description
+--- | --- 
+`byte[]` | a byte array of Biome ids
 
 
 ---

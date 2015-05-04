@@ -10,121 +10,389 @@ Represents a minecraft potion
 
 Method | Type   
 --- | :--- 
+new __Potion__(type) <br> _Construct a new potion of the given type. Unless the type is {@link_ | _constructor_
+new __Potion__(type, level) <br> _Create a new potion of the given type and level._ | _constructor_
+new __Potion__(name) <br> _Create a potion with a specific name._ | _constructor_
+ writeonly property __Splash__ <br> _Set: Sets whether this potion is a splash potion. Splash potions can be_ | `void`
+ readonly property __Effects__ <br> _Get: Returns a collection of [`PotionEffect`](PotionEffect.md)s that this [`Potion`](Potion.md)_ | `Collection<PotionEffect>`
+  property __Level__ <br> _Get: Returns the level of this potion.<br>Set: Sets the level of this potion._ | `int`
+static readonly property __Brewer__ <br> _Get: Returns an instance of [`PotionBrewer`](PotionBrewer.md)._ | [`PotionBrewer`](PotionBrewer.md)
+ readonly property __DamageBit__ <br> _DamageBit property_ | `int`
+ writeonly property __HasExtendedDuration__ <br> _Set: Set whether this potion has extended duration. This will cause the_ | `void`
+  property __Type__ <br> _Get: Returns the [`PotionType`](PotionType.md) of this potion.<br>Set: Sets the [`PotionType`](PotionType.md) of this potion._ | [`PotionType`](PotionType.md)
+static writeonly property __PotionBrewer__ <br> _Set: Sets the current instance of [`PotionBrewer`](PotionBrewer.md). Generally not to be_ | `void`
+ function __apply__(to) <br> _Applies the effects of this potion to the given `ItemStack`. The_ | `void`
+ function __apply__(to) <br> _Applies the effects that would be applied by this potion to the given_ | `void`
+ function __equals__(obj) <br> _equals method_ | `boolean`
+static function __fromItemStack__(item) <br> _fromItemStack method_ | [`Potion`](Potion.md)
+static function __getByDamageBit__(damageBit) <br> _getByDamageBit method_ | `Tier`
+ function __extend__() <br> _Chain this to the constructor to extend the potion's duration._ | [`Potion`](Potion.md)
+ function __isSplash__() <br> _Returns whether this potion is a splash potion._ | `boolean`
+ function __hasExtendedDuration__() <br> _Returns whether this potion has an extended duration._ | `boolean`
+ function __hashCode__() <br> _hashCode method_ | `int`
+ function __splash__() <br> _Chain this to the constructor to make the potion a splash potion._ | [`Potion`](Potion.md)
+ function __toItemStack__(amount) <br> _Converts this potion to an `ItemStack` with the specified amount_ | `ItemStack`
 
 
 
 ---
 
+### Public Constructors for [`Potion`](Potion.md)
+
+##### <a id='potion'></a>new __Potion__(type) 
+
+_Construct a new potion of the given type. Unless the type is `PotionType#WATER`, it will be level one, without extended duration. Don't use this constructor to create a no-effect potion other than water bottle._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The potion type
+
+##### <a id='potion'></a>new __Potion__(type, tier) 
+_Deprecated: In favour of {@link #Potion(PotionType, int)}_
+
+_Potion constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | the type of the potion
+tier | `Tier` | the tier of the potion
+
+##### <a id='potion'></a>new __Potion__(type, tier, splash) 
+_Deprecated: In favour of {@link #Potion(PotionType, int, boolean)}_
+
+_Potion constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | the type of the potion
+tier | `Tier` | the tier of the potion
+splash | `boolean` | whether the potion is a splash potion
+
+##### <a id='potion'></a>new __Potion__(type, tier, splash, extended) 
+_Deprecated: In favour of {@link #Potion(PotionType, int, boolean, boolean)}_
+
+_Potion constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | the type of the potion
+tier | `Tier` | the tier of the potion
+splash | `boolean` | whether the potion is a splash potion
+extended | `boolean` | whether the potion has an extended duration
+
+##### <a id='potion'></a>new __Potion__(type, level) 
+
+_Create a new potion of the given type and level._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The type of potion.
+level | `int` | The potion's level.
+
+##### <a id='potion'></a>new __Potion__(type, level, splash) 
+_Deprecated: In favour of using {@link #Potion(PotionType)} with {@link #splash()}._
+
+_Create a new potion of the given type and level._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The type of potion.
+level | `int` | The potion's level.
+splash | `boolean` | Whether it is a splash potion.
+
+##### <a id='potion'></a>new __Potion__(type, level, splash, extended) 
+_Deprecated: In favour of using {@link #Potion(PotionType)} with {@link #extend()} and possibly {@link #splash()}._
+
+_Create a new potion of the given type and level._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The type of potion.
+level | `int` | The potion's level.
+splash | `boolean` | Whether it is a splash potion.
+extended | `boolean` | Whether it has an extended duration.
+
+##### <a id='potion'></a>new __Potion__(name) 
+
+_Create a potion with a specific name._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `int` | The name index (0-63)
+
+---
 
 ### Public Properties for [`Potion`](Potion.md)
 
+##### <a id='splash'></a>public  writeonly property __Splash__
+
+_Set: Sets whether this potion is a splash potion. Splash potions can be thrown for a radius effect._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+isSplash | `boolean` | Whether this is a splash potion
+
+
 ##### <a id='nameid'></a>public  readonly property __NameId__
-_Deprecated: In favour of {@link #Potion(PotionType, int)} /    
-    @Deprecated
-    public Potion(PotionType type, Tier tier) {
-        this(type, tier == Tier.TWO ? 2 : 1);
-        Validate.notNull(type, "Type cannot be null");
-    }
+_Deprecated: Magic value_
 
-    /** In favour of {@link #Potion(PotionType, int, boolean)} /
-    @Deprecated
-    public Potion(PotionType type, Tier tier, boolean splash) {
-        this(type, tier == Tier.TWO ? 2 : 1, splash);
-    }
-
-    /** In favour of {@link #Potion(PotionType, int, boolean, boolean)} /
-    @Deprecated
-    public Potion(PotionType type, Tier tier, boolean splash, boolean extended) {
-        this(type, tier, splash);
-        this.extended = extended;
-    }
-
-    /** Create a new potion of the given type and level. In favour of using {@link #Potion(PotionType)} with {@link #splash()}. /
-    @Deprecated
-    public Potion(PotionType type, int level, boolean splash) {
-        this(type, level);
-        this.splash = splash;
-    }
-
-    /** Create a new potion of the given type and level. In favour of using {@link #Potion(PotionType)} with {@link #extend()} and possibly {@link #splash()}. /
-    @Deprecated
-    public Potion(PotionType type, int level, boolean splash, boolean extended) {
-        this(type, level, splash);
-        this.extended = extended;
-    }
-
-    /** Create a potion with a specific name. In favour of {@link #setLevel(int)} /
-    @Deprecated
-    public void setTier(Tier tier) {
-        Validate.notNull(tier, "tier cannot be null");
-        this.level = (tier == Tier.TWO ? 2 : 1);
-    }
-
-    /** Sets the {@link io.wolfscript.potion.PotionType} of this potion. Magic value /
-    @Deprecated
-    public short toDamageValue() {
-        short damage;
-        if (type == PotionType.WATER) {
-            return 0;
-        } else if (type == null) {
-            // Without this, mundanePotion.toDamageValue() would return 0
-            damage = (short) (name == 0 ? 8192 : name);
-        } else {
-            damage = (short) (level - 1);
-            damage <<= TIER_SHIFT;
-            damage |= (short) type.getDamageValue();
-        }
-        if (splash) {
-            damage |= SPLASH_BIT;
-        }
-        if (extended) {
-            damage |= EXTENDED_BIT;
-        }
-        return damage;
-    }
-
-    /** Converts this potion to an {@link io.wolfscript.inventory.ItemStack} with the specified amount and a correct damage value. Magic value /
-    @Deprecated
-    public static Potion fromDamage(int damage) {
-        PotionType type = PotionType.getByDamageValue(damage & POTION_BIT);
-        Potion potion;
-        if (type == null || type == PotionType.WATER) {
-            potion = new Potion(damage & NAME_BIT);
-        } else {
-            int level = (damage & TIER_BIT) >> TIER_SHIFT;
-            level++;
-            potion = new Potion(type, level);
-        }
-        if ((damage & SPLASH_BIT) > 0) {
-            potion = potion.splash();
-        }
-        if ((damage & EXTENDED_BIT) > 0) {
-            potion = potion.extend();
-        }
-        return potion;
-    }
-
-    public static Potion fromItemStack(ItemStack item) {
-        Validate.notNull(item, "item cannot be null");
-        if (item.getType() != Material.POTION)
-            throw new IllegalArgumentException("item is not a potion");
-        return fromDamage(item.getDurability());
-    }
-
-    /** Returns an instance of {@link io.wolfscript.potion.PotionBrewer}. Magic value_
-
-_Get: Construct a new potion of the given type. Unless the type is `PotionType#WATER`, it will be level one, without extended duration. Don't use this constructor to create a no-effect potion other than water bottle._
+_NameId property_
 
 Get | Description
 --- | --- 
-`int` | The potion. /
-    public Potion splash() {
-        setSplash(true);
-        return this;
-    }
+`int` | the name id
 
-    /** Chain this to the constructor to extend the potion's duration.
 
+
+##### <a id='effects'></a>public  readonly property __Effects__
+
+_Get: Returns a collection of [`PotionEffect`](PotionEffect.md)s that this [`Potion`](Potion.md) would confer upon a `LivingEntity`._
+
+Get | Description
+--- | --- 
+`Collection<PotionEffect>` | The effects that this potion applies
+
+
+
+##### <a id='level'></a>public   property __Level__
+
+_Get: Returns the level of this potion.<br>Set: Sets the level of this potion._
+
+Get | Description
+--- | --- 
+`int` | The level of this potion
+
+Set | Type | Description  
+--- | --- | --- 
+level | `int` | The new level of this potion
+
+
+##### <a id='brewer'></a>public static readonly property __Brewer__
+
+_Get: Returns an instance of [`PotionBrewer`](PotionBrewer.md)._
+
+Get | Description
+--- | --- 
+[`PotionBrewer`](PotionBrewer.md) | An instance of PotionBrewer
+
+
+
+##### <a id='damagebit'></a>public  readonly property __DamageBit__
+
+_DamageBit property_
+
+Get | 
+--- | 
+`int` |
+
+
+
+##### <a id='hasextendedduration'></a>public  writeonly property __HasExtendedDuration__
+
+_Set: Set whether this potion has extended duration. This will cause the potion to have roughly 8/3 more duration than a regular potion._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+isExtended | `boolean` | Whether the potion should have extended duration
+
+
+##### <a id='tier'></a>public   property __Tier__
+_Deprecated: In favour of {@link #setLevel(int)}_
+
+_Get: Returns the `Tier` of this potion.<br>Set: Sets the `Tier` of this potion._
+
+Get | 
+--- | 
+`Tier` |
+
+Set | Type | Description  
+--- | --- | --- 
+tier | `Tier` | The new tier of this potion
+
+
+##### <a id='type'></a>public   property __Type__
+
+_Get: Returns the [`PotionType`](PotionType.md) of this potion.<br>Set: Sets the [`PotionType`](PotionType.md) of this potion._
+
+Get | Description
+--- | --- 
+[`PotionType`](PotionType.md) | The type of this potion
+
+Set | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The new type of this potion
+
+
+##### <a id='potionbrewer'></a>public static writeonly property __PotionBrewer__
+
+_Set: Sets the current instance of [`PotionBrewer`](PotionBrewer.md). Generally not to be used from within a plugin._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+other | [`PotionBrewer`](PotionBrewer.md) | The new PotionBrewer
+
+
+---
+
+### Public Methods for [`Potion`](Potion.md)
+
+##### <a id='apply'></a>public  function __apply__(to)
+
+_Applies the effects of this potion to the given `ItemStack`. The ItemStack must be a potion._
+
+Argument | Type | Description  
+--- | --- | --- 
+to | `ItemStack` | The itemstack to apply to
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='apply'></a>public  function __apply__(to)
+
+_Applies the effects that would be applied by this potion to the given `LivingEntity`._
+
+Argument | Type | Description  
+--- | --- | --- 
+to | `LivingEntity` | The entity to apply the effects to
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='equals'></a>public  function __equals__(obj)
+
+_equals method_
+
+Argument | Type | Description  
+--- | --- | --- 
+obj | `Object` | obj argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='fromitemstack'></a>public static function __fromItemStack__(item)
+
+_fromItemStack method_
+
+Argument | Type | Description  
+--- | --- | --- 
+item | `ItemStack` | item argument
+
+Returns | 
+--- | 
+[`Potion`](Potion.md) |
+
+
+##### <a id='fromdamage'></a>public static function __fromDamage__(damage)
+_Deprecated: Magic value_
+
+_fromDamage method_
+
+Argument | Type | Description  
+--- | --- | --- 
+damage | `int` | the damage value
+
+Returns | Description
+--- | --- 
+[`Potion`](Potion.md) | the produced potion
+
+
+##### <a id='getbydamagebit'></a>public static function __getByDamageBit__(damageBit)
+
+_getByDamageBit method_
+
+Argument | Type | Description  
+--- | --- | --- 
+damageBit | `int` | damageBit argument
+
+Returns | 
+--- | 
+`Tier` |
+
+
+##### <a id='extend'></a>public  function __extend__()
+
+_Chain this to the constructor to extend the potion's duration._
+
+Returns | Description
+--- | --- 
+[`Potion`](Potion.md) | The potion.
+
+
+##### <a id='issplash'></a>public  function __isSplash__()
+
+_Returns whether this potion is a splash potion._
+
+Returns | Description
+--- | --- 
+`boolean` | Whether this is a splash potion
+
+
+##### <a id='hasextendedduration'></a>public  function __hasExtendedDuration__()
+
+_Returns whether this potion has an extended duration._
+
+Returns | Description
+--- | --- 
+`boolean` | Whether this potion has extended duration
+
+
+##### <a id='hashcode'></a>public  function __hashCode__()
+
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
+
+
+##### <a id='splash'></a>public  function __splash__()
+
+_Chain this to the constructor to make the potion a splash potion._
+
+Returns | Description
+--- | --- 
+[`Potion`](Potion.md) | The potion.
+
+
+##### <a id='todamagevalue'></a>public  function __toDamageValue__()
+_Deprecated: Magic value_
+
+_Converts this potion to a valid potion damage short, usable for potion item stacks._
+
+Returns | Description
+--- | --- 
+`short` | The damage value of this potion
+
+
+##### <a id='toitemstack'></a>public  function __toItemStack__(amount)
+
+_Converts this potion to an `ItemStack` with the specified amount and a correct damage value._
+
+Argument | Type | Description  
+--- | --- | --- 
+amount | `int` | The amount of the ItemStack
+
+Returns | Description
+--- | --- 
+`ItemStack` | The created ItemStack
 
 
 ---

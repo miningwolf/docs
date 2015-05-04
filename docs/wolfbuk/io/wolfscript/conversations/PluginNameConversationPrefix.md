@@ -27,7 +27,7 @@ _PluginNameConversationPrefix constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 
 ##### <a id='pluginnameconversationprefix'></a>new __PluginNameConversationPrefix__(plugin, separator, prefixColor) 
 
@@ -35,9 +35,9 @@ _PluginNameConversationPrefix constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 separator | `String` | separator argument
-prefixColor | [`ChatColor`](..\ChatColor.md) | prefixColor argument
+prefixColor | [`ChatColor`](../ChatColor.md) | prefixColor argument
 
 ---
 

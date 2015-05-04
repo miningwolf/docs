@@ -11,7 +11,8 @@ Represents the applicable target for a [`Enchantment`](Enchantment.md)
 Item | Type   
 --- | :--- 
 true: <br> _true EnchantmentTarget_ | EnchantmentTarget
- function __includes__(item) <br> _Allows the Enchantment to be placed on all items_ | `boolean`
+abstract function __includes__(item) <br> _Allows the Enchantment to be placed on all items_ | `boolean`
+ function __includes__(item) <br> _Check whether this target includes the specified item._ | `boolean`
 
 
 
@@ -20,7 +21,7 @@ true: <br> _true EnchantmentTarget_ | EnchantmentTarget
 
 ### Public Methods for [`EnchantmentTarget`](EnchantmentTarget.md)
 
-##### <a id='includes'></a>public  function __includes__(item)
+##### <a id='includes'></a>public abstract function __includes__(item)
 
 _Allows the Enchantment to be placed on all items /
     ALL {
@@ -150,14 +151,24 @@ _Allows the Enchantment to be placed on all items /
 
 Argument | Type | Description  
 --- | --- | --- 
+item | [`Material`](../Material.md) | The item to check
+
+Returns | Description
+--- | --- 
+`boolean` | True if the target includes the item
+
+
+##### <a id='includes'></a>public  function __includes__(item)
+
+_Check whether this target includes the specified item._
+
+Argument | Type | Description  
+--- | --- | --- 
 item | `ItemStack` | The item to check
 
 Returns | Description
 --- | --- 
-`boolean` | True if the target includes the item /
-    public abstract boolean includes(Material item);
-
-    /** Check whether this target includes the specified item.
+`boolean` | True if the target includes the item
 
 
 ---

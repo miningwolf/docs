@@ -14,7 +14,9 @@ new __ChatPage__(pageNumber, totalPages) <br> _ChatPage constructor_ | _construc
  readonly property __Lines__ <br> _Lines property_ | `String[]`
  readonly property __PageNumber__ <br> _PageNumber property_ | `int`
  readonly property __TotalPages__ <br> _TotalPages property_ | `int`
-static function __wordWrap__(rawString, lineLength) <br> _Breaks a raw string up into pages using the default width and height._ | `String[]`
+static function __paginate__(unpaginatedString, pageNumber) <br> _Breaks a raw string up into pages using the default width and height._ | `ChatPage`
+static function __paginate__(unpaginatedString, pageNumber, lineLength, pageHeight) <br> _Breaks a raw string up into pages using a provided width and height._ | `ChatPage`
+static function __wordWrap__(rawString, lineLength) <br> _Breaks a raw string up into a series of lines. Words are wrapped using_ | `String[]`
 static final var __GUARANTEED__ <br> _GUARANTEED field_ | `int`
 static final var __AVERAGE__ <br> _AVERAGE field_ | `int`
 static final var __UNBOUNDED__ <br> _UNBOUNDED field_ | `int`
@@ -75,23 +77,48 @@ Get |
 
 ### Public Methods for [`ChatPaginator`](ChatPaginator.md)
 
-##### <a id='wordwrap'></a>public static function __wordWrap__(rawString, lineLength)
+##### <a id='paginate'></a>public static function __paginate__(unpaginatedString, pageNumber)
 
 _Breaks a raw string up into pages using the default width and height._
 
 Argument | Type | Description  
 --- | --- | --- 
-rawString | `String` | The raw string to break.
-lineLength | `int` | The desired width of a chat line.
+unpaginatedString | `String` | The raw string to break.
+pageNumber | `int` | The page number to fetch.
 
 Returns | Description
 --- | --- 
-`String[]` | A single chat page. /
-    public static ChatPage paginate(String unpaginatedString, int pageNumber) {
-        return  paginate(unpaginatedString, pageNumber, GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH, CLOSED_CHAT_PAGE_HEIGHT);
-    }
+`ChatPage` | A single chat page.
 
-    /** Breaks a raw string up into pages using a provided width and height.
+
+##### <a id='paginate'></a>public static function __paginate__(unpaginatedString, pageNumber, lineLength, pageHeight)
+
+_Breaks a raw string up into pages using a provided width and height._
+
+Argument | Type | Description  
+--- | --- | --- 
+unpaginatedString | `String` | The raw string to break.
+pageNumber | `int` | The page number to fetch.
+lineLength | `int` | The desired width of a chat line.
+pageHeight | `int` | The desired number of lines in a page.
+
+Returns | Description
+--- | --- 
+`ChatPage` | A single chat page.
+
+
+##### <a id='wordwrap'></a>public static function __wordWrap__(rawString, lineLength)
+
+_Breaks a raw string up into a series of lines. Words are wrapped using spaces as decimeters and the newline character is respected._
+
+Argument | Type | Description  
+--- | --- | --- 
+rawString | `String` | The raw string to break.
+lineLength | `int` | The length of a line of text.
+
+Returns | Description
+--- | --- 
+`String[]` | An array of word-wrapped lines.
 
 
 ---

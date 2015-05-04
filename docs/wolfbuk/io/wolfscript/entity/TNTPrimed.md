@@ -11,10 +11,13 @@ Represents a Primed TNT.
 
 Method | Type   
 --- | :--- 
- readonly property __Source__ <br> _Get: Set the number of ticks until the TNT blows up after being primed._ | `Entity`
+  property __FuseTicks__ <br> _Get: Retrieve the number of ticks until the explosion of this TNTPrimed<br>Set: Set the number of ticks until the TNT blows up after being primed._ | `int`
+ readonly property __Source__ <br> _Get: Gets the source of this primed TNT. The source is the entity_ | `Entity`
  |
 __Inherited items from [`Explosive`](Explosive.md)__ |
- function __isIncendiary__() <br> _Set the radius affected by this explosive's explosion_ | `boolean`
+  property __Yield__ <br> _Get: Return the radius or yield of this explosive's explosion<br>Set: Set the radius affected by this explosive's explosion_ | `float`
+ writeonly property __IsIncendiary__ <br> _Set: Set whether or not this explosive's explosion causes fire_ | `void`
+ function __isIncendiary__() <br> _Return whether or not this explosive creates a fire when exploding_ | `boolean`
 
 
 
@@ -25,17 +28,57 @@ __Inherited items from [`Explosive`](Explosive.md)__ |
 
 ### Public Properties for [`TNTPrimed`](TNTPrimed.md)
 
-##### <a id='source'></a>public  readonly property __Source__
+##### <a id='fuseticks'></a>public   property __FuseTicks__
 
-_Get: Set the number of ticks until the TNT blows up after being primed._
+_Get: Retrieve the number of ticks until the explosion of this TNTPrimed entity<br>Set: Set the number of ticks until the TNT blows up after being primed._
 
 Get | Description
 --- | --- 
-`Entity` | the number of ticks until this TNTPrimed explodes /
-    public int getFuseTicks();
+`int` | the number of ticks until this TNTPrimed explodes
 
-    /** Gets the source of this primed TNT. The source is the entity responsible for the creation of this primed TNT. (I.E. player ignites TNT with flint and steel.) Take note that this can be null if there is no suitable source. (created by the {@link io.wolfscript.World#spawn(Location, Class)} method, for example.) <p> The source will become null if the chunk this primed TNT is in is unloaded then reloaded. If the source Entity becomes invalidated for any reason, such being removed from the world, the returned value will be null.
+Set | Type | Description  
+--- | --- | --- 
+fuseTicks | `int` | The fuse ticks
 
+
+##### <a id='source'></a>public  readonly property __Source__
+
+_Get: Gets the source of this primed TNT. The source is the entity responsible for the creation of this primed TNT. (I.E. player ignites TNT with flint and steel.) Take note that this can be null if there is no suitable source. (created by the {@link io.wolfscript.World#spawn(Location, Class)} method, for example.) <p> The source will become null if the chunk this primed TNT is in is unloaded then reloaded. If the source Entity becomes invalidated for any reason, such being removed from the world, the returned value will be null._
+
+Get | Description
+--- | --- 
+`Entity` | the source of this primed TNT
+
+
+
+---
+
+### Public Properties for [`Explosive`](Explosive.md)
+
+##### <a id='yield'></a>public   property __Yield__
+
+_Get: Return the radius or yield of this explosive's explosion<br>Set: Set the radius affected by this explosive's explosion_
+
+Get | Description
+--- | --- 
+`float` | the radius of blocks affected
+
+Set | Type | Description  
+--- | --- | --- 
+yield | `float` | The explosive yield
+
+
+##### <a id='isincendiary'></a>public  writeonly property __IsIncendiary__
+
+_Set: Set whether or not this explosive's explosion causes fire_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+isIncendiary | `boolean` | Whether it should cause fire
 
 
 ---
@@ -44,14 +87,11 @@ Get | Description
 
 ##### <a id='isincendiary'></a>public  function __isIncendiary__()
 
-_Set the radius affected by this explosive's explosion_
+_Return whether or not this explosive creates a fire when exploding_
 
 Returns | Description
 --- | --- 
-`boolean` | the radius of blocks affected /
-    public float getYield();
-
-    /** Set whether or not this explosive's explosion causes fire
+`boolean` | true if the explosive creates fire, false otherwise
 
 
 ---

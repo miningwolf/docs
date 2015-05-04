@@ -11,7 +11,14 @@ This class manages incoming and outgoing Packet250CustomPayload's. This allows c
 
 Method | Type   
 --- | :--- 
+ function __registerClient__(channel, handler) <br> _{@inheritDoc}_ | `void`
+ function __registerListener__(plugin, channel, listener) <br> _{@inheritDoc}_ | `void`
+abstract function __sendCustomPayloadToAllPlayers__(channel) <br> _{@inheritDoc}_ | `boolean`
+ function __sendCustomPayloadToListeners__(channel, player) <br> _{@inheritDoc}_ | `void`
+abstract function __sendCustomPayloadToPlayer__(channel, player) <br> _{@inheritDoc}_ | `boolean`
+ function __unregisterClient__(channel, handler) <br> _{@inheritDoc}_ | `boolean`
  function __unregisterClientAll__(handler) <br> _{@inheritDoc}_ | `boolean`
+ function __unregisterListeners__(plugin) <br> _{@inheritDoc}_ | `boolean`
 
 
 
@@ -20,101 +27,110 @@ Method | Type
 
 ### Public Methods for [`ChannelManager`](ChannelManager.md)
 
-##### <a id='unregisterclientall'></a>public  function __unregisterClientAll__(handler)
+##### <a id='registerclient'></a>public  function __registerClient__(channel, handler)
 
-_{@inheritDoc} /
-    @Override
-    public void registerListener(Plugin plugin, String channel, ChannelListener listener) {
-        try {
-            if (plugin == null) {
-                throw new CustomPayloadChannelException("Invalid Registered Listener: Plugin is null.");
-            }
-            if (channel == null || channel.trim().equals("") || channel.equalsIgnoreCase("REGISTER") || channel.equalsIgnoreCase("UNREGISTER")) {
-                throw new CustomPayloadChannelException(String.format("Invalid Registered Listener: Invalid channel name of '%s'", channel));
-            }
-            if (channel.length() > 20) {
-                throw new CustomPayloadChannelException(String.format("Invalid Custom Payload: Channel Name too long '%s'", channel));
-            }
-            if (listener == null) {
-                throw new CustomPayloadChannelException("Invalid Registered Listener: Channel Listener is null.");
-            }
-
-            synchronized (listener) {
-                listeners.put(channel, new RegisteredChannelListener(plugin, listener));
-            }
-        }
-        catch (CustomPayloadChannelException ex) {
-            log.error(ex.getMessage(), ex);
-        }
-    }
-
-    /** {@inheritDoc} /
-    @Override
-    public boolean unregisterListeners(Plugin plugin) {
-        boolean toRet = false;
-        synchronized (listeners) {
-            Iterator<RegisteredChannelListener> itr = listeners.values().iterator();
-            while (itr.hasNext()) {
-                if (itr.next().getPlugin().equals(plugin)) {
-                    itr.remove();
-                    toRet = true;
-                }
-            }
-        }
-        return toRet;
-    }
-
-    /** {@inheritDoc} /
-    @Override
-    public abstract boolean sendCustomPayloadToAllPlayers(String channel, byte[] bytestream);
-
-    /** {@inheritDoc} /
-    @Override
-    public abstract boolean sendCustomPayloadToPlayer(String channel, byte[] bytestream, Player player);
-
-    /** {@inheritDoc} /
-    @Override
-    public void sendCustomPayloadToListeners(String channel, byte[] byteStream, Player player) {
-        if (listeners.containsKey(channel)) {
-            for (RegisteredChannelListener listener : listeners.get(channel)) {
-                listener.getChannelListener().onChannelInput(channel, player, byteStream);
-            }
-        }
-    }
-
-    /** {@inheritDoc} /
-    @Override
-    public void registerClient(String channel, NetServerHandler handler) {
-        try {
-            if (handler == null) {
-                throw new CustomPayloadChannelException("Invalid Registered Client: NetServerHandler is null.");
-            }
-            synchronized (clients) {
-                clients.put(channel, handler);
-            }
-        }
-        catch (CustomPayloadChannelException ex) {
-            log.error(ex.getMessage(), ex);
-        }
-    }
-
-    /** {@inheritDoc} /
-    @Override
-    public boolean unregisterClient(String channel, NetServerHandler handler) {
-        synchronized (clients) {
-            if (clients.containsKey(channel) && clients.get(channel).remove(handler)) {
-                log.info(String.format("Client Custom Payload channel '%s' has been unregistered for client '%s'", channel, handler.getUser().getName()));
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /** {@inheritDoc}_
+_{@inheritDoc}_
 
 Argument | Type | Description  
 --- | --- | --- 
-handler | [`NetServerHandler`](..\api\NetServerHandler.md) | handler argument
+channel | `String` | channel argument
+handler | [`NetServerHandler`](../api/NetServerHandler.md) | handler argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='registerlistener'></a>public  function __registerListener__(plugin, channel, listener)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+plugin | `Plugin` | plugin argument
+channel | `String` | channel argument
+listener | [`ChannelListener`](ChannelListener.md) | listener argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='sendcustompayloadtoallplayers'></a>public abstract function __sendCustomPayloadToAllPlayers__(channel)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+channel | `String` | channel argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='sendcustompayloadtolisteners'></a>public  function __sendCustomPayloadToListeners__(channel, player)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+channel | `String` | channel argument
+player | `Player` | player argument
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='sendcustompayloadtoplayer'></a>public abstract function __sendCustomPayloadToPlayer__(channel, player)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+channel | `String` | channel argument
+player | `Player` | player argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='unregisterclient'></a>public  function __unregisterClient__(channel, handler)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+channel | `String` | channel argument
+handler | [`NetServerHandler`](../api/NetServerHandler.md) | handler argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='unregisterclientall'></a>public  function __unregisterClientAll__(handler)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+handler | [`NetServerHandler`](../api/NetServerHandler.md) | handler argument
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='unregisterlisteners'></a>public  function __unregisterListeners__(plugin)
+
+_{@inheritDoc}_
+
+Argument | Type | Description  
+--- | --- | --- 
+plugin | `Plugin` | plugin argument
 
 Returns | 
 --- | 

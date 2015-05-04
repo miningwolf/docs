@@ -17,7 +17,18 @@ new __ItemType__(id, isBlockCreating) <br> _ItemType constructor_ | _constructor
 new __ItemType__(id, data, name) <br> _ItemType constructor_ | _constructor_
 new __ItemType__(id, isBlockCreating, machineName) <br> _ItemType constructor_ | _constructor_
 new __ItemType__(id, data, isBlockCreating, machineName) <br> _ItemType constructor_ | _constructor_
-static function __values__() <br> _Get the ID of this ItemType_ | `ItemType[]`
+ readonly property __Id__ <br> _Get: Get the ID of this ItemType_ | `int`
+ readonly property __Data__ <br> _Get: Get the data of the ItemType_ | `int`
+ readonly property __MachineName__ <br> _Get: Returns a "machine readable" name._ | `String`
+static function __fromIdAndData__(id, data) <br> _Gets an ItemType according to the given ID and Data values._ | [`ItemType`](ItemType.md)
+static function __getCustomItemType__(name) <br> _Get a custom ItemType._ | [`ItemType`](ItemType.md)
+static function __getCustomItemType__(name, data) <br> _Get a custom ItemType._ | [`ItemType`](ItemType.md)
+static function __fromString__(name) <br> _Returns an ItemType according to its name._ | [`ItemType`](ItemType.md)
+static function __fromId__(id) <br> _Get the ItemType according to the given ID._ | [`ItemType`](ItemType.md)
+static function __fromStringAndData__(machineName, data) <br> _Gets an ItemType according to the given machine name and data value._ | [`ItemType`](ItemType.md)
+static function __isBlockCreating__(itemId) <br> _Checks the Item ID if it is an Item that creates a Block_ | `boolean`
+ function __isBlockCreating__() <br> _isBlockCreating method_ | `boolean`
+static function __values__() <br> _Gets an array of all ItemTypes_ | `ItemType[]`
 static final var __Stone__ <br> _Stone field_ | [`ItemType`](ItemType.md)
 static final var __Granite__ <br> _Granite field_ | [`ItemType`](ItemType.md)
 static final var __PolishedGranite__ <br> _PolishedGranite field_ | [`ItemType`](ItemType.md)
@@ -625,20 +636,152 @@ machineName | `String` | machineName argument
 
 ---
 
+### Public Properties for [`ItemType`](ItemType.md)
+
+##### <a id='id'></a>public  readonly property __Id__
+
+_Get: Get the ID of this ItemType_
+
+Get | Description
+--- | --- 
+`int` | the id
+
+
+
+##### <a id='data'></a>public  readonly property __Data__
+
+_Get: Get the data of the ItemType_
+
+Get | Description
+--- | --- 
+`int` | the data
+
+
+
+##### <a id='machinename'></a>public  readonly property __MachineName__
+
+_Get: Returns a "machine readable" name. That is: a representation of the Item Type name in lowercase letters without whitespaces._
+
+Get | Description
+--- | --- 
+`String` | the machine name
+
+
+
+---
+
 ### Public Methods for [`ItemType`](ItemType.md)
 
-##### <a id='values'></a>public static function __values__()
+##### <a id='fromidanddata'></a>public static function __fromIdAndData__(id, data)
 
-_Get the ID of this ItemType_
+_Gets an ItemType according to the given ID and Data values. This will return null if there is no ItemType with this id._
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `int` | the id to get type from
+data | `int` | the data (damage) to get type from
 
 Returns | Description
 --- | --- 
-`ItemType[]` | the id /
-    public int getId() {
-        return id;
-    }
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if not
 
-    /** Get the data of the ItemType
+
+##### <a id='getcustomitemtype'></a>public static function __getCustomItemType__(name)
+
+_Get a custom ItemType._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the machine name or the display name of the block type in question
+
+Returns | Description
+--- | --- 
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if the requested ItemType does not exist.
+
+
+##### <a id='getcustomitemtype'></a>public static function __getCustomItemType__(name, data)
+
+_Get a custom ItemType._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | the machine name of the block type in question
+data | `int` | the data of the block type in question
+
+Returns | Description
+--- | --- 
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if the requested ItemType does not exist.
+
+
+##### <a id='fromstring'></a>public static function __fromString__(name)
+
+_Returns an ItemType according to its name. This returns null if there is no ItemType with this name._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | The machine name or the display name
+
+Returns | Description
+--- | --- 
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if not
+
+
+##### <a id='fromid'></a>public static function __fromId__(id)
+
+_Get the ItemType according to the given ID. This will return null if there is no ItemType with this id._
+
+Argument | Type | Description  
+--- | --- | --- 
+id | `int` | the id to get type from
+
+Returns | Description
+--- | --- 
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if not
+
+
+##### <a id='fromstringanddata'></a>public static function __fromStringAndData__(machineName, data)
+
+_Gets an ItemType according to the given machine name and data value. This will return null if there is no ItemType with this id._
+
+Argument | Type | Description  
+--- | --- | --- 
+machineName | `String` | the machine name to get type from
+data | `int` | the data (damage) to get type from
+
+Returns | Description
+--- | --- 
+[`ItemType`](ItemType.md) | the ItemType if found; `null` if not
+
+
+##### <a id='isblockcreating'></a>public static function __isBlockCreating__(itemId)
+
+_Checks the Item ID if it is an Item that creates a Block_
+
+Argument | Type | Description  
+--- | --- | --- 
+itemId | `int` | the Item ID to check
+
+Returns | Description
+--- | --- 
+`boolean` | `true` if creates blocks; `false` if not
+
+
+##### <a id='isblockcreating'></a>public  function __isBlockCreating__()
+
+_isBlockCreating method_
+
+Returns | 
+--- | 
+`boolean` |
+
+
+##### <a id='values'></a>public static function __values__()
+
+_Gets an array of all ItemTypes_
+
+Returns | Description
+--- | --- 
+`ItemType[]` | all ItemTypes
 
 
 ---

@@ -12,7 +12,11 @@ Backbone to the whitelist system. This contains NO logic, it is only the data so
 Method | Type   
 --- | :--- 
 new __BackboneWhitelist__() <br> _BackboneWhitelist constructor_ | _constructor_
- function __validateReserveList__() <br> _Checks if the player is whitelisted_ | `void`
+ function __addWhitelistEntry__(player) <br> _Add a new whitelist entry_ | `void`
+ function __isWhitelisted__(player) <br> _Checks if the player is whitelisted_ | `boolean`
+ function __loadWhitelist__() <br> _Load and return all recorded bans_ | `List<String>`
+ function __removeWhitelistEntry__(subject) <br> _Removes a player from the whitelist_ | `void`
+ function __validateReserveList__() <br> _Validate all user entries in the database._ | `void`
  |
 __Inherited items from [`Backbone`](Backbone.md)__ |
 new __Backbone__(system) <br> _Backbone constructor_ | _constructor_
@@ -35,33 +39,61 @@ _BackboneWhitelist constructor_
 
 ### Public Methods for [`BackboneWhitelist`](BackboneWhitelist.md)
 
-##### <a id='validatereservelist'></a>public  function __validateReserveList__()
+##### <a id='addwhitelistentry'></a>public  function __addWhitelistEntry__(player)
+
+_Add a new whitelist entry_
+
+Argument | Type | Description  
+--- | --- | --- 
+player | `String` | the player's name or uuid
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='iswhitelisted'></a>public  function __isWhitelisted__(player)
 
 _Checks if the player is whitelisted_
 
+Argument | Type | Description  
+--- | --- | --- 
+player | `String` | the player's name or uuid to check
+
 Returns | Description
 --- | --- 
-`void` | `true` if whitelisted; `false` otherwise /
-    public boolean isWhitelisted(String player) {
-        WhitelistDataAccess data = new WhitelistDataAccess();
+`boolean` | `true` if whitelisted; `false` otherwise
 
-        try {
-            HashMap<String, Object> filter = new HashMap<String, Object>();
-            if (ToolBox.isUUID(player)) {
-                filter.put("uuid", player);
-            }
-            else {
-                filter.put("uuid", ToolBox.usernameToUUID(player));
-            }
-            Database.get().load(data, filter);
-        }
-        catch (DatabaseReadException e) {
-            log.error(e.getMessage(), e);
-        }
-        return data.hasData();
-    }
 
-    /** Add a new whitelist entry
+##### <a id='loadwhitelist'></a>public  function __loadWhitelist__()
+
+_Load and return all recorded bans_
+
+Returns | Description
+--- | --- 
+`List<String>` | An array list of all recorded ban instances.
+
+
+##### <a id='removewhitelistentry'></a>public  function __removeWhitelistEntry__(subject)
+
+_Removes a player from the whitelist_
+
+Argument | Type | Description  
+--- | --- | --- 
+subject | `String` | the player's name or uuid
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='validatereservelist'></a>public  function __validateReserveList__()
+
+_Validate all user entries in the database. At this time it merely checks that all entries have a valid UUID.  If an entry does not, it attempts to retrieve it from Mojang's web service and_
+
+Returns | 
+--- | 
+`void` |
 
 
 ---

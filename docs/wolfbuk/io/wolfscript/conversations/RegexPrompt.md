@@ -16,6 +16,8 @@ new __RegexPrompt__(pattern) <br> _RegexPrompt constructor_ | _constructor_
  |
 __Inherited items from [`ValidatingPrompt`](ValidatingPrompt.md)__ |
 new __ValidatingPrompt__() <br> _ValidatingPrompt constructor_ | _constructor_
+ function __acceptInput__(context, input) <br> _Accepts and processes input from the user and validates it. If_ | [`Prompt`](Prompt.md)
+ function __blocksForInput__(context) <br> _Ensures that the prompt waits for the user to provide input._ | `boolean`
 
 
 
@@ -47,6 +49,37 @@ pattern | `Pattern` | pattern argument
 ##### <a id='validatingprompt'></a>new __ValidatingPrompt__() 
 
 _ValidatingPrompt constructor_
+
+
+---
+
+### Public Methods for [`ValidatingPrompt`](ValidatingPrompt.md)
+
+##### <a id='acceptinput'></a>public  function __acceptInput__(context, input)
+
+_Accepts and processes input from the user and validates it. If validation fails, this prompt is returned for re-execution, otherwise the next Prompt in the prompt graph is returned._
+
+Argument | Type | Description  
+--- | --- | --- 
+context | [`ConversationContext`](ConversationContext.md) | Context information about the conversation.
+input | `String` | The input text from the user.
+
+Returns | Description
+--- | --- 
+[`Prompt`](Prompt.md) | This prompt or the next Prompt in the prompt graph.
+
+
+##### <a id='blocksforinput'></a>public  function __blocksForInput__(context)
+
+_Ensures that the prompt waits for the user to provide input._
+
+Argument | Type | Description  
+--- | --- | --- 
+context | [`ConversationContext`](ConversationContext.md) | Context information about the conversation.
+
+Returns | Description
+--- | --- 
+`boolean` | True.
 
 
 ---

@@ -1,7 +1,7 @@
 ## LivingBase __interface__
 
 >io.wolfscript.api.entity.living.LivingBase
->Extends [`Entity`](..\Entity.md)
+>Extends [`Entity`](../Entity.md)
 
 ---
 
@@ -12,7 +12,7 @@ EntityLivingBase wrapper interface
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

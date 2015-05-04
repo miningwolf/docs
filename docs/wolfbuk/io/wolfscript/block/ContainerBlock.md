@@ -1,7 +1,7 @@
 ## ContainerBlock __interface__
 
 >io.wolfscript.block.ContainerBlock
->Extends [`InventoryHolder`](..\inventory\InventoryHolder.md)
+>Extends [`InventoryHolder`](../inventory/InventoryHolder.md)
 
 ---
 
@@ -12,8 +12,8 @@ Indicates a block type that has inventory.
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`InventoryHolder`](..\inventory\InventoryHolder.md)__ |
- readonly property __Inventory__ <br> _Get: Get the object's inventory._ | [`Inventory`](..\inventory\Inventory.md)
+__Inherited items from [`InventoryHolder`](../inventory/InventoryHolder.md)__ |
+ readonly property __Inventory__ <br> _Get: Get the object's inventory._ | [`Inventory`](../inventory/Inventory.md)
 
 
 
@@ -22,7 +22,7 @@ __Inherited items from [`InventoryHolder`](..\inventory\InventoryHolder.md)__ |
 ---
 
 
-### Public Properties for [`InventoryHolder`](..\inventory\InventoryHolder.md)
+### Public Properties for [`InventoryHolder`](../inventory/InventoryHolder.md)
 
 ##### <a id='inventory'></a>public  readonly property __Inventory__
 
@@ -30,7 +30,7 @@ _Get: Get the object's inventory._
 
 Get | Description
 --- | --- 
-[`Inventory`](..\inventory\Inventory.md) | The inventory.
+[`Inventory`](../inventory/Inventory.md) | The inventory.
 
 
 

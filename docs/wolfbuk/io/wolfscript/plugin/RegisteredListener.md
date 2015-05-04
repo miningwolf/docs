@@ -11,7 +11,10 @@ Stores relevant information for plugin listeners
 Method | Type   
 --- | :--- 
 new __RegisteredListener__(Listener, EventExecutor, EventPriority, Plugin, boolean) <br> _RegisteredListener constructor_ | _constructor_
- function __isIgnoringCancelled__() <br> _Gets the listener for this registration_ | `boolean`
+ readonly property __Listener__ <br> _Get: Gets the listener for this registration_ | `Listener`
+ readonly property __Plugin__ <br> _Get: Gets the plugin for this registration_ | [`Plugin`](Plugin.md)
+ readonly property __Priority__ <br> _Get: Gets the priority for this registration_ | `EventPriority`
+ function __isIgnoringCancelled__() <br> _Calls the event executor_ | `boolean`
 
 
 
@@ -33,20 +36,49 @@ boolean | `final` | boolean argument
 
 ---
 
+### Public Properties for [`RegisteredListener`](RegisteredListener.md)
+
+##### <a id='listener'></a>public  readonly property __Listener__
+
+_Get: Gets the listener for this registration_
+
+Get | Description
+--- | --- 
+`Listener` | Registered Listener
+
+
+
+##### <a id='plugin'></a>public  readonly property __Plugin__
+
+_Get: Gets the plugin for this registration_
+
+Get | Description
+--- | --- 
+[`Plugin`](Plugin.md) | Registered Plugin
+
+
+
+##### <a id='priority'></a>public  readonly property __Priority__
+
+_Get: Gets the priority for this registration_
+
+Get | Description
+--- | --- 
+`EventPriority` | Registered Priority
+
+
+
+---
+
 ### Public Methods for [`RegisteredListener`](RegisteredListener.md)
 
 ##### <a id='isignoringcancelled'></a>public  function __isIgnoringCancelled__()
 
-_Gets the listener for this registration_
+_Calls the event executor_
 
 Returns | Description
 --- | --- 
-`boolean` | Registered Listener /
-    public Listener getListener() {
-        return listener;
-    }
-
-    /** Gets the plugin for this registration
+`boolean` | True when ignoring cancelled events
 
 
 ---

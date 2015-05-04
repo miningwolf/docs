@@ -1,7 +1,7 @@
 ## CommandBlockLogic __interface__
 
 >io.wolfscript.api.CommandBlockLogic
->Extends [`MessageReceiver`](..\chat\MessageReceiver.md)
+>Extends [`MessageReceiver`](../chat/MessageReceiver.md)
 
 ---
 
@@ -12,7 +12,7 @@ Command Block Logical Interface wrapping
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`MessageReceiver`](..\chat\MessageReceiver.md)__ |
+__Inherited items from [`MessageReceiver`](../chat/MessageReceiver.md)__ |
 
 
 

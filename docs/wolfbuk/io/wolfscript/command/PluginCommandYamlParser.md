@@ -25,7 +25,7 @@ _parse method_
 
 Argument | Type | Description  
 --- | --- | --- 
-plugin | [`Plugin`](..\plugin\Plugin.md) | plugin argument
+plugin | [`Plugin`](../plugin/Plugin.md) | plugin argument
 
 Returns | 
 --- | 

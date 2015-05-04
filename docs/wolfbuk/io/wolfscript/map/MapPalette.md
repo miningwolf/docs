@@ -10,6 +10,7 @@ Represents the palette that map items use. <p> These fields are hee base color r
 
 Method | Type   
 --- | :--- 
+static function __resizeImage__(image) <br> _resizeImage method_ | `BufferedImage`
 static final var __TRANSPARENT__ <br> _TRANSPARENT field_ | `byte`
 static final var __LIGHT__ <br> _LIGHT field_ | `byte`
 static final var __LIGHT__ <br> _LIGHT field_ | `byte`
@@ -33,96 +34,9 @@ static final var __DARK__ <br> _DARK field_ | `byte`
 ### Public Methods for [`MapPalette`](MapPalette.md)
 
 ##### <a id='getcolor'></a>public static function __getColor__(index)
-_Deprecated: Magic value /
-    @Deprecated
-    public static final byte TRANSPARENT = 0;
-    /** Magic value /
-    @Deprecated
-    public static final byte LIGHT_GREEN = 4;
-    /** Magic value /
-    @Deprecated
-    public static final byte LIGHT_BROWN = 8;
-    /** Magic value /
-    @Deprecated
-    public static final byte GRAY_1 = 12;
-    /** Magic value /
-    @Deprecated
-    public static final byte RED = 16;
-    /** Magic value /
-    @Deprecated
-    public static final byte PALE_BLUE = 20;
-    /** Magic value /
-    @Deprecated
-    public static final byte GRAY_2 = 24;
-    /** Magic value /
-    @Deprecated
-    public static final byte DARK_GREEN = 28;
-    /** Magic value /
-    @Deprecated
-    public static final byte WHITE = 32;
-    /** Magic value /
-    @Deprecated
-    public static final byte LIGHT_GRAY = 36;
-    /** Magic value /
-    @Deprecated
-    public static final byte BROWN = 40;
-    /** Magic value /
-    @Deprecated
-    public static final byte DARK_GRAY = 44;
-    /** Magic value /
-    @Deprecated
-    public static final byte BLUE = 48;
-    /** Magic value /
-    @Deprecated
-    public static final byte DARK_BROWN = 52;
+_Deprecated: Magic value_
 
-    /** Resize an image to 128x128. Magic value /
-    @Deprecated
-    public static byte[] imageToBytes(Image image) {
-        BufferedImage temp = new BufferedImage(image.getWidth(null), image.getHeight(null), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D graphics = temp.createGraphics();
-        graphics.drawImage(image, 0, 0, null);
-        graphics.dispose();
-
-        int[] pixels = new int[temp.getWidth() temp.getHeight()];
-        temp.getRGB(0, 0, temp.getWidth(), temp.getHeight(), pixels, 0, temp.getWidth());
-
-        byte[] result = new byte[temp.getWidth() temp.getHeight()];
-        for (int i = 0; i < pixels.length; i++) {
-            result[i] = matchColor(new Color(pixels[i], true));
-        }
-        return result;
-    }
-
-    /** Get the index of the closest matching color in the palette to the given color. Magic value /
-    @Deprecated
-    public static byte matchColor(int r, int g, int b) {
-        return matchColor(new Color(r, g, b));
-    }
-
-    /** Get the index of the closest matching color in the palette to the given color. Magic value /
-    @Deprecated
-    public static byte matchColor(Color color) {
-        if (color.getAlpha() < 128) return 0;
-
-        int index = 0;
-        double best = -1;
-
-        for (int i = 4; i < colors.length; i++) {
-            double distance = getDistance(color, colors[i]);
-            if (distance < best || best == -1) {
-                best = distance;
-                index = i;
-            }
-        }
-
-        // Minecraft has 143 colors, some of which have negative byte representations
-        return (byte) (index < 128 ? index : -129 + (index - 127));
-    }
-
-    /** Get the value of the given color in the palette. Magic value_
-
-_getColor method_
+_Get the value of the given color in the palette._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -130,16 +44,64 @@ index | `byte` | The index in the palette.
 
 Returns | Description
 --- | --- 
-`Color` | The resized image. /
-    public static BufferedImage resizeImage(Image image) {
-        BufferedImage result = new BufferedImage(128, 128, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D graphics = result.createGraphics();
-        graphics.drawImage(image, 0, 0, 128, 128, null);
-        graphics.dispose();
-        return result;
-    }
+`Color` | The Color of the palette entry.
 
-    /** Convert an Image to a byte[] using the palette.
+
+##### <a id='imagetobytes'></a>public static function __imageToBytes__(image)
+_Deprecated: Magic value_
+
+_Convert an Image to a byte[] using the palette._
+
+Argument | Type | Description  
+--- | --- | --- 
+image | `Image` | The image to convert.
+
+Returns | Description
+--- | --- 
+`byte[]` | A byte[] containing the pixels of the image.
+
+
+##### <a id='matchcolor'></a>public static function __matchColor__(r, g, b)
+_Deprecated: Magic value_
+
+_Get the index of the closest matching color in the palette to the given color._
+
+Argument | Type | Description  
+--- | --- | --- 
+r | `int` | The red component of the color.
+g | `int` | The green component of the color.
+b | `int` | The blue component of the color.
+
+Returns | Description
+--- | --- 
+`byte` | The index in the palette.
+
+
+##### <a id='matchcolor'></a>public static function __matchColor__(color)
+_Deprecated: Magic value_
+
+_Get the index of the closest matching color in the palette to the given color._
+
+Argument | Type | Description  
+--- | --- | --- 
+color | `Color` | The Color to match.
+
+Returns | Description
+--- | --- 
+`byte` | The index in the palette.
+
+
+##### <a id='resizeimage'></a>public static function __resizeImage__(image)
+
+_resizeImage method_
+
+Argument | Type | Description  
+--- | --- | --- 
+image | `Image` | The image to resize.
+
+Returns | Description
+--- | --- 
+`BufferedImage` | The resized image.
 
 
 ---

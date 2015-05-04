@@ -1,7 +1,7 @@
 ## Dispense __class__
 
 >io.wolfscript.event.world.Dispense
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -12,16 +12,19 @@ Dispense hook. Contains information about a Dispenser dispensing an entity.
 Method | Type   
 --- | :--- 
 new __Dispense__(dispenser, entity) <br> _Dispense constructor_ | _constructor_
- readonly property __Entity__ <br> _Get: Gets the [`Dispenser`](..\..\api\world\blocks\Dispenser.md)_ | [`Entity`](..\..\api\entity\Entity.md)
+ readonly property __Dispenser__ <br> _Get: Gets the [`Dispenser`](../../api/world/blocks/Dispenser.md)_ | [`Dispenser`](../../api/world/blocks/Dispenser.md)
+ readonly property __Entity__ <br> _Get: Gets the [`Entity`](../../api/entity/Entity.md) being dispensed_ | [`Entity`](../../api/entity/Entity.md)
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -39,25 +42,30 @@ _Dispense constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-dispenser | [`Dispenser`](..\..\api\world\blocks\Dispenser.md) | dispenser argument
-entity | [`Entity`](..\..\api\entity\Entity.md) | entity argument
+dispenser | [`Dispenser`](../../api/world/blocks/Dispenser.md) | dispenser argument
+entity | [`Entity`](../../api/entity/Entity.md) | entity argument
 
 ---
 
 ### Public Properties for [`Dispense`](Dispense.md)
 
-##### <a id='entity'></a>public  readonly property __Entity__
+##### <a id='dispenser'></a>public  readonly property __Dispenser__
 
-_Get: Gets the [`Dispenser`](..\..\api\world\blocks\Dispenser.md)_
+_Get: Gets the [`Dispenser`](../../api/world/blocks/Dispenser.md)_
 
 Get | Description
 --- | --- 
-[`Entity`](..\..\api\entity\Entity.md) | dispenser /
-    public Dispenser getDispenser() {
-        return dispenser;
-    }
+[`Dispenser`](../../api/world/blocks/Dispenser.md) | dispenser
 
-    /** Gets the [`Entity`](..\..\api\entity\Entity.md) being dispensed
+
+
+##### <a id='entity'></a>public  readonly property __Entity__
+
+_Get: Gets the [`Entity`](../../api/entity/Entity.md) being dispensed_
+
+Get | Description
+--- | --- 
+[`Entity`](../../api/entity/Entity.md) | entity
 
 
 
@@ -76,7 +84,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -84,7 +92,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -107,27 +115,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---

@@ -1,7 +1,7 @@
 ## Vehicle __interface__
 
 >io.wolfscript.api.entity.vehicle.Vehicle
->Extends [`Entity`](..\Entity.md)
+>Extends [`Entity`](../Entity.md)
 
 ---
 
@@ -12,7 +12,7 @@ Vehicle wrapper
 Method | Type   
 --- | :--- 
  |
-__Inherited items from [`Entity`](..\Entity.md)__ |
+__Inherited items from [`Entity`](../Entity.md)__ |
 
 
 

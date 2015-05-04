@@ -10,7 +10,8 @@ interface AnimalTamer
 
 Method | Type   
 --- | :--- 
- readonly property __UniqueId__ <br> _Get: This is the name of the specified AnimalTamer._ | `UUID`
+ readonly property __Name__ <br> _Get: This is the name of the specified AnimalTamer._ | `String`
+ readonly property __UniqueId__ <br> _Get: This is the UUID of the specified AnimalTamer._ | `UUID`
 
 
 
@@ -19,16 +20,23 @@ Method | Type
 
 ### Public Properties for [`AnimalTamer`](AnimalTamer.md)
 
-##### <a id='uniqueid'></a>public  readonly property __UniqueId__
+##### <a id='name'></a>public  readonly property __Name__
 
 _Get: This is the name of the specified AnimalTamer._
 
 Get | Description
 --- | --- 
-`UUID` | The name to reference on tamed animals or null if a name cannot be obtained /
-    public String getName();
+`String` | The name to reference on tamed animals or null if a name cannot be obtained
 
-    /** This is the UUID of the specified AnimalTamer.
+
+
+##### <a id='uniqueid'></a>public  readonly property __UniqueId__
+
+_Get: This is the UUID of the specified AnimalTamer._
+
+Get | Description
+--- | --- 
+`UUID` | The UUID to reference on tamed animals
 
 
 

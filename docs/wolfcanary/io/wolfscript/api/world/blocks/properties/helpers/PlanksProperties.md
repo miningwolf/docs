@@ -1,8 +1,8 @@
 ## PlanksProperties __class__
 
 >io.wolfscript.api.world.blocks.properties.helpers.PlanksProperties
->Extends `BlockProperties`
->Implements `WoodProperties`
+>Extends [`BlockProperties`](BlockProperties.md)
+>Implements [`WoodProperties`](WoodProperties.md)
 
 ---
 
@@ -12,8 +12,12 @@ Planks properties helper
 
 Method | Type   
 --- | :--- 
-static function __applyVariant__(block, value) <br> _Planks variant property, Values: `Variant`_ | [`Block`](..\..\Block.md)
-static final var __variant__ <br> _Planks variant property, Values: `Variant`_ | [`BlockEnumProperty`](..\BlockEnumProperty.md)
+static function __applyVariant__(block, value) <br> _Planks variant property, Values: `Variant`_ | [`Block`](../../Block.md)
+static final var __variant__ <br> _Planks variant property, Values: `Variant`_ | [`BlockEnumProperty`](../BlockEnumProperty.md)
+ |
+__Inherited items from [`BlockProperties`](BlockProperties.md)__ |
+
+
 
 
 
@@ -31,12 +35,12 @@ _Planks variant property, Values: `Variant` /
 
 Argument | Type | Description  
 --- | --- | --- 
-block | [`Block`](..\..\Block.md) | the [`Block`](..\..\Block.md) to be modified
-value | [`Variant`](Variant.md) | the `Variant` value to apply
+block | [`Block`](../../Block.md) | the [`Block`](../../Block.md) to be modified
+value | `Variant` | the `Variant` value to apply
 
 Returns | Description
 --- | --- 
-[`Block`](..\..\Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
+[`Block`](../../Block.md) | the Block with adjusted state (NOTE: Original Block object is also modified, using the return is unnecessary)
 
 
 ---
@@ -48,9 +52,11 @@ Returns | Description
 _Planks variant property, Values: `Variant`_
 
 >Returns
->  [`BlockEnumProperty`](..\BlockEnumProperty.md)
+>  [`BlockEnumProperty`](../BlockEnumProperty.md)
 
 ---
+
+
 ---
 
 

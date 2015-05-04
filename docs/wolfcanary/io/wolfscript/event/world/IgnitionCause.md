@@ -6,7 +6,7 @@
 
 ### Enum Overview
 
-Ignition hook. Contains information about a [`Block`](..\..\api\world\blocks\Block.md) being set on fire.
+Ignition hook. Contains information about a [`Block`](../../api/world/blocks/Block.md) being set on fire.
 
 Item | Type   
 --- | :--- 

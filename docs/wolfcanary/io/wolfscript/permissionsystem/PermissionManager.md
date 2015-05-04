@@ -12,6 +12,7 @@ Method | Type
 --- | :--- 
 new __PermissionManager__() <br> _PermissionManager constructor_ | _constructor_
  function __addPermission__(path, value, owner, type, world) <br> _addPermission method_ | `int`
+ function __getGroupsProvider__(name, worldname) <br> _Load the permission set for the group with the given name._ | [`PermissionProvider`](PermissionProvider.md)
  function __getPlayerProvider__(uuid, worldname) <br> _Load the permission set for the group with the given name._ | [`PermissionProvider`](PermissionProvider.md)
  function __removeAllGroupPermissions__(group) <br> _removeAllGroupPermissions method_ | `void`
  function __removeGroupPermission__(path, group) <br> _removeGroupPermission method_ | `void`
@@ -53,6 +54,20 @@ Returns |
 `int` |
 
 
+##### <a id='getgroupsprovider'></a>public  function __getGroupsProvider__(name, worldname)
+
+_Load the permission set for the group with the given name._
+
+Argument | Type | Description  
+--- | --- | --- 
+name | `String` | name argument
+worldname | `String` | The Fully qualified name of the world to load permissions for
+
+Returns | Description
+--- | --- 
+[`PermissionProvider`](PermissionProvider.md) | [`PermissionProvider`](PermissionProvider.md)
+
+
 ##### <a id='getplayerprovider'></a>public  function __getPlayerProvider__(uuid, worldname)
 
 _Load the permission set for the group with the given name._
@@ -64,12 +79,7 @@ worldname | `String` | The Fully qualified name of the world to load permissions
 
 Returns | Description
 --- | --- 
-[`PermissionProvider`](PermissionProvider.md) | [`PermissionProvider`](PermissionProvider.md) /
-    public PermissionProvider getGroupsProvider(String name, String worldname) {
-        return backbone.loadGroupPermissions(name, worldname);
-    }
-
-    /** Load the permission set for the group with the given name.
+[`PermissionProvider`](PermissionProvider.md) | [`PermissionProvider`](PermissionProvider.md)
 
 
 ##### <a id='removeallgrouppermissions'></a>public  function __removeAllGroupPermissions__(group)
@@ -78,7 +88,7 @@ _removeAllGroupPermissions method_
 
 Argument | Type | Description  
 --- | --- | --- 
-group | [`Group`](..\user\Group.md) | group argument
+group | [`Group`](../user/Group.md) | group argument
 
 Returns | 
 --- | 
@@ -92,7 +102,7 @@ _removeGroupPermission method_
 Argument | Type | Description  
 --- | --- | --- 
 path | `String` | path argument
-group | [`Group`](..\user\Group.md) | group argument
+group | [`Group`](../user/Group.md) | group argument
 
 Returns | 
 --- | 
@@ -120,7 +130,7 @@ _removePlayerPermission method_
 Argument | Type | Description  
 --- | --- | --- 
 path | `String` | path argument
-player | [`PlayerReference`](..\api\PlayerReference.md) | player argument
+player | [`PlayerReference`](../api/PlayerReference.md) | player argument
 
 Returns | 
 --- | 
@@ -148,7 +158,7 @@ _savePermissionsFromGroup method_
 
 Argument | Type | Description  
 --- | --- | --- 
-g | [`Group`](..\user\Group.md) | g argument
+g | [`Group`](../user/Group.md) | g argument
 
 Returns | 
 --- | 

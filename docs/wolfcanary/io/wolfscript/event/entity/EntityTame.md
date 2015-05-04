@@ -1,7 +1,7 @@
 ## EntityTame __class__
 
 >io.wolfscript.event.entity.EntityTame
->Extends [`CancelableHook`](..\..\hook\CancelableHook.md)
+>Extends [`CancelableHook`](../../hook/CancelableHook.md)
 
 ---
 
@@ -12,16 +12,21 @@ Entity tame hook
 Method | Type   
 --- | :--- 
 new __EntityTame__(animal, player, isTamed) <br> _EntityTame constructor_ | _constructor_
- readonly property __Animal__ <br> _Get: Check the default tame result._ | [`EntityAnimal`](..\..\api\entity\living\animal\EntityAnimal.md)
+ readonly property __Animal__ <br> _Get: Get the animal in question_ | [`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md)
+ readonly property __Player__ <br> _Get: Get the player that is wanting to tame the animal_ | `Player`
+ writeonly property __Tamed__ <br> _Set: Override the tame result._ | `void`
+ function __isTamed__() <br> _Check the default tame result._ | `boolean`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](..\..\hook\CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](..\..\hook\CancelableHook.md)
+__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](..\..\hook\Hook.md)__ |
- function __call__() <br> _Get the name of this hook._ | [`Hook`](..\..\hook\Hook.md)
+__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __hashCode__() <br> _hashCode method_ | `int`
 
 
 
@@ -39,7 +44,7 @@ _EntityTame constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-animal | [`EntityAnimal`](..\..\api\entity\living\animal\EntityAnimal.md) | animal argument
+animal | [`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md) | animal argument
 player | `Player` | player argument
 isTamed | `boolean` | isTamed argument
 
@@ -49,22 +54,49 @@ isTamed | `boolean` | isTamed argument
 
 ##### <a id='animal'></a>public  readonly property __Animal__
 
-_Get: Check the default tame result._
+_Get: Get the animal in question_
 
 Get | Description
 --- | --- 
-[`EntityAnimal`](..\..\api\entity\living\animal\EntityAnimal.md) | True if the animal was tamed, false otherwise /
-    public boolean isTamed() {
-        return isTamed;
-    }
+[`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md) | the [`EntityAnimal`](../../api/entity/living/animal/EntityAnimal.md)
 
-    /** Override the tame result.
 
+
+##### <a id='player'></a>public  readonly property __Player__
+
+_Get: Get the player that is wanting to tame the animal_
+
+Get | Description
+--- | --- 
+`Player` | the `Player`
+
+
+
+##### <a id='tamed'></a>public  writeonly property __Tamed__
+
+_Set: Override the tame result._
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+isTamed | `boolean` | True to force the animal being tamed, false to force the taming to fail
 
 
 ---
 
 ### Public Methods for [`EntityTame`](EntityTame.md)
+
+##### <a id='istamed'></a>public  function __isTamed__()
+
+_Check the default tame result._
+
+Returns | Description
+--- | --- 
+`boolean` | True if the animal was tamed, false otherwise
+
 
 ##### <a id='tostring'></a>public final function __toString__()
 
@@ -77,7 +109,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](..\..\hook\CancelableHook.md)
+### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -85,7 +117,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](..\..\hook\CancelableHook.md) | this
+[`CancelableHook`](../../hook/CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -108,27 +140,38 @@ Returns |
 
 ---
 
-### Public Methods for [`Hook`](..\..\hook\Hook.md)
+### Public Properties for [`Hook`](../../hook/Hook.md)
+
+##### <a id='hookname'></a>public final readonly property __HookName__
+
+_Get: Get the name of this hook._
+
+Get | Description
+--- | --- 
+`String` | simple class name
+
+
+
+---
+
+### Public Methods for [`Hook`](../../hook/Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
-_Get the name of this hook._
+_Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](..\..\hook\Hook.md) | simple class name /
-    public final String getHookName() {
-        return getClass().getSimpleName();
-    }
+[`Hook`](../../hook/Hook.md) | this
 
-    @Override
-    public int hashCode() {
-        int hash = getClass().getSimpleName().length();
 
-        return hash getClass().getSimpleName().hashCode() + 2;
-    }
+##### <a id='hashcode'></a>public  function __hashCode__()
 
-    /** Calls a Hook if not already executed
+_hashCode method_
+
+Returns | 
+--- | 
+`int` |
 
 
 ---
