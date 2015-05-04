@@ -9,7 +9,6 @@ var razor2md = require("./build/lib/gulp-razor-to-md.js");
 var textreplace = require("./build/lib/gulp-text-replace.js");
 var textreplacehook = require("./build/lib/gulp-text-replace-hook.js");
 var textreplacecanary = require("./build/lib/gulp-text-replace-canary.js");
-var textreplaceevent = require("./build/lib/gulp-text-replace-event.js");
 var textreplacespigot = require("./build/lib/gulp-text-replace-bukkit.js");
 var javaparser = require("./build/lib/gulp-java-parser.js");
 var nsexpand = require("./build/lib/gulp-jsondoc-namespace-expand.js");
@@ -67,7 +66,6 @@ gulp.task("json-wolfbuk", function(){
         }))
         .pipe(jsonunion("wolfbuk.json"))
         .pipe(textreplace('org.bukkit', 'io.wolfscript'))
-    /*    .pipe(textreplaceevent())  */
         .pipe(textreplacespigot())
         .pipe(nscreateblank())
         .pipe(nsexpand())

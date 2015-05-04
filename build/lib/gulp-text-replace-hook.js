@@ -66,7 +66,7 @@ module.exports = function() {
                     i.title = i.title
                    .replace(new RegExp(oldName, 'g'), newName)
                    .replace("hook", "event");
-
+            
                   });
 
                   if (mainItem.methods.length > 0)
@@ -82,10 +82,11 @@ module.exports = function() {
 
                   });
 
-                mainItem.constructors = [];
-
-             }
-             result[itemKey] = mainItem;
+                mainItem.constructors = [];          
+                mainItem.name = newName;
+                mainItem.qualifiedname = mainItem.namespace + "." + mainItem.name;
+               } 
+             result[mainItem.qualifiedname] = mainItem;
          });
       } catch (ex)  {console.log(ex);};
 

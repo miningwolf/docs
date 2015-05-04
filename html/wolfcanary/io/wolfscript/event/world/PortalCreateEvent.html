@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PortalCreateEvent</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../../index.html' class=''>Home</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../../index.html'>Home </a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>wolfcanary</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>event</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>world</a></li>
+<li class='current'><a href='#'>PortalCreateEvent</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>wolfcanary API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/api/0.html' class=''>api</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/backbone/0.html' class=''>backbone</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/bansystem/0.html' class=''>bansystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/channels/0.html' class=''>channels</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/chat/0.html' class=''>chat</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/commandsys/0.html' class=''>commandsys</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/config/0.html' class=''>config</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/converter/0.html' class=''>converter</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/command/0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/system/0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockDropXpEvent.html'>BlockDropXpEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockGrowEvent.html'>BlockGrowEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockPhysicsEvent.html'>BlockPhysicsEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/BlockUpdateEvent.html'>BlockUpdateEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkCreatedEvent.html'>ChunkCreatedEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkCreationEvent.html'>ChunkCreationEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkLoadedEvent.html'>ChunkLoadedEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ChunkUnloadEvent.html'>ChunkUnloadEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/DecorateEvent.html'>DecorateEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/DispenseEvent.html'>DispenseEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/ExplosionEvent.html'>ExplosionEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/FireworkExplodeEvent.html'>FireworkExplodeEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/FlowEvent.html'>FlowEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/HopperTransferEvent.html'>HopperTransferEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/IgnitionEvent.html'>IgnitionEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LeafDecayEvent.html'>LeafDecayEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LightningStrikeEvent.html'>LightningStrikeEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/LiquidDestroyEvent.html'>LiquidDestroyEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/NoteBlockPlayEvent.html'>NoteBlockPlayEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PistonExtendEvent.html'>PistonExtendEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PistonRetractEvent.html'>PistonRetractEvent</a></li>
+<li class='active'><a href='../../../../../wolfcanary/io/wolfscript/event/world/PortalCreateEvent.html'>PortalCreateEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/PortalDestroyEvent.html'>PortalDestroyEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/RedstoneChangeEvent.html'>RedstoneChangeEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/SmeltBeginEvent.html'>SmeltBeginEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/SmeltEvent.html'>SmeltEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/TNTActivateEvent.html'>TNTActivateEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/TimeChangeEvent.html'>TimeChangeEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/TreeGrowEvent.html'>TreeGrowEvent</a></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/event/world/WeatherChangeEvent.html'>WeatherChangeEvent</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/exceptions/0.html' class=''>exceptions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/hook/0.html' class=''>hook</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/kit/0.html' class=''>kit</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/logger/0.html' class=''>logger</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/metrics/0.html' class=''>metrics</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/motd/0.html' class=''>motd</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/permissionsystem/0.html' class=''>permissionsystem</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/serialize/0.html' class=''>serialize</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/tasks/0.html' class=''>tasks</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/user/0.html' class=''>user</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/warp/0.html' class=''>warp</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="portalcreateevent-__class__">PortalCreateEvent <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.world.PortalCreateEvent
+Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.PortalCreateEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>class PortalCreateEvent</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> readonly property <strong>BlockSet</strong> <br> <em>Get: Get the set of blocks that are used to create this portal</em></td>
+<td style="text-align:left"><code>Block[][]</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Position</strong> <br> <em>Get: Gets the <a href="../../api/world/position/Position.html"><code>Position</code></a> where the portal is started</em></td>
+<td style="text-align:left"><a href="../../api/world/position/Position.html"><code>Position</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>World</strong> <br> <em>Get: Gets the world the portal will be in</em></td>
+<td style="text-align:left"><a href="../../api/world/World.html"><code>World</code></a></td>
+</tr>
+<tr>
+<td>final function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
+<td style="text-align:left"><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isCanceled</strong>() <br> <em>isCanceled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>setCanceled</strong>() <br> <em>setCanceled method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../../hook/Hook.html"><code>Hook</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>final readonly property <strong>HookName</strong> <br> <em>Get: Get the name of this hook.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
+<td style="text-align:left"><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+</tr>
+<tr>
+<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-portalcreateevent-portalcreateevent-md-">Public Properties for <a href="PortalCreateEvent.html"><code>PortalCreateEvent</code></a></h3>
+<h5 id="-a-id-blockset-a-public-readonly-property-__blockset__"><a id='blockset'></a>public  readonly property <strong>BlockSet</strong></h5>
+<p><em>Get: Get the set of blocks that are used to create this portal</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Block[][]</code></td>
+<td>block</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-position-a-public-readonly-property-__position__"><a id='position'></a>public  readonly property <strong>Position</strong></h5>
+<p><em>Get: Gets the <a href="../../api/world/position/Position.html"><code>Position</code></a> where the portal is started</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../api/world/position/Position.html"><code>Position</code></a></td>
+<td>position</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-world-a-public-readonly-property-__world__"><a id='world'></a>public  readonly property <strong>World</strong></h5>
+<p><em>Get: Gets the world the portal will be in</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../api/world/World.html"><code>World</code></a></td>
+<td>the world</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-portalcreateevent-portalcreateevent-md-">Public Methods for <a href="PortalCreateEvent.html"><code>PortalCreateEvent</code></a></h3>
+<h5 id="-a-id-tostring-a-public-final-function-__tostring__-"><a id='tostring'></a>public final function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-cancelablehook-hook-cancelablehook-md-">Public Methods for <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Calls a Hook if not already executed</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+<td>this</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-iscanceled-a-public-function-__iscanceled__-"><a id='iscanceled'></a>public  function <strong>isCanceled</strong>()</h5>
+<p><em>isCanceled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setcanceled-a-public-function-__setcanceled__-"><a id='setcanceled'></a>public  function <strong>setCanceled</strong>()</h5>
+<p><em>setCanceled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-hook-hook-hook-md-">Public Properties for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-hookname-a-public-final-readonly-property-__hookname__"><a id='hookname'></a>public final readonly property <strong>HookName</strong></h5>
+<p><em>Get: Get the name of this hook.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>simple class name</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-hook-hook-hook-md-">Public Methods for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
+<p><em>Calls a Hook if not already executed</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+<td>this</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
+<p><em>hashCode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<hr>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>
