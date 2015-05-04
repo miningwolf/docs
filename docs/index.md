@@ -7,7 +7,9 @@
 WolfScript is a modern, easy-to-learn language for writing Minecraft mods and plugins.  
 
 The plugins written with WolfScript are just like any other professional plugin and have full 
-access to all the events and commands of the server. 
+access to all the events and commands of the server.
+
+#### WolfScript = JavaScript 
 
 The base language for WolfScript is JavaScript, which is not only powers much of the web but also
 is powering more and more servers worldwide, such as at Walmart, Paypal, Netflix and the Mail Online.
@@ -15,12 +17,16 @@ With six companies (Mozilla, Google, Apple, Microsoft, Opera, Red Hat) competing
 JavaScript implementation, the underlaying interpreters have become remarkably fast, and
 highly suitable for the event-based environment of a modern game server such as Minecraft.
 
+#### WolfNode
+
 On top of JavaScript we've added a special implementation of Node.js, WolfNode, which integrates the work
 of the "Project Odd" team at Red Hat to bring this to the Java-based environment of Minecraft.
 This allows all the benefits of running a close-to-vanilla version of Minecraft, without the need
 to write anything in Java, and yet having access to over 130,000 packages of common programming
 tasks, from running a website to display gamer dashboards, to integrating the virtual world
 of minecraft with the real world of lights, sensors and the Internet of Things.
+
+#### WolfBuk API and WolfCanary API
 
 On top of JavaScript and WolfNode we provide a full MineCraft Server API, for subscribing to events
 triggered by players, entities, etc..   Since these APIs have been undergoing fairly rapid evolution and
@@ -41,6 +47,8 @@ at any modern Internet startup.
 Therefore the language itself includes the full Node.js (io.js) implementation and is designed to be developed 
 using the latest tools like Microsoft Visual Studio Code, Docker, continuous integration testing environments, etc., 
 in fact the same environments this public company CIO likes to see his teams use at his day job.
+
+### No compromise power mods
 
 This simplicity and power comes with no compromises:
 

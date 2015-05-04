@@ -1,7 +1,11 @@
 ## HookExecutor __class__
 
->io.wolfscript.hook.HookExecutor
+>io.wolfscript.event.HookExecutor
 >Implements [`HookExecutorInterface`](HookExecutorInterface.md)
+``` javascript
+this.on('event.HookExecutor', function (e) { });
+```
+
 
 ---
 

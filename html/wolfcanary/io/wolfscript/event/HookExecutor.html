@@ -48,7 +48,7 @@
 <li><a href='../../../../index.html'>Home </a></li>
  <li><a href='../../../../wolfcanary/io/wolfscript/0.html'>wolfcanary</a></li>
  <li><a href='../../../../wolfcanary/io/wolfscript/0.html'>io.wolfscript</a></li>
- <li><a href='../../../../wolfcanary/io/wolfscript/hook/0.html'>hook</a></li>
+ <li><a href='../../../../wolfcanary/io/wolfscript/event/0.html'>event</a></li>
 <li class='current'><a href='#'>HookExecutor</a></li>
 
 </ul>
@@ -79,20 +79,28 @@
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li><a href='../../../../wolfcanary/io/wolfscript/event/CancelableHook.html'>CancelableHook</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/Dispatcher.html'>Dispatcher</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/Hook.html'>Hook</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookConsistencyException.html'>HookConsistencyException</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutionException.html'>HookExecutionException</a></li>
+<li class='active'><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutor.html'>HookExecutor</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutorInterface.html'>HookExecutorInterface</a></li>
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/command/0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/system/0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/exceptions/0.html' class=''>exceptions</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/help/0.html' class=''>help</a></li> 
-<li class='divider'></li>
-<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/hook/0.html' class=''>hook</a></li> 
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/CancelableHook.html'>CancelableHook</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/Dispatcher.html'>Dispatcher</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/Hook.html'>Hook</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookConsistencyException.html'>HookConsistencyException</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutionException.html'>HookExecutionException</a></li>
-<li class='active'><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutor.html'>HookExecutor</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutorInterface.html'>HookExecutorInterface</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/kit/0.html' class=''>kit</a></li> 
 <li class='divider'></li>
@@ -126,8 +134,10 @@
           <section class="doc-content">
             <h2 id="hookexecutor-__class__">HookExecutor <strong>class</strong></h2>
 <blockquote>
-<p>io.wolfscript.hook.HookExecutor
+<p>io.wolfscript.event.HookExecutor
 Implements <a href="HookExecutorInterface.html"><code>HookExecutorInterface</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'event.HookExecutor'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>

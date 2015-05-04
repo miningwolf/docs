@@ -28,9 +28,8 @@ module.exports = function() {
         .replace(/wolfscript\.hook\.entity/g, 'wolfscript.event.entity')
         .replace(/wolfscript\.hook\.player/g, 'wolfscript.event.player')
         .replace(/wolfscript\.hook\.system/g, 'wolfscript.event.system')
-        .replace(/wolfscript\.hook\.world/g, 'wolfscript.event.world');
-
-     
+        .replace(/wolfscript\.hook\.world/g, 'wolfscript.event.world')
+        .replace(/io\.wolfscript\.hook/g, 'io.wolfscript.event');
     
         var model = JSON.parse(text);
         var result = {};

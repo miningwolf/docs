@@ -1,7 +1,11 @@
 ## HookConsistencyException __class__
 
->io.wolfscript.hook.HookConsistencyException
+>io.wolfscript.event.HookConsistencyException
 >Extends `RuntimeException`
+``` javascript
+this.on('event.HookConsistencyException', function (e) { });
+```
+
 
 ---
 

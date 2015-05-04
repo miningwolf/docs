@@ -31,7 +31,7 @@ Argument | Type | Description
 --- | --- | --- 
 l | [`PluginListener`](PluginListener.md) | l argument
 plugin | `Plugin` | plugin argument
-executor | [`Dispatcher`](../hook/Dispatcher.md) | executor argument
+executor | [`Dispatcher`](../event/Dispatcher.md) | executor argument
 priority | [`Priority`](Priority.md) | priority argument
 
 ---
@@ -88,7 +88,7 @@ _Execute the event on the listener registered_
 
 Argument | Type | Description  
 --- | --- | --- 
-hook | [`Hook`](../hook/Hook.md) | hook argument
+hook | [`Hook`](../event/Hook.md) | hook argument
 
 Returns | 
 --- | 

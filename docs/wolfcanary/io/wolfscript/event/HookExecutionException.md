@@ -1,7 +1,11 @@
 ## HookExecutionException __class__
 
->io.wolfscript.hook.HookExecutionException
+>io.wolfscript.event.HookExecutionException
 >Extends `RuntimeException`
+``` javascript
+this.on('event.HookExecutionException', function (e) { });
+```
+
 
 ---
 

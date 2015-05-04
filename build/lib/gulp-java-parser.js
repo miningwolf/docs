@@ -56,7 +56,7 @@ var fieldRegex = new RegExp(docRegex  + '^(?:[^s]*(public|private|protected) )?(
 var enumRegex = new RegExp(docRegex + '([^\\s\(\\)]*)(?:\\s*\\((\\S*)\\))?,', 'gm');
 //console.log("package: " + packageRegex);
 //console.log("class: " + classRegex);
-console.log("method: " + methodRegex);
+//console.log("method: " + methodRegex);
 //console.log("field: " + fieldRegex);
 //console.log("enum: " + enumRegex);
 function javaParser(sourcecode) {

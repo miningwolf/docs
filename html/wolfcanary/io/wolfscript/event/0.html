@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>WolfScript API Hook</title>
+         <title>WolfScript API wolfcanary.io.wolfscript.event</title>
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link href="../../../../assets/css/docs.css" rel="stylesheet" />
@@ -48,8 +48,7 @@
 <li><a href='../../../../index.html'>Home </a></li>
  <li><a href='../../../../wolfcanary/io/wolfscript/0.html'>wolfcanary</a></li>
  <li><a href='../../../../wolfcanary/io/wolfscript/0.html'>io.wolfscript</a></li>
- <li><a href='../../../../wolfcanary/io/wolfscript/hook/0.html'>hook</a></li>
-<li class='current'><a href='#'>Hook</a></li>
+ <li><a href='../../../../wolfcanary/io/wolfscript/event/0.html'>event</a></li>
 
 </ul>
 
@@ -79,20 +78,28 @@
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li><a href='../../../../wolfcanary/io/wolfscript/event/CancelableHook.html'>CancelableHook</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/Dispatcher.html'>Dispatcher</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/Hook.html'>Hook</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookConsistencyException.html'>HookConsistencyException</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutionException.html'>HookExecutionException</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutor.html'>HookExecutor</a></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/event/HookExecutorInterface.html'>HookExecutorInterface</a></li>
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/command/0.html' class=''>event.command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/system/0.html' class=''>event.system</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/exceptions/0.html' class=''>exceptions</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/help/0.html' class=''>help</a></li> 
-<li class='divider'></li>
-<li class='heading'><a href='../../../../wolfcanary/io/wolfscript/hook/0.html' class=''>hook</a></li> 
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/CancelableHook.html'>CancelableHook</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/Dispatcher.html'>Dispatcher</a></li>
-<li class='active'><a href='../../../../wolfcanary/io/wolfscript/hook/Hook.html'>Hook</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookConsistencyException.html'>HookConsistencyException</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutionException.html'>HookExecutionException</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutor.html'>HookExecutor</a></li>
-<li><a href='../../../../wolfcanary/io/wolfscript/hook/HookExecutorInterface.html'>HookExecutorInterface</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfcanary/io/wolfscript/kit/0.html' class=''>kit</a></li> 
 <li class='divider'></li>
@@ -124,83 +131,79 @@
         </div>
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
-            <h2 id="hook-__class__">Hook <strong>class</strong></h2>
+            <h2 id="event-__classes-and-interfaces-__">EVENT <strong>Classes and Interfaces </strong></h2>
 <blockquote>
-<p>io.wolfscript.hook.Hook</p>
+<p>io.wolfscript.event</p>
 </blockquote>
 <hr>
-<h3 id="class-overview">Class Overview</h3>
-<p>A basic hook you can implement to create custom hooks. System Hooks also extend this</p>
+<p>Classes and interfaces for namespace io.wolfscript.event</p>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th style="text-align:left">Type   </th>
+<th>Item</th>
+<th style="text-align:left">Description   </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>final readonly property <strong>HookName</strong> <br> <em>Get: Get the name of this hook.</em></td>
-<td style="text-align:left"><code>String</code></td>
+<td><strong>Classes</strong></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
-<td style="text-align:left"><a href="Hook.html"><code>Hook</code></a></td>
+<td><strong><a href="CancelableHook.html"><code>CancelableHook</code></a></strong></td>
+<td style="text-align:left"><em>A cancelable hook. The calling chain will be broken once this hook has been</em> </td>
 </tr>
 <tr>
-<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
-<td style="text-align:left"><code>int</code></td>
+<td><strong><a href="Dispatcher.html"><code>Dispatcher</code></a></strong></td>
+<td style="text-align:left"><em>This class invokes a method on a listener.</em> </td>
 </tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-properties-for-hook-hook-md-">Public Properties for <a href="Hook.html"><code>Hook</code></a></h3>
-<h5 id="-a-id-hookname-a-public-final-readonly-property-__hookname__"><a id='hookname'></a>public final readonly property <strong>HookName</strong></h5>
-<p><em>Get: Get the name of this hook.</em></p>
-<table>
-<thead>
 <tr>
-<th>Get</th>
-<th>Description</th>
+<td><strong><a href="Hook.html"><code>Hook</code></a></strong></td>
+<td style="text-align:left"><em>A basic hook you can implement to create custom hooks. System Hooks also</em> </td>
 </tr>
-</thead>
-<tbody>
 <tr>
-<td><code>String</code></td>
-<td>simple class name</td>
+<td><strong><a href="HookConsistencyException.html"><code>HookConsistencyException</code></a></strong></td>
+<td style="text-align:left"><em>Thrown when a hook can not be passed to a listener due to the method</em> </td>
 </tr>
-</tbody>
-</table>
-<hr>
-<h3 id="public-methods-for-hook-hook-md-">Public Methods for <a href="Hook.html"><code>Hook</code></a></h3>
-<h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
-<p><em>Calls a Hook if not already executed</em></p>
-<table>
-<thead>
 <tr>
-<th>Returns</th>
-<th>Description</th>
+<td><strong><a href="HookExecutionException.html"><code>HookExecutionException</code></a></strong></td>
+<td style="text-align:left"><em>Thrown when an exception propogates up to the hook dispatcher</em> </td>
 </tr>
-</thead>
-<tbody>
 <tr>
-<td><a href="Hook.html"><code>Hook</code></a></td>
-<td>this</td>
+<td><strong><a href="HookExecutor.html"><code>HookExecutor</code></a></strong></td>
+<td style="text-align:left"><em>Stores registered listeners and performs hook dispatches.</em> </td>
 </tr>
-</tbody>
-</table>
-<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
-<p><em>hashCode method</em></p>
-<table>
-<thead>
 <tr>
-<th>Returns</th>
+<td><strong>Interfaces</strong></td>
+<td style="text-align:left"></td>
 </tr>
-</thead>
-<tbody>
 <tr>
-<td><code>int</code></td>
-<td></td>
+<td><strong><a href="HookExecutorInterface.html"><code>HookExecutorInterface</code></a></strong></td>
+<td style="text-align:left"><em>Interface for a hook executor.</em> </td>
+</tr>
+<tr>
+<td><strong>Child Namespaces</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong><a href="command/0.html"><code>command</code></a></strong></td>
+<td style="text-align:left"><em>Classes and interfaces for namespace io.wolfscript.event.command</em> </td>
+</tr>
+<tr>
+<td><strong><a href="entity/0.html"><code>entity</code></a></strong></td>
+<td style="text-align:left"><em>Classes and interfaces for namespace io.wolfscript.event.entity</em> </td>
+</tr>
+<tr>
+<td><strong><a href="player/0.html"><code>player</code></a></strong></td>
+<td style="text-align:left"><em>Classes and interfaces for namespace io.wolfscript.event.player</em> </td>
+</tr>
+<tr>
+<td><strong><a href="system/0.html"><code>system</code></a></strong></td>
+<td style="text-align:left"><em>Classes and interfaces for namespace io.wolfscript.event.system</em> </td>
+</tr>
+<tr>
+<td><strong><a href="world/0.html"><code>world</code></a></strong></td>
+<td style="text-align:left"><em>Classes and interfaces for namespace io.wolfscript.event.world</em> </td>
 </tr>
 </tbody>
 </table>

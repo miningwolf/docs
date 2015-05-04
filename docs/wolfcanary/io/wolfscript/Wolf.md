@@ -26,7 +26,7 @@ static function __bans__() <br> _Get the ban System to manage bans_ | [`BanManag
 static function __addSerializer__() <br> _Add a serializer to the system_ | `void`
 static function __instance__() <br> _Get the wolf instance_ | [`Wolf`](Wolf.md)
 static function __jsonNBT__() <br> _Retrieves the JsonNBT Utility_ | [`JsonNBTUtility`](util/JsonNBTUtility.md)
-static function __hooks__() <br> _Get the Hook executor to fire hooks_ | [`HookExecutor`](hook/HookExecutor.md)
+static function __hooks__() <br> _Get the Hook executor to fire hooks_ | [`HookExecutor`](event/HookExecutor.md)
 static function __db__() <br> _Get the database interface for managing system data and custom plugin data_ | [`Database`](database/Database.md)
 static function __help__() <br> _Get the help manager, used to register and unregister help commands, and creating help visualizations_ | [`HelpManager`](help/HelpManager.md)
 static function __commands__() <br> _Get the command manager, used to register and unregister commands._ | [`CommandManager`](commandsys/CommandManager.md)
@@ -215,7 +215,7 @@ _Get the Hook executor to fire hooks_
 
 Returns | Description
 --- | --- 
-[`HookExecutor`](hook/HookExecutor.md) | [`HookExecutor`](hook/HookExecutor.md)
+[`HookExecutor`](event/HookExecutor.md) | [`HookExecutor`](event/HookExecutor.md)
 
 
 ##### <a id='db'></a>public static function __db__()

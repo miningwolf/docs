@@ -1,7 +1,7 @@
 ## ReturnFromIdleEvent __class__
 
 >io.wolfscript.event.player.ReturnFromIdleEvent
->Extends [`Hook`](../../hook/Hook.md)
+>Extends [`Hook`](../Hook.md)
 ``` javascript
 this.on('player.ReturnFromIdleEvent', function (e) { });
 ```
@@ -19,9 +19,9 @@ Method | Type
  readonly property __TimeIdle__ <br> _Get: Gets the amount of time the `Player` was idle_ | `long`
  function __toString__() <br> _{@inheritDoc}_ | `String`
  |
-__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+__Inherited items from [`Hook`](../Hook.md)__ |
 final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
- function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../Hook.md)
  function __hashCode__() <br> _hashCode method_ | `int`
 
 
@@ -68,7 +68,7 @@ Returns |
 
 ---
 
-### Public Properties for [`Hook`](../../hook/Hook.md)
+### Public Properties for [`Hook`](../Hook.md)
 
 ##### <a id='hookname'></a>public final readonly property __HookName__
 
@@ -82,7 +82,7 @@ Get | Description
 
 ---
 
-### Public Methods for [`Hook`](../../hook/Hook.md)
+### Public Methods for [`Hook`](../Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -90,7 +90,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](../../hook/Hook.md) | this
+[`Hook`](../Hook.md) | this
 
 
 ##### <a id='hashcode'></a>public  function __hashCode__()

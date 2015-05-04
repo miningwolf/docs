@@ -1,7 +1,7 @@
 ## EnchantEvent __class__
 
 >io.wolfscript.event.player.EnchantEvent
->Extends [`CancelableHook`](../../hook/CancelableHook.md)
+>Extends [`CancelableHook`](../CancelableHook.md)
 ``` javascript
 this.on('player.EnchantEvent', function (e) { });
 ```
@@ -25,14 +25,14 @@ Method | Type
  function __setEnchantmentList__() <br> _Override the whole list of enchantments_ | `void`
 final function __toString__() <br> _toString method_ | `String`
  |
-__Inherited items from [`CancelableHook`](../../hook/CancelableHook.md)__ |
- function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../../hook/CancelableHook.md)
+__Inherited items from [`CancelableHook`](../CancelableHook.md)__ |
+ function __call__() <br> _Calls a Hook if not already executed_ | [`CancelableHook`](../CancelableHook.md)
  function __isCanceled__() <br> _isCanceled method_ | `boolean`
  function __setCanceled__() <br> _setCanceled method_ | `void`
  |
-__Inherited items from [`Hook`](../../hook/Hook.md)__ |
+__Inherited items from [`Hook`](../Hook.md)__ |
 final readonly property __HookName__ <br> _Get: Get the name of this hook._ | `String`
- function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../../hook/Hook.md)
+ function __call__() <br> _Calls a Hook if not already executed_ | [`Hook`](../Hook.md)
  function __hashCode__() <br> _hashCode method_ | `int`
 
 
@@ -149,7 +149,7 @@ Returns |
 
 ---
 
-### Public Methods for [`CancelableHook`](../../hook/CancelableHook.md)
+### Public Methods for [`CancelableHook`](../CancelableHook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -157,7 +157,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`CancelableHook`](../../hook/CancelableHook.md) | this
+[`CancelableHook`](../CancelableHook.md) | this
 
 
 ##### <a id='iscanceled'></a>public  function __isCanceled__()
@@ -180,7 +180,7 @@ Returns |
 
 ---
 
-### Public Properties for [`Hook`](../../hook/Hook.md)
+### Public Properties for [`Hook`](../Hook.md)
 
 ##### <a id='hookname'></a>public final readonly property __HookName__
 
@@ -194,7 +194,7 @@ Get | Description
 
 ---
 
-### Public Methods for [`Hook`](../../hook/Hook.md)
+### Public Methods for [`Hook`](../Hook.md)
 
 ##### <a id='call'></a>public  function __call__()
 
@@ -202,7 +202,7 @@ _Calls a Hook if not already executed_
 
 Returns | Description
 --- | --- 
-[`Hook`](../../hook/Hook.md) | this
+[`Hook`](../Hook.md) | this
 
 
 ##### <a id='hashcode'></a>public  function __hashCode__()

@@ -1,7 +1,11 @@
 ## CancelableHook __class__
 
->io.wolfscript.hook.CancelableHook
+>io.wolfscript.event.CancelableHook
 >Extends [`Hook`](Hook.md)
+``` javascript
+this.on('event.CancelableHook', function (e) { });
+```
+
 
 ---
 

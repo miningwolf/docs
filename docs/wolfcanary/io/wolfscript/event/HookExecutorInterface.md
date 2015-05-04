@@ -1,6 +1,6 @@
 ## HookExecutorInterface __interface__
 
->io.wolfscript.hook.HookExecutorInterface
+>io.wolfscript.event.HookExecutorInterface
 
 ---
 

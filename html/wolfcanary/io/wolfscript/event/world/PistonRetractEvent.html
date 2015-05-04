@@ -48,7 +48,7 @@
 <li><a href='../../../../../index.html'>Home </a></li>
  <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>wolfcanary</a></li>
  <li><a href='../../../../../wolfcanary/io/wolfscript/0.html'>io.wolfscript</a></li>
- <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>event</a></li>
+ <li><a href='../../../../../wolfcanary/io/wolfscript/event/0.html'>event</a></li>
  <li><a href='../../../../../wolfcanary/io/wolfscript/event/world/0.html'>world</a></li>
 <li class='current'><a href='#'>PistonRetractEvent</a></li>
 
@@ -79,6 +79,8 @@
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/converter/0.html' class=''>converter</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/database/0.html' class=''>database</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/0.html' class=''>event</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/event/command/0.html' class=''>event.command</a></li> 
 <li class='divider'></li>
@@ -124,8 +126,6 @@
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/help/0.html' class=''>help</a></li> 
 <li class='divider'></li>
-<li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/hook/0.html' class=''>hook</a></li> 
-<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/kit/0.html' class=''>kit</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfcanary/io/wolfscript/logger/0.html' class=''>logger</a></li> 
@@ -159,7 +159,7 @@
             <h2 id="pistonretractevent-__class__">PistonRetractEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.world.PistonRetractEvent
-Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></p>
+Extends <a href="../CancelableHook.html"><code>CancelableHook</code></a></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'world.PistonRetractEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
 </code></pre>
 </blockquote>
@@ -191,12 +191,12 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td><strong>Inherited items from <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></strong></td>
+<td><strong>Inherited items from <a href="../CancelableHook.html"><code>CancelableHook</code></a></strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
 <td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
-<td style="text-align:left"><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+<td style="text-align:left"><a href="../CancelableHook.html"><code>CancelableHook</code></a></td>
 </tr>
 <tr>
 <td> function <strong>isCanceled</strong>() <br> <em>isCanceled method</em></td>
@@ -211,7 +211,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td><strong>Inherited items from <a href="../../hook/Hook.html"><code>Hook</code></a></strong></td>
+<td><strong>Inherited items from <a href="../Hook.html"><code>Hook</code></a></strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -220,7 +220,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tr>
 <tr>
 <td> function <strong>call</strong>() <br> <em>Calls a Hook if not already executed</em></td>
-<td style="text-align:left"><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+<td style="text-align:left"><a href="../Hook.html"><code>Hook</code></a></td>
 </tr>
 <tr>
 <td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
@@ -279,7 +279,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tbody>
 </table>
 <hr>
-<h3 id="public-methods-for-cancelablehook-hook-cancelablehook-md-">Public Methods for <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></h3>
+<h3 id="public-methods-for-cancelablehook-cancelablehook-md-">Public Methods for <a href="../CancelableHook.html"><code>CancelableHook</code></a></h3>
 <h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
 <p><em>Calls a Hook if not already executed</em></p>
 <table>
@@ -291,7 +291,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </thead>
 <tbody>
 <tr>
-<td><a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a></td>
+<td><a href="../CancelableHook.html"><code>CancelableHook</code></a></td>
 <td>this</td>
 </tr>
 </tbody>
@@ -327,7 +327,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tbody>
 </table>
 <hr>
-<h3 id="public-properties-for-hook-hook-hook-md-">Public Properties for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h3 id="public-properties-for-hook-hook-md-">Public Properties for <a href="../Hook.html"><code>Hook</code></a></h3>
 <h5 id="-a-id-hookname-a-public-final-readonly-property-__hookname__"><a id='hookname'></a>public final readonly property <strong>HookName</strong></h5>
 <p><em>Get: Get the name of this hook.</em></p>
 <table>
@@ -345,7 +345,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </tbody>
 </table>
 <hr>
-<h3 id="public-methods-for-hook-hook-hook-md-">Public Methods for <a href="../../hook/Hook.html"><code>Hook</code></a></h3>
+<h3 id="public-methods-for-hook-hook-md-">Public Methods for <a href="../Hook.html"><code>Hook</code></a></h3>
 <h5 id="-a-id-call-a-public-function-__call__-"><a id='call'></a>public  function <strong>call</strong>()</h5>
 <p><em>Calls a Hook if not already executed</em></p>
 <table>
@@ -357,7 +357,7 @@ Extends <a href="../../hook/CancelableHook.html"><code>CancelableHook</code></a>
 </thead>
 <tbody>
 <tr>
-<td><a href="../../hook/Hook.html"><code>Hook</code></a></td>
+<td><a href="../Hook.html"><code>Hook</code></a></td>
 <td>this</td>
 </tr>
 </tbody>
