@@ -26,7 +26,7 @@
 <nav class="top-bar docs-bar hide-for-small" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="http://miningwolf.com/"><i class="fi-paw"></i> Mining Wolf</a></h1>
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
     </li>
   </ul>
 
@@ -40,7 +40,7 @@
                       var panel=model.panels[panelKey];
                       var category0 = panel.categories[Object.keys(panel.categories)[0]]; 
                       var item0 = category0.items[Object.keys(category0.items)[0]]; 
-                      if (panel.panelLabel === 'Home')
+                      if (panel.panelLabel === 'Docs')
                           homeItem = item0;
                        @:<li class='divider'></li>
                        @:<li><a href='@model.link(item0.meta.qualifiedname) ' class=''>@panel.panelLabel </a></li>
@@ -52,16 +52,16 @@
        <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
        <li class="divider"></li>
        <li class="has-form">
-       <a href="@model.link("home.GettingStarted") " class="small button">Getting Started</a>
+       <a href="@model.link("docs.GettingStarted") " class="small button">Getting Started</a>
        </li>
     </ul>
   </section>
 </nav>
 <ul class="breadcrumbs">
 @{
-  if (model.currentPanel.panelLabel !== "Home")
+  if (model.currentPanel.panelLabel !== "Docs")
   {
-    @:<li><a href='@model.link(homeItem.meta.qualifiedname) '>Home </a></li>
+    @:<li><a href='@model.link(homeItem.meta.qualifiedname) '>Docs </a></li>
   }
        var slug = model.item.meta.namespace.replace("io.wolfscript", "__ROOT__");
      var catParent = undefined;

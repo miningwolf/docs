@@ -142,7 +142,7 @@ module.exports = function(opt) {
             try {
             	var p = path.parse(path.relative(path.join(process.cwd(), "docs"), file.path));
 		
-				var namespace = (p.dir).replace(/\//g, ".").replace(/\\/g, ".") || 'home';
+				var namespace = (p.dir).replace(/\//g, ".").replace(/\\/g, ".") || 'docs';
 				var name = p.name;
 					  
 				var url = p.dir + "/" + p.base.replace('.md','.html');
@@ -170,9 +170,9 @@ module.exports = function(opt) {
  	     		}
  	     		else 
  	     		{
- 	     			panel = 'Home';	
+ 	     			panel = 'Docs';	
  	     			panelLabel = panel;
- 	     			panelSort = "0Home";
+ 	     			panelSort = "0Docs";
  	     		}
  	     		var ignore = false;
  	     		var catSort = namespace;
@@ -246,7 +246,7 @@ module.exports = function(opt) {
 						}
 		   		}
 
- 	     		if (qualifiedname === 'home.index')
+ 	     		if (qualifiedname === 'docs.index')
  	     			name = ' ';
 
  	     		if (!ignore)
@@ -294,7 +294,7 @@ module.exports = function(opt) {
                	  		return path.join(this.relativeroot, 'assets', resourcepath);
                	},
                	link: function(fullname) {
-               	  		return path.join(this.relativeroot, fullname.replace(/\./g, "/").replace('home/','') + ".html");
+               	  		return path.join(this.relativeroot, fullname.replace(/\./g, "/").replace('docs/','') + ".html");
                	}
                };
 
