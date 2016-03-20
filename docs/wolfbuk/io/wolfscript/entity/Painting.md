@@ -45,7 +45,7 @@ _Set the art on this painting_
 Argument | Type | Description  
 --- | --- | --- 
 art | [`Art`](../Art.md) | The new art
-force | `boolean` | If true, force the new art regardless of whether it fits at the current location. Note that forcing it where it can't fit normally causes it to drop as an item unless you override this by catching the [`PaintingBreakEvent`](../event/painting/PaintingBreakEvent.md).
+force | `boolean` | If true, force the new art regardless of whether it fits at the current location. Note that forcing it where it can't fit normally causes it to drop as an item unless you override this by catching the [`HangingBreakEvent`](../event/hanging/HangingBreakEvent.md).
 
 Returns | Description
 --- | --- 

@@ -61,6 +61,8 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/block/Banner.html'>Banner</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/block/Biome.html'>Biome</a></li>
@@ -68,16 +70,19 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/block/BlockFace.html'>BlockFace</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/BlockState.html'>BlockState</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/CommandBlock.html'>CommandBlock</a></li>
-<li><a href='../../../../wolfbuk/io/wolfscript/block/ContainerBlock.html'>ContainerBlock</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/CreatureSpawner.html'>CreatureSpawner</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/DoubleChest.html'>DoubleChest</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/block/EndGateway.html'>EndGateway</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/Jukebox.html'>Jukebox</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/NoteBlock.html'>NoteBlock</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/PistonMoveReaction.html'>PistonMoveReaction</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/Sign.html'>Sign</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/block/Skull.html'>Skull</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/block/Structure.html'>Structure</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/banner/0.html' class=''>block.banner</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -141,7 +146,19 @@
 </thead>
 <tbody>
 <tr>
-<td>SWAMPLAND: <br> <em>SWAMPLAND Biome</em></td>
+<td>OCEAN: <br> <em>OCEAN Biome</em></td>
+<td style="text-align:left">Biome</td>
+</tr>
+<tr>
+<td>PLAINS: <br> <em>PLAINS Biome</em></td>
+<td style="text-align:left">Biome</td>
+</tr>
+<tr>
+<td>DESERT: <br> <em>DESERT Biome</em></td>
+<td style="text-align:left">Biome</td>
+</tr>
+<tr>
+<td>EXTREME_HILLS: <br> _EXTREME<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
@@ -153,11 +170,11 @@
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>DESERT: <br> <em>DESERT Biome</em></td>
+<td>SWAMPLAND: <br> <em>SWAMPLAND Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>PLAINS: <br> <em>PLAINS Biome</em></td>
+<td>RIVER: <br> <em>RIVER Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
@@ -169,59 +186,47 @@
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>OCEAN: <br> <em>OCEAN Biome</em></td>
+<td>FROZEN_OCEAN: <br> _FROZEN<em>OCEAN Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>RIVER: <br> <em>RIVER Biome</em></td>
+<td>FROZEN_RIVER: <br> _FROZEN<em>RIVER Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>EXTREME<em>HILLS: <br> _EXTREME_HILLS Biome</em></td>
+<td>ICE_FLATS: <br> _ICE<em>FLATS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>FROZEN<em>OCEAN: <br> _FROZEN_OCEAN Biome</em></td>
+<td>ICE_MOUNTAINS: <br> _ICE<em>MOUNTAINS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>FROZEN<em>RIVER: <br> _FROZEN_RIVER Biome</em></td>
+<td>MUSHROOM_ISLAND: <br> _MUSHROOM<em>ISLAND Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>ICE<em>PLAINS: <br> _ICE_PLAINS Biome</em></td>
+<td>MUSHROOM_ISLAND_SHORE: <br> _MUSHROOM_ISLAND<em>SHORE Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>ICE<em>MOUNTAINS: <br> _ICE_MOUNTAINS Biome</em></td>
+<td>BEACHES: <br> <em>BEACHES Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MUSHROOM<em>ISLAND: <br> _MUSHROOM_ISLAND Biome</em></td>
+<td>DESERT_HILLS: <br> _DESERT<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MUSHROOM<em>SHORE: <br> _MUSHROOM_SHORE Biome</em></td>
+<td>FOREST_HILLS: <br> _FOREST<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>BEACH: <br> <em>BEACH Biome</em></td>
+<td>TAIGA_HILLS: <br> _TAIGA<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>DESERT<em>HILLS: <br> _DESERT_HILLS Biome</em></td>
-<td style="text-align:left">Biome</td>
-</tr>
-<tr>
-<td>FOREST<em>HILLS: <br> _FOREST_HILLS Biome</em></td>
-<td style="text-align:left">Biome</td>
-</tr>
-<tr>
-<td>TAIGA<em>HILLS: <br> _TAIGA_HILLS Biome</em></td>
-<td style="text-align:left">Biome</td>
-</tr>
-<tr>
-<td>SMALL<em>MOUNTAINS: <br> _SMALL_MOUNTAINS Biome</em></td>
+<td>SMALLER_EXTREME_HILLS: <br> _SMALLER_EXTREME<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
@@ -229,55 +234,55 @@
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>JUNGLE<em>HILLS: <br> _JUNGLE_HILLS Biome</em></td>
+<td>JUNGLE_HILLS: <br> _JUNGLE<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>JUNGLE<em>EDGE: <br> _JUNGLE_EDGE Biome</em></td>
+<td>JUNGLE_EDGE: <br> _JUNGLE<em>EDGE Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>DEEP<em>OCEAN: <br> _DEEP_OCEAN Biome</em></td>
+<td>DEEP_OCEAN: <br> _DEEP<em>OCEAN Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>STONE<em>BEACH: <br> _STONE_BEACH Biome</em></td>
+<td>STONE_BEACH: <br> _STONE<em>BEACH Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>COLD<em>BEACH: <br> _COLD_BEACH Biome</em></td>
+<td>COLD_BEACH: <br> _COLD<em>BEACH Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>BIRCH<em>FOREST: <br> _BIRCH_FOREST Biome</em></td>
+<td>BIRCH_FOREST: <br> _BIRCH<em>FOREST Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>BIRCH<em>FOREST_HILLS: <br> _BIRCH_FOREST_HILLS Biome</em></td>
+<td>BIRCH_FOREST_HILLS: <br> _BIRCH_FOREST<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>ROOFED<em>FOREST: <br> _ROOFED_FOREST Biome</em></td>
+<td>ROOFED_FOREST: <br> _ROOFED<em>FOREST Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>COLD<em>TAIGA: <br> _COLD_TAIGA Biome</em></td>
+<td>TAIGA_COLD: <br> _TAIGA<em>COLD Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>COLD<em>TAIGA_HILLS: <br> _COLD_TAIGA_HILLS Biome</em></td>
+<td>TAIGA_COLD_HILLS: <br> _TAIGA_COLD<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MEGA<em>TAIGA: <br> _MEGA_TAIGA Biome</em></td>
+<td>REDWOOD_TAIGA: <br> _REDWOOD<em>TAIGA Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MEGA<em>TAIGA_HILLS: <br> _MEGA_TAIGA_HILLS Biome</em></td>
+<td>REDWOOD_TAIGA_HILLS: <br> _REDWOOD_TAIGA<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>EXTREME<em>HILLS_PLUS: <br> _EXTREME_HILLS_PLUS Biome</em></td>
+<td>EXTREME_HILLS_WITH_TREES: <br> _EXTREME_HILLS_WITH<em>TREES Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
@@ -285,7 +290,7 @@
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>SAVANNA<em>PLATEAU: <br> _SAVANNA_PLATEAU Biome</em></td>
+<td>SAVANNA_ROCK: <br> _SAVANNA<em>ROCK Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
@@ -293,95 +298,95 @@
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MESA<em>PLATEAU_FOREST: <br> _MESA_PLATEAU_FOREST Biome</em></td>
+<td>MESA_ROCK: <br> _MESA<em>ROCK Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MESA<em>PLATEAU: <br> _MESA_PLATEAU Biome</em></td>
+<td>MESA_CLEAR_ROCK: <br> _MESA_CLEAR<em>ROCK Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>SUNFLOWER<em>PLAINS: <br> _SUNFLOWER_PLAINS Biome</em></td>
+<td>VOID: <br> <em>VOID Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>DESERT<em>MOUNTAINS: <br> _DESERT_MOUNTAINS Biome</em></td>
+<td>MUTATED_PLAINS: <br> _MUTATED<em>PLAINS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>FLOWER<em>FOREST: <br> _FLOWER_FOREST Biome</em></td>
+<td>MUTATED_DESERT: <br> _MUTATED<em>DESERT Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>TAIGA<em>MOUNTAINS: <br> _TAIGA_MOUNTAINS Biome</em></td>
+<td>MUTATED_EXTREME_HILLS: <br> _MUTATED_EXTREME<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>SWAMPLAND<em>MOUNTAINS: <br> _SWAMPLAND_MOUNTAINS Biome</em></td>
+<td>MUTATED_FOREST: <br> _MUTATED<em>FOREST Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>ICE<em>PLAINS_SPIKES: <br> _ICE_PLAINS_SPIKES Biome</em></td>
+<td>MUTATED_TAIGA: <br> _MUTATED<em>TAIGA Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>JUNGLE<em>MOUNTAINS: <br> _JUNGLE_MOUNTAINS Biome</em></td>
+<td>MUTATED_SWAMPLAND: <br> _MUTATED<em>SWAMPLAND Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>JUNGLE<em>EDGE_MOUNTAINS: <br> _JUNGLE_EDGE_MOUNTAINS Biome</em></td>
+<td>MUTATED_ICE_FLATS: <br> _MUTATED_ICE<em>FLATS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>COLD<em>TAIGA_MOUNTAINS: <br> _COLD_TAIGA_MOUNTAINS Biome</em></td>
+<td>MUTATED_JUNGLE: <br> _MUTATED<em>JUNGLE Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>SAVANNA<em>MOUNTAINS: <br> _SAVANNA_MOUNTAINS Biome</em></td>
+<td>MUTATED_JUNGLE_EDGE: <br> _MUTATED_JUNGLE<em>EDGE Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>SAVANNA<em>PLATEAU_MOUNTAINS: <br> _SAVANNA_PLATEAU_MOUNTAINS Biome</em></td>
+<td>MUTATED_BIRCH_FOREST: <br> _MUTATED_BIRCH<em>FOREST Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MESA<em>BRYCE: <br> _MESA_BRYCE Biome</em></td>
+<td>MUTATED_BIRCH_FOREST_HILLS: <br> _MUTATED_BIRCH_FOREST<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MESA<em>PLATEAU_FOREST_MOUNTAINS: <br> _MESA_PLATEAU_FOREST_MOUNTAINS Biome</em></td>
+<td>MUTATED_ROOFED_FOREST: <br> _MUTATED_ROOFED<em>FOREST Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MESA<em>PLATEAU_MOUNTAINS: <br> _MESA_PLATEAU_MOUNTAINS Biome</em></td>
+<td>MUTATED_TAIGA_COLD: <br> _MUTATED_TAIGA<em>COLD Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>BIRCH<em>FOREST_MOUNTAINS: <br> _BIRCH_FOREST_MOUNTAINS Biome</em></td>
+<td>MUTATED_REDWOOD_TAIGA: <br> _MUTATED_REDWOOD<em>TAIGA Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>BIRCH<em>FOREST_HILLS_MOUNTAINS: <br> _BIRCH_FOREST_HILLS_MOUNTAINS Biome</em></td>
+<td>MUTATED_REDWOOD_TAIGA_HILLS: <br> _MUTATED_REDWOOD_TAIGA<em>HILLS Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>ROOFED<em>FOREST_MOUNTAINS: <br> _ROOFED_FOREST_MOUNTAINS Biome</em></td>
+<td>MUTATED_EXTREME_HILLS_WITH_TREES: <br> _MUTATED_EXTREME_HILLS_WITH<em>TREES Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MEGA<em>SPRUCE_TAIGA: <br> _MEGA_SPRUCE_TAIGA Biome</em></td>
+<td>MUTATED_SAVANNA: <br> _MUTATED<em>SAVANNA Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>EXTREME<em>HILLS_MOUNTAINS: <br> _EXTREME_HILLS_MOUNTAINS Biome</em></td>
+<td>MUTATED_SAVANNA_ROCK: <br> _MUTATED_SAVANNA<em>ROCK Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>EXTREME<em>HILLS_PLUS_MOUNTAINS: <br> _EXTREME_HILLS_PLUS_MOUNTAINS Biome</em></td>
+<td>MUTATED_MESA: <br> _MUTATED<em>MESA Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 <tr>
-<td>MEGA<em>SPRUCE_TAIGA_HILLS: <br> _MEGA_SPRUCE_TAIGA_HILLS Biome</em></td>
+<td>MUTATED_MESA_ROCK: <br> _MUTATED_MESA<em>ROCK Biome</em></td>
 <td style="text-align:left">Biome</td>
 </tr>
 </tbody>

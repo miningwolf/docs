@@ -11,11 +11,13 @@ Represents a potion effect, that can be added to a `LivingEntity`. A potion effe
 
 Method | Type   
 --- | :--- 
-new __PotionEffect__(type, duration, amplifier, ambient, particles) <br> _Creates a potion effect._ | _constructor_
+new __PotionEffect__(type, duration, amplifier, ambient, particles, color) <br> _Creates a potion effect._ | _constructor_
+new __PotionEffect__(type, duration, amplifier, ambient, particles) <br> _Creates a potion effect with no defined color._ | _constructor_
 new __PotionEffect__(type, duration, amplifier, ambient) <br> _Creates a potion effect. Assumes that particles are visible_ | _constructor_
 new __PotionEffect__(type, duration, amplifier) <br> _Creates a potion effect. Assumes ambient is true._ | _constructor_
 new __PotionEffect__() <br> _Constructor for deserialization._ | _constructor_
  readonly property __Amplifier__ <br> _Get: Returns the amplifier of this effect. A higher amplifier means the_ | `int`
+ readonly property __Color__ <br> _Color property_ | [`Color`](../Color.md)
  readonly property __Duration__ <br> _Get: Returns the duration (in ticks) that this effect will run for when_ | `int`
  readonly property __Type__ <br> _Get: Returns the [`PotionEffectType`](PotionEffectType.md) of this effect._ | [`PotionEffectType`](PotionEffectType.md)
  function __apply__(entity) <br> _Attempts to add the effect represented by this object to the given_ | `boolean`
@@ -31,9 +33,22 @@ new __PotionEffect__() <br> _Constructor for deserialization._ | _constructor_
 
 ### Public Constructors for [`PotionEffect`](PotionEffect.md)
 
-##### <a id='potioneffect'></a>new __PotionEffect__(type, duration, amplifier, ambient, particles) 
+##### <a id='potioneffect'></a>new __PotionEffect__(type, duration, amplifier, ambient, particles, color) 
 
 _Creates a potion effect._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionEffectType`](PotionEffectType.md) | effect type
+duration | `int` | measured in ticks, see `PotionEffect#getDuration()`
+amplifier | `int` | the amplifier, see `PotionEffect#getAmplifier()`
+ambient | `boolean` | the ambient status, see `PotionEffect#isAmbient()`
+particles | `boolean` | the particle status, see `PotionEffect#hasParticles()`
+color | [`Color`](../Color.md) | the particle color, see `PotionEffect#getColor()`
+
+##### <a id='potioneffect'></a>new __PotionEffect__(type, duration, amplifier, ambient, particles) 
+
+_Creates a potion effect with no defined color._
 
 Argument | Type | Description  
 --- | --- | --- 
@@ -80,6 +95,16 @@ _Get: Returns the amplifier of this effect. A higher amplifier means the potion 
 Get | Description
 --- | --- 
 `int` | The effect amplifier
+
+
+
+##### <a id='color'></a>public  readonly property __Color__
+
+_Color property_
+
+Get | Description
+--- | --- 
+[`Color`](../Color.md) | color of this potion's particles. May be null if the potion has no particles or defined color.
 
 
 

@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -129,9 +133,11 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPreLoginEvent.html'>PlayerPreLoginEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerResourcePackStatusEvent.html'>PlayerResourcePackStatusEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerSwapHandItemsEvent.html'>PlayerSwapHandItemsEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
@@ -204,6 +210,14 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td>new <strong>PlayerInteractEntityEvent</strong>(Player, Entity) <br> <em>PlayerInteractEntityEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>PlayerInteractEntityEvent</strong>(Player, Entity, EquipmentSlot) <br> <em>PlayerInteractEntityEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Hand</strong> <br> <em>Get: The hand used to perform this interaction.</em></td>
+<td style="text-align:left"><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
 </tr>
 <tr>
 <td>static readonly property <strong>HandlerList</strong> <br> <em>HandlerList property</em></td>
@@ -296,8 +310,52 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-playerinteractentityevent-a-new-__playerinteractentityevent__-player-entity-equipmentslot-"><a id='playerinteractentityevent'></a>new <strong>PlayerInteractEntityEvent</strong>(Player, Entity, EquipmentSlot)</h5>
+<p><em>PlayerInteractEntityEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Player</td>
+<td><code>final</code></td>
+<td>Player argument</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td><code>final</code></td>
+<td>Entity argument</td>
+</tr>
+<tr>
+<td>EquipmentSlot</td>
+<td><code>final</code></td>
+<td>EquipmentSlot argument</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-properties-for-playerinteractentityevent-playerinteractentityevent-md-">Public Properties for <a href="PlayerInteractEntityEvent.html"><code>PlayerInteractEntityEvent</code></a></h3>
+<h5 id="-a-id-hand-a-public-readonly-property-__hand__"><a id='hand'></a>public  readonly property <strong>Hand</strong></h5>
+<p><em>Get: The hand used to perform this interaction.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
+<td>the hand used to interact</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-handlerlist-a-public-static-readonly-property-__handlerlist__"><a id='handlerlist'></a>public static readonly property <strong>HandlerList</strong></h5>
 <p><em>HandlerList property</em></p>
 <table>

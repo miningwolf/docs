@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -96,7 +100,9 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/InventoryView.html'>InventoryView</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFactory.html'>ItemFactory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MainHand.html'>MainHand</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantRecipe.html'>MerchantRecipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
@@ -155,6 +161,14 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 <tr>
 <td>new <strong>FurnaceRecipe</strong>(result, source) <br> <em>Create a furnace recipe to craft the specified ItemStack.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>FurnaceRecipe</strong>(result, source, experience) <br> <em>Create a furnace recipe to craft the specified ItemStack.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>  property <strong>Experience</strong> <br> <em>Get: Get the experience given by this recipe.<br>Set: Sets the experience given by this recipe.</em></td>
+<td style="text-align:left"><code>float</code></td>
 </tr>
 <tr>
 <td> writeonly property <strong>Input</strong> <br> <em>Get: Get the input material.<br>Set: Sets the input of this furnace recipe.<br>Set: Sets the input of this furnace recipe.</em></td>
@@ -218,6 +232,34 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-furnacerecipe-a-new-__furnacerecipe__-result-source-experience-"><a id='furnacerecipe'></a>new <strong>FurnaceRecipe</strong>(result, source, experience)</h5>
+<p><em>Create a furnace recipe to craft the specified ItemStack.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td><code>ItemStack</code></td>
+<td>The item you want the recipe to create.</td>
+</tr>
+<tr>
+<td>source</td>
+<td><a href="../material/MaterialData.html"><code>MaterialData</code></a></td>
+<td>The input material.</td>
+</tr>
+<tr>
+<td>experience</td>
+<td><code>float</code></td>
+<td>The experience given by this recipe</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-furnacerecipe-a-new-__furnacerecipe__-result-source-data-"><a id='furnacerecipe'></a>new <strong>FurnaceRecipe</strong>(result, source, data)</h5>
 <p><em>Deprecated: Magic value</em></p>
 <p><em>Create a furnace recipe to craft the specified ItemStack.</em></p>
@@ -247,8 +289,74 @@ Implements <a href="Recipe.html"><code>Recipe</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-furnacerecipe-a-new-__furnacerecipe__-result-source-data-experience-"><a id='furnacerecipe'></a>new <strong>FurnaceRecipe</strong>(result, source, data, experience)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Create a furnace recipe to craft the specified ItemStack.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td><code>ItemStack</code></td>
+<td>The item you want the recipe to create.</td>
+</tr>
+<tr>
+<td>source</td>
+<td><a href="../Material.html"><code>Material</code></a></td>
+<td>The input material.</td>
+</tr>
+<tr>
+<td>data</td>
+<td><code>int</code></td>
+<td>The data value. (Note: This is currently ignored by the CraftWolfScript server.)</td>
+</tr>
+<tr>
+<td>experience</td>
+<td><code>float</code></td>
+<td>The experience given by this recipe</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-properties-for-furnacerecipe-furnacerecipe-md-">Public Properties for <a href="FurnaceRecipe.html"><code>FurnaceRecipe</code></a></h3>
+<h5 id="-a-id-experience-a-public-property-__experience__"><a id='experience'></a>public   property <strong>Experience</strong></h5>
+<p><em>Get: Get the experience given by this recipe.<br>Set: Sets the experience given by this recipe.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>experience level</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>experience</td>
+<td><code>float</code></td>
+<td>the experience level</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-input-a-public-writeonly-property-__input__"><a id='input'></a>public  writeonly property <strong>Input</strong></h5>
 <p><em>Get: Get the input material.<br>Set: Sets the input of this furnace recipe.<br>Set: Sets the input of this furnace recipe.</em></p>
 <table>

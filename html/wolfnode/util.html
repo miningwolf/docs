@@ -81,6 +81,8 @@
 <li class='divider'></li>
 <li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='divider'></li>
 
                   </ul>
               </nav>
@@ -90,15 +92,18 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="util">util</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">4 - API Frozen</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><p>These functions are in the module <code>&#39;util&#39;</code>. Use <code>require(&#39;util&#39;)</code> to
 access them.</p>
-<p>The <code>util</code> module is primarily designed to support the needs of Node&#39;s
+<p>The <code>util</code> module is primarily designed to support the needs of Node.js&#39;s
 internal APIs.  Many of these utilities are useful for your own
 programs.  If you find that these functions are lacking for your
 purposes, however, you are encouraged to write your own utilities.  We
 are not interested in any future additions to the <code>util</code> module that
-are unnecessary for Node&#39;s internal functionality.</p>
+are unnecessary for Node.js&#39;s internal functionality.</p>
+<h2 id="util-debug-string-">util.debug(string)</h2>
+<pre><code>Stability: 0 - Deprecated: Use [<span class="hljs-link_label">`console.error()`</span>][<span class="hljs-link_reference"></span>] instead.
+</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
 <h2 id="util-debuglog-section-">util.debuglog(section)</h2>
 <ul>
 <li><code>section</code> {String} The section of the program to be debugged</li>
@@ -110,18 +115,42 @@ based on the existence of a <code>NODE_DEBUG</code> environment variable.  If th
 function will be similar to <code>console.error()</code>.  If not, then the
 returned function is a no-op.</p>
 <p>For example:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> debuglog = util.debuglog(<span class="hljs-string">'foo'</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> debuglog = util.debuglog(<span class="hljs-string">'foo'</span>);
 
 <span class="hljs-keyword">var</span> bar = <span class="hljs-number">123</span>;
 debuglog(<span class="hljs-string">'hello from foo [%d]'</span>, bar);
 </code></pre>
 <p>If this program is run with <code>NODE_DEBUG=foo</code> in the environment, then
 it will output something like:</p>
-<pre><code><span class="hljs-keyword">FOO</span> 3245: hello from foo<span class="hljs-sqbracket"> [123]</span>
+<pre><code>FOO <span class="hljs-number">3245</span>: hello from foo [<span class="hljs-number">123</span>]
 </code></pre><p>where <code>3245</code> is the process id.  If it is not run with that
 environment variable set, then it will not print anything.</p>
 <p>You may separate multiple <code>NODE_DEBUG</code> environment variables with a
 comma.  For example, <code>NODE_DEBUG=fs,net,tls</code>.</p>
+<h2 id="util-deprecate-function-string-">util.deprecate(function, string)</h2>
+<p>Marks that a method should not be used any more.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+exports.puts = util.deprecate(() =&gt; {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = <span class="hljs-built_in">arguments</span>.length; i &lt; len; ++i) {
+    process.stdout.write(<span class="hljs-built_in">arguments</span>[i] + <span class="hljs-string">'\n'</span>);
+  }
+}, <span class="hljs-string">'util.puts: Use console.log instead'</span>);
+</code></pre>
+<p>It returns a modified function which warns once by default.</p>
+<p>If <code>--no-deprecation</code> is set then this function is a NO-OP.  Configurable
+at run-time through the <code>process.noDeprecation</code> boolean (only effective
+when set before a module is loaded.)</p>
+<p>If <code>--trace-deprecation</code> is set, a warning and a stack trace are logged
+to the console the first time the deprecated API is used.  Configurable
+at run-time through the <code>process.traceDeprecation</code> boolean.</p>
+<p>If <code>--throw-deprecation</code> is set then the application throws an exception
+when the deprecated API is used.  Configurable at run-time through the
+<code>process.throwDeprecation</code> boolean.</p>
+<p><code>process.throwDeprecation</code> takes precedence over <code>process.traceDeprecation</code>.</p>
+<h2 id="util-error-">util.error([...])</h2>
+<pre><code>Stability: 0 - Deprecated: Use [<span class="hljs-link_label">`console.error()`</span>][<span class="hljs-link_reference"></span>] instead.
+</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
 <h2 id="util-format-format-">util.format(format[, ...])</h2>
 <p>Returns a formatted string using the first argument as a <code>printf</code>-like format.</p>
 <p>The first argument is a string that contains zero or more <em>placeholders</em>.
@@ -130,48 +159,79 @@ argument. Supported placeholders are:</p>
 <ul>
 <li><code>%s</code> - String.</li>
 <li><code>%d</code> - Number (both integer and float).</li>
-<li><code>%j</code> - JSON.  Replaced with the string <code>&#39;[Circular]&#39;</code> if the argument<pre><code>   <span class="hljs-keyword">contains</span> circular references.
-</code></pre></li>
+<li><code>%j</code> - JSON.  Replaced with the string <code>&#39;[Circular]&#39;</code> if the argument
+contains circular references.</li>
 <li><code>%%</code> - single percent sign (<code>&#39;%&#39;</code>). This does not consume an argument.</li>
 </ul>
 <p>If the placeholder does not have a corresponding argument, the placeholder is
 not replaced.</p>
-<pre><code>util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:%s'</span>
-</code></pre><p>If there are more arguments than placeholders, the extra arguments are
-converted to strings with <code>util.inspect()</code> and these strings are concatenated,
-delimited by a space.</p>
-<pre><code>util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:bar baz'</span>
-</code></pre><p>If the first argument is not a format string then <code>util.format()</code> returns
+<pre><code class="lang-js">util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:%s'</span>
+</code></pre>
+<p>If there are more arguments than placeholders, the extra arguments are
+coerced to strings (for objects and symbols, <code>util.inspect()</code> is used)
+and then concatenated, delimited by a space.</p>
+<pre><code class="lang-js">util.format(<span class="hljs-string">'%s:%s'</span>, <span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'foo:bar baz'</span>
+</code></pre>
+<p>If the first argument is not a format string then <code>util.format()</code> returns
 a string that is the concatenation of all its arguments separated by spaces.
 Each argument is converted to a string with <code>util.inspect()</code>.</p>
-<pre><code>util.format(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-regexp">//</span> <span class="hljs-string">'1 2 3'</span>
-</code></pre><h2 id="util-log-string-">util.log(string)</h2>
-<p>Output with timestamp on <code>stdout</code>.</p>
-<pre><code><span class="hljs-keyword">require</span>(<span class="hljs-string">'util'</span>)<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(<span class="hljs-string">'Timestamped message.'</span>);
-</code></pre><h2 id="util-inspect-object-options-">util.inspect(object[, options])</h2>
+<pre><code class="lang-js">util.format(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// '1 2 3'</span>
+</code></pre>
+<h2 id="util-inherits-constructor-superconstructor-">util.inherits(constructor, superConstructor)</h2>
+<p>Inherit the prototype methods from one <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/constructor" target="_blank" rel="nofollow">constructor</a> into another.  The
+prototype of <code>constructor</code> will be set to a new object created from
+<code>superConstructor</code>.</p>
+<p>As an additional convenience, <code>superConstructor</code> will be accessible
+through the <code>constructor.super_</code> property.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<span class="hljs-keyword">const</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'events'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyStream</span>(<span class="hljs-params"></span>) </span>{
+    EventEmitter.call(<span class="hljs-keyword">this</span>);
+}
+
+util.inherits(MyStream, EventEmitter);
+
+MyStream.prototype.write = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'data'</span>, data);
+}
+
+<span class="hljs-keyword">var</span> stream = <span class="hljs-keyword">new</span> MyStream();
+
+<span class="hljs-built_in">console</span>.log(stream <span class="hljs-keyword">instanceof</span> EventEmitter); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(MyStream.super_ === EventEmitter); <span class="hljs-comment">// true</span>
+
+stream.on(<span class="hljs-string">'data'</span>, (data) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Received data: "<span class="hljs-subst">${data}</span>"`</span>);
+})
+stream.write(<span class="hljs-string">'It works!'</span>); <span class="hljs-comment">// Received data: "It works!"</span>
+</code></pre>
+<h2 id="util-inspect-object-options-">util.inspect(object[, options])</h2>
 <p>Return a string representation of <code>object</code>, which is useful for debugging.</p>
 <p>An optional <em>options</em> object may be passed that alters certain aspects of the
 formatted string:</p>
 <ul>
-<li><p><code>showHidden</code> - if <code>true</code> then the object&#39;s non-enumerable properties will be
-shown too. Defaults to <code>false</code>.</p>
+<li><p><code>showHidden</code> - if <code>true</code> then the object&#39;s non-enumerable and symbol
+properties will be shown too. Defaults to <code>false</code>.</p>
 </li>
 <li><p><code>depth</code> - tells <code>inspect</code> how many times to recurse while formatting the
 object. This is useful for inspecting large complicated objects. Defaults to
 <code>2</code>. To make it recurse indefinitely pass <code>null</code>.</p>
 </li>
 <li><p><code>colors</code> - if <code>true</code>, then the output will be styled with ANSI color codes.
-Defaults to <code>false</code>. Colors are customizable, see below.</p>
+Defaults to <code>false</code>. Colors are customizable, see <a href="#util_customizing_util_inspect_colors">Customizing
+<code>util.inspect</code> colors</a>.</p>
 </li>
 <li><p><code>customInspect</code> - if <code>false</code>, then custom <code>inspect(depth, opts)</code> functions
 defined on the objects being inspected won&#39;t be called. Defaults to <code>true</code>.</p>
 </li>
 </ul>
 <p>Example of inspecting all properties of the <code>util</code> object:</p>
-<pre><code><span class="hljs-reserved">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
-<span class="hljs-built_in">console</span>.log(util.inspect(util, { <span class="hljs-attribute">showHidden</span>: <span class="hljs-literal">true</span>, <span class="hljs-attribute">depth</span>: <span class="hljs-literal">null</span> }));
-</code></pre><p>Values may supply their own custom <code>inspect(depth, opts)</code> functions, when
+<span class="hljs-built_in">console</span>.log(util.inspect(util, { showHidden: <span class="hljs-literal">true</span>, depth: <span class="hljs-literal">null</span> }));
+</code></pre>
+<p>Values may supply their own custom <code>inspect(depth, opts)</code> functions, when
 called they receive the current depth in the recursive inspection, as well as
 the options object passed to <code>util.inspect()</code>.</p>
 <h3 id="customizing-util-inspect-colors">Customizing <code>util.inspect</code> colors</h3>
@@ -192,56 +252,75 @@ Highlighted styles and their default values are:</p>
 <li><code>special</code> - only function at this time (cyan)</li>
 <li><code>name</code> (intentionally no styling)</li>
 </ul>
-<p>Predefined color codes are: <code>white</code>, <code>grey</code>, <code>black</code>, <code>blue</code>, <code>cyan</code>, 
+<p>Predefined color codes are: <code>white</code>, <code>grey</code>, <code>black</code>, <code>blue</code>, <code>cyan</code>,
 <code>green</code>, <code>magenta</code>, <code>red</code> and <code>yellow</code>.
 There are also <code>bold</code>, <code>italic</code>, <code>underline</code> and <code>inverse</code> codes.</p>
 <h3 id="custom-inspect-function-on-objects">Custom <code>inspect()</code> function on Objects</h3>
 <!-- type=misc -->
 <p>Objects also may define their own <code>inspect(depth)</code> function which <code>util.inspect()</code>
 will invoke and use the result of when inspecting the object:</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
 <span class="hljs-keyword">var</span> obj = { name: <span class="hljs-string">'nate'</span> };
-obj.inspect = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(depth)</span> </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-string">'{'</span> + <span class="hljs-keyword">this</span>.name + <span class="hljs-string">'}'</span>;
+obj.inspect = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">depth</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`{<span class="hljs-subst">${this.name}</span>}`</span>;
 };
 
 util.inspect(obj);
   <span class="hljs-comment">// "{nate}"</span>
-</code></pre><p>You may also return another Object entirely, and the returned String will be
+</code></pre>
+<p>You may also return another Object entirely, and the returned String will be
 formatted according to the returned Object. This is similar to how
 <code>JSON.stringify()</code> works:</p>
-<pre><code><span class="hljs-keyword">var</span> obj = { foo: <span class="hljs-string">'this will not show up in the inspect() output'</span> };
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = { foo: <span class="hljs-string">'this will not show up in the inspect() output'</span> };
 obj.inspect = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(depth)</span> </span>{
   <span class="hljs-keyword">return</span> { bar: <span class="hljs-string">'baz'</span> };
 };
 
 util.inspect(obj);
   <span class="hljs-comment">// "{ bar: 'baz' }"</span>
-</code></pre><h2 id="util-isarray-object-">util.isArray(object)</h2>
-<p>Internal alias for Array.isArray.</p>
-<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Array</code>. <code>false</code> otherwise.</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+</code></pre>
+<h2 id="util-isarray-object-">util.isArray(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Internal alias for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="nofollow"><code>Array.isArray</code></a>.</p>
+<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Array</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = require(<span class="hljs-string">'util'</span>)<span class="hljs-comment">;</span>
 
-util.isArray([])
-  <span class="hljs-comment">// true</span>
-util.isArray(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>)
-  <span class="hljs-comment">// true</span>
-util.isArray({})
-  <span class="hljs-comment">// false</span>
-</code></pre><h2 id="util-isregexp-object-">util.isRegExp(object)</h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. <code>false</code> otherwise.</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+util.<span class="hljs-built_in">isArray</span>([])
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isArray</span>(new Array)
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isArray</span>({})
+  // <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="util-isboolean-object-">util.isBoolean(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Boolean</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
-util.isRegExp(<span class="hljs-regexp">/some regexp/</span>)
-  <span class="hljs-comment">// true</span>
-util.isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'another regexp'</span>))
-  <span class="hljs-comment">// true</span>
-util.isRegExp({})
+util.isBoolean(<span class="hljs-number">1</span>)
   <span class="hljs-comment">// false</span>
-</code></pre><h2 id="util-isdate-object-">util.isDate(object)</h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. <code>false</code> otherwise.</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+util.isBoolean(<span class="hljs-number">0</span>)
+  <span class="hljs-comment">// false</span>
+util.isBoolean(<span class="hljs-literal">false</span>)
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isbuffer-object-">util.isBuffer(object)</h2>
+<pre><code>Stability: 0 - Deprecated: Use [<span class="hljs-link_label">`Buffer.isBuffer()`</span>][<span class="hljs-link_reference"></span>] instead.
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Buffer</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isBuffer({ length: <span class="hljs-number">0</span> })
+  <span class="hljs-comment">// false</span>
+util.isBuffer([])
+  <span class="hljs-comment">// false</span>
+util.isBuffer(<span class="hljs-keyword">new</span> Buffer(<span class="hljs-string">'hello world'</span>))
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isdate-object-">util.isDate(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
 util.isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>())
   <span class="hljs-comment">// true</span>
@@ -249,9 +328,12 @@ util.isDate(<span class="hljs-built_in">Date</span>())
   <span class="hljs-comment">// false (without 'new' returns a String)</span>
 util.isDate({})
   <span class="hljs-comment">// false</span>
-</code></pre><h2 id="util-iserror-object-">util.isError(object)</h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Error</code>. <code>false</code> otherwise.</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+</code></pre>
+<h2 id="util-iserror-object-">util.isError(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is an <a href="errors.html#errors_class_error"><code>Error</code></a>. Otherwise, returns
+<code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
 util.isError(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>())
   <span class="hljs-comment">// true</span>
@@ -259,61 +341,182 @@ util.isError(<span class="hljs-keyword">new</span> <span class="hljs-built_in">T
   <span class="hljs-comment">// true</span>
 util.isError({ name: <span class="hljs-string">'Error'</span>, message: <span class="hljs-string">'an error occurred'</span> })
   <span class="hljs-comment">// false</span>
-</code></pre><h2 id="util-inherits-constructor-superconstructor-">util.inherits(constructor, superConstructor)</h2>
-<p>Inherit the prototype methods from one
-<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/constructor" target="_blank" rel="nofollow">constructor</a>
-into another.  The prototype of <code>constructor</code> will be set to a new
-object created from <code>superConstructor</code>.</p>
-<p>As an additional convenience, <code>superConstructor</code> will be accessible
-through the <code>constructor.super_</code> property.</p>
-<pre><code><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">"util"</span>);
-<span class="hljs-keyword">var</span> events = <span class="hljs-built_in">require</span>(<span class="hljs-string">"events"</span>);
+</code></pre>
+<p>Note that this method relies on <code>Object.prototype.toString()</code> behavior. It is
+possible to obtain an incorrect result when the <code>object</code> argument manipulates
+<code>@@toStringTag</code>.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// This example requires the `--harmony-tostring` flag</span>
+<span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<span class="hljs-keyword">const</span> obj = { name: <span class="hljs-string">'Error'</span>, message: <span class="hljs-string">'an error occurred'</span> };
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyStream</span><span class="hljs-params">()</span> </span>{
-    events.EventEmitter.call(<span class="hljs-keyword">this</span>);
-}
+util.isError(obj);
+  <span class="hljs-comment">// false</span>
+obj[<span class="hljs-built_in">Symbol</span>.toStringTag] = <span class="hljs-string">'Error'</span>;
+util.isError(obj);
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isfunction-object-">util.isFunction(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Function</code>. Otherwise, returns
+<code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
-util.inherits(MyStream, events.EventEmitter);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>) </span>{}
+<span class="hljs-keyword">var</span> Bar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{};
 
-MyStream.prototype.write = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
-    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">"data"</span>, data);
-}
+util.isFunction({})
+  <span class="hljs-comment">// false</span>
+util.isFunction(Foo)
+  <span class="hljs-comment">// true</span>
+util.isFunction(Bar)
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isnull-object-">util.isNull(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is strictly <code>null</code>. Otherwise, returns
+<code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
-<span class="hljs-keyword">var</span> stream = <span class="hljs-keyword">new</span> MyStream();
+util.isNull(<span class="hljs-number">0</span>)
+  <span class="hljs-comment">// false</span>
+util.isNull(<span class="hljs-literal">undefined</span>)
+  <span class="hljs-comment">// false</span>
+util.isNull(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isnullorundefined-object-">util.isNullOrUndefined(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is <code>null</code> or <code>undefined</code>. Otherwise,
+returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
 
-<span class="hljs-built_in">console</span>.log(stream <span class="hljs-keyword">instanceof</span> events.EventEmitter); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(MyStream.super_ === events.EventEmitter); <span class="hljs-comment">// true</span>
+util.isNullOrUndefined(<span class="hljs-number">0</span>)
+  <span class="hljs-comment">// false</span>
+util.isNullOrUndefined(<span class="hljs-literal">undefined</span>)
+  <span class="hljs-comment">// true</span>
+util.isNullOrUndefined(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isnumber-object-">util.isNumber(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Number</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = require(<span class="hljs-string">'util'</span>)<span class="hljs-comment">;</span>
 
-stream.on(<span class="hljs-string">"data"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Received data: "'</span> + data + <span class="hljs-string">'"'</span>);
-})
-stream.write(<span class="hljs-string">"It works!"</span>); <span class="hljs-comment">// Received data: "It works!"</span>
-</code></pre><h2 id="util-deprecate-function-string-">util.deprecate(function, string)</h2>
-<p>Marks that a method should not be used any more.</p>
-<pre><code>exports.puts = exports.deprecate(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
-  <span class="hljs-keyword">for</span> (var <span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>, len = arguments.<span class="hljs-built_in">length</span>; <span class="hljs-built_in">i</span> &lt; len; ++<span class="hljs-built_in">i</span>) <span class="hljs-cell">{
-    process.stdout.write(arguments[i] + <span class="hljs-string">'\n'</span>);
-  }</span>
-}, <span class="hljs-string">'util.puts: Use console.log instead'</span>)
-</code></pre><p>It returns a modified function which warns once by default. If
-<code>--no-deprecation</code> is set then this function is a NO-OP. If
-<code>--throw-deprecation</code> is set then the application will throw an exception
-if the deprecated API is used.</p>
-<h2 id="util-debug-string-">util.debug(string)</h2>
-<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: use console.<span class="hljs-function"><span class="hljs-title">error</span><span class="hljs-params">()</span></span> instead.
-</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
-<h2 id="util-error-">util.error([...])</h2>
-<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use console.<span class="hljs-function"><span class="hljs-title">error</span><span class="hljs-params">()</span></span> instead.
-</code></pre><p>Deprecated predecessor of <code>console.error</code>.</p>
+util.<span class="hljs-built_in">isNumber</span>(<span class="hljs-literal">false</span>)
+  // <span class="hljs-literal">false</span>
+util.<span class="hljs-built_in">isNumber</span>(Infinity)
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isNumber</span>(<span class="hljs-number">0</span>)
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isNumber</span>(NaN)
+  // <span class="hljs-literal">true</span>
+</code></pre>
+<h2 id="util-isobject-object-">util.isObject(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is strictly an <code>Object</code> <strong>and</strong> not a
+<code>Function</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isObject(<span class="hljs-number">5</span>)
+  <span class="hljs-comment">// false</span>
+util.isObject(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// false</span>
+util.isObject({})
+  <span class="hljs-comment">// true</span>
+util.isObject(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})
+  <span class="hljs-comment">// false</span>
+</code></pre>
+<h2 id="util-isprimitive-object-">util.isPrimitive(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a primitive type. Otherwise, returns
+<code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isPrimitive(<span class="hljs-number">5</span>)
+  <span class="hljs-comment">// true</span>
+util.isPrimitive(<span class="hljs-string">'foo'</span>)
+  <span class="hljs-comment">// true</span>
+util.isPrimitive(<span class="hljs-literal">false</span>)
+  <span class="hljs-comment">// true</span>
+util.isPrimitive(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// true</span>
+util.isPrimitive(<span class="hljs-literal">undefined</span>)
+  <span class="hljs-comment">// true</span>
+util.isPrimitive({})
+  <span class="hljs-comment">// false</span>
+util.isPrimitive(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{})
+  <span class="hljs-comment">// false</span>
+util.isPrimitive(<span class="hljs-regexp">/^$/</span>)
+  <span class="hljs-comment">// false</span>
+util.isPrimitive(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>())
+  <span class="hljs-comment">// false</span>
+</code></pre>
+<h2 id="util-isregexp-object-">util.isRegExp(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isRegExp(<span class="hljs-regexp">/some regexp/</span>)
+  <span class="hljs-comment">// true</span>
+util.isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'another regexp'</span>))
+  <span class="hljs-comment">// true</span>
+util.isRegExp({})
+  <span class="hljs-comment">// false</span>
+</code></pre>
+<h2 id="util-isstring-object-">util.isString(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>String</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = require(<span class="hljs-string">'util'</span>)<span class="hljs-comment">;</span>
+
+util.<span class="hljs-built_in">isString</span>(<span class="hljs-string">''</span>)
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isString</span>(<span class="hljs-string">'foo'</span>)
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isString</span>(<span class="hljs-built_in">String</span>(<span class="hljs-string">'foo'</span>))
+  // <span class="hljs-literal">true</span>
+util.<span class="hljs-built_in">isString</span>(<span class="hljs-number">5</span>)
+  // <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="util-issymbol-object-">util.isSymbol(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Symbol</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+util.isSymbol(<span class="hljs-number">5</span>)
+  <span class="hljs-comment">// false</span>
+util.isSymbol(<span class="hljs-string">'foo'</span>)
+  <span class="hljs-comment">// false</span>
+util.isSymbol(<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'foo'</span>))
+  <span class="hljs-comment">// true</span>
+</code></pre>
+<h2 id="util-isundefined-object-">util.isUndefined(object)</h2>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p>Returns <code>true</code> if the given &quot;object&quot; is <code>undefined</code>. Otherwise, returns <code>false</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+<span class="hljs-keyword">var</span> foo;
+util.isUndefined(<span class="hljs-number">5</span>)
+  <span class="hljs-comment">// false</span>
+util.isUndefined(foo)
+  <span class="hljs-comment">// true</span>
+util.isUndefined(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// false</span>
+</code></pre>
+<h2 id="util-log-string-">util.log(string)</h2>
+<p>Output with timestamp on <code>stdout</code>.</p>
+<pre><code><span class="hljs-keyword">require</span>(<span class="hljs-string">'util'</span>)<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(<span class="hljs-string">'Timestamped message.'</span>);
+</code></pre><h2 id="util-print-">util.print([...])</h2>
+<pre><code>Stability: 0 - Deprecated: Use [<span class="hljs-link_label">`console.log()`</span>][<span class="hljs-link_reference"></span>] instead.
+</code></pre><p>Deprecated predecessor of <code>console.log</code>.</p>
 <h2 id="util-puts-">util.puts([...])</h2>
-<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use console.<span class="hljs-function"><span class="hljs-title">log</span><span class="hljs-params">()</span></span> instead.
+<pre><code>Stability: 0 - Deprecated: Use [<span class="hljs-link_label">`console.log()`</span>][<span class="hljs-link_reference"></span>] instead.
 </code></pre><p>Deprecated predecessor of <code>console.log</code>.</p>
-<h2 id="util-print-">util.print([...])</h2>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-number">0</span> - <span class="hljs-attribute">Deprecated</span>: Use <span class="hljs-built_in">`console.log`</span> instead.
-</code></pre><p>Deprecated predecessor of <code>console.log</code>.</p>
-<h2 id="util-pump-readablestream-writablestream-callback-">util.pump(readableStream, writableStream[, callback])</h2>
-<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use readableStream.<span class="hljs-function"><span class="hljs-title">pipe</span><span class="hljs-params">(writableStream)</span></span>
-</code></pre><p>Deprecated predecessor of <code>stream.pipe()</code>.</p>
+<h2 id="util-_extend-obj-">util._extend(obj)</h2>
+<pre><code>Stability: <span class="hljs-number">0</span> - Deprecated: Use Object.<span class="hljs-function"><span class="hljs-title">assign</span><span class="hljs-params">()</span></span> instead.
+</code></pre><p><code>_extend</code> was never intended to be used outside of internal NodeJS modules. The
+community found and used it anyway.</p>
+<p>It is deprecated and should not be used in new code. JavaScript comes with very
+similar built-in functionality through <code>Object.assign</code>.</p>
 
 
           </section>

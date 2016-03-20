@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -129,9 +133,11 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPreLoginEvent.html'>PlayerPreLoginEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerResourcePackStatusEvent.html'>PlayerResourcePackStatusEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerSwapHandItemsEvent.html'>PlayerSwapHandItemsEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
@@ -206,6 +212,10 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
+<td>new <strong>PlayerInteractEvent</strong>(Player, Action, ItemStack, Block, BlockFace, EquipmentSlot) <br> <em>PlayerInteractEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
 <td> readonly property <strong>ClickedBlock</strong> <br> <em>Get: Returns the clicked block</em></td>
 <td style="text-align:left"><a href="../../block/Block.html"><code>Block</code></a></td>
 </tr>
@@ -222,12 +232,20 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Material</strong> <br> <em>Get: Convenience method. Returns the material of the item represented by</em></td>
-<td style="text-align:left"><a href="../../Material.html"><code>Material</code></a></td>
+<td> readonly property <strong>Hand</strong> <br> <em>Get: The hand used to perform this interaction. May be null in the case of</em></td>
+<td style="text-align:left"><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
+</tr>
+<tr>
+<td> writeonly property <strong>UseInteractedBlock</strong> <br> <em>UseInteractedBlock property</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Material</strong> <br> <em>Get: Convenience method. Returns the material of the item represented by</em></td>
+<td style="text-align:left"><a href="../../Material.html"><code>Material</code></a></td>
 </tr>
 <tr>
 <td> readonly property <strong>Item</strong> <br> <em>Get: Returns the item in hand represented by this event</em></td>
@@ -238,16 +256,8 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> writeonly property <strong>UseInteractedBlock</strong> <br> <em>UseInteractedBlock property</em></td>
-<td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
 <td> writeonly property <strong>UseItemInHand</strong> <br> <em>UseItemInHand property</em></td>
 <td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
-<td> function <strong>useInteractedBlock</strong>() <br> <em>This controls the action to take with the block (if any) that was</em></td>
-<td style="text-align:left"><code>Result</code></td>
 </tr>
 <tr>
 <td> function <strong>hasBlock</strong>() <br> <em>Check if this event involved a block</em></td>
@@ -264,6 +274,10 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td> function <strong>isCancelled</strong>() <br> <em>Gets the cancellation state of this event. Set to true if you want to</em></td>
 <td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>useInteractedBlock</strong>() <br> <em>This controls the action to take with the block (if any) that was</em></td>
+<td style="text-align:left"><code>Result</code></td>
 </tr>
 <tr>
 <td> function <strong>useItemInHand</strong>() <br> <em>This controls the action to take with the item the player is holding.</em></td>
@@ -355,6 +369,49 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-playerinteractevent-a-new-__playerinteractevent__-player-action-itemstack-block-blockface-equipmentslot-"><a id='playerinteractevent'></a>new <strong>PlayerInteractEvent</strong>(Player, Action, ItemStack, Block, BlockFace, EquipmentSlot)</h5>
+<p><em>PlayerInteractEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Player</td>
+<td><code>final</code></td>
+<td>Player argument</td>
+</tr>
+<tr>
+<td>Action</td>
+<td><code>final</code></td>
+<td>Action argument</td>
+</tr>
+<tr>
+<td>ItemStack</td>
+<td><code>final</code></td>
+<td>ItemStack argument</td>
+</tr>
+<tr>
+<td>Block</td>
+<td><code>final</code></td>
+<td>Block argument</td>
+</tr>
+<tr>
+<td>BlockFace</td>
+<td><code>final</code></td>
+<td>BlockFace argument</td>
+</tr>
+<tr>
+<td>EquipmentSlot</td>
+<td><code>final</code></td>
+<td>EquipmentSlot argument</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-properties-for-playerinteractevent-playerinteractevent-md-">Public Properties for <a href="PlayerInteractEvent.html"><code>PlayerInteractEvent</code></a></h3>
 <h5 id="-a-id-clickedblock-a-public-readonly-property-__clickedblock__"><a id='clickedblock'></a>public  readonly property <strong>ClickedBlock</strong></h5>
@@ -420,8 +477,8 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-material-a-public-readonly-property-__material__"><a id='material'></a>public  readonly property <strong>Material</strong></h5>
-<p><em>Get: Convenience method. Returns the material of the item represented by this event</em></p>
+<h5 id="-a-id-hand-a-public-readonly-property-__hand__"><a id='hand'></a>public  readonly property <strong>Hand</strong></h5>
+<p><em>Get: The hand used to perform this interaction. May be null in the case of <code>Action#PHYSICAL</code>.</em></p>
 <table>
 <thead>
 <tr>
@@ -431,8 +488,39 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../../Material.html"><code>Material</code></a></td>
-<td>Material the material of the item used</td>
+<td><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
+<td>the hand used to interact. May be null.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-useinteractedblock-a-public-writeonly-property-__useinteractedblock__"><a id='useinteractedblock'></a>public  writeonly property <strong>UseInteractedBlock</strong></h5>
+<p><em>UseInteractedBlock property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useInteractedBlock</td>
+<td><code>Result</code></td>
+<td>the action to take with the interacted block</td>
 </tr>
 </tbody>
 </table>
@@ -448,6 +536,22 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-material-a-public-readonly-property-__material__"><a id='material'></a>public  readonly property <strong>Material</strong></h5>
+<p><em>Get: Convenience method. Returns the material of the item represented by this event</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../Material.html"><code>Material</code></a></td>
+<td>Material the material of the item used</td>
 </tr>
 </tbody>
 </table>
@@ -498,37 +602,6 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-useinteractedblock-a-public-writeonly-property-__useinteractedblock__"><a id='useinteractedblock'></a>public  writeonly property <strong>UseInteractedBlock</strong></h5>
-<p><em>UseInteractedBlock property</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Set</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>useInteractedBlock</td>
-<td><code>Result</code></td>
-<td>the action to take with the interacted block</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-useiteminhand-a-public-writeonly-property-__useiteminhand__"><a id='useiteminhand'></a>public  writeonly property <strong>UseItemInHand</strong></h5>
 <p><em>UseItemInHand property</em></p>
 <table>
@@ -562,22 +635,6 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </table>
 <hr>
 <h3 id="public-methods-for-playerinteractevent-playerinteractevent-md-">Public Methods for <a href="PlayerInteractEvent.html"><code>PlayerInteractEvent</code></a></h3>
-<h5 id="-a-id-useinteractedblock-a-public-function-__useinteractedblock__-"><a id='useinteractedblock'></a>public  function <strong>useInteractedBlock</strong>()</h5>
-<p><em>This controls the action to take with the block (if any) that was clicked on. This event gets processed for all blocks, but most don&#39;t have a default action</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Result</code></td>
-<td>the action to take with the interacted block</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-hasblock-a-public-function-__hasblock__-"><a id='hasblock'></a>public  function <strong>hasBlock</strong>()</h5>
 <p><em>Check if this event involved a block</em></p>
 <table>
@@ -639,6 +696,22 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td><code>boolean</code></td>
 <td>boolean cancellation state</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-useinteractedblock-a-public-function-__useinteractedblock__-"><a id='useinteractedblock'></a>public  function <strong>useInteractedBlock</strong>()</h5>
+<p><em>This controls the action to take with the block (if any) that was clicked on. This event gets processed for all blocks, but most don&#39;t have a default action</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Result</code></td>
+<td>the action to take with the interacted block</td>
 </tr>
 </tbody>
 </table>

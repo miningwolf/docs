@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -146,7 +150,8 @@
             <h2 id="servercommandevent-__class__">ServerCommandEvent <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.event.server.ServerCommandEvent
-Extends <a href="ServerEvent.html"><code>ServerEvent</code></a></p>
+Extends <a href="ServerEvent.html"><code>ServerEvent</code></a>
+Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'server.ServerCommandEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
 </code></pre>
 </blockquote>
@@ -180,6 +185,14 @@ Extends <a href="ServerEvent.html"><code>ServerEvent</code></a></p>
 <tr>
 <td> readonly property <strong>Sender</strong> <br> <em>Get: Get the command sender.</em></td>
 <td style="text-align:left"><a href="../../command/CommandSender.html"><code>CommandSender</code></a></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Cancelled</strong> <br> <em>Cancelled property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>isCancelled</strong>() <br> <em>isCancelled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td></td>
@@ -321,6 +334,54 @@ Extends <a href="ServerEvent.html"><code>ServerEvent</code></a></p>
 <tr>
 <td><a href="../../command/CommandSender.html"><code>CommandSender</code></a></td>
 <td>The sender</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-cancelled-a-public-writeonly-property-__cancelled__"><a id='cancelled'></a>public  writeonly property <strong>Cancelled</strong></h5>
+<p><em>Cancelled property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancel</td>
+<td><code>boolean</code></td>
+<td>cancel argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-servercommandevent-servercommandevent-md-">Public Methods for <a href="ServerCommandEvent.html"><code>ServerCommandEvent</code></a></h3>
+<h5 id="-a-id-iscancelled-a-public-function-__iscancelled__-"><a id='iscancelled'></a>public  function <strong>isCancelled</strong>()</h5>
+<p><em>isCancelled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API errors</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../assets/css/docs.css" rel="stylesheet" />
+  <link href="../assets/css/github.css" rel="stylesheet" />
+  <link href="../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../index.html'>Docs </a></li>
+ <li><a href='../wolfnode/globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>errors</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../wolfnode/globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='active'><a href='../wolfnode/errors.html'>errors</a></li>
+<li><a href='../wolfnode/v8.html'>v8</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="errors">Errors</h1>
+<!--type=misc-->
+<p>Applications running in Node.js will generally experience four categories of
+errors:</p>
+<ul>
+<li>Standard JavaScript errors such as:<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError" target="_blank" rel="nofollow"><code>EvalError</code></a>: thrown when a call to <code>eval()</code> fails.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError" target="_blank" rel="nofollow"><code>SyntaxError</code></a>: thrown in response to improper JavaScript language
+syntax.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError" target="_blank" rel="nofollow"><code>RangeError</code></a>: thrown when a value is not within an expected range</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError" target="_blank" rel="nofollow"><code>ReferenceError</code></a>: thrown when using undefined variables</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError" target="_blank" rel="nofollow"><code>TypeError</code></a>: thrown when passing arguments of the wrong type</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError" target="_blank" rel="nofollow"><code>URIError</code></a>: thrown when a global URI handling function is misused.</li>
+</ul>
+</li>
+<li>System errors triggered by underlying operating system constraints such
+as attempting to open a file that does not exist, attempting to send data
+over a closed socket, etc;</li>
+<li>And User-specified errors triggered by application code.</li>
+<li>Assertion Errors are a special class of error that can be triggered whenever
+Node.js detects an exceptional logic violation that should never occur. These
+are raised typically by the <code>assert</code> module.</li>
+</ul>
+<p>All JavaScript and System errors raised by Node.js inherit from, or are
+instances of, the standard JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank" rel="nofollow"><code>Error</code></a> class and are guaranteed
+to provide <em>at least</em> the properties available on that class.</p>
+<h2 id="error-propagation-and-interception">Error Propagation and Interception</h2>
+<!--type=misc-->
+<p>Node.js supports several mechanisms for propagating and handling errors that
+occur while an application is running. How these errors are reported and
+handled depends entirely on the type of Error and the style of the API that is
+called.</p>
+<p>All JavaScript errors are handled as exceptions that <em>immediately</em> generate
+and throw an error using the standard JavaScript <code>throw</code> mechanism. These
+are handled using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="_blank" rel="nofollow"><code>try / catch</code> construct</a> provided by the JavaScript
+language.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Throws with a ReferenceError because z is undefined</span>
+try {
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">m</span> = 1;
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">n</span> = <span class="hljs-keyword">m</span> + z;
+} catch (<span class="hljs-keyword">err</span>) {
+  <span class="hljs-comment">// Handle the error here.</span>
+}
+</code></pre>
+<p>Any use of the JavaScript <code>throw</code> mechanism will raise an exception that
+<em>must</em> be handled using <code>try / catch</code> or the Node.js process will exit
+immediately.</p>
+<p>With few exceptions, <em>Synchronous</em> APIs (any blocking method that does not
+accept a <code>callback</code> function, such as <a href="fs.html#fs_fs_readfilesync_file_options"><code>fs.readFileSync</code></a>), will use <code>throw</code>
+to report errors.</p>
+<p>Errors that occur within <em>Asynchronous APIs</em> may be reported in multiple ways:</p>
+<ul>
+<li><p>Most asynchronous methods that accept a <code>callback</code> function will accept an
+<code>Error</code> object passed as the first argument to that function. If that first
+argument is not <code>null</code> and is an instance of <code>Error</code>, then an error occurred
+that should be handled.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = require('fs');
+fs.readFile('a <span class="hljs-keyword">file</span> that does not exist', (<span class="hljs-keyword">err</span>, data) =&gt; {
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">err</span>) {
+    console.<span class="hljs-keyword">error</span>('There was <span class="hljs-keyword">an</span> <span class="hljs-keyword">error</span> reading the <span class="hljs-keyword">file</span>!', <span class="hljs-keyword">err</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-comment">// Otherwise handle the data</span>
+});
+</code></pre>
+</li>
+<li><p>When an asynchronous method is called on an object that is an <code>EventEmitter</code>,
+errors can be routed to that object&#39;s <code>&#39;error&#39;</code> event.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> <span class="hljs-keyword">net</span> = require('<span class="hljs-keyword">net</span>');
+<span class="hljs-keyword">const</span> connection = <span class="hljs-keyword">net</span>.connect('localhost');
+
+<span class="hljs-comment">// Adding an 'error' event handler to a stream:</span>
+connection.<span class="hljs-keyword">on</span>('<span class="hljs-keyword">error</span>', (<span class="hljs-keyword">err</span>) =&gt; {
+  <span class="hljs-comment">// If the connection is reset by the server, or if it can't</span>
+  <span class="hljs-comment">// connect at all, or on any sort of error encountered by</span>
+  <span class="hljs-comment">// the connection, the error will be sent here.</span>
+  console.<span class="hljs-keyword">error</span>(<span class="hljs-keyword">err</span>);
+});
+
+connection.pipe(process.stdout);
+</code></pre>
+</li>
+<li><p>A handful of typically asynchronous methods in the Node.js API may still
+use the <code>throw</code> mechanism to raise exceptions that must be handled using
+<code>try / catch</code>. There is no comprehensive list of such methods; please
+refer to the documentation of each method to determine the appropriate
+error handling mechanism required.</p>
+</li>
+</ul>
+<p>The use of the <code>&#39;error&#39;</code> event mechanism is most common for <a href="stream.html">stream-based</a>
+and <a href="events.html#events_class_events_eventemitter">event emitter-based</a> APIs, which themselves represent a series of
+asynchronous operations over time (as opposed to a single operation that may
+pass or fail).</p>
+<p>For <em>all</em> <code>EventEmitter</code> objects, if an <code>&#39;error&#39;</code> event handler is not
+provided, the error will be thrown, causing the Node.js process to report an
+unhandled exception and  crash unless either: The <a href="domain.html"><code>domain</code></a> module is used
+appropriately or a handler has been registered for the
+<a href="process.html#process_event_uncaughtexception"><code>process.on(&#39;uncaughtException&#39;)</code></a> event.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'events'</span>);
+<span class="hljs-keyword">const</span> ee = <span class="hljs-keyword">new</span> EventEmitter();
+
+setImmediate(() =&gt; {
+  <span class="hljs-comment">// This will crash the process because no 'error' event</span>
+  <span class="hljs-comment">// handler has been added.</span>
+  ee.emit(<span class="hljs-string">'error'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'This will crash'</span>));
+});
+</code></pre>
+<p>Errors generated in this way <em>cannot</em> be intercepted using <code>try / catch</code> as
+they are thrown <em>after</em> the calling code has already exited.</p>
+<p>Developers must refer to the documentation for each method to determine
+exactly how errors raised by those methods are propagated.</p>
+<h3 id="node-js-style-callbacks">Node.js style callbacks</h3>
+<!--type=misc-->
+<p>Most asynchronous methods exposed by the Node.js core API follow an idiomatic
+pattern  referred to as a &quot;Node.js style callback&quot;. With this pattern, a
+callback function is passed to the method as an argument. When the operation
+either completes or an error is raised, the callback function is called with
+the Error object (if any) passed as the first argument. If no error was raised,
+the first argument will be passed as <code>null</code>.</p>
+<pre><code class="lang-js">const fs = require('fs');
+
+function nodeStyleCallback(err, data) {
+ <span class="hljs-keyword">if</span> (err) {
+   console.<span class="hljs-keyword">error</span>('There was an <span class="hljs-keyword">error</span>', err);
+<span class="hljs-command">   return</span>;
+ }
+ console.<span class="hljs-command">log</span>(data);
+}
+
+fs.readFile('/<span class="hljs-keyword">some</span>/<span class="hljs-type">file</span>/<span class="hljs-keyword">that</span>/<span class="hljs-keyword">does</span>-<span class="hljs-keyword">not</span>-exist', nodeStyleCallback);
+fs.readFile('/<span class="hljs-keyword">some</span>/<span class="hljs-type">file</span>/<span class="hljs-keyword">that</span>/<span class="hljs-keyword">does</span>-exist', nodeStyleCallback)
+</code></pre>
+<p>The JavaScript <code>try / catch</code> mechanism <strong>cannot</strong> be used to intercept errors
+generated by asynchronous APIs.  A common mistake for beginners is to try to
+use <code>throw</code> inside a Node.js style callback:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// THIS WILL NOT WORK:</span>
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+
+<span class="hljs-keyword">try</span> {
+  fs.readFile(<span class="hljs-string">'/some/file/that/does-not-exist'</span>, (err, data) =&gt; {
+    <span class="hljs-comment">// mistaken assumption: throwing here...</span>
+    <span class="hljs-keyword">if</span> (err) {
+      <span class="hljs-keyword">throw</span> err;
+    }
+  });
+} <span class="hljs-keyword">catch</span>(err) {
+  <span class="hljs-comment">// This will not catch the throw!</span>
+  <span class="hljs-built_in">console</span>.log(err);
+}
+</code></pre>
+<p>This will not work because the callback function passed to <code>fs.readFile()</code> is
+called asynchronously. By the time the callback has been called, the
+surrounding code (including the <code>try { } catch(err) { }</code> block will have
+already exited. Throwing an error inside the callback <strong>can crash the Node.js
+process</strong> in most cases. If <a href="domain.html">domains</a> are enabled, or a handler has been
+registered with <code>process.on(&#39;uncaughtException&#39;)</code>, such errors can be
+intercepted.</p>
+<h2 id="class-error">Class: Error</h2>
+<!--type=class-->
+<p>A generic JavaScript <code>Error</code> object that does not denote any specific
+circumstance of why the error occurred. <code>Error</code> objects capture a &quot;stack trace&quot;
+detailing the point in the code at which the <code>Error</code> was instantiated, and may
+provide a text description of the error.</p>
+<p>All errors generated by Node.js, including all System and JavaScript errors,
+will either be instances of, or inherit from, the <code>Error</code> class.</p>
+<h3 id="new-error-message-">new Error(message)</h3>
+<p>Creates a new <code>Error</code> object and sets the <code>error.message</code> property to the
+provided text message. If an object is passed as <code>message</code>, the text message
+is generated by calling <code>message.toString()</code>. The <code>error.stack</code> property will
+represent the point in the code at which <code>new Error()</code> was called. Stack traces
+are dependent on <a href="https://github.com/v8/v8/wiki/Stack-Trace-API" target="_blank" rel="nofollow">V8&#39;s stack trace API</a>. Stack traces extend only to either
+(a) the beginning of  <em>synchronous code execution</em>, or (b) the number of frames
+given by the property <code>Error.stackTraceLimit</code>, whichever is smaller.</p>
+<h3 id="error-capturestacktrace-targetobject-constructoropt-">Error.captureStackTrace(targetObject[, constructorOpt])</h3>
+<p>Creates a <code>.stack</code> property on <code>targetObject</code>, which when accessed returns
+a string representing the location in the code at which
+<code>Error.captureStackTrace()</code> was called.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myObject = {};
+<span class="hljs-built_in">Error</span>.captureStackTrace(myObject);
+myObject.stack  // similar <span class="hljs-keyword">to</span> `<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>().stack`
+</code></pre>
+<p>The first line of the trace, instead of being prefixed with <code>ErrorType:
+message</code>, will be the result of calling <code>targetObject.toString()</code>.</p>
+<p>The optional <code>constructorOpt</code> argument accepts a function. If given, all frames
+above <code>constructorOpt</code>, including <code>constructorOpt</code>, will be omitted from the
+generated stack trace.</p>
+<p>The <code>constructorOpt</code> argument is useful for hiding implementation
+details of error generation from an end user. For instance:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyError</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">Error</span>.captureStackTrace(<span class="hljs-keyword">this</span>, MyError);
+}
+
+<span class="hljs-comment">// Without passing MyError to captureStackTrace, the MyError</span>
+<span class="hljs-comment">// frame would should up in the .stack property. by passing</span>
+<span class="hljs-comment">// the constructor, we omit that frame and all frames above it.</span>
+<span class="hljs-keyword">new</span> MyError().stack
+</code></pre>
+<h3 id="error-stacktracelimit">Error.stackTraceLimit</h3>
+<p>The <code>Error.stackTraceLimit</code> property specifies the number of stack frames
+collected by a stack trace (whether generated by <code>new Error().stack</code> or
+<code>Error.captureStackTrace(obj)</code>).</p>
+<p>The default value is <code>10</code> but may be set to any valid JavaScript number. Changes
+will affect any stack trace captured <em>after</em> the value has been changed.</p>
+<p>If set to a non-number value, or set to a negative number, stack traces will
+not capture any frames.</p>
+<h4 id="error-message">error.message</h4>
+<p>Returns the string description of error as set by calling <code>new Error(message)</code>.
+The <code>message</code> passed to the constructor will also appear in the first line of
+the stack trace of the <code>Error</code>, however changing this property after the
+<code>Error</code> object is created <em>may not</em> change the first line of the stack trace.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> err = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'The message'</span>);
+<span class="hljs-built_in">console</span>.log(err.message);
+  <span class="hljs-comment">// Prints: The message</span>
+</code></pre>
+<h4 id="error-stack">error.stack</h4>
+<p>Returns a string describing the point in the code at which the <code>Error</code> was
+instantiated.</p>
+<p>For example:</p>
+<pre><code>Error: Things keep happening!
+   at /home/gbusey/file<span class="hljs-class">.js</span>:<span class="hljs-number">525</span>:<span class="hljs-number">2</span>
+   at Frobnicator<span class="hljs-class">.refrobulate</span> (/home/gbusey/business-logic<span class="hljs-class">.js</span>:<span class="hljs-number">424</span>:<span class="hljs-number">21</span>)
+   at Actor.&lt;anonymous&gt; (/home/gbusey/actors<span class="hljs-class">.js</span>:<span class="hljs-number">400</span>:<span class="hljs-number">8</span>)
+   at increaseSynergy (/home/gbusey/actors<span class="hljs-class">.js</span>:<span class="hljs-number">701</span>:<span class="hljs-number">6</span>)
+</code></pre><p>The first line is formatted as <code>&lt;error class name&gt;: &lt;error message&gt;</code>, and
+is followed by a series of stack frames (each line beginning with &quot;at &quot;).
+Each frame describes a call site within the code that lead to the error being
+generated. V8 attempts to display a name for each function (by variable name,
+function name, or object method name), but occasionally it will not be able to
+find a suitable name. If V8 cannot determine a name for the function, only
+location information will be displayed for that frame. Otherwise, the
+determined function name will be displayed with location information appended
+in parentheses.</p>
+<p>It is important to note that frames are <strong>only</strong> generated for JavaScript
+functions. If, for example, execution synchronously passes through a C++ addon
+function called <code>cheetahify</code>, which itself calls a JavaScript function, the
+frame representing the <code>cheetahify</code> call will <strong>not</strong> be present in the stack
+traces:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> cheetahify = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./native-binding.node'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeFaster</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// cheetahify *synchronously* calls speedy.</span>
+  cheetahify(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">speedy</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'oh no!'</span>);
+  });
+}
+
+makeFaster(); <span class="hljs-comment">// will throw:</span>
+  <span class="hljs-comment">// /home/gbusey/file.js:6</span>
+  <span class="hljs-comment">//     throw new Error('oh no!');</span>
+  <span class="hljs-comment">//           ^</span>
+  <span class="hljs-comment">// Error: oh no!</span>
+  <span class="hljs-comment">//     at speedy (/home/gbusey/file.js:6:11)</span>
+  <span class="hljs-comment">//     at makeFaster (/home/gbusey/file.js:5:3)</span>
+  <span class="hljs-comment">//     at Object.&lt;anonymous&gt; (/home/gbusey/file.js:10:1)</span>
+  <span class="hljs-comment">//     at Module._compile (module.js:456:26)</span>
+  <span class="hljs-comment">//     at Object.Module._extensions..js (module.js:474:10)</span>
+  <span class="hljs-comment">//     at Module.load (module.js:356:32)</span>
+  <span class="hljs-comment">//     at Function.Module._load (module.js:312:12)</span>
+  <span class="hljs-comment">//     at Function.Module.runMain (module.js:497:10)</span>
+  <span class="hljs-comment">//     at startup (node.js:119:16)</span>
+  <span class="hljs-comment">//     at node.js:906:3</span>
+</code></pre>
+<p>The location information will be one of:</p>
+<ul>
+<li><code>native</code>, if the frame represents a call internal to V8 (as in <code>[].forEach</code>).</li>
+<li><code>plain-filename.js:line:column</code>, if the frame represents a call internal
+ to Node.js.</li>
+<li><code>/absolute/path/to/file.js:line:column</code>, if the frame represents a call in
+a user program, or its dependencies.</li>
+</ul>
+<p>The string representing the stack trace is lazily generated when the
+<code>error.stack</code> property is <strong>accessed</strong>.</p>
+<p>The number of frames captured by the stack trace is bounded by the smaller of
+<code>Error.stackTraceLimit</code> or the number of available frames on the current event
+loop tick.</p>
+<p>System-level errors are generated as augmented <code>Error</code> instances, which are
+detailed <a href="#errors_system_errors">here</a>.</p>
+<h2 id="class-rangeerror">Class: RangeError</h2>
+<p>A subclass of <code>Error</code> that indicates that a provided argument was not within the
+set or range of acceptable values for a function; whether that is a numeric
+range, or outside the set of options for a given function parameter.</p>
+<p>For example:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>).connect(-<span class="hljs-number">1</span>);
+  <span class="hljs-comment">// throws RangeError, port should be &gt; 0 &amp;&amp; &lt; 65536</span>
+</code></pre>
+<p>Node.js will generate and throw <code>RangeError</code> instances <em>immediately</em> as a form
+of argument validation.</p>
+<h2 id="class-referenceerror">Class: ReferenceError</h2>
+<p>A subclass of <code>Error</code> that indicates that an attempt is being made to access a
+variable that is not defined. Such errors commonly indicate typos in code, or
+an otherwise broken program.</p>
+<p>While client code may generate and propagate these errors, in practice, only V8
+will do so.</p>
+<pre><code class="lang-js">doesNotExist;
+  <span class="hljs-regexp">//</span> throws ReferenceError, doesNotExist <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> a variable <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span> program.
+</code></pre>
+<p><code>ReferenceError</code> instances will have an <code>error.arguments</code> property whose value
+is an array containing a single element: a string representing the variable
+that was not defined.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> <span class="hljs-keyword">assert</span> = require(<span class="hljs-string">'assert'</span>);
+<span class="hljs-keyword">try</span> {
+  doesNotExist;
+} <span class="hljs-keyword">catch</span>(err) {
+  <span class="hljs-keyword">assert</span>(err.arguments[<span class="hljs-number">0</span>], <span class="hljs-string">'doesNotExist'</span>);
+}
+</code></pre>
+<p>Unless an application is dynamically generating and running code,
+<code>ReferenceError</code> instances should always be considered a bug in the code
+or its dependencies.</p>
+<h2 id="class-syntaxerror">Class: SyntaxError</h2>
+<p>A subclass of <code>Error</code> that indicates that a program is not valid JavaScript.
+These errors may only be generated and propagated as a result of code
+evaluation. Code evaluation may happen as a result of <code>eval</code>, <code>Function</code>,
+<code>require</code>, or <a href="vm.html">vm</a>. These errors are almost always indicative of a broken
+program.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">'vm'</span>).runInThisContext(<span class="hljs-string">'binary ! isNotOk'</span>);
+} <span class="hljs-keyword">catch</span>(err) {
+  <span class="hljs-comment">// err will be a SyntaxError</span>
+}
+</code></pre>
+<p><code>SyntaxError</code> instances are unrecoverable in the context that created them –
+they may only be caught by other contexts.</p>
+<h2 id="class-typeerror">Class: TypeError</h2>
+<p>A subclass of <code>Error</code> that indicates that a provided argument is not an
+allowable type. For example, passing a function to a parameter which expects a
+string would be considered a TypeError.</p>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'url'</span>).parse(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ });
+  <span class="hljs-comment">// throws TypeError, since it expected a string</span>
+</code></pre>
+<p>Node.js will generate and throw <code>TypeError</code> instances <em>immediately</em> as a form
+of argument validation.</p>
+<h2 id="exceptions-vs-errors">Exceptions vs. Errors</h2>
+<!--type=misc-->
+<p>A JavaScript exception is a value that is thrown as a result of an invalid
+operation or as the target of a <code>throw</code> statement. While it is not required
+that these values are instances of <code>Error</code> or classes which inherit from
+<code>Error</code>, all exceptions thrown by Node.js or the JavaScript runtime <em>will</em> be
+instances of Error.</p>
+<p>Some exceptions are <em>unrecoverable</em> at the JavaScript layer. Such exceptions
+will <em>always</em> cause the Node.js process to crash. Examples include <code>assert()</code>
+checks or <code>abort()</code> calls in the C++ layer.</p>
+<h2 id="system-errors">System Errors</h2>
+<p>System errors are generated when exceptions occur within the program&#39;s
+runtime environment. Typically, these are operational errors that occur
+when an application violates an operating system constraint such as attempting
+to read a file that does not exist or when the user does not have sufficient
+permissions.</p>
+<p>System errors are typically generated at the syscall level: an exhaustive list
+of error codes and their meanings is available by running <code>man 2 intro</code> or
+<code>man 3 errno</code> on most Unices; or <a href="http://man7.org/linux/man-pages/man3/errno.3.html" target="_blank" rel="nofollow">online</a>.</p>
+<p>In Node.js, system errors are represented as augmented <code>Error</code> objects with
+added properties.</p>
+<h3 id="class-system-error">Class: System Error</h3>
+<h4 id="error-code">error.code</h4>
+<h4 id="error-errno">error.errno</h4>
+<p>Returns a string representing the error code, which is always <code>E</code> followed by
+a sequence of capital letters, and may be referenced in <code>man 2 intro</code>.</p>
+<p>The properties <code>error.code</code> and <code>error.errno</code> are aliases of one another and
+return the same value.</p>
+<h4 id="error-syscall">error.syscall</h4>
+<p>Returns a string describing the <a href="http://man7.org/linux/man-pages/man2/syscall.2.html" target="_blank" rel="nofollow">syscall</a> that failed.</p>
+<h3 id="common-system-errors">Common System Errors</h3>
+<p>This list is <strong>not exhaustive</strong>, but enumerates many of the common system
+errors encountered when writing a Node.js program. An exhaustive list may be
+found <a href="http://man7.org/linux/man-pages/man3/errno.3.html" target="_blank" rel="nofollow">here</a>.</p>
+<ul>
+<li><p><code>EACCES</code> (Permission denied): An attempt was made to access a file in a way
+forbidden by its file access permissions.</p>
+</li>
+<li><p><code>EADDRINUSE</code> (Address already in use):  An attempt to bind a server
+(<a href="net.html"><code>net</code></a>, <a href="http.html"><code>http</code></a>, or <a href="https.html"><code>https</code></a>) to a local address failed due to
+another server on the local system already occupying that address.</p>
+</li>
+<li><p><code>ECONNREFUSED</code> (Connection refused): No connection could be made because the
+target machine actively refused it. This usually results from trying to
+connect to a service that is inactive on the foreign host.</p>
+</li>
+<li><p><code>ECONNRESET</code> (Connection reset by peer): A connection was forcibly closed by
+a peer. This normally results from a loss of the connection on the remote
+socket due to a timeout or reboot. Commonly encountered via the <a href="http.html"><code>http</code></a>
+and <a href="net.html"><code>net</code></a> modules.</p>
+</li>
+<li><p><code>EEXIST</code> (File exists): An existing file was the target of an operation that
+required that the target not exist.</p>
+</li>
+<li><p><code>EISDIR</code> (Is a directory): An operation expected a file, but the given
+pathname was a directory.</p>
+</li>
+<li><p><code>EMFILE</code> (Too many open files in system): Maximum number of
+<a href="https://en.wikipedia.org/wiki/File_descriptor" target="_blank" rel="nofollow">file descriptors</a> allowable on the system has been reached, and
+requests for another descriptor cannot be fulfilled until at least one
+has been closed. This is encountered when opening many files at once in
+parallel, especially on systems (in particular, OS X) where there is a low
+file descriptor limit for processes. To remedy a low limit, run
+<code>ulimit -n 2048</code> in the same shell that will run the Node.js process.</p>
+</li>
+<li><p><code>ENOENT</code> (No such file or directory): Commonly raised by <a href="fs.html"><code>fs</code></a> operations
+to indicate that a component of the specified pathname does not exist -- no
+entity (file or directory) could be found by the given path.</p>
+</li>
+<li><p><code>ENOTDIR</code> (Not a directory): A component of the given pathname existed, but
+was not a directory as expected. Commonly raised by <a href="fs.html#fs_fs_readdir_path_callback"><code>fs.readdir</code></a>.</p>
+</li>
+<li><p><code>ENOTEMPTY</code> (Directory not empty): A directory with entries was the target
+of an operation that requires an empty directory -- usually <a href="fs.html#fs_fs_unlink_path_callback"><code>fs.unlink</code></a>.</p>
+</li>
+<li><p><code>EPERM</code> (Operation not permitted): An attempt was made to perform an
+operation that requires elevated privileges.</p>
+</li>
+<li><p><code>EPIPE</code> (Broken pipe): A write on a pipe, socket, or FIFO for which there is
+no process to read the data. Commonly encountered at the <a href="net.html"><code>net</code></a> and
+<a href="http.html"><code>http</code></a> layers, indicative that the remote side of the stream being
+written to has been closed.</p>
+</li>
+<li><p><code>ETIMEDOUT</code> (Operation timed out): A connect or send request failed because
+the connected party did not properly respond after a period of time. Usually
+encountered by <a href="http.html"><code>http</code></a> or <a href="net.html"><code>net</code></a> -- often a sign that a <code>socket.end()</code>
+was not properly called.</p>
+</li>
+</ul>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/fastclick.js"></script>
+    <script src="../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

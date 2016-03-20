@@ -126,7 +126,7 @@ key | `String` | the key to translate
 
 Returns | Description
 --- | --- 
-`String` | the translated string
+`String` | the translated string or empty string is no translation is found
 
 
 ##### <a id='nativetranslate'></a>public static function __nativeTranslate__(key)
@@ -139,7 +139,7 @@ key | `String` | the key to translate
 
 Returns | Description
 --- | --- 
-`String` | the translated string
+`String` | the translated string or empty string is no translation is found
 
 
 ##### <a id='sendtranslatedmessage'></a>public static function __sendTranslatedMessage__(receiver, key)

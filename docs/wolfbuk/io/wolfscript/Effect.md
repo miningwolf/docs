@@ -15,14 +15,14 @@ Item | Type
 1002: <br> _1002 Effect_ | Effect
 1003: <br> _1003 Effect_ | Effect
 1004: <br> _1004 Effect_ | Effect
-1005: <br> _1005 Effect_ | Effect
+1010: <br> _1010 Effect_ | Effect
 Type.SOUND: <br> _Type.SOUND Effect_ | Effect
 1007: <br> _1007 Effect_ | Effect
 1008: <br> _1008 Effect_ | Effect
 1009: <br> _1009 Effect_ | Effect
-1010: <br> _1010 Effect_ | Effect
-1011: <br> _1011 Effect_ | Effect
 1012: <br> _1012 Effect_ | Effect
+1011: <br> _1011 Effect_ | Effect
+1021: <br> _1021 Effect_ | Effect
 2000: <br> _2000 Effect_ | Effect
 Type.VISUAL: <br> _Type.VISUAL Effect_ | Effect
 2001: <br> _2001 Effect_ | Effect

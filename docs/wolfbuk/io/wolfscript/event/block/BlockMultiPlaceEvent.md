@@ -19,13 +19,14 @@ new __BlockMultiPlaceEvent__(clicked, itemInHand, thePlayer, canBuild) <br> _Blo
  readonly property __ReplacedBlockStates__ <br> _Get: Gets a list of blockstates for all blocks which were replaced by the_ | `List<BlockState>`
  |
 __Inherited items from [`BlockPlaceEvent`](BlockPlaceEvent.md)__ |
-new __BlockPlaceEvent__(Block, BlockState, Block, ItemStack, Player, boolean) <br> _BlockPlaceEvent constructor_ | _constructor_
- readonly property __BlockAgainst__ <br> _Get: Gets the block that this block was placed against_ | [`Block`](../../block/Block.md)
+new __BlockPlaceEvent__(Block, BlockState, Block, ItemStack, Player, boolean, EquipmentSlot) <br> _BlockPlaceEvent constructor_ | _constructor_
+ readonly property __ItemInHand__ <br> _Get: Gets the item in the player's hand when they placed the block._ | `ItemStack`
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __BlockPlaced__ <br> _Get: Clarity method for getting the placed block. Not really needed except_ | [`Block`](../../block/Block.md)
  readonly property __BlockReplacedState__ <br> _Get: Gets the BlockState for the block which was replaced. Material type air_ | [`BlockState`](../../block/BlockState.md)
+ readonly property __BlockAgainst__ <br> _Get: Gets the block that this block was placed against_ | [`Block`](../../block/Block.md)
+ readonly property __Hand__ <br> _Get: Gets the hand which placed the block_ | [`EquipmentSlot`](../../inventory/EquipmentSlot.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
- readonly property __ItemInHand__ <br> _Get: Gets the item in the player's hand when they placed the block._ | `ItemStack`
  readonly property __Player__ <br> _Get: Gets the player who placed the block involved in this event._ | `Player`
  writeonly property __Build__ <br> _Set: Sets the canBuild state of this event. Set to true if you want the_ | `void`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
@@ -84,6 +85,7 @@ Get | Description
 ### Public Constructors for [`BlockPlaceEvent`](BlockPlaceEvent.md)
 
 ##### <a id='blockplaceevent'></a>new __BlockPlaceEvent__(Block, BlockState, Block, ItemStack, Player, boolean) 
+_Deprecated_
 
 _BlockPlaceEvent constructor_
 
@@ -96,17 +98,31 @@ ItemStack | `final` | ItemStack argument
 Player | `final` | Player argument
 boolean | `final` | boolean argument
 
+##### <a id='blockplaceevent'></a>new __BlockPlaceEvent__(Block, BlockState, Block, ItemStack, Player, boolean, EquipmentSlot) 
+
+_BlockPlaceEvent constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Block | `final` | Block argument
+BlockState | `final` | BlockState argument
+Block | `final` | Block argument
+ItemStack | `final` | ItemStack argument
+Player | `final` | Player argument
+boolean | `final` | boolean argument
+EquipmentSlot | `final` | EquipmentSlot argument
+
 ---
 
 ### Public Properties for [`BlockPlaceEvent`](BlockPlaceEvent.md)
 
-##### <a id='blockagainst'></a>public  readonly property __BlockAgainst__
+##### <a id='iteminhand'></a>public  readonly property __ItemInHand__
 
-_Get: Gets the block that this block was placed against_
+_Get: Gets the item in the player's hand when they placed the block._
 
 Get | Description
 --- | --- 
-[`Block`](../../block/Block.md) | Block the block that the new block was placed against
+`ItemStack` | The ItemStack for the item in the player's hand when they placed the block
 
 
 
@@ -140,6 +156,26 @@ Get | Description
 
 
 
+##### <a id='blockagainst'></a>public  readonly property __BlockAgainst__
+
+_Get: Gets the block that this block was placed against_
+
+Get | Description
+--- | --- 
+[`Block`](../../block/Block.md) | Block the block that the new block was placed against
+
+
+
+##### <a id='hand'></a>public  readonly property __Hand__
+
+_Get: Gets the hand which placed the block_
+
+Get | Description
+--- | --- 
+[`EquipmentSlot`](../../inventory/EquipmentSlot.md) | Main or off-hand, depending on which hand was used to place the block
+
+
+
 ##### <a id='handlers'></a>public  readonly property __Handlers__
 
 _Handlers property_
@@ -147,16 +183,6 @@ _Handlers property_
 Get | 
 --- | 
 [`HandlerList`](../HandlerList.md) |
-
-
-
-##### <a id='iteminhand'></a>public  readonly property __ItemInHand__
-
-_Get: Gets the item in the player's hand when they placed the block._
-
-Get | Description
---- | --- 
-`ItemStack` | The ItemStack for the item in the player's hand when they placed the block
 
 
 

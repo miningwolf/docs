@@ -142,6 +142,10 @@
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
+<td>new <strong>ServerTask</strong>(owner, delay, schedule, continuous) <br> <em>Constructs either a one-time use or continuous ServerTask</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
 <td>final readonly property <strong>Owner</strong> <br> <em>Get: Gets the <a href="TaskOwner.html"><code>TaskOwner</code></a> that owns this task</em></td>
 <td style="text-align:left"><a href="TaskOwner.html"><code>TaskOwner</code></a></td>
 </tr>
@@ -204,6 +208,39 @@
 <td>delay</td>
 <td><code>long</code></td>
 <td>the delay before executing. Set to 0 or less to run within the next Server tick<br> If delay is 0 or less, the task will run with each server tick</td>
+</tr>
+<tr>
+<td>continuous</td>
+<td><code>boolean</code></td>
+<td><code>true</code> for continuous; <code>false</code> for one-time use</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-servertask-a-new-__servertask__-owner-delay-schedule-continuous-"><a id='servertask'></a>new <strong>ServerTask</strong>(owner, delay, schedule, continuous)</h5>
+<p><em>Constructs either a one-time use or continuous ServerTask</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td><a href="TaskOwner.html"><code>TaskOwner</code></a></td>
+<td>the <a href="TaskOwner.html"><code>TaskOwner</code></a> of the task, typically a <code>Plugin</code></td>
+</tr>
+<tr>
+<td>delay</td>
+<td><code>long</code></td>
+<td>the delay before executing. Set to 0 or less to run within the next Server tick<br> If delay is 0 or less, the task will run with each server tick</td>
+</tr>
+<tr>
+<td>schedule</td>
+<td><code>long</code></td>
+<td>the delay before each execution if the task is continuous If delay is 0 or less, the task will run with each server tick</td>
 </tr>
 <tr>
 <td>continuous</td>

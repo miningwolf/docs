@@ -6,13 +6,12 @@
 
 ### Class Overview
 
-Represents a minecraft potion
+Potion Adapter for pre-1.9 data values see @PotionMeta for 1.9+
 
 Method | Type   
 --- | :--- 
 new __Potion__(type) <br> _Construct a new potion of the given type. Unless the type is {@link_ | _constructor_
 new __Potion__(type, level) <br> _Create a new potion of the given type and level._ | _constructor_
-new __Potion__(name) <br> _Create a potion with a specific name._ | _constructor_
  writeonly property __Splash__ <br> _Set: Sets whether this potion is a splash potion. Splash potions can be_ | `void`
  readonly property __Effects__ <br> _Get: Returns a collection of [`PotionEffect`](PotionEffect.md)s that this [`Potion`](Potion.md)_ | `Collection<PotionEffect>`
   property __Level__ <br> _Get: Returns the level of this potion.<br>Set: Sets the level of this potion._ | `int`
@@ -25,6 +24,7 @@ static writeonly property __PotionBrewer__ <br> _Set: Sets the current instance 
  function __apply__(to) <br> _Applies the effects that would be applied by this potion to the given_ | `void`
  function __equals__(obj) <br> _equals method_ | `boolean`
 static function __fromItemStack__(item) <br> _fromItemStack method_ | [`Potion`](Potion.md)
+static function __fromDamage__(damage) <br> _fromDamage method_ | [`Potion`](Potion.md)
 static function __getByDamageBit__(damageBit) <br> _getByDamageBit method_ | `Tier`
  function __extend__() <br> _Chain this to the constructor to extend the potion's duration._ | [`Potion`](Potion.md)
  function __isSplash__() <br> _Returns whether this potion is a splash potion._ | `boolean`
@@ -54,8 +54,8 @@ _Potion constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-type | [`PotionType`](PotionType.md) | the type of the potion
-tier | `Tier` | the tier of the potion
+type | [`PotionType`](PotionType.md) | type argument
+tier | `Tier` | tier argument
 
 ##### <a id='potion'></a>new __Potion__(type, tier, splash) 
 _Deprecated: In favour of {@link #Potion(PotionType, int, boolean)}_
@@ -64,9 +64,9 @@ _Potion constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-type | [`PotionType`](PotionType.md) | the type of the potion
-tier | `Tier` | the tier of the potion
-splash | `boolean` | whether the potion is a splash potion
+type | [`PotionType`](PotionType.md) | type argument
+tier | `Tier` | tier argument
+splash | `boolean` | splash argument
 
 ##### <a id='potion'></a>new __Potion__(type, tier, splash, extended) 
 _Deprecated: In favour of {@link #Potion(PotionType, int, boolean, boolean)}_
@@ -75,10 +75,10 @@ _Potion constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-type | [`PotionType`](PotionType.md) | the type of the potion
-tier | `Tier` | the tier of the potion
-splash | `boolean` | whether the potion is a splash potion
-extended | `boolean` | whether the potion has an extended duration
+type | [`PotionType`](PotionType.md) | type argument
+tier | `Tier` | tier argument
+splash | `boolean` | splash argument
+extended | `boolean` | extended argument
 
 ##### <a id='potion'></a>new __Potion__(type, level) 
 
@@ -113,12 +113,13 @@ splash | `boolean` | Whether it is a splash potion.
 extended | `boolean` | Whether it has an extended duration.
 
 ##### <a id='potion'></a>new __Potion__(name) 
+_Deprecated_
 
-_Create a potion with a specific name._
+_Potion constructor_
 
 Argument | Type | Description  
 --- | --- | --- 
-name | `int` | The name index (0-63)
+name | `int` | name argument
 
 ---
 
@@ -138,7 +139,7 @@ isSplash | `boolean` | Whether this is a splash potion
 
 
 ##### <a id='nameid'></a>public  readonly property __NameId__
-_Deprecated: Magic value_
+_Deprecated: Non-functional_
 
 _NameId property_
 
@@ -301,7 +302,6 @@ Returns |
 
 
 ##### <a id='fromdamage'></a>public static function __fromDamage__(damage)
-_Deprecated: Magic value_
 
 _fromDamage method_
 
@@ -373,7 +373,7 @@ Returns | Description
 
 
 ##### <a id='todamagevalue'></a>public  function __toDamageValue__()
-_Deprecated: Magic value_
+_Deprecated: Non-functional_
 
 _Converts this potion to a valid potion damage short, usable for potion item stacks._
 

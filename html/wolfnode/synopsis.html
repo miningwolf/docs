@@ -66,6 +66,8 @@
 <li class='divider'></li>
 <li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='divider'></li>
 
                   </ul>
               </nav>
@@ -76,20 +78,21 @@
           <section class="doc-content">
             <h1 id="synopsis">Synopsis</h1>
 <!--type=misc-->
-<p>An example of a <a href="http.html">web server</a> written with Node which responds with &#39;Hello
-World&#39;:</p>
-<pre><code><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+<p>An example of a <a href="http.html">web server</a> written with Node.js which responds with
+<code>&#39;Hello World&#39;</code>:</p>
+<pre><code class="lang-js">const http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
 
-http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(request, response)</span> </span>{
+http.createServer( <span class="hljs-function"><span class="hljs-params">(request, response)</span> =&gt;</span> {
   response.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'text/plain'</span>});
   response.end(<span class="hljs-string">'Hello World\n'</span>);
 }).listen(<span class="hljs-number">8124</span>);
 
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Server running at http://127.0.0.1:8124/'</span>);
-</code></pre><p>To run the server, put the code into a file called <code>example.js</code> and execute
+</code></pre>
+<p>To run the server, put the code into a file called <code>example.js</code> and execute
 it with the node program</p>
-<pre><code>&gt; node example<span class="hljs-class">.js</span>
-Server running at http:<span class="hljs-comment">//127.0.0.1:8124/</span>
+<pre><code>$ <span class="hljs-keyword">node</span><span class="hljs-identifier"> </span><span class="hljs-title">example</span>.js
+Server running at http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8124</span>/
 </code></pre><p>All of the examples in the documentation can be run similarly.</p>
 
 

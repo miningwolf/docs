@@ -11,6 +11,7 @@ Scoreboard criteria type
 Item | Type   
 --- | :--- 
 DUMMY: "dummy"<br> _DUMMY CriteriaType_ | CriteriaType
+TRIGGER: "trigger"<br> _TRIGGER CriteriaType_ | CriteriaType
 DEATH_COUNT: "deathCount"<br> _DEATH_COUNT CriteriaType_ | CriteriaType
 PLAYER_KILL_COUNT: "playerKillCount"<br> _PLAYER_KILL_COUNT CriteriaType_ | CriteriaType
 TOTAL_KILL_COUNT: "totalKillCount"<br> _TOTAL_KILL_COUNT CriteriaType_ | CriteriaType

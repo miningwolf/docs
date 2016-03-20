@@ -59,17 +59,6 @@ ItemStack | `final` | ItemStack argument
 
 ### Public Properties for [`FurnaceSmeltEvent`](FurnaceSmeltEvent.md)
 
-##### <a id='furnace'></a>public  readonly property __Furnace__
-_Deprecated: In favour of {@link #getBlock()}._
-
-_Get: Gets the block for the furnace involved in this event_
-
-Get | Description
---- | --- 
-[`Block`](../../block/Block.md) | the block of the furnace
-
-
-
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 
 _HandlerList property_

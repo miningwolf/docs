@@ -40,7 +40,7 @@ Get | Description
 
 ##### <a id='item'></a>public   property __Item__
 
-_Get: Returns a copy of the ItemStack for this thrown potion. <p> Altering this copy will not alter the thrown potion directly. If you want to alter the thrown potion, you must use the {@link #setItem(ItemStack) setItemStack} method.<br>Set: Set the ItemStack for this thrown potion. <p> The ItemStack must be a potion, otherwise an exception is thrown._
+_Get: Returns a copy of the ItemStack for this thrown potion. <p> Altering this copy will not alter the thrown potion directly. If you want to alter the thrown potion, you must use the {@link #setItem(ItemStack) setItemStack} method.<br>Set: Set the ItemStack for this thrown potion. <p> The ItemStack must be of type `Material#SPLASH_POTION` or `Material#LINGERING_POTION`, otherwise an exception is thrown._
 
 Get | Description
 --- | --- 

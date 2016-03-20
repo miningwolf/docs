@@ -35,34 +35,6 @@ __Inherited items from [`Metadatable`](../metadata/Metadatable.md)__ |
 
 ### Public Properties for [`CreatureSpawner`](CreatureSpawner.md)
 
-##### <a id='creaturetype'></a>public   property __CreatureType__
-_Deprecated: In favour of {@link #setSpawnedType(EntityType)}._
-
-_Get: Get the spawner's creature type.<br>Set: Set the spawner creature type._
-
-Get | 
---- | 
-[`CreatureType`](../entity/CreatureType.md) |
-
-Set | Type | Description  
---- | --- | --- 
-creatureType | [`CreatureType`](../entity/CreatureType.md) | The creature type.
-
-
-##### <a id='creaturetypeid'></a>public   property __CreatureTypeId__
-_Deprecated: Use {@link #setCreatureTypeByName(String)}._
-
-_Get: Get the spawner's creature type.<br>Set: Set the spawner mob type._
-
-Get | 
---- | 
-`String` |
-
-Set | Type | Description  
---- | --- | --- 
-creatureType | `String` | The creature type's name.
-
-
 ##### <a id='creaturetypename'></a>public  readonly property __CreatureTypeName__
 
 _Get: Get the spawner's creature type._

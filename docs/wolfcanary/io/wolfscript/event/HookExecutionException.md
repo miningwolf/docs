@@ -11,7 +11,7 @@ this.on('event.HookExecutionException', function (e) { });
 
 ### Class Overview
 
-Thrown when an exception propogates up to the hook dispatcher The exception is wrapped in this exception
+Thrown when an exception propagates up to the hook dispatcher The exception is wrapped in this exception
 
 Method | Type   
 --- | :--- 

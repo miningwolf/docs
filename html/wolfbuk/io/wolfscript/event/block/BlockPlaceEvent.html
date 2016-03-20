@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -99,6 +103,7 @@
 <li class='active'><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockPlaceEvent.html'>BlockPlaceEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockRedstoneEvent.html'>BlockRedstoneEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/BlockSpreadEvent.html'>BlockSpreadEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/block/CauldronLevelChangeEvent.html'>CauldronLevelChangeEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/EntityBlockFormEvent.html'>EntityBlockFormEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/LeavesDecayEvent.html'>LeavesDecayEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/block/NotePlayEvent.html'>NotePlayEvent</a></li>
@@ -178,12 +183,12 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>new <strong>BlockPlaceEvent</strong>(Block, BlockState, Block, ItemStack, Player, boolean) <br> <em>BlockPlaceEvent constructor</em></td>
+<td>new <strong>BlockPlaceEvent</strong>(Block, BlockState, Block, ItemStack, Player, boolean, EquipmentSlot) <br> <em>BlockPlaceEvent constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td> readonly property <strong>BlockAgainst</strong> <br> <em>Get: Gets the block that this block was placed against</em></td>
-<td style="text-align:left"><a href="../../block/Block.html"><code>Block</code></a></td>
+<td> readonly property <strong>ItemInHand</strong> <br> <em>Get: Gets the item in the player&#39;s hand when they placed the block.</em></td>
+<td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>HandlerList</strong> <br> <em>HandlerList property</em></td>
@@ -198,12 +203,16 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <td style="text-align:left"><a href="../../block/BlockState.html"><code>BlockState</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
-<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td> readonly property <strong>BlockAgainst</strong> <br> <em>Get: Gets the block that this block was placed against</em></td>
+<td style="text-align:left"><a href="../../block/Block.html"><code>Block</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>ItemInHand</strong> <br> <em>Get: Gets the item in the player&#39;s hand when they placed the block.</em></td>
-<td style="text-align:left"><code>ItemStack</code></td>
+<td> readonly property <strong>Hand</strong> <br> <em>Get: Gets the hand which placed the block</em></td>
+<td style="text-align:left"><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
 <td> readonly property <strong>Player</strong> <br> <em>Get: Gets the player who placed the block involved in this event.</em></td>
@@ -274,6 +283,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-constructors-for-blockplaceevent-blockplaceevent-md-">Public Constructors for <a href="BlockPlaceEvent.html"><code>BlockPlaceEvent</code></a></h3>
 <h5 id="-a-id-blockplaceevent-a-new-__blockplaceevent__-block-blockstate-block-itemstack-player-boolean-"><a id='blockplaceevent'></a>new <strong>BlockPlaceEvent</strong>(Block, BlockState, Block, ItemStack, Player, boolean)</h5>
+<p><em>Deprecated</em></p>
 <p><em>BlockPlaceEvent constructor</em></p>
 <table>
 <thead>
@@ -316,10 +326,58 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-blockplaceevent-a-new-__blockplaceevent__-block-blockstate-block-itemstack-player-boolean-equipmentslot-"><a id='blockplaceevent'></a>new <strong>BlockPlaceEvent</strong>(Block, BlockState, Block, ItemStack, Player, boolean, EquipmentSlot)</h5>
+<p><em>BlockPlaceEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block</td>
+<td><code>final</code></td>
+<td>Block argument</td>
+</tr>
+<tr>
+<td>BlockState</td>
+<td><code>final</code></td>
+<td>BlockState argument</td>
+</tr>
+<tr>
+<td>Block</td>
+<td><code>final</code></td>
+<td>Block argument</td>
+</tr>
+<tr>
+<td>ItemStack</td>
+<td><code>final</code></td>
+<td>ItemStack argument</td>
+</tr>
+<tr>
+<td>Player</td>
+<td><code>final</code></td>
+<td>Player argument</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td><code>final</code></td>
+<td>boolean argument</td>
+</tr>
+<tr>
+<td>EquipmentSlot</td>
+<td><code>final</code></td>
+<td>EquipmentSlot argument</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h3 id="public-properties-for-blockplaceevent-blockplaceevent-md-">Public Properties for <a href="BlockPlaceEvent.html"><code>BlockPlaceEvent</code></a></h3>
-<h5 id="-a-id-blockagainst-a-public-readonly-property-__blockagainst__"><a id='blockagainst'></a>public  readonly property <strong>BlockAgainst</strong></h5>
-<p><em>Get: Gets the block that this block was placed against</em></p>
+<h5 id="-a-id-iteminhand-a-public-readonly-property-__iteminhand__"><a id='iteminhand'></a>public  readonly property <strong>ItemInHand</strong></h5>
+<p><em>Get: Gets the item in the player&#39;s hand when they placed the block.</em></p>
 <table>
 <thead>
 <tr>
@@ -329,8 +387,8 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../../block/Block.html"><code>Block</code></a></td>
-<td>Block the block that the new block was placed against</td>
+<td><code>ItemStack</code></td>
+<td>The ItemStack for the item in the player&#39;s hand when they placed the block</td>
 </tr>
 </tbody>
 </table>
@@ -381,6 +439,38 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-blockagainst-a-public-readonly-property-__blockagainst__"><a id='blockagainst'></a>public  readonly property <strong>BlockAgainst</strong></h5>
+<p><em>Get: Gets the block that this block was placed against</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../block/Block.html"><code>Block</code></a></td>
+<td>Block the block that the new block was placed against</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hand-a-public-readonly-property-__hand__"><a id='hand'></a>public  readonly property <strong>Hand</strong></h5>
+<p><em>Get: Gets the hand which placed the block</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../inventory/EquipmentSlot.html"><code>EquipmentSlot</code></a></td>
+<td>Main or off-hand, depending on which hand was used to place the block</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-handlers-a-public-readonly-property-__handlers__"><a id='handlers'></a>public  readonly property <strong>Handlers</strong></h5>
 <p><em>Handlers property</em></p>
 <table>
@@ -393,22 +483,6 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <tr>
 <td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 <td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-iteminhand-a-public-readonly-property-__iteminhand__"><a id='iteminhand'></a>public  readonly property <strong>ItemInHand</strong></h5>
-<p><em>Get: Gets the item in the player&#39;s hand when they placed the block.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ItemStack</code></td>
-<td>The ItemStack for the item in the player&#39;s hand when they placed the block</td>
 </tr>
 </tbody>
 </table>
@@ -493,7 +567,7 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 <hr>
 <h3 id="public-methods-for-blockplaceevent-blockplaceevent-md-">Public Methods for <a href="BlockPlaceEvent.html"><code>BlockPlaceEvent</code></a></h3>
 <h5 id="-a-id-canbuild-a-public-function-__canbuild__-"><a id='canbuild'></a>public  function <strong>canBuild</strong>()</h5>
-<p><em>Gets the value whether the player would be allowed to build here. Defaults to spawn if the server was going to stop them (such as, the player is in Spawn). Note that this is an entirely different check than BLOCK_CANBUILD, as this refers to a player, not universe-physics rule like cactus on dirt.</em></p>
+<p>_Gets the value whether the player would be allowed to build here. Defaults to spawn if the server was going to stop them (such as, the player is in Spawn). Note that this is an entirely different check than BLOCK<em>CANBUILD, as this refers to a player, not universe-physics rule like cactus on dirt.</em></p>
 <table>
 <thead>
 <tr>

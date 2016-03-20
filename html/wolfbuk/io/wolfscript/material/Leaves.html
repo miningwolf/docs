@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -126,6 +130,7 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/material/RedstoneTorch.html'>RedstoneTorch</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/RedstoneWire.html'>RedstoneWire</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Sandstone.html'>Sandstone</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/material/Sapling.html'>Sapling</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Sign.html'>Sign</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/SimpleAttachableMaterialData.html'>SimpleAttachableMaterialData</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Skull.html'>Skull</a></li>
@@ -140,6 +145,7 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Tripwire.html'>Tripwire</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/TripwireHook.html'>TripwireHook</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Vine.html'>Vine</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/material/Wood.html'>Wood</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/WoodenStep.html'>WoodenStep</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Wool.html'>Wool</a></li>
 <li class='divider'></li>
@@ -170,11 +176,11 @@
             <h2 id="leaves-__class__">Leaves <strong>class</strong></h2>
 <blockquote>
 <p>io.wolfscript.material.Leaves
-Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
+Extends <a href="Wood.html"><code>Wood</code></a></p>
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Represents the different types of leaves.</p>
+<p>Represents the different types of leaf block that may be permanent or can decay when too far from a log.</p>
 <table>
 <thead>
 <tr>
@@ -184,24 +190,84 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>new <strong>Leaves</strong>() <br> <em>Leaves constructor</em></td>
+<td>new <strong>Leaves</strong>() <br> <em>Constructs a leaf block.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>Leaves</strong>(species) <br> <em>Leaves constructor</em></td>
+<td>new <strong>Leaves</strong>(species) <br> <em>Constructs a leaf block of the given tree species.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>new <strong>Leaves</strong>(Material) <br> <em>Leaves constructor</em></td>
+<td>new <strong>Leaves</strong>(species, isDecayable) <br> <em>Constructs a leaf block of the given tree species and flag for whether</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
-<td>  property <strong>Species</strong> <br> <em>Get: Gets the current species of this leave<br>Set: Sets the species of this leave</em></td>
-<td style="text-align:left"><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>new <strong>Leaves</strong>(Material) <br> <em>Constructs a leaf block of the given type.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Leaves</strong>(Material, species) <br> <em>Constructs a leaf block of the given type and tree species.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Leaves</strong>(Material, species, isDecayable) <br> <em>Constructs a leaf block of the given type and tree species and flag for</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Decayable</strong> <br> <em>Set: Set whether this leaf block will disappear when too far from a log</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Decaying</strong> <br> <em>Set: Set whether this leaf block is in the process of decaying</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td> function <strong>clone</strong>() <br> <em>clone method</em></td>
 <td style="text-align:left"><a href="Leaves.html"><code>Leaves</code></a></td>
+</tr>
+<tr>
+<td> function <strong>isDecayable</strong>() <br> <em>Checks if this leaf block is permanent or can decay when too far from a</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>isDecaying</strong>() <br> <em>Checks if this leaf block is in the process of decaying</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>toString</strong>() <br> <em>toString method</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="Wood.html"><code>Wood</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>Wood</strong>() <br> <em>Constructs a wood block.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Wood</strong>(species) <br> <em>Constructs a wood block of the given tree species.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Wood</strong>(Material) <br> <em>Constructs a wood block of the given type.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Wood</strong>(Material, TreeSpecies) <br> <em>Constructs a wood block of the given type and tree species.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>  property <strong>Species</strong> <br> <em>Get: Gets the current species of this wood block<br>Set: Sets the species of this wood block</em></td>
+<td style="text-align:left"><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+</tr>
+<tr>
+<td> function <strong>clone</strong>() <br> <em>clone method</em></td>
+<td style="text-align:left"><a href="Wood.html"><code>Wood</code></a></td>
 </tr>
 <tr>
 <td> function <strong>toString</strong>() <br> <em>toString method</em></td>
@@ -252,9 +318,9 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <hr>
 <h3 id="public-constructors-for-leaves-leaves-md-">Public Constructors for <a href="Leaves.html"><code>Leaves</code></a></h3>
 <h5 id="-a-id-leaves-a-new-__leaves__-"><a id='leaves'></a>new <strong>Leaves</strong>()</h5>
-<p><em>Leaves constructor</em></p>
+<p><em>Constructs a leaf block.</em></p>
 <h5 id="-a-id-leaves-a-new-__leaves__-species-"><a id='leaves'></a>new <strong>Leaves</strong>(species)</h5>
-<p><em>Leaves constructor</em></p>
+<p><em>Constructs a leaf block of the given tree species.</em></p>
 <table>
 <thead>
 <tr>
@@ -267,7 +333,30 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <tr>
 <td>species</td>
 <td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
-<td>species argument</td>
+<td>the species of the wood block</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-leaves-a-new-__leaves__-species-isdecayable-"><a id='leaves'></a>new <strong>Leaves</strong>(species, isDecayable)</h5>
+<p><em>Constructs a leaf block of the given tree species and flag for whether this leaf block will disappear when too far from a log.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>species</td>
+<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>the species of the wood block</td>
+</tr>
+<tr>
+<td>isDecayable</td>
+<td><code>boolean</code></td>
+<td>whether the block is permanent or can disappear</td>
 </tr>
 </tbody>
 </table>
@@ -291,7 +380,7 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-leaves-a-new-__leaves__-material-"><a id='leaves'></a>new <strong>Leaves</strong>(Material)</h5>
-<p><em>Leaves constructor</em></p>
+<p><em>Constructs a leaf block of the given type.</em></p>
 <table>
 <thead>
 <tr>
@@ -305,6 +394,57 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <td>Material</td>
 <td><code>final</code></td>
 <td>Material argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-leaves-a-new-__leaves__-material-species-"><a id='leaves'></a>new <strong>Leaves</strong>(Material, species)</h5>
+<p><em>Constructs a leaf block of the given type and tree species.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td><code>final</code></td>
+<td>Material argument</td>
+</tr>
+<tr>
+<td>species</td>
+<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>the species of the wood block</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-leaves-a-new-__leaves__-material-species-isdecayable-"><a id='leaves'></a>new <strong>Leaves</strong>(Material, species, isDecayable)</h5>
+<p><em>Constructs a leaf block of the given type and tree species and flag for whether this leaf block will disappear when too far from a log.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td><code>final</code></td>
+<td>Material argument</td>
+</tr>
+<tr>
+<td>species</td>
+<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>the species of the wood block</td>
+</tr>
+<tr>
+<td>isDecayable</td>
+<td><code>boolean</code></td>
+<td>whether the block is permanent or can disappear</td>
 </tr>
 </tbody>
 </table>
@@ -358,19 +498,18 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 </table>
 <hr>
 <h3 id="public-properties-for-leaves-leaves-md-">Public Properties for <a href="Leaves.html"><code>Leaves</code></a></h3>
-<h5 id="-a-id-species-a-public-property-__species__"><a id='species'></a>public   property <strong>Species</strong></h5>
-<p><em>Get: Gets the current species of this leave<br>Set: Sets the species of this leave</em></p>
+<h5 id="-a-id-decayable-a-public-writeonly-property-__decayable__"><a id='decayable'></a>public  writeonly property <strong>Decayable</strong></h5>
+<p><em>Set: Set whether this leaf block will disappear when too far from a log</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
-<td>TreeSpecies of this leave</td>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -384,9 +523,40 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 </thead>
 <tbody>
 <tr>
-<td>species</td>
-<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
-<td>New species of this leave</td>
+<td>isDecayable</td>
+<td><code>boolean</code></td>
+<td>whether the block is permanent or can disappear</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-decaying-a-public-writeonly-property-__decaying__"><a id='decaying'></a>public  writeonly property <strong>Decaying</strong></h5>
+<p><em>Set: Set whether this leaf block is in the process of decaying</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isDecaying</td>
+<td><code>boolean</code></td>
+<td>whether the block is decaying or not</td>
 </tr>
 </tbody>
 </table>
@@ -403,6 +573,234 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <tbody>
 <tr>
 <td><a href="Leaves.html"><code>Leaves</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isdecayable-a-public-function-__isdecayable__-"><a id='isdecayable'></a>public  function <strong>isDecayable</strong>()</h5>
+<p><em>Checks if this leaf block is permanent or can decay when too far from a log</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the leaf block is permanent or can decay when too far from a log</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isdecaying-a-public-function-__isdecaying__-"><a id='isdecaying'></a>public  function <strong>isDecaying</strong>()</h5>
+<p><em>Checks if this leaf block is in the process of decaying</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the leaf block is in the process of decaying</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-tostring-a-public-function-__tostring__-"><a id='tostring'></a>public  function <strong>toString</strong>()</h5>
+<p><em>toString method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-wood-wood-md-">Public Constructors for <a href="Wood.html"><code>Wood</code></a></h3>
+<h5 id="-a-id-wood-a-new-__wood__-"><a id='wood'></a>new <strong>Wood</strong>()</h5>
+<p><em>Constructs a wood block.</em></p>
+<h5 id="-a-id-wood-a-new-__wood__-species-"><a id='wood'></a>new <strong>Wood</strong>(species)</h5>
+<p><em>Constructs a wood block of the given tree species.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>species</td>
+<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>the species of the wood block</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wood-a-new-__wood__-int-"><a id='wood'></a>new <strong>Wood</strong>(int)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Wood constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td><code>final</code></td>
+<td>int argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wood-a-new-__wood__-material-"><a id='wood'></a>new <strong>Wood</strong>(Material)</h5>
+<p><em>Constructs a wood block of the given type.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td><code>final</code></td>
+<td>Material argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wood-a-new-__wood__-material-treespecies-"><a id='wood'></a>new <strong>Wood</strong>(Material, TreeSpecies)</h5>
+<p><em>Constructs a wood block of the given type and tree species.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td><code>final</code></td>
+<td>Material argument</td>
+</tr>
+<tr>
+<td>TreeSpecies</td>
+<td><code>final</code></td>
+<td>TreeSpecies argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wood-a-new-__wood__-int-byte-"><a id='wood'></a>new <strong>Wood</strong>(int, byte)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Wood constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td><code>final</code></td>
+<td>int argument</td>
+</tr>
+<tr>
+<td>byte</td>
+<td><code>final</code></td>
+<td>byte argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wood-a-new-__wood__-material-byte-"><a id='wood'></a>new <strong>Wood</strong>(Material, byte)</h5>
+<p><em>Deprecated: Magic value</em></p>
+<p><em>Wood constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td><code>final</code></td>
+<td>Material argument</td>
+</tr>
+<tr>
+<td>byte</td>
+<td><code>final</code></td>
+<td>byte argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-wood-wood-md-">Public Properties for <a href="Wood.html"><code>Wood</code></a></h3>
+<h5 id="-a-id-species-a-public-property-__species__"><a id='species'></a>public   property <strong>Species</strong></h5>
+<p><em>Get: Gets the current species of this wood block<br>Set: Sets the species of this wood block</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../TreeSpecies.html"><code>TreeSpecies</code></a></td>
+<td>TreeSpecies of this wood block</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TreeSpecies</td>
+<td><code>final</code></td>
+<td>TreeSpecies argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-wood-wood-md-">Public Methods for <a href="Wood.html"><code>Wood</code></a></h3>
+<h5 id="-a-id-clone-a-public-function-__clone__-"><a id='clone'></a>public  function <strong>clone</strong>()</h5>
+<p><em>clone method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Wood.html"><code>Wood</code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -702,6 +1100,7 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 </tr>
 </tbody>
 </table>
+<hr>
 <hr>
 <hr>
 <h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>

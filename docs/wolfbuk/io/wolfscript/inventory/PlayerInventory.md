@@ -7,39 +7,43 @@
 
 ### Interface Overview
 
-Interface to the inventory of a Player, including the four armor slots.
+Interface to the inventory of a Player, including the four armor slots and any extra slots.
 
 Method | Type   
 --- | :--- 
- writeonly property __Leggings__ <br> _Set: Put the given ItemStack into the leg slot. This does not check if the_ | `void`
+ writeonly property __Helmet__ <br> _Set: Put the given ItemStack into the helmet slot. This does not check if_ | `void`
  readonly property __ArmorContents__ <br> _Get: Get all ItemStacks from the armor slots_ | `ItemStack[]`
- writeonly property __Boots__ <br> _Set: Put the given ItemStack into the boots slot. This does not check if the_ | `void`
- readonly property __Holder__ <br> _Holder property_ | `HumanEntity`
+ writeonly property __Leggings__ <br> _Set: Put the given ItemStack into the leg slot. This does not check if the_ | `void`
   property __Chestplate__ <br> _Get: Return the ItemStack from the chestplate slot<br>Set: Put the given ItemStack into the chestplate slot. This does not check_ | `ItemStack`
+  property __Boots__ <br> _Get: Return the ItemStack from the boots slot<br>Set: Put the given ItemStack into the boots slot. This does not check if the_ | `ItemStack`
+ readonly property __Holder__ <br> _Holder property_ | `HumanEntity`
+ readonly property __Helmet__ <br> _Get: Return the ItemStack from the helmet slot_ | `ItemStack`
+ readonly property __ExtraContents__ <br> _Get: Get all additional ItemStacks stored in this inventory._ | `ItemStack[]`
   property __HeldItemSlot__ <br> _Get: Get the slot number of the currently held item<br>Set: Set the slot number of the currently held item._ | `int`
- readonly property __Boots__ <br> _Get: Return the ItemStack from the boots slot_ | `ItemStack`
-  property __Helmet__ <br> _Get: Return the ItemStack from the helmet slot<br>Set: Put the given ItemStack into the helmet slot. This does not check if_ | `ItemStack`
-  property __ItemInHand__ <br> _Get: Returns the ItemStack currently hold<br>Set: Sets the item in hand_ | `ItemStack`
  readonly property __Leggings__ <br> _Get: Return the ItemStack from the leg slot_ | `ItemStack`
  function __setArmorContents__() <br> _Put the given ItemStacks into the armor slots_ | `void`
+ function __setExtraContents__() <br> _Put the given ItemStacks into the extra slots_ | `void`
+ function __setItem__(index, item) <br> _Stores the ItemStack at the given index of the inventory._ | `void`
  |
 __Inherited items from [`Inventory`](Inventory.md)__ |
- readonly property __Size__ <br> _Get: Returns the size of the inventory_ | `int`
+ readonly property __Location__ <br> _Location property_ | `Location`
  readonly property __Holder__ <br> _Get: Gets the block or entity belonging to the open inventory_ | [`InventoryHolder`](InventoryHolder.md)
- readonly property __Name__ <br> _Get: Returns the name of the inventory_ | `String`
  readonly property __Contents__ <br> _Get: Returns all ItemStacks from the inventory_ | `ItemStack[]`
+ readonly property __Viewers__ <br> _Get: Gets a list of players viewing the inventory. Note that a player is_ | `List<HumanEntity>`
   property __MaxStackSize__ <br> _MaxStackSize property_ | `int`
  readonly property __Title__ <br> _Get: Returns the title of this inventory._ | `String`
+ readonly property __Size__ <br> _Get: Returns the size of the inventory_ | `int`
+ readonly property __Name__ <br> _Get: Returns the name of the inventory_ | `String`
+ readonly property __StorageContents__ <br> _StorageContents property_ | `ItemStack[]`
  readonly property __Type__ <br> _Get: Returns what type of inventory this is._ | [`InventoryType`](../event/inventory/InventoryType.md)
- readonly property __Viewers__ <br> _Get: Gets a list of players viewing the inventory. Note that a player is_ | `List<HumanEntity>`
- function __getItem__(index) <br> _Returns the ItemStack found in the slot at the given index_ | `ItemStack`
  function __clear__() <br> _Clears out the whole Inventory._ | `void`
+ function __getItem__(index) <br> _Returns the ItemStack found in the slot at the given index_ | `ItemStack`
+ function __clear__(index) <br> _Clears out a particular slot in the index._ | `void`
+ function __firstEmpty__() <br> _Returns the first empty Slot._ | `int`
  function __contains__(item) <br> _Checks if the inventory contains any ItemStacks matching the given_ | `boolean`
  function __contains__(item, amount) <br> _Checks if the inventory contains at least the minimum amount specified_ | `boolean`
  function __containsAtLeast__(item, amount) <br> _Checks if the inventory contains ItemStacks matching the given_ | `boolean`
  function __first__(item) <br> _Returns the first slot in the inventory containing an ItemStack with_ | `int`
- function __firstEmpty__() <br> _Returns the first empty Slot._ | `int`
- function __clear__(index) <br> _Clears out a particular slot in the index._ | `void`
  function __iterator__() <br> _iterator method_ | `ListIterator<ItemStack>`
  function __iterator__(index) <br> _Returns an iterator starting at the given index. If the index is_ | `ListIterator<ItemStack>`
  function __remove__(item) <br> _Removes all stacks in the inventory matching the given stack._ | `void`
@@ -54,6 +58,29 @@ __Inherited items from [`Inventory`](Inventory.md)__ |
 
 ### Public Properties for [`PlayerInventory`](PlayerInventory.md)
 
+##### <a id='helmet'></a>public  writeonly property __Helmet__
+
+_Set: Put the given ItemStack into the helmet slot. This does not check if the ItemStack is a helmet_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+helmet | `ItemStack` | The ItemStack to use as helmet
+
+
+##### <a id='armorcontents'></a>public  readonly property __ArmorContents__
+
+_Get: Get all ItemStacks from the armor slots_
+
+Get | Description
+--- | --- 
+`ItemStack[]` | All the ItemStacks from the armor slots
+
+
+
 ##### <a id='leggings'></a>public  writeonly property __Leggings__
 
 _Set: Put the given ItemStack into the leg slot. This does not check if the ItemStack is a pair of leggings_
@@ -67,23 +94,26 @@ Set | Type | Description
 leggings | `ItemStack` | The ItemStack to use as leggings
 
 
-##### <a id='armorcontents'></a>public  readonly property __ArmorContents__
+##### <a id='chestplate'></a>public   property __Chestplate__
 
-_Get: Get all ItemStacks from the armor slots_
+_Get: Return the ItemStack from the chestplate slot<br>Set: Put the given ItemStack into the chestplate slot. This does not check if the ItemStack is a chestplate_
 
 Get | Description
 --- | --- 
-`ItemStack[]` | All the ItemStacks from the armor slots
+`ItemStack` | The ItemStack in the chestplate slot
+
+Set | Type | Description  
+--- | --- | --- 
+chestplate | `ItemStack` | The ItemStack to use as chestplate
 
 
+##### <a id='boots'></a>public   property __Boots__
 
-##### <a id='boots'></a>public  writeonly property __Boots__
+_Get: Return the ItemStack from the boots slot<br>Set: Put the given ItemStack into the boots slot. This does not check if the ItemStack is a boots_
 
-_Set: Put the given ItemStack into the boots slot. This does not check if the ItemStack is a boots_
-
-Get | 
---- | 
-`void` |
+Get | Description
+--- | --- 
+`ItemStack` | The ItemStack in the boots slot
 
 Set | Type | Description  
 --- | --- | --- 
@@ -100,17 +130,24 @@ Get |
 
 
 
-##### <a id='chestplate'></a>public   property __Chestplate__
+##### <a id='helmet'></a>public  readonly property __Helmet__
 
-_Get: Return the ItemStack from the chestplate slot<br>Set: Put the given ItemStack into the chestplate slot. This does not check if the ItemStack is a chestplate_
+_Get: Return the ItemStack from the helmet slot_
 
 Get | Description
 --- | --- 
-`ItemStack` | The ItemStack in the chestplate slot
+`ItemStack` | The ItemStack in the helmet slot
 
-Set | Type | Description  
---- | --- | --- 
-chestplate | `ItemStack` | The ItemStack to use as chestplate
+
+
+##### <a id='extracontents'></a>public  readonly property __ExtraContents__
+
+_Get: Get all additional ItemStacks stored in this inventory. <br> NB: What defines an extra slot is up to the implementation, however it will not be contained within `#getStorageContents()` or `#getArmorContents()`_
+
+Get | Description
+--- | --- 
+`ItemStack[]` | All additional ItemStacks
+
 
 
 ##### <a id='helditemslot'></a>public   property __HeldItemSlot__
@@ -126,40 +163,18 @@ Set | Type | Description
 slot | `int` | The new slot number
 
 
-##### <a id='boots'></a>public  readonly property __Boots__
-
-_Get: Return the ItemStack from the boots slot_
-
-Get | Description
---- | --- 
-`ItemStack` | The ItemStack in the boots slot
-
-
-
-##### <a id='helmet'></a>public   property __Helmet__
-
-_Get: Return the ItemStack from the helmet slot<br>Set: Put the given ItemStack into the helmet slot. This does not check if the ItemStack is a helmet_
-
-Get | Description
---- | --- 
-`ItemStack` | The ItemStack in the helmet slot
-
-Set | Type | Description  
---- | --- | --- 
-helmet | `ItemStack` | The ItemStack to use as helmet
-
-
 ##### <a id='iteminhand'></a>public   property __ItemInHand__
+_Deprecated: players can duel wield now use the methods for the specific hand instead_
 
-_Get: Returns the ItemStack currently hold<br>Set: Sets the item in hand_
+_Get: Gets a copy of the item the player is currently holding<br>Set: Sets the item the player is holding_
 
-Get | Description
---- | --- 
-`ItemStack` | The currently held ItemStack
+Get | 
+--- | 
+`ItemStack` |
 
 Set | Type | Description  
 --- | --- | --- 
-stack | `ItemStack` | Stack to set
+stack | `ItemStack` | The item to put into the player's hand
 
 
 ##### <a id='leggings'></a>public  readonly property __Leggings__
@@ -200,17 +215,40 @@ Returns |
 `void` |
 
 
+##### <a id='setextracontents'></a>public  function __setExtraContents__()
+
+_Put the given ItemStacks into the extra slots <br> See `#getExtraContents()` for an explanation of extra slots._
+
+Returns | 
+--- | 
+`void` |
+
+
+##### <a id='setitem'></a>public  function __setItem__(index, item)
+
+_Stores the ItemStack at the given index of the inventory. <p> Indexes 0 through 8 refer to the hotbar. 9 through 35 refer to the main inventory, counting up from 9 at the top left corner of the inventory, moving to the right, and moving to the row below it back on the left side when it reaches the end of the row. It follows the same path in the inventory like you would read a book. <p> Indexes 36 through 39 refer to the armor slots. Though you can set armor with this method using these indexes, you are encouraged to use the provided methods for those slots. <p> If you attempt to use this method with an index less than 0 or greater than 39, an ArrayIndexOutOfBounds exception will be thrown._
+
+Argument | Type | Description  
+--- | --- | --- 
+index | `int` | The index where to put the ItemStack
+item | `ItemStack` | The ItemStack to set
+
+Returns | 
+--- | 
+`void` |
+
+
 ---
 
 ### Public Properties for [`Inventory`](Inventory.md)
 
-##### <a id='size'></a>public  readonly property __Size__
+##### <a id='location'></a>public  readonly property __Location__
 
-_Get: Returns the size of the inventory_
+_Location property_
 
-Get | Description
---- | --- 
-`int` | The size of the inventory
+Get | 
+--- | 
+`Location` |
 
 
 
@@ -224,16 +262,6 @@ Get | Description
 
 
 
-##### <a id='name'></a>public  readonly property __Name__
-
-_Get: Returns the name of the inventory_
-
-Get | Description
---- | --- 
-`String` | The String with the name of the inventory
-
-
-
 ##### <a id='contents'></a>public  readonly property __Contents__
 
 _Get: Returns all ItemStacks from the inventory_
@@ -241,6 +269,16 @@ _Get: Returns all ItemStacks from the inventory_
 Get | Description
 --- | --- 
 `ItemStack[]` | An array of ItemStacks from the inventory.
+
+
+
+##### <a id='viewers'></a>public  readonly property __Viewers__
+
+_Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it's possible for customized inventory screens to exclude the viewer's inventory, so this should never be assumed to be non-empty._
+
+Get | Description
+--- | --- 
+`List<HumanEntity>` | A list of HumanEntities who are viewing this Inventory.
 
 
 
@@ -267,6 +305,36 @@ Get | Description
 
 
 
+##### <a id='size'></a>public  readonly property __Size__
+
+_Get: Returns the size of the inventory_
+
+Get | Description
+--- | --- 
+`int` | The size of the inventory
+
+
+
+##### <a id='name'></a>public  readonly property __Name__
+
+_Get: Returns the name of the inventory_
+
+Get | Description
+--- | --- 
+`String` | The String with the name of the inventory
+
+
+
+##### <a id='storagecontents'></a>public  readonly property __StorageContents__
+
+_StorageContents property_
+
+Get | 
+--- | 
+`ItemStack[]` |
+
+
+
 ##### <a id='type'></a>public  readonly property __Type__
 
 _Get: Returns what type of inventory this is._
@@ -274,16 +342,6 @@ _Get: Returns what type of inventory this is._
 Get | Description
 --- | --- 
 [`InventoryType`](../event/inventory/InventoryType.md) | The InventoryType representing the type of inventory.
-
-
-
-##### <a id='viewers'></a>public  readonly property __Viewers__
-
-_Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it's possible for customized inventory screens to exclude the viewer's inventory, so this should never be assumed to be non-empty._
-
-Get | Description
---- | --- 
-`List<HumanEntity>` | A list of HumanEntities who are viewing this Inventory.
 
 
 
@@ -305,6 +363,15 @@ Returns | Description
 `int` | The slot index of the given materialId or -1 if not found
 
 
+##### <a id='clear'></a>public  function __clear__()
+
+_Clears out the whole Inventory._
+
+Returns | 
+--- | 
+`void` |
+
+
 ##### <a id='getitem'></a>public  function __getItem__(index)
 
 _Returns the ItemStack found in the slot at the given index_
@@ -318,13 +385,26 @@ Returns | Description
 `ItemStack` | The ItemStack in the slot
 
 
-##### <a id='clear'></a>public  function __clear__()
+##### <a id='clear'></a>public  function __clear__(index)
 
-_Clears out the whole Inventory._
+_Clears out a particular slot in the index._
+
+Argument | Type | Description  
+--- | --- | --- 
+index | `int` | The index to empty.
 
 Returns | 
 --- | 
 `void` |
+
+
+##### <a id='firstempty'></a>public  function __firstEmpty__()
+
+_Returns the first empty Slot._
+
+Returns | Description
+--- | --- 
+`int` | The first empty Slot found, or -1 if no empty slots.
 
 
 ##### <a id='contains'></a>public  function __contains__(materialId)
@@ -408,28 +488,6 @@ item | `ItemStack` | The ItemStack to match against
 Returns | Description
 --- | --- 
 `int` | The slot index of the given ItemStack or -1 if not found
-
-
-##### <a id='firstempty'></a>public  function __firstEmpty__()
-
-_Returns the first empty Slot._
-
-Returns | Description
---- | --- 
-`int` | The first empty Slot found, or -1 if no empty slots.
-
-
-##### <a id='clear'></a>public  function __clear__(index)
-
-_Clears out a particular slot in the index._
-
-Argument | Type | Description  
---- | --- | --- 
-index | `int` | The index to empty.
-
-Returns | 
---- | 
-`void` |
 
 
 ##### <a id='iterator'></a>public  function __iterator__()

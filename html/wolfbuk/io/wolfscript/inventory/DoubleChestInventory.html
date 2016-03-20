@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -96,7 +100,9 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/InventoryView.html'>InventoryView</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFactory.html'>ItemFactory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MainHand.html'>MainHand</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantRecipe.html'>MerchantRecipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
@@ -157,20 +163,20 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td> readonly property <strong>Size</strong> <br> <em>Get: Returns the size of the inventory</em></td>
-<td style="text-align:left"><code>int</code></td>
+<td> readonly property <strong>Location</strong> <br> <em>Location property</em></td>
+<td style="text-align:left"><code>Location</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>Holder</strong> <br> <em>Get: Gets the block or entity belonging to the open inventory</em></td>
 <td style="text-align:left"><a href="InventoryHolder.html"><code>InventoryHolder</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Name</strong> <br> <em>Get: Returns the name of the inventory</em></td>
-<td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
 <td> readonly property <strong>Contents</strong> <br> <em>Get: Returns all ItemStacks from the inventory</em></td>
 <td style="text-align:left"><code>ItemStack[]</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Viewers</strong> <br> <em>Get: Gets a list of players viewing the inventory. Note that a player is</em></td>
+<td style="text-align:left"><code>List&lt;HumanEntity&gt;</code></td>
 </tr>
 <tr>
 <td>  property <strong>MaxStackSize</strong> <br> <em>MaxStackSize property</em></td>
@@ -181,20 +187,36 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
+<td> readonly property <strong>Size</strong> <br> <em>Get: Returns the size of the inventory</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Name</strong> <br> <em>Get: Returns the name of the inventory</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>StorageContents</strong> <br> <em>StorageContents property</em></td>
+<td style="text-align:left"><code>ItemStack[]</code></td>
+</tr>
+<tr>
 <td> readonly property <strong>Type</strong> <br> <em>Get: Returns what type of inventory this is.</em></td>
 <td style="text-align:left"><a href="../event/inventory/InventoryType.html"><code>InventoryType</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Viewers</strong> <br> <em>Get: Gets a list of players viewing the inventory. Note that a player is</em></td>
-<td style="text-align:left"><code>List&lt;HumanEntity&gt;</code></td>
+<td> function <strong>clear</strong>() <br> <em>Clears out the whole Inventory.</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td> function <strong>getItem</strong>(index) <br> <em>Returns the ItemStack found in the slot at the given index</em></td>
 <td style="text-align:left"><code>ItemStack</code></td>
 </tr>
 <tr>
-<td> function <strong>clear</strong>() <br> <em>Clears out the whole Inventory.</em></td>
+<td> function <strong>clear</strong>(index) <br> <em>Clears out a particular slot in the index.</em></td>
 <td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>firstEmpty</strong>() <br> <em>Returns the first empty Slot.</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td> function <strong>contains</strong>(item) <br> <em>Checks if the inventory contains any ItemStacks matching the given</em></td>
@@ -211,14 +233,6 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <tr>
 <td> function <strong>first</strong>(item) <br> <em>Returns the first slot in the inventory containing an ItemStack with</em></td>
 <td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> function <strong>firstEmpty</strong>() <br> <em>Returns the first empty Slot.</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> function <strong>clear</strong>(index) <br> <em>Clears out a particular slot in the index.</em></td>
-<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td> function <strong>iterator</strong>() <br> <em>iterator method</em></td>
@@ -240,19 +254,18 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 </table>
 <hr>
 <h3 id="public-properties-for-inventory-inventory-md-">Public Properties for <a href="Inventory.html"><code>Inventory</code></a></h3>
-<h5 id="-a-id-size-a-public-readonly-property-__size__"><a id='size'></a>public  readonly property <strong>Size</strong></h5>
-<p><em>Get: Returns the size of the inventory</em></p>
+<h5 id="-a-id-location-a-public-readonly-property-__location__"><a id='location'></a>public  readonly property <strong>Location</strong></h5>
+<p><em>Location property</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td>The size of the inventory</td>
+<td><code>Location</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -272,22 +285,6 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
-<p><em>Get: Returns the name of the inventory</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>The String with the name of the inventory</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-contents-a-public-readonly-property-__contents__"><a id='contents'></a>public  readonly property <strong>Contents</strong></h5>
 <p><em>Get: Returns all ItemStacks from the inventory</em></p>
 <table>
@@ -301,6 +298,22 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <tr>
 <td><code>ItemStack[]</code></td>
 <td>An array of ItemStacks from the inventory.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-viewers-a-public-readonly-property-__viewers__"><a id='viewers'></a>public  readonly property <strong>Viewers</strong></h5>
+<p><em>Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it&#39;s possible for customized inventory screens to exclude the viewer&#39;s inventory, so this should never be assumed to be non-empty.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;HumanEntity&gt;</code></td>
+<td>A list of HumanEntities who are viewing this Inventory.</td>
 </tr>
 </tbody>
 </table>
@@ -352,6 +365,53 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-size-a-public-readonly-property-__size__"><a id='size'></a>public  readonly property <strong>Size</strong></h5>
+<p><em>Get: Returns the size of the inventory</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The size of the inventory</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
+<p><em>Get: Returns the name of the inventory</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>The String with the name of the inventory</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-storagecontents-a-public-readonly-property-__storagecontents__"><a id='storagecontents'></a>public  readonly property <strong>StorageContents</strong></h5>
+<p><em>StorageContents property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ItemStack[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
 <p><em>Get: Returns what type of inventory this is.</em></p>
 <table>
@@ -365,22 +425,6 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <tr>
 <td><a href="../event/inventory/InventoryType.html"><code>InventoryType</code></a></td>
 <td>The InventoryType representing the type of inventory.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-viewers-a-public-readonly-property-__viewers__"><a id='viewers'></a>public  readonly property <strong>Viewers</strong></h5>
-<p><em>Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it&#39;s possible for customized inventory screens to exclude the viewer&#39;s inventory, so this should never be assumed to be non-empty.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>List&lt;HumanEntity&gt;</code></td>
-<td>A list of HumanEntities who are viewing this Inventory.</td>
 </tr>
 </tbody>
 </table>
@@ -419,6 +463,21 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-clear-a-public-function-__clear__-"><a id='clear'></a>public  function <strong>clear</strong>()</h5>
+<p><em>Clears out the whole Inventory.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-getitem-a-public-function-__getitem__-index-"><a id='getitem'></a>public  function <strong>getItem</strong>(index)</h5>
 <p><em>Returns the ItemStack found in the slot at the given index</em></p>
 <table>
@@ -451,8 +510,24 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-clear-a-public-function-__clear__-"><a id='clear'></a>public  function <strong>clear</strong>()</h5>
-<p><em>Clears out the whole Inventory.</em></p>
+<h5 id="-a-id-clear-a-public-function-__clear__-index-"><a id='clear'></a>public  function <strong>clear</strong>(index)</h5>
+<p><em>Clears out a particular slot in the index.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td><code>int</code></td>
+<td>The index to empty.</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -463,6 +538,22 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <tr>
 <td><code>void</code></td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-firstempty-a-public-function-__firstempty__-"><a id='firstempty'></a>public  function <strong>firstEmpty</strong>()</h5>
+<p><em>Returns the first empty Slot.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The first empty Slot found, or -1 if no empty slots.</td>
 </tr>
 </tbody>
 </table>
@@ -672,53 +763,6 @@ Extends <a href="Inventory.html"><code>Inventory</code></a></p>
 <tr>
 <td><code>int</code></td>
 <td>The slot index of the given ItemStack or -1 if not found</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-firstempty-a-public-function-__firstempty__-"><a id='firstempty'></a>public  function <strong>firstEmpty</strong>()</h5>
-<p><em>Returns the first empty Slot.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>The first empty Slot found, or -1 if no empty slots.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-clear-a-public-function-__clear__-index-"><a id='clear'></a>public  function <strong>clear</strong>(index)</h5>
-<p><em>Clears out a particular slot in the index.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index</td>
-<td><code>int</code></td>
-<td>The index to empty.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
 </tr>
 </tbody>
 </table>

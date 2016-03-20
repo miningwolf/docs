@@ -23,20 +23,18 @@ static function __getRelativeDouble__(original, sender, input) <br> _getRelative
  |
 __Inherited items from [`Command`](../Command.md)__ |
   property __PermissionMessage__ <br> _Get: Returns a message to be displayed on a failed permission check for this<br>Set: Sets the message sent when a permission check fails_ | `String`
- writeonly property __Permission__ <br> _Set: Sets the permission required by users to be able to perform this_ | `void`
- readonly property __Name__ <br> _Get: Returns the name of this command_ | `String`
-  property __Label__ <br> _Label property_ | `String`
- readonly property __Permission__ <br> _Get: Gets the permission required by users to be able to perform this_ | `String`
- writeonly property __Description__ <br> _Description property_ | [`Command`](../Command.md)
+  property __Permission__ <br> _Get: Gets the permission required by users to be able to perform this<br>Set: Sets the permission required by users to be able to perform this_ | `String`
+  property __Name__ <br> _Get: Returns the name of this command<br>Set: Sets the name of this command._ | `String`
+  property __Description__ <br> _Description property_ | `String`
+  property __Label__ <br> _Get: Returns the label for this command<br>Set: Sets the label of this command._ | `String`
  readonly property __Aliases__ <br> _Get: Returns a list of active aliases of this command_ | `List<String>`
- readonly property __Description__ <br> _Get: Gets a brief description of this command_ | `String`
   property __Usage__ <br> _Get: Gets an example usage of this command<br>Set: Sets the example usage of this command_ | `String`
  function __isRegistered__() <br> _Returns the current registered state of this command_ | `boolean`
 abstract function __execute__(sender, commandLabel) <br> _Executes the command, returning its success_ | `boolean`
 static function __broadcastCommandMessage__(source, message, sendToSource) <br> _broadcastCommandMessage method_ | `void`
 static function __broadcastCommandMessage__(source, message) <br> _broadcastCommandMessage method_ | `void`
- function __register__(commandMap) <br> _Registers this command to a CommandMap._ | `boolean`
  function __setAliases__() <br> _setAliases method_ | [`Command`](../Command.md)
+ function __register__(commandMap) <br> _Registers this command to a CommandMap._ | `boolean`
  function __testPermission__(target) <br> _Tests the given [`CommandSender`](../CommandSender.md) to see if they can perform this_ | `boolean`
  function __testPermissionSilent__(target) <br> _Tests the given [`CommandSender`](../CommandSender.md) to see if they can perform this_ | `boolean`
  function __toString__() <br> _toString method_ | `String`
@@ -163,63 +161,56 @@ Set | Type | Description
 permissionMessage | `String` | new permission message, null to indicate default message, or an empty string to indicate no message
 
 
-##### <a id='permission'></a>public  writeonly property __Permission__
+##### <a id='permission'></a>public   property __Permission__
 
-_Set: Sets the permission required by users to be able to perform this command_
+_Get: Gets the permission required by users to be able to perform this command<br>Set: Sets the permission required by users to be able to perform this command_
 
-Get | 
---- | 
-`void` |
+Get | Description
+--- | --- 
+`String` | Permission name, or null if none
 
 Set | Type | Description  
 --- | --- | --- 
 permission | `String` | Permission name or null
 
 
-##### <a id='name'></a>public  readonly property __Name__
+##### <a id='name'></a>public   property __Name__
 
-_Get: Returns the name of this command_
-
-Get | Description
---- | --- 
-`String` | Name of this command
-
-
-
-##### <a id='label'></a>public   property __Label__
-
-_Label property_
+_Get: Returns the name of this command<br>Set: Sets the name of this command. <p> May only be used before registering the command. Will return true if the new name is set, and false if the command has already been registered._
 
 Get | Description
 --- | --- 
-`String` | Label of this command or null if not registered
+`String` | returns true if the name change happened instantly or false if the command was already registered
 
 Set | Type | Description  
 --- | --- | --- 
-name | `String` | name argument
+name | `String` | New command name
 
 
-##### <a id='permission'></a>public  readonly property __Permission__
-
-_Get: Gets the permission required by users to be able to perform this command_
-
-Get | Description
---- | --- 
-`String` | Permission name, or null if none
-
-
-
-##### <a id='description'></a>public  writeonly property __Description__
+##### <a id='description'></a>public   property __Description__
 
 _Description property_
 
-Get | 
---- | 
-[`Command`](../Command.md) |
+Get | Description
+--- | --- 
+`String` | Description of this command
 
 Set | Type | Description  
 --- | --- | --- 
 description | `String` | description argument
+
+
+##### <a id='label'></a>public   property __Label__
+
+_Get: Returns the label for this command<br>Set: Sets the label of this command. <p> May only be used before registering the command. Will return true if the new name is set, and false if the command has already been registered._
+
+Get | Description
+--- | --- 
+`String` | returns true if the name change happened instantly or false if the command was already registered
+
+Set | Type | Description  
+--- | --- | --- 
+name | `String` | The command's name
 
 
 ##### <a id='aliases'></a>public  readonly property __Aliases__
@@ -229,16 +220,6 @@ _Get: Returns a list of active aliases of this command_
 Get | Description
 --- | --- 
 `List<String>` | List of aliases
-
-
-
-##### <a id='description'></a>public  readonly property __Description__
-
-_Get: Gets a brief description of this command_
-
-Get | Description
---- | --- 
-`String` | Description of this command
 
 
 
@@ -311,6 +292,15 @@ Returns |
 `void` |
 
 
+##### <a id='setaliases'></a>public  function __setAliases__()
+
+_setAliases method_
+
+Returns | 
+--- | 
+[`Command`](../Command.md) |
+
+
 ##### <a id='register'></a>public  function __register__(commandMap)
 
 _Registers this command to a CommandMap. Once called it only allows changes the registered CommandMap_
@@ -322,15 +312,6 @@ commandMap | [`CommandMap`](../CommandMap.md) | the CommandMap to register this 
 Returns | Description
 --- | --- 
 `boolean` | true if the registration was successful (the current registered CommandMap was the passed CommandMap or null) false otherwise
-
-
-##### <a id='setaliases'></a>public  function __setAliases__()
-
-_setAliases method_
-
-Returns | 
---- | 
-[`Command`](../Command.md) |
 
 
 ##### <a id='tabcomplete'></a>public  function __tabComplete__(sender)

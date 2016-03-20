@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-This class invokes a method on a listener. It is inline-implemented in HookExecutor.registerHook, for each hook seperately
+This class invokes a method on a listener. It is inline-implemented in {@link HookExecutor#registerHook(PluginListener, Plugin, Class, Dispatcher, Priority)}, for each hook separately.
 
 Method | Type   
 --- | :--- 

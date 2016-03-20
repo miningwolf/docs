@@ -57,36 +57,9 @@ boolean | `final` | boolean argument
 byte | `final` | byte argument
 EntityType | `final` | EntityType argument
 
-##### <a id='playereggthrowevent'></a>new __PlayerEggThrowEvent__(player, egg, hatching, numHatches, hatchingType) 
-_Deprecated_
-
-_PlayerEggThrowEvent constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-player | `Player` | player argument
-egg | [`Egg`](../../entity/Egg.md) | egg argument
-hatching | `boolean` | hatching argument
-numHatches | `byte` | numHatches argument
-hatchingType | [`CreatureType`](../../entity/CreatureType.md) | hatchingType argument
-
 ---
 
 ### Public Properties for [`PlayerEggThrowEvent`](PlayerEggThrowEvent.md)
-
-##### <a id='hatchtype'></a>public  writeonly property __HatchType__
-_Deprecated: In favour of {@link #setHatchingType(EntityType)}._
-
-_Set: Change the type of mob being hatched by the egg_
-
-Get | 
---- | 
-`void` |
-
-Set | Type | Description  
---- | --- | --- 
-hatchType | [`CreatureType`](../../entity/CreatureType.md) | The type of the mob being hatched by the egg
-
 
 ##### <a id='egg'></a>public  readonly property __Egg__
 
@@ -115,17 +88,6 @@ _Handlers property_
 Get | 
 --- | 
 [`HandlerList`](../HandlerList.md) |
-
-
-
-##### <a id='hatchtype'></a>public  readonly property __HatchType__
-_Deprecated: In favour of {@link #getHatchingType()}._
-
-_Get: Get the type of the mob being hatched (EntityType.CHICKEN by default)_
-
-Get | Description
---- | --- 
-[`CreatureType`](../../entity/CreatureType.md) | The type of the mob being hatched by the egg
 
 
 

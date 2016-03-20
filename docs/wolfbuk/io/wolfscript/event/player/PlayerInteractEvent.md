@@ -17,21 +17,23 @@ Called when a player interacts with an object or air. <p> This event will fire a
 Method | Type   
 --- | :--- 
 new __PlayerInteractEvent__(Player, Action, ItemStack, Block, BlockFace) <br> _PlayerInteractEvent constructor_ | _constructor_
+new __PlayerInteractEvent__(Player, Action, ItemStack, Block, BlockFace, EquipmentSlot) <br> _PlayerInteractEvent constructor_ | _constructor_
  readonly property __ClickedBlock__ <br> _Get: Returns the clicked block_ | [`Block`](../../block/Block.md)
  readonly property __Action__ <br> _Get: Returns the action type_ | [`Action`](../block/Action.md)
  readonly property __BlockFace__ <br> _Get: Returns the face of the block that was clicked_ | [`BlockFace`](../../block/BlockFace.md)
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
- readonly property __Material__ <br> _Get: Convenience method. Returns the material of the item represented by_ | [`Material`](../../Material.md)
+ readonly property __Hand__ <br> _Get: The hand used to perform this interaction. May be null in the case of_ | [`EquipmentSlot`](../../inventory/EquipmentSlot.md)
+ writeonly property __UseInteractedBlock__ <br> _UseInteractedBlock property_ | `void`
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
+ readonly property __Material__ <br> _Get: Convenience method. Returns the material of the item represented by_ | [`Material`](../../Material.md)
  readonly property __Item__ <br> _Get: Returns the item in hand represented by this event_ | `ItemStack`
  writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
- writeonly property __UseInteractedBlock__ <br> _UseInteractedBlock property_ | `void`
  writeonly property __UseItemInHand__ <br> _UseItemInHand property_ | `void`
- function __useInteractedBlock__() <br> _This controls the action to take with the block (if any) that was_ | `Result`
  function __hasBlock__() <br> _Check if this event involved a block_ | `boolean`
  function __hasItem__() <br> _Check if this event involved an item_ | `boolean`
  function __isBlockInHand__() <br> _Convenience method to inform the user whether this was a block_ | `boolean`
  function __isCancelled__() <br> _Gets the cancellation state of this event. Set to true if you want to_ | `boolean`
+ function __useInteractedBlock__() <br> _This controls the action to take with the block (if any) that was_ | `Result`
  function __useItemInHand__() <br> _This controls the action to take with the item the player is holding._ | `Result`
  |
 __Inherited items from [`PlayerEvent`](PlayerEvent.md)__ |
@@ -66,6 +68,19 @@ Action | `final` | Action argument
 ItemStack | `final` | ItemStack argument
 Block | `final` | Block argument
 BlockFace | `final` | BlockFace argument
+
+##### <a id='playerinteractevent'></a>new __PlayerInteractEvent__(Player, Action, ItemStack, Block, BlockFace, EquipmentSlot) 
+
+_PlayerInteractEvent constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Player | `final` | Player argument
+Action | `final` | Action argument
+ItemStack | `final` | ItemStack argument
+Block | `final` | Block argument
+BlockFace | `final` | BlockFace argument
+EquipmentSlot | `final` | EquipmentSlot argument
 
 ---
 
@@ -111,14 +126,27 @@ Get |
 
 
 
-##### <a id='material'></a>public  readonly property __Material__
+##### <a id='hand'></a>public  readonly property __Hand__
 
-_Get: Convenience method. Returns the material of the item represented by this event_
+_Get: The hand used to perform this interaction. May be null in the case of `Action#PHYSICAL`._
 
 Get | Description
 --- | --- 
-[`Material`](../../Material.md) | Material the material of the item used
+[`EquipmentSlot`](../../inventory/EquipmentSlot.md) | the hand used to interact. May be null.
 
+
+
+##### <a id='useinteractedblock'></a>public  writeonly property __UseInteractedBlock__
+
+_UseInteractedBlock property_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+useInteractedBlock | `Result` | the action to take with the interacted block
 
 
 ##### <a id='handlers'></a>public  readonly property __Handlers__
@@ -128,6 +156,16 @@ _Handlers property_
 Get | 
 --- | 
 [`HandlerList`](../HandlerList.md) |
+
+
+
+##### <a id='material'></a>public  readonly property __Material__
+
+_Get: Convenience method. Returns the material of the item represented by this event_
+
+Get | Description
+--- | --- 
+[`Material`](../../Material.md) | Material the material of the item used
 
 
 
@@ -154,19 +192,6 @@ Set | Type | Description
 cancel | `boolean` | cancel argument
 
 
-##### <a id='useinteractedblock'></a>public  writeonly property __UseInteractedBlock__
-
-_UseInteractedBlock property_
-
-Get | 
---- | 
-`void` |
-
-Set | Type | Description  
---- | --- | --- 
-useInteractedBlock | `Result` | the action to take with the interacted block
-
-
 ##### <a id='useiteminhand'></a>public  writeonly property __UseItemInHand__
 
 _UseItemInHand property_
@@ -183,15 +208,6 @@ useItemInHand | `Result` | the action to take with the item in hand
 ---
 
 ### Public Methods for [`PlayerInteractEvent`](PlayerInteractEvent.md)
-
-##### <a id='useinteractedblock'></a>public  function __useInteractedBlock__()
-
-_This controls the action to take with the block (if any) that was clicked on. This event gets processed for all blocks, but most don't have a default action_
-
-Returns | Description
---- | --- 
-`Result` | the action to take with the interacted block
-
 
 ##### <a id='hasblock'></a>public  function __hasBlock__()
 
@@ -227,6 +243,15 @@ _Gets the cancellation state of this event. Set to true if you want to prevent b
 Returns | Description
 --- | --- 
 `boolean` | boolean cancellation state
+
+
+##### <a id='useinteractedblock'></a>public  function __useInteractedBlock__()
+
+_This controls the action to take with the block (if any) that was clicked on. This event gets processed for all blocks, but most don't have a default action_
+
+Returns | Description
+--- | --- 
+`Result` | the action to take with the interacted block
 
 
 ##### <a id='useiteminhand'></a>public  function __useItemInHand__()

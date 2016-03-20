@@ -18,8 +18,8 @@ FURNACE: 3,"Furnace"<br> _A furnace inventory, with a RESULT slot, a CRAFTING sl
 WORKBENCH: 10,"Crafting"<br> _A workbench inventory, with 9 CRAFTING slots and a RESULT slot._ | InventoryType
 CRAFTING: 5,"Crafting"<br> _A player's crafting inventory, with 4 CRAFTING slots and a RESULT slot._ | InventoryType
 ENCHANTING: 2,"Enchanting"<br> _An enchantment table inventory, with two CRAFTING slots and three_ | InventoryType
-BREWING: 4,"Brewing"<br> _A brewing stand inventory, with one FUEL slot and three CRAFTING slots._ | InventoryType
-PLAYER: 36,"Player"<br> _A player's inventory, with 9 QUICKBAR slots, 27 CONTAINER slots, and 4_ | InventoryType
+BREWING: 5,"Brewing"<br> _A brewing stand inventory, with one FUEL slot and three CRAFTING slots._ | InventoryType
+PLAYER: 41,"Player"<br> _A player's inventory, with 9 QUICKBAR slots, 27 CONTAINER slots, 4 ARMOR_ | InventoryType
 CREATIVE: 9,"Creative"<br> _The creative mode inventory, with only 9 QUICKBAR slots and nothing_ | InventoryType
 MERCHANT: 3,"Villager"<br> _The merchant inventory, with 2 TRADE-IN slots, and 1 RESULT slot._ | InventoryType
 inventory: <br> _inventory InventoryType_ | InventoryType

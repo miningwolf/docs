@@ -25,6 +25,8 @@ new __ServerCommandEvent__(CommandSender, String) <br> _ServerCommandEvent const
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Sender__ <br> _Get: Get the command sender._ | [`CommandSender`](../../command/CommandSender.md)
+ writeonly property __Cancelled__ <br> _Cancelled property_ | `void`
+ function __isCancelled__() <br> _isCancelled method_ | `boolean`
  |
 __Inherited items from [`ServerEvent`](ServerEvent.md)__ |
  |
@@ -137,6 +139,32 @@ Get | Description
 --- | --- 
 [`CommandSender`](../../command/CommandSender.md) | The sender
 
+
+
+##### <a id='cancelled'></a>public  writeonly property __Cancelled__
+
+_Cancelled property_
+
+Get | 
+--- | 
+`void` |
+
+Set | Type | Description  
+--- | --- | --- 
+cancel | `boolean` | cancel argument
+
+
+---
+
+### Public Methods for [`ServerCommandEvent`](ServerCommandEvent.md)
+
+##### <a id='iscancelled'></a>public  function __isCancelled__()
+
+_isCancelled method_
+
+Returns | 
+--- | 
+`boolean` |
 
 
 ---

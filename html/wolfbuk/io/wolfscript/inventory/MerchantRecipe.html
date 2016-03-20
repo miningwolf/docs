@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API MerchantRecipe</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../index.html'>Docs </a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html'>inventory</a></li>
+<li class='current'><a href='#'>MerchantRecipe</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/AnvilInventory.html'>AnvilInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/BeaconInventory.html'>BeaconInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/BrewerInventory.html'>BrewerInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/CraftingInventory.html'>CraftingInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/DoubleChestInventory.html'>DoubleChestInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/EnchantingInventory.html'>EnchantingInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/EntityEquipment.html'>EntityEquipment</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/EquipmentSlot.html'>EquipmentSlot</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/FurnaceInventory.html'>FurnaceInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/FurnaceRecipe.html'>FurnaceRecipe</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/HorseInventory.html'>HorseInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/Inventory.html'>Inventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/InventoryHolder.html'>InventoryHolder</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/InventoryView.html'>InventoryView</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFactory.html'>ItemFactory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MainHand.html'>MainHand</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
+<li class='active'><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantRecipe.html'>MerchantRecipe</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapelessRecipe.html'>ShapelessRecipe</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/meta/0.html' class=''>inventory.meta</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="merchantrecipe-__class__">MerchantRecipe <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.inventory.MerchantRecipe
+Implements <a href="Recipe.html"><code>Recipe</code></a></p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Represents a Villager&#39;s trade. Trades can take one or two ingredients, and provide one result. The ingredients&#39; Itemstack amounts are respected in the trade. <br> A trade has a limited number of uses, after which the trade can no longer be used, unless the player uses a different trade, which will cause its maximum uses to increase. <br> A trade may or may not reward experience for being completed.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>MerchantRecipe</strong>(result, maxUses) <br> <em>MerchantRecipe constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>MerchantRecipe</strong>(result, uses, maxUses, experienceReward) <br> <em>MerchantRecipe constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>  property <strong>Uses</strong> <br> <em>Get: Get the number of times this trade has been used.<br>Set: Set the number of times this trade has been used.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Result</strong> <br> <em>Result property</em></td>
+<td style="text-align:left"><code>ItemStack</code></td>
+</tr>
+<tr>
+<td>  property <strong>MaxUses</strong> <br> <em>Get: Get the maximum number of uses this trade has.<br>Set: Set the maximum number of uses this trade has.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Ingredients</strong> <br> <em>Ingredients property</em></td>
+<td style="text-align:left"><code>List&lt;ItemStack&gt;</code></td>
+</tr>
+<tr>
+<td> writeonly property <strong>ExperienceReward</strong> <br> <em>Set: Set whether to reward experience for the trade.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>addIngredient</strong>(item) <br> <em>addIngredient method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>hasExperienceReward</strong>() <br> <em>Whether to reward experience for the trade.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>removeIngredient</strong>(index) <br> <em>removeIngredient method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>setIngredients</strong>() <br> <em>setIngredients method</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-merchantrecipe-merchantrecipe-md-">Public Constructors for <a href="MerchantRecipe.html"><code>MerchantRecipe</code></a></h3>
+<h5 id="-a-id-merchantrecipe-a-new-__merchantrecipe__-result-maxuses-"><a id='merchantrecipe'></a>new <strong>MerchantRecipe</strong>(result, maxUses)</h5>
+<p><em>MerchantRecipe constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td><code>ItemStack</code></td>
+<td>result argument</td>
+</tr>
+<tr>
+<td>maxUses</td>
+<td><code>int</code></td>
+<td>maxUses argument</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-merchantrecipe-a-new-__merchantrecipe__-result-uses-maxuses-experiencereward-"><a id='merchantrecipe'></a>new <strong>MerchantRecipe</strong>(result, uses, maxUses, experienceReward)</h5>
+<p><em>MerchantRecipe constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td><code>ItemStack</code></td>
+<td>result argument</td>
+</tr>
+<tr>
+<td>uses</td>
+<td><code>int</code></td>
+<td>uses argument</td>
+</tr>
+<tr>
+<td>maxUses</td>
+<td><code>int</code></td>
+<td>maxUses argument</td>
+</tr>
+<tr>
+<td>experienceReward</td>
+<td><code>boolean</code></td>
+<td>experienceReward argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-merchantrecipe-merchantrecipe-md-">Public Properties for <a href="MerchantRecipe.html"><code>MerchantRecipe</code></a></h3>
+<h5 id="-a-id-uses-a-public-property-__uses__"><a id='uses'></a>public   property <strong>Uses</strong></h5>
+<p><em>Get: Get the number of times this trade has been used.<br>Set: Set the number of times this trade has been used.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the number of uses</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uses</td>
+<td><code>int</code></td>
+<td>the number of uses</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-result-a-public-readonly-property-__result__"><a id='result'></a>public  readonly property <strong>Result</strong></h5>
+<p><em>Result property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ItemStack</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-maxuses-a-public-property-__maxuses__"><a id='maxuses'></a>public   property <strong>MaxUses</strong></h5>
+<p><em>Get: Get the maximum number of uses this trade has. <br> The maximum uses of this trade may increase when a player trades with the owning villager.<br>Set: Set the maximum number of uses this trade has.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the maximum number of uses</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maxUses</td>
+<td><code>int</code></td>
+<td>the maximum number of time this trade can be used</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ingredients-a-public-readonly-property-__ingredients__"><a id='ingredients'></a>public  readonly property <strong>Ingredients</strong></h5>
+<p><em>Ingredients property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;ItemStack&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-experiencereward-a-public-writeonly-property-__experiencereward__"><a id='experiencereward'></a>public  writeonly property <strong>ExperienceReward</strong></h5>
+<p><em>Set: Set whether to reward experience for the trade.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flag</td>
+<td><code>boolean</code></td>
+<td>whether to reward experience for completing this trade</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-merchantrecipe-merchantrecipe-md-">Public Methods for <a href="MerchantRecipe.html"><code>MerchantRecipe</code></a></h3>
+<h5 id="-a-id-addingredient-a-public-function-__addingredient__-item-"><a id='addingredient'></a>public  function <strong>addIngredient</strong>(item)</h5>
+<p><em>addIngredient method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item</td>
+<td><code>ItemStack</code></td>
+<td>item argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hasexperiencereward-a-public-function-__hasexperiencereward__-"><a id='hasexperiencereward'></a>public  function <strong>hasExperienceReward</strong>()</h5>
+<p><em>Whether to reward experience for the trade.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>whether to reward experience for completing this trade</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-removeingredient-a-public-function-__removeingredient__-index-"><a id='removeingredient'></a>public  function <strong>removeIngredient</strong>(index)</h5>
+<p><em>removeIngredient method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td><code>int</code></td>
+<td>index argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setingredients-a-public-function-__setingredients__-"><a id='setingredients'></a>public  function <strong>setIngredients</strong>()</h5>
+<p><em>setIngredients method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

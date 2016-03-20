@@ -71,11 +71,12 @@
 <li><a href='../wolfnode/punycode.html'>punycode</a></li>
 <li><a href='../wolfnode/readline.html'>readline</a></li>
 <li><a href='../wolfnode/repl.html'>repl</a></li>
-<li><a href='../wolfnode/smalloc.html'>smalloc</a></li>
 <li><a href='../wolfnode/string_decoder.html'>string_decoder</a></li>
 <li><a href='../wolfnode/tty.html'>tty</a></li>
 <li><a href='../wolfnode/vm.html'>vm</a></li>
 <li><a href='../wolfnode/zlib.html'>zlib</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
 <li class='divider'></li>
 
                   </ul>
@@ -86,81 +87,82 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="debugger">Debugger</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><!-- type=misc -->
-<p>V8 comes with an extensive debugger which is accessible out-of-process via a
-simple <a href="http://code.google.com/p/v8/wiki/DebuggerProtocol" target="_blank" rel="nofollow">TCP protocol</a>.
-Node has a built-in client for this debugger. To use this, start Node with the
-<code>debug</code> argument; a prompt will appear:</p>
-<pre><code>% node debug myscript.js
-&lt; <span class="hljs-keyword">debugger</span> listening on port <span class="hljs-number">5858</span>
+<p>Node.js includes a full-featured out-of-process debugging utility accessible
+via a simple <a href="https://github.com/v8/v8/wiki/Debugging-Protocol" target="_blank" rel="nofollow">TCP-based protocol</a> and built-in debugging client. To use it,
+start Node.js with the <code>debug</code> argument followed by the path to the script to
+debug; a prompt will be displayed indicating successful launch of the debugger:</p>
+<pre><code>$ node debug myscript.js
+&lt; <span class="hljs-keyword">debugger</span> listening <span class="hljs-literal">on</span> port <span class="hljs-number">5858</span>
 connecting... ok
-<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.js:<span class="hljs-number">1</span>
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.<span class="hljs-attribute">js</span>:<span class="hljs-number">1</span>
   <span class="hljs-number">1</span> x = <span class="hljs-number">5</span>;
-  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-number">3</span>   <span class="hljs-keyword">debugger</span>;
 debug&gt;
-</code></pre><p>Node&#39;s debugger client doesn&#39;t support the full range of commands, but
-simple step and inspection is possible. By putting the statement <code>debugger;</code>
-into the source code of your script, you will enable a breakpoint.</p>
-<p>For example, suppose <code>myscript.js</code> looked like this:</p>
-<pre><code><span class="hljs-comment">// myscript.js</span>
+</code></pre><p>Node.js&#39;s debugger client does not yet support the full range of commands, but
+simple step and inspection are possible.</p>
+<p>Inserting the statement <code>debugger;</code> into the source code of a script will
+enable a breakpoint at that position in the code.</p>
+<p>For example, suppose <code>myscript.js</code> is written as:</p>
+<pre><code class="lang-js"><span class="hljs-regexp">//</span> myscript.js
 x = <span class="hljs-number">5</span>;
-setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-keyword">debugger</span>;
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"world"</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'world'</span>);
 }, <span class="hljs-number">1000</span>);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"hello"</span>);
-</code></pre><p>Then once the debugger is run, it will break on line 4.</p>
-<pre><code>% node <span class="hljs-keyword">debug</span> myscript.js
-&lt; debugger listening <span class="hljs-keyword">on</span> port <span class="hljs-number">5858</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello'</span>);
+</code></pre>
+<p>Once the debugger is run, a breakpoint will occur at line 4:</p>
+<pre><code>$ node debug myscript.js
+&lt; <span class="hljs-keyword">debugger</span> listening <span class="hljs-literal">on</span> port <span class="hljs-number">5858</span>
 connecting... ok
-<span class="hljs-keyword">break</span> in /home/indutny/Code/git/indutny/myscript.<span class="hljs-keyword">j</span><span class="hljs-variable">s:1</span>
-  <span class="hljs-number">1</span> <span class="hljs-keyword">x</span> = <span class="hljs-number">5</span>;
-  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
-  <span class="hljs-number">3</span>   debugger;
-<span class="hljs-keyword">debug</span>&gt; cont
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.<span class="hljs-attribute">js</span>:<span class="hljs-number">1</span>
+  <span class="hljs-number">1</span> x = <span class="hljs-number">5</span>;
+  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-number">3</span>   <span class="hljs-keyword">debugger</span>;
+debug&gt; cont
 &lt; hello
-<span class="hljs-keyword">break</span> in /home/indutny/Code/git/indutny/myscript.<span class="hljs-keyword">j</span><span class="hljs-variable">s:3</span>
-  <span class="hljs-number">1</span> <span class="hljs-keyword">x</span> = <span class="hljs-number">5</span>;
-  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
-  <span class="hljs-number">3</span>   debugger;
-  <span class="hljs-number">4</span>   console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"world"</span>);
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.<span class="hljs-attribute">js</span>:<span class="hljs-number">3</span>
+  <span class="hljs-number">1</span> x = <span class="hljs-number">5</span>;
+  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-number">3</span>   <span class="hljs-keyword">debugger</span>;
+  <span class="hljs-number">4</span>   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'world'</span>);
   <span class="hljs-number">5</span> }, <span class="hljs-number">1000</span>);
-<span class="hljs-keyword">debug</span>&gt; <span class="hljs-keyword">next</span>
-<span class="hljs-keyword">break</span> in /home/indutny/Code/git/indutny/myscript.<span class="hljs-keyword">j</span><span class="hljs-variable">s:4</span>
-  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
-  <span class="hljs-number">3</span>   debugger;
-  <span class="hljs-number">4</span>   console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"world"</span>);
+debug&gt; next
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.<span class="hljs-attribute">js</span>:<span class="hljs-number">4</span>
+  <span class="hljs-number">2</span> setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-number">3</span>   <span class="hljs-keyword">debugger</span>;
+  <span class="hljs-number">4</span>   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'world'</span>);
   <span class="hljs-number">5</span> }, <span class="hljs-number">1000</span>);
-  <span class="hljs-number">6</span> console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"hello"</span>);
-<span class="hljs-keyword">debug</span>&gt; repl
-Press Ctrl + C <span class="hljs-keyword">to</span> leave <span class="hljs-keyword">debug</span> repl
-&gt; <span class="hljs-keyword">x</span>
+  <span class="hljs-number">6</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello'</span>);
+debug&gt; repl
+Press Ctrl + C to leave debug repl
+&gt; x
 <span class="hljs-number">5</span>
 &gt; <span class="hljs-number">2</span>+<span class="hljs-number">2</span>
 <span class="hljs-number">4</span>
-<span class="hljs-keyword">debug</span>&gt; <span class="hljs-keyword">next</span>
+debug&gt; next
 &lt; world
-<span class="hljs-keyword">break</span> in /home/indutny/Code/git/indutny/myscript.<span class="hljs-keyword">j</span><span class="hljs-variable">s:5</span>
-  <span class="hljs-number">3</span>   debugger;
-  <span class="hljs-number">4</span>   console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"world"</span>);
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> /home/indutny/Code/git/indutny/myscript.<span class="hljs-attribute">js</span>:<span class="hljs-number">5</span>
+  <span class="hljs-number">3</span>   <span class="hljs-keyword">debugger</span>;
+  <span class="hljs-number">4</span>   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'world'</span>);
   <span class="hljs-number">5</span> }, <span class="hljs-number">1000</span>);
-  <span class="hljs-number">6</span> console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"hello"</span>);
+  <span class="hljs-number">6</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello'</span>);
   <span class="hljs-number">7</span>
-<span class="hljs-keyword">debug</span>&gt; <span class="hljs-keyword">quit</span>
-%
-</code></pre><p>The <code>repl</code> command allows you to evaluate code remotely. The <code>next</code> command
-steps over to the next line. There are a few other commands available and more
-to come. Type <code>help</code> to see others.</p>
+debug&gt; quit
+</code></pre><p>The <code>repl</code> command allows code to be evaluated remotely. The <code>next</code> command
+steps over to the next line. Type <code>help</code> to see what other commands are
+available.</p>
 <h2 id="watchers">Watchers</h2>
-<p>You can watch expression and variable values while debugging your code.
-On every breakpoint each expression from the watchers list will be evaluated
-in the current context and displayed just before the breakpoint&#39;s source code
-listing.</p>
-<p>To start watching an expression, type <code>watch(&quot;my_expression&quot;)</code>. <code>watchers</code>
-prints the active watchers. To remove a watcher, type
-<code>unwatch(&quot;my_expression&quot;)</code>.</p>
+<p>It is possible to watch expression and variable values while debugging. On
+every breakpoint, each expression from the watchers list will be evaluated
+in the current context and displayed immediately before the breakpoint&#39;s
+source code listing.</p>
+<p>To begin watching an expression, type <code>watch(&#39;my_expression&#39;)</code>. The command
+<code>watchers</code> will print the active watchers. To remove a watcher, type
+<code>unwatch(&#39;my_expression&#39;)</code>.</p>
 <h2 id="commands-reference">Commands reference</h2>
 <h3 id="stepping">Stepping</h3>
 <ul>
@@ -178,28 +180,29 @@ prints the active watchers. To remove a watcher, type
 functions body</li>
 <li><code>setBreakpoint(&#39;script.js&#39;, 1)</code>, <code>sb(...)</code> - Set breakpoint on first line of
 script.js</li>
-<li><code>clearBreakpoint</code>, <code>cb(...)</code> - Clear breakpoint</li>
+<li><code>clearBreakpoint(&#39;script.js&#39;, 1)</code>, <code>cb(...)</code> - Clear breakpoint in script.js
+on line 1</li>
 </ul>
 <p>It is also possible to set a breakpoint in a file (module) that
 isn&#39;t loaded yet:</p>
-<pre><code>% ./node debug test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-keyword">module</span>/main.js
-&lt; debugger listening <span class="hljs-keyword">on</span> port <span class="hljs-number">5858</span>
-connecting <span class="hljs-keyword">to</span> port <span class="hljs-number">5858</span>... ok
-<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-keyword">module</span>/main.js:<span class="hljs-number">1</span>
-  <span class="hljs-number">1</span> <span class="hljs-keyword">var</span> <span class="hljs-keyword">mod</span> = <span class="hljs-keyword">require</span>(<span class="hljs-string">'./mod.js'</span>);
-  <span class="hljs-number">2</span> <span class="hljs-keyword">mod</span>.hello();
-  <span class="hljs-number">3</span> <span class="hljs-keyword">mod</span>.hello();
+<pre><code>$ ./node debug test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-built_in">module</span>/main.js
+&lt; <span class="hljs-keyword">debugger</span> listening <span class="hljs-literal">on</span> port <span class="hljs-number">5858</span>
+connecting to port <span class="hljs-number">5858.</span>.. ok
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-built_in">module</span>/main.<span class="hljs-attribute">js</span>:<span class="hljs-number">1</span>
+  <span class="hljs-number">1</span> var mod = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./mod.js'</span>);
+  <span class="hljs-number">2</span> mod.hello();
+  <span class="hljs-number">3</span> mod.hello();
 debug&gt; setBreakpoint(<span class="hljs-string">'mod.js'</span>, <span class="hljs-number">23</span>)
-Warning: script <span class="hljs-string">'mod.js'</span> was <span class="hljs-keyword">not</span> loaded yet.
-  <span class="hljs-number">1</span> <span class="hljs-keyword">var</span> <span class="hljs-keyword">mod</span> = <span class="hljs-keyword">require</span>(<span class="hljs-string">'./mod.js'</span>);
-  <span class="hljs-number">2</span> <span class="hljs-keyword">mod</span>.hello();
-  <span class="hljs-number">3</span> <span class="hljs-keyword">mod</span>.hello();
+<span class="hljs-attribute">Warning</span>: script <span class="hljs-string">'mod.js'</span> was <span class="hljs-keyword">not</span> loaded yet.
+  <span class="hljs-number">1</span> var mod = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./mod.js'</span>);
+  <span class="hljs-number">2</span> mod.hello();
+  <span class="hljs-number">3</span> mod.hello();
 debug&gt; c
-<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-keyword">module</span>/<span class="hljs-keyword">mod</span>.js:<span class="hljs-number">23</span>
+<span class="hljs-keyword">break</span> <span class="hljs-keyword">in</span> test/fixtures/<span class="hljs-keyword">break</span>-<span class="hljs-keyword">in</span>-<span class="hljs-built_in">module</span>/mod.<span class="hljs-attribute">js</span>:<span class="hljs-number">23</span>
  <span class="hljs-number">21</span>
- <span class="hljs-number">22</span> exports.hello = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> <span class="hljs-comment">{
- 23   return 'hello from module';
- 24 }</span>;</span>
+ <span class="hljs-number">22</span> exports.hello = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+ <span class="hljs-number">23</span>   <span class="hljs-keyword">return</span> <span class="hljs-string">'hello from module'</span>;
+ <span class="hljs-number">24</span> };
  <span class="hljs-number">25</span>
 debug&gt;
 </code></pre><h3 id="info">Info</h3>
@@ -212,6 +215,7 @@ after)</li>
 <li><code>watchers</code> - List all watchers and their values (automatically listed on each
 breakpoint)</li>
 <li><code>repl</code> - Open debugger&#39;s repl for evaluation in debugging script&#39;s context</li>
+<li><code>exec expr</code> - Execute an expression in debugging script&#39;s context</li>
 </ul>
 <h3 id="execution-control">Execution control</h3>
 <ul>
@@ -222,18 +226,19 @@ breakpoint)</li>
 <h3 id="various">Various</h3>
 <ul>
 <li><code>scripts</code> - List all loaded scripts</li>
-<li><code>version</code> - Display v8&#39;s version</li>
+<li><code>version</code> - Display V8&#39;s version</li>
 </ul>
 <h2 id="advanced-usage">Advanced Usage</h2>
-<p>The V8 debugger can be enabled and accessed either by starting Node with
-the <code>--debug</code> command-line flag or by signaling an existing Node process
-with <code>SIGUSR1</code>.</p>
-<p>Once a process has been set in debug mode with this it can be connected to
-with the node debugger. Either connect to the <code>pid</code> or the URI to the debugger.
-The syntax is:</p>
+<p>An alternative way of enabling and accessing the debugger is to start
+Node.js with the <code>--debug</code> command-line flag or by signaling an existing
+Node.js process with <code>SIGUSR1</code>.</p>
+<p>Once a process has been set in debug mode this way, it can be connected to
+using the Node.js debugger by either connecting to the <code>pid</code> of the running
+process or via URI reference to the listening debugger:</p>
 <ul>
 <li><code>node debug -p &lt;pid&gt;</code> - Connects to the process via the <code>pid</code></li>
-<li><code>node debug &lt;URI&gt;</code> - Connects to the process via the URI such as localhost:5858</li>
+<li><code>node debug &lt;URI&gt;</code> - Connects to the process via the URI such as
+localhost:5858</li>
 </ul>
 
 

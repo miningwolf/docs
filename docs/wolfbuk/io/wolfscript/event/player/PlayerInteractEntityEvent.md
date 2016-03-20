@@ -17,6 +17,8 @@ Represents an event that is called when a player right clicks an entity.
 Method | Type   
 --- | :--- 
 new __PlayerInteractEntityEvent__(Player, Entity) <br> _PlayerInteractEntityEvent constructor_ | _constructor_
+new __PlayerInteractEntityEvent__(Player, Entity, EquipmentSlot) <br> _PlayerInteractEntityEvent constructor_ | _constructor_
+ readonly property __Hand__ <br> _Get: The hand used to perform this interaction._ | [`EquipmentSlot`](../../inventory/EquipmentSlot.md)
 static readonly property __HandlerList__ <br> _HandlerList property_ | [`HandlerList`](../HandlerList.md)
  readonly property __Handlers__ <br> _Handlers property_ | [`HandlerList`](../HandlerList.md)
  readonly property __RightClicked__ <br> _Get: Gets the entity that was rightclicked by the player._ | `Entity`
@@ -53,9 +55,29 @@ Argument | Type | Description
 Player | `final` | Player argument
 Entity | `final` | Entity argument
 
+##### <a id='playerinteractentityevent'></a>new __PlayerInteractEntityEvent__(Player, Entity, EquipmentSlot) 
+
+_PlayerInteractEntityEvent constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Player | `final` | Player argument
+Entity | `final` | Entity argument
+EquipmentSlot | `final` | EquipmentSlot argument
+
 ---
 
 ### Public Properties for [`PlayerInteractEntityEvent`](PlayerInteractEntityEvent.md)
+
+##### <a id='hand'></a>public  readonly property __Hand__
+
+_Get: The hand used to perform this interaction._
+
+Get | Description
+--- | --- 
+[`EquipmentSlot`](../../inventory/EquipmentSlot.md) | the hand used to interact
+
+
 
 ##### <a id='handlerlist'></a>public static readonly property __HandlerList__
 

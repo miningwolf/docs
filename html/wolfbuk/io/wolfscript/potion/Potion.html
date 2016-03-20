@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -94,6 +98,7 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/potion/Potion.html'>Potion</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionBrewer.html'>PotionBrewer</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionData.html'>PotionData</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffect.html'>PotionEffect</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectType.html'>PotionEffectType</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
@@ -121,7 +126,7 @@
 </blockquote>
 <hr>
 <h3 id="class-overview">Class Overview</h3>
-<p>Represents a minecraft potion</p>
+<p>Potion Adapter for pre-1.9 data values see @PotionMeta for 1.9+</p>
 <table>
 <thead>
 <tr>
@@ -136,10 +141,6 @@
 </tr>
 <tr>
 <td>new <strong>Potion</strong>(type, level) <br> <em>Create a new potion of the given type and level.</em></td>
-<td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
-<td>new <strong>Potion</strong>(name) <br> <em>Create a potion with a specific name.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -188,6 +189,10 @@
 </tr>
 <tr>
 <td>static function <strong>fromItemStack</strong>(item) <br> <em>fromItemStack method</em></td>
+<td style="text-align:left"><a href="Potion.html"><code>Potion</code></a></td>
+</tr>
+<tr>
+<td>static function <strong>fromDamage</strong>(damage) <br> <em>fromDamage method</em></td>
 <td style="text-align:left"><a href="Potion.html"><code>Potion</code></a></td>
 </tr>
 <tr>
@@ -255,12 +260,12 @@
 <tr>
 <td>type</td>
 <td><a href="PotionType.html"><code>PotionType</code></a></td>
-<td>the type of the potion</td>
+<td>type argument</td>
 </tr>
 <tr>
 <td>tier</td>
 <td><code>Tier</code></td>
-<td>the tier of the potion</td>
+<td>tier argument</td>
 </tr>
 </tbody>
 </table>
@@ -279,17 +284,17 @@
 <tr>
 <td>type</td>
 <td><a href="PotionType.html"><code>PotionType</code></a></td>
-<td>the type of the potion</td>
+<td>type argument</td>
 </tr>
 <tr>
 <td>tier</td>
 <td><code>Tier</code></td>
-<td>the tier of the potion</td>
+<td>tier argument</td>
 </tr>
 <tr>
 <td>splash</td>
 <td><code>boolean</code></td>
-<td>whether the potion is a splash potion</td>
+<td>splash argument</td>
 </tr>
 </tbody>
 </table>
@@ -308,22 +313,22 @@
 <tr>
 <td>type</td>
 <td><a href="PotionType.html"><code>PotionType</code></a></td>
-<td>the type of the potion</td>
+<td>type argument</td>
 </tr>
 <tr>
 <td>tier</td>
 <td><code>Tier</code></td>
-<td>the tier of the potion</td>
+<td>tier argument</td>
 </tr>
 <tr>
 <td>splash</td>
 <td><code>boolean</code></td>
-<td>whether the potion is a splash potion</td>
+<td>splash argument</td>
 </tr>
 <tr>
 <td>extended</td>
 <td><code>boolean</code></td>
-<td>whether the potion has an extended duration</td>
+<td>extended argument</td>
 </tr>
 </tbody>
 </table>
@@ -414,7 +419,8 @@
 </tbody>
 </table>
 <h5 id="-a-id-potion-a-new-__potion__-name-"><a id='potion'></a>new <strong>Potion</strong>(name)</h5>
-<p><em>Create a potion with a specific name.</em></p>
+<p><em>Deprecated</em></p>
+<p><em>Potion constructor</em></p>
 <table>
 <thead>
 <tr>
@@ -427,7 +433,7 @@
 <tr>
 <td>name</td>
 <td><code>int</code></td>
-<td>The name index (0-63)</td>
+<td>name argument</td>
 </tr>
 </tbody>
 </table>
@@ -465,7 +471,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-nameid-a-public-readonly-property-__nameid__"><a id='nameid'></a>public  readonly property <strong>NameId</strong></h5>
-<p><em>Deprecated: Magic value</em></p>
+<p><em>Deprecated: Non-functional</em></p>
 <p><em>NameId property</em></p>
 <table>
 <thead>
@@ -813,7 +819,6 @@
 </tbody>
 </table>
 <h5 id="-a-id-fromdamage-a-public-static-function-__fromdamage__-damage-"><a id='fromdamage'></a>public static function <strong>fromDamage</strong>(damage)</h5>
-<p><em>Deprecated: Magic value</em></p>
 <p><em>fromDamage method</em></p>
 <table>
 <thead>
@@ -956,7 +961,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-todamagevalue-a-public-function-__todamagevalue__-"><a id='todamagevalue'></a>public  function <strong>toDamageValue</strong>()</h5>
-<p><em>Deprecated: Magic value</em></p>
+<p><em>Deprecated: Non-functional</em></p>
 <p><em>Converts this potion to a valid potion damage short, usable for potion item stacks.</em></p>
 <table>
 <thead>

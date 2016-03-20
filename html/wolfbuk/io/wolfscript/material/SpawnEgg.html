@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -126,6 +130,7 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/material/RedstoneTorch.html'>RedstoneTorch</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/RedstoneWire.html'>RedstoneWire</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Sandstone.html'>Sandstone</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/material/Sapling.html'>Sapling</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Sign.html'>Sign</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/SimpleAttachableMaterialData.html'>SimpleAttachableMaterialData</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Skull.html'>Skull</a></li>
@@ -140,6 +145,7 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Tripwire.html'>Tripwire</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/TripwireHook.html'>TripwireHook</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Vine.html'>Vine</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/material/Wood.html'>Wood</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/WoodenStep.html'>WoodenStep</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/material/Wool.html'>Wool</a></li>
 <li class='divider'></li>
@@ -190,10 +196,6 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <tr>
 <td>new <strong>SpawnEgg</strong>(type) <br> <em>SpawnEgg constructor</em></td>
 <td style="text-align:left"><em>constructor</em></td>
-</tr>
-<tr>
-<td>  property <strong>SpawnedType</strong> <br> <em>Get: Get the type of entity this egg will spawn.<br>Set: Set the type of entity this egg will spawn.</em></td>
-<td style="text-align:left"><a href="../entity/EntityType.html"><code>EntityType</code></a></td>
 </tr>
 <tr>
 <td> function <strong>clone</strong>() <br> <em>clone method</em></td>
@@ -313,18 +315,18 @@ Extends <a href="MaterialData.html"><code>MaterialData</code></a></p>
 <hr>
 <h3 id="public-properties-for-spawnegg-spawnegg-md-">Public Properties for <a href="SpawnEgg.html"><code>SpawnEgg</code></a></h3>
 <h5 id="-a-id-spawnedtype-a-public-property-__spawnedtype__"><a id='spawnedtype'></a>public   property <strong>SpawnedType</strong></h5>
+<p><em>Deprecated: This is now stored in {@link io.wolfscript.inventory.meta.ItemMeta}. See SPIGOT-1592.</em></p>
 <p><em>Get: Get the type of entity this egg will spawn.<br>Set: Set the type of entity this egg will spawn.</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../entity/EntityType.html"><code>EntityType</code></a></td>
-<td>The entity type.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

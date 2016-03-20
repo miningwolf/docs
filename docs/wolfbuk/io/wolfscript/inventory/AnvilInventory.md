@@ -13,22 +13,24 @@ Method | Type
 --- | :--- 
  |
 __Inherited items from [`Inventory`](Inventory.md)__ |
- readonly property __Size__ <br> _Get: Returns the size of the inventory_ | `int`
+ readonly property __Location__ <br> _Location property_ | `Location`
  readonly property __Holder__ <br> _Get: Gets the block or entity belonging to the open inventory_ | [`InventoryHolder`](InventoryHolder.md)
- readonly property __Name__ <br> _Get: Returns the name of the inventory_ | `String`
  readonly property __Contents__ <br> _Get: Returns all ItemStacks from the inventory_ | `ItemStack[]`
+ readonly property __Viewers__ <br> _Get: Gets a list of players viewing the inventory. Note that a player is_ | `List<HumanEntity>`
   property __MaxStackSize__ <br> _MaxStackSize property_ | `int`
  readonly property __Title__ <br> _Get: Returns the title of this inventory._ | `String`
+ readonly property __Size__ <br> _Get: Returns the size of the inventory_ | `int`
+ readonly property __Name__ <br> _Get: Returns the name of the inventory_ | `String`
+ readonly property __StorageContents__ <br> _StorageContents property_ | `ItemStack[]`
  readonly property __Type__ <br> _Get: Returns what type of inventory this is._ | [`InventoryType`](../event/inventory/InventoryType.md)
- readonly property __Viewers__ <br> _Get: Gets a list of players viewing the inventory. Note that a player is_ | `List<HumanEntity>`
- function __getItem__(index) <br> _Returns the ItemStack found in the slot at the given index_ | `ItemStack`
  function __clear__() <br> _Clears out the whole Inventory._ | `void`
+ function __getItem__(index) <br> _Returns the ItemStack found in the slot at the given index_ | `ItemStack`
+ function __clear__(index) <br> _Clears out a particular slot in the index._ | `void`
+ function __firstEmpty__() <br> _Returns the first empty Slot._ | `int`
  function __contains__(item) <br> _Checks if the inventory contains any ItemStacks matching the given_ | `boolean`
  function __contains__(item, amount) <br> _Checks if the inventory contains at least the minimum amount specified_ | `boolean`
  function __containsAtLeast__(item, amount) <br> _Checks if the inventory contains ItemStacks matching the given_ | `boolean`
  function __first__(item) <br> _Returns the first slot in the inventory containing an ItemStack with_ | `int`
- function __firstEmpty__() <br> _Returns the first empty Slot._ | `int`
- function __clear__(index) <br> _Clears out a particular slot in the index._ | `void`
  function __iterator__() <br> _iterator method_ | `ListIterator<ItemStack>`
  function __iterator__(index) <br> _Returns an iterator starting at the given index. If the index is_ | `ListIterator<ItemStack>`
  function __remove__(item) <br> _Removes all stacks in the inventory matching the given stack._ | `void`
@@ -43,13 +45,13 @@ __Inherited items from [`Inventory`](Inventory.md)__ |
 
 ### Public Properties for [`Inventory`](Inventory.md)
 
-##### <a id='size'></a>public  readonly property __Size__
+##### <a id='location'></a>public  readonly property __Location__
 
-_Get: Returns the size of the inventory_
+_Location property_
 
-Get | Description
---- | --- 
-`int` | The size of the inventory
+Get | 
+--- | 
+`Location` |
 
 
 
@@ -63,16 +65,6 @@ Get | Description
 
 
 
-##### <a id='name'></a>public  readonly property __Name__
-
-_Get: Returns the name of the inventory_
-
-Get | Description
---- | --- 
-`String` | The String with the name of the inventory
-
-
-
 ##### <a id='contents'></a>public  readonly property __Contents__
 
 _Get: Returns all ItemStacks from the inventory_
@@ -80,6 +72,16 @@ _Get: Returns all ItemStacks from the inventory_
 Get | Description
 --- | --- 
 `ItemStack[]` | An array of ItemStacks from the inventory.
+
+
+
+##### <a id='viewers'></a>public  readonly property __Viewers__
+
+_Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it's possible for customized inventory screens to exclude the viewer's inventory, so this should never be assumed to be non-empty._
+
+Get | Description
+--- | --- 
+`List<HumanEntity>` | A list of HumanEntities who are viewing this Inventory.
 
 
 
@@ -106,6 +108,36 @@ Get | Description
 
 
 
+##### <a id='size'></a>public  readonly property __Size__
+
+_Get: Returns the size of the inventory_
+
+Get | Description
+--- | --- 
+`int` | The size of the inventory
+
+
+
+##### <a id='name'></a>public  readonly property __Name__
+
+_Get: Returns the name of the inventory_
+
+Get | Description
+--- | --- 
+`String` | The String with the name of the inventory
+
+
+
+##### <a id='storagecontents'></a>public  readonly property __StorageContents__
+
+_StorageContents property_
+
+Get | 
+--- | 
+`ItemStack[]` |
+
+
+
 ##### <a id='type'></a>public  readonly property __Type__
 
 _Get: Returns what type of inventory this is._
@@ -113,16 +145,6 @@ _Get: Returns what type of inventory this is._
 Get | Description
 --- | --- 
 [`InventoryType`](../event/inventory/InventoryType.md) | The InventoryType representing the type of inventory.
-
-
-
-##### <a id='viewers'></a>public  readonly property __Viewers__
-
-_Get: Gets a list of players viewing the inventory. Note that a player is considered to be viewing their own inventory and internal crafting screen even when said inventory is not open. They will normally be considered to be viewing their inventory even when they have a different inventory screen open, but it's possible for customized inventory screens to exclude the viewer's inventory, so this should never be assumed to be non-empty._
-
-Get | Description
---- | --- 
-`List<HumanEntity>` | A list of HumanEntities who are viewing this Inventory.
 
 
 
@@ -144,6 +166,15 @@ Returns | Description
 `int` | The slot index of the given materialId or -1 if not found
 
 
+##### <a id='clear'></a>public  function __clear__()
+
+_Clears out the whole Inventory._
+
+Returns | 
+--- | 
+`void` |
+
+
 ##### <a id='getitem'></a>public  function __getItem__(index)
 
 _Returns the ItemStack found in the slot at the given index_
@@ -157,13 +188,26 @@ Returns | Description
 `ItemStack` | The ItemStack in the slot
 
 
-##### <a id='clear'></a>public  function __clear__()
+##### <a id='clear'></a>public  function __clear__(index)
 
-_Clears out the whole Inventory._
+_Clears out a particular slot in the index._
+
+Argument | Type | Description  
+--- | --- | --- 
+index | `int` | The index to empty.
 
 Returns | 
 --- | 
 `void` |
+
+
+##### <a id='firstempty'></a>public  function __firstEmpty__()
+
+_Returns the first empty Slot._
+
+Returns | Description
+--- | --- 
+`int` | The first empty Slot found, or -1 if no empty slots.
 
 
 ##### <a id='contains'></a>public  function __contains__(materialId)
@@ -247,28 +291,6 @@ item | `ItemStack` | The ItemStack to match against
 Returns | Description
 --- | --- 
 `int` | The slot index of the given ItemStack or -1 if not found
-
-
-##### <a id='firstempty'></a>public  function __firstEmpty__()
-
-_Returns the first empty Slot._
-
-Returns | Description
---- | --- 
-`int` | The first empty Slot found, or -1 if no empty slots.
-
-
-##### <a id='clear'></a>public  function __clear__(index)
-
-_Clears out a particular slot in the index._
-
-Argument | Type | Description  
---- | --- | --- 
-index | `int` | The index to empty.
-
-Returns | 
---- | 
-`void` |
 
 
 ##### <a id='iterator'></a>public  function __iterator__()

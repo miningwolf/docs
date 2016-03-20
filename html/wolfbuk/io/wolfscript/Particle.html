@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API Particle</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../index.html'>Docs </a></li>
+ <li><a href='../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+<li class='current'><a href='#'>Particle</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li><a href='../../../wolfbuk/io/wolfscript/Achievement.html'>Achievement</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Art.html'>Art</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/BanEntry.html'>BanEntry</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/BanList.html'>BanList</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/BlockChangeDelegate.html'>BlockChangeDelegate</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/ChatColor.html'>ChatColor</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Chunk.html'>Chunk</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/ChunkSnapshot.html'>ChunkSnapshot</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/CoalType.html'>CoalType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Color.html'>Color</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/CropState.html'>CropState</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Difficulty.html'>Difficulty</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/DyeColor.html'>DyeColor</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Effect.html'>Effect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/EntityEffect.html'>EntityEffect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Environment.html'>Environment</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/FireworkEffect.html'>FireworkEffect</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/GameMode.html'>GameMode</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/GrassSpecies.html'>GrassSpecies</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Instrument.html'>Instrument</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Material.html'>Material</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/NetherWartsState.html'>NetherWartsState</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Note.html'>Note</a></li>
+<li class='active'><a href='../../../wolfbuk/io/wolfscript/Particle.html'>Particle</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/PortalType.html'>PortalType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Rotation.html'>Rotation</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/SandstoneType.html'>SandstoneType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Server.html'>Server</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/SkullType.html'>SkullType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Sound.html'>Sound</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Statistic.html'>Statistic</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TravelAgent.html'>TravelAgent</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TreeSpecies.html'>TreeSpecies</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/TreeType.html'>TreeType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/UnsafeValues.html'>UnsafeValues</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WeatherType.html'>WeatherType</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WolfScript.html'>WolfScript</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldBorder.html'>WorldBorder</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldCreator.html'>WorldCreator</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/WorldType.html'>WorldType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="particle-__enum__">Particle <strong>enum</strong></h2>
+<blockquote>
+<p>io.wolfscript.Particle</p>
+</blockquote>
+<hr>
+<h3 id="enum-overview">Enum Overview</h3>
+<p>enum Particle</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EXPLOSION_NORMAL: <br> _EXPLOSION<em>NORMAL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>EXPLOSION_LARGE: <br> _EXPLOSION<em>LARGE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>EXPLOSION_HUGE: <br> _EXPLOSION<em>HUGE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>FIREWORKS_SPARK: <br> _FIREWORKS<em>SPARK Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>WATER_BUBBLE: <br> _WATER<em>BUBBLE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>WATER_SPLASH: <br> _WATER<em>SPLASH Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>WATER_WAKE: <br> _WATER<em>WAKE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SUSPENDED: <br> <em>SUSPENDED Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SUSPENDED_DEPTH: <br> _SUSPENDED<em>DEPTH Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>CRIT: <br> <em>CRIT Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>CRIT_MAGIC: <br> _CRIT<em>MAGIC Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SMOKE_NORMAL: <br> _SMOKE<em>NORMAL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SMOKE_LARGE: <br> _SMOKE<em>LARGE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SPELL: <br> <em>SPELL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SPELL_INSTANT: <br> _SPELL<em>INSTANT Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SPELL_MOB: <br> _SPELL<em>MOB Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SPELL_MOB_AMBIENT: <br> _SPELL_MOB<em>AMBIENT Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SPELL_WITCH: <br> _SPELL<em>WITCH Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>DRIP_WATER: <br> _DRIP<em>WATER Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>DRIP_LAVA: <br> _DRIP<em>LAVA Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>VILLAGER_ANGRY: <br> _VILLAGER<em>ANGRY Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>VILLAGER_HAPPY: <br> _VILLAGER<em>HAPPY Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>TOWN_AURA: <br> _TOWN<em>AURA Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>NOTE: <br> <em>NOTE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>PORTAL: <br> <em>PORTAL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>ENCHANTMENT_TABLE: <br> _ENCHANTMENT<em>TABLE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>FLAME: <br> <em>FLAME Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>LAVA: <br> <em>LAVA Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>FOOTSTEP: <br> <em>FOOTSTEP Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>CLOUD: <br> <em>CLOUD Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>REDSTONE: <br> <em>REDSTONE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SNOWBALL: <br> <em>SNOWBALL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SNOW_SHOVEL: <br> _SNOW<em>SHOVEL Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SLIME: <br> <em>SLIME Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>HEART: <br> <em>HEART Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>BARRIER: <br> <em>BARRIER Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>ITEM_CRACK: ItemStack.class<br> _ITEM<em>CRACK Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>BLOCK_CRACK: MaterialData.class<br> _BLOCK<em>CRACK Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>BLOCK_DUST: MaterialData.class<br> _BLOCK<em>DUST Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>WATER_DROP: <br> _WATER<em>DROP Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>ITEM_TAKE: <br> _ITEM<em>TAKE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>MOB_APPEARANCE: <br> _MOB<em>APPEARANCE Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>DRAGON_BREATH: <br> _DRAGON<em>BREATH Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>END_ROD: <br> _END<em>ROD Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>DAMAGE_INDICATOR: <br> _DAMAGE<em>INDICATOR Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td>SWEEP_ATTACK: <br> _SWEEP<em>ATTACK Particle</em></td>
+<td style="text-align:left">Particle</td>
+</tr>
+<tr>
+<td> readonly property <strong>DataType</strong> <br> <em>Get: Returns the required data type for the particle</em></td>
+<td style="text-align:left"><code>Class&lt;?&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-particle-particle-md-">Public Properties for <a href="Particle.html"><code>Particle</code></a></h3>
+<h5 id="-a-id-datatype-a-public-readonly-property-__datatype__"><a id='datatype'></a>public  readonly property <strong>DataType</strong></h5>
+<p><em>Get: Returns the required data type for the particle</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Class&lt;?&gt;</code></td>
+<td>the required data type</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

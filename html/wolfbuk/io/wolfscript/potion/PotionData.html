@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API PotionData</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../index.html'>Docs </a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../wolfbuk/io/wolfscript/potion/0.html'>potion</a></li>
+<li class='current'><a href='#'>PotionData</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/Potion.html'>Potion</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionBrewer.html'>PotionBrewer</a></li>
+<li class='active'><a href='../../../../wolfbuk/io/wolfscript/potion/PotionData.html'>PotionData</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffect.html'>PotionEffect</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectType.html'>PotionEffectType</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionType.html'>PotionType</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="potiondata-__class__">PotionData <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.potion.PotionData</p>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>class PotionData</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>PotionData</strong>(type, extended, upgraded) <br> <em>Instantiates a final PotionData object to contain information about a</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>PotionData</strong>(type) <br> <em>PotionData constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Type</strong> <br> <em>Get: Gets the type of the potion, Type matches up with each kind of craftable</em></td>
+<td style="text-align:left"><a href="PotionType.html"><code>PotionType</code></a></td>
+</tr>
+<tr>
+<td> function <strong>equals</strong>(obj) <br> <em>equals method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>hashCode</strong>() <br> <em>hashCode method</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>isExtended</strong>() <br> <em>Checks if the potion is in an extended state. This refers to the extended</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>isUpgraded</strong>() <br> <em>Checks if the potion is in an upgraded state. This refers to whether or</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-potiondata-potiondata-md-">Public Constructors for <a href="PotionData.html"><code>PotionData</code></a></h3>
+<h5 id="-a-id-potiondata-a-new-__potiondata__-type-extended-upgraded-"><a id='potiondata'></a>new <strong>PotionData</strong>(type, extended, upgraded)</h5>
+<p><em>Instantiates a final PotionData object to contain information about a Potion</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td>the type of the Potion</td>
+</tr>
+<tr>
+<td>extended</td>
+<td><code>boolean</code></td>
+<td>whether the potion is extended PotionType#isExtendable() must be true</td>
+</tr>
+<tr>
+<td>upgraded</td>
+<td><code>boolean</code></td>
+<td>whether the potion is upgraded PotionType#isUpgradable() must be true</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-potiondata-a-new-__potiondata__-type-"><a id='potiondata'></a>new <strong>PotionData</strong>(type)</h5>
+<p><em>PotionData constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td>type argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-potiondata-potiondata-md-">Public Properties for <a href="PotionData.html"><code>PotionData</code></a></h3>
+<h5 id="-a-id-type-a-public-readonly-property-__type__"><a id='type'></a>public  readonly property <strong>Type</strong></h5>
+<p><em>Get: Gets the type of the potion, Type matches up with each kind of craftable potion</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td>the potion type</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-potiondata-potiondata-md-">Public Methods for <a href="PotionData.html"><code>PotionData</code></a></h3>
+<h5 id="-a-id-equals-a-public-function-__equals__-obj-"><a id='equals'></a>public  function <strong>equals</strong>(obj)</h5>
+<p><em>equals method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>obj</td>
+<td><code>Object</code></td>
+<td>obj argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-hashcode-a-public-function-__hashcode__-"><a id='hashcode'></a>public  function <strong>hashCode</strong>()</h5>
+<p><em>hashCode method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isextended-a-public-function-__isextended__-"><a id='isextended'></a>public  function <strong>isExtended</strong>()</h5>
+<p><em>Checks if the potion is in an extended state. This refers to the extended duration potions</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the potion is extended</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isupgraded-a-public-function-__isupgraded__-"><a id='isupgraded'></a>public  function <strong>isUpgraded</strong>()</h5>
+<p><em>Checks if the potion is in an upgraded state. This refers to whether or not the potion is Tier 2, such as Potion of Fire Resistance II.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the potion is upgraded;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

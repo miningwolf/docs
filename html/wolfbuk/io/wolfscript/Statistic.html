@@ -82,6 +82,7 @@
 <li><a href='../../../wolfbuk/io/wolfscript/Material.html'>Material</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/NetherWartsState.html'>NetherWartsState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Note.html'>Note</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Particle.html'>Particle</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/PortalType.html'>PortalType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Rotation.html'>Rotation</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/SandstoneType.html'>SandstoneType</a></li>
@@ -99,7 +100,11 @@
 <li><a href='../../../wolfbuk/io/wolfscript/WorldCreator.html'>WorldCreator</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldType.html'>WorldType</a></li>
 <li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -163,11 +168,11 @@
 </thead>
 <tbody>
 <tr>
-<td>DAMAGE<em>DEALT: <br> _DAMAGE_DEALT Statistic</em></td>
+<td>DAMAGE_DEALT: <br> _DAMAGE<em>DEALT Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>DAMAGE<em>TAKEN: <br> _DAMAGE_TAKEN Statistic</em></td>
+<td>DAMAGE_TAKEN: <br> _DAMAGE<em>TAKEN Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
@@ -175,31 +180,31 @@
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>MOB<em>KILLS: <br> _MOB_KILLS Statistic</em></td>
+<td>MOB_KILLS: <br> _MOB<em>KILLS Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>PLAYER<em>KILLS: <br> _PLAYER_KILLS Statistic</em></td>
+<td>PLAYER_KILLS: <br> _PLAYER<em>KILLS Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>FISH<em>CAUGHT: <br> _FISH_CAUGHT Statistic</em></td>
+<td>FISH_CAUGHT: <br> _FISH<em>CAUGHT Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>ANIMALS<em>BRED: <br> _ANIMALS_BRED Statistic</em></td>
+<td>ANIMALS_BRED: <br> _ANIMALS<em>BRED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>TREASURE<em>FISHED: <br> _TREASURE_FISHED Statistic</em></td>
+<td>TREASURE_FISHED: <br> _TREASURE<em>FISHED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>JUNK<em>FISHED: <br> _JUNK_FISHED Statistic</em></td>
+<td>JUNK_FISHED: <br> _JUNK<em>FISHED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>LEAVE<em>GAME: <br> _LEAVE_GAME Statistic</em></td>
+<td>LEAVE_GAME: <br> _LEAVE<em>GAME Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
@@ -207,175 +212,191 @@
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>DROP: <br> <em>DROP Statistic</em></td>
+<td>DROP: Type.ITEM<br> <em>DROP Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>PLAY<em>ONE_TICK: <br> _PLAY_ONE_TICK Statistic</em></td>
+<td>PICKUP: Type.ITEM<br> <em>PICKUP Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>WALK<em>ONE_CM: <br> _WALK_ONE_CM Statistic</em></td>
+<td>PLAY_ONE_TICK: <br> _PLAY_ONE<em>TICK Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>SWIM<em>ONE_CM: <br> _SWIM_ONE_CM Statistic</em></td>
+<td>WALK_ONE_CM: <br> _WALK_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>FALL<em>ONE_CM: <br> _FALL_ONE_CM Statistic</em></td>
+<td>SWIM_ONE_CM: <br> _SWIM_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CLIMB<em>ONE_CM: <br> _CLIMB_ONE_CM Statistic</em></td>
+<td>FALL_ONE_CM: <br> _FALL_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>FLY<em>ONE_CM: <br> _FLY_ONE_CM Statistic</em></td>
+<td>SNEAK_TIME: <br> _SNEAK<em>TIME Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>DIVE<em>ONE_CM: <br> _DIVE_ONE_CM Statistic</em></td>
+<td>CLIMB_ONE_CM: <br> _CLIMB_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>MINECART<em>ONE_CM: <br> _MINECART_ONE_CM Statistic</em></td>
+<td>FLY_ONE_CM: <br> _FLY_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>BOAT<em>ONE_CM: <br> _BOAT_ONE_CM Statistic</em></td>
+<td>DIVE_ONE_CM: <br> _DIVE_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>PIG<em>ONE_CM: <br> _PIG_ONE_CM Statistic</em></td>
+<td>MINECART_ONE_CM: <br> _MINECART_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>HORSE<em>ONE_CM: <br> _HORSE_ONE_CM Statistic</em></td>
+<td>BOAT_ONE_CM: <br> _BOAT_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>SPRINT<em>ONE_CM: <br> _SPRINT_ONE_CM Statistic</em></td>
+<td>PIG_ONE_CM: <br> _PIG_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CROUCH<em>ONE_CM: <br> _CROUCH_ONE_CM Statistic</em></td>
+<td>HORSE_ONE_CM: <br> _HORSE_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>MINE<em>BLOCK: Type.BLOCK<br> _MINE_BLOCK Statistic</em></td>
+<td>SPRINT_ONE_CM: <br> _SPRINT_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>USE<em>ITEM: Type.ITEM<br> _USE_ITEM Statistic</em></td>
+<td>CROUCH_ONE_CM: <br> _CROUCH_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>BREAK<em>ITEM: Type.ITEM<br> _BREAK_ITEM Statistic</em></td>
+<td>AVIATE_ONE_CM: <br> _AVIATE_ONE<em>CM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CRAFT<em>ITEM: Type.ITEM<br> _CRAFT_ITEM Statistic</em></td>
+<td>MINE_BLOCK: Type.BLOCK<br> _MINE<em>BLOCK Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>KILL<em>ENTITY: Type.ENTITY<br> _KILL_ENTITY Statistic</em></td>
+<td>USE_ITEM: Type.ITEM<br> _USE<em>ITEM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>ENTITY<em>KILLED_BY: Type.ENTITY<br> _ENTITY_KILLED_BY Statistic</em></td>
+<td>BREAK_ITEM: Type.ITEM<br> _BREAK<em>ITEM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>TIME<em>SINCE_DEATH: <br> _TIME_SINCE_DEATH Statistic</em></td>
+<td>CRAFT_ITEM: Type.ITEM<br> _CRAFT<em>ITEM Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>TALKED<em>TO_VILLAGER: <br> _TALKED_TO_VILLAGER Statistic</em></td>
+<td>KILL_ENTITY: Type.ENTITY<br> _KILL<em>ENTITY Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>TRADED<em>WITH_VILLAGER: <br> _TRADED_WITH_VILLAGER Statistic</em></td>
+<td>ENTITY_KILLED_BY: Type.ENTITY<br> _ENTITY_KILLED<em>BY Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CAKE<em>SLICES_EATEN: <br> _CAKE_SLICES_EATEN Statistic</em></td>
+<td>TIME_SINCE_DEATH: <br> _TIME_SINCE<em>DEATH Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CAULDRON<em>FILLED: <br> _CAULDRON_FILLED Statistic</em></td>
+<td>TALKED_TO_VILLAGER: <br> _TALKED_TO<em>VILLAGER Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CAULDRON<em>USED: <br> _CAULDRON_USED Statistic</em></td>
+<td>TRADED_WITH_VILLAGER: <br> _TRADED_WITH<em>VILLAGER Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>ARMOR<em>CLEANED: <br> _ARMOR_CLEANED Statistic</em></td>
+<td>CAKE_SLICES_EATEN: <br> _CAKE_SLICES<em>EATEN Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>BANNER<em>CLEANED: <br> _BANNER_CLEANED Statistic</em></td>
+<td>CAULDRON_FILLED: <br> _CAULDRON<em>FILLED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>BREWINGSTAND<em>INTERACTION: <br> _BREWINGSTAND_INTERACTION Statistic</em></td>
+<td>CAULDRON_USED: <br> _CAULDRON<em>USED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>BEACON<em>INTERACTION: <br> _BEACON_INTERACTION Statistic</em></td>
+<td>ARMOR_CLEANED: <br> _ARMOR<em>CLEANED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>DROPPER<em>INSPECTED: <br> _DROPPER_INSPECTED Statistic</em></td>
+<td>BANNER_CLEANED: <br> _BANNER<em>CLEANED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>HOPPER<em>INSPECTED: <br> _HOPPER_INSPECTED Statistic</em></td>
+<td>BREWINGSTAND_INTERACTION: <br> _BREWINGSTAND<em>INTERACTION Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>DISPENSER<em>INSPECTED: <br> _DISPENSER_INSPECTED Statistic</em></td>
+<td>BEACON_INTERACTION: <br> _BEACON<em>INTERACTION Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>NOTEBLOCK<em>PLAYED: <br> _NOTEBLOCK_PLAYED Statistic</em></td>
+<td>DROPPER_INSPECTED: <br> _DROPPER<em>INSPECTED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>NOTEBLOCK<em>TUNED: <br> _NOTEBLOCK_TUNED Statistic</em></td>
+<td>HOPPER_INSPECTED: <br> _HOPPER<em>INSPECTED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>FLOWER<em>POTTED: <br> _FLOWER_POTTED Statistic</em></td>
+<td>DISPENSER_INSPECTED: <br> _DISPENSER<em>INSPECTED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>TRAPPED<em>CHEST_TRIGGERED: <br> _TRAPPED_CHEST_TRIGGERED Statistic</em></td>
+<td>NOTEBLOCK_PLAYED: <br> _NOTEBLOCK<em>PLAYED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>ENDERCHEST<em>OPENED: <br> _ENDERCHEST_OPENED Statistic</em></td>
+<td>NOTEBLOCK_TUNED: <br> _NOTEBLOCK<em>TUNED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>ITEM<em>ENCHANTED: <br> _ITEM_ENCHANTED Statistic</em></td>
+<td>FLOWER_POTTED: <br> _FLOWER<em>POTTED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>RECORD<em>PLAYED: <br> _RECORD_PLAYED Statistic</em></td>
+<td>TRAPPED_CHEST_TRIGGERED: <br> _TRAPPED_CHEST<em>TRIGGERED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>FURNACE<em>INTERACTION: <br> _FURNACE_INTERACTION Statistic</em></td>
+<td>ENDERCHEST_OPENED: <br> _ENDERCHEST<em>OPENED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CRAFTING<em>TABLE_INTERACTION: <br> _CRAFTING_TABLE_INTERACTION Statistic</em></td>
+<td>ITEM_ENCHANTED: <br> _ITEM<em>ENCHANTED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>
-<td>CHEST<em>OPENED: <br> _CHEST_OPENED Statistic</em></td>
+<td>RECORD_PLAYED: <br> _RECORD<em>PLAYED Statistic</em></td>
+<td style="text-align:left">Statistic</td>
+</tr>
+<tr>
+<td>FURNACE_INTERACTION: <br> _FURNACE<em>INTERACTION Statistic</em></td>
+<td style="text-align:left">Statistic</td>
+</tr>
+<tr>
+<td>CRAFTING_TABLE_INTERACTION: <br> _CRAFTING_TABLE<em>INTERACTION Statistic</em></td>
+<td style="text-align:left">Statistic</td>
+</tr>
+<tr>
+<td>CHEST_OPENED: <br> _CHEST<em>OPENED Statistic</em></td>
+<td style="text-align:left">Statistic</td>
+</tr>
+<tr>
+<td>SLEEP_IN_BED: <br> _SLEEP_IN<em>BED Statistic</em></td>
 <td style="text-align:left">Statistic</td>
 </tr>
 <tr>

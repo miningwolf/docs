@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -94,6 +98,7 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/Potion.html'>Potion</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionBrewer.html'>PotionBrewer</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionData.html'>PotionData</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffect.html'>PotionEffect</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectType.html'>PotionEffectType</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
@@ -289,6 +294,22 @@ Extends <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
 </tr>
 <tr>
 <td>static final var <strong>SATURATION</strong> <br> <em>Increases the food level of an entity each tick.</em></td>
+<td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>GLOWING</strong> <br> <em>Outlines the entity so that it can be seen from afar.</em></td>
+<td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>LEVITATION</strong> <br> <em>Causes the entity to float into the air.</em></td>
+<td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>LUCK</strong> <br> <em>LUCK field</em></td>
+<td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+</tr>
+<tr>
+<td>static final var <strong>UNLUCK</strong> <br> <em>UNLUCK field</em></td>
 <td style="text-align:left"><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
 </tr>
 </tbody>
@@ -637,7 +658,7 @@ Extends <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
 </tbody>
 </table>
 <h5 id="-a-id-values-a-public-static-function-__values__-"><a id='values'></a>public static function <strong>values</strong>()</h5>
-<p><em>Returns an array of all the registered <a href="PotionEffectType.html"><code>PotionEffectType</code></a>s.</em></p>
+<p><em>Returns an array of all the registered <a href="PotionEffectType.html"><code>PotionEffectType</code></a>s. This array is not necessarily in any particular order and may contain null.</em></p>
 <table>
 <thead>
 <tr>
@@ -788,6 +809,30 @@ Extends <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
 </blockquote>
 <h5 id="-a-id-saturation-a-public-static-final-var-__saturation__"><a id='saturation'></a>public static final var <strong>SATURATION</strong></h5>
 <p><em>Increases the food level of an entity each tick.</em></p>
+<blockquote>
+<p>Returns
+ <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
+</blockquote>
+<h5 id="-a-id-glowing-a-public-static-final-var-__glowing__"><a id='glowing'></a>public static final var <strong>GLOWING</strong></h5>
+<p><em>Outlines the entity so that it can be seen from afar.</em></p>
+<blockquote>
+<p>Returns
+ <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
+</blockquote>
+<h5 id="-a-id-levitation-a-public-static-final-var-__levitation__"><a id='levitation'></a>public static final var <strong>LEVITATION</strong></h5>
+<p><em>Causes the entity to float into the air.</em></p>
+<blockquote>
+<p>Returns
+ <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
+</blockquote>
+<h5 id="-a-id-luck-a-public-static-final-var-__luck__"><a id='luck'></a>public static final var <strong>LUCK</strong></h5>
+<p><em>LUCK field</em></p>
+<blockquote>
+<p>Returns
+ <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>
+</blockquote>
+<h5 id="-a-id-unluck-a-public-static-final-var-__unluck__"><a id='unluck'></a>public static final var <strong>UNLUCK</strong></h5>
+<p><em>UNLUCK field</em></p>
 <blockquote>
 <p>Returns
  <a href="PotionEffectType.html"><code>PotionEffectType</code></a></p>

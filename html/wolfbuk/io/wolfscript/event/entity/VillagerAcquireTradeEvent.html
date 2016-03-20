@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API VillagerAcquireTradeEvent</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../../../../../assets/css/docs.css" rel="stylesheet" />
+  <link href="../../../../../assets/css/github.css" rel="stylesheet" />
+  <link href="../../../../../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../../../../../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../../../../../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../../../../../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../../../../../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../../../../../index.html'>Docs </a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/0.html'>wolfbuk</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/0.html'>io.wolfscript</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/event/0.html'>event</a></li>
+ <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html'>entity</a></li>
+<li class='current'><a href='#'>VillagerAcquireTradeEvent</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/configuration/0.html' class=''>configuration</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/conversations/0.html' class=''>conversations</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/enchantments/0.html' class=''>enchantments</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/entity/0.html' class=''>entity</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/0.html' class=''>event</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/block/0.html' class=''>event.block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/enchantment/0.html' class=''>event.enchantment</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/AreaEffectCloudApplyEvent.html'>AreaEffectCloudApplyEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreatureSpawnEvent.html'>CreatureSpawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreeperPowerEvent.html'>CreeperPowerEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityBreakDoorEvent.html'>EntityBreakDoorEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityChangeBlockEvent.html'>EntityChangeBlockEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCombustByBlockEvent.html'>EntityCombustByBlockEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCombustByEntityEvent.html'>EntityCombustByEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCombustEvent.html'>EntityCombustEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityCreatePortalEvent.html'>EntityCreatePortalEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityDamageByBlockEvent.html'>EntityDamageByBlockEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityDamageByEntityEvent.html'>EntityDamageByEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityDamageEvent.html'>EntityDamageEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityDeathEvent.html'>EntityDeathEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityEvent.html'>EntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityExplodeEvent.html'>EntityExplodeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityInteractEvent.html'>EntityInteractEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityPortalEnterEvent.html'>EntityPortalEnterEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityPortalEvent.html'>EntityPortalEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityPortalExitEvent.html'>EntityPortalExitEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityRegainHealthEvent.html'>EntityRegainHealthEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityShootBowEvent.html'>EntityShootBowEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTameEvent.html'>EntityTameEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTargetEvent.html'>EntityTargetEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTeleportEvent.html'>EntityTeleportEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityToggleGlideEvent.html'>EntityToggleGlideEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityUnleashEvent.html'>EntityUnleashEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ExpBottleEvent.html'>ExpBottleEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ExplosionPrimeEvent.html'>ExplosionPrimeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/FireworkExplodeEvent.html'>FireworkExplodeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/FoodLevelChangeEvent.html'>FoodLevelChangeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/HorseJumpEvent.html'>HorseJumpEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemDespawnEvent.html'>ItemDespawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemMergeEvent.html'>ItemMergeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemSpawnEvent.html'>ItemSpawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/LingeringPotionSplashEvent.html'>LingeringPotionSplashEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PigZapEvent.html'>PigZapEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerDeathEvent.html'>PlayerDeathEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerLeashEntityEvent.html'>PlayerLeashEntityEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PotionSplashEvent.html'>PotionSplashEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileHitEvent.html'>ProjectileHitEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ProjectileLaunchEvent.html'>ProjectileLaunchEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepDyeWoolEvent.html'>SheepDyeWoolEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepRegrowWoolEvent.html'>SheepRegrowWoolEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SlimeSplitEvent.html'>SlimeSplitEvent</a></li>
+<li class='active'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/VillagerAcquireTradeEvent.html'>VillagerAcquireTradeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/VillagerReplenishTradeEvent.html'>VillagerReplenishTradeEvent</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/hanging/0.html' class=''>event.hanging</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/0.html' class=''>event.inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/painting/0.html' class=''>event.painting</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/player/0.html' class=''>event.player</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/server/0.html' class=''>event.server</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/vehicle/0.html' class=''>event.vehicle</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/weather/0.html' class=''>event.weather</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/world/0.html' class=''>event.world</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/generator/0.html' class=''>generator</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/help/0.html' class=''>help</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/inventory/0.html' class=''>inventory</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/map/0.html' class=''>map</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/material/0.html' class=''>material</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/metadata/0.html' class=''>metadata</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/permissions/0.html' class=''>permissions</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/plugin/0.html' class=''>plugin</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/projectiles/0.html' class=''>projectiles</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/scheduler/0.html' class=''>scheduler</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/scoreboard/0.html' class=''>scoreboard</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/util/0.html' class=''>util</a></li> 
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h2 id="villageracquiretradeevent-__class__">VillagerAcquireTradeEvent <strong>class</strong></h2>
+<blockquote>
+<p>io.wolfscript.event.entity.VillagerAcquireTradeEvent
+Extends <a href="EntityEvent.html"><code>EntityEvent</code></a>
+Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'entity.VillagerAcquireTradeEvent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> </span>{ });
+</code></pre>
+</blockquote>
+<hr>
+<h3 id="class-overview">Class Overview</h3>
+<p>Called whenever a villager acquires a new trade.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align:left">Type   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new <strong>VillagerAcquireTradeEvent</strong>(what, recipe) <br> <em>VillagerAcquireTradeEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Entity</strong> <br> <em>Entity property</em></td>
+<td style="text-align:left"><code>Villager</code></td>
+</tr>
+<tr>
+<td>static readonly property <strong>HandlerList</strong> <br> <em>HandlerList property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td>  property <strong>Recipe</strong> <br> <em>Get: Get the recipe to be acquired.<br>Set: Set the recipe to be acquired.</em></td>
+<td style="text-align:left"><a href="../../inventory/MerchantRecipe.html"><code>MerchantRecipe</code></a></td>
+</tr>
+<tr>
+<td> writeonly property <strong>Cancelled</strong> <br> <em>Cancelled property</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>isCancelled</strong>() <br> <em>isCancelled method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="EntityEvent.html"><code>EntityEvent</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>EntityEvent</strong>(Entity) <br> <em>EntityEvent constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>Entity</strong> <br> <em>Get: Returns the Entity involved in this event</em></td>
+<td style="text-align:left"><code>Entity</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>EntityType</strong> <br> <em>Get: Gets the EntityType of the Entity involved in this event.</em></td>
+<td style="text-align:left"><a href="../../entity/EntityType.html"><code>EntityType</code></a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td><strong>Inherited items from <a href="../Event.html"><code>Event</code></a></strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>new <strong>Event</strong>() <br> <em>The default constructor is defined for cleaner code. This constructor</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>Event</strong>(isAsync) <br> <em>This constructor is used to explicitly declare an event as synchronous</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td> readonly property <strong>EventName</strong> <br> <em>Get: Convenience method for providing a user-friendly identifier. By</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>abstract readonly property <strong>Handlers</strong> <br> <em>Handlers property</em></td>
+<td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+</tr>
+<tr>
+<td>final function <strong>isAsynchronous</strong>() <br> <em>isAsynchronous method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-villageracquiretradeevent-villageracquiretradeevent-md-">Public Constructors for <a href="VillagerAcquireTradeEvent.html"><code>VillagerAcquireTradeEvent</code></a></h3>
+<h5 id="-a-id-villageracquiretradeevent-a-new-__villageracquiretradeevent__-what-recipe-"><a id='villageracquiretradeevent'></a>new <strong>VillagerAcquireTradeEvent</strong>(what, recipe)</h5>
+<p><em>VillagerAcquireTradeEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>what</td>
+<td><code>Villager</code></td>
+<td>what argument</td>
+</tr>
+<tr>
+<td>recipe</td>
+<td><a href="../../inventory/MerchantRecipe.html"><code>MerchantRecipe</code></a></td>
+<td>recipe argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-villageracquiretradeevent-villageracquiretradeevent-md-">Public Properties for <a href="VillagerAcquireTradeEvent.html"><code>VillagerAcquireTradeEvent</code></a></h3>
+<h5 id="-a-id-entity-a-public-readonly-property-__entity__"><a id='entity'></a>public  readonly property <strong>Entity</strong></h5>
+<p><em>Entity property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Villager</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlerlist-a-public-static-readonly-property-__handlerlist__"><a id='handlerlist'></a>public static readonly property <strong>HandlerList</strong></h5>
+<p><em>HandlerList property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlers-a-public-readonly-property-__handlers__"><a id='handlers'></a>public  readonly property <strong>Handlers</strong></h5>
+<p><em>Handlers property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-recipe-a-public-property-__recipe__"><a id='recipe'></a>public   property <strong>Recipe</strong></h5>
+<p><em>Get: Get the recipe to be acquired.<br>Set: Set the recipe to be acquired.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../inventory/MerchantRecipe.html"><code>MerchantRecipe</code></a></td>
+<td>the new recipe</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recipe</td>
+<td><a href="../../inventory/MerchantRecipe.html"><code>MerchantRecipe</code></a></td>
+<td>the new recipe</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-cancelled-a-public-writeonly-property-__cancelled__"><a id='cancelled'></a>public  writeonly property <strong>Cancelled</strong></h5>
+<p><em>Cancelled property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancel</td>
+<td><code>boolean</code></td>
+<td>cancel argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-villageracquiretradeevent-villageracquiretradeevent-md-">Public Methods for <a href="VillagerAcquireTradeEvent.html"><code>VillagerAcquireTradeEvent</code></a></h3>
+<h5 id="-a-id-iscancelled-a-public-function-__iscancelled__-"><a id='iscancelled'></a>public  function <strong>isCancelled</strong>()</h5>
+<p><em>isCancelled method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-entityevent-entityevent-md-">Public Constructors for <a href="EntityEvent.html"><code>EntityEvent</code></a></h3>
+<h5 id="-a-id-entityevent-a-new-__entityevent__-entity-"><a id='entityevent'></a>new <strong>EntityEvent</strong>(Entity)</h5>
+<p><em>EntityEvent constructor</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity</td>
+<td><code>final</code></td>
+<td>Entity argument</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-entityevent-entityevent-md-">Public Properties for <a href="EntityEvent.html"><code>EntityEvent</code></a></h3>
+<h5 id="-a-id-entity-a-public-readonly-property-__entity__"><a id='entity'></a>public  readonly property <strong>Entity</strong></h5>
+<p><em>Get: Returns the Entity involved in this event</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Entity</code></td>
+<td>Entity who is involved in this event</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-entitytype-a-public-readonly-property-__entitytype__"><a id='entitytype'></a>public  readonly property <strong>EntityType</strong></h5>
+<p><em>Get: Gets the EntityType of the Entity involved in this event.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../entity/EntityType.html"><code>EntityType</code></a></td>
+<td>EntityType of the Entity involved in this event</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-constructors-for-event-event-md-">Public Constructors for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-event-a-new-__event__-"><a id='event'></a>new <strong>Event</strong>()</h5>
+<p><em>The default constructor is defined for cleaner code. This constructor assumes the event is synchronous.</em></p>
+<h5 id="-a-id-event-a-new-__event__-isasync-"><a id='event'></a>new <strong>Event</strong>(isAsync)</h5>
+<p><em>This constructor is used to explicitly declare an event as synchronous or asynchronous.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isAsync</td>
+<td><code>boolean</code></td>
+<td>true indicates the event will fire asynchronously, false by default from default constructor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-event-event-md-">Public Properties for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-eventname-a-public-readonly-property-__eventname__"><a id='eventname'></a>public  readonly property <strong>EventName</strong></h5>
+<p><em>Get: Convenience method for providing a user-friendly identifier. By default, it is the event&#39;s class&#39;s {@linkplain Class#getSimpleName() simple name}.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>name of this event</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-handlers-a-public-abstract-readonly-property-__handlers__"><a id='handlers'></a>public abstract readonly property <strong>Handlers</strong></h5>
+<p><em>Handlers property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-methods-for-event-event-md-">Public Methods for <a href="../Event.html"><code>Event</code></a></h3>
+<h5 id="-a-id-isasynchronous-a-public-final-function-__isasynchronous__-"><a id='isasynchronous'></a>public final function <strong>isAsynchronous</strong>()</h5>
+<p><em>isAsynchronous method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<hr>
+<h5 id="this-file-was-system-generated-using-custom-scripts-copyright-c-2015-mining-wolf-">This file was system generated using custom scripts copyright (c) 2015 Mining Wolf.</h5>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../../../assets/js/vendor/fastclick.js"></script>
+    <script src="../../../../../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

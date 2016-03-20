@@ -202,34 +202,6 @@ Returns | Description
 
 
 ---
-
-### Public Fields for [`FileConfiguration`](FileConfiguration.md)
-
-##### <a id='utf8'></a>public static final var __UTF8__
-_Deprecated: temporary compatibility measure_
-
-_This value specified that the system default encoding should be completely ignored, as it cannot handle the ASCII character set, or it is a strict-subset of UTF8 already (plain ASCII)._
-
->Returns
->  `boolean`
-
-##### <a id='utf'></a>public static final var __UTF__
-_Deprecated: temporary compatibility measure_
-
-_This value specifies if the system default encoding is unicode, but cannot parse standard ASCII._
-
->Returns
->  `boolean`
-
-##### <a id='system'></a>public static final var __SYSTEM__
-_Deprecated: temporary compatibility measure_
-
-_This value specifies if the system supports unicode._
-
->Returns
->  `boolean`
-
----
 ### Public Constructors for [`MemoryConfiguration`](../MemoryConfiguration.md)
 
 ##### <a id='memoryconfiguration'></a>new __MemoryConfiguration__() 

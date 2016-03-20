@@ -45,6 +45,7 @@ static final var __OXYGEN__ <br> _Decreases the rate of air loss whilst underwat
 static final var __WATER__ <br> _Increases the speed at which a player may mine underwater_ | [`Enchantment`](Enchantment.md)
 static final var __THORNS__ <br> _Damages the attacker_ | [`Enchantment`](Enchantment.md)
 static final var __DEPTH__ <br> _Increases walking speed while in water_ | [`Enchantment`](Enchantment.md)
+static final var __FROST__ <br> _FROST field_ | [`Enchantment`](Enchantment.md)
 static final var __DAMAGE__ <br> _Increases damage against all targets_ | [`Enchantment`](Enchantment.md)
 static final var __DAMAGE__ <br> _Increases damage against undead targets_ | [`Enchantment`](Enchantment.md)
 static final var __DAMAGE__ <br> _Increases damage against arthropod targets_ | [`Enchantment`](Enchantment.md)
@@ -61,6 +62,7 @@ static final var __ARROW__ <br> _Sets entities on fire when hit by arrows shot f
 static final var __ARROW__ <br> _Provides infinite arrows when shooting a bow_ | [`Enchantment`](Enchantment.md)
 static final var __LUCK__ <br> _Decreases odds of catching worthless junk_ | [`Enchantment`](Enchantment.md)
 static final var __LURE__ <br> _Increases rate of fish biting your hook_ | [`Enchantment`](Enchantment.md)
+static final var __MENDING__ <br> _Allows mending the item using experience orbs_ | [`Enchantment`](Enchantment.md)
 
 
 
@@ -423,6 +425,13 @@ _Increases walking speed while in water_
 >Returns
 >  [`Enchantment`](Enchantment.md)
 
+##### <a id='frost'></a>public static final var __FROST__
+
+_FROST field_
+
+>Returns
+>  [`Enchantment`](Enchantment.md)
+
 ##### <a id='damage'></a>public static final var __DAMAGE__
 
 _Increases damage against all targets_
@@ -531,6 +540,13 @@ _Decreases odds of catching worthless junk_
 ##### <a id='lure'></a>public static final var __LURE__
 
 _Increases rate of fish biting your hook_
+
+>Returns
+>  [`Enchantment`](Enchantment.md)
+
+##### <a id='mending'></a>public static final var __MENDING__
+
+_Allows mending the item using experience orbs_
 
 >Returns
 >  [`Enchantment`](Enchantment.md)

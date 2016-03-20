@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -204,32 +208,24 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> writeonly property <strong>Permission</strong> <br> <em>Set: Sets the permission required by users to be able to perform this</em></td>
-<td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>Name</strong> <br> <em>Get: Returns the name of this command</em></td>
+<td>  property <strong>Permission</strong> <br> <em>Get: Gets the permission required by users to be able to perform this<br>Set: Sets the permission required by users to be able to perform this</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>  property <strong>Label</strong> <br> <em>Label property</em></td>
+<td>  property <strong>Name</strong> <br> <em>Get: Returns the name of this command<br>Set: Sets the name of this command.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>Permission</strong> <br> <em>Get: Gets the permission required by users to be able to perform this</em></td>
+<td>  property <strong>Description</strong> <br> <em>Description property</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td> writeonly property <strong>Description</strong> <br> <em>Description property</em></td>
-<td style="text-align:left"><a href="../Command.html"><code>Command</code></a></td>
+<td>  property <strong>Label</strong> <br> <em>Get: Returns the label for this command<br>Set: Sets the label of this command.</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>Aliases</strong> <br> <em>Get: Returns a list of active aliases of this command</em></td>
 <td style="text-align:left"><code>List&lt;String&gt;</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>Description</strong> <br> <em>Get: Gets a brief description of this command</em></td>
-<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td>  property <strong>Usage</strong> <br> <em>Get: Gets an example usage of this command<br>Set: Sets the example usage of this command</em></td>
@@ -252,12 +248,12 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td> function <strong>register</strong>(commandMap) <br> <em>Registers this command to a CommandMap.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
-</tr>
-<tr>
 <td> function <strong>setAliases</strong>() <br> <em>setAliases method</em></td>
 <td style="text-align:left"><a href="../Command.html"><code>Command</code></a></td>
+</tr>
+<tr>
+<td> function <strong>register</strong>(commandMap) <br> <em>Registers this command to a CommandMap.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td> function <strong>testPermission</strong>(target) <br> <em>Tests the given <a href="../CommandSender.html"><code>CommandSender</code></a> to see if they can perform this</em></td>
@@ -467,18 +463,19 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-permission-a-public-writeonly-property-__permission__"><a id='permission'></a>public  writeonly property <strong>Permission</strong></h5>
-<p><em>Set: Sets the permission required by users to be able to perform this command</em></p>
+<h5 id="-a-id-permission-a-public-property-__permission__"><a id='permission'></a>public   property <strong>Permission</strong></h5>
+<p><em>Get: Gets the permission required by users to be able to perform this command<br>Set: Sets the permission required by users to be able to perform this command</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>void</code></td>
-<td></td>
+<td><code>String</code></td>
+<td>Permission name, or null if none</td>
 </tr>
 </tbody>
 </table>
@@ -498,8 +495,8 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
-<p><em>Get: Returns the name of this command</em></p>
+<h5 id="-a-id-name-a-public-property-__name__"><a id='name'></a>public   property <strong>Name</strong></h5>
+<p><em>Get: Returns the name of this command<br>Set: Sets the name of this command. <p> May only be used before registering the command. Will return true if the new name is set, and false if the command has already been registered.</em></p>
 <table>
 <thead>
 <tr>
@@ -510,23 +507,7 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>Name of this command</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-label-a-public-property-__label__"><a id='label'></a>public   property <strong>Label</strong></h5>
-<p><em>Label property</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>Label of this command or null if not registered</td>
+<td>returns true if the name change happened instantly or false if the command was already registered</td>
 </tr>
 </tbody>
 </table>
@@ -542,12 +523,12 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <tr>
 <td>name</td>
 <td><code>String</code></td>
-<td>name argument</td>
+<td>New command name</td>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-permission-a-public-readonly-property-__permission__"><a id='permission'></a>public  readonly property <strong>Permission</strong></h5>
-<p><em>Get: Gets the permission required by users to be able to perform this command</em></p>
+<h5 id="-a-id-description-a-public-property-__description__"><a id='description'></a>public   property <strong>Description</strong></h5>
+<p><em>Description property</em></p>
 <table>
 <thead>
 <tr>
@@ -558,22 +539,7 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>Permission name, or null if none</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-description-a-public-writeonly-property-__description__"><a id='description'></a>public  writeonly property <strong>Description</strong></h5>
-<p><em>Description property</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Command.html"><code>Command</code></a></td>
-<td></td>
+<td>Description of this command</td>
 </tr>
 </tbody>
 </table>
@@ -593,6 +559,38 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-label-a-public-property-__label__"><a id='label'></a>public   property <strong>Label</strong></h5>
+<p><em>Get: Returns the label for this command<br>Set: Sets the label of this command. <p> May only be used before registering the command. Will return true if the new name is set, and false if the command has already been registered.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>returns true if the name change happened instantly or false if the command was already registered</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>The command&#39;s name</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-aliases-a-public-readonly-property-__aliases__"><a id='aliases'></a>public  readonly property <strong>Aliases</strong></h5>
 <p><em>Get: Returns a list of active aliases of this command</em></p>
 <table>
@@ -606,22 +604,6 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <tr>
 <td><code>List&lt;String&gt;</code></td>
 <td>List of aliases</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-description-a-public-readonly-property-__description__"><a id='description'></a>public  readonly property <strong>Description</strong></h5>
-<p><em>Get: Gets a brief description of this command</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>Description of this command</td>
 </tr>
 </tbody>
 </table>
@@ -789,6 +771,21 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-setaliases-a-public-function-__setaliases__-"><a id='setaliases'></a>public  function <strong>setAliases</strong>()</h5>
+<p><em>setAliases method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Command.html"><code>Command</code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-register-a-public-function-__register__-commandmap-"><a id='register'></a>public  function <strong>register</strong>(commandMap)</h5>
 <p><em>Registers this command to a CommandMap. Once called it only allows changes the registered CommandMap</em></p>
 <table>
@@ -818,21 +815,6 @@ Extends <a href="../Command.html"><code>Command</code></a></p>
 <tr>
 <td><code>boolean</code></td>
 <td>true if the registration was successful (the current registered CommandMap was the passed CommandMap or null) false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-setaliases-a-public-function-__setaliases__-"><a id='setaliases'></a>public  function <strong>setAliases</strong>()</h5>
-<p><em>setAliases method</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Command.html"><code>Command</code></a></td>
-<td></td>
 </tr>
 </tbody>
 </table>

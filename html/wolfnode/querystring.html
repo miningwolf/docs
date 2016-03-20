@@ -81,6 +81,8 @@
 <li class='divider'></li>
 <li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='divider'></li>
 
                   </ul>
               </nav>
@@ -90,32 +92,14 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="query-string">Query String</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><!--name=querystring-->
 <p>This module provides utilities for dealing with query strings.
 It provides the following methods:</p>
-<h2 id="querystring-stringify-obj-sep-eq-options-">querystring.stringify(obj[, sep][, eq][, options])</h2>
-<p>Serialize an object to a query string.
-Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
-characters.</p>
-<p>Options object may contain <code>encodeURIComponent</code> property (<code>querystring.escape</code> by default),
-it can be used to encode string with <code>non-utf8</code> encoding if necessary.</p>
-<p>Example:</p>
-<pre><code>querystring.stringify({ <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], <span class="hljs-string">corge:</span> <span class="hljs-string">''</span> })
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge='</span>
-
-querystring.stringify({<span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> <span class="hljs-string">'qux'</span>}, <span class="hljs-string">';'</span>, <span class="hljs-string">':'</span>)
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'foo:bar;baz:qux'</span>
-
-<span class="hljs-comment">// Suppose gbkEncodeURIComponent function already exists,</span>
-<span class="hljs-comment">// it can encode string with `gbk` encoding</span>
-querystring.stringify({ <span class="hljs-string">w:</span> <span class="hljs-string">'中文'</span>, <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span> }, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>,
-  { <span class="hljs-string">encodeURIComponent:</span> gbkEncodeURIComponent })
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'w=%D6%D0%CE%C4&amp;foo=bar'</span>
-</code></pre><h2 id="querystring-parse-str-sep-eq-options-">querystring.parse(str[, sep][, eq][, options])</h2>
+<h2 id="querystring-escape">querystring.escape</h2>
+<p>The escape function used by <code>querystring.stringify</code>,
+provided so that it could be overridden if necessary.</p>
+<h2 id="querystring-parse-str-sep-eq-options-">querystring.parse(str[, sep][, eq][, options])</h2>
 <p>Deserialize a query string to an object.
 Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
 characters.</p>
@@ -124,19 +108,34 @@ be used to limit processed keys. Set it to 0 to remove key count limitation.</p>
 <p>Options object may contain <code>decodeURIComponent</code> property (<code>querystring.unescape</code> by default),
 it can be used to decode a <code>non-utf8</code> encoding string if necessary.</p>
 <p>Example:</p>
-<pre><code>querystring.parse(<span class="hljs-string">'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge'</span>)
-<span class="hljs-comment">// returns</span>
-{ <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], <span class="hljs-string">corge:</span> <span class="hljs-string">''</span> }
+<pre><code class="lang-js">querystring.parse(<span class="hljs-string">'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge'</span>)
+// returns { foo: <span class="hljs-string">'bar'</span>, baz: [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], corge: <span class="hljs-string">''</span> }
 
-<span class="hljs-comment">// Suppose gbkDecodeURIComponent function already exists,</span>
-<span class="hljs-comment">// it can decode `gbk` encoding string</span>
-querystring.parse(<span class="hljs-string">'w=%D6%D0%CE%C4&amp;foo=bar'</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>,
-  { <span class="hljs-string">decodeURIComponent:</span> gbkDecodeURIComponent })
-<span class="hljs-comment">// returns</span>
-{ <span class="hljs-string">w:</span> <span class="hljs-string">'中文'</span>, <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span> }
-</code></pre><h2 id="querystring-escape">querystring.escape</h2>
-<p>The escape function used by <code>querystring.stringify</code>,
-provided so that it could be overridden if necessary.</p>
+// Suppose gbkDecodeURIComponent <span class="hljs-keyword">function</span> already exists,
+// it can decode `gbk` <span class="hljs-keyword">encoding</span> string
+querystring.parse(<span class="hljs-string">'w=%D6%D0%CE%C4&amp;foo=bar'</span>, null, null,
+  { decodeURIComponent: gbkDecodeURIComponent })
+// returns { w: <span class="hljs-string">'中文'</span>, foo: <span class="hljs-string">'bar'</span> }
+</code></pre>
+<h2 id="querystring-stringify-obj-sep-eq-options-">querystring.stringify(obj[, sep][, eq][, options])</h2>
+<p>Serialize an object to a query string.
+Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
+characters.</p>
+<p>Options object may contain <code>encodeURIComponent</code> property (<code>querystring.escape</code> by default),
+it can be used to encode string with <code>non-utf8</code> encoding if necessary.</p>
+<p>Example:</p>
+<pre><code class="lang-js">querystring.stringify({ <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> [<span class="hljs-string">'qux'</span>, <span class="hljs-string">'quux'</span>], <span class="hljs-string">corge:</span> <span class="hljs-string">''</span> })
+<span class="hljs-comment">// returns 'foo=bar&amp;baz=qux&amp;baz=quux&amp;corge='</span>
+
+querystring.stringify({<span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span>, <span class="hljs-string">baz:</span> <span class="hljs-string">'qux'</span>}, <span class="hljs-string">';'</span>, <span class="hljs-string">':'</span>)
+<span class="hljs-comment">// returns 'foo:bar;baz:qux'</span>
+
+<span class="hljs-comment">// Suppose gbkEncodeURIComponent function already exists,</span>
+<span class="hljs-comment">// it can encode string with `gbk` encoding</span>
+querystring.stringify({ <span class="hljs-string">w:</span> <span class="hljs-string">'中文'</span>, <span class="hljs-string">foo:</span> <span class="hljs-string">'bar'</span> }, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>,
+  { <span class="hljs-string">encodeURIComponent:</span> gbkEncodeURIComponent })
+<span class="hljs-comment">// returns 'w=%D6%D0%CE%C4&amp;foo=bar'</span>
+</code></pre>
 <h2 id="querystring-unescape">querystring.unescape</h2>
 <p>The unescape function used by <code>querystring.parse</code>,
 provided so that it could be overridden if necessary.</p>

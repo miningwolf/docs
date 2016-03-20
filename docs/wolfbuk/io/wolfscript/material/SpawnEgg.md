@@ -13,7 +13,6 @@ Method | Type
 --- | :--- 
 new __SpawnEgg__() <br> _SpawnEgg constructor_ | _constructor_
 new __SpawnEgg__(type) <br> _SpawnEgg constructor_ | _constructor_
-  property __SpawnedType__ <br> _Get: Get the type of entity this egg will spawn.<br>Set: Set the type of entity this egg will spawn._ | [`EntityType`](../entity/EntityType.md)
  function __clone__() <br> _clone method_ | [`SpawnEgg`](SpawnEgg.md)
  function __toString__() <br> _toString method_ | `String`
  |
@@ -72,12 +71,13 @@ type | [`EntityType`](../entity/EntityType.md) | type argument
 ### Public Properties for [`SpawnEgg`](SpawnEgg.md)
 
 ##### <a id='spawnedtype'></a>public   property __SpawnedType__
+_Deprecated: This is now stored in {@link io.wolfscript.inventory.meta.ItemMeta}. See SPIGOT-1592._
 
 _Get: Get the type of entity this egg will spawn.<br>Set: Set the type of entity this egg will spawn._
 
-Get | Description
---- | --- 
-[`EntityType`](../entity/EntityType.md) | The entity type.
+Get | 
+--- | 
+[`EntityType`](../entity/EntityType.md) |
 
 Set | Type | Description  
 --- | --- | --- 

@@ -71,11 +71,12 @@
 <li><a href='../wolfnode/punycode.html'>punycode</a></li>
 <li><a href='../wolfnode/readline.html'>readline</a></li>
 <li><a href='../wolfnode/repl.html'>repl</a></li>
-<li><a href='../wolfnode/smalloc.html'>smalloc</a></li>
 <li class='active'><a href='../wolfnode/string_decoder.html'>string_decoder</a></li>
 <li><a href='../wolfnode/tty.html'>tty</a></li>
 <li><a href='../wolfnode/vm.html'>vm</a></li>
 <li><a href='../wolfnode/zlib.html'>zlib</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
 <li class='divider'></li>
 
                   </ul>
@@ -86,24 +87,25 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="stringdecoder">StringDecoder</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><p>To use this module, do <code>require(&#39;string_decoder&#39;)</code>. StringDecoder decodes a
 buffer to a string. It is a simple interface to <code>buffer.toString()</code> but provides
 additional support for utf8.</p>
-<pre><code><span class="hljs-reserved">var</span> StringDecoder = <span class="hljs-built_in">require</span>(<span class="hljs-string">'string_decoder'</span>).StringDecoder;
-<span class="hljs-reserved">var</span> decoder = <span class="hljs-keyword">new</span> StringDecoder(<span class="hljs-string">'utf8'</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> StringDecoder = <span class="hljs-built_in">require</span>(<span class="hljs-string">'string_decoder'</span>).StringDecoder;
+<span class="hljs-keyword">const</span> decoder = <span class="hljs-keyword">new</span> StringDecoder(<span class="hljs-string">'utf8'</span>);
 
-<span class="hljs-reserved">var</span> cent = <span class="hljs-keyword">new</span> Buffer([<span class="hljs-number">0xC2</span>, <span class="hljs-number">0xA2</span>]);
+<span class="hljs-keyword">const</span> cent = <span class="hljs-keyword">new</span> Buffer([<span class="hljs-number">0xC2</span>, <span class="hljs-number">0xA2</span>]);
 <span class="hljs-built_in">console</span>.log(decoder.write(cent));
 
-<span class="hljs-reserved">var</span> euro = <span class="hljs-keyword">new</span> Buffer([<span class="hljs-number">0xE2</span>, <span class="hljs-number">0x82</span>, <span class="hljs-number">0xAC</span>]);
+<span class="hljs-keyword">const</span> euro = <span class="hljs-keyword">new</span> Buffer([<span class="hljs-number">0xE2</span>, <span class="hljs-number">0x82</span>, <span class="hljs-number">0xAC</span>]);
 <span class="hljs-built_in">console</span>.log(decoder.write(euro));
-</code></pre><h2 id="class-stringdecoder">Class: StringDecoder</h2>
-<p>Accepts a single argument, <code>encoding</code> which defaults to <code>utf8</code>.</p>
-<h3 id="decoder-write-buffer-">decoder.write(buffer)</h3>
-<p>Returns a decoded string.</p>
+</code></pre>
+<h2 id="class-stringdecoder">Class: StringDecoder</h2>
+<p>Accepts a single argument, <code>encoding</code> which defaults to <code>&#39;utf8&#39;</code>.</p>
 <h3 id="decoder-end-">decoder.end()</h3>
 <p>Returns any trailing bytes that were left in the buffer.</p>
+<h3 id="decoder-write-buffer-">decoder.write(buffer)</h3>
+<p>Returns a decoded string.</p>
 
 
           </section>

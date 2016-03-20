@@ -75,7 +75,7 @@ _Issue a permanent ban for this player with a given reason_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | the `Player` being banned
+player | [`PlayerReference`](../api/PlayerReference.md) | the `Player` being banned
 reason | `String` | the reason for the ban
 
 Returns | 
@@ -89,7 +89,7 @@ _issueBan method_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | player argument
+player | [`PlayerReference`](../api/PlayerReference.md) | player argument
 reason | `String` | reason argument
 time | `String` | time argument
 
@@ -169,7 +169,7 @@ _issueIpBan method_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | player argument
+player | [`PlayerReference`](../api/PlayerReference.md) | player argument
 reason | `String` | reason argument
 bantime | `long` | bantime argument
 
@@ -184,7 +184,7 @@ _issueIpBan method_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | player argument
+player | [`PlayerReference`](../api/PlayerReference.md) | player argument
 reason | `String` | reason argument
 time | `String` | time argument
 
@@ -199,7 +199,7 @@ _Ban player by IP_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | the `Player` who's IP is being banned
+player | [`PlayerReference`](../api/PlayerReference.md) | the [`PlayerReference`](../api/PlayerReference.md) who's IP is being banned
 reason | `String` | the reason for the ban
 
 Returns | 
@@ -235,7 +235,7 @@ _Unban this player (this will NOT work with IPBans!)_
 
 Argument | Type | Description  
 --- | --- | --- 
-player | `Player` | the `Player` to unban
+player | [`PlayerReference`](../api/PlayerReference.md) | the [`PlayerReference`](../api/PlayerReference.md) to unban
 
 Returns | 
 --- | 

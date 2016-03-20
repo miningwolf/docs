@@ -11,10 +11,6 @@ Represents a boat entity.
 
 Method | Type   
 --- | :--- 
-  property __MaxSpeed__ <br> _Get: Gets the maximum speed of a boat. The speed is unrelated to the<br>Set: Sets the maximum speed of a boat. Must be nonnegative. Default is 0.4D._ | `double`
-  property __OccupiedDeceleration__ <br> _Get: Gets the deceleration rate (newSpeed = curSpeed<br>Set: Sets the deceleration rate (newSpeed = curSpeed_ | `double`
-  property __UnoccupiedDeceleration__ <br> _Get: Gets the deceleration rate (newSpeed = curSpeed<br>Set: Sets the deceleration rate (newSpeed = curSpeed_ | `double`
-  property __WorkOnLand__ <br> _Get: Get whether boats can work on land.<br>Set: Set whether boats can work on land._ | `boolean`
  |
 __Inherited items from [`Vehicle`](Vehicle.md)__ |
   property __Velocity__ <br> _Get: Gets the vehicle's velocity.<br>Set: Sets the vehicle's velocity._ | `Vector`
@@ -29,12 +25,13 @@ __Inherited items from [`Vehicle`](Vehicle.md)__ |
 ### Public Properties for [`Boat`](Boat.md)
 
 ##### <a id='maxspeed'></a>public   property __MaxSpeed__
+_Deprecated: boats are complex and many of these methods do not work correctly across multiple versions._
 
 _Get: Gets the maximum speed of a boat. The speed is unrelated to the velocity.<br>Set: Sets the maximum speed of a boat. Must be nonnegative. Default is 0.4D._
 
-Get | Description
---- | --- 
-`double` | The max speed.
+Get | 
+--- | 
+`double` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -42,12 +39,13 @@ speed | `double` | The max speed.
 
 
 ##### <a id='occupieddeceleration'></a>public   property __OccupiedDeceleration__
+_Deprecated: boats are complex and many of these methods do not work correctly across multiple versions._
 
 _Get: Gets the deceleration rate (newSpeed = curSpeed rate) of occupied boats. The default is 0.2.<br>Set: Sets the deceleration rate (newSpeed = curSpeed rate) of occupied boats. Setting this to a higher value allows for quicker acceleration. The default is 0.2._
 
-Get | Description
---- | --- 
-`double` | The rate of deceleration
+Get | 
+--- | 
+`double` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -55,12 +53,13 @@ rate | `double` | deceleration rate
 
 
 ##### <a id='unoccupieddeceleration'></a>public   property __UnoccupiedDeceleration__
+_Deprecated: boats are complex and many of these methods do not work correctly across multiple versions._
 
 _Get: Gets the deceleration rate (newSpeed = curSpeed rate) of unoccupied boats. The default is -1. Values below 0 indicate that no additional deceleration is imposed.<br>Set: Sets the deceleration rate (newSpeed = curSpeed rate) of unoccupied boats. Setting this to a higher value allows for quicker deceleration of boats when a player disembarks. The default is -1. Values below 0 indicate that no additional deceleration is imposed._
 
-Get | Description
---- | --- 
-`double` | The rate of deceleration
+Get | 
+--- | 
+`double` |
 
 Set | Type | Description  
 --- | --- | --- 
@@ -68,12 +67,13 @@ rate | `double` | deceleration rate
 
 
 ##### <a id='workonland'></a>public   property __WorkOnLand__
+_Deprecated: boats are complex and many of these methods do not work correctly across multiple versions._
 
 _Get: Get whether boats can work on land.<br>Set: Set whether boats can work on land._
 
-Get | Description
---- | --- 
-`boolean` | whether boats can work on land
+Get | 
+--- | 
+`boolean` |
 
 Set | Type | Description  
 --- | --- | --- 

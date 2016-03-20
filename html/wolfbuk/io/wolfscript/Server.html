@@ -82,6 +82,7 @@
 <li><a href='../../../wolfbuk/io/wolfscript/Material.html'>Material</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/NetherWartsState.html'>NetherWartsState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Note.html'>Note</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Particle.html'>Particle</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/PortalType.html'>PortalType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Rotation.html'>Rotation</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/SandstoneType.html'>SandstoneType</a></li>
@@ -99,7 +100,11 @@
 <li><a href='../../../wolfbuk/io/wolfscript/WorldCreator.html'>WorldCreator</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldType.html'>WorldType</a></li>
 <li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -164,28 +169,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td>  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>HelpMap</strong> <br> <em>Get: Gets the <a href="help/HelpMap.html"><code>HelpMap</code></a> providing help topics for this server.</em></td>
-<td style="text-align:left"><a href="help/HelpMap.html"><code>HelpMap</code></a></td>
-</tr>
-<tr>
-<td> readonly property <strong>ConsoleSender</strong> <br> <em>Get: Gets a <code>ConsoleCommandSender</code> that may be used as an input source</em></td>
-<td style="text-align:left"><code>ConsoleCommandSender</code></td>
-</tr>
-<tr>
-<td>  property <strong>DefaultGameMode</strong> <br> <em>Get: Gets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.<br>Set: Sets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.</em></td>
-<td style="text-align:left"><a href="GameMode.html"><code>GameMode</code></a></td>
-</tr>
-<tr>
-<td> readonly property <strong>BannedPlayers</strong> <br> <em>Get: Gets a set containing all banned players.</em></td>
-<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>IPBans</strong> <br> <em>Get: Gets a set containing all current IPs that are banned.</em></td>
-<td style="text-align:left"><code>Set&lt;String&gt;</code></td>
+<td> readonly property <strong>Name</strong> <br> <em>Get: Gets the name of this server implementation.</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>GenerateStructures</strong> <br> <em>Get: Get generate-structures setting.</em></td>
@@ -200,24 +185,44 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>AllowFlight</strong> <br> <em>Get: Gets whether this server allows flying or not.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td>  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>ConnectionThrottle</strong> <br> <em>Get: Gets the value of the connection throttle setting.</em></td>
-<td style="text-align:left"><code>long</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>Name</strong> <br> <em>Get: Gets the name of this server implementation.</em></td>
-<td style="text-align:left"><code>String</code></td>
+<td> readonly property <strong>HelpMap</strong> <br> <em>Get: Gets the <a href="help/HelpMap.html"><code>HelpMap</code></a> providing help topics for this server.</em></td>
+<td style="text-align:left"><a href="help/HelpMap.html"><code>HelpMap</code></a></td>
 </tr>
 <tr>
 <td> readonly property <strong>Messenger</strong> <br> <em>Get: Gets the <a href="plugin/messaging/Messenger.html"><code>Messenger</code></a> responsible for this server.</em></td>
 <td style="text-align:left"><a href="plugin/messaging/Messenger.html"><code>Messenger</code></a></td>
 </tr>
 <tr>
+<td> readonly property <strong>ConsoleSender</strong> <br> <em>Get: Gets a <code>ConsoleCommandSender</code> that may be used as an input source</em></td>
+<td style="text-align:left"><code>ConsoleCommandSender</code></td>
+</tr>
+<tr>
+<td>  property <strong>DefaultGameMode</strong> <br> <em>Get: Gets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.<br>Set: Sets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.</em></td>
+<td style="text-align:left"><a href="GameMode.html"><code>GameMode</code></a></td>
+</tr>
+<tr>
+<td> readonly property <strong>BannedPlayers</strong> <br> <em>Get: Gets a set containing all banned players.</em></td>
+<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>ConnectionThrottle</strong> <br> <em>Get: Gets the value of the connection throttle setting.</em></td>
+<td style="text-align:left"><code>long</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>IPBans</strong> <br> <em>Get: Gets a set containing all current IPs that are banned.</em></td>
+<td style="text-align:left"><code>Set&lt;String&gt;</code></td>
+</tr>
+<tr>
 <td> readonly property <strong>MaxPlayers</strong> <br> <em>Get: Get the maximum amount of players which can login to this server.</em></td>
 <td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>AllowFlight</strong> <br> <em>Get: Gets whether this server allows flying or not.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>Ip</strong> <br> <em>Get: Get the IP that this server is bound to, or empty string if not</em></td>
@@ -228,24 +233,60 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>Logger</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>OnlineMode</strong> <br> <em>Get: Gets whether the Server is in online mode or not.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>PluginManager</strong> <br> <em>Get: Gets the plugin manager for interfacing with plugins.</em></td>
-<td style="text-align:left"><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
+<td> readonly property <strong>Scheduler</strong> <br> <em>Get: Gets the scheduler for managing scheduled events.</em></td>
+<td style="text-align:left"><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
 </tr>
 <tr>
 <td> readonly property <strong>OfflinePlayers</strong> <br> <em>Get: Gets every player that has ever played on this server.</em></td>
 <td style="text-align:left"><code>OfflinePlayer[]</code></td>
 </tr>
 <tr>
+<td> readonly property <strong>PluginManager</strong> <br> <em>Get: Gets the plugin manager for interfacing with plugins.</em></td>
+<td style="text-align:left"><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
+</tr>
+<tr>
 <td> readonly property <strong>Operators</strong> <br> <em>Get: Gets a set containing all player operators.</em></td>
 <td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>WorldType</strong> <br> <em>Get: Get world type (level-type setting) for default world.</em></td>
+<td> readonly property <strong>OnlineMode</strong> <br> <em>Get: Gets whether the Server is in online mode or not.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Port</strong> <br> <em>Get: Get the game port that the server runs on.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>TicksPerAnimalSpawns property</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>ServerId</strong> <br> <em>Get: Get an ID of this server. The ID is a simple generally alphanumeric ID</em></td>
 <td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>WolfScriptVersion</strong> <br> <em>Get: Gets the WolfScript version that this server is running.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>ViewDistance</strong> <br> <em>Get: Get the view distance from this server.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>ServerName</strong> <br> <em>Get: Get the name of this server.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Version</strong> <br> <em>Get: Gets the version string of this server implementation.</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>UpdateFolder</strong> <br> <em>Get: Gets the name of the update folder. The update folder is used to safely</em></td>
+<td style="text-align:left"><code>String</code></td>
+</tr>
+<tr>
+<td>  property <strong>SpawnRadius</strong> <br> <em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>UpdateFolderFile</strong> <br> <em>Get: Gets the update folder. The update folder is used to safely update</em></td>
@@ -260,48 +301,16 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><a href="plugin/ServicesManager.html"><code>ServicesManager</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>Port</strong> <br> <em>Get: Get the game port that the server runs on.</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>UpdateFolder</strong> <br> <em>Get: Gets the name of the update folder. The update folder is used to safely</em></td>
+<td> readonly property <strong>WorldType</strong> <br> <em>Get: Get world type (level-type setting) for default world.</em></td>
 <td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>ServerName</strong> <br> <em>Get: Get the name of this server.</em></td>
-<td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>ServerId</strong> <br> <em>Get: Get an ID of this server. The ID is a simple generally alphanumeric ID</em></td>
-<td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>Scheduler</strong> <br> <em>Get: Gets the scheduler for managing scheduled events.</em></td>
-<td style="text-align:left"><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
-</tr>
-<tr>
-<td> readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>TicksPerAnimalSpawns property</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td>  property <strong>SpawnRadius</strong> <br> <em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>Version</strong> <br> <em>Get: Gets the version string of this server implementation.</em></td>
-<td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
-<td> readonly property <strong>ViewDistance</strong> <br> <em>Get: Get the view distance from this server.</em></td>
-<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>WarningState</strong> <br> <em>Get: Gets the current warning state for the server.</em></td>
 <td style="text-align:left"><code>WarningState</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>WolfScriptVersion</strong> <br> <em>Get: Gets the WolfScript version that this server is running.</em></td>
-<td style="text-align:left"><code>String</code></td>
+<td> readonly property <strong>WhitelistedPlayers</strong> <br> <em>Get: Gets a list of whitelisted players.</em></td>
+<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
 </tr>
 <tr>
 <td> readonly property <strong>WorldContainer</strong> <br> <em>Get: Gets the folder that contains all of the various <code>World</code>s.</em></td>
@@ -312,10 +321,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>List&lt;World&gt;</code></td>
 </tr>
 <tr>
-<td> readonly property <strong>WhitelistedPlayers</strong> <br> <em>Get: Gets a list of whitelisted players.</em></td>
-<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
-</tr>
-<tr>
 <td> writeonly property <strong>Whitelist</strong> <br> <em>Set: Sets if the server is whitelisted.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
@@ -324,8 +329,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><a href="map/MapView.html"><code>MapView</code></a></td>
 </tr>
 <tr>
-<td> function <strong>getBanList</strong>(type) <br> <em>Gets a ban list for the supplied type.</em></td>
-<td style="text-align:left"><a href="BanList.html"><code>BanList</code></a></td>
+<td> function <strong>createChunkData</strong>(world) <br> <em>Create a ChunkData for use in a generator.</em></td>
+<td style="text-align:left"><code>ChunkData</code></td>
 </tr>
 <tr>
 <td> function <strong>banIP</strong>(address) <br> <em>Bans the specified address from the server.</em></td>
@@ -352,20 +357,20 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
+<td> function <strong>savePlayers</strong>() <br> <em>Writes loaded players to disk.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>getBanList</strong>(type) <br> <em>Gets a ban list for the supplied type.</em></td>
+<td style="text-align:left"><a href="BanList.html"><code>BanList</code></a></td>
+</tr>
+<tr>
 <td> function <strong>createWorld</strong>(creator) <br> <em>Creates or loads a world with the given name using the specified</em></td>
 <td style="text-align:left"><code>World</code></td>
 </tr>
 <tr>
-<td> function <strong>resetRecipes</strong>() <br> <em>Resets the list of crafting recipes to the default.</em></td>
-<td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
 <td> function <strong>getOfflinePlayer</strong>(id) <br> <em>Gets the player by the given UUID, regardless if they are offline or</em></td>
 <td style="text-align:left"><code>OfflinePlayer</code></td>
-</tr>
-<tr>
-<td> function <strong>getPluginCommand</strong>(name) <br> <em>Gets a <a href="command/PluginCommand.html"><code>PluginCommand</code></a> with the given name or alias.</em></td>
-<td style="text-align:left"><a href="command/PluginCommand.html"><code>PluginCommand</code></a></td>
 </tr>
 <tr>
 <td> function <strong>getPlayer</strong>(id) <br> <em>Gets the player with the given UUID.</em></td>
@@ -376,11 +381,11 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>List&lt;Recipe&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>unloadWorld</strong>(name, save) <br> <em>Unloads a world with the given name.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td> function <strong>getPluginCommand</strong>(name) <br> <em>Gets a <a href="command/PluginCommand.html"><code>PluginCommand</code></a> with the given name or alias.</em></td>
+<td style="text-align:left"><a href="command/PluginCommand.html"><code>PluginCommand</code></a></td>
 </tr>
 <tr>
-<td> function <strong>hasWhitelist</strong>() <br> <em>Gets whether this server has a whitelist or not.</em></td>
+<td> function <strong>unloadWorld</strong>(name, save) <br> <em>Unloads a world with the given name.</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
@@ -392,19 +397,19 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>World</code></td>
 </tr>
 <tr>
-<td> function <strong>unloadWorld</strong>(world, save) <br> <em>Unloads the given world.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
-</tr>
-<tr>
 <td> function <strong>isHardcore</strong>() <br> <em>Gets whether the server is in hardcore mode or not.</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>reloadWhitelist</strong>() <br> <em>Reloads the whitelist from disk.</em></td>
-<td style="text-align:left"><code>void</code></td>
+<td> function <strong>hasWhitelist</strong>() <br> <em>Gets whether this server has a whitelist or not.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td> function <strong>savePlayers</strong>() <br> <em>Writes loaded players to disk.</em></td>
+<td> function <strong>unloadWorld</strong>(world, save) <br> <em>Unloads the given world.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>reload</strong>() <br> <em>Reloads the server, refreshing settings and plugin information.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -412,7 +417,11 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <td style="text-align:left"><code>Iterator&lt;Recipe&gt;</code></td>
 </tr>
 <tr>
-<td> function <strong>reload</strong>() <br> <em>Reloads the server, refreshing settings and plugin information.</em></td>
+<td> function <strong>reloadWhitelist</strong>() <br> <em>Reloads the whitelist from disk.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>resetRecipes</strong>() <br> <em>Resets the list of crafting recipes to the default.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -422,10 +431,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td> function <strong>unbanIP</strong>(address) <br> <em>Unbans the specified address from the server.</em></td>
 <td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
-<td> function <strong>useExactLoginLocation</strong>() <br> <em>useExactLoginLocation method</em></td>
-<td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
 <td>static final var <strong>BROADCAST</strong> <br> <em>Used for all administrative messages, such as an operator using a</em></td>
@@ -455,6 +460,70 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </table>
 <hr>
 <h3 id="public-properties-for-server-server-md-">Public Properties for <a href="Server.html"><code>Server</code></a></h3>
+<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
+<p><em>Get: Gets the name of this server implementation.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>name of this server implementation</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-generatestructures-a-public-readonly-property-__generatestructures__"><a id='generatestructures'></a>public  readonly property <strong>GenerateStructures</strong></h5>
+<p><em>Get: Get generate-structures setting.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if structure generation is enabled, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-allowend-a-public-readonly-property-__allowend__"><a id='allowend'></a>public  readonly property <strong>AllowEnd</strong></h5>
+<p><em>Get: Gets whether this server allows the End or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>whether this server allows the End or not</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-allownether-a-public-readonly-property-__allownether__"><a id='allownether'></a>public  readonly property <strong>AllowNether</strong></h5>
+<p><em>Get: Gets whether this server allows the Nether or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>whether this server allows the Nether or not</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-idletimeout-a-public-property-__idletimeout__"><a id='idletimeout'></a>public   property <strong>IdleTimeout</strong></h5>
 <p><em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout.</em></p>
 <table>
@@ -500,6 +569,22 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td><a href="help/HelpMap.html"><code>HelpMap</code></a></td>
 <td>a help map for this server</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-messenger-a-public-readonly-property-__messenger__"><a id='messenger'></a>public  readonly property <strong>Messenger</strong></h5>
+<p><em>Get: Gets the <a href="plugin/messaging/Messenger.html"><code>Messenger</code></a> responsible for this server.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="plugin/messaging/Messenger.html"><code>Messenger</code></a></td>
+<td>messenger responsible for this server</td>
 </tr>
 </tbody>
 </table>
@@ -567,86 +652,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-ipbans-a-public-readonly-property-__ipbans__"><a id='ipbans'></a>public  readonly property <strong>IPBans</strong></h5>
-<p><em>Get: Gets a set containing all current IPs that are banned.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Set&lt;String&gt;</code></td>
-<td>a set containing banned IP addresses</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-generatestructures-a-public-readonly-property-__generatestructures__"><a id='generatestructures'></a>public  readonly property <strong>GenerateStructures</strong></h5>
-<p><em>Get: Get generate-structures setting.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>true if structure generation is enabled, false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-allowend-a-public-readonly-property-__allowend__"><a id='allowend'></a>public  readonly property <strong>AllowEnd</strong></h5>
-<p><em>Get: Gets whether this server allows the End or not.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>whether this server allows the End or not</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-allownether-a-public-readonly-property-__allownether__"><a id='allownether'></a>public  readonly property <strong>AllowNether</strong></h5>
-<p><em>Get: Gets whether this server allows the Nether or not.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>whether this server allows the Nether or not</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-allowflight-a-public-readonly-property-__allowflight__"><a id='allowflight'></a>public  readonly property <strong>AllowFlight</strong></h5>
-<p><em>Get: Gets whether this server allows flying or not.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>true if the server allows flight, false otherwise</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-connectionthrottle-a-public-readonly-property-__connectionthrottle__"><a id='connectionthrottle'></a>public  readonly property <strong>ConnectionThrottle</strong></h5>
 <p><em>Get: Gets the value of the connection throttle setting.</em></p>
 <table>
@@ -663,8 +668,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-name-a-public-readonly-property-__name__"><a id='name'></a>public  readonly property <strong>Name</strong></h5>
-<p><em>Get: Gets the name of this server implementation.</em></p>
+<h5 id="-a-id-ipbans-a-public-readonly-property-__ipbans__"><a id='ipbans'></a>public  readonly property <strong>IPBans</strong></h5>
+<p><em>Get: Gets a set containing all current IPs that are banned.</em></p>
 <table>
 <thead>
 <tr>
@@ -674,24 +679,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td><code>String</code></td>
-<td>name of this server implementation</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-messenger-a-public-readonly-property-__messenger__"><a id='messenger'></a>public  readonly property <strong>Messenger</strong></h5>
-<p><em>Get: Gets the <a href="plugin/messaging/Messenger.html"><code>Messenger</code></a> responsible for this server.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="plugin/messaging/Messenger.html"><code>Messenger</code></a></td>
-<td>messenger responsible for this server</td>
+<td><code>Set&lt;String&gt;</code></td>
+<td>a set containing banned IP addresses</td>
 </tr>
 </tbody>
 </table>
@@ -708,6 +697,22 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td><code>int</code></td>
 <td>the amount of players this server allows</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-allowflight-a-public-readonly-property-__allowflight__"><a id='allowflight'></a>public  readonly property <strong>AllowFlight</strong></h5>
+<p><em>Get: Gets whether this server allows flying or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the server allows flight, false otherwise</td>
 </tr>
 </tbody>
 </table>
@@ -743,8 +748,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-onlinemode-a-public-readonly-property-__onlinemode__"><a id='onlinemode'></a>public  readonly property <strong>OnlineMode</strong></h5>
-<p><em>Get: Gets whether the Server is in online mode or not.</em></p>
+<h5 id="-a-id-scheduler-a-public-readonly-property-__scheduler__"><a id='scheduler'></a>public  readonly property <strong>Scheduler</strong></h5>
+<p><em>Get: Gets the scheduler for managing scheduled events.</em></p>
 <table>
 <thead>
 <tr>
@@ -754,24 +759,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td><code>boolean</code></td>
-<td>true if the server authenticates clients, false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-pluginmanager-a-public-readonly-property-__pluginmanager__"><a id='pluginmanager'></a>public  readonly property <strong>PluginManager</strong></h5>
-<p><em>Get: Gets the plugin manager for interfacing with plugins.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
-<td>a plugin manager for this Server instance</td>
+<td><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
+<td>a scheduling service for this server</td>
 </tr>
 </tbody>
 </table>
@@ -791,6 +780,22 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-pluginmanager-a-public-readonly-property-__pluginmanager__"><a id='pluginmanager'></a>public  readonly property <strong>PluginManager</strong></h5>
+<p><em>Get: Gets the plugin manager for interfacing with plugins.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
+<td>a plugin manager for this Server instance</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-operators-a-public-readonly-property-__operators__"><a id='operators'></a>public  readonly property <strong>Operators</strong></h5>
 <p><em>Get: Gets a set containing all player operators.</em></p>
 <table>
@@ -807,8 +812,55 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-worldtype-a-public-readonly-property-__worldtype__"><a id='worldtype'></a>public  readonly property <strong>WorldType</strong></h5>
-<p><em>Get: Get world type (level-type setting) for default world.</em></p>
+<h5 id="-a-id-onlinemode-a-public-readonly-property-__onlinemode__"><a id='onlinemode'></a>public  readonly property <strong>OnlineMode</strong></h5>
+<p><em>Get: Gets whether the Server is in online mode or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the server authenticates clients, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-port-a-public-readonly-property-__port__"><a id='port'></a>public  readonly property <strong>Port</strong></h5>
+<p><em>Get: Get the game port that the server runs on.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the port number of this server</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ticksperanimalspawns-a-public-readonly-property-__ticksperanimalspawns__"><a id='ticksperanimalspawns'></a>public  readonly property <strong>TicksPerAnimalSpawns</strong></h5>
+<p><em>TicksPerAnimalSpawns property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-serverid-a-public-readonly-property-__serverid__"><a id='serverid'></a>public  readonly property <strong>ServerId</strong></h5>
+<p><em>Get: Get an ID of this server. The ID is a simple generally alphanumeric ID that can be used for uniquely identifying this server.</em></p>
 <table>
 <thead>
 <tr>
@@ -819,7 +871,119 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>the value of level-type (e.g. DEFAULT, FLAT, DEFAULT_1_1)</td>
+<td>the ID of this server</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-wolfscriptversion-a-public-readonly-property-__wolfscriptversion__"><a id='wolfscriptversion'></a>public  readonly property <strong>WolfScriptVersion</strong></h5>
+<p><em>Get: Gets the WolfScript version that this server is running.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>version of WolfScript</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-viewdistance-a-public-readonly-property-__viewdistance__"><a id='viewdistance'></a>public  readonly property <strong>ViewDistance</strong></h5>
+<p><em>Get: Get the view distance from this server.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the view distance from this server.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-servername-a-public-readonly-property-__servername__"><a id='servername'></a>public  readonly property <strong>ServerName</strong></h5>
+<p><em>Get: Get the name of this server.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>the name of this server</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-version-a-public-readonly-property-__version__"><a id='version'></a>public  readonly property <strong>Version</strong></h5>
+<p><em>Get: Gets the version string of this server implementation.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>version of this server implementation</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-updatefolder-a-public-readonly-property-__updatefolder__"><a id='updatefolder'></a>public  readonly property <strong>UpdateFolder</strong></h5>
+<p><em>Get: Gets the name of the update folder. The update folder is used to safely update plugins at the right moment on a plugin load. <p> The update folder name is relative to the plugins folder.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>the name of the update folder</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-spawnradius-a-public-property-__spawnradius__"><a id='spawnradius'></a>public   property <strong>SpawnRadius</strong></h5>
+<p><em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>spawn radius, or 0 if none</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>int</code></td>
+<td>new spawn radius, or 0 if none</td>
 </tr>
 </tbody>
 </table>
@@ -870,24 +1034,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-port-a-public-readonly-property-__port__"><a id='port'></a>public  readonly property <strong>Port</strong></h5>
-<p><em>Get: Get the game port that the server runs on.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the port number of this server</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-updatefolder-a-public-readonly-property-__updatefolder__"><a id='updatefolder'></a>public  readonly property <strong>UpdateFolder</strong></h5>
-<p><em>Get: Gets the name of the update folder. The update folder is used to safely update plugins at the right moment on a plugin load. <p> The update folder name is relative to the plugins folder.</em></p>
+<h5 id="-a-id-worldtype-a-public-readonly-property-__worldtype__"><a id='worldtype'></a>public  readonly property <strong>WorldType</strong></h5>
+<p><em>Get: Get world type (level-type setting) for default world.</em></p>
 <table>
 <thead>
 <tr>
@@ -898,134 +1046,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tbody>
 <tr>
 <td><code>String</code></td>
-<td>the name of the update folder</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-servername-a-public-readonly-property-__servername__"><a id='servername'></a>public  readonly property <strong>ServerName</strong></h5>
-<p><em>Get: Get the name of this server.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>the name of this server</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-serverid-a-public-readonly-property-__serverid__"><a id='serverid'></a>public  readonly property <strong>ServerId</strong></h5>
-<p><em>Get: Get an ID of this server. The ID is a simple generally alphanumeric ID that can be used for uniquely identifying this server.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>the ID of this server</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-scheduler-a-public-readonly-property-__scheduler__"><a id='scheduler'></a>public  readonly property <strong>Scheduler</strong></h5>
-<p><em>Get: Gets the scheduler for managing scheduled events.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
-<td>a scheduling service for this server</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-ticksperanimalspawns-a-public-readonly-property-__ticksperanimalspawns__"><a id='ticksperanimalspawns'></a>public  readonly property <strong>TicksPerAnimalSpawns</strong></h5>
-<p><em>TicksPerAnimalSpawns property</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-spawnradius-a-public-property-__spawnradius__"><a id='spawnradius'></a>public   property <strong>SpawnRadius</strong></h5>
-<p><em>Get: Gets the radius, in blocks, around each worlds spawn point to protect.<br>Set: Sets the radius, in blocks, around each worlds spawn point to protect.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>spawn radius, or 0 if none</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Set</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>value</td>
-<td><code>int</code></td>
-<td>new spawn radius, or 0 if none</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-version-a-public-readonly-property-__version__"><a id='version'></a>public  readonly property <strong>Version</strong></h5>
-<p><em>Get: Gets the version string of this server implementation.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>version of this server implementation</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-viewdistance-a-public-readonly-property-__viewdistance__"><a id='viewdistance'></a>public  readonly property <strong>ViewDistance</strong></h5>
-<p><em>Get: Get the view distance from this server.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the view distance from this server.</td>
+<td>the value of level-type (e.g. DEFAULT, FLAT, DEFAULT_1_1)</td>
 </tr>
 </tbody>
 </table>
@@ -1045,8 +1066,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-wolfscriptversion-a-public-readonly-property-__wolfscriptversion__"><a id='wolfscriptversion'></a>public  readonly property <strong>WolfScriptVersion</strong></h5>
-<p><em>Get: Gets the WolfScript version that this server is running.</em></p>
+<h5 id="-a-id-whitelistedplayers-a-public-readonly-property-__whitelistedplayers__"><a id='whitelistedplayers'></a>public  readonly property <strong>WhitelistedPlayers</strong></h5>
+<p><em>Get: Gets a list of whitelisted players.</em></p>
 <table>
 <thead>
 <tr>
@@ -1056,8 +1077,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td><code>String</code></td>
-<td>version of WolfScript</td>
+<td><code>Set&lt;OfflinePlayer&gt;</code></td>
+<td>a set containing all whitelisted players</td>
 </tr>
 </tbody>
 </table>
@@ -1090,22 +1111,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td><code>List&lt;World&gt;</code></td>
 <td>a list of worlds</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-whitelistedplayers-a-public-readonly-property-__whitelistedplayers__"><a id='whitelistedplayers'></a>public  readonly property <strong>WhitelistedPlayers</strong></h5>
-<p><em>Get: Gets a list of whitelisted players.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Set&lt;OfflinePlayer&gt;</code></td>
-<td>a set containing all whitelisted players</td>
 </tr>
 </tbody>
 </table>
@@ -1174,8 +1179,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-getbanlist-a-public-function-__getbanlist__-type-"><a id='getbanlist'></a>public  function <strong>getBanList</strong>(type)</h5>
-<p><em>Gets a ban list for the supplied type. <p> Bans by name are no longer supported and this method will return null when trying to request them. The replacement is bans by UUID.</em></p>
+<h5 id="-a-id-createchunkdata-a-public-function-__createchunkdata__-world-"><a id='createchunkdata'></a>public  function <strong>createChunkData</strong>(world)</h5>
+<p><em>Create a ChunkData for use in a generator. See {@link ChunkGenerator#generateChunkData(io.wolfscript.World, java.util.Random, int, int, io.wolfscript.generator.ChunkGenerator.BiomeGrid)}</em></p>
 <table>
 <thead>
 <tr>
@@ -1186,9 +1191,9 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td>type</td>
-<td><code>Type</code></td>
-<td>the type of list to fetch, cannot be null</td>
+<td>world</td>
+<td><code>World</code></td>
+<td>the world to create the ChunkData for</td>
 </tr>
 </tbody>
 </table>
@@ -1201,8 +1206,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td><a href="BanList.html"><code>BanList</code></a></td>
-<td>a ban list of the specified type</td>
+<td><code>ChunkData</code></td>
+<td>a new ChunkData for the world</td>
 </tr>
 </tbody>
 </table>
@@ -1353,7 +1358,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tbody>
 </table>
 <h5 id="-a-id-broadcastmessage-a-public-function-__broadcastmessage__-message-"><a id='broadcastmessage'></a>public  function <strong>broadcastMessage</strong>(message)</h5>
-<p><em>Broadcast a message to all players. <p> This is the same as calling {@link #broadcast(java.lang.String, java.lang.String)} to <code>#BROADCAST_CHANNEL_USERS</code></em></p>
+<p>_Broadcast a message to all players. <p> This is the same as calling {@link #broadcast(java.lang.String, java.lang.String)} to <code>#BROADCAST_CHANNEL_USERS</code>_</p>
 <table>
 <thead>
 <tr>
@@ -1384,8 +1389,23 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-createworld-a-public-function-__createworld__-creator-"><a id='createworld'></a>public  function <strong>createWorld</strong>(creator)</h5>
-<p><em>Creates or loads a world with the given name using the specified options. <p> If the world is already loaded, it will just return the equivalent of getWorld(creator.name()).</em></p>
+<h5 id="-a-id-saveplayers-a-public-function-__saveplayers__-"><a id='saveplayers'></a>public  function <strong>savePlayers</strong>()</h5>
+<p><em>Writes loaded players to disk.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getbanlist-a-public-function-__getbanlist__-type-"><a id='getbanlist'></a>public  function <strong>getBanList</strong>(type)</h5>
+<p><em>Gets a ban list for the supplied type. <p> Bans by name are no longer supported and this method will return null when trying to request them. The replacement is bans by UUID.</em></p>
 <table>
 <thead>
 <tr>
@@ -1396,9 +1416,9 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td>creator</td>
-<td><a href="WorldCreator.html"><code>WorldCreator</code></a></td>
-<td>the options to use when creating the world</td>
+<td>type</td>
+<td><code>Type</code></td>
+<td>the type of list to fetch, cannot be null</td>
 </tr>
 </tbody>
 </table>
@@ -1411,23 +1431,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </thead>
 <tbody>
 <tr>
-<td><code>World</code></td>
-<td>newly created or loaded world</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-resetrecipes-a-public-function-__resetrecipes__-"><a id='resetrecipes'></a>public  function <strong>resetRecipes</strong>()</h5>
-<p><em>Resets the list of crafting recipes to the default.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
+<td><a href="BanList.html"><code>BanList</code></a></td>
+<td>a ban list of the specified type</td>
 </tr>
 </tbody>
 </table>
@@ -1464,6 +1469,38 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-createworld-a-public-function-__createworld__-creator-"><a id='createworld'></a>public  function <strong>createWorld</strong>(creator)</h5>
+<p><em>Creates or loads a world with the given name using the specified options. <p> If the world is already loaded, it will just return the equivalent of getWorld(creator.name()).</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>creator</td>
+<td><a href="WorldCreator.html"><code>WorldCreator</code></a></td>
+<td>the options to use when creating the world</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>World</code></td>
+<td>newly created or loaded world</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-getplayer-a-public-function-__getplayer__-name-"><a id='getplayer'></a>public  function <strong>getPlayer</strong>(name)</h5>
 <p><em>Deprecated: Use {@link #getPlayer(UUID)} as player names are no longer guaranteed to be unique</em></p>
 <p><em>Gets a player object by the given username. <p> This method may not return objects for offline players.</em></p>
@@ -1494,39 +1531,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td><code>Player</code></td>
 <td>a player if one was found, null otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-getplayerexact-a-public-function-__getplayerexact__-name-"><a id='getplayerexact'></a>public  function <strong>getPlayerExact</strong>(name)</h5>
-<p><em>Deprecated: Use {@link #getPlayer(UUID)} as player names are no longer guaranteed to be unique</em></p>
-<p><em>Gets the player with the exact given name, case insensitive.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td><code>String</code></td>
-<td>Exact name of the player to retrieve</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Player</code></td>
-<td>a player object if one was found, null otherwise</td>
 </tr>
 </tbody>
 </table>
@@ -1595,38 +1599,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-getplugincommand-a-public-function-__getplugincommand__-name-"><a id='getplugincommand'></a>public  function <strong>getPluginCommand</strong>(name)</h5>
-<p><em>Gets a <a href="command/PluginCommand.html"><code>PluginCommand</code></a> with the given name or alias.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td><code>String</code></td>
-<td>the name of the command to retrieve</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="command/PluginCommand.html"><code>PluginCommand</code></a></td>
-<td>a plugin command if found, null otherwise</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-getplayer-a-public-function-__getplayer__-id-"><a id='getplayer'></a>public  function <strong>getPlayer</strong>(id)</h5>
 <p><em>Gets the player with the given UUID.</em></p>
 <table>
@@ -1691,6 +1663,71 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-getplayerexact-a-public-function-__getplayerexact__-name-"><a id='getplayerexact'></a>public  function <strong>getPlayerExact</strong>(name)</h5>
+<p><em>Deprecated: Use {@link #getPlayer(UUID)} as player names are no longer guaranteed to be unique</em></p>
+<p><em>Gets the player with the exact given name, case insensitive.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>Exact name of the player to retrieve</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Player</code></td>
+<td>a player object if one was found, null otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getplugincommand-a-public-function-__getplugincommand__-name-"><a id='getplugincommand'></a>public  function <strong>getPluginCommand</strong>(name)</h5>
+<p><em>Gets a <a href="command/PluginCommand.html"><code>PluginCommand</code></a> with the given name or alias.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>the name of the command to retrieve</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="command/PluginCommand.html"><code>PluginCommand</code></a></td>
+<td>a plugin command if found, null otherwise</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-unloadworld-a-public-function-__unloadworld__-name-save-"><a id='unloadworld'></a>public  function <strong>unloadWorld</strong>(name, save)</h5>
 <p><em>Unloads a world with the given name.</em></p>
 <table>
@@ -1725,22 +1762,6 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <tr>
 <td><code>boolean</code></td>
 <td>true if successful, false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-haswhitelist-a-public-function-__haswhitelist__-"><a id='haswhitelist'></a>public  function <strong>hasWhitelist</strong>()</h5>
-<p><em>Gets whether this server has a whitelist or not.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>whether this server has a whitelist or not</td>
 </tr>
 </tbody>
 </table>
@@ -1808,6 +1829,71 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-matchplayer-a-public-function-__matchplayer__-name-"><a id='matchplayer'></a>public  function <strong>matchPlayer</strong>(name)</h5>
+<p><em>Deprecated: Use {@link #getPlayer(UUID)} as player names are no longer guaranteed to be unique</em></p>
+<p><em>Attempts to match any players with the given name, and returns a list of all possibly matches. <p> This list is not sorted in any particular order. If an exact match is found, the returned list will only contain a single result.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>String</code></td>
+<td>the (partial) name to match</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;Player&gt;</code></td>
+<td>list of all possible players</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ishardcore-a-public-function-__ishardcore__-"><a id='ishardcore'></a>public  function <strong>isHardcore</strong>()</h5>
+<p><em>Gets whether the server is in hardcore mode or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the server mode is hardcore, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-haswhitelist-a-public-function-__haswhitelist__-"><a id='haswhitelist'></a>public  function <strong>hasWhitelist</strong>()</h5>
+<p><em>Gets whether this server has a whitelist or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>whether this server has a whitelist or not</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-unloadworld-a-public-function-__unloadworld__-world-save-"><a id='unloadworld'></a>public  function <strong>unloadWorld</strong>(world, save)</h5>
 <p><em>Unloads the given world.</em></p>
 <table>
@@ -1845,39 +1931,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-ishardcore-a-public-function-__ishardcore__-"><a id='ishardcore'></a>public  function <strong>isHardcore</strong>()</h5>
-<p><em>Gets whether the server is in hardcore mode or not.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boolean</code></td>
-<td>true if the server mode is hardcore, false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-reloadwhitelist-a-public-function-__reloadwhitelist__-"><a id='reloadwhitelist'></a>public  function <strong>reloadWhitelist</strong>()</h5>
-<p><em>Reloads the whitelist from disk.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-saveplayers-a-public-function-__saveplayers__-"><a id='saveplayers'></a>public  function <strong>savePlayers</strong>()</h5>
-<p><em>Writes loaded players to disk.</em></p>
+<h5 id="-a-id-reload-a-public-function-__reload__-"><a id='reload'></a>public  function <strong>reload</strong>()</h5>
+<p><em>Reloads the server, refreshing settings and plugin information.</em></p>
 <table>
 <thead>
 <tr>
@@ -1907,8 +1962,8 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-reload-a-public-function-__reload__-"><a id='reload'></a>public  function <strong>reload</strong>()</h5>
-<p><em>Reloads the server, refreshing settings and plugin information.</em></p>
+<h5 id="-a-id-reloadwhitelist-a-public-function-__reloadwhitelist__-"><a id='reloadwhitelist'></a>public  function <strong>reloadWhitelist</strong>()</h5>
+<p><em>Reloads the whitelist from disk.</em></p>
 <table>
 <thead>
 <tr>
@@ -1922,36 +1977,18 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-matchplayer-a-public-function-__matchplayer__-name-"><a id='matchplayer'></a>public  function <strong>matchPlayer</strong>(name)</h5>
-<p><em>Deprecated: Use {@link #getPlayer(UUID)} as player names are no longer guaranteed to be unique</em></p>
-<p><em>Attempts to match any players with the given name, and returns a list of all possibly matches. <p> This list is not sorted in any particular order. If an exact match is found, the returned list will only contain a single result.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td><code>String</code></td>
-<td>the (partial) name to match</td>
-</tr>
-</tbody>
-</table>
+<h5 id="-a-id-resetrecipes-a-public-function-__resetrecipes__-"><a id='resetrecipes'></a>public  function <strong>resetRecipes</strong>()</h5>
+<p><em>Resets the list of crafting recipes to the default.</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>List&lt;Player&gt;</code></td>
-<td>list of all possible players</td>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2002,6 +2039,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 </tbody>
 </table>
 <h5 id="-a-id-useexactloginlocation-a-public-function-__useexactloginlocation__-"><a id='useexactloginlocation'></a>public  function <strong>useExactLoginLocation</strong>()</h5>
+<p><em>Deprecated</em></p>
 <p><em>useExactLoginLocation method</em></p>
 <table>
 <thead>
@@ -2051,7 +2089,7 @@ Extends <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessa
 <hr>
 <h3 id="public-methods-for-pluginmessagerecipient-plugin-messaging-pluginmessagerecipient-md-">Public Methods for <a href="plugin/messaging/PluginMessageRecipient.html"><code>PluginMessageRecipient</code></a></h3>
 <h5 id="-a-id-sendpluginmessage-a-public-function-__sendpluginmessage__-source-channel-"><a id='sendpluginmessage'></a>public  function <strong>sendPluginMessage</strong>(source, channel)</h5>
-<p><em>Sends this recipient a Plugin Message on the specified outgoing channel. <p> The message may not be larger than <code>Messenger#MAX_MESSAGE_SIZE</code> bytes, and the plugin must be registered to send messages on the specified channel.</em></p>
+<p>_Sends this recipient a Plugin Message on the specified outgoing channel. <p> The message may not be larger than <code>Messenger#MAX_MESSAGE_SIZE</code> bytes, and the plugin must be registered to send messages on the specified channel._</p>
 <table>
 <thead>
 <tr>

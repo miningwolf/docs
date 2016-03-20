@@ -21,11 +21,13 @@ TREASURE_FISHED: <br> _TREASURE_FISHED Statistic_ | Statistic
 JUNK_FISHED: <br> _JUNK_FISHED Statistic_ | Statistic
 LEAVE_GAME: <br> _LEAVE_GAME Statistic_ | Statistic
 JUMP: <br> _JUMP Statistic_ | Statistic
-DROP: <br> _DROP Statistic_ | Statistic
+DROP: Type.ITEM<br> _DROP Statistic_ | Statistic
+PICKUP: Type.ITEM<br> _PICKUP Statistic_ | Statistic
 PLAY_ONE_TICK: <br> _PLAY_ONE_TICK Statistic_ | Statistic
 WALK_ONE_CM: <br> _WALK_ONE_CM Statistic_ | Statistic
 SWIM_ONE_CM: <br> _SWIM_ONE_CM Statistic_ | Statistic
 FALL_ONE_CM: <br> _FALL_ONE_CM Statistic_ | Statistic
+SNEAK_TIME: <br> _SNEAK_TIME Statistic_ | Statistic
 CLIMB_ONE_CM: <br> _CLIMB_ONE_CM Statistic_ | Statistic
 FLY_ONE_CM: <br> _FLY_ONE_CM Statistic_ | Statistic
 DIVE_ONE_CM: <br> _DIVE_ONE_CM Statistic_ | Statistic
@@ -35,6 +37,7 @@ PIG_ONE_CM: <br> _PIG_ONE_CM Statistic_ | Statistic
 HORSE_ONE_CM: <br> _HORSE_ONE_CM Statistic_ | Statistic
 SPRINT_ONE_CM: <br> _SPRINT_ONE_CM Statistic_ | Statistic
 CROUCH_ONE_CM: <br> _CROUCH_ONE_CM Statistic_ | Statistic
+AVIATE_ONE_CM: <br> _AVIATE_ONE_CM Statistic_ | Statistic
 MINE_BLOCK: Type.BLOCK<br> _MINE_BLOCK Statistic_ | Statistic
 USE_ITEM: Type.ITEM<br> _USE_ITEM Statistic_ | Statistic
 BREAK_ITEM: Type.ITEM<br> _BREAK_ITEM Statistic_ | Statistic
@@ -64,6 +67,7 @@ RECORD_PLAYED: <br> _RECORD_PLAYED Statistic_ | Statistic
 FURNACE_INTERACTION: <br> _FURNACE_INTERACTION Statistic_ | Statistic
 CRAFTING_TABLE_INTERACTION: <br> _CRAFTING_TABLE_INTERACTION Statistic_ | Statistic
 CHEST_OPENED: <br> _CHEST_OPENED Statistic_ | Statistic
+SLEEP_IN_BED: <br> _SLEEP_IN_BED Statistic_ | Statistic
  readonly property __Type__ <br> _Get: Gets the type of this statistic._ | `Type`
  function __isBlock__() <br> _isBlock method_ | `boolean`
  function __isSubstatistic__() <br> _isSubstatistic method_ | `boolean`

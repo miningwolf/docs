@@ -13,8 +13,8 @@ Method | Type
 --- | :--- 
  |
 __Inherited items from [`Zombie`](Zombie.md)__ |
+  property __VillagerProfession__ <br> _Get: Returns the villager profession of the zombie if the<br>Set: Sets whether the zombie is a villager_ | `Profession`
  writeonly property __Baby__ <br> _Set: Sets whether the zombie is a baby_ | `void`
- writeonly property __Villager__ <br> _Set: Sets whether the zombie is a villager_ | `void`
  function __isBaby__() <br> _Gets whether the zombie is a baby_ | `boolean`
  function __isVillager__() <br> _Gets whether the zombie is a villager_ | `boolean`
  |
@@ -36,6 +36,19 @@ __Inherited items from [`Creature`](Creature.md)__ |
 
 ### Public Properties for [`Zombie`](Zombie.md)
 
+##### <a id='villagerprofession'></a>public   property __VillagerProfession__
+
+_Get: Returns the villager profession of the zombie if the zombie is a villager<br>Set: Sets whether the zombie is a villager_
+
+Get | Description
+--- | --- 
+`Profession` | the profession or null
+
+Set | Type | Description  
+--- | --- | --- 
+profession | [`Profession`](Profession.md) | the profession of the villager or null to clear
+
+
 ##### <a id='baby'></a>public  writeonly property __Baby__
 
 _Set: Sets whether the zombie is a baby_
@@ -50,6 +63,7 @@ flag | `boolean` | Whether the zombie is a baby
 
 
 ##### <a id='villager'></a>public  writeonly property __Villager__
+_Deprecated: Defaults to a basic villager_
 
 _Set: Sets whether the zombie is a villager_
 

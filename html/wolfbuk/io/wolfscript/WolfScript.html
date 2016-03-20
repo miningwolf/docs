@@ -82,6 +82,7 @@
 <li><a href='../../../wolfbuk/io/wolfscript/Material.html'>Material</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/NetherWartsState.html'>NetherWartsState</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Note.html'>Note</a></li>
+<li><a href='../../../wolfbuk/io/wolfscript/Particle.html'>Particle</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/PortalType.html'>PortalType</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/Rotation.html'>Rotation</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/SandstoneType.html'>SandstoneType</a></li>
@@ -99,7 +100,11 @@
 <li><a href='../../../wolfbuk/io/wolfscript/WorldCreator.html'>WorldCreator</a></li>
 <li><a href='../../../wolfbuk/io/wolfscript/WorldType.html'>WorldType</a></li>
 <li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -171,14 +176,6 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>static  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td>static readonly property <strong>ScoreboardManager</strong> <br> <em>Get: Gets the instance of the scoreboard manager.</em></td>
-<td style="text-align:left"><a href="scoreboard/ScoreboardManager.html"><code>ScoreboardManager</code></a></td>
-</tr>
-<tr>
 <td>static readonly property <strong>MaxPlayers</strong> <br> <em>Get: Get the maximum amount of players which can login to this server.</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
@@ -187,24 +184,24 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>ItemFactory</strong> <br> <em>Get: Gets the instance of the item factory (for <code>ItemMeta</code>).</em></td>
-<td style="text-align:left"><a href="inventory/ItemFactory.html"><code>ItemFactory</code></a></td>
+<td>static  property <strong>IdleTimeout</strong> <br> <em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>Ip</strong> <br> <em>Get: Get the IP that this server is bound to, or empty string if not</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
+<td>static readonly property <strong>ScoreboardManager</strong> <br> <em>Get: Gets the instance of the scoreboard manager.</em></td>
+<td style="text-align:left"><a href="scoreboard/ScoreboardManager.html"><code>ScoreboardManager</code></a></td>
+</tr>
+<tr>
+<td>static readonly property <strong>ItemFactory</strong> <br> <em>Get: Gets the instance of the item factory (for <code>ItemMeta</code>).</em></td>
+<td style="text-align:left"><a href="inventory/ItemFactory.html"><code>ItemFactory</code></a></td>
+</tr>
+<tr>
 <td>static readonly property <strong>Motd</strong> <br> <em>Get: Gets the message that is displayed on the server list.</em></td>
 <td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
-<td>static readonly property <strong>AmbientSpawnLimit</strong> <br> <em>Get: Gets user-specified limit for number of ambient mobs that can spawn in</em></td>
-<td style="text-align:left"><code>int</code></td>
-</tr>
-<tr>
-<td>static readonly property <strong>AnimalSpawnLimit</strong> <br> <em>Get: Gets user-specified limit for number of animals that can spawn in a</em></td>
-<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>GenerateStructures</strong> <br> <em>Get: Get generate-structures setting.</em></td>
@@ -219,12 +216,24 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
+<td>static readonly property <strong>AmbientSpawnLimit</strong> <br> <em>Get: Gets user-specified limit for number of ambient mobs that can spawn in</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td>static readonly property <strong>AnimalSpawnLimit</strong> <br> <em>Get: Gets user-specified limit for number of animals that can spawn in a</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
 <td>static readonly property <strong>MonsterSpawnLimit</strong> <br> <em>Get: Gets user-specified limit for number of monsters that can spawn in a</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>HelpMap</strong> <br> <em>Get: Gets the <a href="help/HelpMap.html"><code>HelpMap</code></a> providing help topics for this server.</em></td>
 <td style="text-align:left"><a href="help/HelpMap.html"><code>HelpMap</code></a></td>
+</tr>
+<tr>
+<td>static readonly property <strong>ConnectionThrottle</strong> <br> <em>Get: Gets the value of the connection throttle setting.</em></td>
+<td style="text-align:left"><code>long</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>Messenger</strong> <br> <em>Get: Gets the <a href="plugin/messaging/Messenger.html"><code>Messenger</code></a> responsible for this server.</em></td>
@@ -235,20 +244,8 @@
 <td style="text-align:left"><code>OfflinePlayer[]</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>ConnectionThrottle</strong> <br> <em>Get: Gets the value of the connection throttle setting.</em></td>
-<td style="text-align:left"><code>long</code></td>
-</tr>
-<tr>
 <td>static readonly property <strong>ConsoleSender</strong> <br> <em>Get: Gets a <code>ConsoleCommandSender</code> that may be used as an input source</em></td>
 <td style="text-align:left"><code>ConsoleCommandSender</code></td>
-</tr>
-<tr>
-<td>static  property <strong>DefaultGameMode</strong> <br> <em>Get: Gets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.<br>Set: Sets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.</em></td>
-<td style="text-align:left"><a href="GameMode.html"><code>GameMode</code></a></td>
-</tr>
-<tr>
-<td>static readonly property <strong>Operators</strong> <br> <em>Get: Gets a set containing all player operators.</em></td>
-<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>PluginManager</strong> <br> <em>Get: Gets the plugin manager for interfacing with plugins.</em></td>
@@ -257,6 +254,14 @@
 <tr>
 <td>static readonly property <strong>Scheduler</strong> <br> <em>Get: Gets the scheduler for managing scheduled events.</em></td>
 <td style="text-align:left"><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
+</tr>
+<tr>
+<td>static  property <strong>DefaultGameMode</strong> <br> <em>Get: Gets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.<br>Set: Sets the default <a href="GameMode.html"><code>GameMode</code></a> for new players.</em></td>
+<td style="text-align:left"><a href="GameMode.html"><code>GameMode</code></a></td>
+</tr>
+<tr>
+<td>static readonly property <strong>Operators</strong> <br> <em>Get: Gets a set containing all player operators.</em></td>
+<td style="text-align:left"><code>Set&lt;OfflinePlayer&gt;</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>BannedPlayers</strong> <br> <em>Get: Gets a set containing all banned players.</em></td>
@@ -279,7 +284,7 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>TicksPerAnimalSpawns property</em></td>
+<td>static readonly property <strong>TicksPerMonsterSpawns</strong> <br> <em>TicksPerMonsterSpawns property</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -291,10 +296,6 @@
 <td style="text-align:left"><a href="util/CachedServerIcon.html"><code>CachedServerIcon</code></a></td>
 </tr>
 <tr>
-<td>static readonly property <strong>ShutdownMessage</strong> <br> <em>Get: Gets the default message that is displayed when the server is stopped.</em></td>
-<td style="text-align:left"><code>String</code></td>
-</tr>
-<tr>
 <td>static readonly property <strong>ServerName</strong> <br> <em>Get: Get the name of this server.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
@@ -303,12 +304,16 @@
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>TicksPerMonsterSpawns</strong> <br> <em>TicksPerMonsterSpawns property</em></td>
-<td style="text-align:left"><code>int</code></td>
+<td>static readonly property <strong>ShutdownMessage</strong> <br> <em>Get: Gets the default message that is displayed when the server is stopped.</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>ServicesManager</strong> <br> <em>Get: Gets a services manager.</em></td>
 <td style="text-align:left"><a href="plugin/ServicesManager.html"><code>ServicesManager</code></a></td>
+</tr>
+<tr>
+<td>static readonly property <strong>TicksPerAnimalSpawns</strong> <br> <em>TicksPerAnimalSpawns property</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>WhitelistedPlayers</strong> <br> <em>Get: Gets a list of whitelisted players.</em></td>
@@ -327,10 +332,6 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>Worlds</strong> <br> <em>Get: Gets a list of all worlds on this server.</em></td>
-<td style="text-align:left"><code>List&lt;World&gt;</code></td>
-</tr>
-<tr>
 <td>static readonly property <strong>WarningState</strong> <br> <em>Get: Gets the current warning state for the server.</em></td>
 <td style="text-align:left"><code>WarningState</code></td>
 </tr>
@@ -339,35 +340,43 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>WorldContainer</strong> <br> <em>Get: Gets the folder that contains all of the various <code>World</code>s.</em></td>
-<td style="text-align:left"><code>File</code></td>
+<td>static readonly property <strong>UpdateFolder</strong> <br> <em>Get: Gets the name of the update folder. The update folder is used to safely</em></td>
+<td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
 <td>static readonly property <strong>UpdateFolderFile</strong> <br> <em>Get: Gets the update folder. The update folder is used to safely update</em></td>
 <td style="text-align:left"><code>File</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>UpdateFolder</strong> <br> <em>Get: Gets the name of the update folder. The update folder is used to safely</em></td>
+<td>static readonly property <strong>WorldType</strong> <br> <em>Get: Get world type (level-type setting) for default world.</em></td>
 <td style="text-align:left"><code>String</code></td>
 </tr>
 <tr>
-<td>static readonly property <strong>WorldType</strong> <br> <em>Get: Get world type (level-type setting) for default world.</em></td>
-<td style="text-align:left"><code>String</code></td>
+<td>static readonly property <strong>WorldContainer</strong> <br> <em>Get: Gets the folder that contains all of the various <code>World</code>s.</em></td>
+<td style="text-align:left"><code>File</code></td>
+</tr>
+<tr>
+<td>static readonly property <strong>Worlds</strong> <br> <em>Get: Gets a list of all worlds on this server.</em></td>
+<td style="text-align:left"><code>List&lt;World&gt;</code></td>
 </tr>
 <tr>
 <td>static writeonly property <strong>Whitelist</strong> <br> <em>Set: Sets if the server is whitelisted.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>configureDbConfig</strong>(config) <br> <em>Populates a given <code>ServerConfig</code> with values attributes to this</em></td>
-<td style="text-align:left"><code>void</code></td>
+<td>static function <strong>addRecipe</strong>(recipe) <br> <em>Adds a recipe to the crafting manager.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>createBossBar</strong>(title, color, style) <br> <em>Creates a boss bar instance to display to players. The progress</em></td>
+<td style="text-align:left"><a href="boss/BossBar.html"><code>BossBar</code></a></td>
+</tr>
+<tr>
+<td>static function <strong>createChunkData</strong>(world) <br> <em>Create a ChunkData for use in a generator.</em></td>
+<td style="text-align:left"><code>ChunkData</code></td>
 </tr>
 <tr>
 <td>static function <strong>createInventory</strong>(owner, type, title) <br> <em>Creates an empty inventory with the specified type and title. If the type</em></td>
-<td style="text-align:left"><a href="inventory/Inventory.html"><code>Inventory</code></a></td>
-</tr>
-<tr>
-<td>static function <strong>createInventory</strong>(owner, type) <br> <em>Creates an empty inventory of the specified type. If the type is {@link</em></td>
 <td style="text-align:left"><a href="inventory/Inventory.html"><code>Inventory</code></a></td>
 </tr>
 <tr>
@@ -375,40 +384,44 @@
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
-<td>static function <strong>getPlayer</strong>(id) <br> <em>Gets the player with the given UUID.</em></td>
-<td style="text-align:left"><code>Player</code></td>
+<td>static function <strong>createInventory</strong>(owner, type) <br> <em>Creates an empty inventory of the specified type. If the type is {@link</em></td>
+<td style="text-align:left"><a href="inventory/Inventory.html"><code>Inventory</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>getBanList</strong>(type) <br> <em>Gets a ban list for the supplied type.</em></td>
-<td style="text-align:left"><a href="BanList.html"><code>BanList</code></a></td>
+<td>static function <strong>getPlayer</strong>(id) <br> <em>Gets the player with the given UUID.</em></td>
+<td style="text-align:left"><code>Player</code></td>
 </tr>
 <tr>
 <td>static function <strong>createWorld</strong>(creator) <br> <em>Creates or loads a world with the given name using the specified</em></td>
 <td style="text-align:left"><code>World</code></td>
 </tr>
 <tr>
-<td>static function <strong>banIP</strong>(address) <br> <em>Bans the specified address from the server.</em></td>
-<td style="text-align:left"><code>void</code></td>
+<td>static function <strong>getBanList</strong>(type) <br> <em>Gets a ban list for the supplied type.</em></td>
+<td style="text-align:left"><a href="BanList.html"><code>BanList</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>getOfflinePlayer</strong>(id) <br> <em>Gets the player by the given UUID, regardless if they are offline or</em></td>
-<td style="text-align:left"><code>OfflinePlayer</code></td>
+<td>static function <strong>banIP</strong>(address) <br> <em>Bans the specified address from the server.</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td>static function <strong>createMap</strong>(world) <br> <em>Create a new map with an automatically assigned ID.</em></td>
 <td style="text-align:left"><a href="map/MapView.html"><code>MapView</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>broadcast</strong>(message, permission) <br> <em>Broadcasts the specified message to every user with the given</em></td>
-<td style="text-align:left"><code>int</code></td>
+<td>static function <strong>getOfflinePlayer</strong>(id) <br> <em>Gets the player by the given UUID, regardless if they are offline or</em></td>
+<td style="text-align:left"><code>OfflinePlayer</code></td>
 </tr>
 <tr>
 <td>static function <strong>getPluginCommand</strong>(name) <br> <em>Gets a <a href="command/PluginCommand.html"><code>PluginCommand</code></a> with the given name or alias.</em></td>
 <td style="text-align:left"><a href="command/PluginCommand.html"><code>PluginCommand</code></a></td>
 </tr>
 <tr>
-<td>static function <strong>addRecipe</strong>(recipe) <br> <em>Adds a recipe to the crafting manager.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td>static function <strong>configureDbConfig</strong>(config) <br> <em>Populates a given <code>ServerConfig</code> with values attributes to this</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td>static function <strong>broadcast</strong>(message, permission) <br> <em>Broadcasts the specified message to every user with the given</em></td>
+<td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
 <td>static function <strong>getRecipesFor</strong>(result) <br> <em>Get a list of all recipes for a given item. The stack size is ignored</em></td>
@@ -419,39 +432,19 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>recipeIterator</strong>() <br> <em>Get an iterator through the list of crafting recipes.</em></td>
-<td style="text-align:left"><code>Iterator&lt;Recipe&gt;</code></td>
-</tr>
-<tr>
-<td>static function <strong>getWorld</strong>(name) <br> <em>Gets the world with the given name.</em></td>
-<td style="text-align:left"><code>World</code></td>
-</tr>
-<tr>
-<td>static function <strong>isPrimaryThread</strong>() <br> <em>isPrimaryThread method</em></td>
-<td style="text-align:left"><code>boolean</code></td>
-</tr>
-<tr>
-<td>static function <strong>isHardcore</strong>() <br> <em>Gets whether the server is in hardcore mode or not.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td>static function <strong>reloadWhitelist</strong>() <br> <em>Reloads the whitelist from disk.</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td>static function <strong>getWorld</strong>(uid) <br> <em>Gets the world from the given Unique ID.</em></td>
 <td style="text-align:left"><code>World</code></td>
 </tr>
 <tr>
-<td>static function <strong>hasWhitelist</strong>() <br> <em>Gets whether this server has a whitelist or not.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td>static function <strong>getWorld</strong>(name) <br> <em>Gets the world with the given name.</em></td>
+<td style="text-align:left"><code>World</code></td>
 </tr>
 <tr>
-<td>static function <strong>shutdown</strong>() <br> <em>Shutdowns the server, stopping everything.</em></td>
-<td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
-<td>static function <strong>reload</strong>() <br> <em>Reloads the server, refreshing settings and plugin information.</em></td>
-<td style="text-align:left"><code>void</code></td>
-</tr>
-<tr>
-<td>static function <strong>unbanIP</strong>(address) <br> <em>Unbans the specified address from the server.</em></td>
+<td>static function <strong>savePlayers</strong>() <br> <em>Writes loaded players to disk.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -459,11 +452,31 @@
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>reloadWhitelist</strong>() <br> <em>Reloads the whitelist from disk.</em></td>
+<td>static function <strong>hasWhitelist</strong>() <br> <em>Gets whether this server has a whitelist or not.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>isPrimaryThread</strong>() <br> <em>isPrimaryThread method</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>reload</strong>() <br> <em>Reloads the server, refreshing settings and plugin information.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
-<td>static function <strong>savePlayers</strong>() <br> <em>Writes loaded players to disk.</em></td>
+<td>static function <strong>recipeIterator</strong>() <br> <em>Get an iterator through the list of crafting recipes.</em></td>
+<td style="text-align:left"><code>Iterator&lt;Recipe&gt;</code></td>
+</tr>
+<tr>
+<td>static function <strong>isHardcore</strong>() <br> <em>Gets whether the server is in hardcore mode or not.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td>static function <strong>shutdown</strong>() <br> <em>Shutdowns the server, stopping everything.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td>static function <strong>unbanIP</strong>(address) <br> <em>Unbans the specified address from the server.</em></td>
 <td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
@@ -472,10 +485,6 @@
 </tr>
 <tr>
 <td>static function <strong>unloadWorld</strong>(world, save) <br> <em>Unloads the given world.</em></td>
-<td style="text-align:left"><code>boolean</code></td>
-</tr>
-<tr>
-<td>static function <strong>useExactLoginLocation</strong>() <br> <em>useExactLoginLocation method</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 </tbody>
@@ -530,54 +539,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-idletimeout-a-public-static-property-__idletimeout__"><a id='idletimeout'></a>public static  property <strong>IdleTimeout</strong></h5>
-<p><em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the idle timeout in minutes</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Set</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>threshold</td>
-<td><code>int</code></td>
-<td>the idle timeout in minutes</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-scoreboardmanager-a-public-static-readonly-property-__scoreboardmanager__"><a id='scoreboardmanager'></a>public static readonly property <strong>ScoreboardManager</strong></h5>
-<p><em>Get: Gets the instance of the scoreboard manager. <p> This will only exist after the first world has loaded.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="scoreboard/ScoreboardManager.html"><code>ScoreboardManager</code></a></td>
-<td>the scoreboard manager or null if no worlds are loaded.</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-maxplayers-a-public-static-readonly-property-__maxplayers__"><a id='maxplayers'></a>public static readonly property <strong>MaxPlayers</strong></h5>
 <p><em>Get: Get the maximum amount of players which can login to this server.</em></p>
 <table>
@@ -610,8 +571,8 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-itemfactory-a-public-static-readonly-property-__itemfactory__"><a id='itemfactory'></a>public static readonly property <strong>ItemFactory</strong></h5>
-<p><em>Get: Gets the instance of the item factory (for <code>ItemMeta</code>).</em></p>
+<h5 id="-a-id-idletimeout-a-public-static-property-__idletimeout__"><a id='idletimeout'></a>public static  property <strong>IdleTimeout</strong></h5>
+<p><em>Get: Gets the idle kick timeout.<br>Set: Set the idle kick timeout. Any players idle for the specified amount of time will be automatically kicked. <p> A value of 0 will disable the idle kick timeout.</em></p>
 <table>
 <thead>
 <tr>
@@ -621,8 +582,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="inventory/ItemFactory.html"><code>ItemFactory</code></a></td>
-<td>the item factory</td>
+<td><code>int</code></td>
+<td>the idle timeout in minutes</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>threshold</td>
+<td><code>int</code></td>
+<td>the idle timeout in minutes</td>
 </tr>
 </tbody>
 </table>
@@ -642,6 +619,38 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-scoreboardmanager-a-public-static-readonly-property-__scoreboardmanager__"><a id='scoreboardmanager'></a>public static readonly property <strong>ScoreboardManager</strong></h5>
+<p><em>Get: Gets the instance of the scoreboard manager. <p> This will only exist after the first world has loaded.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="scoreboard/ScoreboardManager.html"><code>ScoreboardManager</code></a></td>
+<td>the scoreboard manager or null if no worlds are loaded.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-itemfactory-a-public-static-readonly-property-__itemfactory__"><a id='itemfactory'></a>public static readonly property <strong>ItemFactory</strong></h5>
+<p><em>Get: Gets the instance of the item factory (for <code>ItemMeta</code>).</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="inventory/ItemFactory.html"><code>ItemFactory</code></a></td>
+<td>the item factory</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-motd-a-public-static-readonly-property-__motd__"><a id='motd'></a>public static readonly property <strong>Motd</strong></h5>
 <p><em>Get: Gets the message that is displayed on the server list.</em></p>
 <table>
@@ -655,38 +664,6 @@
 <tr>
 <td><code>String</code></td>
 <td>the servers MOTD</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-ambientspawnlimit-a-public-static-readonly-property-__ambientspawnlimit__"><a id='ambientspawnlimit'></a>public static readonly property <strong>AmbientSpawnLimit</strong></h5>
-<p><em>Get: Gets user-specified limit for number of ambient mobs that can spawn in a chunk.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the ambient spawn limit</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-animalspawnlimit-a-public-static-readonly-property-__animalspawnlimit__"><a id='animalspawnlimit'></a>public static readonly property <strong>AnimalSpawnLimit</strong></h5>
-<p><em>Get: Gets user-specified limit for number of animals that can spawn in a chunk.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the animal spawn limit</td>
 </tr>
 </tbody>
 </table>
@@ -738,6 +715,38 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-ambientspawnlimit-a-public-static-readonly-property-__ambientspawnlimit__"><a id='ambientspawnlimit'></a>public static readonly property <strong>AmbientSpawnLimit</strong></h5>
+<p><em>Get: Gets user-specified limit for number of ambient mobs that can spawn in a chunk.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the ambient spawn limit</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-animalspawnlimit-a-public-static-readonly-property-__animalspawnlimit__"><a id='animalspawnlimit'></a>public static readonly property <strong>AnimalSpawnLimit</strong></h5>
+<p><em>Get: Gets user-specified limit for number of animals that can spawn in a chunk.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the animal spawn limit</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-monsterspawnlimit-a-public-static-readonly-property-__monsterspawnlimit__"><a id='monsterspawnlimit'></a>public static readonly property <strong>MonsterSpawnLimit</strong></h5>
 <p><em>Get: Gets user-specified limit for number of monsters that can spawn in a chunk.</em></p>
 <table>
@@ -767,6 +776,22 @@
 <tr>
 <td><a href="help/HelpMap.html"><code>HelpMap</code></a></td>
 <td>a help map for this server</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-connectionthrottle-a-public-static-readonly-property-__connectionthrottle__"><a id='connectionthrottle'></a>public static readonly property <strong>ConnectionThrottle</strong></h5>
+<p><em>Get: Gets the value of the connection throttle setting.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long</code></td>
+<td>the value of the connection throttle setting</td>
 </tr>
 </tbody>
 </table>
@@ -802,22 +827,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-connectionthrottle-a-public-static-readonly-property-__connectionthrottle__"><a id='connectionthrottle'></a>public static readonly property <strong>ConnectionThrottle</strong></h5>
-<p><em>Get: Gets the value of the connection throttle setting.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>long</code></td>
-<td>the value of the connection throttle setting</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-consolesender-a-public-static-readonly-property-__consolesender__"><a id='consolesender'></a>public static readonly property <strong>ConsoleSender</strong></h5>
 <p><em>Get: Gets a <code>ConsoleCommandSender</code> that may be used as an input source for this server.</em></p>
 <table>
@@ -831,6 +840,38 @@
 <tr>
 <td><code>ConsoleCommandSender</code></td>
 <td>a console command sender</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-pluginmanager-a-public-static-readonly-property-__pluginmanager__"><a id='pluginmanager'></a>public static readonly property <strong>PluginManager</strong></h5>
+<p><em>Get: Gets the plugin manager for interfacing with plugins.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
+<td>a plugin manager for this Server instance</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-scheduler-a-public-static-readonly-property-__scheduler__"><a id='scheduler'></a>public static readonly property <strong>Scheduler</strong></h5>
+<p><em>Get: Gets the scheduler for managing scheduled events.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
+<td>a scheduling service for this server</td>
 </tr>
 </tbody>
 </table>
@@ -879,38 +920,6 @@
 <tr>
 <td><code>Set&lt;OfflinePlayer&gt;</code></td>
 <td>a set containing player operators</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-pluginmanager-a-public-static-readonly-property-__pluginmanager__"><a id='pluginmanager'></a>public static readonly property <strong>PluginManager</strong></h5>
-<p><em>Get: Gets the plugin manager for interfacing with plugins.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="plugin/PluginManager.html"><code>PluginManager</code></a></td>
-<td>a plugin manager for this Server instance</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-scheduler-a-public-static-readonly-property-__scheduler__"><a id='scheduler'></a>public static readonly property <strong>Scheduler</strong></h5>
-<p><em>Get: Gets the scheduler for managing scheduled events.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="scheduler/WolfScriptScheduler.html"><code>WolfScriptScheduler</code></a></td>
-<td>a scheduling service for this server</td>
 </tr>
 </tbody>
 </table>
@@ -994,8 +1003,8 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-ticksperanimalspawns-a-public-static-readonly-property-__ticksperanimalspawns__"><a id='ticksperanimalspawns'></a>public static readonly property <strong>TicksPerAnimalSpawns</strong></h5>
-<p><em>TicksPerAnimalSpawns property</em></p>
+<h5 id="-a-id-tickspermonsterspawns-a-public-static-readonly-property-__tickspermonsterspawns__"><a id='tickspermonsterspawns'></a>public static readonly property <strong>TicksPerMonsterSpawns</strong></h5>
+<p><em>TicksPerMonsterSpawns property</em></p>
 <table>
 <thead>
 <tr>
@@ -1006,23 +1015,6 @@
 <tr>
 <td><code>int</code></td>
 <td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-unsafe-a-public-static-readonly-property-__unsafe__"><a id='unsafe'></a>public static readonly property <strong>Unsafe</strong></h5>
-<p><em>Deprecated</em></p>
-<p><em>Unsafe property</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="UnsafeValues.html"><code>UnsafeValues</code></a></td>
-<td>the unsafe values instance</td>
 </tr>
 </tbody>
 </table>
@@ -1074,22 +1066,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-shutdownmessage-a-public-static-readonly-property-__shutdownmessage__"><a id='shutdownmessage'></a>public static readonly property <strong>ShutdownMessage</strong></h5>
-<p><em>Get: Gets the default message that is displayed when the server is stopped.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>the shutdown message</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-servername-a-public-static-readonly-property-__servername__"><a id='servername'></a>public static readonly property <strong>ServerName</strong></h5>
 <p><em>Get: Get the name of this server.</em></p>
 <table>
@@ -1122,18 +1098,19 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-tickspermonsterspawns-a-public-static-readonly-property-__tickspermonsterspawns__"><a id='tickspermonsterspawns'></a>public static readonly property <strong>TicksPerMonsterSpawns</strong></h5>
-<p><em>TicksPerMonsterSpawns property</em></p>
+<h5 id="-a-id-shutdownmessage-a-public-static-readonly-property-__shutdownmessage__"><a id='shutdownmessage'></a>public static readonly property <strong>ShutdownMessage</strong></h5>
+<p><em>Get: Gets the default message that is displayed when the server is stopped.</em></p>
 <table>
 <thead>
 <tr>
 <th>Get</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td></td>
+<td><code>String</code></td>
+<td>the shutdown message</td>
 </tr>
 </tbody>
 </table>
@@ -1150,6 +1127,38 @@
 <tr>
 <td><a href="plugin/ServicesManager.html"><code>ServicesManager</code></a></td>
 <td>s services manager</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-unsafe-a-public-static-readonly-property-__unsafe__"><a id='unsafe'></a>public static readonly property <strong>Unsafe</strong></h5>
+<p><em>Deprecated</em></p>
+<p><em>Unsafe property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="UnsafeValues.html"><code>UnsafeValues</code></a></td>
+<td>the unsafe values instance</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ticksperanimalspawns-a-public-static-readonly-property-__ticksperanimalspawns__"><a id='ticksperanimalspawns'></a>public static readonly property <strong>TicksPerAnimalSpawns</strong></h5>
+<p><em>TicksPerAnimalSpawns property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1217,22 +1226,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-worlds-a-public-static-readonly-property-__worlds__"><a id='worlds'></a>public static readonly property <strong>Worlds</strong></h5>
-<p><em>Get: Gets a list of all worlds on this server.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>List&lt;World&gt;</code></td>
-<td>a list of worlds</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-warningstate-a-public-static-readonly-property-__warningstate__"><a id='warningstate'></a>public static readonly property <strong>WarningState</strong></h5>
 <p><em>Get: Gets the current warning state for the server.</em></p>
 <table>
@@ -1265,8 +1258,8 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-worldcontainer-a-public-static-readonly-property-__worldcontainer__"><a id='worldcontainer'></a>public static readonly property <strong>WorldContainer</strong></h5>
-<p><em>Get: Gets the folder that contains all of the various <code>World</code>s.</em></p>
+<h5 id="-a-id-updatefolder-a-public-static-readonly-property-__updatefolder__"><a id='updatefolder'></a>public static readonly property <strong>UpdateFolder</strong></h5>
+<p><em>Get: Gets the name of the update folder. The update folder is used to safely update plugins at the right moment on a plugin load. <p> The update folder name is relative to the plugins folder.</em></p>
 <table>
 <thead>
 <tr>
@@ -1276,8 +1269,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>File</code></td>
-<td>folder that contains all worlds</td>
+<td><code>String</code></td>
+<td>the name of the update folder</td>
 </tr>
 </tbody>
 </table>
@@ -1297,22 +1290,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-updatefolder-a-public-static-readonly-property-__updatefolder__"><a id='updatefolder'></a>public static readonly property <strong>UpdateFolder</strong></h5>
-<p><em>Get: Gets the name of the update folder. The update folder is used to safely update plugins at the right moment on a plugin load. <p> The update folder name is relative to the plugins folder.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>the name of the update folder</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-worldtype-a-public-static-readonly-property-__worldtype__"><a id='worldtype'></a>public static readonly property <strong>WorldType</strong></h5>
 <p><em>Get: Get world type (level-type setting) for default world.</em></p>
 <table>
@@ -1326,6 +1303,38 @@
 <tr>
 <td><code>String</code></td>
 <td>the value of level-type (e.g. DEFAULT, FLAT, DEFAULT_1_1)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worldcontainer-a-public-static-readonly-property-__worldcontainer__"><a id='worldcontainer'></a>public static readonly property <strong>WorldContainer</strong></h5>
+<p><em>Get: Gets the folder that contains all of the various <code>World</code>s.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>File</code></td>
+<td>folder that contains all worlds</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-worlds-a-public-static-readonly-property-__worlds__"><a id='worlds'></a>public static readonly property <strong>Worlds</strong></h5>
+<p><em>Get: Gets a list of all worlds on this server.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;World&gt;</code></td>
+<td>a list of worlds</td>
 </tr>
 </tbody>
 </table>
@@ -1362,8 +1371,8 @@
 </table>
 <hr>
 <h3 id="public-methods-for-wolfscript-wolfscript-md-">Public Methods for <a href="WolfScript.html"><code>WolfScript</code></a></h3>
-<h5 id="-a-id-configuredbconfig-a-public-static-function-__configuredbconfig__-config-"><a id='configuredbconfig'></a>public static function <strong>configureDbConfig</strong>(config)</h5>
-<p><em>Populates a given <code>ServerConfig</code> with values attributes to this server.</em></p>
+<h5 id="-a-id-addrecipe-a-public-static-function-__addrecipe__-recipe-"><a id='addrecipe'></a>public static function <strong>addRecipe</strong>(recipe)</h5>
+<p><em>Adds a recipe to the crafting manager.</em></p>
 <table>
 <thead>
 <tr>
@@ -1374,9 +1383,9 @@
 </thead>
 <tbody>
 <tr>
-<td>config</td>
-<td><code>ServerConfig</code></td>
-<td>the server config to populate</td>
+<td>recipe</td>
+<td><a href="inventory/Recipe.html"><code>Recipe</code></a></td>
+<td>the recipe to add</td>
 </tr>
 </tbody>
 </table>
@@ -1384,12 +1393,87 @@
 <thead>
 <tr>
 <th>Returns</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>void</code></td>
-<td></td>
+<td><code>boolean</code></td>
+<td>true if the recipe was added, false if it wasn&#39;t for some reason</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-createbossbar-a-public-static-function-__createbossbar__-title-color-style-"><a id='createbossbar'></a>public static function <strong>createBossBar</strong>(title, color, style)</h5>
+<p><em>Creates a boss bar instance to display to players. The progress defaults to 1.0</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td><code>String</code></td>
+<td>the title of the boss bar</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="boss/BarColor.html"><code>BarColor</code></a></td>
+<td>the color of the boss bar</td>
+</tr>
+<tr>
+<td>style</td>
+<td><a href="boss/BarStyle.html"><code>BarStyle</code></a></td>
+<td>the style of the boss bar</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="boss/BossBar.html"><code>BossBar</code></a></td>
+<td>the created boss bar</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-createchunkdata-a-public-static-function-__createchunkdata__-world-"><a id='createchunkdata'></a>public static function <strong>createChunkData</strong>(world)</h5>
+<p><em>Create a ChunkData for use in a generator. See {@link ChunkGenerator#generateChunkData(io.wolfscript.World, java.util.Random, int, int, io.wolfscript.generator.ChunkGenerator.BiomeGrid)}</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>the world to create the ChunkData for</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ChunkData</code></td>
+<td>a new ChunkData for the world</td>
 </tr>
 </tbody>
 </table>
@@ -1435,6 +1519,38 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-broadcastmessage-a-public-static-function-__broadcastmessage__-message-"><a id='broadcastmessage'></a>public static function <strong>broadcastMessage</strong>(message)</h5>
+<p>_Broadcast a message to all players. <p> This is the same as calling {@link #broadcast(java.lang.String, java.lang.String)} to <code>Server#BROADCAST_CHANNEL_USERS</code>_</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td><code>String</code></td>
+<td>the message</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the number of players</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-createinventory-a-public-static-function-__createinventory__-owner-type-"><a id='createinventory'></a>public static function <strong>createInventory</strong>(owner, type)</h5>
 <p><em>Creates an empty inventory of the specified type. If the type is <code>InventoryType#CHEST</code>, the new inventory has a size of 27; otherwise the new inventory has the normal size for its type.</em></p>
 <table>
@@ -1469,38 +1585,6 @@
 <tr>
 <td><a href="inventory/Inventory.html"><code>Inventory</code></a></td>
 <td>a new inventory</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-broadcastmessage-a-public-static-function-__broadcastmessage__-message-"><a id='broadcastmessage'></a>public static function <strong>broadcastMessage</strong>(message)</h5>
-<p><em>Broadcast a message to all players. <p> This is the same as calling {@link #broadcast(java.lang.String, java.lang.String)} to <code>Server#BROADCAST_CHANNEL_USERS</code></em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>message</td>
-<td><code>String</code></td>
-<td>the message</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>the number of players</td>
 </tr>
 </tbody>
 </table>
@@ -1602,38 +1686,6 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-getbanlist-a-public-static-function-__getbanlist__-type-"><a id='getbanlist'></a>public static function <strong>getBanList</strong>(type)</h5>
-<p><em>Gets a ban list for the supplied type. <p> Bans by name are no longer supported and this method will return null when trying to request them. The replacement is bans by UUID.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td><code>Type</code></td>
-<td>the type of list to fetch, cannot be null</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="BanList.html"><code>BanList</code></a></td>
-<td>a ban list of the specified type</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-createworld-a-public-static-function-__createworld__-creator-"><a id='createworld'></a>public static function <strong>createWorld</strong>(creator)</h5>
 <p><em>Creates or loads a world with the given name using the specified options. <p> If the world is already loaded, it will just return the equivalent of getWorld(creator.name()).</em></p>
 <table>
@@ -1666,6 +1718,38 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-getbanlist-a-public-static-function-__getbanlist__-type-"><a id='getbanlist'></a>public static function <strong>getBanList</strong>(type)</h5>
+<p><em>Gets a ban list for the supplied type. <p> Bans by name are no longer supported and this method will return null when trying to request them. The replacement is bans by UUID.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><code>Type</code></td>
+<td>the type of list to fetch, cannot be null</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BanList.html"><code>BanList</code></a></td>
+<td>a ban list of the specified type</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-banip-a-public-static-function-__banip__-address-"><a id='banip'></a>public static function <strong>banIP</strong>(address)</h5>
 <p><em>Bans the specified address from the server.</em></p>
 <table>
@@ -1694,71 +1778,6 @@
 <tr>
 <td><code>void</code></td>
 <td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-getofflineplayer-a-public-static-function-__getofflineplayer__-id-"><a id='getofflineplayer'></a>public static function <strong>getOfflinePlayer</strong>(id)</h5>
-<p><em>Gets the player by the given UUID, regardless if they are offline or online. <p> This will return an object even if the player does not exist. To this method, all players will exist.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td><code>UUID</code></td>
-<td>the UUID of the player to retrieve</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>OfflinePlayer</code></td>
-<td>an offline player</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-getofflineplayer-a-public-static-function-__getofflineplayer__-name-"><a id='getofflineplayer'></a>public static function <strong>getOfflinePlayer</strong>(name)</h5>
-<p><em>Deprecated: Persistent storage of users should be by UUID as names are no longer unique past a single session.</em></p>
-<p><em>Gets the player by the given name, regardless if they are offline or online. <p> This method may involve a blocking web request to get the UUID for the given name. <p> This will return an object even if the player does not exist. To this method, all players will exist.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td><code>String</code></td>
-<td>the name the player to retrieve</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>OfflinePlayer</code></td>
-<td>an offline player</td>
 </tr>
 </tbody>
 </table>
@@ -1827,8 +1846,8 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-broadcast-a-public-static-function-__broadcast__-message-permission-"><a id='broadcast'></a>public static function <strong>broadcast</strong>(message, permission)</h5>
-<p><em>Broadcasts the specified message to every user with the given permission name.</em></p>
+<h5 id="-a-id-getofflineplayer-a-public-static-function-__getofflineplayer__-id-"><a id='getofflineplayer'></a>public static function <strong>getOfflinePlayer</strong>(id)</h5>
+<p><em>Gets the player by the given UUID, regardless if they are offline or online. <p> This will return an object even if the player does not exist. To this method, all players will exist.</em></p>
 <table>
 <thead>
 <tr>
@@ -1839,14 +1858,9 @@
 </thead>
 <tbody>
 <tr>
-<td>message</td>
-<td><code>String</code></td>
-<td>message to broadcast</td>
-</tr>
-<tr>
-<td>permission</td>
-<td><code>String</code></td>
-<td>the required permission {@link Permissible permissibles} must have to receive the broadcast</td>
+<td>id</td>
+<td><code>UUID</code></td>
+<td>the UUID of the player to retrieve</td>
 </tr>
 </tbody>
 </table>
@@ -1859,8 +1873,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td>number of message recipients</td>
+<td><code>OfflinePlayer</code></td>
+<td>an offline player</td>
 </tr>
 </tbody>
 </table>
@@ -1896,8 +1910,9 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-addrecipe-a-public-static-function-__addrecipe__-recipe-"><a id='addrecipe'></a>public static function <strong>addRecipe</strong>(recipe)</h5>
-<p><em>Adds a recipe to the crafting manager.</em></p>
+<h5 id="-a-id-getofflineplayer-a-public-static-function-__getofflineplayer__-name-"><a id='getofflineplayer'></a>public static function <strong>getOfflinePlayer</strong>(name)</h5>
+<p><em>Deprecated: Persistent storage of users should be by UUID as names are no longer unique past a single session.</em></p>
+<p><em>Gets the player by the given name, regardless if they are offline or online. <p> This method may involve a blocking web request to get the UUID for the given name. <p> This will return an object even if the player does not exist. To this method, all players will exist.</em></p>
 <table>
 <thead>
 <tr>
@@ -1908,9 +1923,9 @@
 </thead>
 <tbody>
 <tr>
-<td>recipe</td>
-<td><a href="inventory/Recipe.html"><code>Recipe</code></a></td>
-<td>the recipe to add</td>
+<td>name</td>
+<td><code>String</code></td>
+<td>the name the player to retrieve</td>
 </tr>
 </tbody>
 </table>
@@ -1923,8 +1938,76 @@
 </thead>
 <tbody>
 <tr>
-<td><code>boolean</code></td>
-<td>true if the recipe was added, false if it wasn&#39;t for some reason</td>
+<td><code>OfflinePlayer</code></td>
+<td>an offline player</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-configuredbconfig-a-public-static-function-__configuredbconfig__-config-"><a id='configuredbconfig'></a>public static function <strong>configureDbConfig</strong>(config)</h5>
+<p><em>Populates a given <code>ServerConfig</code> with values attributes to this server.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config</td>
+<td><code>ServerConfig</code></td>
+<td>the server config to populate</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-broadcast-a-public-static-function-__broadcast__-message-permission-"><a id='broadcast'></a>public static function <strong>broadcast</strong>(message, permission)</h5>
+<p><em>Broadcasts the specified message to every user with the given permission name.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td><code>String</code></td>
+<td>message to broadcast</td>
+</tr>
+<tr>
+<td>permission</td>
+<td><code>String</code></td>
+<td>the required permission {@link Permissible permissibles} must have to receive the broadcast</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>number of message recipients</td>
 </tr>
 </tbody>
 </table>
@@ -1975,8 +2058,39 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-recipeiterator-a-public-static-function-__recipeiterator__-"><a id='recipeiterator'></a>public static function <strong>recipeIterator</strong>()</h5>
-<p><em>Get an iterator through the list of crafting recipes.</em></p>
+<h5 id="-a-id-reloadwhitelist-a-public-static-function-__reloadwhitelist__-"><a id='reloadwhitelist'></a>public static function <strong>reloadWhitelist</strong>()</h5>
+<p><em>Reloads the whitelist from disk.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getworld-a-public-static-function-__getworld__-uid-"><a id='getworld'></a>public static function <strong>getWorld</strong>(uid)</h5>
+<p><em>Gets the world from the given Unique ID.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td><code>UUID</code></td>
+<td>a unique-id of the world to retrieve</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -1986,8 +2100,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Iterator&lt;Recipe&gt;</code></td>
-<td>an iterator</td>
+<td><code>World</code></td>
+<td>a world with the given Unique ID, or null if none exists</td>
 </tr>
 </tbody>
 </table>
@@ -2056,8 +2170,8 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-isprimarythread-a-public-static-function-__isprimarythread__-"><a id='isprimarythread'></a>public static function <strong>isPrimaryThread</strong>()</h5>
-<p><em>isPrimaryThread method</em></p>
+<h5 id="-a-id-saveplayers-a-public-static-function-__saveplayers__-"><a id='saveplayers'></a>public static function <strong>savePlayers</strong>()</h5>
+<p><em>Writes loaded players to disk.</em></p>
 <table>
 <thead>
 <tr>
@@ -2066,56 +2180,23 @@
 </thead>
 <tbody>
 <tr>
-<td><code>boolean</code></td>
+<td><code>void</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-ishardcore-a-public-static-function-__ishardcore__-"><a id='ishardcore'></a>public static function <strong>isHardcore</strong>()</h5>
-<p><em>Gets whether the server is in hardcore mode or not.</em></p>
+<h5 id="-a-id-resetrecipes-a-public-static-function-__resetrecipes__-"><a id='resetrecipes'></a>public static function <strong>resetRecipes</strong>()</h5>
+<p><em>Resets the list of crafting recipes to the default.</em></p>
 <table>
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>boolean</code></td>
-<td>true if the server mode is hardcore, false otherwise</td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-getworld-a-public-static-function-__getworld__-uid-"><a id='getworld'></a>public static function <strong>getWorld</strong>(uid)</h5>
-<p><em>Gets the world from the given Unique ID.</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>uid</td>
-<td><code>UUID</code></td>
-<td>a unique-id of the world to retrieve</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>World</code></td>
-<td>a world with the given Unique ID, or null if none exists</td>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2135,8 +2216,23 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-shutdown-a-public-static-function-__shutdown__-"><a id='shutdown'></a>public static function <strong>shutdown</strong>()</h5>
-<p><em>Shutdowns the server, stopping everything.</em></p>
+<h5 id="-a-id-isprimarythread-a-public-static-function-__isprimarythread__-"><a id='isprimarythread'></a>public static function <strong>isPrimaryThread</strong>()</h5>
+<p><em>isPrimaryThread method</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-reload-a-public-static-function-__reload__-"><a id='reload'></a>public static function <strong>reload</strong>()</h5>
+<p><em>Reloads the server, refreshing settings and plugin information.</em></p>
 <table>
 <thead>
 <tr>
@@ -2150,8 +2246,40 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-reload-a-public-static-function-__reload__-"><a id='reload'></a>public static function <strong>reload</strong>()</h5>
-<p><em>Reloads the server, refreshing settings and plugin information.</em></p>
+<h5 id="-a-id-recipeiterator-a-public-static-function-__recipeiterator__-"><a id='recipeiterator'></a>public static function <strong>recipeIterator</strong>()</h5>
+<p><em>Get an iterator through the list of crafting recipes.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Iterator&lt;Recipe&gt;</code></td>
+<td>an iterator</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-ishardcore-a-public-static-function-__ishardcore__-"><a id='ishardcore'></a>public static function <strong>isHardcore</strong>()</h5>
+<p><em>Gets whether the server is in hardcore mode or not.</em></p>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the server mode is hardcore, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-shutdown-a-public-static-function-__shutdown__-"><a id='shutdown'></a>public static function <strong>shutdown</strong>()</h5>
+<p><em>Shutdowns the server, stopping everything.</em></p>
 <table>
 <thead>
 <tr>
@@ -2183,51 +2311,6 @@
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-resetrecipes-a-public-static-function-__resetrecipes__-"><a id='resetrecipes'></a>public static function <strong>resetRecipes</strong>()</h5>
-<p><em>Resets the list of crafting recipes to the default.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-reloadwhitelist-a-public-static-function-__reloadwhitelist__-"><a id='reloadwhitelist'></a>public static function <strong>reloadWhitelist</strong>()</h5>
-<p><em>Reloads the whitelist from disk.</em></p>
-<table>
-<thead>
-<tr>
-<th>Returns</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-saveplayers-a-public-static-function-__saveplayers__-"><a id='saveplayers'></a>public static function <strong>savePlayers</strong>()</h5>
-<p><em>Writes loaded players to disk.</em></p>
 <table>
 <thead>
 <tr>
@@ -2316,6 +2399,7 @@
 </tbody>
 </table>
 <h5 id="-a-id-useexactloginlocation-a-public-static-function-__useexactloginlocation__-"><a id='useexactloginlocation'></a>public static function <strong>useExactLoginLocation</strong>()</h5>
+<p><em>Deprecated</em></p>
 <p><em>useExactLoginLocation method</em></p>
 <table>
 <thead>

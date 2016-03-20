@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -127,27 +131,77 @@
 </thead>
 <tbody>
 <tr>
-<td> function <strong>canSpawn</strong>(world, x, z) <br> <em>Tests if the specified location is valid for a natural spawn position</em></td>
-<td style="text-align:left"><code>boolean</code></td>
+<td> readonly property <strong>MaxHeight</strong> <br> <em>Get: Get the maximum height for the chunk.</em></td>
+<td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, material) <br> <em>Set a region of this chunk from xMin, yMin, zMin (inclusive)</em></td>
+<td style="text-align:left"><code>void</code></td>
 </tr>
 <tr>
 <td> function <strong>generate</strong>(world, random, x, z) <br> <em>generate method</em></td>
 <td style="text-align:left"><code>byte[]</code></td>
 </tr>
 <tr>
-<td> function <strong>getDefaultPopulators</strong>(world) <br> <em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given</em></td>
-<td style="text-align:left"><code>List&lt;BlockPopulator&gt;</code></td>
+<td> function <strong>canSpawn</strong>(world, x, z) <br> <em>Tests if the specified location is valid for a natural spawn position</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
+<td> function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, material) <br> <em>Set a region of this chunk from xMin, yMin, zMin (inclusive)</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>generateChunkData</strong>(world, random, x, z, biome) <br> <em>generateChunkData method</em></td>
+<td style="text-align:left"><code>ChunkData</code></td>
+</tr>
+<tr>
+<td> function <strong>getTypeAndData</strong>(x, y, z) <br> <em>Get the type and data of the block at x, y ,z.</em></td>
+<td style="text-align:left"><a href="../material/MaterialData.html"><code>MaterialData</code></a></td>
 </tr>
 <tr>
 <td> function <strong>getFixedSpawnLocation</strong>(world, random) <br> <em>Gets a fixed spawn location to use for a given world.</em></td>
 <td style="text-align:left"><code>Location</code></td>
 </tr>
+<tr>
+<td> function <strong>getDefaultPopulators</strong>(world) <br> <em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given</em></td>
+<td style="text-align:left"><code>List&lt;BlockPopulator&gt;</code></td>
+</tr>
+<tr>
+<td> function <strong>getType</strong>(x, y, z) <br> <em>Get the type of the block at x, y, z.</em></td>
+<td style="text-align:left"><a href="../Material.html"><code>Material</code></a></td>
+</tr>
+<tr>
+<td> function <strong>setBlock</strong>(x, y, z, material) <br> <em>Set the block at x,y,z in the chunk data to material.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+<tr>
+<td> function <strong>setBlock</strong>(x, y, z, material) <br> <em>Set the block at x,y,z in the chunk data to material.</em></td>
+<td style="text-align:left"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="public-properties-for-chunkgenerator-chunkgenerator-md-">Public Properties for <a href="ChunkGenerator.html"><code>ChunkGenerator</code></a></h3>
+<h5 id="-a-id-maxheight-a-public-readonly-property-__maxheight__"><a id='maxheight'></a>public  readonly property <strong>MaxHeight</strong></h5>
+<p><em>Get: Get the maximum height for the chunk. Setting blocks at or above this height will do nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the maximum height</td>
+</tr>
 </tbody>
 </table>
 <hr>
 <h3 id="public-methods-for-chunkgenerator-chunkgenerator-md-">Public Methods for <a href="ChunkGenerator.html"><code>ChunkGenerator</code></a></h3>
-<h5 id="-a-id-canspawn-a-public-function-__canspawn__-world-x-z-"><a id='canspawn'></a>public  function <strong>canSpawn</strong>(world, x, z)</h5>
-<p><em>Tests if the specified location is valid for a natural spawn position</em></p>
+<h5 id="-a-id-setregion-a-public-function-__setregion__-xmin-ymin-zmin-xmax-ymax-zmax-material-"><a id='setregion'></a>public  function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, material)</h5>
+<p><em>Set a region of this chunk from xMin, yMin, zMin (inclusive) to xMax, yMax, zMax (exclusive) to material. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
 <table>
 <thead>
 <tr>
@@ -158,19 +212,39 @@
 </thead>
 <tbody>
 <tr>
-<td>world</td>
-<td><code>World</code></td>
-<td>The world we&#39;re testing on</td>
+<td>xMin</td>
+<td><code>int</code></td>
+<td>minimum x location (inclusive) in the chunk to set</td>
 </tr>
 <tr>
-<td>x</td>
+<td>yMin</td>
 <td><code>int</code></td>
-<td>X-coordinate of the block to test</td>
+<td>minimum y location (inclusive) in the chunk to set</td>
 </tr>
 <tr>
-<td>z</td>
+<td>zMin</td>
 <td><code>int</code></td>
-<td>Z-coordinate of the block to test</td>
+<td>minimum z location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>int</code></td>
+<td>maximum x location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMax</td>
+<td><code>int</code></td>
+<td>maximum y location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMax</td>
+<td><code>int</code></td>
+<td>maximum z location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>material</td>
+<td><a href="../Material.html"><code>Material</code></a></td>
+<td>the type to set the blocks to</td>
 </tr>
 </tbody>
 </table>
@@ -178,13 +252,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>boolean</code></td>
-<td>true if the location is valid, otherwise false</td>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -230,6 +303,160 @@
 <tbody>
 <tr>
 <td><code>byte[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-canspawn-a-public-function-__canspawn__-world-x-z-"><a id='canspawn'></a>public  function <strong>canSpawn</strong>(world, x, z)</h5>
+<p><em>Tests if the specified location is valid for a natural spawn position</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>The world we&#39;re testing on</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>X-coordinate of the block to test</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>Z-coordinate of the block to test</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td>true if the location is valid, otherwise false</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setregion-a-public-function-__setregion__-xmin-ymin-zmin-xmax-ymax-zmax-material-"><a id='setregion'></a>public  function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, material)</h5>
+<p><em>Set a region of this chunk from xMin, yMin, zMin (inclusive) to xMax, yMax, zMax (exclusive) to material. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xMin</td>
+<td><code>int</code></td>
+<td>minimum x location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMin</td>
+<td><code>int</code></td>
+<td>minimum y location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMin</td>
+<td><code>int</code></td>
+<td>minimum z location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>int</code></td>
+<td>maximum x location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMax</td>
+<td><code>int</code></td>
+<td>maximum y location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMax</td>
+<td><code>int</code></td>
+<td>maximum z location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>material</td>
+<td><a href="../material/MaterialData.html"><code>MaterialData</code></a></td>
+<td>the type to set the blocks to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-generatechunkdata-a-public-function-__generatechunkdata__-world-random-x-z-biome-"><a id='generatechunkdata'></a>public  function <strong>generateChunkData</strong>(world, random, x, z, biome)</h5>
+<p><em>generateChunkData method</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>world argument</td>
+</tr>
+<tr>
+<td>random</td>
+<td><code>Random</code></td>
+<td>random argument</td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>x argument</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>z argument</td>
+</tr>
+<tr>
+<td>biome</td>
+<td><code>BiomeGrid</code></td>
+<td>biome argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ChunkData</code></td>
 <td></td>
 </tr>
 </tbody>
@@ -286,6 +513,91 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-gettypeanddata-a-public-function-__gettypeanddata__-x-y-z-"><a id='gettypeanddata'></a>public  function <strong>getTypeAndData</strong>(x, y, z)</h5>
+<p><em>Get the type and data of the block at x, y ,z. Getting blocks outside the chunk&#39;s bounds returns air.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../material/MaterialData.html"><code>MaterialData</code></a></td>
+<td>the type and data of the block or the MaterialData for air if x, y or z are outside the chunk&#39;s bounds</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getdata-a-public-function-__getdata__-x-y-z-"><a id='getdata'></a>public  function <strong>getData</strong>(x, y, z)</h5>
+<p><em>Deprecated: Uses magic values</em></p>
+<p><em>Get the block data at x,y,z in the chunk data. Getting blocks outside the chunk&#39;s bounds returns 0.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>the block data value or air if x, y or z are outside the chunk&#39;s bounds</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-generateextblocksections-a-public-function-__generateextblocksections__-world-random-x-z-biomes-"><a id='generateextblocksections'></a>public  function <strong>generateExtBlockSections</strong>(world, random, x, z, biomes)</h5>
 <p><em>Deprecated</em></p>
 <p><em>generateExtBlockSections method</em></p>
@@ -338,8 +650,9 @@
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-getdefaultpopulators-a-public-function-__getdefaultpopulators__-world-"><a id='getdefaultpopulators'></a>public  function <strong>getDefaultPopulators</strong>(world)</h5>
-<p><em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given world</em></p>
+<h5 id="-a-id-setregion-a-public-function-__setregion__-xmin-ymin-zmin-xmax-ymax-zmax-blockid-"><a id='setregion'></a>public  function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, blockId)</h5>
+<p><em>Deprecated: Uses magic values.</em></p>
+<p><em>Set a region of this chunk from xMin, yMin, zMin (inclusive) to xMax, yMax, zMax (exclusive) to block id. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
 <table>
 <thead>
 <tr>
@@ -350,9 +663,39 @@
 </thead>
 <tbody>
 <tr>
-<td>world</td>
-<td><code>World</code></td>
-<td>World to apply to</td>
+<td>xMin</td>
+<td><code>int</code></td>
+<td>minimum x location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMin</td>
+<td><code>int</code></td>
+<td>minimum y location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMin</td>
+<td><code>int</code></td>
+<td>minimum z location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>int</code></td>
+<td>maximum x location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMax</td>
+<td><code>int</code></td>
+<td>maximum y location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMax</td>
+<td><code>int</code></td>
+<td>maximum z location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td><code>int</code></td>
+<td>the block id to set the blocks to</td>
 </tr>
 </tbody>
 </table>
@@ -360,13 +703,12 @@
 <thead>
 <tr>
 <th>Returns</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>List&lt;BlockPopulator&gt;</code></td>
-<td>List containing any amount of BlockPopulators</td>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -404,6 +746,381 @@
 <tr>
 <td><code>Location</code></td>
 <td>Location containing a new spawn point, otherwise null</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getdefaultpopulators-a-public-function-__getdefaultpopulators__-world-"><a id='getdefaultpopulators'></a>public  function <strong>getDefaultPopulators</strong>(world)</h5>
+<p><em>Gets a list of default <a href="BlockPopulator.html"><code>BlockPopulator</code></a>s to apply to a given world</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>world</td>
+<td><code>World</code></td>
+<td>World to apply to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;BlockPopulator&gt;</code></td>
+<td>List containing any amount of BlockPopulators</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-gettype-a-public-function-__gettype__-x-y-z-"><a id='gettype'></a>public  function <strong>getType</strong>(x, y, z)</h5>
+<p><em>Get the type of the block at x, y, z. Getting blocks outside the chunk&#39;s bounds returns air.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Material.html"><code>Material</code></a></td>
+<td>the type of the block or Material.AIR if x, y or z are outside the chunk&#39;s bounds</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-gettypeid-a-public-function-__gettypeid__-x-y-z-"><a id='gettypeid'></a>public  function <strong>getTypeId</strong>(x, y, z)</h5>
+<p><em>Deprecated: Uses magic values</em></p>
+<p><em>Get the blockId at x,y,z in the chunk data. Getting blocks outside the chunk&#39;s bounds returns 0.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>the block id or 0 if x, y or z are outside the chunk&#39;s bounds</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setblock-a-public-function-__setblock__-x-y-z-material-"><a id='setblock'></a>public  function <strong>setBlock</strong>(x, y, z, material)</h5>
+<p><em>Set the block at x,y,z in the chunk data to material. Note: setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>material</td>
+<td><a href="../Material.html"><code>Material</code></a></td>
+<td>the type to set the block to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setblock-a-public-function-__setblock__-x-y-z-blockid-"><a id='setblock'></a>public  function <strong>setBlock</strong>(x, y, z, blockId)</h5>
+<p><em>Deprecated: Uses magic values</em></p>
+<p><em>Set the block at x,y,z in the chunk data to blockId. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td><code>int</code></td>
+<td>the blockId to set the block to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setblock-a-public-function-__setblock__-x-y-z-blockid-data-"><a id='setblock'></a>public  function <strong>setBlock</strong>(x, y, z, blockId, data)</h5>
+<p><em>Deprecated: Uses magic values</em></p>
+<p><em>Set the block at x,y,z in the chunk data to blockId. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td><code>int</code></td>
+<td>the blockId to set the block to</td>
+</tr>
+<tr>
+<td>data</td>
+<td><code>byte</code></td>
+<td>the block data to set the block to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setblock-a-public-function-__setblock__-x-y-z-material-"><a id='setblock'></a>public  function <strong>setBlock</strong>(x, y, z, material)</h5>
+<p><em>Set the block at x,y,z in the chunk data to material. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><code>int</code></td>
+<td>the x location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>int</code></td>
+<td>the y location in the chunk from 0 (inclusive) - maxHeight (exclusive)</td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>int</code></td>
+<td>the z location in the chunk from 0-15 inclusive</td>
+</tr>
+<tr>
+<td>material</td>
+<td><a href="../material/MaterialData.html"><code>MaterialData</code></a></td>
+<td>the type to set the block to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-setregion-a-public-function-__setregion__-xmin-ymin-zmin-xmax-ymax-zmax-blockid-data-"><a id='setregion'></a>public  function <strong>setRegion</strong>(xMin, yMin, zMin, xMax, yMax, zMax, blockId, data)</h5>
+<p><em>Deprecated: Uses magic values.</em></p>
+<p><em>Set a region of this chunk from xMin, yMin, zMin (inclusive) to xMax, yMax, zMax (exclusive) to block id and data. Setting blocks outside the chunk&#39;s bounds does nothing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xMin</td>
+<td><code>int</code></td>
+<td>minimum x location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMin</td>
+<td><code>int</code></td>
+<td>minimum y location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMin</td>
+<td><code>int</code></td>
+<td>minimum z location (inclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>xMax</td>
+<td><code>int</code></td>
+<td>maximum x location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>yMax</td>
+<td><code>int</code></td>
+<td>maximum y location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>zMax</td>
+<td><code>int</code></td>
+<td>maximum z location (exclusive) in the chunk to set</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td><code>int</code></td>
+<td>the block id to set the blocks to</td>
+</tr>
+<tr>
+<td>data</td>
+<td><code>int</code></td>
+<td>the block data to set the blocks to</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>

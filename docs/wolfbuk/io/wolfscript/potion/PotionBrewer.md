@@ -11,6 +11,7 @@ Represents a brewer that can create [`PotionEffect`](PotionEffect.md)s.
 Method | Type   
 --- | :--- 
  function __createEffect__(potion, duration, amplifier) <br> _Creates a [`PotionEffect`](PotionEffect.md) from the given [`PotionEffectType`](PotionEffectType.md),_ | [`PotionEffect`](PotionEffect.md)
+ function __getEffects__(type, upgraded, extended) <br> _Returns a collection of [`PotionEffect`](PotionEffect.md) that would be applied from_ | `Collection<PotionEffect>`
 
 
 
@@ -34,8 +35,23 @@ Returns | Description
 [`PotionEffect`](PotionEffect.md) | The resulting potion effect
 
 
+##### <a id='geteffects'></a>public  function __getEffects__(type, upgraded, extended)
+
+_Returns a collection of [`PotionEffect`](PotionEffect.md) that would be applied from a potion with the given type._
+
+Argument | Type | Description  
+--- | --- | --- 
+type | [`PotionType`](PotionType.md) | The type of the potion
+upgraded | `boolean` | upgraded argument
+extended | `boolean` | extended argument
+
+Returns | Description
+--- | --- 
+`Collection<PotionEffect>` | The list of effects
+
+
 ##### <a id='geteffectsfromdamage'></a>public  function __getEffectsFromDamage__(damage)
-_Deprecated: Magic value_
+_Deprecated: Non-Functional_
 
 _Returns a collection of [`PotionEffect`](PotionEffect.md) that would be applied from a potion with the given data value._
 

@@ -60,7 +60,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -95,7 +99,9 @@
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/InventoryView.html'>InventoryView</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFactory.html'>ItemFactory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ItemFlag.html'>ItemFlag</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MainHand.html'>MainHand</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantInventory.html'>MerchantInventory</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/inventory/MerchantRecipe.html'>MerchantRecipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/PlayerInventory.html'>PlayerInventory</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/Recipe.html'>Recipe</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/inventory/ShapedRecipe.html'>ShapedRecipe</a></li>
@@ -156,6 +162,10 @@
 <tr>
 <td><strong><a href="InventoryView.html"><code>InventoryView</code></a></strong></td>
 <td style="text-align:left"><em>Represents a view linking two inventories and a single player (whose</em> </td>
+</tr>
+<tr>
+<td><strong><a href="MerchantRecipe.html"><code>MerchantRecipe</code></a></strong></td>
+<td style="text-align:left"><em>Represents a Villager&#39;s trade.</em> </td>
 </tr>
 <tr>
 <td><strong><a href="ShapedRecipe.html"><code>ShapedRecipe</code></a></strong></td>
@@ -219,11 +229,11 @@
 </tr>
 <tr>
 <td><strong><a href="MerchantInventory.html"><code>MerchantInventory</code></a></strong></td>
-<td style="text-align:left"><em>interface MerchantInventory</em> </td>
+<td style="text-align:left"><em>Represents a trading inventory between a player and a villager.</em> </td>
 </tr>
 <tr>
 <td><strong><a href="PlayerInventory.html"><code>PlayerInventory</code></a></strong></td>
-<td style="text-align:left"><em>Interface to the inventory of a Player, including the four armor slots.</em> </td>
+<td style="text-align:left"><em>Interface to the inventory of a Player, including the four armor slots and any extra slots.</em> </td>
 </tr>
 <tr>
 <td><strong><a href="Recipe.html"><code>Recipe</code></a></strong></td>
@@ -240,6 +250,10 @@
 <tr>
 <td><strong><a href="ItemFlag.html"><code>ItemFlag</code></a></strong></td>
 <td style="text-align:left"><em>A ItemFlag can hide some Attributes from ItemStacks</em> </td>
+</tr>
+<tr>
+<td><strong><a href="MainHand.html"><code>MainHand</code></a></strong></td>
+<td style="text-align:left"><em>Represents the chosen main hand of a player</em> </td>
 </tr>
 <tr>
 <td><strong>Child Namespaces</strong></td>

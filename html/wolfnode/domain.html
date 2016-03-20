@@ -71,11 +71,12 @@
 <li><a href='../wolfnode/punycode.html'>punycode</a></li>
 <li><a href='../wolfnode/readline.html'>readline</a></li>
 <li><a href='../wolfnode/repl.html'>repl</a></li>
-<li><a href='../wolfnode/smalloc.html'>smalloc</a></li>
 <li><a href='../wolfnode/string_decoder.html'>string_decoder</a></li>
 <li><a href='../wolfnode/tty.html'>tty</a></li>
 <li><a href='../wolfnode/vm.html'>vm</a></li>
 <li><a href='../wolfnode/zlib.html'>zlib</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
 <li class='divider'></li>
 
                   </ul>
@@ -86,10 +87,16 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="domain">Domain</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Unstable</span>
-</code></pre><p>Domains provide a way to handle multiple different IO operations as a
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">0 - Deprecated</span>
+</code></pre><p><strong>This module is pending deprecation</strong>. Once a replacement API has been
+finalized, this module will be fully deprecated. Most end users should
+<strong>not</strong> have cause to use this module. Users who absolutely must have
+the functionality that domains provide may rely on it for the time being
+but should expect to have to migrate to a different solution
+in the future.</p>
+<p>Domains provide a way to handle multiple different IO operations as a
 single group.  If any of the event emitters or callbacks registered to a
-domain emit an <code>error</code> event, or throw an error, then the domain object
+domain emit an <code>&#39;error&#39;</code> event, or throw an error, then the domain object
 will be notified, rather than losing the context of the error in the
 <code>process.on(&#39;uncaughtException&#39;)</code> handler, or causing the program to
 exit immediately with an error code.</p>
@@ -97,34 +104,34 @@ exit immediately with an error code.</p>
 <!-- type=misc -->
 <p>Domain error handlers are not a substitute for closing down your
 process when an error occurs.</p>
-<p>By the very nature of how <code>throw</code> works in JavaScript, there is almost
+<p>By the very nature of how <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw" target="_blank" rel="nofollow"><code>throw</code></a> works in JavaScript, there is almost
 never any way to safely &quot;pick up where you left off&quot;, without leaking
 references, or creating some other sort of undefined brittle state.</p>
 <p>The safest way to respond to a thrown error is to shut down the
 process.  Of course, in a normal web server, you might have many
 connections open, and it is not reasonable to abruptly shut those down
 because an error was triggered by someone else.</p>
-<p>The better approach is send an error response to the request that
+<p>The better approach is to send an error response to the request that
 triggered the error, while letting the others finish in their normal
 time, and stop listening for new requests in that worker.</p>
 <p>In this way, <code>domain</code> usage goes hand-in-hand with the cluster module,
 since the master process can fork a new worker when a worker
-encounters an error.  For node programs that scale to multiple
+encounters an error.  For Node.js programs that scale to multiple
 machines, the terminating proxy or service registry can take note of
 the failure, and react accordingly.</p>
 <p>For example, this is not a good idea:</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// <span class="hljs-label">XXX WARNING!  BAD IDEA!</span></span>
+<pre><code class="lang-js"><span class="hljs-regexp">//</span> XXX WARNING!  BAD IDEA!
 
-<span class="hljs-keyword">var</span> d = <span class="hljs-built_in">require</span>(<span class="hljs-string">'domain'</span>).create();
-d.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
-  <span class="hljs-comment">// The error won't crash the process, but what it does is worse!</span>
-  <span class="hljs-comment">// Though we've prevented abrupt process restarting, we are leaking</span>
-  <span class="hljs-comment">// resources like crazy if this ever happens.</span>
-  <span class="hljs-comment">// This is no better than process.on('uncaughtException')!</span>
+var d = <span class="hljs-built_in">require</span>(<span class="hljs-string">'domain'</span>).create();
+d.<span class="hljs-literal">on</span>(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">(er)</span> =&gt;</span> {
+  <span class="hljs-regexp">//</span> The error won<span class="hljs-string">'t crash the process, but what it does is worse!
+  // Though we'</span>ve prevented abrupt process restarting, we are leaking
+  <span class="hljs-regexp">//</span> resources like crazy <span class="hljs-keyword">if</span> <span class="hljs-keyword">this</span> ever happens.
+  <span class="hljs-regexp">//</span> This <span class="hljs-keyword">is</span> <span class="hljs-literal">no</span> better than process.<span class="hljs-literal">on</span>(<span class="hljs-string">'uncaughtException'</span>)!
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'error, but oh well'</span>, er.message);
 });
-d.run(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>).createServer(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> </span>{
+d.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>).createServer(<span class="hljs-function"><span class="hljs-params">(req, res)</span> =&gt;</span> {
     handleRequest(req, res);
   }).listen(PORT);
 });
@@ -132,10 +139,10 @@ d.run(<span class="hljs-function"><span class="hljs-keyword">function</span><spa
 <p>By using the context of a domain, and the resilience of separating our
 program into multiple worker processes, we can react more
 appropriately, and handle errors with much greater safety.</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// Much better!</span>
+<pre><code class="lang-js"><span class="hljs-comment">// Much better!</span>
 
-<span class="hljs-keyword">var</span> cluster = <span class="hljs-built_in">require</span>(<span class="hljs-string">'cluster'</span>);
-<span class="hljs-keyword">var</span> PORT = +process.env.PORT || <span class="hljs-number">1337</span>;
+<span class="hljs-keyword">const</span> cluster = <span class="hljs-keyword">require</span>(<span class="hljs-string">'cluster'</span>);
+<span class="hljs-keyword">const</span> PORT = +process.env.PORT || <span class="hljs-number">1337</span>;
 
 <span class="hljs-keyword">if</span> (cluster.isMaster) {
   <span class="hljs-comment">// In real life, you'd probably use more than just 2 workers,</span>
@@ -153,8 +160,8 @@ appropriately, and handle errors with much greater safety.</p>
   cluster.fork();
   cluster.fork();
 
-  cluster.on(<span class="hljs-string">'disconnect'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(worker)</span> </span>{
-    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'disconnect!'</span>);
+  cluster.on(<span class="hljs-string">'disconnect'</span>, (worker) =&gt; {
+    console.error(<span class="hljs-string">'disconnect!'</span>);
     cluster.fork();
   });
 
@@ -163,25 +170,25 @@ appropriately, and handle errors with much greater safety.</p>
   <span class="hljs-comment">//</span>
   <span class="hljs-comment">// This is where we put our bugs!</span>
 
-  <span class="hljs-keyword">var</span> domain = <span class="hljs-built_in">require</span>(<span class="hljs-string">'domain'</span>);
+  <span class="hljs-keyword">const</span> domain = <span class="hljs-keyword">require</span>(<span class="hljs-string">'domain'</span>);
 
   <span class="hljs-comment">// See the cluster documentation for more details about using</span>
   <span class="hljs-comment">// worker processes to serve requests.  How it works, caveats, etc.</span>
 
-  <span class="hljs-keyword">var</span> server = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>).createServer(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-keyword">const</span> server = <span class="hljs-keyword">require</span>(<span class="hljs-string">'http'</span>).createServer((req, res) =&gt; {
     <span class="hljs-keyword">var</span> d = domain.create();
-    d.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
-      <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'error'</span>, er.stack);
+    d.on(<span class="hljs-string">'error'</span>, (er) =&gt; {
+      console.error(<span class="hljs-string">'error'</span>, er.stack);
 
-      <span class="hljs-comment">// Note: we're in dangerous territory!</span>
+      <span class="hljs-comment">// <span class="hljs-doctag">Note:</span> we're in dangerous territory!</span>
       <span class="hljs-comment">// By definition, something unexpected occurred,</span>
       <span class="hljs-comment">// which we probably didn't want.</span>
       <span class="hljs-comment">// Anything can happen now!  Be very careful!</span>
 
       <span class="hljs-keyword">try</span> {
         <span class="hljs-comment">// make sure we close down within 30 seconds</span>
-        <span class="hljs-keyword">var</span> killtimer = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-          process.exit(<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">var</span> killtimer = setTimeout(() =&gt; {
+          process.<span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
         }, <span class="hljs-number">30000</span>);
         <span class="hljs-comment">// But don't keep the process open just for that!</span>
         killtimer.unref();
@@ -200,7 +207,7 @@ appropriately, and handle errors with much greater safety.</p>
         res.end(<span class="hljs-string">'Oops, there was a problem!\n'</span>);
       } <span class="hljs-keyword">catch</span> (er2) {
         <span class="hljs-comment">// oh well, not much we can do at this point.</span>
-        <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error sending 500!'</span>, er2.stack);
+        console.error(<span class="hljs-string">'Error sending 500!'</span>, er2.stack);
       }
     });
 
@@ -211,7 +218,7 @@ appropriately, and handle errors with much greater safety.</p>
     d.add(res);
 
     <span class="hljs-comment">// Now run the handler function in the domain.</span>
-    d.run(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    d.run(() =&gt; {
       handleRequest(req, res);
     });
   });
@@ -224,7 +231,7 @@ appropriately, and handle errors with much greater safety.</p>
   <span class="hljs-keyword">switch</span>(req.url) {
     <span class="hljs-keyword">case</span> <span class="hljs-string">'/error'</span>:
       <span class="hljs-comment">// We do some async stuff, and then...</span>
-      setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+      setTimeout(() =&gt; {
         <span class="hljs-comment">// Whoops!</span>
         flerb.bark();
       });
@@ -236,11 +243,11 @@ appropriately, and handle errors with much greater safety.</p>
 </code></pre>
 <h2 id="additions-to-error-objects">Additions to Error objects</h2>
 <!-- type=misc -->
-<p>Any time an Error object is routed through a domain, a few extra fields
+<p>Any time an <code>Error</code> object is routed through a domain, a few extra fields
 are added to it.</p>
 <ul>
 <li><code>error.domain</code> The domain that first handled the error.</li>
-<li><code>error.domainEmitter</code> The event emitter that emitted an &#39;error&#39; event
+<li><code>error.domainEmitter</code> The event emitter that emitted an <code>&#39;error&#39;</code> event
 with the error object.</li>
 <li><code>error.domainBound</code> The callback function which was bound to the
 domain, and passed an error as its first argument.</li>
@@ -263,8 +270,8 @@ from being properly garbage collected.</p>
 <p>If you <em>want</em> to nest Domain objects as children of a parent Domain,
 then you must explicitly add them.</p>
 <p>Implicit binding routes thrown errors and <code>&#39;error&#39;</code> events to the
-Domain&#39;s <code>error</code> event, but does not register the EventEmitter on the
-Domain, so <code>domain.dispose()</code> will not shut down the EventEmitter.
+Domain&#39;s <code>&#39;error&#39;</code> event, but does not register the EventEmitter on the
+Domain, so <a href="#domain_domain_dispose"><code>domain.dispose()</code></a> will not shut down the EventEmitter.
 Implicit binding only takes care of thrown errors and <code>&#39;error&#39;</code> events.</p>
 <h2 id="explicit-binding">Explicit Binding</h2>
 <!--type=misc-->
@@ -276,30 +283,33 @@ other domain.</p>
 perhaps we would like to have a separate domain to use for each request.</p>
 <p>That is possible via explicit binding.</p>
 <p>For example:</p>
-<pre><code><span class="hljs-comment">// create a top-level domain for the server</span>
-<span class="hljs-keyword">var</span> serverDomain = domain.create();
+<pre><code class="lang-js"><span class="hljs-comment">// create a top-level domain for the server</span>
+<span class="hljs-keyword">const</span> domain = <span class="hljs-keyword">require</span>(<span class="hljs-string">'domain'</span>);
+<span class="hljs-keyword">const</span> http = <span class="hljs-keyword">require</span>(<span class="hljs-string">'http'</span>);
+<span class="hljs-keyword">const</span> serverDomain = domain.create();
 
-serverDomain.run(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+serverDomain.run(() =&gt; {
   <span class="hljs-comment">// server is created in the scope of serverDomain</span>
-  http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> </span>{
+  http.createServer((req, res) =&gt; {
     <span class="hljs-comment">// req and res are also created in the scope of serverDomain</span>
     <span class="hljs-comment">// however, we'd prefer to have a separate domain for each request.</span>
     <span class="hljs-comment">// create it first thing, and add req and res to it.</span>
     <span class="hljs-keyword">var</span> reqd = domain.create();
     reqd.add(req);
     reqd.add(res);
-    reqd.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
-      <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error'</span>, er, req.url);
+    reqd.on(<span class="hljs-string">'error'</span>, (er) =&gt; {
+      console.error(<span class="hljs-string">'Error'</span>, er, req.url);
       <span class="hljs-keyword">try</span> {
         res.writeHead(<span class="hljs-number">500</span>);
         res.end(<span class="hljs-string">'Error occurred, sorry.'</span>);
       } <span class="hljs-keyword">catch</span> (er) {
-        <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error sending 500'</span>, er, req.url);
+        console.error(<span class="hljs-string">'Error sending 500'</span>, er, req.url);
       }
     });
   }).listen(<span class="hljs-number">1337</span>);
 });
-</code></pre><h2 id="domain-create-">domain.create()</h2>
+</code></pre>
+<h2 id="domain-create-">domain.create()</h2>
 <ul>
 <li>return: {Domain}</li>
 </ul>
@@ -307,32 +317,36 @@ serverDomain.run(<span class="hljs-function"><span class="hljs-keyword">function
 <h2 id="class-domain">Class: Domain</h2>
 <p>The Domain class encapsulates the functionality of routing errors and
 uncaught exceptions to the active Domain object.</p>
-<p>Domain is a child class of <a href="events.html#events_class_events_eventemitter">EventEmitter</a>.  To handle the errors that it
-catches, listen to its <code>error</code> event.</p>
-<h3 id="domain-run-fn-">domain.run(fn)</h3>
+<p>Domain is a child class of <a href="events.html#events_class_events_eventemitter"><code>EventEmitter</code></a>.  To handle the errors that it
+catches, listen to its <code>&#39;error&#39;</code> event.</p>
+<h3 id="domain-run-fn-arg-">domain.run(fn[, arg][, ...])</h3>
 <ul>
 <li><code>fn</code> {Function}</li>
 </ul>
 <p>Run the supplied function in the context of the domain, implicitly
 binding all event emitters, timers, and lowlevel requests that are
-created in that context.</p>
+created in that context. Optionally, arguments can be passed to
+the function.</p>
 <p>This is the most basic way to use a domain.</p>
 <p>Example:</p>
-<pre><code><span class="hljs-keyword">var</span> d = domain.create();
-d.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
+<pre><code class="lang-js">const domain = <span class="hljs-built_in">require</span>(<span class="hljs-string">'domain'</span>);
+const fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+const d = domain.create();
+d.<span class="hljs-literal">on</span>(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">(er)</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Caught error!'</span>, er);
 });
-d.run(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  process.nextTick(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">// simulating some various async stuff</span>
-      fs.open(<span class="hljs-string">'non-existent file'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er, fd)</span> </span>{
+d.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  process.nextTick(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-regexp">//</span> simulating some various async stuff
+      fs.open(<span class="hljs-string">'non-existent file'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-function"><span class="hljs-params">(er, fd)</span> =&gt;</span> {
         <span class="hljs-keyword">if</span> (er) <span class="hljs-keyword">throw</span> er;
-        <span class="hljs-comment">// proceed...</span>
+        <span class="hljs-regexp">//</span> proceed...
       });
     }, <span class="hljs-number">100</span>);
   });
 });
-</code></pre><p>In this example, the <code>d.on(&#39;error&#39;)</code> handler will be triggered, rather
+</code></pre>
+<p>In this example, the <code>d.on(&#39;error&#39;)</code> handler will be triggered, rather
 than crashing the program.</p>
 <h3 id="domain-members">domain.members</h3>
 <ul>
@@ -342,22 +356,22 @@ than crashing the program.</p>
 to the domain.</p>
 <h3 id="domain-add-emitter-">domain.add(emitter)</h3>
 <ul>
-<li><code>emitter</code> {EventEmitter | Timer} emitter or timer to be added to the domain</li>
+<li><code>emitter</code> {EventEmitter|Timer} emitter or timer to be added to the domain</li>
 </ul>
 <p>Explicitly adds an emitter to the domain.  If any event handlers called by
-the emitter throw an error, or if the emitter emits an <code>error</code> event, it
-will be routed to the domain&#39;s <code>error</code> event, just like with implicit
+the emitter throw an error, or if the emitter emits an <code>&#39;error&#39;</code> event, it
+will be routed to the domain&#39;s <code>&#39;error&#39;</code> event, just like with implicit
 binding.</p>
-<p>This also works with timers that are returned from <code>setInterval</code> and
-<code>setTimeout</code>.  If their callback function throws, it will be caught by
+<p>This also works with timers that are returned from <a href="timers.html#timers_setinterval_callback_delay_arg"><code>setInterval()</code></a> and
+<a href="timers.html#timers_settimeout_callback_delay_arg"><code>setTimeout()</code></a>.  If their callback function throws, it will be caught by
 the domain &#39;error&#39; handler.</p>
 <p>If the Timer or EventEmitter was already bound to a domain, it is removed
 from that one, and bound to this one instead.</p>
 <h3 id="domain-remove-emitter-">domain.remove(emitter)</h3>
 <ul>
-<li><code>emitter</code> {EventEmitter | Timer} emitter or timer to be removed from the domain</li>
+<li><code>emitter</code> {EventEmitter|Timer} emitter or timer to be removed from the domain</li>
 </ul>
-<p>The opposite of <code>domain.add(emitter)</code>.  Removes domain handling from the
+<p>The opposite of <a href="#domain_domain_add_emitter"><code>domain.add(emitter)</code></a>.  Removes domain handling from the
 specified emitter.</p>
 <h3 id="domain-bind-callback-">domain.bind(callback)</h3>
 <ul>
@@ -366,37 +380,38 @@ specified emitter.</p>
 </ul>
 <p>The returned function will be a wrapper around the supplied callback
 function.  When the returned function is called, any errors that are
-thrown will be routed to the domain&#39;s <code>error</code> event.</p>
+thrown will be routed to the domain&#39;s <code>&#39;error&#39;</code> event.</p>
 <h4 id="example">Example</h4>
-<pre><code><span class="hljs-keyword">var</span> d = domain.create();
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> d = domain.create();
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readSomeFile</span><span class="hljs-params">(filename, cb)</span> </span>{
-  fs.readFile(filename, <span class="hljs-string">'utf8'</span>, d.bind(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er, data)</span> </span>{
+  fs.readFile(filename, <span class="hljs-string">'utf8'</span>, d.bind((er, data) =&gt; {
     <span class="hljs-comment">// if this throws, it will also be passed to the domain</span>
-    <span class="hljs-keyword">return</span> cb(er, data ? <span class="hljs-built_in">JSON</span>.parse(data) : <span class="hljs-literal">null</span>);
+    <span class="hljs-keyword">return</span> cb(er, data ? JSON.parse(data) : <span class="hljs-keyword">null</span>);
   }));
 }
 
-d.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
+d.on(<span class="hljs-string">'error'</span>, (er) =&gt; {
   <span class="hljs-comment">// an error occurred somewhere.</span>
   <span class="hljs-comment">// if we throw it now, it will crash the program</span>
   <span class="hljs-comment">// with the normal line number and stack message.</span>
 });
-</code></pre><h3 id="domain-intercept-callback-">domain.intercept(callback)</h3>
+</code></pre>
+<h3 id="domain-intercept-callback-">domain.intercept(callback)</h3>
 <ul>
 <li><code>callback</code> {Function} The callback function</li>
 <li>return: {Function} The intercepted function</li>
 </ul>
-<p>This method is almost identical to <code>domain.bind(callback)</code>.  However, in
-addition to catching thrown errors, it will also intercept <code>Error</code>
+<p>This method is almost identical to <a href="#domain_domain_bind_callback"><code>domain.bind(callback)</code></a>.  However, in
+addition to catching thrown errors, it will also intercept <a href="errors.html#errors_class_error"><code>Error</code></a>
 objects sent as the first argument to the function.</p>
-<p>In this way, the common <code>if (er) return callback(er);</code> pattern can be replaced
+<p>In this way, the common <code>if (err) return callback(err);</code> pattern can be replaced
 with a single error handler in a single place.</p>
 <h4 id="example">Example</h4>
-<pre><code><span class="hljs-keyword">var</span> d = domain.create();
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> d = domain.create();
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readSomeFile</span><span class="hljs-params">(filename, cb)</span> </span>{
-  fs.readFile(filename, <span class="hljs-string">'utf8'</span>, d.intercept(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
+  fs.readFile(filename, <span class="hljs-string">'utf8'</span>, d.intercept((data) =&gt; {
     <span class="hljs-comment">// note, the first argument is never passed to the</span>
     <span class="hljs-comment">// callback since it is assumed to be the 'Error' argument</span>
     <span class="hljs-comment">// and thus intercepted by the domain.</span>
@@ -405,24 +420,25 @@ with a single error handler in a single place.</p>
     <span class="hljs-comment">// so the error-handling logic can be moved to the 'error'</span>
     <span class="hljs-comment">// event on the domain instead of being repeated throughout</span>
     <span class="hljs-comment">// the program.</span>
-    <span class="hljs-keyword">return</span> cb(<span class="hljs-literal">null</span>, <span class="hljs-built_in">JSON</span>.parse(data));
+    <span class="hljs-keyword">return</span> cb(<span class="hljs-keyword">null</span>, JSON.parse(data));
   }));
 }
 
-d.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(er)</span> </span>{
+d.on(<span class="hljs-string">'error'</span>, (er) =&gt; {
   <span class="hljs-comment">// an error occurred somewhere.</span>
   <span class="hljs-comment">// if we throw it now, it will crash the program</span>
   <span class="hljs-comment">// with the normal line number and stack message.</span>
 });
-</code></pre><h3 id="domain-enter-">domain.enter()</h3>
+</code></pre>
+<h3 id="domain-enter-">domain.enter()</h3>
 <p>The <code>enter</code> method is plumbing used by the <code>run</code>, <code>bind</code>, and <code>intercept</code>
 methods to set the active domain. It sets <code>domain.active</code> and <code>process.domain</code>
 to the domain, and implicitly pushes the domain onto the domain stack managed
-by the domain module (see <code>domain.exit()</code> for details on the domain stack). The
+by the domain module (see <a href="#domain_domain_exit"><code>domain.exit()</code></a> for details on the domain stack). The
 call to <code>enter</code> delimits the beginning of a chain of asynchronous calls and I/O
 operations bound to a domain.</p>
 <p>Calling <code>enter</code> changes only the active domain, and does not alter the domain
-itself. <code>Enter</code> and <code>exit</code> can be called an arbitrary number of times on a
+itself. <code>enter</code> and <code>exit</code> can be called an arbitrary number of times on a
 single domain.</p>
 <p>If the domain on which <code>enter</code> is called has been disposed, <code>enter</code> will return
 without setting the domain.</p>
@@ -435,7 +451,7 @@ of asynchronous calls and I/O operations bound to a domain.</p>
 <p>If there are multiple, nested domains bound to the current execution context,
 <code>exit</code> will exit any domains nested within this domain.</p>
 <p>Calling <code>exit</code> changes only the active domain, and does not alter the domain
-itself. <code>Enter</code> and <code>exit</code> can be called an arbitrary number of times on a
+itself. <code>enter</code> and <code>exit</code> can be called an arbitrary number of times on a
 single domain.</p>
 <p>If the domain on which <code>exit</code> is called has been disposed, <code>exit</code> will return
 without exiting the domain.</p>
@@ -443,7 +459,7 @@ without exiting the domain.</p>
 <pre><code>Stability: <span class="hljs-number">0</span> - Deprecated.  Please recover <span class="hljs-keyword">from</span> failed IO actions
 explicitly via <span class="hljs-keyword">error</span> event handlers <span class="hljs-keyword">set</span> <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> <span class="hljs-keyword">the</span> domain.
 </code></pre><p>Once <code>dispose</code> has been called, the domain will no longer be used by callbacks
-bound into the domain via <code>run</code>, <code>bind</code>, or <code>intercept</code>, and a <code>dispose</code> event
+bound into the domain via <code>run</code>, <code>bind</code>, or <code>intercept</code>, and a <code>&#39;dispose&#39;</code> event
 is emitted.</p>
 
 

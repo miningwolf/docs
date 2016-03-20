@@ -12,6 +12,7 @@ Method | Type
 --- | :--- 
 new __ServerTask__(owner, delay) <br> _Constructs a one-time use ServerTask_ | _constructor_
 new __ServerTask__(owner, delay, continuous) <br> _Constructs either a one-time use or continuous ServerTask_ | _constructor_
+new __ServerTask__(owner, delay, schedule, continuous) <br> _Constructs either a one-time use or continuous ServerTask_ | _constructor_
 final readonly property __Owner__ <br> _Get: Gets the [`TaskOwner`](TaskOwner.md) that owns this task_ | [`TaskOwner`](TaskOwner.md)
 final function __isContinuous__() <br> _Gets whether the ServerTask should continuously run_ | `boolean`
  function __onReset__() <br> _Called when a Continuous Task is reset._ | `void`
@@ -40,6 +41,17 @@ Argument | Type | Description
 --- | --- | --- 
 owner | [`TaskOwner`](TaskOwner.md) | the [`TaskOwner`](TaskOwner.md) of the task, typically a `Plugin`
 delay | `long` | the delay before executing. Set to 0 or less to run within the next Server tick<br> If delay is 0 or less, the task will run with each server tick
+continuous | `boolean` | `true` for continuous; `false` for one-time use
+
+##### <a id='servertask'></a>new __ServerTask__(owner, delay, schedule, continuous) 
+
+_Constructs either a one-time use or continuous ServerTask_
+
+Argument | Type | Description  
+--- | --- | --- 
+owner | [`TaskOwner`](TaskOwner.md) | the [`TaskOwner`](TaskOwner.md) of the task, typically a `Plugin`
+delay | `long` | the delay before executing. Set to 0 or less to run within the next Server tick<br> If delay is 0 or less, the task will run with each server tick
+schedule | `long` | the delay before each execution if the task is continuous If delay is 0 or less, the task will run with each server tick
 continuous | `boolean` | `true` for continuous; `false` for one-time use
 
 ---

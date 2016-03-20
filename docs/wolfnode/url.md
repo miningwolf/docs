@@ -1,9 +1,11 @@
 # URL
 
-    Stability: 3 - Stable
+    Stability: 2 - Stable
 
 This module has utilities for URL resolution and parsing.
 Call `require('url')` to use it.
+
+## URL Parsing
 
 Parsed URL objects have some or all of the following fields, depending on
 whether or not they exist in the URL string. Any parts that are not in the URL
@@ -19,7 +21,7 @@ string will not be in the parsed object. Examples are shown for the URL
 
     Example: `'http:'`
 
-* `slashes`: The protocol requires slashes after the colon
+* `slashes`: The protocol requires slashes after the colon.
 
     Example: true or false
 
@@ -41,7 +43,8 @@ string will not be in the parsed object. Examples are shown for the URL
     Example: `'8080'`
 
 * `pathname`: The path section of the URL, that comes after the host and
-  before the query, including the initial slash if present.
+  before the query, including the initial slash if present. No decoding is
+  performed.
 
     Example: `'/p/a/t/h'`
 
@@ -50,7 +53,7 @@ string will not be in the parsed object. Examples are shown for the URL
 
     Example: `'?query=string'`
 
-* `path`: Concatenation of `pathname` and `search`.
+* `path`: Concatenation of `pathname` and `search`. No decoding is performed.
 
     Example: `'/p/a/t/h?query=string'`
 
@@ -63,20 +66,18 @@ string will not be in the parsed object. Examples are shown for the URL
 
     Example: `'#hash'`
 
+### Escaped Characters
+
+Spaces (`' '`) and the following characters will be automatically escaped in the
+properties of URL objects:
+
+```
+< > " ` \r \n \t { } | \ ^ '
+```
+
+---
+
 The following methods are provided by the URL module:
-
-## url.parse(urlStr[, parseQueryString][, slashesDenoteHost])
-
-Take a URL string, and return an object.
-
-Pass `true` as the second argument to also parse the query string using the
-`querystring` module. If `true` then the `query` property will always be
-assigned an object, and the `search` property will always be a (possibly
-empty) string.  Defaults to `false`.
-
-Pass `true` as the third argument to treat `//foo/bar` as
-`{ host: 'foo', pathname: '/bar' }` rather than
-`{ pathname: '//foo/bar' }`. Defaults to `false`.
 
 ## url.format(urlObj)
 
@@ -85,29 +86,46 @@ Take a parsed URL object, and return a formatted URL string.
 Here's how the formatting process works:
 
 * `href` will be ignored.
+* `path` will be ignored.
 * `protocol` is treated the same with or without the trailing `:` (colon).
   * The protocols `http`, `https`, `ftp`, `gopher`, `file` will be
-    postfixed with `://` (colon-slash-slash).
+    postfixed with `://` (colon-slash-slash) as long as `host`/`hostname` are present.
   * All other protocols `mailto`, `xmpp`, `aim`, `sftp`, `foo`, etc will
-    be postfixed with `:` (colon)
+    be postfixed with `:` (colon).
 * `slashes` set to `true` if the protocol requires `://` (colon-slash-slash)
   * Only needs to be set for protocols not previously listed as requiring
-    slashes, such as `mongodb://localhost:8000/`
+    slashes, such as `mongodb://localhost:8000/`, or if `host`/`hostname` are absent.
 * `auth` will be used if present.
 * `hostname` will only be used if `host` is absent.
 * `port` will only be used if `host` is absent.
-* `host` will be used in place of `hostname` and `port`
+* `host` will be used in place of `hostname` and `port`.
 * `pathname` is treated the same with or without the leading `/` (slash).
-* `search` will be used in place of `query`.
-  * It is treated the same with or without the leading `?` (question mark)
 * `query` (object; see `querystring`) will only be used if `search` is absent.
+* `search` will be used in place of `query`.
+  * It is treated the same with or without the leading `?` (question mark).
 * `hash` is treated the same with or without the leading `#` (pound sign, anchor).
+
+## url.parse(urlStr[, parseQueryString][, slashesDenoteHost])
+
+Take a URL string, and return an object.
+
+Pass `true` as the second argument to also parse the query string using the
+`querystring` module. If `true` then the `query` property will always be
+assigned an object, and the `search` property will always be a (possibly
+empty) string. If `false` then the `query` property will not be parsed or
+decoded. Defaults to `false`.
+
+Pass `true` as the third argument to treat `//foo/bar` as
+`{ host: 'foo', pathname: '/bar' }` rather than
+`{ pathname: '//foo/bar' }`. Defaults to `false`.
 
 ## url.resolve(from, to)
 
 Take a base URL, and a href URL, and resolve them as a browser would for
 an anchor tag.  Examples:
 
-    url.resolve('/one/two/three', 'four')         // '/one/two/four'
-    url.resolve('http://example.com/', '/one')    // 'http://example.com/one'
-    url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
+```js
+url.resolve('/one/two/three', 'four')         // '/one/two/four'
+url.resolve('http://example.com/', '/one')    // 'http://example.com/one'
+url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
+```

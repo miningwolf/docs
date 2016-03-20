@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WolfScript API v8</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../assets/css/docs.css" rel="stylesheet" />
+  <link href="../assets/css/github.css" rel="stylesheet" />
+  <link href="../assets/fonts/foundation-icons.css" rel="stylesheet" />
+   <script src="../assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <body class="antialiased hide-extras">
+    <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/web/index.html"><i class="fi-paw"></i> WolfScript.io</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+         <li class='divider'></li>
+<li><a href='../index.html' class=''>Docs</a></li>
+<li class='divider'></li>
+<li><a href='../wolfbuk/io/wolfscript/0.html' class=''>WolfBuk API</a></li>
+<li class='divider'></li>
+<li><a href='../wolfcanary/io/wolfscript/0.html' class=''>WolfCanary API</a></li>
+<li class='divider'></li>
+<li><a href='../wolfnode/globals.html' class=''>WolfNode</a></li>
+
+       <li class="divider"></li>
+       <li><a href='http://github.com/miningwolf/wolfscript ' class=''> <i class="fi-social-github"></i> Github</a></li>
+       <li class="divider"></li>
+       <li class="has-form">
+       <a href="../GettingStarted.html " class="small button">Getting Started</a>
+       </li>
+    </ul>
+  </section>
+</nav>
+<ul class="breadcrumbs">
+<li><a href='../index.html'>Docs </a></li>
+ <li><a href='../wolfnode/globals.html'>wolfnode</a></li>
+<li class='current'><a href='#'>v8</a></li>
+
+</ul>
+
+      <div class="row">
+        <div class="large-3 medium-4 columns">
+          <div class="hide-for-small">
+            <div class="sidebar">
+              <nav>
+                <ul class="side-nav accordion" data-accordion>
+                  <li class='heading'><a href='../wolfnode/globals.html' class=''>WolfNode</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/buffer.html' class=''>Core</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li><a href='../wolfnode/errors.html'>errors</a></li>
+<li class='active'><a href='../wolfnode/v8.html'>v8</a></li>
+<li class='divider'></li>
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="large-9 medium-8 columns">
+          <section class="doc-content">
+            <h1 id="v8">V8</h1>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
+</code></pre><p>This module exposes events and interfaces specific to the version of <a href="https://developers.google.com/v8/" target="_blank" rel="nofollow">V8</a>
+built with Node.js.  These interfaces are subject to change by upstream and are
+therefore not covered under the stability index.</p>
+<h2 id="getheapstatistics-">getHeapStatistics()</h2>
+<p>Returns an object with the following properties</p>
+<pre><code class="lang-js">{
+  <span class="hljs-attribute">total_heap_size</span>: <span class="hljs-number">7326976</span>,
+  <span class="hljs-attribute">total_heap_size_executable</span>: <span class="hljs-number">4194304</span>,
+  <span class="hljs-attribute">total_physical_size</span>: <span class="hljs-number">7326976</span>,
+  <span class="hljs-attribute">total_available_size</span>: <span class="hljs-number">1152656</span>,
+  <span class="hljs-attribute">used_heap_size</span>: <span class="hljs-number">3476208</span>,
+  <span class="hljs-attribute">heap_size_limit</span>: <span class="hljs-number">1535115264</span>
+}
+</code></pre>
+<h2 id="getheapspacestatistics-">getHeapSpaceStatistics()</h2>
+<p>Returns statistics about the V8 heap spaces, i.e. the segments which make up
+the V8 heap. Order of heap spaces nor availability of a heap space can be
+guaranteed as the statistics are provided via the V8 <code>GetHeapSpaceStatistics</code>
+function.</p>
+<p>Example result:</p>
+<pre><code>[
+  {
+    "<span class="hljs-attribute">space_name</span>": <span class="hljs-value"><span class="hljs-string">"new_space"</span></span>,
+    "<span class="hljs-attribute">space_size</span>": <span class="hljs-value"><span class="hljs-number">2063872</span></span>,
+    "<span class="hljs-attribute">space_used_size</span>": <span class="hljs-value"><span class="hljs-number">951112</span></span>,
+    "<span class="hljs-attribute">space_available_size</span>": <span class="hljs-value"><span class="hljs-number">80824</span></span>,
+    "<span class="hljs-attribute">physical_space_size</span>": <span class="hljs-value"><span class="hljs-number">2063872</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">space_name</span>": <span class="hljs-value"><span class="hljs-string">"old_space"</span></span>,
+    "<span class="hljs-attribute">space_size</span>": <span class="hljs-value"><span class="hljs-number">3090560</span></span>,
+    "<span class="hljs-attribute">space_used_size</span>": <span class="hljs-value"><span class="hljs-number">2493792</span></span>,
+    "<span class="hljs-attribute">space_available_size</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">physical_space_size</span>": <span class="hljs-value"><span class="hljs-number">3090560</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">space_name</span>": <span class="hljs-value"><span class="hljs-string">"code_space"</span></span>,
+    "<span class="hljs-attribute">space_size</span>": <span class="hljs-value"><span class="hljs-number">1260160</span></span>,
+    "<span class="hljs-attribute">space_used_size</span>": <span class="hljs-value"><span class="hljs-number">644256</span></span>,
+    "<span class="hljs-attribute">space_available_size</span>": <span class="hljs-value"><span class="hljs-number">960</span></span>,
+    "<span class="hljs-attribute">physical_space_size</span>": <span class="hljs-value"><span class="hljs-number">1260160</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">space_name</span>": <span class="hljs-value"><span class="hljs-string">"map_space"</span></span>,
+    "<span class="hljs-attribute">space_size</span>": <span class="hljs-value"><span class="hljs-number">1094160</span></span>,
+    "<span class="hljs-attribute">space_used_size</span>": <span class="hljs-value"><span class="hljs-number">201608</span></span>,
+    "<span class="hljs-attribute">space_available_size</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">physical_space_size</span>": <span class="hljs-value"><span class="hljs-number">1094160</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">space_name</span>": <span class="hljs-value"><span class="hljs-string">"large_object_space"</span></span>,
+    "<span class="hljs-attribute">space_size</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">space_used_size</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">space_available_size</span>": <span class="hljs-value"><span class="hljs-number">1490980608</span></span>,
+    "<span class="hljs-attribute">physical_space_size</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>}
+]
+</code></pre><h2 id="setflagsfromstring-string-">setFlagsFromString(string)</h2>
+<p>Set additional V8 command line flags.  Use with care; changing settings
+after the VM has started may result in unpredictable behavior, including
+crashes and data loss.  Or it may simply do nothing.</p>
+<p>The V8 options available for a version of Node.js may be determined by running
+<code>node --v8-options</code>.  An unofficial, community-maintained list of options
+and their effects is available <a href="https://github.com/thlorenz/v8-flags/blob/master/flags-0.11.html" target="_blank" rel="nofollow">here</a>.</p>
+<p>Usage:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Print GC events to stdout for one minute.</span>
+<span class="hljs-keyword">const</span> v8 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'v8'</span>);
+v8.setFlagsFromString(<span class="hljs-string">'--trace_gc'</span>);
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ v8.setFlagsFromString(<span class="hljs-string">'--notrace_gc'</span>); }, <span class="hljs-number">60e3</span>);
+</code></pre>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/fastclick.js"></script>
+    <script src="../assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>

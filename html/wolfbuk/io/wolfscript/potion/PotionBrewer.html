@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -94,6 +98,7 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/Potion.html'>Potion</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/potion/PotionBrewer.html'>PotionBrewer</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionData.html'>PotionData</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffect.html'>PotionEffect</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectType.html'>PotionEffectType</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
@@ -133,6 +138,10 @@
 <tr>
 <td> function <strong>createEffect</strong>(potion, duration, amplifier) <br> <em>Creates a <a href="PotionEffect.html"><code>PotionEffect</code></a> from the given <a href="PotionEffectType.html"><code>PotionEffectType</code></a>,</em></td>
 <td style="text-align:left"><a href="PotionEffect.html"><code>PotionEffect</code></a></td>
+</tr>
+<tr>
+<td> function <strong>getEffects</strong>(type, upgraded, extended) <br> <em>Returns a collection of <a href="PotionEffect.html"><code>PotionEffect</code></a> that would be applied from</em></td>
+<td style="text-align:left"><code>Collection&lt;PotionEffect&gt;</code></td>
 </tr>
 </tbody>
 </table>
@@ -180,8 +189,50 @@
 </tr>
 </tbody>
 </table>
+<h5 id="-a-id-geteffects-a-public-function-__geteffects__-type-upgraded-extended-"><a id='geteffects'></a>public  function <strong>getEffects</strong>(type, upgraded, extended)</h5>
+<p><em>Returns a collection of <a href="PotionEffect.html"><code>PotionEffect</code></a> that would be applied from a potion with the given type.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="PotionType.html"><code>PotionType</code></a></td>
+<td>The type of the potion</td>
+</tr>
+<tr>
+<td>upgraded</td>
+<td><code>boolean</code></td>
+<td>upgraded argument</td>
+</tr>
+<tr>
+<td>extended</td>
+<td><code>boolean</code></td>
+<td>extended argument</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Collection&lt;PotionEffect&gt;</code></td>
+<td>The list of effects</td>
+</tr>
+</tbody>
+</table>
 <h5 id="-a-id-geteffectsfromdamage-a-public-function-__geteffectsfromdamage__-damage-"><a id='geteffectsfromdamage'></a>public  function <strong>getEffectsFromDamage</strong>(damage)</h5>
-<p><em>Deprecated: Magic value</em></p>
+<p><em>Deprecated: Non-Functional</em></p>
 <p><em>Returns a collection of <a href="PotionEffect.html"><code>PotionEffect</code></a> that would be applied from a potion with the given data value.</em></p>
 <table>
 <thead>

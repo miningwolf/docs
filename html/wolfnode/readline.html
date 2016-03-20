@@ -71,11 +71,12 @@
 <li><a href='../wolfnode/punycode.html'>punycode</a></li>
 <li class='active'><a href='../wolfnode/readline.html'>readline</a></li>
 <li><a href='../wolfnode/repl.html'>repl</a></li>
-<li><a href='../wolfnode/smalloc.html'>smalloc</a></li>
 <li><a href='../wolfnode/string_decoder.html'>string_decoder</a></li>
 <li><a href='../wolfnode/tty.html'>tty</a></li>
 <li><a href='../wolfnode/vm.html'>vm</a></li>
 <li><a href='../wolfnode/zlib.html'>zlib</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
 <li class='divider'></li>
 
                   </ul>
@@ -86,81 +87,36 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="readline">Readline</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Unstable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><p>To use this module, do <code>require(&#39;readline&#39;)</code>. Readline allows reading of a
-stream (such as <code>process.stdin</code>) on a line-by-line basis.</p>
-<p>Note that once you&#39;ve invoked this module, your node program will not
+stream (such as <a href="process.html#process_process_stdin"><code>process.stdin</code></a>) on a line-by-line basis.</p>
+<p>Note that once you&#39;ve invoked this module, your Node.js program will not
 terminate until you&#39;ve closed the interface. Here&#39;s how to allow your
 program to gracefully exit:</p>
-<pre><code><span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>);
 
-<span class="hljs-keyword">var</span> rl = readline.createInterface({
+<span class="hljs-keyword">const</span> rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question(<span class="hljs-string">"What do you think of node.js? "</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> </span>{
-  <span class="hljs-comment">// TODO: Log the answer in a database</span>
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Thank you for your valuable feedback:"</span>, answer);
+rl.question(<span class="hljs-string">'What do you think of Node.js? '</span>, (answer) =&gt; {
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Log the answer in a database</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Thank you for your valuable feedback:'</span>, answer);
 
   rl.close();
 });
-</code></pre><h2 id="readline-createinterface-options-">readline.createInterface(options)</h2>
-<p>Creates a readline <code>Interface</code> instance. Accepts an &quot;options&quot; Object that takes
-the following values:</p>
-<ul>
-<li><p><code>input</code> - the readable stream to listen to (Required).</p>
-</li>
-<li><p><code>output</code> - the writable stream to write readline data to (Optional).</p>
-</li>
-<li><p><code>completer</code> - an optional function that is used for Tab autocompletion. See
-below for an example of using this.</p>
-</li>
-<li><p><code>terminal</code> - pass <code>true</code> if the <code>input</code> and <code>output</code> streams should be
-treated like a TTY, and have ANSI/VT100 escape codes written to it.
-Defaults to checking <code>isTTY</code> on the <code>output</code> stream upon instantiation.</p>
-</li>
-</ul>
-<p>The <code>completer</code> function is given the current line entered by the user, and
-is supposed to return an Array with 2 entries:</p>
-<ol>
-<li><p>An Array with matching entries for the completion.</p>
-</li>
-<li><p>The substring that was used for the matching.</p>
-</li>
-</ol>
-<p>Which ends up looking something like:
-<code>[[substr1, substr2, ...], originalsubstring]</code>.</p>
-<p>Example:</p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completer</span><span class="hljs-params">(line)</span> </span>{
-  <span class="hljs-keyword">var</span> completions = <span class="hljs-string">'.help .error .exit .quit .q'</span>.split(<span class="hljs-string">' '</span>)
-  <span class="hljs-keyword">var</span> hits = completions.filter(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(c)</span> </span>{ <span class="hljs-keyword">return</span> c.indexOf(line) == <span class="hljs-number">0</span> })
-  <span class="hljs-comment">// show all completions if none found</span>
-  <span class="hljs-keyword">return</span> [hits.length ? hits : completions, line]
-}
-</code></pre><p>Also <code>completer</code> can be run in async mode if it accepts two arguments:</p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completer</span><span class="hljs-params">(linePartial, callback)</span> </span>{
-  <span class="hljs-keyword">callback</span>(<span class="hljs-literal">null</span>, [[<span class="hljs-string">'123'</span>], linePartial]);
-}
-</code></pre><p><code>createInterface</code> is commonly used with <code>process.stdin</code> and
-<code>process.stdout</code> in order to accept user input:</p>
-<pre><code><span class="hljs-keyword">var</span> readline = require(<span class="hljs-string">'readline'</span>);
-<span class="hljs-keyword">var</span> rl = readline.createInterface({
-  input: process.<span class="hljs-keyword">stdin</span>,
-  output: process.<span class="hljs-keyword">stdout</span>
-});
-</code></pre><p>Once you have a readline instance, you most commonly listen for the
-<code>&quot;line&quot;</code> event.</p>
-<p>If <code>terminal</code> is <code>true</code> for this instance then the <code>output</code> stream will get
-the best compatibility if it defines an <code>output.columns</code> property, and fires
-a <code>&quot;resize&quot;</code> event on the <code>output</code> if/when the columns ever change
-(<code>process.stdout</code> does this automatically when it is a TTY).</p>
+</code></pre>
 <h2 id="class-interface">Class: Interface</h2>
 <p>The class that represents a readline interface with an input and output
 stream.</p>
-<h3 id="rl-setprompt-prompt-">rl.setPrompt(prompt)</h3>
-<p>Sets the prompt, for example when you run <code>node</code> on the command line, you see
-<code>&gt;</code>, which is node&#39;s prompt.</p>
+<h3 id="rl-close-">rl.close()</h3>
+<p>Closes the <code>Interface</code> instance, relinquishing control on the <code>input</code> and
+<code>output</code> streams. The <code>&#39;close&#39;</code> event will also be emitted.</p>
+<h3 id="rl-pause-">rl.pause()</h3>
+<p>Pauses the readline <code>input</code> stream, allowing it to be resumed later if needed.</p>
+<p>Note that this doesn&#39;t immediately pause the stream of events. Several events may
+be emitted after calling <code>pause</code>, including <code>line</code>.</p>
 <h3 id="rl-prompt-preservecursor-">rl.prompt([preserveCursor])</h3>
 <p>Readies readline for input from the user, putting the current <code>setPrompt</code>
 options on a new line, giving the user a new spot to write. Set <code>preserveCursor</code>
@@ -178,87 +134,63 @@ it has been paused.</p>
 <p>If <code>output</code> is set to <code>null</code> or <code>undefined</code> when calling <code>createInterface</code>,
 nothing is displayed.</p>
 <p>Example usage:</p>
-<pre><code><span class="hljs-keyword">interface</span>.question(<span class="hljs-string">'What is your favorite food?'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> <span class="hljs-comment">{
-  console.log('Oh, so your favorite food is ' + answer);
-}</span>);</span>
-</code></pre><h3 id="rl-pause-">rl.pause()</h3>
-<p>Pauses the readline <code>input</code> stream, allowing it to be resumed later if needed.</p>
-<p>Note that this doesn&#39;t immediately pause the stream of events. Several events may be emitted after calling <code>pause</code>, including <code>line</code>.</p>
+<pre><code class="lang-js">rl.question(<span class="hljs-string">'What is your favorite food?'</span>, <span class="hljs-function"><span class="hljs-params">(answer)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(`<span class="javascript">Oh, so your favorite food is ${answer}</span>`);
+});
+</code></pre>
 <h3 id="rl-resume-">rl.resume()</h3>
 <p>Resumes the readline <code>input</code> stream.</p>
-<h3 id="rl-close-">rl.close()</h3>
-<p>Closes the <code>Interface</code> instance, relinquishing control on the <code>input</code> and
-<code>output</code> streams. The &quot;close&quot; event will also be emitted.</p>
+<h3 id="rl-setprompt-prompt-">rl.setPrompt(prompt)</h3>
+<p>Sets the prompt, for example when you run <code>node</code> on the command line, you see
+<code>&gt;</code>, which is Node.js&#39;s prompt.</p>
 <h3 id="rl-write-data-key-">rl.write(data[, key])</h3>
 <p>Writes <code>data</code> to <code>output</code> stream, unless <code>output</code> is set to <code>null</code> or
 <code>undefined</code> when calling <code>createInterface</code>. <code>key</code> is an object literal to
 represent a key sequence; available if the terminal is a TTY.</p>
 <p>This will also resume the <code>input</code> stream if it has been paused.</p>
 <p>Example:</p>
-<pre><code>rl.<span class="hljs-keyword">write</span>(<span class="hljs-string">'Delete me!'</span>);
+<pre><code class="lang-js">rl.<span class="hljs-keyword">write</span>(<span class="hljs-string">'Delete me!'</span>);
 <span class="hljs-comment">// Simulate ctrl+u to delete the line written previously</span>
 rl.<span class="hljs-keyword">write</span>(<span class="hljs-keyword">null</span>, {ctrl: <span class="hljs-keyword">true</span>, name: <span class="hljs-string">'u'</span>});
-</code></pre><h2 id="events">Events</h2>
-<h3 id="event-line-">Event: &#39;line&#39;</h3>
-<p><code>function (line) {}</code></p>
-<p>Emitted whenever the <code>input</code> stream receives a <code>\n</code>, usually received when the
-user hits enter, or return. This is a good hook to listen for user input.</p>
-<p>Example of listening for <code>line</code>:</p>
-<pre><code>rl.<span class="hljs-keyword">on</span>(<span class="hljs-string">'line'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(cmd)</span> <span class="hljs-comment">{
-  console.log('You just typed: '+cmd);
-}</span>);</span>
-</code></pre><h3 id="event-pause-">Event: &#39;pause&#39;</h3>
-<p><code>function () {}</code></p>
-<p>Emitted whenever the <code>input</code> stream is paused.</p>
-<p>Also emitted whenever the <code>input</code> stream is not paused and receives the
-<code>SIGCONT</code> event. (See events <code>SIGTSTP</code> and <code>SIGCONT</code>)</p>
-<p>Example of listening for <code>pause</code>:</p>
-<pre><code>rl.on(<span class="hljs-string">'pause'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Readline paused.'</span>);
-});
-</code></pre><h3 id="event-resume-">Event: &#39;resume&#39;</h3>
-<p><code>function () {}</code></p>
-<p>Emitted whenever the <code>input</code> stream is resumed.</p>
-<p>Example of listening for <code>resume</code>:</p>
-<pre><code>rl.on(<span class="hljs-string">'resume'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Readline resumed.'</span>);
-});
-</code></pre><h3 id="event-close-">Event: &#39;close&#39;</h3>
+</code></pre>
+<h2 id="events">Events</h2>
+<h3 id="event-close-">Event: &#39;close&#39;</h3>
 <p><code>function () {}</code></p>
 <p>Emitted when <code>close()</code> is called.</p>
-<p>Also emitted when the <code>input</code> stream receives its &quot;end&quot; event. The <code>Interface</code>
+<p>Also emitted when the <code>input</code> stream receives its <code>&#39;end&#39;</code> event. The <code>Interface</code>
 instance should be considered &quot;finished&quot; once this is emitted. For example, when
 the <code>input</code> stream receives <code>^D</code>, respectively known as <code>EOT</code>.</p>
 <p>This event is also called if there is no <code>SIGINT</code> event listener present when
 the <code>input</code> stream receives a <code>^C</code>, respectively known as <code>SIGINT</code>.</p>
-<h3 id="event-sigint-">Event: &#39;SIGINT&#39;</h3>
-<p><code>function () {}</code></p>
-<p>Emitted whenever the <code>input</code> stream receives a <code>^C</code>, respectively known as
-<code>SIGINT</code>. If there is no <code>SIGINT</code> event listener present when the <code>input</code>
-stream receives a <code>SIGINT</code>, <code>pause</code> will be triggered.</p>
-<p>Example of listening for <code>SIGINT</code>:</p>
-<pre><code>rl.on(<span class="hljs-string">'SIGINT'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  rl.question(<span class="hljs-string">'Are you sure you want to exit?'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> </span>{
-    <span class="hljs-keyword">if</span> (answer.match(<span class="hljs-regexp">/^y(es)?$/i</span>)) rl.pause();
-  });
+<h3 id="event-line-">Event: &#39;line&#39;</h3>
+<p><code>function (line) {}</code></p>
+<p>Emitted whenever the <code>input</code> stream receives an end of line (<code>\n</code>, <code>\r</code>, or
+<code>\r\n</code>), usually received when the user hits enter, or return. This is a good
+hook to listen for user input.</p>
+<p>Example of listening for <code>&#39;line&#39;</code>:</p>
+<pre><code class="lang-js">rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'line'</span>, <span class="hljs-function"><span class="hljs-params">(cmd)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(`<span class="javascript">You just typed: ${cmd}</span>`);
 });
-</code></pre><h3 id="event-sigtstp-">Event: &#39;SIGTSTP&#39;</h3>
+</code></pre>
+<h3 id="event-pause-">Event: &#39;pause&#39;</h3>
 <p><code>function () {}</code></p>
-<p><strong>This does not work on Windows.</strong></p>
-<p>Emitted whenever the <code>input</code> stream receives a <code>^Z</code>, respectively known as
-<code>SIGTSTP</code>. If there is no <code>SIGTSTP</code> event listener present when the <code>input</code>
-stream receives a <code>SIGTSTP</code>, the program will be sent to the background.</p>
-<p>When the program is resumed with <code>fg</code>, the <code>pause</code> and <code>SIGCONT</code> events will be
-emitted. You can use either to resume the stream.</p>
-<p>The <code>pause</code> and <code>SIGCONT</code> events will not be triggered if the stream was paused
-before the program was sent to the background.</p>
-<p>Example of listening for <code>SIGTSTP</code>:</p>
-<pre><code>rl.on(<span class="hljs-string">'SIGTSTP'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-comment">// This will override SIGTSTP and prevent the program from going to the</span>
-  <span class="hljs-comment">// background.</span>
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Caught SIGTSTP.'</span>);
+<p>Emitted whenever the <code>input</code> stream is paused.</p>
+<p>Also emitted whenever the <code>input</code> stream is not paused and receives the
+<code>SIGCONT</code> event. (See events <code>SIGTSTP</code> and <code>SIGCONT</code>)</p>
+<p>Example of listening for <code>&#39;pause&#39;</code>:</p>
+<pre><code class="lang-js">rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'pause'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Readline paused.'</span>);
 });
-</code></pre><h3 id="event-sigcont-">Event: &#39;SIGCONT&#39;</h3>
+</code></pre>
+<h3 id="event-resume-">Event: &#39;resume&#39;</h3>
+<p><code>function () {}</code></p>
+<p>Emitted whenever the <code>input</code> stream is resumed.</p>
+<p>Example of listening for <code>&#39;resume&#39;</code>:</p>
+<pre><code class="lang-js">rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'resume'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Readline resumed.'</span>);
+});
+</code></pre>
+<h3 id="event-sigcont-">Event: &#39;SIGCONT&#39;</h3>
 <p><code>function () {}</code></p>
 <p><strong>This does not work on Windows.</strong></p>
 <p>Emitted whenever the <code>input</code> stream is sent to the background with <code>^Z</code>,
@@ -266,37 +198,78 @@ respectively known as <code>SIGTSTP</code>, and then continued with <code>fg(1)<
 only emits if the stream was not paused before sending the program to the
 background.</p>
 <p>Example of listening for <code>SIGCONT</code>:</p>
-<pre><code>rl.on(<span class="hljs-string">'SIGCONT'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-comment">// `prompt` will automatically resume the stream</span>
+<pre><code class="lang-js">rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'SIGCONT'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-regexp">//</span> `<span class="javascript">prompt</span>` will automatically resume the stream
   rl.prompt();
 });
-</code></pre><h2 id="example-tiny-cli">Example: Tiny CLI</h2>
+</code></pre>
+<h3 id="event-sigint-">Event: &#39;SIGINT&#39;</h3>
+<p><code>function () {}</code></p>
+<p>Emitted whenever the <code>input</code> stream receives a <code>^C</code>, respectively known as
+<code>SIGINT</code>. If there is no <code>SIGINT</code> event listener present when the <code>input</code>
+stream receives a <code>SIGINT</code>, <code>pause</code> will be triggered.</p>
+<p>Example of listening for <code>SIGINT</code>:</p>
+<pre><code class="lang-js">rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'SIGINT'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  rl.question(<span class="hljs-string">'Are you sure you want to exit?'</span>, <span class="hljs-function"><span class="hljs-params">(answer)</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (answer.match(<span class="hljs-regexp">/^y(es)?$/i</span>)) rl.pause();
+  });
+});
+</code></pre>
+<h3 id="event-sigtstp-">Event: &#39;SIGTSTP&#39;</h3>
+<p><code>function () {}</code></p>
+<p><strong>This does not work on Windows.</strong></p>
+<p>Emitted whenever the <code>input</code> stream receives a <code>^Z</code>, respectively known as
+<code>SIGTSTP</code>. If there is no <code>SIGTSTP</code> event listener present when the <code>input</code>
+stream receives a <code>SIGTSTP</code>, the program will be sent to the background.</p>
+<p>When the program is resumed with <code>fg</code>, the <code>&#39;pause&#39;</code> and <code>SIGCONT</code> events will be
+emitted. You can use either to resume the stream.</p>
+<p>The <code>&#39;pause&#39;</code> and <code>SIGCONT</code> events will not be triggered if the stream was paused
+before the program was sent to the background.</p>
+<p>Example of listening for <code>SIGTSTP</code>:</p>
+<pre><code class="lang-js">rl<span class="hljs-built_in">.</span><span class="hljs-keyword">on</span>(<span class="hljs-string">'SIGTSTP'</span>, () =&gt; {
+  <span class="hljs-comment">// This will override SIGTSTP and prevent the program from going to the</span>
+  <span class="hljs-comment">// background.</span>
+  console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(<span class="hljs-string">'Caught SIGTSTP.'</span>);
+});
+</code></pre>
+<h2 id="example-tiny-cli">Example: Tiny CLI</h2>
 <p>Here&#39;s an example of how to use all these together to craft a tiny command
 line interface:</p>
-<pre><code><span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>),
-    rl = readline.createInterface(process.stdin, process.stdout);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> readline = require(<span class="hljs-string">'readline'</span>);
+<span class="hljs-keyword">const</span> rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.setPrompt(<span class="hljs-string">'OHAI&gt; '</span>);
 rl.prompt();
 
-rl.on(<span class="hljs-string">'line'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(line)</span> </span>{
-  <span class="hljs-keyword">switch</span>(line.trim()) {
+rl.on(<span class="hljs-string">'line'</span>, (<span class="hljs-built_in">line</span>) =&gt; {
+  <span class="hljs-keyword">switch</span>(<span class="hljs-built_in">line</span>.<span class="hljs-built_in">trim</span>()) {
     <span class="hljs-keyword">case</span> <span class="hljs-string">'hello'</span>:
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'world!'</span>);
+      console.<span class="hljs-built_in">log</span>(<span class="hljs-string">'world!'</span>);
       <span class="hljs-keyword">break</span>;
     <span class="hljs-keyword">default</span>:
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Say what? I might have heard `'</span> + line.trim() + <span class="hljs-string">'`'</span>);
+      console.<span class="hljs-built_in">log</span>(<span class="hljs-string">'Say what? I might have heard `'</span> + <span class="hljs-built_in">line</span>.<span class="hljs-built_in">trim</span>() + <span class="hljs-string">'`'</span>);
       <span class="hljs-keyword">break</span>;
   }
   rl.prompt();
-}).on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Have a great day!'</span>);
-  process.exit(<span class="hljs-number">0</span>);
+}).on(<span class="hljs-string">'close'</span>, () =&gt; {
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">'Have a great day!'</span>);
+  process.<span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
 });
-</code></pre><h2 id="readline-cursorto-stream-x-y-">readline.cursorTo(stream, x, y)</h2>
-<p>Move cursor to the specified position in a given TTY stream.</p>
-<h2 id="readline-movecursor-stream-dx-dy-">readline.moveCursor(stream, dx, dy)</h2>
-<p>Move cursor relative to it&#39;s current position in a given TTY stream.</p>
+</code></pre>
+<h2 id="example-read-file-stream-line-by-line">Example: Read File Stream Line-by-Line</h2>
+<p>A common case for <code>readline</code>&#39;s <code>input</code> option is to pass a filesystem readable
+stream to it. This is how one could craft line-by-line parsing of a file:</p>
+<pre><code class="lang-js">const readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>);
+const fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+
+const rl = readline.createInterface({
+  <span class="hljs-attribute">input</span>: fs.createReadStream(<span class="hljs-string">'sample.txt'</span>)
+});
+
+rl.<span class="hljs-literal">on</span>(<span class="hljs-string">'line'</span>, <span class="hljs-function"><span class="hljs-params">(line)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Line from file:'</span>, line);
+});
+</code></pre>
 <h2 id="readline-clearline-stream-dir-">readline.clearLine(stream, dir)</h2>
 <p>Clears current line of given TTY stream in a specified direction.
 <code>dir</code> should have one of following values:</p>
@@ -307,6 +280,65 @@ rl.on(<span class="hljs-string">'line'</span>, <span class="hljs-function"><span
 </ul>
 <h2 id="readline-clearscreendown-stream-">readline.clearScreenDown(stream)</h2>
 <p>Clears the screen from the current position of the cursor down.</p>
+<h2 id="readline-createinterface-options-">readline.createInterface(options)</h2>
+<p>Creates a readline <code>Interface</code> instance. Accepts an <code>options</code> Object that takes
+the following values:</p>
+<ul>
+<li><p><code>input</code> - the readable stream to listen to (Required).</p>
+</li>
+<li><p><code>output</code> - the writable stream to write readline data to (Optional).</p>
+</li>
+<li><p><code>completer</code> - an optional function that is used for Tab autocompletion. See
+below for an example of using this.</p>
+</li>
+<li><p><code>terminal</code> - pass <code>true</code> if the <code>input</code> and <code>output</code> streams should be
+treated like a TTY, and have ANSI/VT100 escape codes written to it.
+Defaults to checking <code>isTTY</code> on the <code>output</code> stream upon instantiation.</p>
+</li>
+<li><p><code>historySize</code> - maximum number of history lines retained. Defaults to <code>30</code>.</p>
+</li>
+</ul>
+<p>The <code>completer</code> function is given the current line entered by the user, and
+is supposed to return an Array with 2 entries:</p>
+<ol>
+<li><p>An Array with matching entries for the completion.</p>
+</li>
+<li><p>The substring that was used for the matching.</p>
+</li>
+</ol>
+<p>Which ends up looking something like:
+<code>[[substr1, substr2, ...], originalsubstring]</code>.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completer</span>(<span class="hljs-title">line</span>) {</span>
+  var completions = <span class="hljs-string">'.help .error .exit .quit .q'</span>.<span class="hljs-built_in">split</span>(<span class="hljs-string">' '</span>)
+  var hits = completions.<span class="hljs-built_in">filter</span>((c) =&gt; { <span class="hljs-constant">return</span> c.indexOf(<span class="hljs-built_in">line</span>) == <span class="hljs-number">0</span> })
+ <span class="hljs-comment"> // show all completions if none found</span>
+  <span class="hljs-constant">return</span> [hits.<span class="hljs-built_in">length</span> ? hits : completions, <span class="hljs-built_in">line</span>]
+}
+</code></pre>
+<p>Also <code>completer</code> can be run in async mode if it accepts two arguments:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completer</span><span class="hljs-params">(linePartial, callback)</span> </span>{
+  <span class="hljs-keyword">callback</span>(<span class="hljs-literal">null</span>, [[<span class="hljs-string">'123'</span>], linePartial]);
+}
+</code></pre>
+<p><code>createInterface</code> is commonly used with <a href="process.html#process_process_stdin"><code>process.stdin</code></a> and
+<a href="process.html#process_process_stdout"><code>process.stdout</code></a> in order to accept user input:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> readline = require(<span class="hljs-string">'readline'</span>);
+<span class="hljs-keyword">const</span> rl = readline.createInterface({
+  input: process.<span class="hljs-keyword">stdin</span>,
+  output: process.<span class="hljs-keyword">stdout</span>
+});
+</code></pre>
+<p>Once you have a readline instance, you most commonly listen for the
+<code>&#39;line&#39;</code> event.</p>
+<p>If <code>terminal</code> is <code>true</code> for this instance then the <code>output</code> stream will get
+the best compatibility if it defines an <code>output.columns</code> property, and fires
+a <code>&#39;resize&#39;</code> event on the <code>output</code> if/when the columns ever change
+(<a href="process.html#process_process_stdout"><code>process.stdout</code></a> does this automatically when it is a TTY).</p>
+<h2 id="readline-cursorto-stream-x-y-">readline.cursorTo(stream, x, y)</h2>
+<p>Move cursor to the specified position in a given TTY stream.</p>
+<h2 id="readline-movecursor-stream-dx-dy-">readline.moveCursor(stream, dx, dy)</h2>
+<p>Move cursor relative to it&#39;s current position in a given TTY stream.</p>
 
 
           </section>

@@ -51,6 +51,10 @@ static final var __WITHER__ <br> _Deals damage to an entity over time and gives 
 static final var __HEALTH__ <br> _Increases the maximum health of an entity._ | [`PotionEffectType`](PotionEffectType.md)
 static final var __ABSORPTION__ <br> _Increases the maximum health of an entity with health that cannot be_ | [`PotionEffectType`](PotionEffectType.md)
 static final var __SATURATION__ <br> _Increases the food level of an entity each tick._ | [`PotionEffectType`](PotionEffectType.md)
+static final var __GLOWING__ <br> _Outlines the entity so that it can be seen from afar._ | [`PotionEffectType`](PotionEffectType.md)
+static final var __LEVITATION__ <br> _Causes the entity to float into the air._ | [`PotionEffectType`](PotionEffectType.md)
+static final var __LUCK__ <br> _LUCK field_ | [`PotionEffectType`](PotionEffectType.md)
+static final var __UNLUCK__ <br> _UNLUCK field_ | [`PotionEffectType`](PotionEffectType.md)
 
 
 
@@ -248,7 +252,7 @@ Returns |
 
 ##### <a id='values'></a>public static function __values__()
 
-_Returns an array of all the registered [`PotionEffectType`](PotionEffectType.md)s._
+_Returns an array of all the registered [`PotionEffectType`](PotionEffectType.md)s. This array is not necessarily in any particular order and may contain null._
 
 Returns | Description
 --- | --- 
@@ -416,6 +420,34 @@ _Increases the maximum health of an entity with health that cannot be regenerate
 ##### <a id='saturation'></a>public static final var __SATURATION__
 
 _Increases the food level of an entity each tick._
+
+>Returns
+>  [`PotionEffectType`](PotionEffectType.md)
+
+##### <a id='glowing'></a>public static final var __GLOWING__
+
+_Outlines the entity so that it can be seen from afar._
+
+>Returns
+>  [`PotionEffectType`](PotionEffectType.md)
+
+##### <a id='levitation'></a>public static final var __LEVITATION__
+
+_Causes the entity to float into the air._
+
+>Returns
+>  [`PotionEffectType`](PotionEffectType.md)
+
+##### <a id='luck'></a>public static final var __LUCK__
+
+_LUCK field_
+
+>Returns
+>  [`PotionEffectType`](PotionEffectType.md)
+
+##### <a id='unluck'></a>public static final var __UNLUCK__
+
+_UNLUCK field_
 
 >Returns
 >  [`PotionEffectType`](PotionEffectType.md)

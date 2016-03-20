@@ -6,7 +6,7 @@
 
 ### Class Overview
 
-Represents an event.
+Represents an event. All events require a static method named getHandlerList() which returns the same [`HandlerList`](HandlerList.md) as `#getHandlers()`.
 
 Method | Type   
 --- | :--- 

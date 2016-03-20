@@ -15,6 +15,7 @@ WITHER: <br> _WITHER SkullType_ | SkullType
 ZOMBIE: <br> _ZOMBIE SkullType_ | SkullType
 PLAYER: <br> _PLAYER SkullType_ | SkullType
 CREEPER: <br> _CREEPER SkullType_ | SkullType
+DRAGON: <br> _DRAGON SkullType_ | SkullType
 
 
 

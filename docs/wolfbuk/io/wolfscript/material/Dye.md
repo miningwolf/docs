@@ -14,6 +14,7 @@ Method | Type
 --- | :--- 
 new __Dye__() <br> _Dye constructor_ | _constructor_
 new __Dye__(Material) <br> _Dye constructor_ | _constructor_
+new __Dye__(DyeColor) <br> _Dye constructor_ | _constructor_
   property __Color__ <br> _Get: Gets the current color of this dye<br>Set: Sets the color of this dye_ | [`DyeColor`](../DyeColor.md)
  function __clone__() <br> _clone method_ | [`Dye`](Dye.md)
  function __toString__() <br> _toString method_ | `String`
@@ -77,6 +78,14 @@ Argument | Type | Description
 --- | --- | --- 
 Material | `final` | Material argument
 byte | `final` | byte argument
+
+##### <a id='dye'></a>new __Dye__(DyeColor) 
+
+_Dye constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+DyeColor | `final` | DyeColor argument
 
 ---
 

@@ -1,23 +1,33 @@
 ## Tree __class__
 
 >io.wolfscript.material.Tree
->Extends [`MaterialData`](MaterialData.md)
+>Extends [`Wood`](Wood.md)
 
 ---
 
 ### Class Overview
 
-Represents the different types of Trees.
+Represents the different types of Tree block that face a direction.
 
 Method | Type   
 --- | :--- 
-new __Tree__() <br> _Tree constructor_ | _constructor_
-new __Tree__(species) <br> _Tree constructor_ | _constructor_
-new __Tree__(species, dir) <br> _Tree constructor_ | _constructor_
-new __Tree__(Material) <br> _Tree constructor_ | _constructor_
+new __Tree__() <br> _Constructs a tree block._ | _constructor_
+new __Tree__(species) <br> _Constructs a tree block of the given tree species._ | _constructor_
+new __Tree__(species, dir) <br> _Constructs a tree block of the given tree species, and facing the given_ | _constructor_
+new __Tree__(Material) <br> _Constructs a tree block of the given type._ | _constructor_
+new __Tree__(Material, species) <br> _Constructs a tree block of the given type and tree species._ | _constructor_
+new __Tree__(Material, species, dir) <br> _Constructs a tree block of the given type and tree species, and facing_ | _constructor_
   property __Direction__ <br> _Direction property<br>Set: Set direction of the log_ | [`BlockFace`](../block/BlockFace.md)
-  property __Species__ <br> _Get: Gets the current species of this tree<br>Set: Sets the species of this tree_ | [`TreeSpecies`](../TreeSpecies.md)
  function __clone__() <br> _clone method_ | [`Tree`](Tree.md)
+ function __toString__() <br> _toString method_ | `String`
+ |
+__Inherited items from [`Wood`](Wood.md)__ |
+new __Wood__() <br> _Constructs a wood block._ | _constructor_
+new __Wood__(species) <br> _Constructs a wood block of the given tree species._ | _constructor_
+new __Wood__(Material) <br> _Constructs a wood block of the given type._ | _constructor_
+new __Wood__(Material, TreeSpecies) <br> _Constructs a wood block of the given type and tree species._ | _constructor_
+  property __Species__ <br> _Get: Gets the current species of this wood block<br>Set: Sets the species of this wood block_ | [`TreeSpecies`](../TreeSpecies.md)
+ function __clone__() <br> _clone method_ | [`Wood`](Wood.md)
  function __toString__() <br> _toString method_ | `String`
  |
 __Inherited items from [`MaterialData`](MaterialData.md)__ |
@@ -34,31 +44,33 @@ new __MaterialData__(Material) <br> _MaterialData constructor_ | _constructor_
 
 
 
+
+
 ---
 
 ### Public Constructors for [`Tree`](Tree.md)
 
 ##### <a id='tree'></a>new __Tree__() 
 
-_Tree constructor_
+_Constructs a tree block._
 
 
 ##### <a id='tree'></a>new __Tree__(species) 
 
-_Tree constructor_
+_Constructs a tree block of the given tree species._
 
 Argument | Type | Description  
 --- | --- | --- 
-species | [`TreeSpecies`](../TreeSpecies.md) | species argument
+species | [`TreeSpecies`](../TreeSpecies.md) | the species of the tree block
 
 ##### <a id='tree'></a>new __Tree__(species, dir) 
 
-_Tree constructor_
+_Constructs a tree block of the given tree species, and facing the given direction._
 
 Argument | Type | Description  
 --- | --- | --- 
-species | [`TreeSpecies`](../TreeSpecies.md) | species argument
-dir | [`BlockFace`](../block/BlockFace.md) | dir argument
+species | [`TreeSpecies`](../TreeSpecies.md) | the species of the tree block
+dir | [`BlockFace`](../block/BlockFace.md) | the direction the tree block is facing
 
 ##### <a id='tree'></a>new __Tree__(int) 
 _Deprecated: Magic value_
@@ -71,11 +83,30 @@ int | `final` | int argument
 
 ##### <a id='tree'></a>new __Tree__(Material) 
 
-_Tree constructor_
+_Constructs a tree block of the given type._
 
 Argument | Type | Description  
 --- | --- | --- 
 Material | `final` | Material argument
+
+##### <a id='tree'></a>new __Tree__(Material, species) 
+
+_Constructs a tree block of the given type and tree species._
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+species | [`TreeSpecies`](../TreeSpecies.md) | the species of the tree block
+
+##### <a id='tree'></a>new __Tree__(Material, species, dir) 
+
+_Constructs a tree block of the given type and tree species, and facing the given direction._
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+species | [`TreeSpecies`](../TreeSpecies.md) | the species of the tree block
+dir | [`BlockFace`](../block/BlockFace.md) | the direction the tree block is facing
 
 ##### <a id='tree'></a>new __Tree__(int, byte) 
 _Deprecated: Magic value_
@@ -114,19 +145,6 @@ Set | Type | Description
 dir | [`BlockFace`](../block/BlockFace.md) | - direction of end of log (BlockFace.SELF for no direction)
 
 
-##### <a id='species'></a>public   property __Species__
-
-_Get: Gets the current species of this tree<br>Set: Sets the species of this tree_
-
-Get | Description
---- | --- 
-[`TreeSpecies`](../TreeSpecies.md) | TreeSpecies of this tree
-
-Set | Type | Description  
---- | --- | --- 
-species | [`TreeSpecies`](../TreeSpecies.md) | New species of this tree
-
-
 ---
 
 ### Public Methods for [`Tree`](Tree.md)
@@ -138,6 +156,107 @@ _clone method_
 Returns | 
 --- | 
 [`Tree`](Tree.md) |
+
+
+##### <a id='tostring'></a>public  function __toString__()
+
+_toString method_
+
+Returns | 
+--- | 
+`String` |
+
+
+---
+### Public Constructors for [`Wood`](Wood.md)
+
+##### <a id='wood'></a>new __Wood__() 
+
+_Constructs a wood block._
+
+
+##### <a id='wood'></a>new __Wood__(species) 
+
+_Constructs a wood block of the given tree species._
+
+Argument | Type | Description  
+--- | --- | --- 
+species | [`TreeSpecies`](../TreeSpecies.md) | the species of the wood block
+
+##### <a id='wood'></a>new __Wood__(int) 
+_Deprecated: Magic value_
+
+_Wood constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+
+##### <a id='wood'></a>new __Wood__(Material) 
+
+_Constructs a wood block of the given type._
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+
+##### <a id='wood'></a>new __Wood__(Material, TreeSpecies) 
+
+_Constructs a wood block of the given type and tree species._
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+TreeSpecies | `final` | TreeSpecies argument
+
+##### <a id='wood'></a>new __Wood__(int, byte) 
+_Deprecated: Magic value_
+
+_Wood constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+int | `final` | int argument
+byte | `final` | byte argument
+
+##### <a id='wood'></a>new __Wood__(Material, byte) 
+_Deprecated: Magic value_
+
+_Wood constructor_
+
+Argument | Type | Description  
+--- | --- | --- 
+Material | `final` | Material argument
+byte | `final` | byte argument
+
+---
+
+### Public Properties for [`Wood`](Wood.md)
+
+##### <a id='species'></a>public   property __Species__
+
+_Get: Gets the current species of this wood block<br>Set: Sets the species of this wood block_
+
+Get | Description
+--- | --- 
+[`TreeSpecies`](../TreeSpecies.md) | TreeSpecies of this wood block
+
+Set | Type | Description  
+--- | --- | --- 
+TreeSpecies | `final` | TreeSpecies argument
+
+
+---
+
+### Public Methods for [`Wood`](Wood.md)
+
+##### <a id='clone'></a>public  function __clone__()
+
+_clone method_
+
+Returns | 
+--- | 
+[`Wood`](Wood.md) |
 
 
 ##### <a id='tostring'></a>public  function __toString__()
@@ -292,6 +411,9 @@ _toString method_
 Returns | 
 --- | 
 `String` |
+
+
+---
 
 
 ---

@@ -7,7 +7,7 @@
 
 ### Interface Overview
 
-Represents a potion (`Material#POTION`) that can have custom effects.
+Represents a potion or item that can have custom effects.
 
 Method | Type   
 --- | :--- 

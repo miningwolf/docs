@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -81,6 +85,7 @@
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/enchantment/0.html' class=''>event.enchantment</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/0.html' class=''>event.entity</a></li> 
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/AreaEffectCloudApplyEvent.html'>AreaEffectCloudApplyEvent</a></li>
 <li class='active'><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreatureSpawnEvent.html'>CreatureSpawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/CreeperPowerEvent.html'>CreeperPowerEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityBreakDoorEvent.html'>EntityBreakDoorEvent</a></li>
@@ -104,13 +109,17 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTameEvent.html'>EntityTameEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTargetEvent.html'>EntityTargetEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityTeleportEvent.html'>EntityTeleportEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityToggleGlideEvent.html'>EntityToggleGlideEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/EntityUnleashEvent.html'>EntityUnleashEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ExpBottleEvent.html'>ExpBottleEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ExplosionPrimeEvent.html'>ExplosionPrimeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/FireworkExplodeEvent.html'>FireworkExplodeEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/FoodLevelChangeEvent.html'>FoodLevelChangeEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/HorseJumpEvent.html'>HorseJumpEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemDespawnEvent.html'>ItemDespawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemMergeEvent.html'>ItemMergeEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/ItemSpawnEvent.html'>ItemSpawnEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/LingeringPotionSplashEvent.html'>LingeringPotionSplashEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PigZapEvent.html'>PigZapEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerDeathEvent.html'>PlayerDeathEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/PlayerLeashEntityEvent.html'>PlayerLeashEntityEvent</a></li>
@@ -120,6 +129,8 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepDyeWoolEvent.html'>SheepDyeWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SheepRegrowWoolEvent.html'>SheepRegrowWoolEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/SlimeSplitEvent.html'>SlimeSplitEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/VillagerAcquireTradeEvent.html'>VillagerAcquireTradeEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/entity/VillagerReplenishTradeEvent.html'>VillagerReplenishTradeEvent</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/hanging/0.html' class=''>event.hanging</a></li> 
 <li class='divider'></li>
@@ -297,59 +308,8 @@ Implements <a href="../Cancellable.html"><code>Cancellable</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-creaturespawnevent-a-new-__creaturespawnevent__-spawnee-type-loc-reason-"><a id='creaturespawnevent'></a>new <strong>CreatureSpawnEvent</strong>(spawnee, type, loc, reason)</h5>
-<p><em>Deprecated</em></p>
-<p><em>CreatureSpawnEvent constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>spawnee</td>
-<td><code>Entity</code></td>
-<td>spawnee argument</td>
-</tr>
-<tr>
-<td>type</td>
-<td><a href="../../entity/CreatureType.html"><code>CreatureType</code></a></td>
-<td>type argument</td>
-</tr>
-<tr>
-<td>loc</td>
-<td><code>Location</code></td>
-<td>loc argument</td>
-</tr>
-<tr>
-<td>reason</td>
-<td><code>SpawnReason</code></td>
-<td>reason argument</td>
-</tr>
-</tbody>
-</table>
 <hr>
 <h3 id="public-properties-for-creaturespawnevent-creaturespawnevent-md-">Public Properties for <a href="CreatureSpawnEvent.html"><code>CreatureSpawnEvent</code></a></h3>
-<h5 id="-a-id-creaturetype-a-public-readonly-property-__creaturetype__"><a id='creaturetype'></a>public  readonly property <strong>CreatureType</strong></h5>
-<p><em>Deprecated: In favour of {@link #getEntityType()}.</em></p>
-<p><em>Get: Gets the type of creature being spawned.</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../../entity/CreatureType.html"><code>CreatureType</code></a></td>
-<td>A CreatureType value detailing the type of creature being spawned</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-entity-a-public-readonly-property-__entity__"><a id='entity'></a>public  readonly property <strong>Entity</strong></h5>
 <p><em>Entity property</em></p>
 <table>

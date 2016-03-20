@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -103,6 +107,7 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryOpenEvent.html'>InventoryOpenEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryPickupItemEvent.html'>InventoryPickupItemEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryType.html'>InventoryType</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/PrepareAnvilEvent.html'>PrepareAnvilEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/PrepareItemCraftEvent.html'>PrepareItemCraftEvent</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/painting/0.html' class=''>event.painting</a></li> 
@@ -202,7 +207,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 <td style="text-align:left"><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 </tr>
 <tr>
-<td> readonly property <strong>HotbarButton</strong> <br> <em>Get: If the ClickType is NUMBER_KEY, this method will return the index of</em></td>
+<td> readonly property <strong>HotbarButton</strong> <br> _Get: If the ClickType is NUMBER<em>KEY, this method will return the index of</em></td>
 <td style="text-align:left"><code>int</code></td>
 </tr>
 <tr>
@@ -585,7 +590,7 @@ Extends <a href="InventoryInteractEvent.html"><code>InventoryInteractEvent</code
 </tbody>
 </table>
 <h5 id="-a-id-hotbarbutton-a-public-readonly-property-__hotbarbutton__"><a id='hotbarbutton'></a>public  readonly property <strong>HotbarButton</strong></h5>
-<p><em>Get: If the ClickType is NUMBER_KEY, this method will return the index of the pressed key (0-8).</em></p>
+<p>_Get: If the ClickType is NUMBER<em>KEY, this method will return the index of the pressed key (0-8).</em></p>
 <table>
 <thead>
 <tr>

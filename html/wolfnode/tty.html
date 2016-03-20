@@ -71,11 +71,12 @@
 <li><a href='../wolfnode/punycode.html'>punycode</a></li>
 <li><a href='../wolfnode/readline.html'>readline</a></li>
 <li><a href='../wolfnode/repl.html'>repl</a></li>
-<li><a href='../wolfnode/smalloc.html'>smalloc</a></li>
 <li><a href='../wolfnode/string_decoder.html'>string_decoder</a></li>
 <li class='active'><a href='../wolfnode/tty.html'>tty</a></li>
 <li><a href='../wolfnode/vm.html'>vm</a></li>
 <li><a href='../wolfnode/zlib.html'>zlib</a></li>
+<li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
 <li class='divider'></li>
 
                   </ul>
@@ -86,27 +87,21 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="tty">TTY</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Unstable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><p>The <code>tty</code> module houses the <code>tty.ReadStream</code> and <code>tty.WriteStream</code> classes. In
 most cases, you will not need to use this module directly.</p>
-<p>When node detects that it is being run inside a TTY context, then <code>process.stdin</code>
+<p>When Node.js detects that it is being run inside a TTY context, then <code>process.stdin</code>
 will be a <code>tty.ReadStream</code> instance and <code>process.stdout</code> will be
-a <code>tty.WriteStream</code> instance. The preferred way to check if node is being run in
-a TTY context is to check <code>process.stdout.isTTY</code>:</p>
-<pre><code>$ node -p <span class="hljs-operator">-e</span> <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span>
+a <code>tty.WriteStream</code> instance. The preferred way to check if Node.js is being run
+in a TTY context is to check <code>process.stdout.isTTY</code>:</p>
+<pre><code>$ <span class="hljs-keyword">node</span><span class="hljs-identifier"> </span><span class="hljs-title">-p</span> -e <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span>
 <span class="hljs-literal">true</span>
-$ node -p <span class="hljs-operator">-e</span> <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span> | cat
+$ <span class="hljs-keyword">node</span><span class="hljs-identifier"> </span><span class="hljs-title">-p</span> -e <span class="hljs-string">"Boolean(process.stdout.isTTY)"</span> | cat
 <span class="hljs-literal">false</span>
-</code></pre><h2 id="tty-isatty-fd-">tty.isatty(fd)</h2>
-<p>Returns <code>true</code> or <code>false</code> depending on if the <code>fd</code> is associated with a
-terminal.</p>
-<h2 id="tty-setrawmode-mode-">tty.setRawMode(mode)</h2>
-<p>Deprecated. Use <code>tty.ReadStream#setRawMode()</code>
-(i.e. <code>process.stdin.setRawMode()</code>) instead.</p>
-<h2 id="class-readstream">Class: ReadStream</h2>
+</code></pre><h2 id="class-readstream">Class: ReadStream</h2>
 <p>A <code>net.Socket</code> subclass that represents the readable portion of a tty. In normal
 circumstances, <code>process.stdin</code> will be the only <code>tty.ReadStream</code> instance in any
-node program (only when <code>isatty(0)</code> is true).</p>
+Node.js program (only when <code>isatty(0)</code> is true).</p>
 <h3 id="rs-israw">rs.isRaw</h3>
 <p>A <code>Boolean</code> that is initialized to <code>false</code>. It represents the current &quot;raw&quot; state
 of the <code>tty.ReadStream</code> instance.</p>
@@ -118,21 +113,25 @@ to the resulting mode.</p>
 <p>A <code>net.Socket</code> subclass that represents the writable portion of a tty. In normal
 circumstances, <code>process.stdout</code> will be the only <code>tty.WriteStream</code> instance
 ever created (and only when <code>isatty(1)</code> is true).</p>
-<h3 id="ws-columns">ws.columns</h3>
-<p>A <code>Number</code> that gives the number of columns the TTY currently has. This property
-gets updated on &quot;resize&quot; events.</p>
-<h3 id="ws-rows">ws.rows</h3>
-<p>A <code>Number</code> that gives the number of rows the TTY currently has. This property
-gets updated on &quot;resize&quot; events.</p>
 <h3 id="event-resize-">Event: &#39;resize&#39;</h3>
 <p><code>function () {}</code></p>
 <p>Emitted by <code>refreshSize()</code> when either of the <code>columns</code> or <code>rows</code> properties
 has changed.</p>
-<pre><code>process.stdout.on(<span class="hljs-string">'resize'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<pre><code class="lang-js">process.stdout.<span class="hljs-literal">on</span>(<span class="hljs-string">'resize'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'screen size has changed!'</span>);
-  <span class="hljs-built_in">console</span>.log(process.stdout.columns + <span class="hljs-string">'x'</span> + process.stdout.rows);
+  <span class="hljs-built_in">console</span>.log(`<span class="javascript">${process.stdout.columns}x${process.stdout.rows}</span>`);
 });
 </code></pre>
+<h3 id="ws-columns">ws.columns</h3>
+<p>A <code>Number</code> that gives the number of columns the TTY currently has. This property
+gets updated on <code>&#39;resize&#39;</code> events.</p>
+<h3 id="ws-rows">ws.rows</h3>
+<p>A <code>Number</code> that gives the number of rows the TTY currently has. This property
+gets updated on <code>&#39;resize&#39;</code> events.</p>
+<h2 id="tty-isatty-fd-">tty.isatty(fd)</h2>
+<p>Returns <code>true</code> or <code>false</code> depending on if the <code>fd</code> is associated with a
+terminal.</p>
+
 
           </section>
         </div>

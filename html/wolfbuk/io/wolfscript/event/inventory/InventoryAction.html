@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -103,6 +107,7 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryOpenEvent.html'>InventoryOpenEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryPickupItemEvent.html'>InventoryPickupItemEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/InventoryType.html'>InventoryType</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/PrepareAnvilEvent.html'>PrepareAnvilEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/inventory/PrepareItemCraftEvent.html'>PrepareItemCraftEvent</a></li>
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/event/painting/0.html' class=''>event.painting</a></li> 
@@ -171,71 +176,71 @@
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PICKUP<em>ALL: <br> _All of the items on the clicked slot are moved to the cursor.</em></td>
+<td>PICKUP_ALL: <br> <em>All of the items on the clicked slot are moved to the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PICKUP<em>SOME: <br> _Some of the items on the clicked slot are moved to the cursor.</em></td>
+<td>PICKUP_SOME: <br> <em>Some of the items on the clicked slot are moved to the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PICKUP<em>HALF: <br> _Half of the items on the clicked slot are moved to the cursor.</em></td>
+<td>PICKUP_HALF: <br> <em>Half of the items on the clicked slot are moved to the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PICKUP<em>ONE: <br> _One of the items on the clicked slot are moved to the cursor.</em></td>
+<td>PICKUP_ONE: <br> <em>One of the items on the clicked slot are moved to the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PLACE<em>ALL: <br> _All of the items on the cursor are moved to the clicked slot.</em></td>
+<td>PLACE_ALL: <br> <em>All of the items on the cursor are moved to the clicked slot.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PLACE<em>SOME: <br> _Some of the items from the cursor are moved to the clicked slot</em></td>
+<td>PLACE_SOME: <br> <em>Some of the items from the cursor are moved to the clicked slot</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>PLACE<em>ONE: <br> _A single item from the cursor is moved to the clicked slot.</em></td>
+<td>PLACE_ONE: <br> <em>A single item from the cursor is moved to the clicked slot.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>SWAP<em>WITH_CURSOR: <br> _The clicked item and the cursor are exchanged.</em></td>
+<td>SWAP_WITH_CURSOR: <br> <em>The clicked item and the cursor are exchanged.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>DROP<em>ALL_CURSOR: <br> _The entire cursor item is dropped.</em></td>
+<td>DROP_ALL_CURSOR: <br> <em>The entire cursor item is dropped.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>DROP<em>ONE_CURSOR: <br> _One item is dropped from the cursor.</em></td>
+<td>DROP_ONE_CURSOR: <br> <em>One item is dropped from the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>DROP<em>ALL_SLOT: <br> _The entire clicked slot is dropped.</em></td>
+<td>DROP_ALL_SLOT: <br> <em>The entire clicked slot is dropped.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>DROP<em>ONE_SLOT: <br> _One item is dropped from the clicked slot.</em></td>
+<td>DROP_ONE_SLOT: <br> <em>One item is dropped from the clicked slot.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>MOVE<em>TO_OTHER_INVENTORY: <br> _The item is moved to the opposite inventory if a space is found.</em></td>
+<td>MOVE_TO_OTHER_INVENTORY: <br> <em>The item is moved to the opposite inventory if a space is found.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>HOTBAR<em>MOVE_AND_READD: <br> _The clicked item is moved to the hotbar, and the item currently there</em></td>
+<td>HOTBAR_MOVE_AND_READD: <br> <em>The clicked item is moved to the hotbar, and the item currently there</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>HOTBAR<em>SWAP: <br> _The clicked slot and the picked hotbar slot are swapped.</em></td>
+<td>HOTBAR_SWAP: <br> <em>The clicked slot and the picked hotbar slot are swapped.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>CLONE<em>STACK: <br> _A max-size stack of the clicked item is put on the cursor.</em></td>
+<td>CLONE_STACK: <br> <em>A max-size stack of the clicked item is put on the cursor.</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>
-<td>COLLECT<em>TO_CURSOR: <br> _The inventory is searched for the same material, and they are put on</em></td>
+<td>COLLECT_TO_CURSOR: <br> <em>The inventory is searched for the same material, and they are put on</em></td>
 <td style="text-align:left">InventoryAction</td>
 </tr>
 <tr>

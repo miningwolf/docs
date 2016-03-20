@@ -81,6 +81,8 @@
 <li class='divider'></li>
 <li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='divider'></li>
 
                   </ul>
               </nav>
@@ -90,42 +92,198 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="path">Path</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
 </code></pre><p>This module contains utilities for handling and transforming file
-paths.  Almost all these methods perform only string transformations.
-The file system is not consulted to check whether paths are valid.</p>
+paths. The file system is not consulted to check whether paths are valid.</p>
 <p>Use <code>require(&#39;path&#39;)</code> to use this module.  The following methods are provided:</p>
-<h2 id="path-normalize-p-">path.normalize(p)</h2>
-<p>Normalize a string path, taking care of <code>&#39;..&#39;</code> and <code>&#39;.&#39;</code> parts.</p>
-<p>When multiple slashes are found, they&#39;re replaced by a single one;
-when the path contains a trailing slash, it is preserved.
-On Windows backslashes are used.</p>
+<h2 id="path-basename-path-ext-">path.basename(path[, ext])</h2>
+<p>Return the last portion of a path, similar to the Unix <code>basename</code> command.
+<code>path</code> must be a string. <code>ext</code>, if given, must also be a string.</p>
+<p>Examples:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">basename</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux.html'</span>)</span></span>
+<span class="hljs-comment">// returns 'quux.html'</span>
+
+path.<span class="hljs-function"><span class="hljs-title">basename</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="hljs-string">'.html'</span>)</span></span>
+<span class="hljs-comment">// returns 'quux'</span>
+</code></pre>
+<h2 id="path-delimiter">path.delimiter</h2>
+<p>The platform-specific path delimiter, <code>;</code> or <code>&#39;:&#39;</code>.</p>
+<p>An example on *nix:</p>
+<pre><code class="lang-js">console.log(process.env.<span class="hljs-constant">PATH)</span>
+/<span class="hljs-regexp">/ '/usr</span><span class="hljs-regexp">/bin:/bin</span><span class="hljs-symbol">:/usr/sbin</span><span class="hljs-symbol">:/sbin</span><span class="hljs-symbol">:/usr/local/bin<span class="hljs-string">'
+
+process.env.PATH.split(path.delimiter)
+// returns ['</span>/usr/bin<span class="hljs-string">', '</span>/bin<span class="hljs-string">', '</span>/usr/sbin<span class="hljs-string">', '</span>/sbin<span class="hljs-string">', '</span>/usr/local/bin<span class="hljs-string">']</span></span>
+</code></pre>
+<p>An example on Windows:</p>
+<pre><code class="lang-js">console.log(process.env.PATH)
+// 'C:<span class="hljs-command">\Windows</span><span class="hljs-command">\system</span>32;C:<span class="hljs-command">\Windows</span>;C:<span class="hljs-command">\Program</span> Files<span class="hljs-command">\node</span><span class="hljs-command">\'</span>
+
+process.env.PATH.split(path.delimiter)
+// returns <span class="hljs-special">[</span>'C:<span class="hljs-command">\\</span>Windows<span class="hljs-command">\\</span>system32', 'C:<span class="hljs-command">\\</span>Windows', 'C:<span class="hljs-command">\\</span>Program Files<span class="hljs-command">\\</span>node<span class="hljs-command">\\</span>'<span class="hljs-special">]</span>
+</code></pre>
+<h2 id="path-dirname-path-">path.dirname(path)</h2>
+<p>Return the directory name of a path, similar to the Unix <code>dirname</code> command.
+<code>path</code> must be a string.</p>
 <p>Example:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">normalize</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar//baz/asdf/quux/..'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/foo/bar/baz/asdf'</span>
-</code></pre><h2 id="path-join-path1-path2-">path.join([path1][, path2][, ...])</h2>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">dirname</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux'</span>)</span></span>
+<span class="hljs-comment">// returns '/foo/bar/baz/asdf'</span>
+</code></pre>
+<h2 id="path-extname-path-">path.extname(path)</h2>
+<p>Return the extension of the path, from the last &#39;.&#39; to end of string
+in the last portion of the path.  If there is no &#39;.&#39; in the last portion
+of the path or the first character of it is &#39;.&#39;, then it returns
+an empty string. <code>path</code> must be a string.</p>
+<p>Examples:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.html'</span>)</span></span>
+<span class="hljs-comment">// returns '.html'</span>
+
+path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.coffee.md'</span>)</span></span>
+<span class="hljs-comment">// returns '.md'</span>
+
+path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.'</span>)</span></span>
+<span class="hljs-comment">// returns '.'</span>
+
+path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index'</span>)</span></span>
+<span class="hljs-comment">// returns ''</span>
+
+path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'.index'</span>)</span></span>
+<span class="hljs-comment">// returns ''</span>
+</code></pre>
+<h2 id="path-format-pathobject-">path.format(pathObject)</h2>
+<p>Returns a path string from an object. This is the opposite of <a href="#path_path_parse_path"><code>path.parse</code></a>.</p>
+<p>If <code>pathObject</code> has all expected properties, the returned string will be a
+concatenation of the <code>dir</code> property, the platform-dependent path separator, and
+the <code>base</code> property.</p>
+<p>If the <code>dir</code> property is not supplied, the <code>root</code> property will be used as the
+<code>dir</code> property. However, it will be assumed that the <code>root</code> property already
+ends with the platform-dependent path separator. In this case, the returned
+string will be the concatenation fo the <code>root</code> property and the <code>base</code> property.</p>
+<p>If both the <code>dir</code> and the <code>root</code> properties are not supplied, then the returned
+string will be the contents of the <code>base</code> property.</p>
+<p>If the <code>base</code> property is not supplied, a concatenation of the <code>name</code> property
+and the <code>ext</code> property will be used as the <code>base</code> property.</p>
+<p>Examples:</p>
+<pre><code class="lang-js"><span class="hljs-tag">path</span><span class="hljs-class">.format</span>({
+    <span class="hljs-attribute">root </span>: <span class="hljs-string">"/"</span>,
+    <span class="hljs-attribute">dir </span>: <span class="hljs-string">"/home/user/dir"</span>,
+    <span class="hljs-attribute">base </span>: <span class="hljs-string">"file.txt"</span>,
+    <span class="hljs-attribute">ext </span>: <span class="hljs-string">".txt"</span>,
+    <span class="hljs-attribute">name </span>: <span class="hljs-string">"file"</span>
+});
+<span class="hljs-comment">// returns '/home/user/dir/file.txt'</span>
+
+<span class="hljs-comment">// `root` will be used if `dir` is not specified and `name` + `ext` will be used</span>
+<span class="hljs-comment">// if `base` is not specified</span>
+<span class="hljs-tag">path</span><span class="hljs-class">.format</span>({
+    <span class="hljs-attribute">root </span>: <span class="hljs-string">"/"</span>,
+    <span class="hljs-attribute">ext </span>: <span class="hljs-string">".txt"</span>,
+    <span class="hljs-attribute">name </span>: <span class="hljs-string">"file"</span>
+})
+<span class="hljs-comment">// returns '/file.txt'</span>
+</code></pre>
+<h2 id="path-isabsolute-path-">path.isAbsolute(path)</h2>
+<p>Determines whether <code>path</code> is an absolute path. An absolute path will always
+resolve to the same location, regardless of the working directory. <code>path</code> must
+be a string.</p>
+<p>Examples on *nix:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar'</span>)</span></span> <span class="hljs-comment">// true</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'/baz/..'</span>)</span></span>  <span class="hljs-comment">// true</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'qux/'</span>)</span></span>     <span class="hljs-comment">// false</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'.'</span>)</span></span>        <span class="hljs-comment">// false</span>
+</code></pre>
+<p>Examples on Windows:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'//server'</span>)</span></span>  <span class="hljs-comment">// true</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'C:/foo/..'</span>)</span></span> <span class="hljs-comment">// true</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'bar\\baz'</span>)</span></span>  <span class="hljs-comment">// false</span>
+path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'.'</span>)</span></span>         <span class="hljs-comment">// false</span>
+</code></pre>
+<p><em>Note:</em> If the path string passed as parameter is a zero-length string, unlike
+        other path module functions, it will be used as-is and <code>false</code> will be
+        returned.</p>
+<h2 id="path-join-path1-path2-">path.join([path1][, path2][, ...])</h2>
 <p>Join all arguments together and normalize the resulting path.</p>
-<p>Arguments must be strings.  In v0.8, non-string arguments were
+<p>All arguments must be strings.  In v0.8, non-string arguments were
 silently ignored.  In v0.10 and up, an exception is thrown.</p>
-<p>Example:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">join</span><span class="hljs-params">(<span class="hljs-string">'/foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz/asdf'</span>, <span class="hljs-string">'quux'</span>, <span class="hljs-string">'..'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/foo/bar/baz/asdf'</span>
+<p>Examples:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">join</span><span class="hljs-params">(<span class="hljs-string">'/foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz/asdf'</span>, <span class="hljs-string">'quux'</span>, <span class="hljs-string">'..'</span>)</span></span>
+<span class="hljs-comment">// returns '/foo/bar/baz/asdf'</span>
 
 path.<span class="hljs-function"><span class="hljs-title">join</span><span class="hljs-params">(<span class="hljs-string">'foo'</span>, {}, <span class="hljs-string">'bar'</span>)</span></span>
 <span class="hljs-comment">// throws exception</span>
 TypeError: Arguments to path<span class="hljs-class">.join</span> must be strings
-</code></pre><h2 id="path-resolve-from-to-">path.resolve([from ...], to)</h2>
-<p>Resolves <code>to</code> to an absolute path.</p>
+</code></pre>
+<p><em>Note:</em> If the arguments to <code>join</code> have zero-length strings, unlike other path
+        module functions, they will be ignored. If the joined path string is a
+        zero-length string then <code>&#39;.&#39;</code> will be returned, which represents the
+        current working directory.</p>
+<h2 id="path-normalize-path-">path.normalize(path)</h2>
+<p>Normalize a path, taking care of <code>&#39;..&#39;</code> and <code>&#39;.&#39;</code> parts. <code>path</code> must be a
+string.</p>
+<p>When multiple slashes are found, they&#39;re replaced by a single one;
+when the path contains a trailing slash, it is preserved.
+On Windows backslashes are used.</p>
+<p>Example:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">normalize</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar//baz/asdf/quux/..'</span>)</span></span>
+<span class="hljs-comment">// returns '/foo/bar/baz/asdf'</span>
+</code></pre>
+<p><em>Note:</em> If the path string passed as argument is a zero-length string then <code>&#39;.&#39;</code>
+        will be returned, which represents the current working directory.</p>
+<h2 id="path-parse-path-">path.parse(path)</h2>
+<p>Returns an object from a path. <code>path</code> must be a string.</p>
+<p>An example on *nix:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">parse</span><span class="hljs-params">(<span class="hljs-string">'/home/user/dir/file.txt'</span>)</span></span>
+<span class="hljs-comment">// returns</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//    root : "/",</span>
+<span class="hljs-comment">//    dir : "/home/user/dir",</span>
+<span class="hljs-comment">//    base : "file.txt",</span>
+<span class="hljs-comment">//    ext : ".txt",</span>
+<span class="hljs-comment">//    name : "file"</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<p>An example on Windows:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">parse</span><span class="hljs-params">(<span class="hljs-string">'C:\\path\\dir\\index.html'</span>)</span></span>
+<span class="hljs-comment">// returns</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//    root : "C:\\",</span>
+<span class="hljs-comment">//    dir : "C:\\path\\dir",</span>
+<span class="hljs-comment">//    base : "index.html",</span>
+<span class="hljs-comment">//    ext : ".html",</span>
+<span class="hljs-comment">//    name : "index"</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<h2 id="path-posix">path.posix</h2>
+<p>Provide access to aforementioned <code>path</code> methods but always interact in a posix
+compatible way.</p>
+<h2 id="path-relative-from-to-">path.relative(from, to)</h2>
+<p>Solve the relative path from <code>from</code> to <code>to</code>. <code>from</code> and <code>to</code> must be strings.</p>
+<p>At times we have two absolute paths, and we need to derive the relative
+path from one to the other.  This is actually the reverse transform of
+<code>path.resolve</code>, which means we see that:</p>
+<pre><code class="lang-js">path.<span class="hljs-built_in">resolve</span>(<span class="hljs-built_in">from</span>, path.<span class="hljs-built_in">relative</span>(<span class="hljs-built_in">from</span>, <span class="hljs-built_in">to</span>)) == path.<span class="hljs-built_in">resolve</span>(<span class="hljs-built_in">to</span>)
+</code></pre>
+<p>Examples:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">relative</span><span class="hljs-params">(<span class="hljs-string">'C:\\orandea\\test\\aaa'</span>, <span class="hljs-string">'C:\\orandea\\impl\\bbb'</span>)</span></span>
+<span class="hljs-comment">// returns '..\\..\\impl\\bbb'</span>
+
+path.<span class="hljs-function"><span class="hljs-title">relative</span><span class="hljs-params">(<span class="hljs-string">'/data/orandea/test/aaa'</span>, <span class="hljs-string">'/data/orandea/impl/bbb'</span>)</span></span>
+<span class="hljs-comment">// returns '../../impl/bbb'</span>
+</code></pre>
+<p><em>Note:</em> If the arguments to <code>relative</code> have zero-length strings then the current
+        working directory will be used instead of the zero-length strings. If
+        both the paths are the same then a zero-length string will be returned.</p>
+<h2 id="path-resolve-from-to-">path.resolve([from ...], to)</h2>
+<p>Resolves <code>to</code> to an absolute path. All arguments must be strings.</p>
 <p>If <code>to</code> isn&#39;t already absolute <code>from</code> arguments are prepended in right to left
 order, until an absolute path is found. If after using all <code>from</code> paths still
 no absolute path is found, the current working directory is used as well. The
 resulting path is normalized, and trailing slashes are removed unless the path
-gets resolved to the root directory. Non-string <code>from</code> arguments are ignored.</p>
+gets resolved to the root directory.</p>
 <p>Another way to think of it is as a sequence of <code>cd</code> commands in a shell.</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'foo/bar'</span>, <span class="hljs-string">'/tmp/file/'</span>, <span class="hljs-string">'..'</span>, <span class="hljs-string">'a/../subfile'</span>)</span></span>
-</code></pre><p>Is similar to:</p>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'foo/bar'</span>, <span class="hljs-string">'/tmp/file/'</span>, <span class="hljs-string">'..'</span>, <span class="hljs-string">'a/../subfile'</span>)</span></span>
+</code></pre>
+<p>Is similar to:</p>
 <pre><code><span class="hljs-keyword">cd</span> foo/bar
 <span class="hljs-keyword">cd</span> /tmp/<span class="hljs-keyword">file</span>/
 <span class="hljs-keyword">cd</span> ..
@@ -134,142 +292,28 @@ gets resolved to the root directory. Non-string <code>from</code> arguments are 
 </code></pre><p>The difference is that the different paths don&#39;t need to exist and may also be
 files.</p>
 <p>Examples:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar'</span>, <span class="hljs-string">'./baz'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/foo/bar/baz'</span>
+<pre><code class="lang-js">path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar'</span>, <span class="hljs-string">'./baz'</span>)</span></span>
+<span class="hljs-comment">// returns '/foo/bar/baz'</span>
 
 path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar'</span>, <span class="hljs-string">'/tmp/file/'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/tmp/file'</span>
+<span class="hljs-comment">// returns '/tmp/file'</span>
 
 path.<span class="hljs-function"><span class="hljs-title">resolve</span><span class="hljs-params">(<span class="hljs-string">'wwwroot'</span>, <span class="hljs-string">'static_files/png/'</span>, <span class="hljs-string">'../gif/image.gif'</span>)</span></span>
 <span class="hljs-comment">// if currently in /home/myself/node, it returns</span>
-<span class="hljs-string">'/home/myself/node/wwwroot/static_files/gif/image.gif'</span>
-</code></pre><h2 id="path-isabsolute-path-">path.isAbsolute(path)</h2>
-<p>Determines whether <code>path</code> is an absolute path. An absolute path will always
-resolve to the same location, regardless of the working directory.</p>
-<p>Posix examples:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar'</span>)</span></span> <span class="hljs-comment">// true</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'/baz/..'</span>)</span></span>  <span class="hljs-comment">// true</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'qux/'</span>)</span></span>     <span class="hljs-comment">// false</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'.'</span>)</span></span>        <span class="hljs-comment">// false</span>
-</code></pre><p>Windows examples:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'//server'</span>)</span></span>  <span class="hljs-comment">// true</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'C:/foo/..'</span>)</span></span> <span class="hljs-comment">// true</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'bar\\baz'</span>)</span></span>   <span class="hljs-comment">// false</span>
-path.<span class="hljs-function"><span class="hljs-title">isAbsolute</span><span class="hljs-params">(<span class="hljs-string">'.'</span>)</span></span>         <span class="hljs-comment">// false</span>
-</code></pre><h2 id="path-relative-from-to-">path.relative(from, to)</h2>
-<p>Solve the relative path from <code>from</code> to <code>to</code>.</p>
-<p>At times we have two absolute paths, and we need to derive the relative
-path from one to the other.  This is actually the reverse transform of
-<code>path.resolve</code>, which means we see that:</p>
-<pre><code>path.<span class="hljs-built_in">resolve</span>(<span class="hljs-built_in">from</span>, path.<span class="hljs-built_in">relative</span>(<span class="hljs-built_in">from</span>, <span class="hljs-built_in">to</span>)) == path.<span class="hljs-built_in">resolve</span>(<span class="hljs-built_in">to</span>)
-</code></pre><p>Examples:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">relative</span><span class="hljs-params">(<span class="hljs-string">'C:\\orandea\\test\\aaa'</span>, <span class="hljs-string">'C:\\orandea\\impl\\bbb'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'..\\..\\impl\\bbb'</span>
-
-path.<span class="hljs-function"><span class="hljs-title">relative</span><span class="hljs-params">(<span class="hljs-string">'/data/orandea/test/aaa'</span>, <span class="hljs-string">'/data/orandea/impl/bbb'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'../../impl/bbb'</span>
-</code></pre><h2 id="path-dirname-p-">path.dirname(p)</h2>
-<p>Return the directory name of a path.  Similar to the Unix <code>dirname</code> command.</p>
-<p>Example:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">dirname</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/foo/bar/baz/asdf'</span>
-</code></pre><h2 id="path-basename-p-ext-">path.basename(p[, ext])</h2>
-<p>Return the last portion of a path.  Similar to the Unix <code>basename</code> command.</p>
-<p>Example:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">basename</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux.html'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'quux.html'</span>
-
-path.<span class="hljs-function"><span class="hljs-title">basename</span><span class="hljs-params">(<span class="hljs-string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="hljs-string">'.html'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'quux'</span>
-</code></pre><h2 id="path-extname-p-">path.extname(p)</h2>
-<p>Return the extension of the path, from the last &#39;.&#39; to end of string
-in the last portion of the path.  If there is no &#39;.&#39; in the last portion
-of the path or the first character of it is &#39;.&#39;, then it returns
-an empty string.  Examples:</p>
-<pre><code>path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.html'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'.html'</span>
-
-path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.coffee.md'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'.md'</span>
-
-path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index.'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'.'</span>
-
-path.<span class="hljs-function"><span class="hljs-title">extname</span><span class="hljs-params">(<span class="hljs-string">'index'</span>)</span></span>
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">''</span>
-</code></pre><h2 id="path-sep">path.sep</h2>
+<span class="hljs-comment">// '/home/myself/node/wwwroot/static_files/gif/image.gif'</span>
+</code></pre>
+<p><em>Note:</em> If the arguments to <code>resolve</code> have zero-length strings then the current
+        working directory will be used instead of them.</p>
+<h2 id="path-sep">path.sep</h2>
 <p>The platform-specific file separator. <code>&#39;\\&#39;</code> or <code>&#39;/&#39;</code>.</p>
 <p>An example on *nix:</p>
-<pre><code><span class="hljs-string">'foo/bar/baz'</span>.<span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">(path.sep)</span></span>
-<span class="hljs-comment">// returns</span>
-[<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
-</code></pre><p>An example on Windows:</p>
-<pre><code><span class="hljs-string">'foo\\bar\\baz'</span>.<span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">(path.sep)</span></span>
-<span class="hljs-comment">// returns</span>
-[<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
-</code></pre><h2 id="path-delimiter">path.delimiter</h2>
-<p>The platform-specific path delimiter, <code>;</code> or <code>&#39;:&#39;</code>.</p>
-<p>An example on *nix:</p>
-<pre><code>console.log(process.env.<span class="hljs-constant">PATH)</span>
-/<span class="hljs-regexp">/ '/usr</span><span class="hljs-regexp">/bin:/bin</span><span class="hljs-symbol">:/usr/sbin</span><span class="hljs-symbol">:/sbin</span><span class="hljs-symbol">:/usr/local/bin<span class="hljs-string">'
-
-process.env.PATH.split(path.delimiter)
-// returns
-['</span>/usr/bin<span class="hljs-string">', '</span>/bin<span class="hljs-string">', '</span>/usr/sbin<span class="hljs-string">', '</span>/sbin<span class="hljs-string">', '</span>/usr/local/bin<span class="hljs-string">']</span></span>
-</code></pre><p>An example on Windows:</p>
-<pre><code>console.<span class="hljs-function"><span class="hljs-title">log</span><span class="hljs-params">(process.env.PATH)</span></span>
-<span class="hljs-comment">// 'C:\Windows\system32;C:\Windows;C:\Program Files\nodejs\'</span>
-
-process<span class="hljs-class">.env</span><span class="hljs-class">.PATH</span><span class="hljs-class">.split</span>(path.delimiter)
-<span class="hljs-comment">// returns</span>
-[<span class="hljs-string">'C:\\Windows\\system32'</span>, <span class="hljs-string">'C:\\Windows'</span>, <span class="hljs-string">'C:\\Program Files\\nodejs\\'</span>]
-</code></pre><h2 id="path-parse-pathstring-">path.parse(pathString)</h2>
-<p>Returns an object from a path string.</p>
-<p>An example on *nix:</p>
-<pre><code><span class="hljs-tag">path</span><span class="hljs-class">.parse</span>(<span class="hljs-string">'/home/user/dir/file.txt'</span>)
-<span class="hljs-comment">// returns</span>
-{
-    <span class="hljs-attribute">root </span>: <span class="hljs-string">"/"</span>,
-    <span class="hljs-attribute">dir </span>: <span class="hljs-string">"/home/user/dir"</span>,
-    <span class="hljs-attribute">base </span>: <span class="hljs-string">"file.txt"</span>,
-    <span class="hljs-attribute">ext </span>: <span class="hljs-string">".txt"</span>,
-    <span class="hljs-attribute">name </span>: <span class="hljs-string">"file"</span>
-}
-</code></pre><p>An example on Windows:</p>
-<pre><code><span class="hljs-tag">path</span><span class="hljs-class">.parse</span>(<span class="hljs-string">'C:\\path\\dir\\index.html'</span>)
-<span class="hljs-comment">// returns</span>
-{
-    <span class="hljs-attribute">root </span>: <span class="hljs-string">"C:\\"</span>,
-    <span class="hljs-attribute">dir </span>: <span class="hljs-string">"C:\\path\\dir"</span>,
-    <span class="hljs-attribute">base </span>: <span class="hljs-string">"index.html"</span>,
-    <span class="hljs-attribute">ext </span>: <span class="hljs-string">".html"</span>,
-    <span class="hljs-attribute">name </span>: <span class="hljs-string">"index"</span>
-}
-</code></pre><h2 id="path-format-pathobject-">path.format(pathObject)</h2>
-<p>Returns a path string from an object, the opposite of <code>path.parse</code> above.</p>
-<pre><code>path.format({
-    <span class="hljs-string">root :</span> <span class="hljs-string">"/"</span>,
-    <span class="hljs-string">dir :</span> <span class="hljs-string">"/home/user/dir"</span>,
-    <span class="hljs-string">base :</span> <span class="hljs-string">"file.txt"</span>,
-    <span class="hljs-string">ext :</span> <span class="hljs-string">".txt"</span>,
-    <span class="hljs-string">name :</span> <span class="hljs-string">"file"</span>
-})
-<span class="hljs-comment">// returns</span>
-<span class="hljs-string">'/home/user/dir/file.txt'</span>
-</code></pre><h2 id="path-posix">path.posix</h2>
-<p>Provide access to aforementioned <code>path</code> methods but always interact in a posix
-compatible way.</p>
+<pre><code class="lang-js"><span class="hljs-string">'foo/bar/baz'</span>.<span class="hljs-keyword">split</span>(path.sep)
+// returns [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
+</code></pre>
+<p>An example on Windows:</p>
+<pre><code class="lang-js"><span class="hljs-string">'foo\\bar\\baz'</span>.<span class="hljs-keyword">split</span>(path.sep)
+// returns [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
+</code></pre>
 <h2 id="path-win32">path.win32</h2>
 <p>Provide access to aforementioned <code>path</code> methods but always interact in a win32
 compatible way.</p>

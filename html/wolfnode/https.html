@@ -81,6 +81,8 @@
 <li class='divider'></li>
 <li class='heading'><a href='../wolfnode/assert.html' class=''>Other</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../wolfnode/errors.html' class=''>Unknown</a></li> 
+<li class='divider'></li>
 
                   </ul>
               </nav>
@@ -90,124 +92,161 @@
         <div class="large-9 medium-8 columns">
           <section class="doc-content">
             <h1 id="https">HTTPS</h1>
-<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">3 - Stable</span>
-</code></pre><p>HTTPS is the HTTP protocol over TLS/SSL. In Node this is implemented as a
+<pre><code><span class="hljs-attribute">Stability</span>: <span class="hljs-string">2 - Stable</span>
+</code></pre><p>HTTPS is the HTTP protocol over TLS/SSL. In Node.js this is implemented as a
 separate module.</p>
+<h2 id="class-https-agent">Class: https.Agent</h2>
+<p>An Agent object for HTTPS similar to <a href="http.html#http_class_http_agent"><code>http.Agent</code></a>.  See <a href="#https_https_request_options_callback"><code>https.request()</code></a>
+for more information.</p>
 <h2 id="class-https-server">Class: https.Server</h2>
 <p>This class is a subclass of <code>tls.Server</code> and emits events same as
-<code>http.Server</code>. See <code>http.Server</code> for more information.</p>
+<a href="http.html#http_class_http_server"><code>http.Server</code></a>. See <a href="http.html#http_class_http_server"><code>http.Server</code></a> for more information.</p>
 <h3 id="server-settimeout-msecs-callback-">server.setTimeout(msecs, callback)</h3>
-<p>See <a href="http.html#http_server_settimeout_msecs_callback">http.Server#setTimeout()</a>.</p>
+<p>See <a href="http.html#http_server_settimeout_msecs_callback"><code>http.Server#setTimeout()</code></a>.</p>
 <h3 id="server-timeout">server.timeout</h3>
-<p>See <a href="http.html#http_server_timeout">http.Server#timeout</a>.</p>
+<p>See <a href="http.html#http_server_timeout"><code>http.Server#timeout</code></a>.</p>
 <h2 id="https-createserver-options-requestlistener-">https.createServer(options[, requestListener])</h2>
 <p>Returns a new HTTPS web server object. The <code>options</code> is similar to
-<a href="tls.html#tls_tls_createserver_options_secureconnectionlistener">tls.createServer()</a>.  The <code>requestListener</code> is a function which is
+<a href="tls.html#tls_tls_createserver_options_secureconnectionlistener"><code>tls.createServer()</code></a>.  The <code>requestListener</code> is a function which is
 automatically added to the <code>&#39;request&#39;</code> event.</p>
 <p>Example:</p>
-<pre><code><span class="hljs-comment">// curl -k https://localhost:8000/</span>
-<span class="hljs-keyword">var</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">'https'</span>);
-<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+<pre><code class="lang-js"><span class="hljs-comment">// curl -k https://localhost:8000/</span>
+<span class="hljs-keyword">const</span> https = <span class="hljs-keyword">require</span>(<span class="hljs-string">'https'</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-keyword">require</span>(<span class="hljs-string">'fs'</span>);
 
-<span class="hljs-keyword">var</span> options = {
+<span class="hljs-keyword">const</span> options = {
   key: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-key.pem'</span>),
   cert: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-cert.pem'</span>)
 };
 
-https.createServer(options, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+https.createServer(options, (req, res) =&gt; {
   res.writeHead(<span class="hljs-number">200</span>);
-  res.end(<span class="hljs-string">"hello world\n"</span>);
+  res.end(<span class="hljs-string">'hello world\n'</span>);
 }).listen(<span class="hljs-number">8000</span>);
-</code></pre><p>Or</p>
-<pre><code><span class="hljs-keyword">var</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">'https'</span>);
-<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+</code></pre>
+<p>Or</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> https = <span class="hljs-keyword">require</span>(<span class="hljs-string">'https'</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-keyword">require</span>(<span class="hljs-string">'fs'</span>);
 
-<span class="hljs-keyword">var</span> options = {
+<span class="hljs-keyword">const</span> options = {
   pfx: fs.readFileSync(<span class="hljs-string">'server.pfx'</span>)
 };
 
-https.createServer(options, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+https.createServer(options, (req, res) =&gt; {
   res.writeHead(<span class="hljs-number">200</span>);
-  res.end(<span class="hljs-string">"hello world\n"</span>);
+  res.end(<span class="hljs-string">'hello world\n'</span>);
 }).listen(<span class="hljs-number">8000</span>);
-</code></pre><h3 id="server-listen-port-host-backlog-callback-">server.listen(port[, host][, backlog][, callback])</h3>
-<h3 id="server-listen-path-callback-">server.listen(path[, callback])</h3>
-<h3 id="server-listen-handle-callback-">server.listen(handle[, callback])</h3>
-<p>See <a href="http.html#http_server_listen_port_hostname_backlog_callback">http.listen()</a> for details.</p>
+</code></pre>
 <h3 id="server-close-callback-">server.close([callback])</h3>
-<p>See <a href="http.html#http_server_close_callback">http.close()</a> for details.</p>
+<p>See <a href="http.html#http_server_close_callback"><code>http.close()</code></a> for details.</p>
+<h3 id="server-listen-handle-callback-">server.listen(handle[, callback])</h3>
+<h3 id="server-listen-path-callback-">server.listen(path[, callback])</h3>
+<h3 id="server-listen-port-host-backlog-callback-">server.listen(port[, host][, backlog][, callback])</h3>
+<p>See <a href="http.html#http_server_listen_port_hostname_backlog_callback"><code>http.listen()</code></a> for details.</p>
+<h2 id="https-get-options-callback-">https.get(options, callback)</h2>
+<p>Like <a href="http.html#http_http_get_options_callback"><code>http.get()</code></a> but for HTTPS.</p>
+<p><code>options</code> can be an object or a string. If <code>options</code> is a string, it is
+automatically parsed with <a href="url.html#url_url_parse_urlstr_parsequerystring_slashesdenotehost"><code>url.parse()</code></a>.</p>
+<p>Example:</p>
+<pre><code class="lang-js">const https = <span class="hljs-built_in">require</span>(<span class="hljs-string">'https'</span>);
+
+https.get(<span class="hljs-string">'https://encrypted.google.com/'</span>, <span class="hljs-function"><span class="hljs-params">(res)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'statusCode: '</span>, res.statusCode);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'headers: '</span>, res.headers);
+
+  res.<span class="hljs-literal">on</span>(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-params">(d)</span> =&gt;</span> {
+    process.stdout.write(d);
+  });
+
+}).<span class="hljs-literal">on</span>(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">(e)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.error(e);
+});
+</code></pre>
+<h2 id="https-globalagent">https.globalAgent</h2>
+<p>Global instance of <a href="#https_class_https_agent"><code>https.Agent</code></a> for all HTTPS client requests.</p>
 <h2 id="https-request-options-callback-">https.request(options, callback)</h2>
 <p>Makes a request to a secure web server.</p>
 <p><code>options</code> can be an object or a string. If <code>options</code> is a string, it is
-automatically parsed with <a href="url.html#url.parse">url.parse()</a>.</p>
-<p>All options from <a href="http.html#http_http_request_options_callback">http.request()</a> are valid.</p>
+automatically parsed with <a href="url.html#url_url_parse_urlstr_parsequerystring_slashesdenotehost"><code>url.parse()</code></a>.</p>
+<p>All options from <a href="http.html#http_http_request_options_callback"><code>http.request()</code></a> are valid.</p>
 <p>Example:</p>
-<pre><code><span class="hljs-keyword">var</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">'https'</span>);
+<pre><code class="lang-js">const https = <span class="hljs-built_in">require</span>(<span class="hljs-string">'https'</span>);
 
-<span class="hljs-keyword">var</span> options = {
-  hostname: <span class="hljs-string">'encrypted.google.com'</span>,
-  port: <span class="hljs-number">443</span>,
-  path: <span class="hljs-string">'/'</span>,
-  method: <span class="hljs-string">'GET'</span>
+var options = {
+  <span class="hljs-attribute">hostname</span>: <span class="hljs-string">'encrypted.google.com'</span>,
+  <span class="hljs-attribute">port</span>: <span class="hljs-number">443</span>,
+  <span class="hljs-attribute">path</span>: <span class="hljs-string">'/'</span>,
+  <span class="hljs-attribute">method</span>: <span class="hljs-string">'GET'</span>
 };
 
-<span class="hljs-keyword">var</span> req = https.request(options, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(res)</span> </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"statusCode: "</span>, res.statusCode);
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"headers: "</span>, res.headers);
+var req = https.request(options, <span class="hljs-function"><span class="hljs-params">(res)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'statusCode: '</span>, res.statusCode);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'headers: '</span>, res.headers);
 
-  res.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span> </span>{
+  res.<span class="hljs-literal">on</span>(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-params">(d)</span> =&gt;</span> {
     process.stdout.write(d);
   });
 });
 req.end();
 
-req.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> </span>{
+req.<span class="hljs-literal">on</span>(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">(e)</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.error(e);
 });
-</code></pre><p>The options argument has the following options</p>
+</code></pre>
+<p>The options argument has the following options</p>
 <ul>
 <li><code>host</code>: A domain name or IP address of the server to issue the request to.
 Defaults to <code>&#39;localhost&#39;</code>.</li>
-<li><code>hostname</code>: To support <code>url.parse()</code> <code>hostname</code> is preferred over <code>host</code></li>
+<li><code>hostname</code>: Alias for <code>host</code>. To support <code>url.parse()</code> <code>hostname</code> is
+preferred over <code>host</code>.</li>
+<li><code>family</code>: IP address family to use when resolving <code>host</code> and <code>hostname</code>.
+Valid values are <code>4</code> or <code>6</code>. When unspecified, both IP v4 and v6 will be
+used.</li>
 <li><code>port</code>: Port of remote server. Defaults to 443.</li>
+<li><code>localAddress</code>: Local interface to bind for network connections.</li>
+<li><code>socketPath</code>: Unix Domain Socket (use one of host:port or socketPath).</li>
 <li><code>method</code>: A string specifying the HTTP request method. Defaults to <code>&#39;GET&#39;</code>.</li>
 <li><code>path</code>: Request path. Defaults to <code>&#39;/&#39;</code>. Should include query string if any.
-E.G. <code>&#39;/index.html?page=12&#39;</code></li>
+E.G. <code>&#39;/index.html?page=12&#39;</code>. An exception is thrown when the request path
+contains illegal characters. Currently, only spaces are rejected but that
+may change in the future.</li>
 <li><code>headers</code>: An object containing request headers.</li>
 <li><code>auth</code>: Basic authentication i.e. <code>&#39;user:password&#39;</code> to compute an
 Authorization header.</li>
-<li><code>agent</code>: Controls <a href="#https_class_https_agent">Agent</a> behavior. When an Agent is used request will
+<li><code>agent</code>: Controls <a href="#https_class_https_agent"><code>Agent</code></a> behavior. When an Agent is used request will
 default to <code>Connection: keep-alive</code>. Possible values:<ul>
-<li><code>undefined</code> (default): use <a href="#https_https_globalagent">globalAgent</a> for this host and port.</li>
+<li><code>undefined</code> (default): use <a href="#https_https_globalagent"><code>globalAgent</code></a> for this host and port.</li>
 <li><code>Agent</code> object: explicitly use the passed in <code>Agent</code>.</li>
 <li><code>false</code>: opts out of connection pooling with an Agent, defaults request to
 <code>Connection: close</code>.</li>
 </ul>
 </li>
 </ul>
-<p>The following options from <a href="tls.html#tls_tls_connect_options_callback">tls.connect()</a> can also be specified. However, a
-<a href="#https_https_globalagent">globalAgent</a> silently ignores these.</p>
+<p>The following options from <a href="tls.html#tls_tls_connect_options_callback"><code>tls.connect()</code></a> can also be specified. However, a
+<a href="#https_https_globalagent"><code>globalAgent</code></a> silently ignores these.</p>
 <ul>
 <li><code>pfx</code>: Certificate, Private key and CA certificates to use for SSL. Default <code>null</code>.</li>
 <li><code>key</code>: Private key to use for SSL. Default <code>null</code>.</li>
 <li><code>passphrase</code>: A string of passphrase for the private key or pfx. Default <code>null</code>.</li>
 <li><code>cert</code>: Public x509 certificate to use. Default <code>null</code>.</li>
-<li><code>ca</code>: An authority certificate or array of authority certificates to check
-the remote host against.</li>
+<li><code>ca</code>: A string, <a href="buffer.html#buffer_buffer"><code>Buffer</code></a> or array of strings or <a href="buffer.html#buffer_buffer"><code>Buffer</code></a>s of trusted
+certificates in PEM format. If this is omitted several well known &quot;root&quot;
+CAs will be used, like VeriSign. These are used to authorize connections.</li>
 <li><code>ciphers</code>: A string describing the ciphers to use or exclude. Consult
-<a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT" target="_blank" rel="nofollow">http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT</a> for
+<a href="https://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT" target="_blank" rel="nofollow">https://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT</a> for
 details on the format.</li>
 <li><code>rejectUnauthorized</code>: If <code>true</code>, the server certificate is verified against
 the list of supplied CAs. An <code>&#39;error&#39;</code> event is emitted if verification
 fails. Verification happens at the connection level, <em>before</em> the HTTP
 request is sent. Default <code>true</code>.</li>
-<li><code>secureProtocol</code>: The SSL method to use, e.g. <code>TLSv1_method</code> to force
-TLS version 1. The possible values depend on your installation of
-OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS" target="_blank" rel="nofollow">SSL_METHODS</a>.</li>
+<li><code>secureProtocol</code>: The SSL method to use, e.g. <code>SSLv3_method</code> to force
+SSL version 3. The possible values depend on your installation of
+OpenSSL and are defined in the constant <a href="https://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS" target="_blank" rel="nofollow"><code>SSL_METHODS</code></a>.</li>
+<li><code>servername</code>: Servername for SNI (Server Name Indication) TLS extension.</li>
 </ul>
-<p>In order to specify these options, use a custom <code>Agent</code>.</p>
+<p>In order to specify these options, use a custom <a href="#https_class_https_agent"><code>Agent</code></a>.</p>
 <p>Example:</p>
-<pre><code><span class="hljs-keyword">var</span> options = {
+<pre><code class="lang-js">var <span class="hljs-keyword">options</span> = {
   hostname: <span class="hljs-string">'encrypted.google.com'</span>,
   port: <span class="hljs-number">443</span>,
   path: <span class="hljs-string">'/'</span>,
@@ -215,49 +254,28 @@ OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl
   key: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-key.pem'</span>),
   cert: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-cert.pem'</span>)
 };
-options.agent = <span class="hljs-keyword">new</span> https.Agent(options);
+<span class="hljs-keyword">options</span>.agent = <span class="hljs-keyword">new</span> https.Agent(<span class="hljs-keyword">options</span>);
 
-<span class="hljs-keyword">var</span> req = https.request(options, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(res)</span> </span>{
+var req = https.request(<span class="hljs-keyword">options</span>, (res) =&gt; {
   ...
 }
-</code></pre><p>Or does not use an <code>Agent</code>.</p>
+</code></pre>
+<p>Alternatively, opt out of connection pooling by not using an <code>Agent</code>.</p>
 <p>Example:</p>
-<pre><code><span class="hljs-keyword">var</span> options = {
-  hostname: <span class="hljs-string">'encrypted.google.com'</span>,
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> options = {
+  hostname: 'encrypted.google.com',
   port: <span class="hljs-number">443</span>,
-  path: <span class="hljs-string">'/'</span>,
-  method: <span class="hljs-string">'GET'</span>,
-  key: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-key.pem'</span>),
-  cert: fs.readFileSync(<span class="hljs-string">'test/fixtures/keys/agent2-cert.pem'</span>),
+  path: '/',
+  <span class="hljs-keyword">method</span>: '<span class="hljs-type">GET</span>',
+  key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+  cert: fs.readFileSync('test/fixtures/keys/agent2-cert.pem'),
   agent: <span class="hljs-literal">false</span>
 };
 
-<span class="hljs-keyword">var</span> req = https.request(options, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(res)</span> </span>{
+<span class="hljs-keyword">var</span> req = https.request(options, (res) =&gt; {
   ...
 }
-</code></pre><h2 id="https-get-options-callback-">https.get(options, callback)</h2>
-<p>Like <code>http.get()</code> but for HTTPS.</p>
-<p><code>options</code> can be an object or a string. If <code>options</code> is a string, it is
-automatically parsed with <a href="url.html#url.parse">url.parse()</a>.</p>
-<p>Example:</p>
-<pre><code>var https = require(<span class="hljs-string">'https'</span>);
-
-https.<span class="hljs-built_in">get</span>(<span class="hljs-string">'https://encrypted.google.com/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(res)</span> {</span>
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"statusCode: "</span>, <span class="hljs-keyword">res</span>.statusCode);
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"headers: "</span>, <span class="hljs-keyword">res</span>.headers);
-
-  <span class="hljs-keyword">res</span>.<span class="hljs-keyword">on</span>(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(d)</span> {</span>
-    process.stdout.<span class="hljs-keyword">write</span>(<span class="hljs-keyword">d</span>);
-  });
-
-}).<span class="hljs-keyword">on</span>(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
-  console.error(<span class="hljs-keyword">e</span>);
-});
-</code></pre><h2 id="class-https-agent">Class: https.Agent</h2>
-<p>An Agent object for HTTPS similar to <a href="http.html#http_class_http_agent">http.Agent</a>.  See <a href="#https_https_request_options_callback">https.request()</a>
-for more information.</p>
-<h2 id="https-globalagent">https.globalAgent</h2>
-<p>Global instance of <a href="#https_class_https_agent">https.Agent</a> for all HTTPS client requests.</p>
+</code></pre>
 
 
           </section>

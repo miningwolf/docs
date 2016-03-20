@@ -11,7 +11,7 @@ this.on('event.HookConsistencyException', function (e) { });
 
 ### Class Overview
 
-Thrown when a hook can not be passed to a listener due to the method signature being inccorect
+Thrown when a hook can not be passed to a listener due to the method signature being incorrect
 
 Method | Type   
 --- | :--- 

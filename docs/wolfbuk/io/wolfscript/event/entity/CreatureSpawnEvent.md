@@ -56,32 +56,9 @@ Argument | Type | Description
 LivingEntity | `final` | LivingEntity argument
 SpawnReason | `final` | SpawnReason argument
 
-##### <a id='creaturespawnevent'></a>new __CreatureSpawnEvent__(spawnee, type, loc, reason) 
-_Deprecated_
-
-_CreatureSpawnEvent constructor_
-
-Argument | Type | Description  
---- | --- | --- 
-spawnee | `Entity` | spawnee argument
-type | [`CreatureType`](../../entity/CreatureType.md) | type argument
-loc | `Location` | loc argument
-reason | `SpawnReason` | reason argument
-
 ---
 
 ### Public Properties for [`CreatureSpawnEvent`](CreatureSpawnEvent.md)
-
-##### <a id='creaturetype'></a>public  readonly property __CreatureType__
-_Deprecated: In favour of {@link #getEntityType()}._
-
-_Get: Gets the type of creature being spawned._
-
-Get | Description
---- | --- 
-[`CreatureType`](../../entity/CreatureType.md) | A CreatureType value detailing the type of creature being spawned
-
-
 
 ##### <a id='entity'></a>public  readonly property __Entity__
 

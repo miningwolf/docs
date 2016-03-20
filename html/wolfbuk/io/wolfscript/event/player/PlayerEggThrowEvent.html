@@ -62,7 +62,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -129,9 +133,11 @@
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerPreLoginEvent.html'>PlayerPreLoginEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerQuitEvent.html'>PlayerQuitEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRegisterChannelEvent.html'>PlayerRegisterChannelEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerResourcePackStatusEvent.html'>PlayerResourcePackStatusEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerRespawnEvent.html'>PlayerRespawnEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerShearEntityEvent.html'>PlayerShearEntityEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerStatisticIncrementEvent.html'>PlayerStatisticIncrementEvent</a></li>
+<li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerSwapHandItemsEvent.html'>PlayerSwapHandItemsEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerTeleportEvent.html'>PlayerTeleportEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleFlightEvent.html'>PlayerToggleFlightEvent</a></li>
 <li><a href='../../../../../wolfbuk/io/wolfscript/event/player/PlayerToggleSneakEvent.html'>PlayerToggleSneakEvent</a></li>
@@ -318,79 +324,8 @@ Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a></p>
 </tr>
 </tbody>
 </table>
-<h5 id="-a-id-playereggthrowevent-a-new-__playereggthrowevent__-player-egg-hatching-numhatches-hatchingtype-"><a id='playereggthrowevent'></a>new <strong>PlayerEggThrowEvent</strong>(player, egg, hatching, numHatches, hatchingType)</h5>
-<p><em>Deprecated</em></p>
-<p><em>PlayerEggThrowEvent constructor</em></p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>player</td>
-<td><code>Player</code></td>
-<td>player argument</td>
-</tr>
-<tr>
-<td>egg</td>
-<td><a href="../../entity/Egg.html"><code>Egg</code></a></td>
-<td>egg argument</td>
-</tr>
-<tr>
-<td>hatching</td>
-<td><code>boolean</code></td>
-<td>hatching argument</td>
-</tr>
-<tr>
-<td>numHatches</td>
-<td><code>byte</code></td>
-<td>numHatches argument</td>
-</tr>
-<tr>
-<td>hatchingType</td>
-<td><a href="../../entity/CreatureType.html"><code>CreatureType</code></a></td>
-<td>hatchingType argument</td>
-</tr>
-</tbody>
-</table>
 <hr>
 <h3 id="public-properties-for-playereggthrowevent-playereggthrowevent-md-">Public Properties for <a href="PlayerEggThrowEvent.html"><code>PlayerEggThrowEvent</code></a></h3>
-<h5 id="-a-id-hatchtype-a-public-writeonly-property-__hatchtype__"><a id='hatchtype'></a>public  writeonly property <strong>HatchType</strong></h5>
-<p><em>Deprecated: In favour of {@link #setHatchingType(EntityType)}.</em></p>
-<p><em>Set: Change the type of mob being hatched by the egg</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Set</th>
-<th>Type</th>
-<th>Description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hatchType</td>
-<td><a href="../../entity/CreatureType.html"><code>CreatureType</code></a></td>
-<td>The type of the mob being hatched by the egg</td>
-</tr>
-</tbody>
-</table>
 <h5 id="-a-id-egg-a-public-readonly-property-__egg__"><a id='egg'></a>public  readonly property <strong>Egg</strong></h5>
 <p><em>Get: Gets the egg involved in this event.</em></p>
 <table>
@@ -434,23 +369,6 @@ Extends <a href="PlayerEvent.html"><code>PlayerEvent</code></a></p>
 <tr>
 <td><a href="../HandlerList.html"><code>HandlerList</code></a></td>
 <td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="-a-id-hatchtype-a-public-readonly-property-__hatchtype__"><a id='hatchtype'></a>public  readonly property <strong>HatchType</strong></h5>
-<p><em>Deprecated: In favour of {@link #getHatchingType()}.</em></p>
-<p><em>Get: Get the type of the mob being hatched (EntityType.CHICKEN by default)</em></p>
-<table>
-<thead>
-<tr>
-<th>Get</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../../entity/CreatureType.html"><code>CreatureType</code></a></td>
-<td>The type of the mob being hatched by the egg</td>
 </tr>
 </tbody>
 </table>

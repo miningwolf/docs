@@ -61,7 +61,11 @@
                 <ul class="side-nav accordion" data-accordion>
                   <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/0.html' class=''>wolfbuk API</a></li> 
 <li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/attribute/0.html' class=''>attribute</a></li> 
+<li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/block/0.html' class=''>block</a></li> 
+<li class='divider'></li>
+<li class='heading'><a href='../../../../wolfbuk/io/wolfscript/boss/0.html' class=''>boss</a></li> 
 <li class='divider'></li>
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/command/0.html' class=''>command</a></li> 
 <li class='divider'></li>
@@ -94,6 +98,7 @@
 <li class='heading'><a href='../../../../wolfbuk/io/wolfscript/potion/0.html' class=''>potion</a></li> 
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/Potion.html'>Potion</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionBrewer.html'>PotionBrewer</a></li>
+<li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionData.html'>PotionData</a></li>
 <li class='active'><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffect.html'>PotionEffect</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectType.html'>PotionEffectType</a></li>
 <li><a href='../../../../wolfbuk/io/wolfscript/potion/PotionEffectTypeWrapper.html'>PotionEffectTypeWrapper</a></li>
@@ -132,7 +137,11 @@ Implements <a href="../configuration/serialization/ConfigurationSerializable.htm
 </thead>
 <tbody>
 <tr>
-<td>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles) <br> <em>Creates a potion effect.</em></td>
+<td>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles, color) <br> <em>Creates a potion effect.</em></td>
+<td style="text-align:left"><em>constructor</em></td>
+</tr>
+<tr>
+<td>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles) <br> <em>Creates a potion effect with no defined color.</em></td>
 <td style="text-align:left"><em>constructor</em></td>
 </tr>
 <tr>
@@ -150,6 +159,10 @@ Implements <a href="../configuration/serialization/ConfigurationSerializable.htm
 <tr>
 <td> readonly property <strong>Amplifier</strong> <br> <em>Get: Returns the amplifier of this effect. A higher amplifier means the</em></td>
 <td style="text-align:left"><code>int</code></td>
+</tr>
+<tr>
+<td> readonly property <strong>Color</strong> <br> <em>Color property</em></td>
+<td style="text-align:left"><a href="../Color.html"><code>Color</code></a></td>
 </tr>
 <tr>
 <td> readonly property <strong>Duration</strong> <br> <em>Get: Returns the duration (in ticks) that this effect will run for when</em></td>
@@ -187,8 +200,51 @@ Implements <a href="../configuration/serialization/ConfigurationSerializable.htm
 </table>
 <hr>
 <h3 id="public-constructors-for-potioneffect-potioneffect-md-">Public Constructors for <a href="PotionEffect.html"><code>PotionEffect</code></a></h3>
-<h5 id="-a-id-potioneffect-a-new-__potioneffect__-type-duration-amplifier-ambient-particles-"><a id='potioneffect'></a>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles)</h5>
+<h5 id="-a-id-potioneffect-a-new-__potioneffect__-type-duration-amplifier-ambient-particles-color-"><a id='potioneffect'></a>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles, color)</h5>
 <p><em>Creates a potion effect.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="PotionEffectType.html"><code>PotionEffectType</code></a></td>
+<td>effect type</td>
+</tr>
+<tr>
+<td>duration</td>
+<td><code>int</code></td>
+<td>measured in ticks, see <code>PotionEffect#getDuration()</code></td>
+</tr>
+<tr>
+<td>amplifier</td>
+<td><code>int</code></td>
+<td>the amplifier, see <code>PotionEffect#getAmplifier()</code></td>
+</tr>
+<tr>
+<td>ambient</td>
+<td><code>boolean</code></td>
+<td>the ambient status, see <code>PotionEffect#isAmbient()</code></td>
+</tr>
+<tr>
+<td>particles</td>
+<td><code>boolean</code></td>
+<td>the particle status, see <code>PotionEffect#hasParticles()</code></td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../Color.html"><code>Color</code></a></td>
+<td>the particle color, see <code>PotionEffect#getColor()</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-potioneffect-a-new-__potioneffect__-type-duration-amplifier-ambient-particles-"><a id='potioneffect'></a>new <strong>PotionEffect</strong>(type, duration, amplifier, ambient, particles)</h5>
+<p><em>Creates a potion effect with no defined color.</em></p>
 <table>
 <thead>
 <tr>
@@ -303,6 +359,22 @@ Implements <a href="../configuration/serialization/ConfigurationSerializable.htm
 <tr>
 <td><code>int</code></td>
 <td>The effect amplifier</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-color-a-public-readonly-property-__color__"><a id='color'></a>public  readonly property <strong>Color</strong></h5>
+<p><em>Color property</em></p>
+<table>
+<thead>
+<tr>
+<th>Get</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Color.html"><code>Color</code></a></td>
+<td>color of this potion&#39;s particles. May be null if the potion has no particles or defined color.</td>
 </tr>
 </tbody>
 </table>

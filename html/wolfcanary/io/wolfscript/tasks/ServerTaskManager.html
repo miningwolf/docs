@@ -138,6 +138,14 @@
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
 <tr>
+<td>static function <strong>getServerTasksForTaskOwner</strong>(owner) <br> <em>Gets a <code>List</code> of <a href="ServerTask.html"><code>ServerTask</code></a>s that are in queue with the given <code>owner</code></em></td>
+<td style="text-align:left"><code>List&lt;ServerTask&gt;</code></td>
+</tr>
+<tr>
+<td>static function <strong>isQueued</strong>(task) <br> <em>Finds out if the given <code>task</code> is queued.</em></td>
+<td style="text-align:left"><code>boolean</code></td>
+</tr>
+<tr>
 <td>static function <strong>removeTask</strong>(task) <br> <em>Removes a <a href="ServerTask.html"><code>ServerTask</code></a> from the queue</em></td>
 <td style="text-align:left"><code>boolean</code></td>
 </tr>
@@ -182,6 +190,68 @@
 <tr>
 <td><code>boolean</code></td>
 <td><code>true</code> if successfully added; <code>false</code> if not</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-getservertasksfortaskowner-a-public-static-function-__getservertasksfortaskowner__-owner-"><a id='getservertasksfortaskowner'></a>public static function <strong>getServerTasksForTaskOwner</strong>(owner)</h5>
+<p><em>Gets a <code>List</code> of <a href="ServerTask.html"><code>ServerTask</code></a>s that are in queue with the given <code>owner</code></em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td><a href="TaskOwner.html"><code>TaskOwner</code></a></td>
+<td>The <a href="TaskOwner.html"><code>TaskOwner</code></a> to look for <a href="ServerTask.html"><code>ServerTask</code></a>s with</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List&lt;ServerTask&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="-a-id-isqueued-a-public-static-function-__isqueued__-task-"><a id='isqueued'></a>public static function <strong>isQueued</strong>(task)</h5>
+<p><em>Finds out if the given <code>task</code> is queued.</em></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>task</td>
+<td><a href="ServerTask.html"><code>ServerTask</code></a></td>
+<td>what <a href="ServerTask.html"><code>ServerTask</code></a> to check</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
