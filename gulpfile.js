@@ -45,7 +45,7 @@ gulp.task("cleanthirdparty", function (cb) {
 
 // May need to reverse doc and HEAD if checkout API changes
 gulp.task('clone', ['cleanthirdparty'], function(cb){
-   clone('https://github.com/joyent/node.git', {args: ' --depth 1  --single-branch nodejs  --no-checkout', cwd: './build/thirdparty'})
+   clone('https://github.com/nodejs/node.git', {args: ' --depth 1  --single-branch nodejs  --no-checkout', cwd: './build/thirdparty'})
   .then(clone('https://hub.spigotmc.org/stash/scm/spigot/bukkit.git', {args: ' --depth 1  --single-branch spigot-api', cwd: './build/thirdparty'}))
   .then(clone('https://github.com/CanaryModTeam/CanaryLib.git', {args: ' --depth 1  --single-branch canarylib', cwd: './build/thirdparty'}))
   .then(checkout('doc', {args:'HEAD' , cwd: './build/thirdparty/nodejs'})) 
